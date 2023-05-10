@@ -1,0 +1,33 @@
+{
+  "name": "aws-iam-data",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ts-node --transpile-only --log-error src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tobilg/aws-iam-data.git"
+  },
+  "keywords": [
+    "aws",
+    "iam"
+  ],
+  "author": "TobiLG <tobilg@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tobilg/aws-iam-data/issues"
+  },
+  "homepage": "https://github.com/tobilg/aws-iam-data#readme",
+  "devDependencies": {
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "axios": "^1.4.0",
+    "node-html-parser": "^6.1.5",
+    "winston": "^3.8.2"
+  }
+}
