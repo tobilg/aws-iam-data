@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "ts-node --transpile-only --log-error src/index.ts"
+    "build": "ts-node --transpile-only --log-error src/gatherData.ts"
   },
   "repository": {
     "type": "git",
