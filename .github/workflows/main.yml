@@ -1,0 +1,51 @@
+name: Update AWS IAM data
+
+on:
+  schedule:
+    # Run everyday at 4AM UTC
+    - cron:  '0 4 * * *'
+  push:
+    branches: [ main ]
+
+jobs:
+
+  gather_and_update_data:
+    name: Gather the latest AWS IAM data and if there is new data, publish a new package version to npm
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '16.x'
+          registry-url: 'https://registry.npmjs.org'
+
+      - name: Gather data, check for changes and eventually publish new package version
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          # Install dependencies
+          npm i
+
+          # Gather data
+          npm run gather-data
+
+          # Setup git repo
+          git config --global user.name 'TobiLG'
+          git config --global user.email 'tobilg@users.noreply.github.com'
+          git remote set-url --push origin https://tobilg:$GITHUB_TOKEN@github.com/tobilg/aws-iam-data
+
+          # Add new files if there are any
+          git add .
+
+          # Check for changes and commit if there are any
+          git diff-index --cached --quiet HEAD || git commit -m "[no ci] Data update on $(date '+%FT%H:%M:%S')" && \
+            # Push to repo \
+            git push && \
+            # Increase package patch version \
+            npm version patch && \
+            # Publish new version to npm registry \
+            npm publish
