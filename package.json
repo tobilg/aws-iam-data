@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "ts-node --transpile-only --log-error src/gatherData.ts"
+    "build": "ts-node --transpile-only --log-error process/gatherData.ts"
   },
   "repository": {
     "type": "git",
@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/tobilg/aws-iam-data#readme",
   "devDependencies": {
+    "@types/node": "^20.1.4",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"
   },
