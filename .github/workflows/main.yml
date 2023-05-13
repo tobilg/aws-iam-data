@@ -1,9 +1,9 @@
 name: Update AWS IAM data
 
 on:
-  schedule:
+  #schedule:
     # Run everyday at 4AM UTC
-    - cron:  '0 4 * * *'
+    #- cron:  '0 4 * * *'
   push:
     branches: [ main ]
 
