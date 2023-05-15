@@ -31,4 +31,4 @@ console.log(JSON.stringify(ec2ResourceTypes, null, 2));
 ```
 
 ## Automatic updates
-The CI pipeline will check for AWS IAM docs updates everyday at 4AM, and automatically publish a new patch version if updates are detected.
+The CI pipeline will check for AWS IAM docs updates everyday at 4AM UTC, and automatically publish a new patch version if updates are detected.
