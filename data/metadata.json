@@ -1,5 +1,4 @@
 {
-  "lastUpdatedAt": "2023-05-15T04:02:58.729Z",
   "serviceCount": 376,
   "services": [
     {
@@ -8843,7 +8842,7 @@
       "name": "Amazon EMR on EKS (EMR Containers)",
       "servicePrefix": "emr-containers",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonemroneksemrcontainers.html",
-      "actionsCount": 19,
+      "actionsCount": 20,
       "actions": [
         "CancelJobRun",
         "CreateJobTemplate",
@@ -8856,6 +8855,7 @@
         "DescribeJobTemplate",
         "DescribeManagedEndpoint",
         "DescribeVirtualCluster",
+        "GetManagedEndpointSessionCredentials",
         "ListJobRuns",
         "ListJobTemplates",
         "ListManagedEndpoints",
@@ -15942,8 +15942,12 @@
         "outpost",
         "site"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "AWS Panorama",
@@ -21254,7 +21258,7 @@
       "name": "Amazon Timestream",
       "servicePrefix": "timestream",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestream.html",
-      "actionsCount": 34,
+      "actionsCount": 35,
       "actions": [
         "CancelQuery",
         "CreateBatchLoadTask",
@@ -21285,6 +21289,7 @@
         "StartAwsBackupJob",
         "StartAwsRestoreJob",
         "TagResource",
+        "Unload",
         "UntagResource",
         "UpdateDatabase",
         "UpdateScheduledQuery",
