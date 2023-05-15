@@ -40,10 +40,12 @@ jobs:
           git add .
 
           # Check for changes and commit if there are any
-          git diff-index --cached --quiet HEAD || git commit -m "[no ci] Data update on $(date '+%FT%H:%M:%S')" && \
-            # Push to repo \
-            git push && \
+          git diff-index --cached --quiet HEAD || \
             # Increase package patch version \
             npm version patch && \
+            # Commit changes \
+            git commit -am "[no ci] Data update on $(date '+%FT%H:%M:%S')" && \
+            # Push to repo \
+            git push && \
             # Publish new version to npm registry \
             npm publish

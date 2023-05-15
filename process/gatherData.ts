@@ -210,14 +210,11 @@ const run = async () => {
     return topicPageResult;
   }));
 
-  const lastUpdatedAt = new Date().toISOString();
-
   // Write IAM data
   writeFileSync(join(__dirname, '../data', 'iam.json'), JSON.stringify(serviceAuthReferenceData, null, 2), { encoding: 'utf-8' });
 
   // Gather metadata
   const metadata: AWSIamMetadata = {
-    lastUpdatedAt,
     serviceCount: serviceAuthReferenceData.length,
     services: serviceAuthReferenceData.map(service => ({
       name: service.name,

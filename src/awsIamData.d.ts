@@ -10,7 +10,6 @@ export interface ServiceAuthReference {
   }
   
   export interface AWSIamMetadata {
-    lastUpdatedAt: string;
     serviceCount: number;
     services: ServiceAuthMetadata[];
   }
