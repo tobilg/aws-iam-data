@@ -42,7 +42,7 @@ jobs:
           # Check for changes and commit if there are any
           git diff-index --cached --quiet HEAD || \
             # Increase package patch version \
-            npm version patch && \
+            npm --no-git-tag-version version patch && \
             # Commit changes \
             git commit -am "[no ci] Data update on $(date '+%FT%H:%M:%S')" && \
             # Push to repo \
