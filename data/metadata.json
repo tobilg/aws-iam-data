@@ -4669,7 +4669,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 194,
+      "actionsCount": 199,
       "actions": [
         "ActivateEvaluationForm",
         "AssociateApprovedOrigin",
@@ -4694,6 +4694,7 @@
         "CreateInstance",
         "CreateIntegrationAssociation",
         "CreateParticipant",
+        "CreatePrompt",
         "CreateQueue",
         "CreateQuickConnect",
         "CreateRoutingProfile",
@@ -4713,6 +4714,7 @@
         "DeleteHoursOfOperation",
         "DeleteInstance",
         "DeleteIntegrationAssociation",
+        "DeletePrompt",
         "DeleteQuickConnect",
         "DeleteRule",
         "DeleteSecurityProfile",
@@ -4734,6 +4736,7 @@
         "DescribeInstanceAttribute",
         "DescribeInstanceStorageConfig",
         "DescribePhoneNumber",
+        "DescribePrompt",
         "DescribeQueue",
         "DescribeQuickConnect",
         "DescribeRoutingProfile",
@@ -4762,6 +4765,7 @@
         "GetFederationTokens",
         "GetMetricData",
         "GetMetricDataV2",
+        "GetPromptFile",
         "GetTaskTemplate",
         "GetTrafficDistribution",
         "ListAgentStatuses",
@@ -4843,6 +4847,7 @@
         "UpdateInstanceStorageConfig",
         "UpdateParticipantRoleConfig",
         "UpdatePhoneNumber",
+        "UpdatePrompt",
         "UpdateQueueHoursOfOperation",
         "UpdateQueueMaxContacts",
         "UpdateQueueName",
@@ -4866,7 +4871,7 @@
         "UpdateUserRoutingProfile",
         "UpdateUserSecurityProfiles"
       ],
-      "resourceTypesCount": 28,
+      "resourceTypesCount": 29,
       "resourceTypes": [
         "instance",
         "contact",
@@ -4895,7 +4900,8 @@
         "traffic-distribution-group",
         "rule",
         "evaluation-form",
-        "contact-evaluation"
+        "contact-evaluation",
+        "prompt"
       ],
       "conditionKeysCount": 8,
       "conditionKeys": [
