@@ -5,8 +5,8 @@
   "main": "./src/index.js",
   "types": "./src/awsIamData.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "gather-data": "ts-node --transpile-only --log-error process/gatherData.ts"
+    "gather-data": "ts-node --transpile-only --log-error process/gatherData.ts",
+    "update-changelog": "ts-node --transpile-only --log-error process/createChangelog.ts"
   },
   "repository": {
     "type": "git",
