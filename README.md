@@ -13,10 +13,13 @@ npm i --save aws-iam-data
 To use it in your own projects, see [examples/index.js](examples/index.js) or the code below:
 
 ```javascript
-const { iamData, metadata } = require('aws-iam-data');
+const { iamData, metadata, changelog } = require('aws-iam-data');
 
 // Get overall service count
 console.log(`Contains ${metadata.serviceCount} services!`);
+
+// Get changelog
+console.log(JSON.stringify(changelog, null, 2));
 
 // Get EC2 data
 const ec2IamData = iamData.filter(service => service.name === 'Amazon EC2')[0];
