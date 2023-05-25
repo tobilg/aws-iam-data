@@ -43,6 +43,10 @@ jobs:
           git diff-index --cached --quiet HEAD || \
             # Increase package patch version \
             npm --no-git-tag-version version patch && \
+            # Update changelog \
+            npm run update-changelog && \
+            # Add new files \
+            git add . && \
             # Commit changes \
             git commit -am "[no ci] Data update on $(date '+%FT%H:%M:%S')" && \
             # Push to repo \
