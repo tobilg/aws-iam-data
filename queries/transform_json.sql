@@ -26,6 +26,75 @@ FROM
     read_json_auto('https://raw.githubusercontent.com/tobilg/aws-iam-data/main/data/iam.json', maximum_object_size=20000000) order by name
 ) s;
 
+CREATE TABLE aws_condition_keys AS (
+WITH raw_condition_keys AS (
+  SELECT DISTINCT
+    condition_key_struct.name AS name,
+    min(condition_key_struct.apiReferenceUrl) AS reference_url,
+    min(condition_key_struct.description) AS description,
+    min(condition_key_struct.type) AS type
+  FROM
+    (
+    SELECT
+      unnest(condition_keys_struct) AS condition_key_struct
+    FROM 
+      aws_iam_data
+    )
+  GROUP BY
+    name
+  ORDER BY
+    name ASC
+),
+raw_resource_type_condition_keys AS (
+  SELECT DISTINCT
+    unnest(resource_type_struct.conditionKeys) AS name,
+  FROM
+    (
+    SELECT
+      unnest(resource_types_struct) AS resource_type_struct
+    FROM 
+      aws_iam_data
+    )
+)
+SELECT
+  nextval('aws_condition_key_id') as condition_key_id,
+  name,
+  reference_url,
+  description,
+  type
+FROM
+  (
+  SELECT
+    name,
+    reference_url,
+    description,
+    type
+  FROM
+    (
+    SELECT
+      s.name,
+      r.reference_url,
+      r.description,
+      r.type
+    FROM
+      raw_resource_type_condition_keys s
+      LEFT OUTER JOIN
+        raw_condition_keys r
+      ON
+        r.name = s.name
+    UNION
+    SELECT
+      name,
+      reference_url,
+      description,
+      type
+    FROM
+      raw_condition_keys
+    )
+  ORDER BY name ASC
+  )
+);
+
 -- Create resource type table
 SELECT
   service_id,
