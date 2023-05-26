@@ -157,7 +157,7 @@ const getResourceTypes = (html): ResourceType[] => {
     name: tr.childNodes[1].textContent.trim(),
     apiReferenceUrl: tr.childNodes[1].childNodes[3]?.attributes['href'],
     arnPattern: tr.childNodes[3].textContent.trim(),
-    conditionKeys: tr.childNodes[5].textContent.trim().length !== 0 ? tr.childNodes[5].textContent.trim().split('\n') : [],
+    conditionKeys: tr.childNodes[5].textContent.trim().length !== 0 ? tr.childNodes[5].textContent.trim().split('\n').map(item => item.trim()).filter(item => item.length > 0) : [],
   }));
 
   return resourceTypes;

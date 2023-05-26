@@ -1,6 +1,9 @@
 name: Update AWS IAM data
 
 on:
+  push:
+    branches: [ main ]
+    
   schedule:
     # Run everyday at 4AM UTC
     - cron:  '0 4 * * *'
@@ -27,6 +30,9 @@ jobs:
         run: |
           # Install dependencies
           npm i
+
+          # Copy old IAM data for changelog comparison
+          cp data/iam.json data/iam.old.json
 
           # Gather data
           npm run gather-data

@@ -1,5 +1,5 @@
 import { AWSIamData, Changelog, ChangelogEntry, ServiceAuthReference } from '../src/awsIamData';
-import oldVersion from '../data/iam.test.json';
+import oldVersion from '../data/iam.old.json';
 import newVersion from '../data/iam.json';
 import { readFileSync, writeFileSync } from 'fs';
 
