@@ -1,1 +1,28 @@
-[]
+[
+  {
+    "dateOfChange": "2023-05-26",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS AppSync": [
+        "appsync:AssociateMergedGraphqlApi",
+        "appsync:AssociateSourceGraphqlApi",
+        "appsync:DeleteResourcePolicy",
+        "appsync:DisassociateMergedGraphqlApi",
+        "appsync:DisassociateSourceGraphqlApi",
+        "appsync:GetResourcePolicy",
+        "appsync:GetSourceApiAssociation",
+        "appsync:ListSourceApiAssociations",
+        "appsync:ListTypesByAssociation",
+        "appsync:PutResourcePolicy",
+        "appsync:SourceGraphQL",
+        "appsync:StartSchemaMerge",
+        "appsync:UpdateSourceApiAssociation"
+      ],
+      "Amazon Translate": [
+        "translate:TranslateDocument"
+      ]
+    },
+    "removedActions": {}
+  }
+]
