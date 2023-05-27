@@ -1,5 +1,5 @@
 {
-  "serviceCount": 376,
+  "serviceCount": 377,
   "services": [
     {
       "name": "AWS Account Management",
@@ -3935,12 +3935,13 @@
       "name": "Amazon CodeGuru Security",
       "servicePrefix": "codeguru-security",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodegurusecurity.html",
-      "actionsCount": 9,
+      "actionsCount": 10,
       "actions": [
         "BatchGetFindings",
         "CreateScan",
         "CreateUploadUrl",
         "DeleteScansByCategory",
+        "GetAccountConfiguration",
         "GetFindings",
         "GetScan",
         "ListFindings",
@@ -8699,6 +8700,55 @@
       ]
     },
     {
+      "name": "AWS Elemental MediaPackage V2",
+      "servicePrefix": "mediapackagev2",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackagev2.html",
+      "actionsCount": 27,
+      "actions": [
+        "CreateChannel",
+        "CreateChannelGroup",
+        "CreateOriginEndpoint",
+        "DeleteChannel",
+        "DeleteChannelGroup",
+        "DeleteChannelPolicy",
+        "DeleteOriginEndpoint",
+        "DeleteOriginEndpointPolicy",
+        "GetChannel",
+        "GetChannelGroup",
+        "GetChannelPolicy",
+        "GetHeadObject",
+        "GetObject",
+        "GetOriginEndpoint",
+        "GetOriginEndpointPolicy",
+        "ListChannelGroups",
+        "ListChannels",
+        "ListOriginEndpoints",
+        "ListTagsForResource",
+        "PutChannelPolicy",
+        "PutObject",
+        "PutOriginEndpointPolicy",
+        "TagResource",
+        "UntagResource",
+        "UpdateChannel",
+        "UpdateChannelGroup",
+        "UpdateOriginEndpoint"
+      ],
+      "resourceTypesCount": 5,
+      "resourceTypes": [
+        "ChannelGroup",
+        "ChannelPolicy",
+        "Channel",
+        "OriginEndpointPolicy",
+        "OriginEndpoint"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
       "name": "AWS Elemental MediaPackage VOD",
       "servicePrefix": "mediapackage-vod",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackagevod.html",
@@ -10976,7 +11026,7 @@
       "name": "AWS Identity and Access Management Roles Anywhere",
       "servicePrefix": "rolesanywhere",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentityandaccessmanagementrolesanywhere.html",
-      "actionsCount": 26,
+      "actionsCount": 28,
       "actions": [
         "CreateProfile",
         "CreateTrustAnchor",
@@ -10999,6 +11049,8 @@
         "ListSubjects",
         "ListTagsForResource",
         "ListTrustAnchors",
+        "PutNotificationSettings",
+        "ResetNotificationSettings",
         "TagResource",
         "UntagResource",
         "UpdateCrl",
