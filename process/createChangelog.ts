@@ -3,6 +3,9 @@ import oldVersion from '../data/iam.old.json';
 import newVersion from '../data/iam.json';
 import { readFileSync, writeFileSync } from 'fs';
 
+// Store changes
+let hasChanges = false;
+
 // Setup changelog
 let changelog: ChangelogEntry = {
   dateOfChange: new Date().toISOString().substring(0, 10),
@@ -77,6 +80,9 @@ newAWSIamData.forEach(service => {
 
     // Check for added actions
     if (addedActions.length > 0) {
+      // There are changes
+      hasChanges = true;
+
       // Check if service is already in the map, otherwise create it
       if (!changelog.addedActions.hasOwnProperty(serviceName)) {
         changelog.addedActions[serviceName] = [];
@@ -88,6 +94,9 @@ newAWSIamData.forEach(service => {
 
     // Check for removed actions
     if (removedActions.length > 0) {
+      // There are changes
+      hasChanges = true;
+      
       // Check if service is already in the map, otherwise create it
       if (!changelog.removedActions.hasOwnProperty(serviceName)) {
         changelog.removedActions[serviceName] = [];
@@ -101,6 +110,9 @@ newAWSIamData.forEach(service => {
 
 // Add new service's actions as well
 if (addedServices) {
+  // There are changes
+  hasChanges = true;
+
   addedServices.forEach(serviceName => {
     // Find new service version
     const newServiceVersion = findService(newAWSIamData, serviceName);
@@ -121,6 +133,9 @@ if (addedServices) {
 
 // Add removed old service's actions as well
 if (removedServices) {
+  // There are changes
+  hasChanges = true;
+
   removedServices.forEach(serviceName => {
     // Find new service version
     const oldServiceVersion = findService(oldAWSIamData, serviceName);
@@ -139,14 +154,18 @@ if (removedServices) {
   })
 }
 
-// Read from current changelog file
-let currentChangelog = JSON.parse(readFileSync('./data/changelog.json', { encoding: 'utf-8'})) as Changelog;
+if (hasChanges) {
+  // Read from current changelog file
+  let currentChangelog = JSON.parse(readFileSync('./data/changelog.json', { encoding: 'utf-8'})) as Changelog;
 
-// Add changelog entry to changelog
-currentChangelog.push(changelog);
+  // Add changelog entry to changelog
+  currentChangelog.push(changelog);
 
-// Sort descending by dateOfChange 
-currentChangelog = currentChangelog.sort(sortChangelogEntries);
+  // Sort descending by dateOfChange 
+  currentChangelog = currentChangelog.sort(sortChangelogEntries);
 
-// Write new changelog
-writeFileSync('./data/changelog.json', JSON.stringify(currentChangelog, null, 2), { encoding: 'utf-8'});
+  // Write new changelog
+  writeFileSync('./data/changelog.json', JSON.stringify(currentChangelog, null, 2), { encoding: 'utf-8'});
+} else {
+  console.log('No changes detected');
+}
