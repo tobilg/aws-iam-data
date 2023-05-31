@@ -109,7 +109,7 @@ newAWSIamData.forEach(service => {
 });
 
 // Add new service's actions as well
-if (addedServices) {
+if (addedServices.length > 0) {
   // There are changes
   hasChanges = true;
 
@@ -132,7 +132,7 @@ if (addedServices) {
 }
 
 // Add removed old service's actions as well
-if (removedServices) {
+if (removedServices.length > 0) {
   // There are changes
   hasChanges = true;
 
@@ -155,6 +155,8 @@ if (removedServices) {
 }
 
 if (hasChanges) {
+  console.log('Changes detected, updating changelog');
+  console.log(changelog)
   // Read from current changelog file
   let currentChangelog = JSON.parse(readFileSync('./data/changelog.json', { encoding: 'utf-8'})) as Changelog;
 
