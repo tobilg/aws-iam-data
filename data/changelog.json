@@ -1,5 +1,26 @@
 [
   {
+    "dateOfChange": "2023-05-31",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS IQ": [
+        "iq:DownloadAttachment",
+        "iq:GetRequest",
+        "iq:ListAttachments"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:DescribeAssetBundleExportJob",
+        "quicksight:DescribeAssetBundleImportJob",
+        "quicksight:ListAssetBundleExportJobs",
+        "quicksight:ListAssetBundleImportJobs",
+        "quicksight:StartAssetBundleExportJob",
+        "quicksight:StartAssetBundleImportJob"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-05-30",
     "addedServices": [],
     "removedServices": [],
