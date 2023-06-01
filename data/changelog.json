@@ -1,5 +1,57 @@
 [
   {
+    "dateOfChange": "2023-06-01",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Security Lake": [
+        "securitylake:CreateDataLake",
+        "securitylake:CreateDataLakeExceptionSubscription",
+        "securitylake:CreateDataLakeOrganizationConfiguration",
+        "securitylake:CreateSubscriberNotification",
+        "securitylake:DeleteDataLake",
+        "securitylake:DeleteDataLakeExceptionSubscription",
+        "securitylake:DeleteDataLakeOrganizationConfiguration",
+        "securitylake:DeleteSubscriberNotification",
+        "securitylake:DeregisterDataLakeDelegatedAdministrator",
+        "securitylake:GetDataLakeExceptionSubscription",
+        "securitylake:GetDataLakeOrganizationConfiguration",
+        "securitylake:GetDataLakeSources",
+        "securitylake:ListDataLakeExceptions",
+        "securitylake:ListDataLakes",
+        "securitylake:RegisterDataLakeDelegatedAdministrator",
+        "securitylake:UpdateDataLake",
+        "securitylake:UpdateDataLakeExceptionSubscription",
+        "securitylake:UpdateSubscriberNotification"
+      ]
+    },
+    "removedActions": {
+      "Amazon Security Lake": [
+        "securitylake:CreateDatalake",
+        "securitylake:CreateDatalakeAutoEnable",
+        "securitylake:CreateDatalakeDelegatedAdmin",
+        "securitylake:CreateDatalakeExceptionsSubscription",
+        "securitylake:CreateSubscriptionNotificationConfiguration",
+        "securitylake:DeleteDatalake",
+        "securitylake:DeleteDatalakeAutoEnable",
+        "securitylake:DeleteDatalakeDelegatedAdmin",
+        "securitylake:DeleteDatalakeExceptionsSubscription",
+        "securitylake:DeleteSubscriptionNotificationConfiguration",
+        "securitylake:GetDatalake",
+        "securitylake:GetDatalakeAutoEnable",
+        "securitylake:GetDatalakeExceptionsExpiry",
+        "securitylake:GetDatalakeExceptionsSubscription",
+        "securitylake:GetDatalakeStatus",
+        "securitylake:GetSubscriptionNotificationConfiguration",
+        "securitylake:ListDatalakeExceptions",
+        "securitylake:UpdateDatalake",
+        "securitylake:UpdateDatalakeExceptionsExpiry",
+        "securitylake:UpdateDatalakeExceptionsSubscription",
+        "securitylake:UpdateSubscriptionNotificationConfiguration"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2023-05-31",
     "addedServices": [],
     "removedServices": [],
