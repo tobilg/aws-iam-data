@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2023-06-02",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon AppFlow": [
+        "appflow:CancelFlowExecutions",
+        "appflow:UseConnectorProfile"
+      ],
+      "Amazon WorkSpaces Web": [
+        "workspaces-web:AssociateIpAccessSettings",
+        "workspaces-web:CreateIpAccessSettings",
+        "workspaces-web:DeleteIpAccessSettings",
+        "workspaces-web:DisassociateIpAccessSettings",
+        "workspaces-web:GetIpAccessSettings",
+        "workspaces-web:ListIpAccessSettings",
+        "workspaces-web:UpdateIpAccessSettings"
+      ]
+    },
+    "removedActions": {
+      "Amazon AppFlow": [
+        "appflow:\n"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2023-06-01",
     "addedServices": [],
     "removedServices": [],
