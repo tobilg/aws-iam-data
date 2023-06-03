@@ -1,5 +1,40 @@
 [
   {
+    "dateOfChange": "2023-06-03",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Database Migration Service": [
+        "dms:CreateDataMigration",
+        "dms:CreateReplicationConfig",
+        "dms:DeleteDataMigration",
+        "dms:DeleteReplicationConfig",
+        "dms:DescribeDataMigrations",
+        "dms:DescribeReplicationConfigs",
+        "dms:DescribeReplicationTableStatistics",
+        "dms:DescribeReplications",
+        "dms:ModifyDataMigration",
+        "dms:ModifyReplicationConfig",
+        "dms:ReloadReplicationTables",
+        "dms:StartDataMigration",
+        "dms:StartReplication",
+        "dms:StopDataMigration",
+        "dms:StopReplication"
+      ],
+      "AWS Marketplace Management Portal": [
+        "aws-marketplace-management:GetAdditionalSellerNotificationRecipients",
+        "aws-marketplace-management:GetBankAccountVerificationDetails",
+        "aws-marketplace-management:GetSecondaryUserVerificationDetails",
+        "aws-marketplace-management:GetSellerVerificationDetails",
+        "aws-marketplace-management:PutAdditionalSellerNotificationRecipients",
+        "aws-marketplace-management:PutBankAccountVerificationDetails",
+        "aws-marketplace-management:PutSecondaryUserVerificationDetails",
+        "aws-marketplace-management:PutSellerVerificationDetails"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-06-02",
     "addedServices": [],
     "removedServices": [],
