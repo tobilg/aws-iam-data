@@ -3,11 +3,13 @@ INSTALL httpfs;
 LOAD httpfs;
 
 -- Create sequences
-create temporary sequence aws_service_id increment by 1 start with 1;
-create temporary sequence aws_action_id increment by 1 start with 1;
-create temporary sequence aws_resource_type_id increment by 1 start with 1;
-create temporary sequence aws_condition_key_id increment by 1 start with 1;
-create temporary sequence aws_action_resource_type_id increment by 1 start with 1;
+create sequence aws_service_id increment by 1 start with 1;
+create sequence aws_action_id increment by 1 start with 1;
+create sequence aws_resource_type_id increment by 1 start with 1;
+create sequence aws_condition_key_id increment by 1 start with 1;
+create sequence aws_action_resource_type_id increment by 1 start with 1;
+create sequence aws_action_condition_key_id increment by 1 start with 1;
+create sequence aws_action_dependent_action_id increment by 1 start with 1;
 
 -- Create data table
 CREATE TABLE aws_iam_data AS
@@ -32,7 +34,63 @@ FROM
     read_json_auto('https://raw.githubusercontent.com/tobilg/aws-iam-data/main/data/iam.json', maximum_object_size=20000000) order by name
 ) s;
 
-CREATE TABLE aws_condition_keys AS (
+-- Create services table
+CREATE TABLE aws_services (
+  service_id INTEGER PRIMARY KEY,
+  name VARCHAR,
+  prefix VARCHAR,
+  reference_url VARCHAR
+);
+
+-- Insert into services table
+INSERT INTO aws_services
+SELECT 
+  service_id,
+  name,
+  prefix,
+  reference_url
+FROM
+  aws_iam_data;
+
+-- Create actions table
+CREATE TABLE aws_actions (
+  action_id INTEGER PRIMARY KEY,
+  service_id INTEGER REFERENCES aws_services (service_id),
+  name VARCHAR,
+  reference_url VARCHAR,
+  permission_only_flag BOOL,
+  access_level VARCHAR,
+  resource_type_struct STRUCT(resourceType VARCHAR, required BOOLEAN, conditionKeys VARCHAR[], dependentActions VARCHAR[])[]
+);
+  
+INSERT INTO aws_actions
+SELECT
+  nextval('aws_action_id') as action_id,
+  service_id,
+  prefix || ':' || action_struct.name AS name,
+  action_struct.apireferenceurl AS reference_url,
+  action_struct.permissiononly AS permission_only_flag,
+  action_struct.accesslevel AS access_level,
+  action_struct.resourcetypes as resource_type_struct
+FROM
+  (
+  SELECT
+    service_id,
+    prefix,
+    unnest(actions_struct) AS action_struct
+  FROM 
+    aws_iam_data
+  );
+
+CREATE TABLE aws_condition_keys (
+  condition_key_id INTEGER PRIMARY KEY,
+  name VARCHAR,
+  reference_url VARCHAR,
+  description VARCHAR,
+  type VARCHAR
+);
+
+INSERT INTO aws_condition_keys
 WITH raw_condition_keys AS (
   SELECT DISTINCT
     condition_key_struct.name AS name,
@@ -121,45 +179,52 @@ FROM
       r.name = s.name
     )
   ORDER BY name ASC
-  )
-);
+  );
 
 -- Create resource type table
-CREATE TABLE aws_resource_types AS (
+CREATE TABLE aws_resource_types (
+  resource_type_id INTEGER PRIMARY KEY,
+  service_id INTEGER REFERENCES aws_services (service_id),
+  name VARCHAR,
+  reference_url VARCHAR,
+  arn_pattern VARCHAR,
+  condition_keys_struct VARCHAR[]
+);
+
+INSERT INTO aws_resource_types
+SELECT
+  nextval('aws_resource_type_id') as resource_type_id,
+  service_id,
+  name,
+  reference_url,
+  arn_pattern,
+  condition_keys_struct
+FROM
+  (
   SELECT
-    nextval('aws_resource_type_id') as resource_type_id,
     service_id,
-    name,
-    reference_url,
-    arn_pattern,
-    condition_keys_struct
+    resource_type_struct.name AS name,
+    resource_type_struct.apiReferenceUrl AS reference_url,
+    resource_type_struct.arnPattern AS arn_pattern,
+    resource_type_struct.conditionKeys as condition_keys_struct
   FROM
     (
     SELECT
       service_id,
-      resource_type_struct.name AS name,
-      resource_type_struct.apiReferenceUrl AS reference_url,
-      resource_type_struct.arnPattern AS arn_pattern,
-      resource_type_struct.conditionKeys as condition_keys_struct
-    FROM
-      (
-      SELECT
-        service_id,
-        unnest(resource_types_struct) AS resource_type_struct
-      FROM 
-        aws_iam_data
-      )
-    UNION ALL
-    SELECT DISTINCT
-      service_id,
-      'wildcard' AS name,
-      null AS reference_url,
-      '*' AS arn_pattern,
-      null AS condition_key_struct
-    FROM
+      unnest(resource_types_struct) AS resource_type_struct
+    FROM 
       aws_iam_data
     )
-);
+  UNION ALL
+  SELECT DISTINCT
+    service_id,
+    'wildcard' AS name,
+    null AS reference_url,
+    '*' AS arn_pattern,
+    null AS condition_key_struct
+  FROM
+    aws_iam_data
+  );
 
 -- Create mapping table for resource types condition keys
 CREATE TABLE aws_resource_types_condition_keys AS (
@@ -183,29 +248,17 @@ CREATE TABLE aws_resource_types_condition_keys AS (
 -- Remove no longer needed column
 ALTER TABLE aws_resource_types DROP COLUMN condition_keys_struct;
 
--- Create action table
-CREATE TABLE aws_actions AS (
-  SELECT
-    nextval('aws_action_id') as action_id,
-    service_id,
-    prefix || ':' || action_struct.name AS name,
-    action_struct.apireferenceurl AS reference_url,
-    action_struct.permissiononly AS permission_only_flag,
-    action_struct.accesslevel AS access_level,
-    action_struct.resourcetypes as resource_type_struct
-  FROM
-    (
-    SELECT
-      service_id,
-      prefix,
-      unnest(actions_struct) AS action_struct
-    FROM 
-      aws_iam_data
-    )
+-- Create mapping table for action resource types
+CREATE TABLE aws_actions_resource_types (
+  action_resource_type_id BIGINT PRIMARY KEY,
+  action_id INTEGER REFERENCES aws_actions (action_id),
+  resource_type_id INTEGER REFERENCES aws_resource_types (resource_type_id),
+  required_flag BOOLEAN,
+  condition_keys VARCHAR[],
+  dependent_actions VARCHAR[]
 );
 
--- Create mapping table for action resource types
-CREATE TABLE aws_actions_resource_types AS (
+INSERT INTO aws_actions_resource_types
   SELECT DISTINCT
     nextval('aws_action_resource_type_id') as action_resource_type_id,
     action_resource_types.action_id,
@@ -238,12 +291,22 @@ CREATE TABLE aws_actions_resource_types AS (
   INNER JOIN
     aws_resource_types
   ON
-    aws_resource_types.name = action_resource_types.resource_type_name AND aws_resource_types.service_id = action_resource_types.service_id
-);
+    aws_resource_types.name = action_resource_types.resource_type_name AND aws_resource_types.service_id = action_resource_types.service_id;
+
+-- Remove no longer needed column
+ALTER TABLE aws_actions DROP COLUMN resource_type_struct;
 
 -- Create mapping table for action condition keys
-CREATE TABLE aws_actions_condition_keys AS (
+CREATE TABLE aws_actions_condition_keys (
+  action_condition_key_id BIGINT PRIMARY KEY,
+  action_resource_type_id BIGINT REFERENCES aws_actions_resource_types (action_resource_type_id),
+  action_id INTEGER REFERENCES aws_actions (action_id),
+  condition_key_id INTEGER REFERENCES aws_condition_keys (condition_key_id),
+);
+
+INSERT INTO aws_actions_condition_keys
   SELECT DISTINCT
+    nextval('aws_action_condition_key_id') AS action_condition_key_id,
     action_condition_keys.action_resource_type_id,
     action_condition_keys.action_id,
     aws_condition_keys.condition_key_id
@@ -259,26 +322,34 @@ CREATE TABLE aws_actions_condition_keys AS (
   INNER JOIN
     aws_condition_keys
   ON
-    aws_condition_keys.name = action_condition_keys.condition_key_name
-);
+    aws_condition_keys.name = action_condition_keys.condition_key_name;
 
 -- Create mapping table for action resource types dependant actions
-CREATE TABLE aws_actions_dependant_actions AS (
-  SELECT DISTINCT
-    action_dependent_actions.action_resource_type_id,
-    action_dependent_actions.action_id,
-    aws_actions.action_id AS dependent_action_id
-  FROM
-    (
-    SELECT DISTINCT
-      action_resource_type_id,
-      action_id,
-      unnest(dependent_actions) AS dependent_actions_name
-    FROM
-      aws_actions_resource_types
-    ) action_dependent_actions
-  INNER JOIN
-    aws_actions
-  ON
-    aws_actions.name = action_dependent_actions.dependent_actions_name
+CREATE TABLE aws_actions_dependant_actions (
+  action_dependent_action_id INTEGER PRIMARY KEY,
+  action_resource_type_id BIGINT REFERENCES aws_actions_resource_types (action_resource_type_id),
+  action_id INTEGER REFERENCES aws_actions (action_id),
+  dependent_action_id INTEGER REFERENCES aws_actions (action_id)
 );
+
+INSERT INTO aws_actions_dependant_actions
+SELECT DISTINCT
+  nextval('aws_action_dependent_action_id') AS action_dependent_action_id,
+  action_dependent_actions.action_resource_type_id,
+  action_dependent_actions.action_id,
+  aws_actions.action_id AS dependent_action_id
+FROM
+  (
+  SELECT DISTINCT
+    action_resource_type_id,
+    action_id,
+    unnest(dependent_actions) AS dependent_actions_name
+  FROM
+    aws_actions_resource_types
+  ) action_dependent_actions
+INNER JOIN
+  aws_actions
+ON
+  aws_actions.name = action_dependent_actions.dependent_actions_name;
+
+DROP TABLE aws_iam_data;
