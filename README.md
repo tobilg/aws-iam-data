@@ -35,3 +35,14 @@ console.log(JSON.stringify(ec2ResourceTypes, null, 2));
 
 ## Automatic updates
 The CI pipeline will check for AWS IAM docs updates everyday at 4AM UTC, and automatically publish a new patch version if updates are detected.
+
+
+## Data exports
+The JSON-based data gets automatically exported as CSV and Parquet files as well. Please look in the respective directories:
+
+* [data/csv/](data/csv/)
+* [data/parquet/](data/parquet/)
+
+## Entity-Relatiship Diagram
+The ERD of the exported data tables looks like this:
+![ERD](docs/erd.png)
