@@ -1,0 +1,80 @@
+erDiagram
+    aws_services {
+        INTEGER service_id PK
+        VARCHAR name
+        VARCHAR prefix
+        VARCHAR reference_url
+    }
+
+    aws_actions {
+        INTEGER action_id PK
+        INTEGER service_id FK
+        VARCHAR name
+        VARCHAR reference_url
+        BOOLEAN permission_only_flag
+        VARCHAR access_level
+    }
+
+    aws_services ||--o{ aws_actions : has
+
+    aws_condition_keys {
+        INTEGER condition_key_id PK
+        VARCHAR name
+        VARCHAR reference_url
+        VARCHAR description
+        VARCHAR type
+    }
+
+    aws_services ||--o{ aws_condition_keys : has
+
+    aws_resource_types {
+        INTEGER resource_type_id PK
+        INTEGER service_id FK
+        VARCHAR name
+        VARCHAR reference_url
+        VARCHAR arn_pattern
+    }
+
+    aws_services ||--o{ aws_resource_types : has
+
+    aws_resource_types_condition_keys {
+        BIGINT resource_type_condition_key_id PK
+        BIGINT resource_type_id FK
+        INTEGER condition_key_id FK
+    }
+
+    aws_resource_types ||--o{ aws_resource_types_condition_keys : has
+    aws_actions ||--o{ aws_resource_types_condition_keys : has
+    aws_condition_keys ||--o{ aws_resource_types_condition_keys : has
+
+    aws_actions_condition_keys {
+        BIGINT action_condition_key_id PK
+        BIGINT action_resource_type_id FK
+        INTEGER action_id FK
+        INTEGER condition_key_id FK
+    }
+
+    aws_actions_resource_types ||--o{ aws_actions_condition_keys : has
+    aws_actions ||--o{ aws_actions_condition_keys : has
+    aws_condition_keys ||--o{ aws_actions_condition_keys : has
+
+    aws_actions_dependant_actions {
+        INTEGER action_dependent_action_id PK
+        BIGINT action_resource_type_id FK
+        INTEGER action_id FK
+        INTEGER dependent_action_id FK
+    }
+
+    aws_actions_resource_types ||--o{ aws_actions_dependant_actions : has
+    aws_actions ||--o{ aws_actions_dependant_actions : has
+    aws_actions ||--o{ aws_actions_dependant_actions : has-dependent
+
+    aws_actions_resource_types {
+        BIGINT action_resource_type_id PK
+        INTEGER action_id FK
+        INTEGER resource_type_id FK
+        BOOLEAN required_flag
+    }
+
+    aws_actions ||--o{ aws_actions_resource_types : has
+    aws_resource_types ||--o{ aws_actions_resource_types : has

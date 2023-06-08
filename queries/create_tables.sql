@@ -8,6 +8,7 @@ create sequence aws_action_id increment by 1 start with 1;
 create sequence aws_resource_type_id increment by 1 start with 1;
 create sequence aws_condition_key_id increment by 1 start with 1;
 create sequence aws_action_resource_type_id increment by 1 start with 1;
+create sequence aws_resource_type_condition_key_id increment by 1 start with 1;
 create sequence aws_action_condition_key_id increment by 1 start with 1;
 create sequence aws_action_dependent_action_id increment by 1 start with 1;
 
@@ -31,7 +32,7 @@ FROM
     resourceTypes AS resource_types_struct,
     conditionKeys AS condition_keys_struct,
   FROM 
-    read_json_auto('https://raw.githubusercontent.com/tobilg/aws-iam-data/main/data/iam.json', maximum_object_size=20000000) order by name
+    read_json_auto('./data/json/iam.json', maximum_object_size=20000000) order by name
 ) s;
 
 -- Create services table
@@ -227,23 +228,29 @@ FROM
   );
 
 -- Create mapping table for resource types condition keys
-CREATE TABLE aws_resource_types_condition_keys AS (
-  SELECT
-    rt_condition_keys.resource_type_id,
-    aws_condition_keys.condition_key_id
-  FROM
-    (
-    SELECT
-      resource_type_id,
-      unnest(condition_keys_struct) as condition_key_name
-    FROM
-      aws_resource_types
-    ) rt_condition_keys
-  INNER JOIN
-    aws_condition_keys
-  ON
-    aws_condition_keys.name = rt_condition_keys.condition_key_name
+CREATE TABLE aws_resource_types_condition_keys (
+  resource_type_condition_key_id INTEGER,
+  resource_type_id INTEGER,
+  condition_key_id INTEGER
 );
+
+INSERT INTO aws_resource_types_condition_keys
+SELECT
+  nextval('aws_resource_type_condition_key_id') as resource_type_condition_key_id,
+  rt_condition_keys.resource_type_id,
+  aws_condition_keys.condition_key_id
+FROM
+  (
+  SELECT
+    resource_type_id,
+    unnest(condition_keys_struct) as condition_key_name
+  FROM
+    aws_resource_types
+  ) rt_condition_keys
+INNER JOIN
+  aws_condition_keys
+ON
+  aws_condition_keys.name = rt_condition_keys.condition_key_name;
 
 -- Remove no longer needed column
 ALTER TABLE aws_resource_types DROP COLUMN condition_keys_struct;
@@ -351,5 +358,9 @@ INNER JOIN
   aws_actions
 ON
   aws_actions.name = action_dependent_actions.dependent_actions_name;
+
+-- Remove no longer needed columns
+ALTER TABLE aws_actions_resource_types DROP COLUMN condition_keys;
+ALTER TABLE aws_actions_resource_types DROP COLUMN dependent_actions;
 
 DROP TABLE aws_iam_data;

@@ -211,7 +211,7 @@ const run = async () => {
   }));
 
   // Write IAM data
-  writeFileSync(join(__dirname, '../data', 'iam.json'), JSON.stringify(serviceAuthReferenceData, null, 2), { encoding: 'utf-8' });
+  writeFileSync(join(__dirname, '../data/json', 'iam.json'), JSON.stringify(serviceAuthReferenceData, null, 2), { encoding: 'utf-8' });
 
   // Gather metadata
   const metadata: AWSIamMetadata = {
@@ -230,7 +230,7 @@ const run = async () => {
   }
 
   // Write metadata
-  writeFileSync(join(__dirname, '../data', 'metadata.json'), JSON.stringify(metadata, null, 2), { encoding: 'utf-8' });
+  writeFileSync(join(__dirname, '../data/json', 'metadata.json'), JSON.stringify(metadata, null, 2), { encoding: 'utf-8' });
 
   // Gather ARNs
 };

@@ -48,6 +48,10 @@ jobs:
             npm --no-git-tag-version version patch && \
             # Update changelog \
             npm run update-changelog && \
+            # Create tables \
+            npm run create-tables && \
+            # Export data \
+            npm run export-data && \
             # Add new files \
             git add . && \
             # Commit changes \

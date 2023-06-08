@@ -6,7 +6,10 @@
   "types": "./src/awsIamData.d.ts",
   "scripts": {
     "gather-data": "ts-node --transpile-only --log-error process/gatherData.ts",
-    "update-changelog": "ts-node --transpile-only --log-error process/createChangelog.ts"
+    "update-changelog": "ts-node --transpile-only --log-error process/createChangelog.ts",
+    "create-erd": "node_modules/.bin/mmdc -i erd.mmd -o docs/erd.png -w 1600",
+    "create-tables": "scripts/create_tables.sh",
+    "export-data": "scripts/export_data.sh"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,7 @@
   },
   "homepage": "https://github.com/tobilg/aws-iam-data#readme",
   "devDependencies": {
+    "@mermaid-js/mermaid-cli": "^10.2.2",
     "@types/node": "^20.1.4",
     "ts-node": "^10.9.1",
     "typescript": "^5.0.4"

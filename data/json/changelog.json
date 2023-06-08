@@ -1,0 +1,242 @@
+[
+  {
+    "dateOfChange": "2023-06-03",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Database Migration Service": [
+        "dms:CreateDataMigration",
+        "dms:CreateReplicationConfig",
+        "dms:DeleteDataMigration",
+        "dms:DeleteReplicationConfig",
+        "dms:DescribeDataMigrations",
+        "dms:DescribeReplicationConfigs",
+        "dms:DescribeReplicationTableStatistics",
+        "dms:DescribeReplications",
+        "dms:ModifyDataMigration",
+        "dms:ModifyReplicationConfig",
+        "dms:ReloadReplicationTables",
+        "dms:StartDataMigration",
+        "dms:StartReplication",
+        "dms:StopDataMigration",
+        "dms:StopReplication"
+      ],
+      "AWS Marketplace Management Portal": [
+        "aws-marketplace-management:GetAdditionalSellerNotificationRecipients",
+        "aws-marketplace-management:GetBankAccountVerificationDetails",
+        "aws-marketplace-management:GetSecondaryUserVerificationDetails",
+        "aws-marketplace-management:GetSellerVerificationDetails",
+        "aws-marketplace-management:PutAdditionalSellerNotificationRecipients",
+        "aws-marketplace-management:PutBankAccountVerificationDetails",
+        "aws-marketplace-management:PutSecondaryUserVerificationDetails",
+        "aws-marketplace-management:PutSellerVerificationDetails"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
+    "dateOfChange": "2023-06-02",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon AppFlow": [
+        "appflow:CancelFlowExecutions",
+        "appflow:UseConnectorProfile"
+      ],
+      "Amazon WorkSpaces Web": [
+        "workspaces-web:AssociateIpAccessSettings",
+        "workspaces-web:CreateIpAccessSettings",
+        "workspaces-web:DeleteIpAccessSettings",
+        "workspaces-web:DisassociateIpAccessSettings",
+        "workspaces-web:GetIpAccessSettings",
+        "workspaces-web:ListIpAccessSettings",
+        "workspaces-web:UpdateIpAccessSettings"
+      ]
+    },
+    "removedActions": {
+      "Amazon AppFlow": [
+        "appflow:\n"
+      ]
+    }
+  },
+  {
+    "dateOfChange": "2023-06-01",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Security Lake": [
+        "securitylake:CreateDataLake",
+        "securitylake:CreateDataLakeExceptionSubscription",
+        "securitylake:CreateDataLakeOrganizationConfiguration",
+        "securitylake:CreateSubscriberNotification",
+        "securitylake:DeleteDataLake",
+        "securitylake:DeleteDataLakeExceptionSubscription",
+        "securitylake:DeleteDataLakeOrganizationConfiguration",
+        "securitylake:DeleteSubscriberNotification",
+        "securitylake:DeregisterDataLakeDelegatedAdministrator",
+        "securitylake:GetDataLakeExceptionSubscription",
+        "securitylake:GetDataLakeOrganizationConfiguration",
+        "securitylake:GetDataLakeSources",
+        "securitylake:ListDataLakeExceptions",
+        "securitylake:ListDataLakes",
+        "securitylake:RegisterDataLakeDelegatedAdministrator",
+        "securitylake:UpdateDataLake",
+        "securitylake:UpdateDataLakeExceptionSubscription",
+        "securitylake:UpdateSubscriberNotification"
+      ]
+    },
+    "removedActions": {
+      "Amazon Security Lake": [
+        "securitylake:CreateDatalake",
+        "securitylake:CreateDatalakeAutoEnable",
+        "securitylake:CreateDatalakeDelegatedAdmin",
+        "securitylake:CreateDatalakeExceptionsSubscription",
+        "securitylake:CreateSubscriptionNotificationConfiguration",
+        "securitylake:DeleteDatalake",
+        "securitylake:DeleteDatalakeAutoEnable",
+        "securitylake:DeleteDatalakeDelegatedAdmin",
+        "securitylake:DeleteDatalakeExceptionsSubscription",
+        "securitylake:DeleteSubscriptionNotificationConfiguration",
+        "securitylake:GetDatalake",
+        "securitylake:GetDatalakeAutoEnable",
+        "securitylake:GetDatalakeExceptionsExpiry",
+        "securitylake:GetDatalakeExceptionsSubscription",
+        "securitylake:GetDatalakeStatus",
+        "securitylake:GetSubscriptionNotificationConfiguration",
+        "securitylake:ListDatalakeExceptions",
+        "securitylake:UpdateDatalake",
+        "securitylake:UpdateDatalakeExceptionsExpiry",
+        "securitylake:UpdateDatalakeExceptionsSubscription",
+        "securitylake:UpdateSubscriptionNotificationConfiguration"
+      ]
+    }
+  },
+  {
+    "dateOfChange": "2023-05-31",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS IQ": [
+        "iq:DownloadAttachment",
+        "iq:GetRequest",
+        "iq:ListAttachments"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:DescribeAssetBundleExportJob",
+        "quicksight:DescribeAssetBundleImportJob",
+        "quicksight:ListAssetBundleExportJobs",
+        "quicksight:ListAssetBundleImportJobs",
+        "quicksight:StartAssetBundleExportJob",
+        "quicksight:StartAssetBundleImportJob"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
+    "dateOfChange": "2023-05-31",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {},
+    "removedActions": {}
+  },
+  {
+    "dateOfChange": "2023-05-31",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {},
+    "removedActions": {}
+  },
+  {
+    "dateOfChange": "2023-05-31",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {},
+    "removedActions": {}
+  },
+  {
+    "dateOfChange": "2023-05-31",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {},
+    "removedActions": {}
+  },
+  {
+    "dateOfChange": "2023-05-31",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {},
+    "removedActions": {}
+  },
+  {
+    "dateOfChange": "2023-05-27",
+    "addedServices": [
+      "AWS Elemental MediaPackage V2"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CodeGuru Security": [
+        "codeguru-security:GetAccountConfiguration"
+      ],
+      "AWS Identity and Access Management Roles Anywhere": [
+        "rolesanywhere:PutNotificationSettings",
+        "rolesanywhere:ResetNotificationSettings"
+      ],
+      "AWS Elemental MediaPackage V2": [
+        "mediapackagev2:CreateChannel",
+        "mediapackagev2:CreateChannelGroup",
+        "mediapackagev2:CreateOriginEndpoint",
+        "mediapackagev2:DeleteChannel",
+        "mediapackagev2:DeleteChannelGroup",
+        "mediapackagev2:DeleteChannelPolicy",
+        "mediapackagev2:DeleteOriginEndpoint",
+        "mediapackagev2:DeleteOriginEndpointPolicy",
+        "mediapackagev2:GetChannel",
+        "mediapackagev2:GetChannelGroup",
+        "mediapackagev2:GetChannelPolicy",
+        "mediapackagev2:GetHeadObject",
+        "mediapackagev2:GetObject",
+        "mediapackagev2:GetOriginEndpoint",
+        "mediapackagev2:GetOriginEndpointPolicy",
+        "mediapackagev2:ListChannelGroups",
+        "mediapackagev2:ListChannels",
+        "mediapackagev2:ListOriginEndpoints",
+        "mediapackagev2:ListTagsForResource",
+        "mediapackagev2:PutChannelPolicy",
+        "mediapackagev2:PutObject",
+        "mediapackagev2:PutOriginEndpointPolicy",
+        "mediapackagev2:TagResource",
+        "mediapackagev2:UntagResource",
+        "mediapackagev2:UpdateChannel",
+        "mediapackagev2:UpdateChannelGroup",
+        "mediapackagev2:UpdateOriginEndpoint"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
+    "dateOfChange": "2023-05-26",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS AppSync": [
+        "appsync:AssociateMergedGraphqlApi",
+        "appsync:AssociateSourceGraphqlApi",
+        "appsync:DeleteResourcePolicy",
+        "appsync:DisassociateMergedGraphqlApi",
+        "appsync:DisassociateSourceGraphqlApi",
+        "appsync:GetResourcePolicy",
+        "appsync:GetSourceApiAssociation",
+        "appsync:ListSourceApiAssociations",
+        "appsync:ListTypesByAssociation",
+        "appsync:PutResourcePolicy",
+        "appsync:SourceGraphQL",
+        "appsync:StartSchemaMerge",
+        "appsync:UpdateSourceApiAssociation"
+      ],
+      "Amazon Translate": [
+        "translate:TranslateDocument"
+      ]
+    },
+    "removedActions": {}
+  }
+]
