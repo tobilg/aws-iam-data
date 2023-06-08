@@ -1,5 +1,61 @@
 [
   {
+    "dateOfChange": "2023-06-08",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon FinSpace": [
+        "finspace:ConnectKxCluster",
+        "finspace:CreateKxChangeset",
+        "finspace:CreateKxCluster",
+        "finspace:CreateKxDatabase",
+        "finspace:CreateKxEnvironment",
+        "finspace:CreateKxUser",
+        "finspace:DeleteKxCluster",
+        "finspace:DeleteKxDatabase",
+        "finspace:DeleteKxEnvironment",
+        "finspace:DeleteKxUser",
+        "finspace:GetKxChangeset",
+        "finspace:GetKxCluster",
+        "finspace:GetKxConnectionString",
+        "finspace:GetKxDatabase",
+        "finspace:GetKxEnvironment",
+        "finspace:GetKxUser",
+        "finspace:ListKxChangesets",
+        "finspace:ListKxClusterNodes",
+        "finspace:ListKxClusters",
+        "finspace:ListKxDatabases",
+        "finspace:ListKxEnvironments",
+        "finspace:ListKxUsers",
+        "finspace:MountKxDatabase",
+        "finspace:UpdateKxClusterDatabases",
+        "finspace:UpdateKxDatabase",
+        "finspace:UpdateKxEnvironment",
+        "finspace:UpdateKxEnvironmentNetwork",
+        "finspace:UpdateKxUser"
+      ],
+      "AWS IoT": [
+        "iot:CreatePackage",
+        "iot:CreatePackageVersion",
+        "iot:DeletePackage",
+        "iot:DeletePackageVersion",
+        "iot:GetPackage",
+        "iot:GetPackageConfiguration",
+        "iot:GetPackageVersion",
+        "iot:ListPackageVersions",
+        "iot:ListPackages",
+        "iot:UpdatePackage",
+        "iot:UpdatePackageConfiguration",
+        "iot:UpdatePackageVersion"
+      ],
+      "AWS Signer": [
+        "signer:GetRevocationStatus",
+        "signer:SignPayload"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-06-07",
     "addedServices": [
       "Amazon EC2"
