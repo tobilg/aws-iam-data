@@ -71,7 +71,7 @@ const getActions = (html: HTMLElement): Action[] => {
       // Get raw action name from first cell
 			const actionNameRaw = rowCellNodes[0].textContent;
       // Split action name to determine if permission only (later)
-			const actionNameSubstrings = actionNameRaw?.split(' ');
+			const actionNameSubstrings = actionNameRaw?.trim()?.split(' ');
       // Get action name
       const actionNameNode: Element | null = rowCellNodes[0].querySelector('a[href]');
 

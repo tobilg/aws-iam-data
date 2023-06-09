@@ -1,10 +1,11 @@
 {
   "name": "aws-iam-data",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Provides AWS IAM data gathered from the official AWS IAM docs as a convenient npm package that can be used in other OSS projects.",
   "main": "./src/index.js",
   "types": "./src/awsIamData.d.ts",
   "scripts": {
+    "install-duckdb": "scripts/install_duckdb.sh",
     "gather-data": "ts-node --transpile-only --log-error process/gatherData.ts",
     "update-changelog": "ts-node --transpile-only --log-error process/createChangelog.ts",
     "create-erd": "node_modules/.bin/mmdc -i erd.mmd -o docs/erd.png -w 1600",

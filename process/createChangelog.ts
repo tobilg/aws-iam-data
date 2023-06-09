@@ -156,9 +156,9 @@ if (removedServices.length > 0) {
 
 if (hasChanges) {
   console.log('Changes detected, updating changelog');
-  console.log(changelog)
+
   // Read from current changelog file
-  let currentChangelog = JSON.parse(readFileSync('./data/changelog.json', { encoding: 'utf-8'})) as Changelog;
+  let currentChangelog = JSON.parse(readFileSync('./data/json/changelog.json', { encoding: 'utf-8'})) as Changelog;
 
   // Add changelog entry to changelog
   currentChangelog.push(changelog);
@@ -167,7 +167,7 @@ if (hasChanges) {
   currentChangelog = currentChangelog.sort(sortChangelogEntries);
 
   // Write new changelog
-  writeFileSync('./data/changelog.json', JSON.stringify(currentChangelog, null, 2), { encoding: 'utf-8'});
+  writeFileSync('./data/json/changelog.json', JSON.stringify(currentChangelog, null, 2), { encoding: 'utf-8'});
 } else {
   console.log('No changes detected');
 }

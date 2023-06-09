@@ -76,9 +76,9 @@ condition_key_id,name,reference_url,description,type
 75,aws-marketplace:AgreementType,https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html,Filters access by the type of the agreement,ArrayOfString
 76,aws-marketplace:PartyType,https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html,Filters access by the party type of the agreement,String
 77,aws-marketplace:ProductId,https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html,"Filters access by product id for AWS Marketplace RedHat OpenShift products in the RedHat console. Note: This condition key only applies to the RedHat console, and using it will not restrict access to products in AWS Marketplace",ArrayOfString
-78,aws:RequestTag/${TagKey},${UserGuideDocPage}security_iam_service-with-iam.html#security_iam_service-with-iam-resource-based-policies,A key that is present in the request the user makes to the ELB service,String
-79,aws:ResourceTag/${TagKey},${UserGuideDocPage}security_iam_service-with-iam.html#security_iam_service-with-iam-resource-based-policies,Filter access by tag key-value pairs attached to the resource,String
-80,aws:TagKeys,${UserGuideDocPage}security_iam_service-with-iam.html#security_iam_service-with-iam-resource-based-policies,Filters access based on the presence of tag keys in the request,ArrayOfString
+78,aws:RequestTag/${TagKey},"",A key that is present in the request the user makes to the ELB service,String
+79,aws:ResourceTag/${TagKey},"",Filter access by tag key-value pairs attached to the resource,String
+80,aws:TagKeys,"",Filters access based on the presence of tag keys in the request,ArrayOfString
 81,backup:ChangeableForDays,https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#amazon-backup-keys,Filters access by the value of the ChangeableForDays parameter,Numeric
 82,backup:CopyTargetOrgPaths,https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#amazon-backup-keys,Filters access by the organization unit,ArrayOfString
 83,backup:CopyTargets,https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#amazon-backup-keys,Filters access by the ARN of an backup vault,ArrayOfARN
@@ -383,7 +383,7 @@ condition_key_id,name,reference_url,description,type
 382,iam:PassedToService,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PassedToService,Filters access by the AWS service to which this role is passed,String
 383,iam:PermissionsBoundary,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PermissionsBoundary,Filters access if the specified policy is set as the permissions boundary on the IAM entity (user or role),String
 384,iam:PolicyARN,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_PolicyARN,Filters access by the ARN of an IAM policy,ARN
-385,iam:ResourceTag/${TagKey},https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_ResourceTag,Filters access by actions based on tag-value associated with the resource,String
+385,iam:ResourceTag/${TagKey},"",Filters access by actions based on tag-value associated with the resource,String
 386,imagebuilder:CreatedResourceTag/<key>,https://docs.aws.amazon.com/imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-createdresourcetag,Filters access by the tag key-value pairs attached to the resource created by Image Builder,String
 387,imagebuilder:CreatedResourceTagKeys,https://docs.aws.amazon.com/imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-createdresourcetagkeys,Filters access by the presence of tag keys in the request,ArrayOfString
 388,imagebuilder:Ec2MetadataHttpTokens,https://docs.aws.amazon.com/imagebuilder/latest/userguide/security_iam_service-with-iam.html#image-builder-security-ec2metadatahttptokens,Filters access by the EC2 Instance Metadata HTTP Token Requirement specified in the request,String
@@ -554,7 +554,7 @@ condition_key_id,name,reference_url,description,type
 553,s3-object-lambda:versionid,https://docs.aws.amazon.com/AmazonS3/latest/dev/amazon-s3-policy-keys.html/#getobjectversion-limit-access-to-specific-version-3,Filters access by a specific object version,String
 554,s3-outposts:AccessPointNetworkOrigin,https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-access-points.html#access-points-policies,Filters access by the network origin (Internet or VPC),String
 555,s3-outposts:DataAccessPointAccount,https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-access-points.html#access-points-policies,Filters access by the AWS Account ID that owns the access point,String
-556,s3-outposts:DataAccessPointArn,,Filters access by an access point Amazon Resource Name (ARN),String
+556,s3-outposts:DataAccessPointArn,"",Filters access by an access point Amazon Resource Name (ARN),String
 557,s3-outposts:ExistingObjectTag/<key>,https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-tagging.html#tagging-and-policies,Filters access by requiring that an existing object tag has a specific tag key and value,String
 558,s3-outposts:RequestObjectTag/<key>,https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-tagging.html#tagging-and-policies,Filters access by restricting the tag keys and values allowed on objects,String
 559,s3-outposts:RequestObjectTagKeys,https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-tagging.html#tagging-and-policies,Filters access by restricting the tag keys allowed on objects,String
