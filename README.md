@@ -43,6 +43,6 @@ The JSON-based data gets automatically exported as CSV and Parquet files as well
 * [data/csv/](data/csv/)
 * [data/parquet/](data/parquet/)
 
-## Entity-Relatiship Diagram
+## Entity Relationship Diagram
 The ERD of the exported data tables looks like this:
 ![ERD](docs/erd.png)
