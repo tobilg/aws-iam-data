@@ -1,6 +1,6 @@
 {
   "name": "aws-iam-data",
-  "version": "0.0.20",
+  "version": "0.0.21",
   "description": "Provides AWS IAM data gathered from the official AWS IAM docs as a convenient npm package that can be used in other OSS projects.",
   "main": "./src/index.js",
   "types": "./src/awsIamData.d.ts",
@@ -31,12 +31,11 @@
   "devDependencies": {
     "@mermaid-js/mermaid-cli": "^10.2.2",
     "@types/node": "^20.1.4",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.0.4"
-  },
-  "dependencies": {
     "axios": "^1.4.0",
     "node-html-parser": "^6.1.5",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4",
     "winston": "^3.8.2"
-  }
+  },
+  "dependencies": {}
 }
