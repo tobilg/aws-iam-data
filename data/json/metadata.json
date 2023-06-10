@@ -4993,13 +4993,17 @@
       "name": "Amazon Connect Customer Profiles",
       "servicePrefix": "profile",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcustomerprofiles.html",
-      "actionsCount": 38,
+      "actionsCount": 49,
       "actions": [
         "AddProfileKey",
+        "CreateCalculatedAttributeDefinition",
         "CreateDomain",
+        "CreateEventStream",
         "CreateIntegrationWorkflow",
         "CreateProfile",
+        "DeleteCalculatedAttributeDefinition",
         "DeleteDomain",
+        "DeleteEventStream",
         "DeleteIntegration",
         "DeleteProfile",
         "DeleteProfileKey",
@@ -5007,7 +5011,10 @@
         "DeleteProfileObjectType",
         "DeleteWorkflow",
         "GetAutoMergingPreview",
+        "GetCalculatedAttributeDefinition",
+        "GetCalculatedAttributeForProfile",
         "GetDomain",
+        "GetEventStream",
         "GetIdentityResolutionJob",
         "GetIntegration",
         "GetMatches",
@@ -5016,7 +5023,10 @@
         "GetWorkflow",
         "GetWorkflowSteps",
         "ListAccountIntegrations",
+        "ListCalculatedAttributeDefinitions",
+        "ListCalculatedAttributesForProfile",
         "ListDomains",
+        "ListEventStreams",
         "ListIdentityResolutionJobs",
         "ListIntegrations",
         "ListProfileObjectTypeTemplates",
@@ -5031,14 +5041,17 @@
         "SearchProfiles",
         "TagResource",
         "UntagResource",
+        "UpdateCalculatedAttributeDefinition",
         "UpdateDomain",
         "UpdateProfile"
       ],
-      "resourceTypesCount": 3,
+      "resourceTypesCount": 5,
       "resourceTypes": [
         "domains",
         "object-types",
-        "integrations"
+        "integrations",
+        "event-streams",
+        "calculated-attributes"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -8121,19 +8134,20 @@
       "resourceTypes": [
         "loadbalancer"
       ],
-      "conditionKeysCount": 5,
+      "conditionKeysCount": 6,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "elasticloadbalancing:CreateAction",
         "elasticloadbalancing:ResourceTag/",
         "elasticloadbalancing:ResourceTag/${TagKey}"
       ]
     },
     {
-      "name": "Elastic Load Balancing V2",
+      "name": "AWS Elastic Load Balancing V2",
       "servicePrefix": "elasticloadbalancing",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_elasticloadbalancingv2.html",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticloadbalancingv2.html",
       "actionsCount": 35,
       "actions": [
         "AddListenerCertificates",
@@ -8182,11 +8196,12 @@
         "loadbalancer/net/",
         "targetgroup"
       ],
-      "conditionKeysCount": 4,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "elasticloadbalancing:CreateAction",
         "elasticloadbalancing:ResourceTag/${TagKey}"
       ]
     },
@@ -20681,9 +20696,10 @@
       "name": "Amazon SQS",
       "servicePrefix": "sqs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsqs.html",
-      "actionsCount": 17,
+      "actionsCount": 20,
       "actions": [
         "AddPermission",
+        "CancelMessageMoveTask",
         "ChangeMessageVisibility",
         "CreateQueue",
         "DeleteMessage",
@@ -20691,6 +20707,7 @@
         "GetQueueAttributes",
         "GetQueueUrl",
         "ListDeadLetterSourceQueues",
+        "ListMessageMoveTasks",
         "ListQueueTags",
         "ListQueues",
         "PurgeQueue",
@@ -20698,6 +20715,7 @@
         "RemovePermission",
         "SendMessage",
         "SetQueueAttributes",
+        "StartMessageMoveTask",
         "TagQueue",
         "UntagQueue"
       ],
