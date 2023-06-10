@@ -15,7 +15,7 @@ let changelog: ChangelogEntry = {
   removedActions: {}
 }
 
-const sortChangelogEntries = (a, b) => {
+const sortChangelogEntries = (a: ChangelogEntry, b: ChangelogEntry) => {
   if (a.dateOfChange < b.dateOfChange) {
     return 1;
   }
