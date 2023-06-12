@@ -76,7 +76,7 @@ condition_key_id,name,reference_url,description,type
 75,aws-marketplace:AgreementType,https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html,Filters access by the type of the agreement,ArrayOfString
 76,aws-marketplace:PartyType,https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html,Filters access by the party type of the agreement,String
 77,aws-marketplace:ProductId,https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html,"Filters access by product id for AWS Marketplace RedHat OpenShift products in the RedHat console. Note: This condition key only applies to the RedHat console, and using it will not restrict access to products in AWS Marketplace",ArrayOfString
-78,aws:RequestTag/${TagKey},"",A key that is present in the request the user makes to the ELB service,String
+78,aws:RequestTag/${TagKey},"",A tag key that is present in the request that the user makes to Amazon FreeRTOS,String
 79,aws:ResourceTag/${TagKey},"",Filter access by tag key-value pairs attached to the resource,String
 80,aws:TagKeys,"",Filters access based on the presence of tag keys in the request,ArrayOfString
 81,backup:ChangeableForDays,https://docs.aws.amazon.com/aws-backup/latest/devguide/access-control.html#amazon-backup-keys,Filters access by the value of the ChangeableForDays parameter,Numeric
@@ -327,9 +327,9 @@ condition_key_id,name,reference_url,description,type
 326,elasticfilesystem:AccessedViaMountTarget,https://docs.aws.amazon.com/efs/latest/ug/mounting-fs.html,Filters access by whether the file system is accessed via mount targets,Bool
 327,elasticfilesystem:CreateAction,https://docs.aws.amazon.com/efs/latest/ug/using-tags-efs.html,Filters access by the name of a resource-creating API action,String
 328,elasticfilesystem:Encrypted,https://docs.aws.amazon.com/efs/latest/ug/encryption.html,Filters access by whether users can create only encrypted or unencrypted file systems,Bool
-329,elasticloadbalancing:CreateAction,,,
+329,elasticloadbalancing:CreateAction,https://docs.aws.amazon.com/elasticloadbalancing/latest/userguide/tagging-resources-during-creation.html,Filters access by the name of a resource-creating API action,String
 330,elasticloadbalancing:ResourceTag/,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag,Filters access by the preface string for a tag key and value pair that are attached to a resource,String
-331,elasticloadbalancing:ResourceTag/${TagKey},https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag,A tag key and value pair,String
+331,elasticloadbalancing:ResourceTag/${TagKey},https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag,Filters access by the preface string for a tag key and value pair that are attached to a resource,String
 332,elasticmapreduce:ExecutionRoleArn,https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html#emr-security,Filters access by whether the execution role ARN is provided with the action,String
 333,elasticmapreduce:RequestTag/${TagKey},https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html#emr-fine-grained-cluster-access,Filters access by whether the tag and value pair is provided with the action,String
 334,elasticmapreduce:ResourceTag/${TagKey},https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-plan-access-iam.html#emr-fine-grained-cluster-access,Filters access by the tag and value pair associated with an Amazon EMR resource,String
