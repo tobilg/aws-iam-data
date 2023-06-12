@@ -1,0 +1,108 @@
+report_name,metric_name,value
+Actions by type,Write Actions,8172
+Actions by type,Read Actions,3970
+Actions by type,List Actions,2322
+Actions by type,Permissions Actions,235
+Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
+Longest action names,aws-marketplace-management:GetAdditionalSellerNotificationRecipients,68
+Longest action names,servicecatalog:NotifyTerminateProvisionedProductEngineWorkflowResult,68
+Longest action names,aws-marketplace-management:PutAdditionalSellerNotificationRecipients,68
+Longest action names,ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations,67
+Longest action names,vendor-insights:UpdateSecurityProfileSnapshotCreationConfiguration,66
+Longest action names,servicecatalog:BatchAssociateServiceActionWithProvisioningArtifact,66
+Longest action names,license-manager-linux-subscriptions:ListLinuxSubscriptionInstances,66
+Longest action names,license-manager-user-subscriptions:UpdateIdentityProviderSettings,65
+Longest action names,iotwireless:StartBulkDisassociateWirelessDeviceFromMulticastGroup,65
+Longest condition key names,vpc-lattice-svcs:RequestQueryString/${QueryStringKey},53
+Longest condition key names,route53:ChangeResourceRecordSetsNormalizedRecordNames,53
+Longest condition key names,sagemaker:CustomerMetadataProperties/${MetadataKey},51
+Longest condition key names,s3:x-amz-server-side-encryption-customer-algorithm,50
+Longest condition key names,route53-recovery-cluster:AllowSafetyRulesOverrides,50
+Longest condition key names,amplifyuibuilder:ComponentResourceEnvironmentName,49
+Longest condition key names,codestar-connections:ProviderPermissionsRequired,48
+Longest condition key names,codestar-notifications:NotificationsForResource,47
+Longest condition key names,sagemaker:MinimumInstanceMetadataServiceVersion,47
+Longest condition key names,fsx:NfsDataRepositoryEncryptionInTransitEnabled,47
+Longest service prefixes,license-manager-linux-subscriptions,35
+Longest service prefixes,license-manager-user-subscriptions,34
+Longest service prefixes,route53-recovery-control-config,31
+Longest service prefixes,sagemaker-groundtruth-synthetic,31
+Longest service prefixes,elemental-appliances-software,29
+Longest service prefixes,marketplacecommerceanalytics,28
+Longest service prefixes,aws-marketplace-management,26
+Longest service prefixes,codedeploy-commands-secure,26
+Longest service prefixes,route53-recovery-readiness,26
+Longest service prefixes,application-cost-profiler,25
+Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},126
+Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},79
+Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},79
+Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},71
+Most referenced resource ARNs,stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/,66
+Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},66
+Most referenced resource ARNs,index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId},63
+Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},63
+Most referenced resource ARNs,hub - arn:${Partition}:securityhub:${Region}:${Account}:hub/default,61
+Most referenced resource ARNs,gateway - arn:${Partition}:storagegateway:${Region}:${Account}:gateway/${GatewayId},57
+Services with least actions,Amazon FinSpace API,1
+Services with least actions,AmazonMediaImport,1
+Services with least actions,Application Discovery Arsenal,1
+Services with least actions,AWS Verified Access,1
+Services with least actions,AWS CloudTrail Data,1
+Services with least actions,AWS Microservice Extractor for .NET,1
+Services with least actions,Amazon VPC Lattice Services,1
+Services with least actions,Amazon CodeGuru,1
+Services with least actions,AWS Marketplace Seller Reporting,1
+Services with least actions,AWS Marketplace Entitlement Service,1
+Services with most actions,Amazon EC2,606
+Services with most actions,Amazon SageMaker,328
+Services with most actions,Amazon Chime,303
+Services with most actions,AWS IoT,266
+Services with most actions,AWS Glue,211
+Services with most actions,Amazon Connect,199
+Services with most actions,Amazon QuickSight,179
+Services with most actions,AWS Identity and Access Management,170
+Services with most actions,Amazon Lightsail,159
+Services with most actions,AWS Systems Manager,148
+Shortest action names,dax:Scan,8
+Shortest action names,ecs:Poll,8
+Shortest action names,"dbqms:
+",7
+Shortest action names,"sms:
+",5
+Shortest action names,"sms:
+",5
+Shortest action names,"ds:
+",4
+Shortest action names,"ds:
+",4
+Shortest action names,"ds:
+",4
+Shortest action names,"ds:
+",4
+Shortest action names,"ds:
+",4
+Shortest condition key names,ecs:task,8
+Shortest condition key names,saml:aud,8
+Shortest condition key names,saml:doc,8
+Shortest condition key names,saml:iss,8
+Shortest condition key names,saml:sub,8
+Shortest condition key names,saml:uid,8
+Shortest condition key names,swf:name,8
+Shortest condition key names,ec2:Vpc,7
+Shortest condition key names,rds:Vpc,7
+Shortest condition key names,saml:cn,7
+Shortest service prefixes,a4b,3
+Shortest service prefixes,a2c,3
+Shortest service prefixes,m2,2
+Shortest service prefixes,ce,2
+Shortest service prefixes,es,2
+Shortest service prefixes,iq,2
+Shortest service prefixes,ds,2
+Shortest service prefixes,s3,2
+Shortest service prefixes,pi,2
+Shortest service prefixes,mq,2
+Summary,Total number of distinct resource ARNS,1513
+Summary,Total number of distinct condition keys,774
+Summary,Total number of services,377
+Summary,Average number of actions per service,39
+Summary,Median number of actions per service,28

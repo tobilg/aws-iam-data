@@ -1,6 +1,6 @@
 {
   "name": "aws-iam-data",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "description": "Provides AWS IAM data gathered from the official AWS IAM docs as a convenient npm package that can be used in other OSS projects.",
   "main": "./src/index.js",
   "types": "./src/awsIamData.d.ts",
@@ -10,6 +10,7 @@
     "update-changelog": "ts-node --transpile-only --log-error process/createChangelog.ts",
     "create-erd": "node_modules/.bin/mmdc -i erd.mmd -o docs/erd.png -w 1600",
     "create-tables": "scripts/create_tables.sh",
+    "create-reports": "scripts/create_reports.sh",
     "export-data": "scripts/export_data.sh"
   },
   "repository": {
