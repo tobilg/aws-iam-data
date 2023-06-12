@@ -10,6 +10,7 @@
     "update-changelog": "ts-node --transpile-only --log-error process/createChangelog.ts",
     "create-erd": "node_modules/.bin/mmdc -i erd.mmd -o docs/erd.png -w 1600",
     "create-tables": "scripts/create_tables.sh",
+    "create-reports": "scripts/create_reports.sh",
     "export-data": "scripts/export_data.sh"
   },
   "repository": {

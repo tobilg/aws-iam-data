@@ -1,3 +1,4 @@
+CREATE TABLE reports AS (
 WITH service_actions_agg AS (
   SELECT
     count(distinct a.action_id) actions_cnt,
@@ -84,54 +85,63 @@ GROUP BY
 ORDER BY
   value DESC
 LIMIT 10)
-UNION ALL
+);
 
-SELECT
-  a.action_id,
-  a.name,
-  CASE
-    WHEN ack.action_id IS NOT NULL THEN 1
-    ELSE 0
-  END
-FROM
-  aws_actions a
-LEFT OUTER JOIN
-  aws_actions_condition_keys ack
-ON
-  a.action_id = ack.action_id
+-- Export to CSV
+COPY (SELECT * FROM reports ORDER BY report_name, value DESC) TO 'data/csv/reports.csv' WITH (HEADER 1, DELIMITER ',');
 
-SELECT
-  SUM(is_wildcard),
-  SUM(is_arn),
-  SUM(is_condition_key)
-FROM (
-SELECT DISTINCT
-  a.name,
-  CASE
-    WHEN rt.name = 'wildcard' THEN 1
-    ELSE 0
-  END AS is_wildcard,
-  CASE
-    WHEN rt.name != 'wildcard' THEN 1
-    ELSE 0
-  END AS is_arn,
-  CASE
-    WHEN rt.name != 'wildcard' THEN 1
-    ELSE 0
-  END AS is_condition_key,
-FROM
-  aws_actions a
-LEFT OUTER JOIN
-  aws_actions_resource_types art
-ON
-  a.action_id = art.action_id
-LEFT OUTER JOIN
-  aws_resource_types rt
-ON
-  rt.resource_type_id = art.resource_type_id
-LEFT OUTER JOIN
-  aws_actions_condition_keys ack
-ON
-  art.action_resource_type_id = ack.action_resource_type_id
-)
-;
+-- Export to Parquet
+COPY (SELECT * FROM reports ORDER BY report_name, value DESC) TO 'data/parquet/reports.parquet' (FORMAT 'parquet', COMPRESSION 'SNAPPY');
+
+-- Export to JSON
+COPY (
+  WITH data(report_name, obj ) AS (
+    SELECT report_name, struct_pack(key := metric_name, value := value) AS obj FROM reports
+  ),
+  agg AS (
+    PIVOT data
+    ON report_name
+    USING list(obj)
+  )
+  SELECT
+    to_json(agg) j
+  FROM
+    agg
+) TO 'data/json/reports.json' (FORMAT 'csv', DELIMITER '\0', QUOTE '');
+
+
+-- SELECT
+--   SUM(is_wildcard),
+--   SUM(is_arn),
+--   SUM(is_condition_key)
+-- FROM (
+-- SELECT DISTINCT
+--   a.name,
+--   CASE
+--     WHEN rt.name = 'wildcard' THEN 1
+--     ELSE 0
+--   END AS is_wildcard,
+--   CASE
+--     WHEN rt.name != 'wildcard' THEN 1
+--     ELSE 0
+--   END AS is_arn,
+--   CASE
+--     WHEN rt.name != 'wildcard' THEN 1
+--     ELSE 0
+--   END AS is_condition_key,
+-- FROM
+--   aws_actions a
+-- LEFT OUTER JOIN
+--   aws_actions_resource_types art
+-- ON
+--   a.action_id = art.action_id
+-- LEFT OUTER JOIN
+--   aws_resource_types rt
+-- ON
+--   rt.resource_type_id = art.resource_type_id
+-- LEFT OUTER JOIN
+--   aws_actions_condition_keys ack
+-- ON
+--   art.action_resource_type_id = ack.action_resource_type_id
+-- )
+-- ;
