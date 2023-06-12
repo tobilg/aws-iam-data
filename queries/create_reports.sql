@@ -107,7 +107,7 @@ COPY (
     to_json(agg) j
   FROM
     agg
-) TO 'data/json/reports.json' (FORMAT 'csv', DELIMITER '\0', QUOTE '');
+) TO 'data/json/reports_unformatted.json' (FORMAT 'csv', DELIMITER '\0', QUOTE '');
 
 
 -- SELECT
