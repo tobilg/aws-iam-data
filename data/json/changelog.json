@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2023-06-13",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CodeGuru Security": [
+        "codeguru-security:GetMetricsSummary",
+        "codeguru-security:ListFindingsMetrics",
+        "codeguru-security:ListTagsForResource",
+        "codeguru-security:TagResource",
+        "codeguru-security:UntagResource"
+      ],
+      "Amazon Connect": [
+        "connect:SearchHoursOfOperations",
+        "connect:SearchPrompts",
+        "connect:SearchQuickConnects"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-06-10",
     "addedServices": [
       "AWS Elastic Load Balancing V2"

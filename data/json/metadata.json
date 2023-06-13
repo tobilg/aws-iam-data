@@ -3940,7 +3940,7 @@
       "name": "Amazon CodeGuru Security",
       "servicePrefix": "codeguru-security",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodegurusecurity.html",
-      "actionsCount": 10,
+      "actionsCount": 15,
       "actions": [
         "BatchGetFindings",
         "CreateScan",
@@ -3948,17 +3948,26 @@
         "DeleteScansByCategory",
         "GetAccountConfiguration",
         "GetFindings",
+        "GetMetricsSummary",
         "GetScan",
         "ListFindings",
+        "ListFindingsMetrics",
         "ListScans",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
         "UpdateAccountConfiguration"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
         "ScanName"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "AWS CodePipeline",
@@ -4690,7 +4699,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 199,
+      "actionsCount": 202,
       "actions": [
         "ActivateEvaluationForm",
         "AssociateApprovedOrigin",
@@ -4831,7 +4840,10 @@
         "ReplicateInstance",
         "ResumeContactRecording",
         "SearchAvailablePhoneNumbers",
+        "SearchHoursOfOperations",
+        "SearchPrompts",
         "SearchQueues",
+        "SearchQuickConnects",
         "SearchRoutingProfiles",
         "SearchSecurityProfiles",
         "SearchUsers",

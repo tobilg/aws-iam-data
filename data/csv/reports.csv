@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,8172
-Actions by type,Read Actions,3970
-Actions by type,List Actions,2322
+Actions by type,Write Actions,8180
+Actions by type,Read Actions,3979
+Actions by type,List Actions,2326
 Actions by type,Permissions Actions,235
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
 Longest action names,aws-marketplace-management:GetAdditionalSellerNotificationRecipients,68
@@ -34,53 +34,45 @@ Longest service prefixes,codedeploy-commands-secure,26
 Longest service prefixes,route53-recovery-readiness,26
 Longest service prefixes,application-cost-profiler,25
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},126
-Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},79
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},79
-Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},71
-Most referenced resource ARNs,stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/,66
+Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},79
+Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},74
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},66
+Most referenced resource ARNs,stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/,66
 Most referenced resource ARNs,index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId},63
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},63
 Most referenced resource ARNs,hub - arn:${Partition}:securityhub:${Region}:${Account}:hub/default,61
 Most referenced resource ARNs,gateway - arn:${Partition}:storagegateway:${Region}:${Account}:gateway/${GatewayId},57
-Services with least actions,Amazon FinSpace API,1
-Services with least actions,AmazonMediaImport,1
-Services with least actions,Application Discovery Arsenal,1
+Services with least actions,AWS Marketplace Discovery,1
+Services with least actions,AWS Microservice Extractor for .NET,1
+Services with least actions,AWS Sustainability,1
 Services with least actions,AWS Verified Access,1
 Services with least actions,AWS CloudTrail Data,1
-Services with least actions,AWS Microservice Extractor for .NET,1
+Services with least actions,AWS Elemental Support Content,1
 Services with least actions,Amazon VPC Lattice Services,1
-Services with least actions,Amazon CodeGuru,1
+Services with least actions,AmazonMediaImport,1
+Services with least actions,Amazon WorkSpaces Application Manager,1
 Services with least actions,AWS Marketplace Seller Reporting,1
-Services with least actions,AWS Marketplace Entitlement Service,1
 Services with most actions,Amazon EC2,606
 Services with most actions,Amazon SageMaker,328
 Services with most actions,Amazon Chime,303
 Services with most actions,AWS IoT,266
 Services with most actions,AWS Glue,211
-Services with most actions,Amazon Connect,199
+Services with most actions,Amazon Connect,202
 Services with most actions,Amazon QuickSight,179
 Services with most actions,AWS Identity and Access Management,170
 Services with most actions,Amazon Lightsail,159
 Services with most actions,AWS Systems Manager,148
+Shortest action names,iq:EndCall,10
+Shortest action names,ce:GetTags,10
+Shortest action names,es:AddTags,10
+Shortest action names,iq:GetCall,10
+Shortest action names,xray:Link,9
+Shortest action names,logs:Link,9
+Shortest action names,dax:Query,9
 Shortest action names,dax:Scan,8
+Shortest action names,kms:Sign,8
 Shortest action names,ecs:Poll,8
-Shortest action names,"dbqms:
-",7
-Shortest action names,"sms:
-",5
-Shortest action names,"sms:
-",5
-Shortest action names,"ds:
-",4
-Shortest action names,"ds:
-",4
-Shortest action names,"ds:
-",4
-Shortest action names,"ds:
-",4
-Shortest action names,"ds:
-",4
 Shortest condition key names,ecs:task,8
 Shortest condition key names,saml:aud,8
 Shortest condition key names,saml:doc,8
@@ -101,7 +93,7 @@ Shortest service prefixes,ds,2
 Shortest service prefixes,s3,2
 Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
-Summary,Total number of distinct resource ARNS,1513
+Summary,Total number of distinct resource ARNS,1515
 Summary,Total number of distinct condition keys,774
 Summary,Total number of services,377
 Summary,Average number of actions per service,39
