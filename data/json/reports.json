@@ -149,11 +149,11 @@
       "value": 126
     },
     {
-      "key": "userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId}",
+      "key": "repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName}",
       "value": 79
     },
     {
-      "key": "repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName}",
+      "key": "userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId}",
       "value": 79
     },
     {
@@ -161,11 +161,11 @@
       "value": 74
     },
     {
-      "key": "stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/",
+      "key": "bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}",
       "value": 66
     },
     {
-      "key": "bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}",
+      "key": "stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/",
       "value": 66
     },
     {
@@ -191,30 +191,6 @@
       "value": 1
     },
     {
-      "key": "AWS Marketplace Discovery",
-      "value": 1
-    },
-    {
-      "key": "AWS Marketplace Seller Reporting",
-      "value": 1
-    },
-    {
-      "key": "Amazon WorkSpaces Application Manager",
-      "value": 1
-    },
-    {
-      "key": "AmazonMediaImport",
-      "value": 1
-    },
-    {
-      "key": "Amazon VPC Lattice Services",
-      "value": 1
-    },
-    {
-      "key": "AWS Elemental Support Content",
-      "value": 1
-    },
-    {
       "key": "AWS Microservice Extractor for .NET",
       "value": 1
     },
@@ -224,6 +200,30 @@
     },
     {
       "key": "AWS Verified Access",
+      "value": 1
+    },
+    {
+      "key": "AWS Marketplace Entitlement Service",
+      "value": 1
+    },
+    {
+      "key": "Amazon CodeGuru",
+      "value": 1
+    },
+    {
+      "key": "Amazon RDS IAM Authentication",
+      "value": 1
+    },
+    {
+      "key": "Application Discovery Arsenal",
+      "value": 1
+    },
+    {
+      "key": "Amazon RHEL Knowledgebase Portal",
+      "value": 1
+    },
+    {
+      "key": "AWS Marketplace Discovery",
       "value": 1
     }
   ],
