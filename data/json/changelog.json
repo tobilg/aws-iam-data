@@ -1,5 +1,81 @@
 [
   {
+    "dateOfChange": "2023-06-15",
+    "addedServices": [
+      "Amazon Verified Permissions"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Elastic Disaster Recovery": [
+        "drs:AssociateSourceNetworkStack",
+        "drs:CreateSourceNetwork",
+        "drs:DeleteSourceNetwork",
+        "drs:DescribeSourceNetworks",
+        "drs:ExportSourceNetworkCfnTemplate",
+        "drs:StartSourceNetworkRecovery",
+        "drs:StartSourceNetworkReplication",
+        "drs:StopSourceNetworkReplication"
+      ],
+      "Amazon Inspector2": [
+        "inspector2:CancelSbomExport",
+        "inspector2:CreateSbomExport",
+        "inspector2:GetEncryptionKey",
+        "inspector2:GetSbomExport",
+        "inspector2:ResetEncryptionKey",
+        "inspector2:UpdateEncryptionKey"
+      ],
+      "AWS Security Hub": [
+        "securityhub:BatchDeleteAutomationRules",
+        "securityhub:BatchGetAutomationRules",
+        "securityhub:BatchUpdateAutomationRules",
+        "securityhub:CreateAutomationRule",
+        "securityhub:ListAutomationRules"
+      ],
+      "AWS Well-Architected Tool": [
+        "wellarchitected:AssociateProfiles",
+        "wellarchitected:CreateProfile",
+        "wellarchitected:CreateProfileShare",
+        "wellarchitected:DeleteProfile",
+        "wellarchitected:DeleteProfileShare",
+        "wellarchitected:DisassociateProfiles",
+        "wellarchitected:GetProfile",
+        "wellarchitected:GetProfileTemplate",
+        "wellarchitected:ListProfileNotifications",
+        "wellarchitected:ListProfileShares",
+        "wellarchitected:ListProfiles",
+        "wellarchitected:UpdateProfile",
+        "wellarchitected:UpgradeProfileVersion"
+      ],
+      "Amazon Verified Permissions": [
+        "verifiedpermissions:CreateIdentitySource",
+        "verifiedpermissions:CreatePolicy",
+        "verifiedpermissions:CreatePolicyStore",
+        "verifiedpermissions:CreatePolicyTemplate",
+        "verifiedpermissions:DeleteIdentitySource",
+        "verifiedpermissions:DeletePolicy",
+        "verifiedpermissions:DeletePolicyStore",
+        "verifiedpermissions:DeletePolicyTemplate",
+        "verifiedpermissions:GetIdentitySource",
+        "verifiedpermissions:GetPolicy",
+        "verifiedpermissions:GetPolicyStore",
+        "verifiedpermissions:GetPolicyTemplate",
+        "verifiedpermissions:GetSchema",
+        "verifiedpermissions:IsAuthorized",
+        "verifiedpermissions:IsAuthorizedWithToken",
+        "verifiedpermissions:ListIdentitySources",
+        "verifiedpermissions:ListPolicies",
+        "verifiedpermissions:ListPolicyStores",
+        "verifiedpermissions:ListPolicyTemplates",
+        "verifiedpermissions:PutSchema",
+        "verifiedpermissions:UpdateIdentitySource",
+        "verifiedpermissions:UpdatePolicy",
+        "verifiedpermissions:UpdatePolicyStore",
+        "verifiedpermissions:UpdatePolicyTemplate"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-06-13",
     "addedServices": [],
     "removedServices": [],

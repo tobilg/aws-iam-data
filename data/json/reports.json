@@ -2,15 +2,15 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 8180
+      "value": 8215
     },
     {
       "key": "Read Actions",
-      "value": 3979
+      "value": 3992
     },
     {
       "key": "List Actions",
-      "value": 2326
+      "value": 2334
     },
     {
       "key": "Permissions Actions",
@@ -161,11 +161,11 @@
       "value": 74
     },
     {
-      "key": "bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}",
+      "key": "stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/",
       "value": 66
     },
     {
-      "key": "stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/",
+      "key": "bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}",
       "value": 66
     },
     {
@@ -187,6 +187,34 @@
   ],
   "Services with least actions": [
     {
+      "key": "AWS Marketplace Discovery",
+      "value": 1
+    },
+    {
+      "key": "AWS Marketplace Seller Reporting",
+      "value": 1
+    },
+    {
+      "key": "AWS Verified Access",
+      "value": 1
+    },
+    {
+      "key": "Amazon FinSpace API",
+      "value": 1
+    },
+    {
+      "key": "Amazon VPC Lattice Services",
+      "value": 1
+    },
+    {
+      "key": "Amazon RHEL Knowledgebase Portal",
+      "value": 1
+    },
+    {
+      "key": "AmazonMediaImport",
+      "value": 1
+    },
+    {
       "key": "AWS CloudTrail Data",
       "value": 1
     },
@@ -196,34 +224,6 @@
     },
     {
       "key": "AWS Sustainability",
-      "value": 1
-    },
-    {
-      "key": "AWS Verified Access",
-      "value": 1
-    },
-    {
-      "key": "AWS Marketplace Entitlement Service",
-      "value": 1
-    },
-    {
-      "key": "Amazon CodeGuru",
-      "value": 1
-    },
-    {
-      "key": "Amazon RDS IAM Authentication",
-      "value": 1
-    },
-    {
-      "key": "Application Discovery Arsenal",
-      "value": 1
-    },
-    {
-      "key": "Amazon RHEL Knowledgebase Portal",
-      "value": 1
-    },
-    {
-      "key": "AWS Marketplace Discovery",
       "value": 1
     }
   ],
@@ -398,7 +398,7 @@
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 377
+      "value": 378
     },
     {
       "key": "Average number of actions per service",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1515
+      "value": 1519
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 774
+      "value": 775
     }
   ]
 }
