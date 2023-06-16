@@ -7544,18 +7544,23 @@
       "name": "Amazon EC2 Instance Connect",
       "servicePrefix": "ec2-instance-connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2instanceconnect.html",
-      "actionsCount": 2,
+      "actionsCount": 3,
       "actions": [
+        "OpenTunnel",
         "SendSSHPublicKey",
         "SendSerialConsoleSSHPublicKey"
       ],
-      "resourceTypesCount": 1,
+      "resourceTypesCount": 2,
       "resourceTypes": [
-        "instance"
+        "instance",
+        "instance-connect-endpoint"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 6,
       "conditionKeys": [
         "aws:ResourceTag/${TagKey}",
+        "ec2-instance-connect:maxTunnelDuration",
+        "ec2-instance-connect:privateIpAddress",
+        "ec2-instance-connect:remotePort",
         "ec2:ResourceTag/${TagKey}",
         "ec2:osuser"
       ]
