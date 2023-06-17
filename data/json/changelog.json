@@ -1,5 +1,31 @@
 [
   {
+    "dateOfChange": "2023-06-17",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS DataSync": [
+        "datasync:UpdateDiscoveryJob"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:ListCustomerManagedKeys",
+        "quicksight:ListKMSKeysForUser",
+        "quicksight:RegisterCustomerManagedKey",
+        "quicksight:RemoveCustomerManagedKey"
+      ],
+      "Amazon Rekognition": [
+        "rekognition:AssociateFaces",
+        "rekognition:CreateUser",
+        "rekognition:DeleteUser",
+        "rekognition:DisassociateFaces",
+        "rekognition:ListUsers",
+        "rekognition:SearchUsers",
+        "rekognition:SearchUsersByImage"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-06-16",
     "addedServices": [],
     "removedServices": [],

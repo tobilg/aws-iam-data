@@ -2,15 +2,15 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 8216
+      "value": 8223
     },
     {
       "key": "Read Actions",
-      "value": 3992
+      "value": 3995
     },
     {
       "key": "List Actions",
-      "value": 2334
+      "value": 2336
     },
     {
       "key": "Permissions Actions",
@@ -149,11 +149,11 @@
       "value": 126
     },
     {
-      "key": "repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName}",
+      "key": "userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId}",
       "value": 79
     },
     {
-      "key": "userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId}",
+      "key": "repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName}",
       "value": 79
     },
     {
@@ -187,35 +187,7 @@
   ],
   "Services with least actions": [
     {
-      "key": "AWS Microservice Extractor for .NET",
-      "value": 1
-    },
-    {
-      "key": "AWS Sustainability",
-      "value": 1
-    },
-    {
-      "key": "Amazon CodeGuru",
-      "value": 1
-    },
-    {
-      "key": "AWS Marketplace Entitlement Service",
-      "value": 1
-    },
-    {
-      "key": "Amazon WorkSpaces Application Manager",
-      "value": 1
-    },
-    {
-      "key": "Amazon VPC Lattice Services",
-      "value": 1
-    },
-    {
-      "key": "Application Discovery Arsenal",
-      "value": 1
-    },
-    {
-      "key": "AWS Elemental Support Content",
+      "key": "AWS CloudTrail Data",
       "value": 1
     },
     {
@@ -223,7 +195,35 @@
       "value": 1
     },
     {
-      "key": "AWS CloudTrail Data",
+      "key": "AWS Marketplace Discovery",
+      "value": 1
+    },
+    {
+      "key": "AWS Verified Access",
+      "value": 1
+    },
+    {
+      "key": "Amazon RDS IAM Authentication",
+      "value": 1
+    },
+    {
+      "key": "AmazonMediaImport",
+      "value": 1
+    },
+    {
+      "key": "AWS Elemental Support Content",
+      "value": 1
+    },
+    {
+      "key": "AWS Marketplace Seller Reporting",
+      "value": 1
+    },
+    {
+      "key": "AWS Microservice Extractor for .NET",
+      "value": 1
+    },
+    {
+      "key": "AWS Marketplace Entitlement Service",
       "value": 1
     }
   ],
@@ -254,7 +254,7 @@
     },
     {
       "key": "Amazon QuickSight",
-      "value": 179
+      "value": 183
     },
     {
       "key": "AWS Identity and Access Management",
