@@ -25,6 +25,8 @@ WITH service_actions_agg AS (
     s.service_id,
     s.name,
     s.prefix
+  ORDER BY
+    s.service_id
 )
 SELECT 'Summary' AS report_name, 'Total number of services' AS metric_name, count(distinct service_id)::INTEGER AS value FROM aws_services
 UNION ALL
@@ -51,21 +53,21 @@ GROUP BY
   report_name,
   metric_name
 UNION ALL
-SELECT * FROM (SELECT 'Services with most actions' AS report_name, name AS metric_name, actions_cnt AS value FROM service_actions ORDER BY actions_cnt DESC LIMIT 10)
+SELECT * FROM (SELECT 'Services with most actions' AS report_name, name AS metric_name, actions_cnt AS value FROM service_actions ORDER BY actions_cnt DESC, name ASC LIMIT 10)
 UNION ALL
-SELECT * FROM (SELECT 'Services with least actions' AS report_name, name AS metric_name, actions_cnt AS value FROM service_actions ORDER BY actions_cnt ASC LIMIT 10)
+SELECT * FROM (SELECT 'Services with least actions' AS report_name, name AS metric_name, actions_cnt AS value FROM service_actions ORDER BY actions_cnt ASC, name ASC LIMIT 10)
 UNION ALL
-SELECT * FROM (SELECT 'Longest service prefixes' AS report_name, prefix AS metric_name, length(prefix) AS value FROM service_actions ORDER BY length(prefix) DESC, prefix LIMIT 10)
+SELECT * FROM (SELECT 'Longest service prefixes' AS report_name, prefix AS metric_name, length(prefix) AS value FROM service_actions ORDER BY length(prefix) DESC, prefix ASC LIMIT 10)
 UNION ALL
-SELECT * FROM (SELECT 'Shortest service prefixes' AS report_name, prefix AS metric_name, length(prefix) AS value FROM service_actions ORDER BY length(prefix) ASC, prefix LIMIT 10)
+SELECT * FROM (SELECT 'Shortest service prefixes' AS report_name, prefix AS metric_name, length(prefix) AS value FROM service_actions ORDER BY length(prefix) ASC, prefix ASC LIMIT 10)
 UNION ALL
-SELECT * FROM (SELECT 'Longest action names' AS report_name, name AS metric_name, length(name) AS value FROM aws_actions ORDER BY length(name) DESC, name LIMIT 10)
+SELECT * FROM (SELECT 'Longest action names' AS report_name, name AS metric_name, length(name) AS value FROM aws_actions ORDER BY length(name) DESC, name ASC LIMIT 10)
 UNION ALL
-SELECT * FROM (SELECT 'Shortest action names' AS report_name, name AS metric_name, length(name) AS value FROM aws_actions ORDER BY length(name) ASC, name LIMIT 10)
+SELECT * FROM (SELECT 'Shortest action names' AS report_name, name AS metric_name, length(name) AS value FROM aws_actions ORDER BY length(name) ASC, name ASC LIMIT 10)
 UNION ALL
-SELECT * FROM (SELECT 'Longest condition key names' AS report_name, name AS metric_name, length(name) AS value FROM aws_condition_keys ORDER BY length(name) DESC, name LIMIT 10)
+SELECT * FROM (SELECT 'Longest condition key names' AS report_name, name AS metric_name, length(name) AS value FROM aws_condition_keys ORDER BY length(name) DESC, name ASC LIMIT 10)
 UNION ALL
-SELECT * FROM (SELECT 'Shortest condition key names' AS report_name, name AS metric_name, length(name) AS value FROM aws_condition_keys ORDER BY length(name) ASC, name LIMIT 10)
+SELECT * FROM (SELECT 'Shortest condition key names' AS report_name, name AS metric_name, length(name) AS value FROM aws_condition_keys ORDER BY length(name) ASC, name ASC LIMIT 10)
 UNION ALL
 SELECT * FROM (SELECT
   'Most referenced resource ARNs' AS report_name,
@@ -83,7 +85,8 @@ GROUP BY
   report_name,
   metric_name
 ORDER BY
-  value DESC
+  value DESC,
+  metric_name ASC
 LIMIT 10)
 );
 
