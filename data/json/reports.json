@@ -2,15 +2,15 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 8223
+      "value": 8254
     },
     {
       "key": "Read Actions",
-      "value": 3995
+      "value": 4011
     },
     {
       "key": "List Actions",
-      "value": 2336
+      "value": 2339
     },
     {
       "key": "Permissions Actions",
@@ -61,6 +61,10 @@
   ],
   "Longest condition key names": [
     {
+      "key": "payment-cryptography:CertificateAuthorityPublicKeyIdentifier",
+      "value": 60
+    },
+    {
       "key": "route53:ChangeResourceRecordSetsNormalizedRecordNames",
       "value": 53
     },
@@ -94,10 +98,6 @@
     },
     {
       "key": "fsx:NfsDataRepositoryEncryptionInTransitEnabled",
-      "value": 47
-    },
-    {
-      "key": "sagemaker:MinimumInstanceMetadataServiceVersion",
       "value": 47
     }
   ],
@@ -398,7 +398,7 @@
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 378
+      "value": 379
     },
     {
       "key": "Average number of actions per service",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1520
+      "value": 1522
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 779
+      "value": 787
     }
   ]
 }
