@@ -63,14 +63,23 @@ export interface ConditionKey {
 
 export interface Changelog extends Array<ChangelogEntry>{}
 
+export interface ChangelogActions {
+  [key: string]: string[] | undefined;
+}
+
 export interface ChangelogEntry {
   dateOfChange: string;
   addedServices: string[];
   removedServices: string[];
-  addedActions: {
-    [key: string]: string[];
-  }
-  removedActions: {
-    [key: string]: string[];
-  }
+  addedActions: ChangelogActions;
+  removedActions: ChangelogActions;
+}
+
+export interface ReportEntry {
+  key: string;
+  value: number;
+}
+
+export interface Report {
+  [key: string]: ReportEntry[];
 }
