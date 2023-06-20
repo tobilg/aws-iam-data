@@ -62,5 +62,7 @@ jobs:
             git commit -am "[no ci] Data update on $(date '+%FT%H:%M:%S')" && \
             # Push to repo \
             git push && \
+            # Build package sources \
+            npm run build && \
             # Publish new version to npm registry \
             npm publish

@@ -1,4 +1,4 @@
-const { iamData, metadata } = require('../src/index');
+const { iamData, metadata } = require('../dist/index');
 
 // Get overall service count
 console.log(`Contains ${metadata.serviceCount} services!`);
