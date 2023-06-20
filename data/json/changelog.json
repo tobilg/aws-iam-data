@@ -1,5 +1,71 @@
 [
   {
+    "dateOfChange": "2023-06-20",
+    "addedServices": [
+      "AWS Payment Cryptography"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudWatch Logs": [
+        "logs:DeleteAccountPolicy",
+        "logs:DescribeAccountPolicies",
+        "logs:PutAccountPolicy"
+      ],
+      "AWS Database Migration Service": [
+        "dms:DescribeConversionConfiguration",
+        "dms:DescribeDataProviders",
+        "dms:DescribeExtensionPackAssociations",
+        "dms:DescribeInstanceProfiles",
+        "dms:DescribeMetadataModelAssessments",
+        "dms:DescribeMetadataModelConversions",
+        "dms:DescribeMetadataModelExportsAsScript",
+        "dms:DescribeMetadataModelExportsToTarget",
+        "dms:DescribeMetadataModelImports",
+        "dms:DescribeMigrationProjects",
+        "dms:ModifyConversionConfiguration",
+        "dms:ModifyDataProvider",
+        "dms:ModifyInstanceProfile",
+        "dms:ModifyMigrationProject",
+        "dms:StartExtensionPackAssociation",
+        "dms:StartMetadataModelExportAsScript"
+      ],
+      "AWS Payment Cryptography": [
+        "payment-cryptography:CreateAlias",
+        "payment-cryptography:CreateKey",
+        "payment-cryptography:DecryptData",
+        "payment-cryptography:DeleteAlias",
+        "payment-cryptography:DeleteKey",
+        "payment-cryptography:EncryptData",
+        "payment-cryptography:ExportKey",
+        "payment-cryptography:GenerateCardValidationData",
+        "payment-cryptography:GenerateMac",
+        "payment-cryptography:GeneratePinData",
+        "payment-cryptography:GetAlias",
+        "payment-cryptography:GetKey",
+        "payment-cryptography:GetParametersForExport",
+        "payment-cryptography:GetParametersForImport",
+        "payment-cryptography:GetPublicKeyCertificate",
+        "payment-cryptography:ImportKey",
+        "payment-cryptography:ListAliases",
+        "payment-cryptography:ListKeys",
+        "payment-cryptography:ListTagsForResource",
+        "payment-cryptography:ReEncryptData",
+        "payment-cryptography:RestoreKey",
+        "payment-cryptography:StartKeyUsage",
+        "payment-cryptography:StopKeyUsage",
+        "payment-cryptography:TagResource",
+        "payment-cryptography:TranslatePinData",
+        "payment-cryptography:UntagResource",
+        "payment-cryptography:UpdateAlias",
+        "payment-cryptography:VerifyAuthRequestCryptogram",
+        "payment-cryptography:VerifyCardValidationData",
+        "payment-cryptography:VerifyMac",
+        "payment-cryptography:VerifyPinData"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-06-17",
     "addedServices": [],
     "removedServices": [],
