@@ -1049,7 +1049,7 @@
       "name": "AWS Application Migration Service",
       "servicePrefix": "mgn",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationmigrationservice.html",
-      "actionsCount": 95,
+      "actionsCount": 99,
       "actions": [
         "ArchiveApplication",
         "ArchiveWave",
@@ -1099,6 +1099,7 @@
         "ListExports",
         "ListImportErrors",
         "ListImports",
+        "ListManagedAccounts",
         "ListSourceServerActions",
         "ListTagsForResource",
         "ListTemplateActions",
@@ -1109,11 +1110,13 @@
         "NotifyAgentDisconnectedForMgn",
         "NotifyAgentReplicationProgressForMgn",
         "NotifyVcenterClientStartedForMgn",
+        "PauseReplication",
         "PutSourceServerAction",
         "PutTemplateAction",
         "RegisterAgentForMgn",
         "RemoveSourceServerAction",
         "RemoveTemplateAction",
+        "ResumeReplication",
         "RetryDataReplication",
         "SendAgentLogsForMgn",
         "SendAgentMetricsForMgn",
@@ -1128,6 +1131,7 @@
         "StartImport",
         "StartReplication",
         "StartTest",
+        "StopReplication",
         "TagResource",
         "TerminateTargetInstances",
         "UnarchiveApplication",
@@ -17002,7 +17006,7 @@
       "name": "AWS Purchase Orders Console",
       "servicePrefix": "purchase-orders",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspurchaseordersconsole.html",
-      "actionsCount": 11,
+      "actionsCount": 14,
       "actions": [
         "AddPurchaseOrder",
         "DeletePurchaseOrder",
@@ -17010,16 +17014,25 @@
         "GetPurchaseOrder",
         "ListPurchaseOrderInvoices",
         "ListPurchaseOrders",
+        "ListTagsForResource",
         "ModifyPurchaseOrders",
+        "TagResource",
+        "UntagResource",
         "UpdateConsoleActionSetEnforced",
         "UpdatePurchaseOrder",
         "UpdatePurchaseOrderStatus",
         "ViewPurchaseOrders"
       ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "purchase-order"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "Amazon QLDB",

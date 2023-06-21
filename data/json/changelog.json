@@ -1,5 +1,24 @@
 [
   {
+    "dateOfChange": "2023-06-21",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Application Migration Service": [
+        "mgn:ListManagedAccounts",
+        "mgn:PauseReplication",
+        "mgn:ResumeReplication",
+        "mgn:StopReplication"
+      ],
+      "AWS Purchase Orders Console": [
+        "purchase-orders:ListTagsForResource",
+        "purchase-orders:TagResource",
+        "purchase-orders:UntagResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-06-20",
     "addedServices": [
       "AWS Payment Cryptography"
