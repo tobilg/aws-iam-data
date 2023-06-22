@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2023-06-22",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Audit Manager": [
+        "auditmanager:GetEvidenceFileUploadUrl"
+      ],
+      "Amazon EC2": [
+        "ec2:CreateInstanceConnectEndpoint",
+        "ec2:DeleteInstanceConnectEndpoint",
+        "ec2:DescribeInstanceConnectEndpoints"
+      ],
+      "AWS Support": [
+        "support:DescribeCreateCaseOptions",
+        "support:DescribeSupportedLanguages"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-06-21",
     "addedServices": [],
     "removedServices": [],
