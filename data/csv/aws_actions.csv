@@ -2598,8 +2598,8 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 2597,77,mediapackagev2:GetChannel,https://docs.aws.amazon.com/mediapackage/latest/APIReference/API_GetChannel.html,false,Read
 2598,77,mediapackagev2:GetChannelGroup,https://docs.aws.amazon.com/mediapackage/latest/APIReference/API_GetChannelGroup.html,false,Read
 2599,77,mediapackagev2:GetChannelPolicy,https://docs.aws.amazon.com/mediapackage/latest/APIReference/API_GetChannelPolicy.html,false,Read
-2600,77,mediapackagev2:GetHeadObject,API_GetChannelPolicy.html,false,Read
-2601,77,mediapackagev2:GetObject,API_GetChannelPolicy.html,false,Read
+2600,77,mediapackagev2:GetHeadObject,https://docs.aws.amazon.com/mediapackage/latest/userguide/dataplane-apis.html,false,Read
+2601,77,mediapackagev2:GetObject,https://docs.aws.amazon.com/mediapackage/latest/userguide/dataplane-apis.html,false,Read
 2602,77,mediapackagev2:GetOriginEndpoint,https://docs.aws.amazon.com/mediapackage/latest/APIReference/API_GetOriginEndpoint.html,false,Read
 2603,77,mediapackagev2:GetOriginEndpointPolicy,https://docs.aws.amazon.com/mediapackage/latest/APIReference/API_GetOriginEndpointPolicy.html,false,Read
 2604,77,mediapackagev2:ListChannelGroups,https://docs.aws.amazon.com/mediapackage/latest/APIReference/API_ListChannelGroups.html,false,List
@@ -2607,7 +2607,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 2606,77,mediapackagev2:ListOriginEndpoints,https://docs.aws.amazon.com/mediapackage/latest/APIReference/API_ListOriginEndpoints.html,false,List
 2607,77,mediapackagev2:ListTagsForResource,https://docs.aws.amazon.com/mediapackage/latest/APIReference/API_ListTagsForResource.html,false,Read
 2608,77,mediapackagev2:PutChannelPolicy,https://docs.aws.amazon.com/mediapackage/latest/APIReference/API_PutChannelPolicy.html,false,Write
-2609,77,mediapackagev2:PutObject,API_PutChannelPolicy.html,false,Write
+2609,77,mediapackagev2:PutObject,https://docs.aws.amazon.com/mediapackage/latest/userguide/dataplane-apis.html,false,Write
 2610,77,mediapackagev2:PutOriginEndpointPolicy,https://docs.aws.amazon.com/mediapackage/latest/APIReference/API_PutOriginEndpointPolicy.html,false,Write
 2611,77,mediapackagev2:TagResource,https://docs.aws.amazon.com/mediapackage/latest/APIReference/API_TagResource.html,false,Tagging
 2612,77,mediapackagev2:UntagResource,https://docs.aws.amazon.com/mediapackage/latest/APIReference/API_UntagResource.html,false,Tagging
