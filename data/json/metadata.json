@@ -1042,8 +1042,10 @@
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 1,
+      "conditionKeys": [
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "AWS Application Migration Service",
@@ -10942,10 +10944,10 @@
       "conditionKeys": []
     },
     {
-      "name": "AWS Identity and Access Management",
+      "name": "AWS Identity and Access Management (IAM)",
       "servicePrefix": "iam",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentityandaccessmanagement.html",
-      "actionsCount": 170,
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentityandaccessmanagementiam.html",
+      "actionsCount": 171,
       "actions": [
         "AddClientIDToOpenIDConnectProvider",
         "AddRoleToInstanceProfile",
@@ -11014,6 +11016,7 @@
         "GetGroupPolicy",
         "GetInstanceProfile",
         "GetLoginProfile",
+        "GetMFADevice",
         "GetOpenIDConnectProvider",
         "GetOrganizationsAccessReport",
         "GetPolicy",
@@ -11134,17 +11137,21 @@
         "sms-mfa",
         "user"
       ],
-      "conditionKeysCount": 10,
+      "conditionKeysCount": 14,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "iam:AWSServiceName",
         "iam:AssociatedResourceArn",
+        "iam:FIDO-FIPS-140-2-certification",
+        "iam:FIDO-FIPS-140-3-certification",
+        "iam:FIDO-certification",
         "iam:OrganizationsPolicyId",
         "iam:PassedToService",
         "iam:PermissionsBoundary",
         "iam:PolicyARN",
+        "iam:RegisterSecurityKey",
         "iam:ResourceTag/${TagKey}"
       ]
     },
@@ -12808,7 +12815,7 @@
       "name": "Amazon Kendra",
       "servicePrefix": "kendra",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkendra.html",
-      "actionsCount": 65,
+      "actionsCount": 66,
       "actions": [
         "AssociateEntitiesToExperience",
         "AssociatePersonasToEntities",
@@ -12862,6 +12869,7 @@
         "ListThesauri",
         "PutPrincipalMapping",
         "Query",
+        "Retrieve",
         "StartDataSourceSyncJob",
         "StopDataSourceSyncJob",
         "SubmitFeedback",
@@ -20878,24 +20886,31 @@
       "name": "AWS Step Functions",
       "servicePrefix": "states",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsstepfunctions.html",
-      "actionsCount": 26,
+      "actionsCount": 34,
       "actions": [
         "CreateActivity",
         "CreateStateMachine",
+        "CreateStateMachineAlias",
         "DeleteActivity",
         "DeleteStateMachine",
+        "DeleteStateMachineAlias",
+        "DeleteStateMachineVersion",
         "DescribeActivity",
         "DescribeExecution",
         "DescribeMapRun",
         "DescribeStateMachine",
+        "DescribeStateMachineAlias",
         "DescribeStateMachineForExecution",
         "GetActivityTask",
         "GetExecutionHistory",
         "ListActivities",
         "ListExecutions",
         "ListMapRuns",
+        "ListStateMachineAliases",
+        "ListStateMachineVersions",
         "ListStateMachines",
         "ListTagsForResource",
+        "PublishStateMachineVersion",
         "SendTaskFailure",
         "SendTaskHeartbeat",
         "SendTaskSuccess",
@@ -20905,21 +20920,25 @@
         "TagResource",
         "UntagResource",
         "UpdateMapRun",
-        "UpdateStateMachine"
+        "UpdateStateMachine",
+        "UpdateStateMachineAlias"
       ],
-      "resourceTypesCount": 5,
+      "resourceTypesCount": 7,
       "resourceTypes": [
         "activity",
         "execution",
         "express",
         "statemachine",
+        "statemachineversion",
+        "statemachinealias",
         "maprun"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 4,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "states:StateMachineQualifier"
       ]
     },
     {

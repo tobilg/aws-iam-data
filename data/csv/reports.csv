@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,8261
-Actions by type,Read Actions,4015
-Actions by type,List Actions,2341
+Actions by type,Write Actions,8266
+Actions by type,Read Actions,4016
+Actions by type,List Actions,2345
 Actions by type,Permissions Actions,235
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
 Longest action names,aws-marketplace-management:GetAdditionalSellerNotificationRecipients,68
@@ -39,10 +39,10 @@ Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}
 Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},74
 Most referenced resource ARNs,stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/,66
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},66
-Most referenced resource ARNs,index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId},63
+Most referenced resource ARNs,index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId},64
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},63
 Most referenced resource ARNs,hub - arn:${Partition}:securityhub:${Region}:${Account}:hub/default,61
-Most referenced resource ARNs,gateway - arn:${Partition}:storagegateway:${Region}:${Account}:gateway/${GatewayId},57
+Most referenced resource ARNs,app-instance-user - arn:${Partition}:chime:${Region}:${AccountId}:app-instance/${AppInstanceId}/user/${AppInstanceUserId},55
 Services with least actions,AWS Elemental Support Content,1
 Services with least actions,AWS Verified Access,1
 Services with least actions,Amazon CodeGuru,1
@@ -60,7 +60,7 @@ Services with most actions,AWS IoT,266
 Services with most actions,AWS Glue,211
 Services with most actions,Amazon Connect,202
 Services with most actions,Amazon QuickSight,183
-Services with most actions,AWS Identity and Access Management,170
+Services with most actions,AWS Identity and Access Management (IAM),171
 Services with most actions,Amazon Lightsail,159
 Services with most actions,AWS Systems Manager,148
 Shortest action names,iq:EndCall,10
@@ -93,8 +93,8 @@ Shortest service prefixes,ds,2
 Shortest service prefixes,s3,2
 Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
-Summary,Total number of distinct resource ARNS,1523
-Summary,Total number of distinct condition keys,787
+Summary,Total number of distinct resource ARNS,1525
+Summary,Total number of distinct condition keys,792
 Summary,Total number of services,379
 Summary,Average number of actions per service,39
 Summary,Median number of actions per service,28
