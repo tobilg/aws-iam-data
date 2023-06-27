@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2023-06-27",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Lex V2": [
+        "lex:CreateTestSet",
+        "lex:CreateTestSetDiscrepancyReport",
+        "lex:DeleteTestSet",
+        "lex:DescribeTestExecution",
+        "lex:DescribeTestSet",
+        "lex:DescribeTestSetDiscrepancyReport",
+        "lex:DescribeTestSetGeneration",
+        "lex:GetTestExecutionArtifactsUrl",
+        "lex:ListTestExecutionResultItems",
+        "lex:ListTestExecutions",
+        "lex:ListTestSetRecords",
+        "lex:ListTestSets",
+        "lex:StartTestExecution",
+        "lex:StartTestSetGeneration",
+        "lex:UpdateTestSet"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-06-24",
     "addedServices": [
       "AWS Identity and Access Management (IAM)"
