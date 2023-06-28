@@ -766,7 +766,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 765,209,Stages,https://docs.aws.amazon.com/apigateway/latest/developerguide/security_iam_service-with-iam.html,arn:${Partition}:apigateway:${Region}::/apis/${ApiId}/stages
 766,210,connectorprofile,https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ConnectorProfile.html,arn:${Partition}:appflow:${Region}:${Account}:connectorprofile/${ProfileName}
 767,210,flow,https://docs.aws.amazon.com/appflow/1.0/APIReference/API_FlowDefinition.html,arn:${Partition}:appflow:${Region}:${Account}:flow/${FlowName}
-768,210,connector,https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ConnectorDefinition.html,arn:${Partition}:appflow:${Region}:${Account}:connector/${ConnectorLabel}
+768,210,connector,https://docs.aws.amazon.com/appflow/1.0/APIReference/API_ConnectorDetail.html,arn:${Partition}:appflow:${Region}:${Account}:connector/${ConnectorLabel}
 769,211,event-integration,https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_EventIntegration.html,arn:${Partition}:app-integrations:${Region}:${Account}:event-integration/${EventIntegrationName}
 770,211,event-integration-association,https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_EventIntegrationAssociation.html,arn:${Partition}:app-integrations:${Region}:${Account}:event-integration-association/${EventIntegrationName}/${ResourceId}
 771,211,data-integration,https://docs.aws.amazon.com/appintegrations/latest/APIReference/API_DataIntegrationSummary.html,arn:${Partition}:app-integrations:${Region}:${Account}:data-integration/${DataIntegrationId}

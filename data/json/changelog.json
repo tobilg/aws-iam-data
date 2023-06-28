@@ -1,5 +1,32 @@
 [
   {
+    "dateOfChange": "2023-06-28",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon AppFlow": [
+        "appflow:ResetConnectorMetadataCache"
+      ],
+      "AWS CloudFormation": [
+        "cloudformation:ActivateOrganizationsAccess",
+        "cloudformation:DeactivateOrganizationsAccess",
+        "cloudformation:DescribeOrganizationsAccess",
+        "cloudformation:ListStackInstanceResourceDrifts"
+      ],
+      "Amazon Connect": [
+        "connect:SearchResourceTags"
+      ],
+      "Amazon Interactive Video Service": [
+        "ivs:GetParticipant",
+        "ivs:GetStageSession",
+        "ivs:ListParticipantEvents",
+        "ivs:ListParticipants",
+        "ivs:ListStageSessions"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-06-27",
     "addedServices": [],
     "removedServices": [],
