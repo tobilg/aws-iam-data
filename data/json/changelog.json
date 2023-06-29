@@ -1,5 +1,47 @@
 [
   {
+    "dateOfChange": "2023-06-29",
+    "addedServices": [
+      "AWS AppFabric"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Kinesis Video Streams": [
+        "kinesisvideo:DeleteEdgeConfiguration",
+        "kinesisvideo:ListEdgeAgentConfigurations"
+      ],
+      "AWS AppFabric": [
+        "appfabric:BatchGetUserAccessTasks",
+        "appfabric:ConnectAppAuthorization",
+        "appfabric:CreateAppAuthorization",
+        "appfabric:CreateAppBundle",
+        "appfabric:CreateIngestion",
+        "appfabric:CreateIngestionDestination",
+        "appfabric:DeleteAppAuthorization",
+        "appfabric:DeleteAppBundle",
+        "appfabric:DeleteIngestion",
+        "appfabric:DeleteIngestionDestination",
+        "appfabric:GetAppAuthorization",
+        "appfabric:GetAppBundle",
+        "appfabric:GetIngestion",
+        "appfabric:GetIngestionDestination",
+        "appfabric:ListAppAuthorizations",
+        "appfabric:ListAppBundles",
+        "appfabric:ListIngestionDestinations",
+        "appfabric:ListIngestions",
+        "appfabric:ListTagsForResource",
+        "appfabric:StartIngestion",
+        "appfabric:StartUserAccessTasks",
+        "appfabric:StopIngestion",
+        "appfabric:TagResource",
+        "appfabric:UntagResource",
+        "appfabric:UpdateAppAuthorization",
+        "appfabric:UpdateIngestionDestination"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-06-28",
     "addedServices": [],
     "removedServices": [],

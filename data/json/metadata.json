@@ -1,5 +1,5 @@
 {
-  "serviceCount": 379,
+  "serviceCount": 380,
   "services": [
     {
       "name": "AWS Account Management",
@@ -426,7 +426,7 @@
         "SetWebACL",
         "UpdateRestApiPolicy"
       ],
-      "resourceTypesCount": 41,
+      "resourceTypesCount": 42,
       "resourceTypes": [
         "Account",
         "ApiKey",
@@ -468,7 +468,8 @@
         "UsagePlanKey",
         "UsagePlanKeys",
         "VpcLink",
-        "VpcLinks"
+        "VpcLinks",
+        "Tags"
       ],
       "conditionKeysCount": 28,
       "conditionKeys": [
@@ -845,6 +846,53 @@
         "configuration",
         "extension",
         "extensionassociation"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "AWS AppFabric",
+      "servicePrefix": "appfabric",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappfabric.html",
+      "actionsCount": 26,
+      "actions": [
+        "BatchGetUserAccessTasks",
+        "ConnectAppAuthorization",
+        "CreateAppAuthorization",
+        "CreateAppBundle",
+        "CreateIngestion",
+        "CreateIngestionDestination",
+        "DeleteAppAuthorization",
+        "DeleteAppBundle",
+        "DeleteIngestion",
+        "DeleteIngestionDestination",
+        "GetAppAuthorization",
+        "GetAppBundle",
+        "GetIngestion",
+        "GetIngestionDestination",
+        "ListAppAuthorizations",
+        "ListAppBundles",
+        "ListIngestionDestinations",
+        "ListIngestions",
+        "ListTagsForResource",
+        "StartIngestion",
+        "StartUserAccessTasks",
+        "StopIngestion",
+        "TagResource",
+        "UntagResource",
+        "UpdateAppAuthorization",
+        "UpdateIngestionDestination"
+      ],
+      "resourceTypesCount": 4,
+      "resourceTypes": [
+        "appbundle",
+        "appauthorization",
+        "ingestion",
+        "ingestiondestination"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -13244,12 +13292,13 @@
       "name": "Amazon Kinesis Video Streams",
       "servicePrefix": "kinesisvideo",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisvideostreams.html",
-      "actionsCount": 41,
+      "actionsCount": 43,
       "actions": [
         "ConnectAsMaster",
         "ConnectAsViewer",
         "CreateSignalingChannel",
         "CreateStream",
+        "DeleteEdgeConfiguration",
         "DeleteSignalingChannel",
         "DeleteStream",
         "DescribeEdgeConfiguration",
@@ -13269,6 +13318,7 @@
         "GetMediaForFragmentList",
         "GetSignalingChannelEndpoint",
         "JoinStorageSession",
+        "ListEdgeAgentConfigurations",
         "ListFragments",
         "ListSignalingChannels",
         "ListStreams",
