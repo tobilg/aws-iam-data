@@ -12769,7 +12769,7 @@
       "name": "AWS IQ",
       "servicePrefix": "iq",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiq.html",
-      "actionsCount": 57,
+      "actionsCount": 63,
       "actions": [
         "AcceptCall",
         "ApprovePaymentRequest",
@@ -12788,13 +12788,16 @@
         "CreateUpfrontProposal",
         "DeclineCall",
         "DeleteAttachment",
+        "DisableIndividualPublicProfile",
         "DownloadAttachment",
+        "EnableIndividualPublicProfile",
         "EndCall",
         "GetBuyer",
         "GetCall",
         "GetChatInfo",
         "GetChatMessages",
         "GetChatToken",
+        "GetCompanyChatMessages",
         "GetCompanyProfile",
         "GetConversation",
         "GetExpert",
@@ -12806,8 +12809,10 @@
         "GetReview",
         "HideRequest",
         "InitiateCall",
+        "LinkAwsCertification",
         "ListAttachments",
         "ListConversations",
+        "ListExpertAccessLogs",
         "ListListings",
         "ListPaymentRequests",
         "ListProposals",
@@ -12819,6 +12824,7 @@
         "SendCompanyChatMessage",
         "SendIndividualChatMessage",
         "UnarchiveConversation",
+        "UnlinkAwsCertification",
         "UpdateCompanyProfile",
         "UpdateConversationMembers",
         "UpdateExpert",
@@ -12829,7 +12835,7 @@
         "WithdrawProposal",
         "WriteReview"
       ],
-      "resourceTypesCount": 13,
+      "resourceTypesCount": 14,
       "resourceTypes": [
         "conversation",
         "buyer",
@@ -12843,7 +12849,8 @@
         "company",
         "request",
         "listing",
-        "attachment"
+        "attachment",
+        "permission"
       ],
       "conditionKeysCount": 0,
       "conditionKeys": []
