@@ -1,5 +1,28 @@
 [
   {
+    "dateOfChange": "2023-07-01",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon AppStream 2.0": [
+        "appstream:AssociateAppBlockBuilderAppBlock",
+        "appstream:CreateAppBlockBuilder",
+        "appstream:CreateAppBlockBuilderStreamingURL",
+        "appstream:DeleteAppBlockBuilder",
+        "appstream:DescribeAppBlockBuilderAppBlockAssociations",
+        "appstream:DescribeAppBlockBuilders",
+        "appstream:DisassociateAppBlockBuilderAppBlock",
+        "appstream:StartAppBlockBuilder",
+        "appstream:StopAppBlockBuilder",
+        "appstream:UpdateAppBlockBuilder"
+      ],
+      "Amazon Elastic MapReduce": [
+        "elasticmapreduce:ListSupportedInstanceTypes"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-06-30",
     "addedServices": [],
     "removedServices": [],
