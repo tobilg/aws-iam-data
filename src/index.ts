@@ -4,7 +4,14 @@ import changelogRaw from "./data/json/changelog.json";
 import reportsRaw from "./data/json/reports.json";
 import { AWSIamData, AWSIamMetadata, Changelog, Report } from "./awsIamData";
 
-export const iamData = iamDataRaw as AWSIamData;
-export const metadata = metadataRaw as AWSIamMetadata;
-export const changelog = changelogRaw as Changelog;
-export const reports = reportsRaw as Report;
+const iamData = iamDataRaw as AWSIamData;
+const metadata = metadataRaw as AWSIamMetadata;
+const changelog = changelogRaw as Changelog;
+const reports = reportsRaw as Report;
+
+export {
+  iamData,
+  metadata,
+  changelog,
+  reports,
+}
