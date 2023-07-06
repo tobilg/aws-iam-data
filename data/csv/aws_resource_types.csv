@@ -839,7 +839,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 838,229,ProfilingGroup,https://docs.aws.amazon.com/codeguru/latest/profiler-ug/working-with-profiling-groups.html,arn:${Partition}:codeguru-profiler:${Region}:${Account}:profilingGroup/${ProfilingGroupName}
 839,230,association,https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/working-with-repositories.html,arn:${Partition}:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}
 840,230,codereview,https://docs.aws.amazon.com/codeguru/latest/reviewer-ug/code-reviews.html,arn:${Partition}:codeguru-reviewer:${Region}:${Account}:association:${ResourceId}:codereview:${CodeReviewId}
-841,231,ScanName,https://docs.aws.amazon.com/codeguru/latest/security-ug/getting-started.html,arn:${Partition}:codeguru-security:${Region}:${Account}:scans/${ScanName}
+841,231,ScanName,https://docs.aws.amazon.com/codeguru/latest/security-ug/working-with-code-scans.html,arn:${Partition}:codeguru-security:${Region}:${Account}:scans/${ScanName}
 842,232,profile,https://docs.aws.amazon.com/codewhisperer/latest/userguide/as-whisper-admin.html#about-profiles,arn:${Partition}:codewhisperer::${Account}:profile/${Identifier}
 843,233,identitypool,https://docs.aws.amazon.com/cognito/latest/developerguide/identity-pools.html,arn:${Partition}:cognito-identity:${Region}:${Account}:identitypool/${IdentityPoolId}
 844,234,dataset,https://docs.aws.amazon.com/cognito/latest/developerguide/synchronizing-data.html#understanding-datasets,arn:${Partition}:cognito-sync:${Region}:${Account}:identitypool/${IdentityPoolId}/identity/${IdentityId}/dataset/${DatasetName}

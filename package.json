@@ -1,9 +1,12 @@
 {
   "name": "aws-iam-data",
-  "version": "0.0.40",
+  "version": "0.0.44",
   "description": "Provides AWS IAM data gathered from the official AWS IAM docs as a convenient npm package that can be used in other OSS projects.",
   "main": "./dist/index.js",
-  "types": "./dist/awsIamData.d.ts",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/index.js"
+  },
   "scripts": {
     "install-duckdb": "scripts/install_duckdb.sh",
     "gather-data": "ts-node --transpile-only --log-error process/gatherData.ts",
@@ -12,7 +15,7 @@
     "create-tables": "scripts/create_tables.sh",
     "create-reports": "scripts/create_reports.sh",
     "export-data": "scripts/export_data.sh",
-    "build": "rm -rf dist/ && mkdir -p src/data/json && cp data/json/*.json src/data/json && tsc --build src/ && cp src/awsIamData.d.ts dist/awsIamData.d.ts && rm -rf src/data"
+    "build": "rm -rf dist/ && mkdir -p src/data/json && cp data/json/*.json src/data/json && tsc --build src/ && rm -rf src/data"
   },
   "repository": {
     "type": "git",
