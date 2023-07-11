@@ -2,6 +2,7 @@ import iamDataRaw from "./data/json/iam.json";
 import metadataRaw from "./data/json/metadata.json";
 import changelogRaw from "./data/json/changelog.json";
 import reportsRaw from "./data/json/reports.json";
+import searchIndexRaw from "./data/json/searchIndex.json";
 
 export interface AWSIamData extends Array<ServiceAuthReference>{}
 
@@ -17,6 +18,22 @@ export interface ServiceAuthReference {
 export interface AWSIamMetadata {
   serviceCount: number;
   services: ServiceAuthMetadata[];
+}
+
+export interface SearchIndexEntry {
+  id: string;
+  serviceName: string;
+  serviceDocsUrl?: string;
+  entryType: 'service' | 'action' | 'resourceType' | 'conditionKey';
+  servicePrefix: string;
+  actionName?: string;
+  actionDescription?: string;
+  actionAccessLevel?: string;
+  actionIsPermissionOnly?: boolean;
+  resourceTypeName?: string;
+  resourceTypeArnPattern?: string;
+  conditionKeyName?: string;
+  conditionKeyDescription?: string;
 }
 
 export interface ServiceAuthMetadata {
@@ -93,6 +110,7 @@ const iamData = iamDataRaw as AWSIamData;
 const metadata = metadataRaw as AWSIamMetadata;
 const changelog = changelogRaw as Changelog;
 const reports = reportsRaw as Report;
+const searchIndex = searchIndexRaw as S
 
 export {
   iamData,

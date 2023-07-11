@@ -1,71 +1,28 @@
 import { readFileSync, writeFileSync } from 'fs';
 import { join } from 'path';
 import lunr from 'lunr';
-import { AWSIamData, ServiceAuthReference } from '../src/index';
+import { AWSIamMetadata, SearchIndexEntry } from '../src/index';
 
-interface SearchIndexEntryAll {
-  id: number;
-  serviceName: string;
-  serviceDocsUrl?: string;
-  entryType: 'service' | 'action' | 'resourceType' | 'conditionKey';
-  servicePrefix: string;
-  actionName?: string;
-  actionDescription?: string;
-  actionAccessLevel?: string;
-  actionIsPermissionOnly?: boolean;
-  actionResourceTypes?: (string | undefined)[];
-  resourceTypeName?: string;
-  resourceTypeArnPattern?: string;
-  resourceTypeDocsUrl?: string;
-  conditionKeyName?: string;
-  conditionKeyDescription?: string;
-  conditionKeyType?: string;
-  conditionKeyDocsUrl?: string;
-}
+const iamDataRaw = readFileSync(join(__dirname, '../data/json', 'metadata.json'), { encoding: 'utf-8' });
+const iamData = JSON.parse(iamDataRaw) as AWSIamMetadata;
 
-interface SearchIndexEntrySmall {
-  id: number;
-  serviceName: string;
-  serviceDocsUrl?: string;
-  entryType: 'service' | 'action' | 'resourceType' | 'conditionKey';
-  servicePrefix: string;
-  actionName?: string;
-  actionDescription?: string;
-  actionAccessLevel?: string;
-  actionIsPermissionOnly?: boolean;
-  resourceTypeName?: string;
-  resourceTypeArnPattern?: string;
-  resourceTypeDocsUrl?: string;
-  conditionKeyName?: string;
-  conditionKeyDescription?: string;
-  conditionKeyType?: string;
-  conditionKeyDocsUrl?: string;
-}
-
-const iamDataRaw = readFileSync(join(__dirname, '../data/json', 'iam.json'), { encoding: 'utf-8' });
-const iamData = JSON.parse(iamDataRaw) as AWSIamData;
-
-let id = 0;
-
-const preFlattenedData: SearchIndexEntryAll[][] = iamData.map(service => {
+const preFlattenedData: SearchIndexEntry[][] = iamData.services.map((service, serviceIndex) => {
   // Create entries array
-  const entries: SearchIndexEntryAll[] = [];
+  const entries: SearchIndexEntry[] = [];
 
   // Add service
   entries.push({
-    id: id,
+    id: `s-${serviceIndex}`,
     entryType: 'service',
     serviceName: service.name,
     serviceDocsUrl: service.authReferenceUrl,
     servicePrefix: service.servicePrefix,
   });
 
-  id++;
-
   // Add actions
-  service.actions.forEach(action => {
+  service.actions.forEach((action, actionIndex) => {
     entries.push({
-      id: id,
+      id: `s-${serviceIndex}-a-${actionIndex}`,
       entryType: 'action',
       serviceName: service.name,
       serviceDocsUrl: service.authReferenceUrl,
@@ -74,43 +31,33 @@ const preFlattenedData: SearchIndexEntryAll[][] = iamData.map(service => {
       actionDescription: action.description,
       actionAccessLevel: action.accessLevel,
       actionIsPermissionOnly: action.permissionOnly,
-      actionResourceTypes: action.resourceTypes?.filter(resourceType => resourceType.resourceType).map(resourceType => resourceType.resourceType),
     });
-
-    id++;
   });
 
   // Add resource types
-  service.resourceTypes.forEach(resourceType => {
+  service.resourceTypes.forEach((resourceType, resourceTypeIndex) => {
     entries.push({
-      id: id,
+      id: `s-${serviceIndex}-rt-${resourceTypeIndex}`,
       entryType: 'resourceType',
       serviceName: service.name,
       serviceDocsUrl: service.authReferenceUrl,
       servicePrefix: service.servicePrefix,
       resourceTypeName: resourceType.name,
       resourceTypeArnPattern: resourceType.arnPattern,
-      resourceTypeDocsUrl: resourceType.apiReferenceUrl,
     });
-
-    id++;
   });
 
   // Add condition keys
-  service.conditionKeys.forEach(conditionKey => {
+  service.conditionKeys.forEach((conditionKey, conditionKeyIndex) => {
     entries.push({
-      id: id,
+      id: `s-${serviceIndex}-ck-${conditionKeyIndex}`,
       entryType: 'conditionKey',
       serviceName: service.name,
       serviceDocsUrl: service.authReferenceUrl,
       servicePrefix: service.servicePrefix,
       conditionKeyName: conditionKey.name,
       conditionKeyDescription: conditionKey.description,
-      conditionKeyDocsUrl: conditionKey.apiReferenceUrl,
-      conditionKeyType: conditionKey.type,
     });
-
-    id++;
   });
 
   return entries;
@@ -118,14 +65,14 @@ const preFlattenedData: SearchIndexEntryAll[][] = iamData.map(service => {
 
 //console.log(JSON.stringify(entries, null, 2));
 
-const searchIndexAll = lunr(function () {
+const searchIndex = lunr(function () {
  
   this.ref('id');
-  this.field('serviceName');
+  this.field('serviceName', { boost: 30 });
   this.field('serviceDocsUrl');
   this.field('entryType');
   this.field('servicePrefix');
-  this.field('actionName');
+  this.field('actionName', { boost: 10 });
   this.field('actionDescription');
   this.field('actionAccessLevel');
   this.field('actionIsPermissionOnly');
@@ -143,8 +90,5 @@ const searchIndexAll = lunr(function () {
   }, this);
 });
 
-console.log(JSON.stringify(searchIndexAll.search("serviceName:'AWS Lambda' +create"), null, 2));
 
-//console.log(JSON.stringify(searchIndex));
-
-writeFileSync(join(__dirname, '../data/json', 'searchIndexAll.json'), JSON.stringify(searchIndexAll), { encoding: 'utf-8' });
+writeFileSync(join(__dirname, '../data/json', 'searchIndex.json'), JSON.stringify(searchIndex), { encoding: 'utf-8' });

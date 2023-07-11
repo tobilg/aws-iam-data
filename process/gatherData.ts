@@ -157,7 +157,7 @@ const getResourceTypes = (html: HTMLElement): ResourceType[] => {
   // Parse resource types
   const resourceTypes: ResourceType[] = Array.from(resourceTypeTableRows).map(tr => ({
     name: tr.childNodes[1].textContent?.trim() || '',
-    apiReferenceUrl: new String(tr.childNodes[1].childNodes[3]?.attributes['href']).toString() || undefined,
+    apiReferenceUrl: new String(tr.childNodes[1].childNodes[3]?.attributes['href'] || '').toString(),
     arnPattern: tr.childNodes[3].textContent?.trim() || '',
     conditionKeys: tr.childNodes[5].textContent?.trim().length !== 0 ? tr.childNodes[5].textContent?.trim().split('\n').map(item => item.trim()).filter(item => item.length > 0) : [],
   }));
