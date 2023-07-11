@@ -24,11 +24,11 @@ export interface ServiceAuthMetadata {
   servicePrefix: string;
   authReferenceUrl?: string;
   actionsCount: number;
-  actions: string[];
+  actions: Action[];
   resourceTypesCount: number;
-  resourceTypes: string[];
+  resourceTypes: ResourceType[];
   conditionKeysCount: number;
-  conditionKeys: string[];
+  conditionKeys: ConditionKey[];
 }
 
 export interface Topic {
@@ -40,7 +40,7 @@ export interface ResourceType {
   name: string;
   apiReferenceUrl?: string;
   arnPattern: string;
-  conditionKeys: string[];
+  conditionKeys?: string[];
 }
 
 export interface ActionResourceType {

@@ -1,7 +1,7 @@
 import { downloadAsHTML } from './utils/downloader';
 import { join } from 'path';
 import { writeFileSync } from 'fs';
-import { Topic, Action, ActionResourceType, ConditionKey, ResourceType, ServiceAuthReference, AWSIamMetadata } from '../src/awsIamData';
+import { Topic, Action, ActionResourceType, ConditionKey, ResourceType, ServiceAuthReference, AWSIamMetadata } from '../src/index';
 
 const getTopics = (root: HTMLElement): Topic[] => {
   // Get topics
@@ -157,7 +157,7 @@ const getResourceTypes = (html: HTMLElement): ResourceType[] => {
   // Parse resource types
   const resourceTypes: ResourceType[] = Array.from(resourceTypeTableRows).map(tr => ({
     name: tr.childNodes[1].textContent?.trim() || '',
-    apiReferenceUrl: tr.childNodes[1].childNodes[3]?.attributes['href'].toString(),
+    apiReferenceUrl: new String(tr.childNodes[1].childNodes[3]?.attributes['href']).toString() || undefined,
     arnPattern: tr.childNodes[3].textContent?.trim() || '',
     conditionKeys: tr.childNodes[5].textContent?.trim().length !== 0 ? tr.childNodes[5].textContent?.trim().split('\n').map(item => item.trim()).filter(item => item.length > 0) : [],
   }));
@@ -224,11 +224,22 @@ const run = async () => {
         servicePrefix: service.servicePrefix,
         authReferenceUrl: service.authReferenceUrl,
         actionsCount: service.actions.length,
-        actions: service.actions.filter(action => action.name).map(action => action.name) as string[],
+        actions: service.actions.filter(action => action.name).map(action => ({
+          name: action.name,
+          description: action.description,
+          accessLevel: action.accessLevel,
+          permissionOnly: action.permissionOnly,
+        })) as Action[],
         resourceTypesCount: service.resourceTypes.length,
-        resourceTypes: service.resourceTypes.filter(resourceType => resourceType.name).map(resourceType => resourceType.name) as string[],
+        resourceTypes: service.resourceTypes.filter(resourceType => resourceType.name).map(resourceType => ({
+          name: resourceType.name,
+          arnPattern: resourceType.arnPattern,
+        })) as ResourceType[],
         conditionKeysCount: service.conditionKeys.length,
-        conditionKeys: service.conditionKeys.filter(conditionKey => conditionKey.name).map(conditionKey => conditionKey.name) as string[],
+        conditionKeys: service.conditionKeys.filter(conditionKey => conditionKey.name).map(conditionKey => ({
+          name: conditionKey.name,
+          description: conditionKey.description,
+        })) as ConditionKey[],
       }))
     }
 
