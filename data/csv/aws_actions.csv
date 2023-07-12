@@ -10147,7 +10147,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 10146,267,events:DeleteArchive,https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeleteArchive.html,false,Write
 10147,267,events:DeleteConnection,https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeleteConnection.html,false,Write
 10148,267,events:DeleteEndpoint,https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeleteEndpoint.html,false,Write
-10149,267,events:DeleteEventBus,https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeletePartnerEventSource.html,false,Write
+10149,267,events:DeleteEventBus,https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeleteEventBus.html,false,Write
 10150,267,events:DeletePartnerEventSource,https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeletePartnerEventSource.html,false,Write
 10151,267,events:DeleteRule,https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeleteRule.html,false,Write
 10152,267,events:DescribeApiDestination,https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DescribeApiDestination.html,false,Read
@@ -11792,7 +11792,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 11791,308,kafka:CreateConfiguration,https://docs.aws.amazon.com/msk/1.0/apireference/configurations.html#CreateConfiguration,false,Write
 11792,308,kafka:CreateVpcConnection,https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connections.html#CreateVpcConnection,false,Write
 11793,308,kafka:DeleteCluster,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn.html#DeleteCluster,false,Write
-11794,308,kafka:DeleteClusterPolicy,https://docs.aws.amazon.com/msk/1.0/apireference/cluster-policy.html#DeleteClusterPolicy,false,Write
+11794,308,kafka:DeleteClusterPolicy,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-policy.html#DeleteClusterPolicy,false,Write
 11795,308,kafka:DeleteConfiguration,https://docs.aws.amazon.com/msk/1.0/apireference/configurations-arn.html#DeleteConfiguration,false,Write
 11796,308,kafka:DeleteVpcConnection,https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connections.html#DeleteVpcConnection,false,Write
 11797,308,kafka:DescribeCluster,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn.html#DescribeCluster,false,Read
@@ -11802,7 +11802,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 11801,308,kafka:DescribeConfigurationRevision,https://docs.aws.amazon.com/msk/1.0/apireference/configurations-arn-revisions-revision.html#DescribeConfigurationRevision,false,Read
 11802,308,kafka:DescribeVpcConnection,https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connections.html#DescribeVpcConnection,false,Read
 11803,308,kafka:GetBootstrapBrokers,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-bootstrap-brokers.html#GetBootstrapBrokers,false,Read
-11804,308,kafka:GetClusterPolicy,https://docs.aws.amazon.com/msk/1.0/apireference/cluster-policy.html#GetClusterPolicy,false,Read
+11804,308,kafka:GetClusterPolicy,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-policy.html#GetClusterPolicy,false,Read
 11805,308,kafka:GetCompatibleKafkaVersions,https://docs.aws.amazon.com/msk/1.0/apireference/compatible-kafka-versions.html#GetCompatibleKafkaVersions,false,List
 11806,308,kafka:ListClientVpcConnections,https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connections.html#ListClientVpcConnections,false,List
 11807,308,kafka:ListClusterOperations,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-operations.html#ListClusterOperations,false,List
@@ -11815,7 +11815,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 11814,308,kafka:ListScramSecrets,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-scram-secrets.html#ListScramSecrets,false,List
 11815,308,kafka:ListTagsForResource,https://docs.aws.amazon.com/msk/1.0/apireference/tags-resourcearn.html#ListTagsForResource,false,Read
 11816,308,kafka:ListVpcConnections,https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connections.html#ListVpcConnections,false,List
-11817,308,kafka:PutClusterPolicy,https://docs.aws.amazon.com/msk/1.0/apireference/cluster-policy.html#PutClusterPolicy,false,Write
+11817,308,kafka:PutClusterPolicy,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-policy.html#PutClusterPolicy,false,Write
 11818,308,kafka:RebootBroker,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-reboot-broker.html#RebootBroker,false,Write
 11819,308,kafka:RejectClientVpcConnection,https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connections.html#RejectClientVpcConnection,false,Write
 11820,308,kafka:TagResource,https://docs.aws.amazon.com/msk/1.0/apireference/tags-resourcearn.html#TagResource,false,Tagging

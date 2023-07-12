@@ -1238,9 +1238,9 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 1237,308,cluster,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn.html,arn:${Partition}:kafka:${Region}:${Account}:cluster/${ClusterName}/${Uuid}
 1238,308,configuration,https://docs.aws.amazon.com/msk/1.0/apireference/configurations-arn.html,arn:${Partition}:kafka:${Region}:${Account}:configuration/${ConfigurationName}/${Uuid}
 1239,308,vpc-connection,https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connections-arn.html,arn:${Partition}:kafka:${Region}:${VpcOwnerAccount}:vpc-connection/${ClusterOwnerAccount}/${ClusterName}/${Uuid}
-1240,308,topic,https://docs.aws.amazon.com/msk/latest/developerguide/topics,arn:${Partition}:kafka:${Region}:${Account}:topic/${ClusterName}/${ClusterUuid}/${TopicName}
-1241,308,group,https://docs.aws.amazon.com/msk/latest/developerguide/groups,arn:${Partition}:kafka:${Region}:${Account}:group/${ClusterName}/${ClusterUuid}/${GroupName}
-1242,308,transactional-id,https://docs.aws.amazon.com/msk/latest/developerguide/transactional_ids,arn:${Partition}:kafka:${Region}:${Account}:transactional-id/${ClusterName}/${ClusterUuid}/${TransactionalId}
+1240,308,topic,https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources,arn:${Partition}:kafka:${Region}:${Account}:topic/${ClusterName}/${ClusterUuid}/${TopicName}
+1241,308,group,https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources,arn:${Partition}:kafka:${Region}:${Account}:group/${ClusterName}/${ClusterUuid}/${GroupName}
+1242,308,transactional-id,https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources,arn:${Partition}:kafka:${Region}:${Account}:transactional-id/${ClusterName}/${ClusterUuid}/${TransactionalId}
 1243,309,connector,https://docs.aws.amazon.com/MSKC/latest/mskc/API_ConnectorSummary.html,arn:${Partition}:kafkaconnect:${Region}:${Account}:connector/${ConnectorName}/${UUID}
 1244,309,custom plugin,https://docs.aws.amazon.com/MSKC/latest/mskc/API_CustomPlugin.html,arn:${Partition}:kafkaconnect:${Region}:${Account}:custom-plugin/${CustomPluginName}/${UUID}
 1245,309,worker configuration,https://docs.aws.amazon.com/MSKC/latest/mskc/API_WorkerConfiguration.html,arn:${Partition}:kafkaconnect:${Region}:${Account}:worker-configuration/${WorkerConfigurationName}/${UUID}
