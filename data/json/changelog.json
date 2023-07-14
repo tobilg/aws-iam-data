@@ -1,5 +1,20 @@
 [
   {
+    "dateOfChange": "2023-07-14",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect": [
+        "connect:DeleteQueue",
+        "connect:DeleteRoutingProfile"
+      ],
+      "Amazon FSx": [
+        "fsx:BypassSnaplockEnterpriseRetention"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-07-04",
     "addedServices": [],
     "removedServices": [],

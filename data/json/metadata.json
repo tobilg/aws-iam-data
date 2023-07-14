@@ -515,7 +515,7 @@
         "POST",
         "PUT"
       ],
-      "resourceTypesCount": 27,
+      "resourceTypesCount": 29,
       "resourceTypes": [
         "AccessLogSettings",
         "Api",
@@ -543,7 +543,9 @@
         "RouteRequestParameter",
         "RouteSettings",
         "Stage",
-        "Stages"
+        "Stages",
+        "VpcLink",
+        "VpcLinks"
       ],
       "conditionKeysCount": 28,
       "conditionKeys": [
@@ -4773,7 +4775,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 203,
+      "actionsCount": 205,
       "actions": [
         "ActivateEvaluationForm",
         "AssociateApprovedOrigin",
@@ -4819,7 +4821,9 @@
         "DeleteInstance",
         "DeleteIntegrationAssociation",
         "DeletePrompt",
+        "DeleteQueue",
         "DeleteQuickConnect",
+        "DeleteRoutingProfile",
         "DeleteRule",
         "DeleteSecurityProfile",
         "DeleteTaskTemplate",
@@ -9823,10 +9827,11 @@
       "name": "Amazon FSx",
       "servicePrefix": "fsx",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfsx.html",
-      "actionsCount": 45,
+      "actionsCount": 46,
       "actions": [
         "AssociateFileGateway",
         "AssociateFileSystemAliases",
+        "BypassSnaplockEnterpriseRetention",
         "CancelDataRepositoryTask",
         "CopyBackup",
         "CreateBackup",
