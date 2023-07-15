@@ -20868,7 +20868,7 @@
       "name": "AWS SQL Workbench",
       "servicePrefix": "sqlworkbench",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssqlworkbench.html",
-      "actionsCount": 66,
+      "actionsCount": 68,
       "actions": [
         "AssociateConnectionWithChart",
         "AssociateConnectionWithTab",
@@ -20898,6 +20898,8 @@
         "GenerateSession",
         "GetAccountInfo",
         "GetAccountSettings",
+        "GetAutocompletionMetadata",
+        "GetAutocompletionResource",
         "GetChart",
         "GetConnection",
         "GetNotebook",
