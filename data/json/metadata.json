@@ -1,5 +1,5 @@
 {
-  "serviceCount": 380,
+  "serviceCount": 381,
   "services": [
     {
       "name": "AWS Account Management",
@@ -1865,6 +1865,43 @@
         "batch:Privileged",
         "batch:ShareIdentifier",
         "batch:User"
+      ]
+    },
+    {
+      "name": "Amazon Bedrock",
+      "servicePrefix": "bedrock",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html",
+      "actionsCount": 17,
+      "actions": [
+        "CreateModelCustomizationJob",
+        "DeleteCustomModel",
+        "DeletePrompt",
+        "GetCustomModel",
+        "GetModelCustomizationJob",
+        "GetPrompt",
+        "InvokeModel",
+        "InvokeModelWithResponseStream",
+        "ListCustomModels",
+        "ListFoundationModels",
+        "ListModelCustomizationJobs",
+        "ListPrompts",
+        "ListTagsForResource",
+        "StopModelCustomizationJob",
+        "TagResource",
+        "UntagResource",
+        "UpdatePrompt"
+      ],
+      "resourceTypesCount": 3,
+      "resourceTypes": [
+        "foundation-model",
+        "custom-model",
+        "model-customization-job"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
       ]
     },
     {
@@ -19164,7 +19201,7 @@
       "name": "Amazon SageMaker",
       "servicePrefix": "sagemaker",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemaker.html",
-      "actionsCount": 328,
+      "actionsCount": 329,
       "actions": [
         "AddAssociation",
         "AddTags",
@@ -19348,6 +19385,7 @@
         "GetModelPackageGroupPolicy",
         "GetRecord",
         "GetSagemakerServicecatalogPortfolioStatus",
+        "GetScalingPolicyConfigurationRecommendation",
         "GetSearchSuggestions",
         "ImportHubContent",
         "InvokeEndpoint",

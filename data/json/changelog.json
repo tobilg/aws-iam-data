@@ -1,5 +1,37 @@
 [
   {
+    "dateOfChange": "2023-07-18",
+    "addedServices": [
+      "Amazon Bedrock"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon SageMaker": [
+        "sagemaker:GetScalingPolicyConfigurationRecommendation"
+      ],
+      "Amazon Bedrock": [
+        "bedrock:CreateModelCustomizationJob",
+        "bedrock:DeleteCustomModel",
+        "bedrock:DeletePrompt",
+        "bedrock:GetCustomModel",
+        "bedrock:GetModelCustomizationJob",
+        "bedrock:GetPrompt",
+        "bedrock:InvokeModel",
+        "bedrock:InvokeModelWithResponseStream",
+        "bedrock:ListCustomModels",
+        "bedrock:ListFoundationModels",
+        "bedrock:ListModelCustomizationJobs",
+        "bedrock:ListPrompts",
+        "bedrock:ListTagsForResource",
+        "bedrock:StopModelCustomizationJob",
+        "bedrock:TagResource",
+        "bedrock:UntagResource",
+        "bedrock:UpdatePrompt"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-07-15",
     "addedServices": [],
     "removedServices": [],
