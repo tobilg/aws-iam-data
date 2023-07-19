@@ -49,8 +49,8 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 48,10,extensionassociation,https://docs.aws.amazon.com/appconfig/latest/userguide/working-with-appconfig-extensions.html,arn:${Partition}:appconfig:${Region}:${Account}:extensionassociation/${ExtensionAssociationId}
 49,11,appbundle,https://docs.aws.amazon.com/appfabric/latest/api/API_AppBundle.html,arn:${Partition}:appfabric:${Region}:${Account}:appbundle/${AppBundleIdentifier}
 50,11,appauthorization,https://docs.aws.amazon.com/appfabric/latest/api/API_AppAuthorization.html,arn:${Partition}:appfabric:${Region}:${Account}:appbundle/${AppbundleId}/appauthorization/${AppAuthorizationIdentifier}
-51,11,ingestion,https://docs.aws.amazon.com/appfabric/latest/api/API_Ingestion.html,arn:${Partition}:appfabric:${Region}:${Account}:appbundle/${AppbundleId}/ingestion/${AppAuthorizationIdentifier}
-52,11,ingestiondestination,https://docs.aws.amazon.com/appfabric/latest/api/API_IngestionDestination.html,arn:${Partition}:appfabric:${Region}:${Account}:appbundle/${AppbundleId}/ingestion/${AppAuthorizationIdentifier}/ingestiondestination/${IngestionDestinationIdentifier}
+51,11,ingestion,https://docs.aws.amazon.com/appfabric/latest/api/API_Ingestion.html,arn:${Partition}:appfabric:${Region}:${Account}:appbundle/${AppbundleId}/ingestion/${IngestionIdentifier}
+52,11,ingestiondestination,https://docs.aws.amazon.com/appfabric/latest/api/API_IngestionDestination.html,arn:${Partition}:appfabric:${Region}:${Account}:appbundle/${AppbundleId}/ingestion/${IngestionIdentifier}/ingestiondestination/${IngestionDestinationIdentifier}
 53,12,datasource,https://docs.aws.amazon.com/appsync/latest/devguide/attaching-a-data-source.html,arn:${Partition}:appsync:${Region}:${Account}:apis/${GraphQLAPIId}/datasources/${DatasourceName}
 54,12,domain,https://docs.aws.amazon.com/appsync/latest/devguide/custom-domain-name.html,arn:${Partition}:appsync:${Region}:${Account}:domainnames/${DomainName}
 55,12,graphqlapi,https://docs.aws.amazon.com/appsync/latest/devguide/designing-a-graphql-api.html,arn:${Partition}:appsync:${Region}:${Account}:apis/${GraphQLAPIId}
