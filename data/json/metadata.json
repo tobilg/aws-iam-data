@@ -1,5 +1,5 @@
 {
-  "serviceCount": 381,
+  "serviceCount": 382,
   "services": [
     {
       "name": "AWS Account Management",
@@ -6417,7 +6417,7 @@
       "name": "AWS Directory Service",
       "servicePrefix": "ds",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdirectoryservice.html",
-      "actionsCount": 73,
+      "actionsCount": 74,
       "actions": [
         "AcceptSharedDirectory",
         "AddIpRoutes",
@@ -6485,6 +6485,7 @@
         "StartSchemaExtension",
         "UnauthorizeApplication",
         "UnshareDirectory",
+        "UpdateAuthorizedApplication",
         "UpdateConditionalForwarder",
         "UpdateDirectorySetup",
         "UpdateNumberOfDomainControllers",
@@ -10701,6 +10702,43 @@
       "conditionKeys": [
         "health:eventTypeCode",
         "health:service"
+      ]
+    },
+    {
+      "name": "AWS HealthImaging",
+      "servicePrefix": "medical-imaging",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthimaging.html",
+      "actionsCount": 18,
+      "actions": [
+        "CopyImageSet",
+        "CreateDatastore",
+        "DeleteDatastore",
+        "DeleteImageSet",
+        "GetDICOMImportJob",
+        "GetDatastore",
+        "GetImageFrame",
+        "GetImageSet",
+        "GetImageSetMetadata",
+        "ListDICOMImportJobs",
+        "ListDatastores",
+        "ListImageSetVersions",
+        "ListTagsForResource",
+        "SearchImageSets",
+        "StartDICOMImportJob",
+        "TagResource",
+        "UntagResource",
+        "UpdateImageSetMetadata"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "datastore",
+        "imageset"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
       ]
     },
     {
@@ -19894,7 +19932,7 @@
       "name": "Amazon Security Lake",
       "servicePrefix": "securitylake",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsecuritylake.html",
-      "actionsCount": 28,
+      "actionsCount": 31,
       "actions": [
         "CreateAwsLogSource",
         "CreateCustomLogSource",
@@ -19919,7 +19957,10 @@
         "ListDataLakes",
         "ListLogSources",
         "ListSubscribers",
+        "ListTagsForResource",
         "RegisterDataLakeDelegatedAdministrator",
+        "TagResource",
+        "UntagResource",
         "UpdateDataLake",
         "UpdateDataLakeExceptionSubscription",
         "UpdateSubscriber",
@@ -19930,8 +19971,12 @@
         "data-lake",
         "subscriber"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "AWS Security Token Service",

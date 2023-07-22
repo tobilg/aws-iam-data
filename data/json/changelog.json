@@ -1,5 +1,43 @@
 [
   {
+    "dateOfChange": "2023-07-22",
+    "addedServices": [
+      "AWS HealthImaging"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Directory Service": [
+        "ds:UpdateAuthorizedApplication"
+      ],
+      "Amazon Security Lake": [
+        "securitylake:ListTagsForResource",
+        "securitylake:TagResource",
+        "securitylake:UntagResource"
+      ],
+      "AWS HealthImaging": [
+        "medical-imaging:CopyImageSet",
+        "medical-imaging:CreateDatastore",
+        "medical-imaging:DeleteDatastore",
+        "medical-imaging:DeleteImageSet",
+        "medical-imaging:GetDICOMImportJob",
+        "medical-imaging:GetDatastore",
+        "medical-imaging:GetImageFrame",
+        "medical-imaging:GetImageSet",
+        "medical-imaging:GetImageSetMetadata",
+        "medical-imaging:ListDICOMImportJobs",
+        "medical-imaging:ListDatastores",
+        "medical-imaging:ListImageSetVersions",
+        "medical-imaging:ListTagsForResource",
+        "medical-imaging:SearchImageSets",
+        "medical-imaging:StartDICOMImportJob",
+        "medical-imaging:TagResource",
+        "medical-imaging:UntagResource",
+        "medical-imaging:UpdateImageSetMetadata"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-07-21",
     "addedServices": [],
     "removedServices": [],

@@ -2,15 +2,15 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 8320
+      "value": 8331
     },
     {
       "key": "Read Actions",
-      "value": 4041
+      "value": 4047
     },
     {
       "key": "List Actions",
-      "value": 2365
+      "value": 2370
     },
     {
       "key": "Permissions Actions",
@@ -169,12 +169,12 @@
       "value": 66
     },
     {
-      "key": "index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId}",
+      "key": "directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId}",
       "value": 64
     },
     {
-      "key": "directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId}",
-      "value": 63
+      "key": "index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId}",
+      "value": 64
     },
     {
       "key": "hub - arn:${Partition}:securityhub:${Region}:${Account}:hub/default",
@@ -398,7 +398,7 @@
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 381
+      "value": 382
     },
     {
       "key": "Average number of actions per service",
@@ -410,7 +410,7 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1535
+      "value": 1537
     },
     {
       "key": "Total number of distinct condition keys",
