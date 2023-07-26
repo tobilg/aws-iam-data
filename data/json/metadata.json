@@ -11386,8 +11386,10 @@
         "AllGroups",
         "AllGroupMemberships"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 1,
+      "conditionKeys": [
+        "identitystore:UserId"
+      ]
     },
     {
       "name": "AWS Identity Store Auth",
@@ -16552,7 +16554,7 @@
       "name": "Amazon Personalize",
       "servicePrefix": "personalize",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpersonalize.html",
-      "actionsCount": 71,
+      "actionsCount": 72,
       "actions": [
         "CreateBatchInferenceJob",
         "CreateBatchSegmentJob",
@@ -16623,6 +16625,7 @@
         "TagResource",
         "UntagResource",
         "UpdateCampaign",
+        "UpdateDataset",
         "UpdateMetricAttribution",
         "UpdateRecommender"
       ],
