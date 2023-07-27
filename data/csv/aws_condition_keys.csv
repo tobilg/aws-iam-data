@@ -405,9 +405,9 @@ condition_key_id,name,reference_url,description,type
 404,iot:TunnelDestinationService,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html,Filters access by a list of destination services for an IoT Tunnel,ArrayOfString
 405,iotanalytics:ResourceTag/${TagKey},https://docs.aws.amazon.com/iotanalytics/latest/userguide/tagging.html#tagging-iam,Filters access by the tag key-value pairs attached to the resource,String
 406,iotevents:keyValue,https://docs.aws.amazon.com/iotevents/latest/developerguide/security_iam_id-based-policy-examples.htmlsecurity_iam_service-with-iam-id-based-policies-conditionkeys,Filters access by the instanceId (key-value) of the message,String
-407,iotfleetwise:DestinationArn,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleetwise.html,"Filters access by campaign destination ARN, eg. an S3 bucket ARN or a Timestream ARN",String
-408,iotfleetwise:UpdateToDecoderManifestArn,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleetwise.html,Filters access by a list of IoT FleetWise Decoder Manifest ARNs,String
-409,iotfleetwise:UpdateToModelManifestArn,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleetwise.html,Filters access by a list of IoT FleetWise Model Manifest ARNs,String
+407,iotfleetwise:DestinationArn,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleetwise.html,"Filters access by campaign destination ARN, eg. an S3 bucket ARN or a Timestream ARN",ARN
+408,iotfleetwise:UpdateToDecoderManifestArn,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleetwise.html,Filters access by a list of IoT FleetWise Decoder Manifest ARNs,ARN
+409,iotfleetwise:UpdateToModelManifestArn,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleetwise.html,Filters access by a list of IoT FleetWise Model Manifest ARNs,ARN
 410,iotroborunner:DestinationResourceId,https://docs.aws.amazon.com/iotroborunner/latest/dev/#Destination,Filters access by the destination's identifier,String
 411,iotroborunner:SiteResourceId,https://docs.aws.amazon.com/iotroborunner/latest/dev/#Site,Filters access by the site's identifier,String
 412,iotroborunner:WorkerFleetResourceId,https://docs.aws.amazon.com/iotroborunner/latest/dev/#WorkerFleet,Filters access by the worker fleet's identifier,String
@@ -746,49 +746,51 @@ condition_key_id,name,reference_url,description,type
 745,ssm:SourceInstanceARN,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanager.html#awssystemsmanager-policy-keys,Filters access by verifying the Amazon Resource Name (ARN) of the AWS Systems Manager's managed instance from which the request is made. This key is not present when the request comes from the managed instance authenticated with an IAM role associated with EC2 instance profile,String
 746,ssm:SyncType,https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions,Filters access by verifying that a user also has access to the ResourceDataSync SyncType specified in the request,String
 747,ssm:resourceTag/${TagKey},https://docs.aws.amazon.com/systems-manager/latest/userguide/security_iam_service-with-iam.html#policy-conditions,Filters access based on a tag key-value pair assigned to the Systems Manager resource,String
-748,ssm:resourceTag/tag-key,https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions,Filters access by based on a tag key-value pair assigned to the Systems Manager resource,String
-749,states:StateMachineQualifier,concepts-cd-aliasing-versioning.html,Filters access by the qualifier of a state machine ARN,String
-750,sts:AWSServiceName,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_awsservicename,Filters access by the service that is obtaining a bearer token,String
-751,sts:ExternalId,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_externalid,Filters access by the unique identifier required when you assume a role in another account,String
-752,sts:RoleSessionName,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_rolesessionname,Filters access by the role session name required when you assume a role,String
-753,sts:SourceIdentity,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_sourceidentity,Filters access by the source identity that is passed in the request,String
-754,sts:TransitiveTagKeys,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_TransitiveTagKeys,Filters access by the transitive tag keys that are passed in the request,String
-755,swf:activityType.name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of the activity type,String
-756,swf:activityType.version,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the version of the activity type,String
-757,swf:defaultTaskList.name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of the default task list,String
-758,swf:name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of activities or workflows,String
-759,swf:tagFilter.tag,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the value of tagFilter.tag,String
-760,swf:tagList.member.0,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the specified tag,String
-761,swf:tagList.member.1,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the specified tag,String
-762,swf:tagList.member.2,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the specified tag,String
-763,swf:tagList.member.3,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the specified tag,String
-764,swf:tagList.member.4,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the specified tag,String
-765,swf:taskList.name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of the tasklist,String
-766,swf:typeFilter.name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of the type filter,String
-767,swf:typeFilter.version,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the version of the type filter,String
-768,swf:version,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the version of activities or workflows,String
-769,swf:workflowType.name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of the workflow type,String
-770,swf:workflowType.version,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the version of the workflow type,String
-771,synthetics:Names,https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Restricted.html,Filters access based on the name of the canary,ArrayOfString
-772,transcribe:OutputBucketName,https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazontranscribe.html#amazontranscribe-policy-keys,Filters access based on the output bucket name included in the request,String
-773,transcribe:OutputEncryptionKMSKeyId,https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazontranscribe.html#amazontranscribe-policy-keys,Filters access based on the KMS key id included in the request,String
-774,transcribe:OutputKey,https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazontranscribe.html#amazontranscribe-policy-keys,Filters access based on the output key included in the request,String
-775,transcribe:OutputLocation,https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazontranscribe.html#amazontranscribe-policy-keys,Filters access based on the output location included in the request,String
-776,vpc-lattice-svcs:Port,https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the destination port the request is made to,Numeric
-777,vpc-lattice-svcs:RequestHeader/${HeaderName},https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by a header name-value pair in the request headers,String
-778,vpc-lattice-svcs:RequestMethod,https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the method of the request,String
-779,vpc-lattice-svcs:RequestQueryString/${QueryStringKey},https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the query string key-value pairs in the request URL,ArrayOfString
-780,vpc-lattice-svcs:ServiceArn,https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the ARN of the service receiving the request,ARN
-781,vpc-lattice-svcs:ServiceNetworkArn,https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the ARN of the service network receiving the request,ARN
-782,vpc-lattice-svcs:SourceVpc,https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the VPC the request is made from,String
-783,vpc-lattice-svcs:SourceVpcOwnerAccount,https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the owning account of the VPC the request is made from,String
-784,vpc-lattice:AuthType,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the auth type specified in the request,String
-785,vpc-lattice:Protocol,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the protocol specified in the request,String
-786,vpc-lattice:SecurityGroupIds,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the IDs of security groups,ArrayOfString
-787,vpc-lattice:ServiceArn,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the ARN of a service,ARN
-788,vpc-lattice:ServiceNetworkArn,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the ARN of a service network,ARN
-789,vpc-lattice:TargetGroupArns,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the ARNs of target groups,ArrayOfARN
-790,vpc-lattice:VpcId,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the ID of a virtual private cloud (VPC),String
-791,workspaces:userId,https://docs.aws.amazon.com/workspaces/latest/adminguide/external-identity-providers-setting-up-saml.html#external-identity-providers-embed-inline-policy-for-IAM-role,Filters access by the ID of the Workspaces user,String
-792,www.amazon.com:app_id,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_id,Filters access by the Login with Amazon application ID,String
-793,www.amazon.com:user_id,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_id,Filters access by the Login with Amazon user ID,String
+748,ssm:resourceTag/aws:ssmmessages:session-id,https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions,Filters access by based on a tag key-value pair assigned to the Systems Manager session resource,String
+749,ssm:resourceTag/aws:ssmmessages:target-id,https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions,Filters access by based on a tag key-value pair assigned to the Systems Manager session resource,String
+750,ssm:resourceTag/tag-key,https://docs.aws.amazon.com/systems-manager/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#policy-conditions,Filters access by based on a tag key-value pair assigned to the Systems Manager resource,String
+751,states:StateMachineQualifier,concepts-cd-aliasing-versioning.html,Filters access by the qualifier of a state machine ARN,String
+752,sts:AWSServiceName,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_awsservicename,Filters access by the service that is obtaining a bearer token,String
+753,sts:ExternalId,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_externalid,Filters access by the unique identifier required when you assume a role in another account,String
+754,sts:RoleSessionName,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_rolesessionname,Filters access by the role session name required when you assume a role,String
+755,sts:SourceIdentity,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_sourceidentity,Filters access by the source identity that is passed in the request,String
+756,sts:TransitiveTagKeys,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_TransitiveTagKeys,Filters access by the transitive tag keys that are passed in the request,String
+757,swf:activityType.name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of the activity type,String
+758,swf:activityType.version,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the version of the activity type,String
+759,swf:defaultTaskList.name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of the default task list,String
+760,swf:name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of activities or workflows,String
+761,swf:tagFilter.tag,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the value of tagFilter.tag,String
+762,swf:tagList.member.0,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the specified tag,String
+763,swf:tagList.member.1,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the specified tag,String
+764,swf:tagList.member.2,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the specified tag,String
+765,swf:tagList.member.3,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the specified tag,String
+766,swf:tagList.member.4,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the specified tag,String
+767,swf:taskList.name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of the tasklist,String
+768,swf:typeFilter.name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of the type filter,String
+769,swf:typeFilter.version,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the version of the type filter,String
+770,swf:version,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the version of activities or workflows,String
+771,swf:workflowType.name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of the workflow type,String
+772,swf:workflowType.version,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the version of the workflow type,String
+773,synthetics:Names,https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch_Synthetics_Canaries_Restricted.html,Filters access based on the name of the canary,ArrayOfString
+774,transcribe:OutputBucketName,https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazontranscribe.html#amazontranscribe-policy-keys,Filters access based on the output bucket name included in the request,String
+775,transcribe:OutputEncryptionKMSKeyId,https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazontranscribe.html#amazontranscribe-policy-keys,Filters access based on the KMS key id included in the request,String
+776,transcribe:OutputKey,https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazontranscribe.html#amazontranscribe-policy-keys,Filters access based on the output key included in the request,String
+777,transcribe:OutputLocation,https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazontranscribe.html#amazontranscribe-policy-keys,Filters access based on the output location included in the request,String
+778,vpc-lattice-svcs:Port,https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the destination port the request is made to,Numeric
+779,vpc-lattice-svcs:RequestHeader/${HeaderName},https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by a header name-value pair in the request headers,String
+780,vpc-lattice-svcs:RequestMethod,https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the method of the request,String
+781,vpc-lattice-svcs:RequestQueryString/${QueryStringKey},https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the query string key-value pairs in the request URL,ArrayOfString
+782,vpc-lattice-svcs:ServiceArn,https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the ARN of the service receiving the request,ARN
+783,vpc-lattice-svcs:ServiceNetworkArn,https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the ARN of the service network receiving the request,ARN
+784,vpc-lattice-svcs:SourceVpc,https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the VPC the request is made from,String
+785,vpc-lattice-svcs:SourceVpcOwnerAccount,https://docs.aws.amazon.com/vpc-lattice/latest/ug/auth-policies.html#auth-policies-condition-keys,Filters access by the owning account of the VPC the request is made from,String
+786,vpc-lattice:AuthType,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the auth type specified in the request,String
+787,vpc-lattice:Protocol,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the protocol specified in the request,String
+788,vpc-lattice:SecurityGroupIds,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the IDs of security groups,ArrayOfString
+789,vpc-lattice:ServiceArn,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the ARN of a service,ARN
+790,vpc-lattice:ServiceNetworkArn,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the ARN of a service network,ARN
+791,vpc-lattice:TargetGroupArns,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the ARNs of target groups,ArrayOfARN
+792,vpc-lattice:VpcId,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the ID of a virtual private cloud (VPC),String
+793,workspaces:userId,https://docs.aws.amazon.com/workspaces/latest/adminguide/external-identity-providers-setting-up-saml.html#external-identity-providers-embed-inline-policy-for-IAM-role,Filters access by the ID of the Workspaces user,String
+794,www.amazon.com:app_id,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_id,Filters access by the Login with Amazon application ID,String
+795,www.amazon.com:user_id,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_id,Filters access by the Login with Amazon user ID,String
