@@ -754,7 +754,7 @@ condition_key_id,name,reference_url,description,type
 753,sts:ExternalId,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_externalid,Filters access by the unique identifier required when you assume a role in another account,String
 754,sts:RoleSessionName,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_rolesessionname,Filters access by the role session name required when you assume a role,String
 755,sts:SourceIdentity,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_sourceidentity,Filters access by the source identity that is passed in the request,String
-756,sts:TransitiveTagKeys,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_TransitiveTagKeys,Filters access by the transitive tag keys that are passed in the request,String
+756,sts:TransitiveTagKeys,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_TransitiveTagKeys,Filters access by the transitive tag keys that are passed in the request,ArrayOfString
 757,swf:activityType.name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of the activity type,String
 758,swf:activityType.version,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the version of the activity type,String
 759,swf:defaultTaskList.name,https://docs.aws.amazon.com/amazonswf/latest/developerguide/swf-dev-iam.html##swf-dev-iam.api,Filters access by the name of the default task list,String

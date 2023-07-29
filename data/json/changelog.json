@@ -1,5 +1,63 @@
 [
   {
+    "dateOfChange": "2023-07-29",
+    "addedServices": [
+      "AWS Entity Resolution",
+      "Amazon Managed Blockchain Query"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Cost Explorer Service": [
+        "ce:GetSavingsPlanPurchaseRecommendationDetails"
+      ],
+      "Amazon Interactive Video Service": [
+        "ivs:BatchStartViewerSessionRevocation",
+        "ivs:StartViewerSessionRevocation"
+      ],
+      "Amazon Lex V2": [
+        "lex:ListIntentMetrics",
+        "lex:ListIntentPaths",
+        "lex:ListIntentStageMetrics",
+        "lex:ListSessionAnalyticsData",
+        "lex:ListSessionMetrics"
+      ],
+      "Amazon Managed Blockchain": [
+        "managedblockchain:InvokeRpcBitcoinMainnet",
+        "managedblockchain:InvokeRpcBitcoinTestnet"
+      ],
+      "AWS Trusted Advisor": [
+        "trustedadvisor:UpdateEngagement"
+      ],
+      "AWS Entity Resolution": [
+        "entityresolution:CreateMatchingWorkflow",
+        "entityresolution:CreateSchemaMapping",
+        "entityresolution:DeleteMatchingWorkflow",
+        "entityresolution:DeleteSchemaMapping",
+        "entityresolution:GetMatchId",
+        "entityresolution:GetMatchingJob",
+        "entityresolution:GetMatchingWorkflow",
+        "entityresolution:GetSchemaMapping",
+        "entityresolution:ListMatchingJobs",
+        "entityresolution:ListMatchingWorkflows",
+        "entityresolution:ListSchemaMappings",
+        "entityresolution:ListTagsForResource",
+        "entityresolution:StartMatchingJob",
+        "entityresolution:TagResource",
+        "entityresolution:UntagResource",
+        "entityresolution:UpdateMatchingWorkflow"
+      ],
+      "Amazon Managed Blockchain Query": [
+        "managedblockchain-query:BatchGetTokenBalance",
+        "managedblockchain-query:GetTokenBalance",
+        "managedblockchain-query:GetTransaction",
+        "managedblockchain-query:ListTokenBalances",
+        "managedblockchain-query:ListTransactionEvents",
+        "managedblockchain-query:ListTransactions"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-07-27",
     "addedServices": [
       "AWS HealthLake",

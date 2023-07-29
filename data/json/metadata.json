@@ -1,5 +1,5 @@
 {
-  "serviceCount": 382,
+  "serviceCount": 384,
   "services": [
     {
       "name": "AWS Account Management",
@@ -5420,7 +5420,7 @@
       "name": "AWS Cost Explorer Service",
       "servicePrefix": "ce",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostexplorerservice.html",
-      "actionsCount": 49,
+      "actionsCount": 50,
       "actions": [
         "CreateAnomalyMonitor",
         "CreateAnomalySubscription",
@@ -5449,6 +5449,7 @@
         "GetReservationPurchaseRecommendation",
         "GetReservationUtilization",
         "GetRightsizingRecommendation",
+        "GetSavingsPlanPurchaseRecommendationDetails",
         "GetSavingsPlansCoverage",
         "GetSavingsPlansPurchaseRecommendation",
         "GetSavingsPlansUtilization",
@@ -9213,6 +9214,41 @@
       ]
     },
     {
+      "name": "AWS Entity Resolution",
+      "servicePrefix": "entityresolution",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsentityresolution.html",
+      "actionsCount": 16,
+      "actions": [
+        "CreateMatchingWorkflow",
+        "CreateSchemaMapping",
+        "DeleteMatchingWorkflow",
+        "DeleteSchemaMapping",
+        "GetMatchId",
+        "GetMatchingJob",
+        "GetMatchingWorkflow",
+        "GetSchemaMapping",
+        "ListMatchingJobs",
+        "ListMatchingWorkflows",
+        "ListSchemaMappings",
+        "ListTagsForResource",
+        "StartMatchingJob",
+        "TagResource",
+        "UntagResource",
+        "UpdateMatchingWorkflow"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "MatchingWorkflow",
+        "SchemaMapping"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
       "name": "Amazon EventBridge",
       "servicePrefix": "events",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridge.html",
@@ -11676,10 +11712,11 @@
       "name": "Amazon Interactive Video Service",
       "servicePrefix": "ivs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninteractivevideoservice.html",
-      "actionsCount": 40,
+      "actionsCount": 42,
       "actions": [
         "BatchGetChannel",
         "BatchGetStreamKey",
+        "BatchStartViewerSessionRevocation",
         "CreateChannel",
         "CreateParticipantToken",
         "CreateRecordingConfiguration",
@@ -11713,6 +11750,7 @@
         "ListStreams",
         "ListTagsForResource",
         "PutMetadata",
+        "StartViewerSessionRevocation",
         "StopStream",
         "TagResource",
         "UntagResource",
@@ -13826,7 +13864,7 @@
       "name": "Amazon Lex V2",
       "servicePrefix": "lex",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlexv2.html",
-      "actionsCount": 97,
+      "actionsCount": 102,
       "actions": [
         "BatchCreateCustomVocabularyItem",
         "BatchDeleteCustomVocabularyItem",
@@ -13893,8 +13931,13 @@
         "ListCustomVocabularyItems",
         "ListExports",
         "ListImports",
+        "ListIntentMetrics",
+        "ListIntentPaths",
+        "ListIntentStageMetrics",
         "ListIntents",
         "ListRecommendedIntents",
+        "ListSessionAnalyticsData",
+        "ListSessionMetrics",
         "ListSlotTypes",
         "ListSlots",
         "ListTagsForResource",
@@ -14676,7 +14719,7 @@
       "name": "Amazon Managed Blockchain",
       "servicePrefix": "managedblockchain",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedblockchain.html",
-      "actionsCount": 30,
+      "actionsCount": 32,
       "actions": [
         "CreateAccessor",
         "CreateMember",
@@ -14693,6 +14736,8 @@
         "GetNode",
         "GetProposal",
         "Invoke",
+        "InvokeRpcBitcoinMainnet",
+        "InvokeRpcBitcoinTestnet",
         "ListAccessors",
         "ListInvitations",
         "ListMembers",
@@ -14724,6 +14769,24 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
+    },
+    {
+      "name": "Amazon Managed Blockchain Query",
+      "servicePrefix": "managedblockchain-query",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedblockchainquery.html",
+      "actionsCount": 6,
+      "actions": [
+        "BatchGetTokenBalance",
+        "GetTokenBalance",
+        "GetTransaction",
+        "ListTokenBalances",
+        "ListTransactionEvents",
+        "ListTransactions"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
     },
     {
       "name": "Amazon Managed Grafana",
@@ -22118,7 +22181,7 @@
       "name": "AWS Trusted Advisor",
       "servicePrefix": "trustedadvisor",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstrustedadvisor.html",
-      "actionsCount": 40,
+      "actionsCount": 41,
       "actions": [
         "CreateEngagement",
         "CreateEngagementAttachment",
@@ -22156,6 +22219,7 @@
         "RefreshCheck",
         "SetAccountAccess",
         "SetOrganizationAccess",
+        "UpdateEngagement",
         "UpdateEngagementStatus",
         "UpdateNotificationConfigurations",
         "UpdateNotificationPreferences",
