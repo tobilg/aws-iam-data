@@ -14885,7 +14885,7 @@
       "name": "Amazon Managed Streaming for Apache Kafka",
       "servicePrefix": "kafka",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedstreamingforapachekafka.html",
-      "actionsCount": 45,
+      "actionsCount": 47,
       "actions": [
         "BatchAssociateScramSecret",
         "BatchDisassociateScramSecret",
@@ -14899,6 +14899,7 @@
         "DeleteVpcConnection",
         "DescribeCluster",
         "DescribeClusterOperation",
+        "DescribeClusterOperationV2",
         "DescribeClusterV2",
         "DescribeConfiguration",
         "DescribeConfigurationRevision",
@@ -14908,6 +14909,7 @@
         "GetCompatibleKafkaVersions",
         "ListClientVpcConnections",
         "ListClusterOperations",
+        "ListClusterOperationsV2",
         "ListClusters",
         "ListClustersV2",
         "ListConfigurationRevisions",
@@ -17124,7 +17126,7 @@
       "name": "AWS Proton",
       "servicePrefix": "proton",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsproton.html",
-      "actionsCount": 108,
+      "actionsCount": 111,
       "actions": [
         "AcceptEnvironmentAccountConnection",
         "CancelComponentDeployment",
@@ -17149,6 +17151,7 @@
         "CreateTemplateSyncConfig",
         "DeleteAccountRoles",
         "DeleteComponent",
+        "DeleteDeployment",
         "DeleteEnvironment",
         "DeleteEnvironmentAccountConnection",
         "DeleteEnvironmentTemplate",
@@ -17166,6 +17169,7 @@
         "GetAccountRoles",
         "GetAccountSettings",
         "GetComponent",
+        "GetDeployment",
         "GetEnvironment",
         "GetEnvironmentAccountConnection",
         "GetEnvironmentTemplate",
@@ -17190,6 +17194,7 @@
         "ListComponentOutputs",
         "ListComponentProvisionedResources",
         "ListComponents",
+        "ListDeployments",
         "ListEnvironmentAccountConnections",
         "ListEnvironmentOutputs",
         "ListEnvironmentProvisionedResources",
@@ -17235,7 +17240,7 @@
         "UpdateServiceTemplateVersion",
         "UpdateTemplateSyncConfig"
       ],
-      "resourceTypesCount": 14,
+      "resourceTypesCount": 15,
       "resourceTypes": [
         "environment-template",
         "environment-template-version",
@@ -17250,7 +17255,8 @@
         "service-instance",
         "environment-account-connection",
         "repository",
-        "component"
+        "component",
+        "deployment"
       ],
       "conditionKeysCount": 5,
       "conditionKeys": [
