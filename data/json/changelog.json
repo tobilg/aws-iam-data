@@ -1,5 +1,31 @@
 [
   {
+    "dateOfChange": "2023-08-02",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Clean Rooms": [
+        "cleanrooms:BatchGetCollaborationAnalysisTemplate",
+        "cleanrooms:CreateAnalysisTemplate",
+        "cleanrooms:DeleteAnalysisTemplate",
+        "cleanrooms:GetAnalysisTemplate",
+        "cleanrooms:GetCollaborationAnalysisTemplate",
+        "cleanrooms:ListAnalysisTemplates",
+        "cleanrooms:ListCollaborationAnalysisTemplates",
+        "cleanrooms:UpdateAnalysisTemplate"
+      ],
+      "AWS Elemental MediaLive": [
+        "medialive:DescribeAccountConfiguration",
+        "medialive:DescribeThumbnails",
+        "medialive:UpdateAccountConfiguration"
+      ],
+      "Amazon WorkDocs": [
+        "workdocs:UpdateUserAdministrativeSettings"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-08-01",
     "addedServices": [],
     "removedServices": [],
