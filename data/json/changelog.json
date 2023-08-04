@@ -1,5 +1,29 @@
 [
   {
+    "dateOfChange": "2023-08-04",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Inspector2": [
+        "inspector2:BatchGetFindingDetails"
+      ],
+      "Amazon Lookout for Equipment": [
+        "lookoutequipment:DeleteResourcePolicy",
+        "lookoutequipment:DescribeModelVersion",
+        "lookoutequipment:DescribeResourcePolicy",
+        "lookoutequipment:ImportDataset",
+        "lookoutequipment:ImportModelVersion",
+        "lookoutequipment:ListModelVersions",
+        "lookoutequipment:PutResourcePolicy",
+        "lookoutequipment:UpdateActiveModelVersion"
+      ],
+      "AWS Mainframe Modernization Service": [
+        "m2:GetSignedBluinsightsUrl"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-08-02",
     "addedServices": [],
     "removedServices": [],
