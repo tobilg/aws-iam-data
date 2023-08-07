@@ -22,10 +22,10 @@ jobs:
           node-version: '16.x'
           registry-url: 'https://registry.npmjs.org'
 
-      - name: Gather data, check for changes and eventually publish new package version
+      - name: Gather data and check for changes
+        id: gatherData
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           # Install dependencies
           npm i
@@ -45,26 +45,32 @@ jobs:
           git add .
 
           # Check for changes and commit if there are any
-          git diff-index --cached --quiet HEAD || \
-            # Increase package patch version \
-            npm --no-git-tag-version version patch && \
-            # Update changelog \
-            npm run update-changelog && \
-            # Install DuckDB \
-            npm run install-duckdb && \
-            # Create tables \
-            npm run create-tables && \
-            # Export data \
-            npm run export-data && \
-            # Create reports \
-            npm run create-reports && \
-            # Add new files \
-            git add . && \
-            # Commit changes \
-            git commit -am "[no ci] Data update on $(date '+%FT%H:%M:%S')" && \
-            # Push to repo \
-            git push && \
-            # Build package sources \
-            npm run build && \
-            # Publish new version to npm registry \
-            npm publish
+          git diff-index --cached --quiet HEAD || echo '::set-output name=changed::true'
+
+      - name: Eventually publish new package version
+        if: ${{ steps.gatherData.outputs.changed == 'true' }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          # Increase package patch version \
+          npm --no-git-tag-version version patch && \
+          # Update changelog \
+          npm run update-changelog && \
+          # Install DuckDB \
+          npm run install-duckdb && \
+          # Create tables \
+          npm run create-tables && \
+          # Export data \
+          npm run export-data && \
+          # Create reports \
+          npm run create-reports && \
+          # Add new files \
+          git add . && \
+          # Commit changes \
+          git commit -am "[no ci] Data update on $(date '+%FT%H:%M:%S')" && \
+          # Push to repo \
+          git push && \
+          # Build package sources \
+          npm run build && \
+          # Publish new version to npm registry \
+          npm publish
