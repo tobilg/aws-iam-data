@@ -179,9 +179,9 @@ condition_key_id,name,reference_url,description,type
 178,ebs:ParentSnapshot,https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonelasticblockstore.html#amazonelasticblockstore-policy-keys,Filters access by the ID of the parent snapshot,String
 179,ebs:VolumeSize,https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonelasticblockstore.html#amazonelasticblockstore-policy-keys,"Filters access by the size of the volume for the snapshot being created, in GiB",Numeric
 180,ec2-instance-connect:MaxTunnelDuration,,,
-181,ec2-instance-connect:maxTunnelDuration,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#instance-connect-max-duration,Filters access by maximum session duration associated with the instance,Numeric
-182,ec2-instance-connect:privateIpAddress,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#instance-connect-pvt-ip,Filters access by private IP Address associated with the instance,IPAddress
-183,ec2-instance-connect:remotePort,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#instance-connect-remote-port,Filters access by port number associated with the instance,Numeric
+181,ec2-instance-connect:maxTunnelDuration,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/permissions-for-ec2-instance-connect-endpoint.html#iam-OpenTunnel,Filters access by maximum session duration associated with the instance,Numeric
+182,ec2-instance-connect:privateIpAddress,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/permissions-for-ec2-instance-connect-endpoint.html#iam-OpenTunnel,Filters access by private IP Address associated with the instance,IPAddress
+183,ec2-instance-connect:remotePort,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/permissions-for-ec2-instance-connect-endpoint.html#iam-OpenTunnel,Filters access by port number associated with the instance,Numeric
 184,ec2:AccepterVpc,https://docs.aws.amazon.com/vpc/latest/peering/security-iam.html,Filters access by the ARN of an accepter VPC in a VPC peering connection,ARN
 185,ec2:Add/group,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#amazon-ec2-keys,Filters access by the group being added to a snapshot,String
 186,ec2:Add/userId,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#amazon-ec2-keys,Filters access by the account id being added to a snapshot,String
