@@ -1421,15 +1421,17 @@
       "name": "AWS Artifact",
       "servicePrefix": "artifact",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsartifact.html",
-      "actionsCount": 8,
+      "actionsCount": 10,
       "actions": [
         "AcceptAgreement",
         "DownloadAgreement",
         "Get",
+        "GetAccountSettings",
         "GetReport",
         "GetReportMetadata",
         "GetTermForReport",
         "ListReports",
+        "PutAccountSettings",
         "TerminateAgreement"
       ],
       "resourceTypesCount": 4,
