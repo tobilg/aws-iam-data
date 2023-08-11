@@ -9,7 +9,7 @@ on:
 
 jobs:
 
-  gather_and_update_data:
+  gather_and_update_iam_data:
     name: Gather the latest AWS IAM data and if there is new data, publish a new package version to npm
     runs-on: ubuntu-latest
 

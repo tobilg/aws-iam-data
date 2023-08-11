@@ -1,7 +1,7 @@
 import { downloadAsHTML } from './utils/downloader';
 import { join } from 'path';
 import { writeFileSync } from 'fs';
-import { Topic, Action, ActionResourceType, ConditionKey, ResourceType, ServiceAuthReference, AWSIamMetadata } from '../src/awsIamData';
+import { Topic, Action, ActionResourceType, ConditionKey, ResourceType, ServiceAuthReference, AWSIamMetadata } from '../src/index';
 
 const getTopics = (root: HTMLElement): Topic[] => {
   // Get topics
