@@ -1,5 +1,5 @@
 {
-  "serviceCount": 384,
+  "serviceCount": 385,
   "services": [
     {
       "name": "AWS Account Management",
@@ -1847,11 +1847,12 @@
         "UpdateJobQueue",
         "UpdateSchedulingPolicy"
       ],
-      "resourceTypesCount": 5,
+      "resourceTypesCount": 6,
       "resourceTypes": [
         "compute-environment",
         "job-queue",
         "job-definition",
+        "job-definition-revision",
         "job",
         "scheduling-policy"
       ],
@@ -4854,7 +4855,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 206,
+      "actionsCount": 209,
       "actions": [
         "ActivateEvaluationForm",
         "AssociateApprovedOrigin",
@@ -4868,6 +4869,7 @@
         "AssociateQueueQuickConnects",
         "AssociateRoutingProfileQueues",
         "AssociateSecurityKey",
+        "AssociateTrafficDistributionGroupUser",
         "BatchAssociateAnalyticsDataSet",
         "BatchDisassociateAnalyticsDataSet",
         "ClaimPhoneNumber",
@@ -4944,6 +4946,7 @@
         "DisassociateQueueQuickConnects",
         "DisassociateRoutingProfileQueues",
         "DisassociateSecurityKey",
+        "DisassociateTrafficDistributionGroupUser",
         "DismissUserContact",
         "GetContactAttributes",
         "GetCurrentMetricData",
@@ -4987,6 +4990,7 @@
         "ListSecurityProfiles",
         "ListTagsForResource",
         "ListTaskTemplates",
+        "ListTrafficDistributionGroupUsers",
         "ListTrafficDistributionGroups",
         "ListUseCases",
         "ListUserHierarchyGroups",
@@ -8559,7 +8563,7 @@
       "name": "Amazon ElastiCache",
       "servicePrefix": "elasticache",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticache.html",
-      "actionsCount": 66,
+      "actionsCount": 67,
       "actions": [
         "AddTagsToResource",
         "AuthorizeCacheSecurityGroupIngress",
@@ -8626,7 +8630,8 @@
         "ResetCacheParameterGroup",
         "RevokeCacheSecurityGroupIngress",
         "StartMigration",
-        "TestFailover"
+        "TestFailover",
+        "TestMigration"
       ],
       "resourceTypesCount": 10,
       "resourceTypes": [
@@ -15473,6 +15478,23 @@
       "conditionKeys": []
     },
     {
+      "name": "AWS Migration Acceleration Program Credits",
+      "servicePrefix": "mapcredits",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationaccelerationprogramcredits.html",
+      "actionsCount": 3,
+      "actions": [
+        "ListAssociatedPrograms",
+        "ListQuarterCredits",
+        "ListQuarterSpend"
+      ],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "agreement"
+      ],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
       "name": "AWS Migration Hub",
       "servicePrefix": "mgh",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhub.html",
@@ -21005,7 +21027,7 @@
       "name": "AWS Snowball",
       "servicePrefix": "snowball",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssnowball.html",
-      "actionsCount": 26,
+      "actionsCount": 27,
       "actions": [
         "CancelCluster",
         "CancelJob",
@@ -21028,6 +21050,7 @@
         "ListCompatibleImages",
         "ListJobs",
         "ListLongTermPricing",
+        "ListPickupLocations",
         "ListServiceVersions",
         "UpdateCluster",
         "UpdateJob",

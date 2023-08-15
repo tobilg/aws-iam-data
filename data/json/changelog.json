@@ -1,5 +1,31 @@
 [
   {
+    "dateOfChange": "2023-08-15",
+    "addedServices": [
+      "AWS Migration Acceleration Program Credits"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect": [
+        "connect:AssociateTrafficDistributionGroupUser",
+        "connect:DisassociateTrafficDistributionGroupUser",
+        "connect:ListTrafficDistributionGroupUsers"
+      ],
+      "Amazon ElastiCache": [
+        "elasticache:TestMigration"
+      ],
+      "AWS Snowball": [
+        "snowball:ListPickupLocations"
+      ],
+      "AWS Migration Acceleration Program Credits": [
+        "mapcredits:ListAssociatedPrograms",
+        "mapcredits:ListQuarterCredits",
+        "mapcredits:ListQuarterSpend"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-08-11",
     "addedServices": [],
     "removedServices": [],
