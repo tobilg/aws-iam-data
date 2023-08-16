@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2023-08-16",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Performance Insights": [
+        "pi:CreatePerformanceAnalysisReport",
+        "pi:DeletePerformanceAnalysisReport",
+        "pi:GetPerformanceAnalysisReport",
+        "pi:ListPerformanceAnalysisReports",
+        "pi:ListTagsForResource",
+        "pi:TagResource",
+        "pi:UntagResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-08-15",
     "addedServices": [
       "AWS Migration Acceleration Program Credits"

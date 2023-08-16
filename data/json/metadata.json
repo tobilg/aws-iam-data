@@ -16684,21 +16684,33 @@
       "name": "AWS Performance Insights",
       "servicePrefix": "pi",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsperformanceinsights.html",
-      "actionsCount": 6,
+      "actionsCount": 13,
       "actions": [
+        "CreatePerformanceAnalysisReport",
+        "DeletePerformanceAnalysisReport",
         "DescribeDimensionKeys",
         "GetDimensionKeyDetails",
+        "GetPerformanceAnalysisReport",
         "GetResourceMetadata",
         "GetResourceMetrics",
         "ListAvailableResourceDimensions",
-        "ListAvailableResourceMetrics"
+        "ListAvailableResourceMetrics",
+        "ListPerformanceAnalysisReports",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource"
       ],
-      "resourceTypesCount": 1,
+      "resourceTypesCount": 2,
       "resourceTypes": [
-        "metric-resource"
+        "metric-resource",
+        "perf-reports-resource"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "Amazon Personalize",
