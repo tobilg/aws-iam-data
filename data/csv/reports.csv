@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,8387
-Actions by type,Read Actions,4081
-Actions by type,List Actions,2405
+Actions by type,Write Actions,8394
+Actions by type,Read Actions,4084
+Actions by type,List Actions,2408
 Actions by type,Permissions Actions,238
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
 Longest action names,aws-marketplace-management:GetAdditionalSellerNotificationRecipients,68
@@ -19,9 +19,9 @@ Longest condition key names,vpc-lattice-svcs:RequestQueryString/${QueryStringKey
 Longest condition key names,sagemaker:CustomerMetadataProperties/${MetadataKey},51
 Longest condition key names,s3:x-amz-server-side-encryption-customer-algorithm,50
 Longest condition key names,route53-recovery-cluster:AllowSafetyRulesOverrides,50
+Longest condition key names,amplifyuibuilder:CodegenJobResourceEnvironmentName,50
 Longest condition key names,amplifyuibuilder:ComponentResourceEnvironmentName,49
 Longest condition key names,codestar-connections:ProviderPermissionsRequired,48
-Longest condition key names,fsx:NfsDataRepositoryEncryptionInTransitEnabled,47
 Longest condition key names,codestar-notifications:NotificationsForResource,47
 Longest service prefixes,license-manager-linux-subscriptions,35
 Longest service prefixes,license-manager-user-subscriptions,34
@@ -93,8 +93,8 @@ Shortest service prefixes,ds,2
 Shortest service prefixes,s3,2
 Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
-Summary,Total number of distinct resource ARNS,1551
-Summary,Total number of distinct condition keys,797
+Summary,Total number of distinct resource ARNS,1553
+Summary,Total number of distinct condition keys,801
 Summary,Total number of services,385
 Summary,Average number of actions per service,39
 Summary,Median number of actions per service,28

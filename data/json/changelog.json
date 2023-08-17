@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2023-08-17",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Amplify UI Builder": [
+        "amplifyuibuilder:GetCodegenJob",
+        "amplifyuibuilder:ListCodegenJobs",
+        "amplifyuibuilder:StartCodegenJob"
+      ],
+      "AWS HealthOmics": [
+        "omics:AcceptShare",
+        "omics:CreateAnnotationStoreVersion",
+        "omics:CreateShare",
+        "omics:DeleteAnnotationStoreVersions",
+        "omics:DeleteShare",
+        "omics:GetAnnotationStoreVersion",
+        "omics:GetShare",
+        "omics:ListAnnotationStoreVersions",
+        "omics:ListShares",
+        "omics:UpdateAnnotationStoreVersion"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-08-16",
     "addedServices": [],
     "removedServices": [],
