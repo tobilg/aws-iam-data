@@ -8050,11 +8050,12 @@
         "capacity-provider",
         "task-set"
       ],
-      "conditionKeysCount": 14,
+      "conditionKeysCount": 15,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "ecs:CreateAction",
         "ecs:ResourceTag/${TagKey}",
         "ecs:capacity-provider",
         "ecs:cluster",
@@ -9001,12 +9002,10 @@
         "UpdateChannelGroup",
         "UpdateOriginEndpoint"
       ],
-      "resourceTypesCount": 5,
+      "resourceTypesCount": 3,
       "resourceTypes": [
         "ChannelGroup",
-        "ChannelPolicy",
         "Channel",
-        "OriginEndpointPolicy",
         "OriginEndpoint"
       ],
       "conditionKeysCount": 3,
@@ -15311,7 +15310,7 @@
       "name": "AWS Marketplace Vendor Insights",
       "servicePrefix": "vendor-insights",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacevendorinsights.html",
-      "actionsCount": 23,
+      "actionsCount": 24,
       "actions": [
         "ActivateSecurityProfile",
         "AssociateDataSource",
@@ -15333,6 +15332,7 @@
         "ListTagsForResource",
         "TagResource",
         "UntagResource",
+        "UpdateDataSource",
         "UpdateSecurityProfile",
         "UpdateSecurityProfileSnapshotCreationConfiguration",
         "UpdateSecurityProfileSnapshotReleaseConfiguration"

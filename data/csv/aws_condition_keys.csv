@@ -296,7 +296,7 @@ condition_key_id,name,reference_url,description,type
 295,ec2:osuser,https://docs.aws.amazon.com/ec2-instance-connect/latest/APIReference/API_SendSSHPublicKey.html,Filters access by specifying the default user name for the AMI that you used to launch your instance,String
 296,ecr-public:ResourceTag/${TagKey},https://docs.aws.amazon.com/AmazonECR/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys,Filters actions based on tag-value associated with the resource,String
 297,ecr:ResourceTag/${TagKey},https://docs.aws.amazon.com/AmazonECR/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys,Filters access by tag-value associated with the resource,String
-298,ecs:CreateAction,,,
+298,ecs:CreateAction,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-createaction,Filters access by the name of a resource-creating API action,String
 299,ecs:ResourceTag/${TagKey},https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies,Filters access by the tag key-value pairs attached to the resource,String
 300,ecs:capacity-provider,https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys,Filters access by the ARN of an Amazon ECS capacity provider,ARN
 301,ecs:cluster,https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys,Filters access by the ARN of an Amazon ECS cluster,ARN
