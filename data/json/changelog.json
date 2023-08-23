@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2023-08-23",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Personalize": [
+        "personalize:CreateDataInsightsJob",
+        "personalize:DescribeDataInsightsJob",
+        "personalize:GetDataInsights",
+        "personalize:ListDataInsightsJobs"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:ListResourceCatalogs"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-08-22",
     "addedServices": [],
     "removedServices": [],

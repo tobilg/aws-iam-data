@@ -16737,11 +16737,12 @@
       "name": "Amazon Personalize",
       "servicePrefix": "personalize",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpersonalize.html",
-      "actionsCount": 72,
+      "actionsCount": 76,
       "actions": [
         "CreateBatchInferenceJob",
         "CreateBatchSegmentJob",
         "CreateCampaign",
+        "CreateDataInsightsJob",
         "CreateDataset",
         "CreateDatasetExportJob",
         "CreateDatasetGroup",
@@ -16766,6 +16767,7 @@
         "DescribeBatchInferenceJob",
         "DescribeBatchSegmentJob",
         "DescribeCampaign",
+        "DescribeDataInsightsJob",
         "DescribeDataset",
         "DescribeDatasetExportJob",
         "DescribeDatasetGroup",
@@ -16779,12 +16781,14 @@
         "DescribeSchema",
         "DescribeSolution",
         "DescribeSolutionVersion",
+        "GetDataInsights",
         "GetPersonalizedRanking",
         "GetRecommendations",
         "GetSolutionMetrics",
         "ListBatchInferenceJobs",
         "ListBatchSegmentJobs",
         "ListCampaigns",
+        "ListDataInsightsJobs",
         "ListDatasetExportJobs",
         "ListDatasetGroups",
         "ListDatasetImportJobs",
@@ -16812,13 +16816,14 @@
         "UpdateMetricAttribution",
         "UpdateRecommender"
       ],
-      "resourceTypesCount": 16,
+      "resourceTypesCount": 17,
       "resourceTypes": [
         "schema",
         "featureTransformation",
         "dataset",
         "datasetGroup",
         "datasetImportJob",
+        "dataInsightsJob",
         "datasetExportJob",
         "solution",
         "campaign",
@@ -19447,7 +19452,7 @@
       "name": "Amazon SageMaker",
       "servicePrefix": "sagemaker",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemaker.html",
-      "actionsCount": 329,
+      "actionsCount": 330,
       "actions": [
         "AddAssociation",
         "AddTags",
@@ -19695,6 +19700,7 @@
         "ListPipelines",
         "ListProcessingJobs",
         "ListProjects",
+        "ListResourceCatalogs",
         "ListSharedModelEvents",
         "ListSharedModelVersions",
         "ListSharedModels",
@@ -19779,7 +19785,7 @@
         "UpdateWorkforce",
         "UpdateWorkteam"
       ],
-      "resourceTypesCount": 58,
+      "resourceTypesCount": 59,
       "resourceTypes": [
         "device",
         "device-fleet",
@@ -19838,7 +19844,8 @@
         "model-card",
         "model-card-export-job",
         "shared-model",
-        "shared-model-event"
+        "shared-model-event",
+        "sagemaker-catalog"
       ],
       "conditionKeysCount": 43,
       "conditionKeys": [
