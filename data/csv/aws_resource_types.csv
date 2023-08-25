@@ -100,7 +100,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 99,27,budget,https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html,arn:${Partition}:budgets::${Account}:budget/${BudgetName}
 100,27,budgetAction,https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html,arn:${Partition}:budgets::${Account}:budget/${BudgetName}/action/${ActionId}
 101,28,Event,https://docs.aws.amazon.com/codeguru/latest/bugbust-ug/event-managing.html,arn:${Partition}:bugbust:${Region}:${Account}:events/${EventId}
-102,29,certificate,https://docs.aws.amazon.com/acm/latest/userguide/authen-overview.html#acm-resources-operations,arn:${Partition}:acm:${Region}:${Account}:certificate/${CertificateId}
+102,29,certificate,https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-acm-cert,arn:${Partition}:acm:${Region}:${Account}:certificate/${CertificateId}
 103,30,ChatbotConfiguration,https://docs.aws.amazon.com/chatbot/latest/adminguide/what-is.html,arn:${Partition}:chatbot::${Account}:chat-configuration/${ConfigurationType}/${ChatbotConfigurationName}
 104,31,analysistemplate,https://docs.aws.amazon.com/clean-rooms/latest/userguide/security-iam.html,arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/analysistemplate/${AnalysisTemplateId}
 105,31,collaboration,https://docs.aws.amazon.com/clean-rooms/latest/userguide/security-iam.html,arn:${Partition}:cleanrooms:${Region}:${Account}:collaboration/${CollaborationId}

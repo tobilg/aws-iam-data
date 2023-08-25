@@ -1942,7 +1942,7 @@
     {
       "name": "AWS Billing and Cost Management",
       "servicePrefix": "billing",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbilling_.html",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbilling.html",
       "actionsCount": 13,
       "actions": [
         "GetBillingData",
@@ -2155,8 +2155,13 @@
       "resourceTypes": [
         "certificate"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 8,
       "conditionKeys": [
+        "acm:CertificateAuthority",
+        "acm:CertificateTransparencyLogging",
+        "acm:DomainNames",
+        "acm:KeyAlgorithm",
+        "acm:ValidationMethod",
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
