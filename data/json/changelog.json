@@ -1,5 +1,49 @@
 [
   {
+    "dateOfChange": "2023-08-29",
+    "addedServices": [
+      "AWS Private CA Connector for Active Directory"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Private CA Connector for Active Directory": [
+        "pca-connector-ad:CreateConnector",
+        "pca-connector-ad:CreateDirectoryRegistration",
+        "pca-connector-ad:CreateServicePrincipalName",
+        "pca-connector-ad:CreateTemplate",
+        "pca-connector-ad:CreateTemplateGroupAccessControlEntry",
+        "pca-connector-ad:DeleteConnector",
+        "pca-connector-ad:DeleteDirectoryRegistration",
+        "pca-connector-ad:DeleteServicePrincipalName",
+        "pca-connector-ad:DeleteTemplate",
+        "pca-connector-ad:DeleteTemplateGroupAccessControlEntry",
+        "pca-connector-ad:GetConnector",
+        "pca-connector-ad:GetDirectoryRegistration",
+        "pca-connector-ad:GetServicePrincipalName",
+        "pca-connector-ad:GetTemplate",
+        "pca-connector-ad:GetTemplateGroupAccessControlEntry",
+        "pca-connector-ad:ListConnectors",
+        "pca-connector-ad:ListDirectoryRegistrations",
+        "pca-connector-ad:ListServicePrincipalNames",
+        "pca-connector-ad:ListTagsForResource",
+        "pca-connector-ad:ListTemplateGroupAccessControlEntries",
+        "pca-connector-ad:ListTemplates",
+        "pca-connector-ad:TagResource",
+        "pca-connector-ad:UntagResource",
+        "pca-connector-ad:UpdateTemplate",
+        "pca-connector-ad:UpdateTemplateGroupAccessControlEntry"
+      ]
+    },
+    "removedActions": {
+      "Amazon Bedrock": [
+        "bedrock:DeletePrompt",
+        "bedrock:GetPrompt",
+        "bedrock:ListPrompts",
+        "bedrock:UpdatePrompt"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2023-08-23",
     "addedServices": [],
     "removedServices": [],

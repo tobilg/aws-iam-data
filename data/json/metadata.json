@@ -1,5 +1,5 @@
 {
-  "serviceCount": 385,
+  "serviceCount": 386,
   "services": [
     {
       "name": "AWS Account Management",
@@ -1888,7 +1888,7 @@
       "name": "Amazon Bedrock",
       "servicePrefix": "bedrock",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html",
-      "actionsCount": 33,
+      "actionsCount": 29,
       "actions": [
         "CreateAgent",
         "CreateAgentActionGroup",
@@ -1896,14 +1896,12 @@
         "CreateAgentDraftSnapshot",
         "CreateModelCustomizationJob",
         "DeleteCustomModel",
-        "DeletePrompt",
         "GetAgent",
         "GetAgentActionGroup",
         "GetAgentAlias",
         "GetAgentVersion",
         "GetCustomModel",
         "GetModelCustomizationJob",
-        "GetPrompt",
         "InvokeAgent",
         "InvokeModel",
         "InvokeModelWithResponseStream",
@@ -1914,15 +1912,13 @@
         "ListCustomModels",
         "ListFoundationModels",
         "ListModelCustomizationJobs",
-        "ListPrompts",
         "ListTagsForResource",
         "StopModelCustomizationJob",
         "TagResource",
         "UntagResource",
         "UpdateAgent",
         "UpdateAgentActionGroup",
-        "UpdateAgentAlias",
-        "UpdatePrompt"
+        "UpdateAgentAlias"
       ],
       "resourceTypesCount": 5,
       "resourceTypes": [
@@ -17205,6 +17201,53 @@
       "resourceTypes": [],
       "conditionKeysCount": 0,
       "conditionKeys": []
+    },
+    {
+      "name": "AWS Private CA Connector for Active Directory",
+      "servicePrefix": "pca-connector-ad",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsprivatecaconnectorforactivedirectory.html",
+      "actionsCount": 25,
+      "actions": [
+        "CreateConnector",
+        "CreateDirectoryRegistration",
+        "CreateServicePrincipalName",
+        "CreateTemplate",
+        "CreateTemplateGroupAccessControlEntry",
+        "DeleteConnector",
+        "DeleteDirectoryRegistration",
+        "DeleteServicePrincipalName",
+        "DeleteTemplate",
+        "DeleteTemplateGroupAccessControlEntry",
+        "GetConnector",
+        "GetDirectoryRegistration",
+        "GetServicePrincipalName",
+        "GetTemplate",
+        "GetTemplateGroupAccessControlEntry",
+        "ListConnectors",
+        "ListDirectoryRegistrations",
+        "ListServicePrincipalNames",
+        "ListTagsForResource",
+        "ListTemplateGroupAccessControlEntries",
+        "ListTemplates",
+        "TagResource",
+        "UntagResource",
+        "UpdateTemplate",
+        "UpdateTemplateGroupAccessControlEntry"
+      ],
+      "resourceTypesCount": 5,
+      "resourceTypes": [
+        "Connector",
+        "DirectoryRegistration",
+        "ServicePrincipalName",
+        "Template",
+        "TemplateGroupAccessControlEntry"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "AWS Private Certificate Authority",
