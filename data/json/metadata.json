@@ -3822,7 +3822,7 @@
       "name": "AWS CodeCommit",
       "servicePrefix": "codecommit",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodecommit.html",
-      "actionsCount": 88,
+      "actionsCount": 89,
       "actions": [
         "AssociateApprovalRuleTemplateWithRepository",
         "BatchAssociateApprovalRuleTemplateWithRepositories",
@@ -3879,6 +3879,7 @@
         "ListApprovalRuleTemplates",
         "ListAssociatedApprovalRuleTemplatesForRepository",
         "ListBranches",
+        "ListFileCommitHistory",
         "ListPullRequests",
         "ListRepositories",
         "ListRepositoriesForApprovalRuleTemplate",

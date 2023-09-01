@@ -11,7 +11,7 @@ condition_key_id,name,reference_url,description,type
 10,acm-pca:TemplateArn,https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-varieties,Filters issue certificate requests based on the presence of TemplateArn in the request,String
 11,acm:CertificateAuthority,https://docs.aws.amazon.com/acm/latest/userguide/security-iam.html,Filters access by certificateAuthority in the request. Can be used to restrict which Certificate Authorites certificates can be issued from,String
 12,acm:CertificateTransparencyLogging,https://docs.aws.amazon.com/acm/latest/userguide/security-iam.html,Filters access by certificateTransparencyLogging option in the request. Default 'ENABLED' if no key is present in the request,String
-13,acm:DomainNames,https://docs.aws.amazon.com/acm/latest/userguide/security-iam.html,Filters access by domainNames in the request. This key can be used to restrict which domains can be in certificate requests,String
+13,acm:DomainNames,https://docs.aws.amazon.com/acm/latest/userguide/security-iam.html,Filters access by domainNames in the request. This key can be used to restrict which domains can be in certificate requests,ArrayOfString
 14,acm:KeyAlgorithm,https://docs.aws.amazon.com/acm/latest/userguide/security-iam.html,Filters access by keyAlgorithm in the request,String
 15,acm:ValidationMethod,https://docs.aws.amazon.com/acm/latest/userguide/security-iam.html,Filters access by validationMethod in the request. Default 'EMAIL' if no key is present in the request,String
 16,amplifyuibuilder:CodegenJobResourceAppId,https://docs.aws.amazon.com/amplify/latest/APIReference/API_App.html,Filters access by the app ID,String
