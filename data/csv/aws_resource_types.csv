@@ -185,9 +185,9 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 184,62,model,https://docs.aws.amazon.com/deepcomposer/latest/devguide/get-started-custom-model.html,arn:${Partition}:deepcomposer:${Region}:${Account}:model/${ModelId}
 185,62,composition,https://docs.aws.amazon.com/deepcomposer/latest/devguide/get-started-learn-from-pre-trained-models.html,arn:${Partition}:deepcomposer:${Region}:${Account}:composition/${CompositionId}
 186,62,audio,https://docs.aws.amazon.com/deepcomposer/latest/devguide/get-started-learn-from-pre-trained-models.html,arn:${Partition}:deepcomposer:${Region}:${Account}:audio/${AudioId}
-187,63,device,,arn:${Partition}:deeplens:${Region}:${Account}:device/${DeviceName}
-188,63,project,,arn:${Partition}:deeplens:${Region}:${Account}:project/${ProjectName}
-189,63,model,,arn:${Partition}:deeplens:${Region}:${Account}:model/${ModelName}
+187,63,device,"",arn:${Partition}:deeplens:${Region}:${Account}:device/${DeviceName}
+188,63,project,"",arn:${Partition}:deeplens:${Region}:${Account}:project/${ProjectName}
+189,63,model,"",arn:${Partition}:deeplens:${Region}:${Account}:model/${ModelName}
 190,64,car,https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-choose-race-type.html,arn:${Partition}:deepracer:${Region}:${Account}:car/${ResourceId}
 191,64,evaluation_job,https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-get-started-test-in-simulator.html,arn:${Partition}:deepracer:${Region}:${Account}:evaluation_job/${ResourceId}
 192,64,leaderboard,https://docs.aws.amazon.com/deepracer/latest/developerguide/deepracer-submit-model-to-leaderboard.html,arn:${Partition}:deepracer:${Region}::leaderboard/${ResourceId}
@@ -537,8 +537,8 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 536,152,connect-peer,https://docs.aws.amazon.com/vpc/latest/tgw/what-is-network-manager.html,arn:${Partition}:networkmanager::${Account}:connect-peer/${ResourceId}
 537,152,peering,https://docs.aws.amazon.com/vpc/latest/tgw/what-is-network-manager.html,arn:${Partition}:networkmanager::${Account}:peering/${ResourceId}
 538,153,stack,https://docs.aws.amazon.com/opsworks/latest/userguide/workingstacks.html,arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/
-539,154,server,,arn:${Partition}:opsworks-cm::${Account}:server/${ServerName}/${UniqueId}
-540,154,backup,,arn:${Partition}:opsworks-cm::${Account}:backup/${ServerName}-{Date-and-Time-Stamp-of-Backup}
+539,154,server,"",arn:${Partition}:opsworks-cm::${Account}:server/${ServerName}/${UniqueId}
+540,154,backup,"",arn:${Partition}:opsworks-cm::${Account}:backup/${ServerName}-{Date-and-Time-Stamp-of-Backup}
 541,155,account,https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_arn-formats.html,arn:${Partition}:organizations::${Account}:account/o-${OrganizationId}/${AccountId}
 542,155,handshake,https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_arn-formats.html,arn:${Partition}:organizations::${Account}:handshake/o-${OrganizationId}/${HandshakeType}/h-${HandshakeId}
 543,155,organization,https://docs.aws.amazon.com/organizations/latest/userguide/orgs_reference_arn-formats.html,arn:${Partition}:organizations::${Account}:organization/o-${OrganizationId}
@@ -729,7 +729,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 728,213,networkprofile,https://docs.aws.amazon.com/a4b/latest/APIReference/API_NetworkProfile.html,arn:${Partition}:a4b:${Region}:${Account}:network-profile/${ResourceId}
 729,213,gateway,https://docs.aws.amazon.com/a4b/latest/APIReference/API_Gateway.html,arn:${Partition}:a4b:${Region}:${Account}:gateway/${ResourceId}
 730,213,gatewaygroup,https://docs.aws.amazon.com/a4b/latest/APIReference/API_GatewayGroup.html,arn:${Partition}:a4b:${Region}:${Account}:gateway-group/${ResourceId}
-731,214,execute-api-general,,arn:${Partition}:execute-api:${Region}:${Account}:${ApiId}/${Stage}/${Method}/${ApiSpecificResourcePath}
+731,214,execute-api-general,"",arn:${Partition}:execute-api:${Region}:${Account}:${ApiId}/${Stage}/${Method}/${ApiSpecificResourcePath}
 732,215,Account,https://docs.aws.amazon.com/apigateway/latest/developerguide/security_iam_service-with-iam.html,arn:${Partition}:apigateway:${Region}::/account
 733,215,ApiKey,https://docs.aws.amazon.com/apigateway/latest/api/API_ApiKey.html,arn:${Partition}:apigateway:${Region}::/apikeys/${ApiKeyId}
 734,215,ApiKeys,https://docs.aws.amazon.com/apigateway/latest/api/API_ApiKey.html,arn:${Partition}:apigateway:${Region}::/apikeys
@@ -1093,7 +1093,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 1092,268,task-set,https://docs.aws.amazon.com/AmazonECS/latest/developerguide/deployment-type-external.html,arn:${Partition}:ecs:${Region}:${Account}:task-set/${ClusterName}/${ServiceName}/${TaskSetId}
 1093,269,file-system,https://docs.aws.amazon.com/efs/latest/ug/access-control-overview.html#access-control-resources,arn:${Partition}:elasticfilesystem:${Region}:${Account}:file-system/${FileSystemId}
 1094,269,access-point,https://docs.aws.amazon.com/efs/latest/ug/access-control-overview.html#access-control-resources,arn:${Partition}:elasticfilesystem:${Region}:${Account}:access-point/${AccessPointId}
-1095,270,accelerator,,arn:${Partition}:elastic-inference:${Region}:${Account}:elastic-inference-accelerator/${AcceleratorId}
+1095,270,accelerator,"",arn:${Partition}:elastic-inference:${Region}:${Account}:elastic-inference-accelerator/${AcceleratorId}
 1096,271,cluster,https://docs.aws.amazon.com/eks/latest/userguide/clusters.html,arn:${Partition}:eks:${Region}:${Account}:cluster/${ClusterName}
 1097,271,nodegroup,https://docs.aws.amazon.com/eks/latest/userguide/managed-node-groups.html,arn:${Partition}:eks:${Region}:${Account}:nodegroup/${ClusterName}/${NodegroupName}/${UUID}
 1098,271,addon,https://docs.aws.amazon.com/eks/latest/userguide/eks-add-ons.html,arn:${Partition}:eks:${Region}:${Account}:addon/${ClusterName}/${AddonName}/${UUID}
