@@ -1,5 +1,26 @@
 [
   {
+    "dateOfChange": "2023-09-07",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudWatch Internet Monitor": [
+        "internetmonitor:GetQueryResults",
+        "internetmonitor:GetQueryStatus",
+        "internetmonitor:StartQuery",
+        "internetmonitor:StopQuery"
+      ],
+      "Amazon Simple Email Service v2": [
+        "ses:CancelExportJob",
+        "ses:CreateExportJob",
+        "ses:GetExportJob",
+        "ses:GetMessageInsights",
+        "ses:ListExportJobs"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-09-01",
     "addedServices": [],
     "removedServices": [],
