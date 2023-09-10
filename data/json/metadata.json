@@ -5384,10 +5384,8 @@
       "resourceTypes": [
         "DeviceIdentity"
       ],
-      "conditionKeysCount": 1,
-      "conditionKeys": [
-        "consoleapp:DeviceIdentityArn"
-      ]
+      "conditionKeysCount": 0,
+      "conditionKeys": []
     },
     {
       "name": "AWS Consolidated Billing",
@@ -19691,7 +19689,7 @@
         "GetModelPackageGroupPolicy",
         "GetRecord",
         "GetSagemakerServicecatalogPortfolioStatus",
-        "GetScalingPolicyConfigurationRecommendation",
+        "GetScalingConfigurationRecommendation",
         "GetSearchSuggestions",
         "ImportHubContent",
         "InvokeEndpoint",

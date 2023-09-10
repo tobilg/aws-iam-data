@@ -1164,7 +1164,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 1163,284,fleet,https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-console-fleets.html,arn:${Partition}:gamelift:${Region}:${Account}:fleet/${FleetId}
 1164,284,gameServerGroup,https://docs.aws.amazon.com/gamelift/latest/fleetiqguide/gsg-integrate-gameservergroup.html,arn:${Partition}:gamelift:${Region}:${Account}:gameservergroup/${GameServerGroupName}
 1165,284,gameSessionQueue,https://docs.aws.amazon.com/gamelift/latest/developerguide/queues-console.html,arn:${Partition}:gamelift:${Region}:${Account}:gamesessionqueue/${GameSessionQueueName}
-1166,284,location,https://docs.aws.amazon.com/gamelift/latest/developerguide/locations-console.html,arn:${Partition}:gamelift:${Region}:${Account}:location/${LocationId}
+1166,284,location,https://docs.aws.amazon.com/gamelift/latest/developerguide/fleets-creating-anywhere.html#fleet-anywhere-location,arn:${Partition}:gamelift:${Region}:${Account}:location/${LocationId}
 1167,284,matchmakingConfiguration,https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-create-configuration.html,arn:${Partition}:gamelift:${Region}:${Account}:matchmakingconfiguration/${MatchmakingConfigurationName}
 1168,284,matchmakingRuleSet,https://docs.aws.amazon.com/gamelift/latest/flexmatchguide/match-rulesets.html,arn:${Partition}:gamelift:${Region}:${Account}:matchmakingruleset/${MatchmakingRuleSetName}
 1169,284,script,https://docs.aws.amazon.com/gamelift/latest/developerguide/gamelift-console-scripts.html,arn:${Partition}:gamelift:${Region}:${Account}:script/${ScriptId}
