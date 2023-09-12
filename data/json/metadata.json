@@ -13821,12 +13821,13 @@
         "layer",
         "layerVersion"
       ],
-      "conditionKeysCount": 12,
+      "conditionKeysCount": 13,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "lambda:CodeSigningConfigArn",
+        "lambda:EventSourceToken",
         "lambda:FunctionArn",
         "lambda:FunctionUrlAuthType",
         "lambda:Layer",

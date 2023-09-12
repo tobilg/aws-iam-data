@@ -1548,7 +1548,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 1547,359,shared-model-event,https://docs.aws.amazon.com/sagemaker/latest/dg/canvas-collaborate-permissions.html,arn:${Partition}:sagemaker:${Region}:${Account}:shared-model-event/${EventId}
 1548,359,sagemaker-catalog,https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ResourceCatalog.html,arn:${Partition}:sagemaker:${Region}:${Account}:sagemaker-catalog/${ResourceCatalogName}
 1549,361,EarthObservationJob,https://docs.aws.amazon.com/sagemaker/latest/dg/geospatial-eoj.html,arn:${Partition}:sagemaker-geospatial:${Region}:${Account}:earth-observation-job/${JobID}
-1550,361,RasterDataCollection,https://docs.aws.amazon.com/sagemaker/latest/dg/geospatial-rdc.html,arn:${Partition}:sagemaker-geospatial:${Region}:${Account}:raster-data-collection/${CollectionID}
+1550,361,RasterDataCollection,https://docs.aws.amazon.com/sagemaker/latest/dg/geospatial-data-collections.html,arn:${Partition}:sagemaker-geospatial:${Region}:${Account}:raster-data-collection/${CollectionID}
 1551,361,VectorEnrichmentJob,https://docs.aws.amazon.com/sagemaker/latest/dg/geospatial-vej.html,arn:${Partition}:sagemaker-geospatial:${Region}:${Account}:vector-enrichment-job/${JobID}
 1552,362,data-lake,https://docs.aws.amazon.com/security-lake/latest/APIReference/API_DataLakeResource.html,arn:${Partition}:securitylake:${Region}:${Account}:data-lake/default
 1553,362,subscriber,https://docs.aws.amazon.com/security-lake/latest/APIReference/API_SubscriberResource.html,arn:${Partition}:securitylake:${Region}:${Account}:subscriber/${SubscriberId}
