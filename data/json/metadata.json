@@ -4872,7 +4872,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 209,
+      "actionsCount": 218,
       "actions": [
         "ActivateEvaluationForm",
         "AssociateApprovedOrigin",
@@ -4909,6 +4909,8 @@
         "CreateUseCase",
         "CreateUser",
         "CreateUserHierarchyGroup",
+        "CreateView",
+        "CreateViewVersion",
         "CreateVocabulary",
         "DeactivateEvaluationForm",
         "DeleteContactEvaluation",
@@ -4929,6 +4931,8 @@
         "DeleteUseCase",
         "DeleteUser",
         "DeleteUserHierarchyGroup",
+        "DeleteView",
+        "DeleteViewVersion",
         "DeleteVocabulary",
         "DescribeAgentStatus",
         "DescribeContact",
@@ -4952,6 +4956,7 @@
         "DescribeUser",
         "DescribeUserHierarchyGroup",
         "DescribeUserHierarchyStructure",
+        "DescribeView",
         "DescribeVocabulary",
         "DisassociateApprovedOrigin",
         "DisassociateBot",
@@ -5012,6 +5017,8 @@
         "ListUseCases",
         "ListUserHierarchyGroups",
         "ListUsers",
+        "ListViewVersions",
+        "ListViews",
         "MonitorContact",
         "PutUserStatus",
         "ReleasePhoneNumber",
@@ -5082,9 +5089,11 @@
         "UpdateUserIdentityInfo",
         "UpdateUserPhoneConfig",
         "UpdateUserRoutingProfile",
-        "UpdateUserSecurityProfiles"
+        "UpdateUserSecurityProfiles",
+        "UpdateViewContent",
+        "UpdateViewMetadata"
       ],
-      "resourceTypesCount": 29,
+      "resourceTypesCount": 34,
       "resourceTypes": [
         "instance",
         "contact",
@@ -5114,7 +5123,12 @@
         "rule",
         "evaluation-form",
         "contact-evaluation",
-        "prompt"
+        "prompt",
+        "customer-managed-view",
+        "aws-managed-view",
+        "qualified-customer-managed-view",
+        "qualified-aws-managed-view",
+        "customer-managed-view-version"
       ],
       "conditionKeysCount": 8,
       "conditionKeys": [
@@ -15487,8 +15501,9 @@
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],
-      "conditionKeysCount": 1,
+      "conditionKeysCount": 2,
       "conditionKeys": [
+        "ec2:SourceInstanceARN",
         "ssm:SourceInstanceARN"
       ]
     },
@@ -20727,8 +20742,9 @@
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],
-      "conditionKeysCount": 1,
+      "conditionKeysCount": 2,
       "conditionKeys": [
+        "ec2:SourceInstanceARN",
         "ssm:SourceInstanceARN"
       ]
     },

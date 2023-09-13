@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,8409
-Actions by type,Read Actions,4102
-Actions by type,List Actions,2416
+Actions by type,Write Actions,8415
+Actions by type,Read Actions,4103
+Actions by type,List Actions,2418
 Actions by type,Permissions Actions,238
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
 Longest action names,aws-marketplace-management:GetAdditionalSellerNotificationRecipients,68
@@ -36,7 +36,7 @@ Longest service prefixes,application-cost-profiler,25
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},126
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},81
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},80
-Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},78
+Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},79
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},71
 Most referenced resource ARNs,stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/,66
 Most referenced resource ARNs,index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId},64
@@ -57,8 +57,8 @@ Services with most actions,Amazon EC2,609
 Services with most actions,Amazon SageMaker,330
 Services with most actions,Amazon Chime,303
 Services with most actions,AWS IoT,266
+Services with most actions,Amazon Connect,218
 Services with most actions,AWS Glue,211
-Services with most actions,Amazon Connect,209
 Services with most actions,Amazon QuickSight,187
 Services with most actions,AWS Identity and Access Management (IAM),171
 Services with most actions,Amazon Lightsail,159
@@ -93,7 +93,7 @@ Shortest service prefixes,ds,2
 Shortest service prefixes,s3,2
 Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
-Summary,Total number of distinct resource ARNS,1559
+Summary,Total number of distinct resource ARNS,1564
 Summary,Total number of distinct condition keys,807
 Summary,Total number of services,386
 Summary,Average number of actions per service,39
