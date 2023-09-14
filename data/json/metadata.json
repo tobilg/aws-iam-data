@@ -8095,7 +8095,7 @@
       "name": "AWS Elastic Disaster Recovery",
       "servicePrefix": "drs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticdisasterrecovery.html",
-      "actionsCount": 87,
+      "actionsCount": 90,
       "actions": [
         "AssociateFailbackClientToRecoveryInstanceForDrs",
         "AssociateSourceNetworkStack",
@@ -8109,6 +8109,7 @@
         "CreateSourceNetwork",
         "CreateSourceServerForDrs",
         "DeleteJob",
+        "DeleteLaunchAction",
         "DeleteLaunchConfigurationTemplate",
         "DeleteRecoveryInstance",
         "DeleteReplicationConfigurationTemplate",
@@ -8143,6 +8144,7 @@
         "InitializeService",
         "IssueAgentCertificateForDrs",
         "ListExtensibleSourceServers",
+        "ListLaunchActions",
         "ListStagingAccounts",
         "ListTagsForResource",
         "NotifyAgentAuthenticationForDrs",
@@ -8152,6 +8154,7 @@
         "NotifyConsistencyAttainedForDrs",
         "NotifyReplicationServerAuthenticationForDrs",
         "NotifyVolumeEventForDrs",
+        "PutLaunchAction",
         "RetryDataReplication",
         "ReverseReplication",
         "SendAgentLogsForDrs",
@@ -8858,11 +8861,14 @@
         "JobTemplate",
         "CertificateAssociation"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 6,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "mediaconvert:HttpInputsAllowed",
+        "mediaconvert:HttpsInputsAllowed",
+        "mediaconvert:S3InputsAllowed"
       ]
     },
     {
