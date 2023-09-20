@@ -1,5 +1,5 @@
 {
-  "serviceCount": 386,
+  "serviceCount": 385,
   "services": [
     {
       "name": "AWS Account Management",
@@ -15730,43 +15730,6 @@
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
-    },
-    {
-      "name": "AWS Mobile Hub",
-      "servicePrefix": "mobilehub",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmobilehub.html",
-      "actionsCount": 23,
-      "actions": [
-        "CreateProject",
-        "CreateServiceRole",
-        "DeleteProject",
-        "DeleteProjectSnapshot",
-        "DeployToStage",
-        "DescribeBundle",
-        "ExportBundle",
-        "ExportProject",
-        "GenerateProjectParameters",
-        "GetProject",
-        "GetProjectSnapshot",
-        "ImportProject",
-        "InstallBundle",
-        "ListAvailableConnectors",
-        "ListAvailableFeatures",
-        "ListAvailableRegions",
-        "ListBundles",
-        "ListProjectSnapshots",
-        "ListProjects",
-        "SynchronizeProject",
-        "UpdateProject",
-        "ValidateProject",
-        "VerifyServiceRole"
-      ],
-      "resourceTypesCount": 1,
-      "resourceTypes": [
-        "project"
-      ],
       "conditionKeysCount": 0,
       "conditionKeys": []
     },
