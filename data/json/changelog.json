@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2023-09-23",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Amplify UI Builder": [
+        "amplifyuibuilder:ExchangeCodeForToken",
+        "amplifyuibuilder:RefreshToken"
+      ],
+      "AWS Cloud Map": [
+        "servicediscovery:DiscoverInstancesRevision"
+      ],
+      "Amazon EC2": [
+        "ec2:DisableImageBlockPublicAccess",
+        "ec2:EnableImageBlockPublicAccess",
+        "ec2:GetImageBlockPublicAccessState"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-09-20",
     "addedServices": [],
     "removedServices": [
