@@ -8078,13 +8078,14 @@
         "capacity-provider",
         "task-set"
       ],
-      "conditionKeysCount": 15,
+      "conditionKeysCount": 16,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "ecs:CreateAction",
         "ecs:ResourceTag/${TagKey}",
+        "ecs:account-setting",
         "ecs:capacity-provider",
         "ecs:cluster",
         "ecs:container-instances",
@@ -14484,19 +14485,21 @@
       "name": "Amazon Lookout for Equipment",
       "servicePrefix": "lookoutequipment",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlookoutforequipment.html",
-      "actionsCount": 41,
+      "actionsCount": 49,
       "actions": [
         "CreateDataset",
         "CreateInferenceScheduler",
         "CreateLabel",
         "CreateLabelGroup",
         "CreateModel",
+        "CreateRetrainingScheduler",
         "DeleteDataset",
         "DeleteInferenceScheduler",
         "DeleteLabel",
         "DeleteLabelGroup",
         "DeleteModel",
         "DeleteResourcePolicy",
+        "DeleteRetrainingScheduler",
         "DescribeDataIngestionJob",
         "DescribeDataset",
         "DescribeInferenceScheduler",
@@ -14504,6 +14507,7 @@
         "DescribeModel",
         "DescribeModelVersion",
         "DescribeResourcePolicy",
+        "DescribeRetrainingScheduler",
         "Describelabel",
         "ImportDataset",
         "ImportModelVersion",
@@ -14516,17 +14520,22 @@
         "ListLabels",
         "ListModelVersions",
         "ListModels",
+        "ListRetrainingSchedulers",
         "ListSensorStatistics",
         "ListTagsForResource",
         "PutResourcePolicy",
         "StartDataIngestionJob",
         "StartInferenceScheduler",
+        "StartRetrainingScheduler",
         "StopInferenceScheduler",
+        "StopRetrainingScheduler",
         "TagResource",
         "UntagResource",
         "UpdateActiveModelVersion",
         "UpdateInferenceScheduler",
-        "UpdateLabelGroup"
+        "UpdateLabelGroup",
+        "UpdateModel",
+        "UpdateRetrainingScheduler"
       ],
       "resourceTypesCount": 5,
       "resourceTypes": [
@@ -14536,11 +14545,12 @@
         "inference-scheduler",
         "label-group"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 4,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "lookoutequipment:IsImportingData"
       ]
     },
     {
