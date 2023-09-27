@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,8419
-Actions by type,Read Actions,4099
-Actions by type,List Actions,2413
+Actions by type,Write Actions,8432
+Actions by type,Read Actions,4106
+Actions by type,List Actions,2418
 Actions by type,Permissions Actions,238
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
 Longest action names,aws-marketplace-management:GetAdditionalSellerNotificationRecipients,68
@@ -17,12 +17,12 @@ Longest condition key names,payment-cryptography:CertificateAuthorityPublicKeyId
 Longest condition key names,route53:ChangeResourceRecordSetsNormalizedRecordNames,53
 Longest condition key names,vpc-lattice-svcs:RequestQueryString/${QueryStringKey},53
 Longest condition key names,sagemaker:CustomerMetadataProperties/${MetadataKey},51
+Longest condition key names,bedrock:ThirdPartyKnowledgeBaseCredentialsSecretArn,51
 Longest condition key names,s3:x-amz-server-side-encryption-customer-algorithm,50
 Longest condition key names,route53-recovery-cluster:AllowSafetyRulesOverrides,50
 Longest condition key names,amplifyuibuilder:CodegenJobResourceEnvironmentName,50
 Longest condition key names,amplifyuibuilder:ComponentResourceEnvironmentName,49
 Longest condition key names,codestar-connections:ProviderPermissionsRequired,48
-Longest condition key names,codestar-notifications:NotificationsForResource,47
 Longest service prefixes,license-manager-linux-subscriptions,35
 Longest service prefixes,license-manager-user-subscriptions,34
 Longest service prefixes,route53-recovery-control-config,31
@@ -33,7 +33,7 @@ Longest service prefixes,aws-marketplace-management,26
 Longest service prefixes,codedeploy-commands-secure,26
 Longest service prefixes,route53-recovery-readiness,26
 Longest service prefixes,application-cost-profiler,25
-Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},126
+Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},130
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},81
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},80
 Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},79
@@ -93,8 +93,8 @@ Shortest service prefixes,ds,2
 Shortest service prefixes,s3,2
 Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
-Summary,Total number of distinct resource ARNS,1563
-Summary,Total number of distinct condition keys,812
+Summary,Total number of distinct resource ARNS,1564
+Summary,Total number of distinct condition keys,813
 Summary,Total number of services,385
 Summary,Average number of actions per service,39
 Summary,Median number of actions per service,28

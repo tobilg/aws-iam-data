@@ -1,5 +1,42 @@
 [
   {
+    "dateOfChange": "2023-09-27",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:AssociateAgentKnowledgeBase",
+        "bedrock:AssociateThirdPartyKnowledgeBase",
+        "bedrock:CreateDataSource",
+        "bedrock:CreateKnowledgeBase",
+        "bedrock:DeleteDataSource",
+        "bedrock:DeleteKnowledgeBase",
+        "bedrock:DisassociateAgentKnowledgeBase",
+        "bedrock:GetAgentKnowledgeBase",
+        "bedrock:GetDataSource",
+        "bedrock:GetFoundationModel",
+        "bedrock:GetIngestionJob",
+        "bedrock:GetKnowledgeBase",
+        "bedrock:ListAgentKnowledgeBases",
+        "bedrock:ListDataSources",
+        "bedrock:ListIngestionJobs",
+        "bedrock:ListKnowledgeBases",
+        "bedrock:QueryKnowledgeBase",
+        "bedrock:StartIngestionJob",
+        "bedrock:UpdateAgentKnowledgeBase",
+        "bedrock:UpdateDataSource",
+        "bedrock:UpdateKnowledgeBase"
+      ],
+      "Amazon WorkMail": [
+        "workmail:DescribeEntity",
+        "workmail:ListGroupsForEntity",
+        "workmail:UpdateGroup",
+        "workmail:UpdateUser"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-09-26",
     "addedServices": [],
     "removedServices": [],
