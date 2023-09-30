@@ -1,5 +1,20 @@
 [
   {
+    "dateOfChange": "2023-09-30",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Application Migration Service": [
+        "mgn:CreateConnector",
+        "mgn:DeleteConnector",
+        "mgn:ListConnectors",
+        "mgn:UpdateConnector",
+        "mgn:UpdateSourceServer"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-09-28",
     "addedServices": [],
     "removedServices": [
