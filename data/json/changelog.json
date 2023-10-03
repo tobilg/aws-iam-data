@@ -1,5 +1,37 @@
 [
   {
+    "dateOfChange": "2023-10-03",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS App Runner": [
+        "apprunner:ListServicesForAutoScalingConfiguration",
+        "apprunner:UpdateDefaultAutoScalingConfiguration"
+      ],
+      "Amazon Bedrock": [
+        "bedrock:CreateFoundationModelAgreement",
+        "bedrock:CreateProvisionedModelThroughput",
+        "bedrock:DeleteFoundationModelAgreement",
+        "bedrock:DeleteModelInvocationLoggingConfiguration",
+        "bedrock:DeleteProvisionedModelThroughput",
+        "bedrock:GetFoundationModelAvailability",
+        "bedrock:GetModelInvocationLoggingConfiguration",
+        "bedrock:GetProvisionedModelThroughput",
+        "bedrock:GetUseCaseForModelAccess",
+        "bedrock:ListFoundationModelAgreementOffers",
+        "bedrock:ListProvisionedModelThroughputs",
+        "bedrock:PutFoundationModelEntitlement",
+        "bedrock:PutModelInvocationLoggingConfiguration",
+        "bedrock:PutUseCaseForModelAccess",
+        "bedrock:UpdateProvisionedModelThroughput"
+      ],
+      "Amazon RDS": [
+        "rds:SwitchoverGlobalCluster"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-09-30",
     "addedServices": [],
     "removedServices": [],
