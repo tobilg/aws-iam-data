@@ -3861,9 +3861,10 @@
         "TagResource",
         "UntagResource"
       ],
-      "resourceTypesCount": 1,
+      "resourceTypesCount": 2,
       "resourceTypes": [
-        "connections"
+        "connections",
+        "project"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -23080,7 +23081,7 @@
       "name": "AWS Well-Architected Tool",
       "servicePrefix": "wellarchitected",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswell-architectedtool.html",
-      "actionsCount": 56,
+      "actionsCount": 70,
       "actions": [
         "AssociateLenses",
         "AssociateProfiles",
@@ -23089,12 +23090,16 @@
         "CreateMilestone",
         "CreateProfile",
         "CreateProfileShare",
+        "CreateReviewTemplate",
+        "CreateTemplateShare",
         "CreateWorkload",
         "CreateWorkloadShare",
         "DeleteLens",
         "DeleteLensShare",
         "DeleteProfile",
         "DeleteProfileShare",
+        "DeleteReviewTemplate",
+        "DeleteTemplateShare",
         "DeleteWorkload",
         "DeleteWorkloadShare",
         "DisassociateLenses",
@@ -23109,6 +23114,9 @@
         "GetMilestone",
         "GetProfile",
         "GetProfileTemplate",
+        "GetReviewTemplate",
+        "GetReviewTemplateAnswer",
+        "GetReviewTemplateLensReview",
         "GetWorkload",
         "ImportLens",
         "ListAnswers",
@@ -23123,8 +23131,11 @@
         "ListProfileNotifications",
         "ListProfileShares",
         "ListProfiles",
+        "ListReviewTemplateAnswers",
+        "ListReviewTemplates",
         "ListShareInvitations",
         "ListTagsForResource",
+        "ListTemplateShares",
         "ListWorkloadShares",
         "ListWorkloads",
         "TagResource",
@@ -23133,17 +23144,22 @@
         "UpdateGlobalSettings",
         "UpdateLensReview",
         "UpdateProfile",
+        "UpdateReviewTemplate",
+        "UpdateReviewTemplateAnswer",
+        "UpdateReviewTemplateLensReview",
         "UpdateShareInvitation",
         "UpdateWorkload",
         "UpdateWorkloadShare",
         "UpgradeLensReview",
-        "UpgradeProfileVersion"
+        "UpgradeProfileVersion",
+        "UpgradeReviewTemplateLensReview"
       ],
-      "resourceTypesCount": 3,
+      "resourceTypesCount": 4,
       "resourceTypes": [
         "workload",
         "lens",
-        "profile"
+        "profile",
+        "review-template"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
