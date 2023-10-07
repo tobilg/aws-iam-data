@@ -1,5 +1,31 @@
 [
   {
+    "dateOfChange": "2023-10-07",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Database Migration Service": [
+        "dms:DescribeEngineVersions"
+      ],
+      "AWS Directory Service": [
+        "ds:DisableRoleAccess",
+        "ds:EnableRoleAccess",
+        "ds:UpdateDirectory"
+      ],
+      "Amazon WorkSpaces": [
+        "workspaces:AssociateWorkspaceApplication",
+        "workspaces:DeployWorkspaceApplications",
+        "workspaces:DescribeApplicationAssociations",
+        "workspaces:DescribeApplications",
+        "workspaces:DescribeBundleAssociations",
+        "workspaces:DescribeImageAssociations",
+        "workspaces:DescribeWorkspaceAssociations",
+        "workspaces:DisassociateWorkspaceApplication"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-10-05",
     "addedServices": [],
     "removedServices": [],

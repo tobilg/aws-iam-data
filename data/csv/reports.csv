@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,8507
-Actions by type,Read Actions,4131
-Actions by type,List Actions,2436
+Actions by type,Write Actions,8512
+Actions by type,Read Actions,4133
+Actions by type,List Actions,2441
 Actions by type,Permissions Actions,241
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
 Longest action names,aws-marketplace-management:GetAdditionalSellerNotificationRecipients,68
@@ -38,9 +38,9 @@ Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},80
 Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},79
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},71
+Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},67
 Most referenced resource ARNs,stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/,66
 Most referenced resource ARNs,index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId},64
-Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},64
 Most referenced resource ARNs,hub - arn:${Partition}:securityhub:${Region}:${Account}:hub/default,61
 Most referenced resource ARNs,app-instance-user - arn:${Partition}:chime:${Region}:${AccountId}:app-instance/${AppInstanceId}/user/${AppInstanceUserId},55
 Services with least actions,AWS Elemental Support Content,1
@@ -93,7 +93,7 @@ Shortest service prefixes,ds,2
 Shortest service prefixes,s3,2
 Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
-Summary,Total number of distinct resource ARNS,1567
+Summary,Total number of distinct resource ARNS,1568
 Summary,Total number of distinct condition keys,814
 Summary,Total number of services,384
 Summary,Average number of actions per service,40
