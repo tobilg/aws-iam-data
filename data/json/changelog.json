@@ -1,5 +1,38 @@
 [
   {
+    "dateOfChange": "2023-10-16",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Elemental MediaLive": [
+        "medialive:StartInputDevice",
+        "medialive:StopInputDevice"
+      ],
+      "AWS IoT FleetWise": [
+        "iotfleetwise:GetEncryptionConfiguration",
+        "iotfleetwise:PutEncryptionConfiguration"
+      ],
+      "AWS Support": [
+        "support:DescribeCommunication"
+      ],
+      "Amazon Textract": [
+        "textract:CreateAdapter",
+        "textract:CreateAdapterVersion",
+        "textract:DeleteAdapter",
+        "textract:DeleteAdapterVersion",
+        "textract:GetAdapter",
+        "textract:GetAdapterVersion",
+        "textract:ListAdapterVersions",
+        "textract:ListAdapters",
+        "textract:ListTagsForResource",
+        "textract:TagResource",
+        "textract:UntagResource",
+        "textract:UpdateAdapter"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-10-07",
     "addedServices": [],
     "removedServices": [],
