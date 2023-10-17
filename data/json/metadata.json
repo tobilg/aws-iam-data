@@ -5470,7 +5470,7 @@
       "name": "AWS Control Tower",
       "servicePrefix": "controltower",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscontroltower.html",
-      "actionsCount": 42,
+      "actionsCount": 43,
       "actions": [
         "CreateManagedAccount",
         "DeleteLandingZone",
@@ -5492,6 +5492,7 @@
         "GetAccountInfo",
         "GetAvailableUpdates",
         "GetControlOperation",
+        "GetEnabledControl",
         "GetGuardrailComplianceStatus",
         "GetHomeRegion",
         "GetLandingZoneDriftStatus",
@@ -5515,8 +5516,10 @@
         "SetupLandingZone",
         "UpdateAccountFactoryConfig"
       ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "EnabledControl"
+      ],
       "conditionKeysCount": 0,
       "conditionKeys": []
     },
@@ -9437,29 +9440,42 @@
       "name": "AWS Entity Resolution",
       "servicePrefix": "entityresolution",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsentityresolution.html",
-      "actionsCount": 16,
+      "actionsCount": 27,
       "actions": [
+        "CreateIdMappingWorkflow",
         "CreateMatchingWorkflow",
         "CreateSchemaMapping",
+        "DeleteIdMappingWorkflow",
         "DeleteMatchingWorkflow",
         "DeleteSchemaMapping",
+        "GetIdMappingJob",
+        "GetIdMappingWorkflow",
         "GetMatchId",
         "GetMatchingJob",
         "GetMatchingWorkflow",
+        "GetProviderService",
         "GetSchemaMapping",
+        "ListIdMappingJobs",
+        "ListIdMappingWorkflows",
         "ListMatchingJobs",
         "ListMatchingWorkflows",
+        "ListProviderServices",
         "ListSchemaMappings",
         "ListTagsForResource",
+        "StartIdMappingJob",
         "StartMatchingJob",
         "TagResource",
         "UntagResource",
-        "UpdateMatchingWorkflow"
+        "UpdateIdMappingWorkflow",
+        "UpdateMatchingWorkflow",
+        "UpdateSchemaMapping"
       ],
-      "resourceTypesCount": 2,
+      "resourceTypesCount": 4,
       "resourceTypes": [
         "MatchingWorkflow",
-        "SchemaMapping"
+        "SchemaMapping",
+        "IdMappingWorkflow",
+        "ProviderService"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -10123,7 +10139,7 @@
       "name": "Amazon FSx",
       "servicePrefix": "fsx",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfsx.html",
-      "actionsCount": 46,
+      "actionsCount": 47,
       "actions": [
         "AssociateFileGateway",
         "AssociateFileSystemAliases",
@@ -10163,6 +10179,7 @@
         "ManageBackupPrincipalAssociations",
         "ReleaseFileSystemNfsV3Locks",
         "RestoreVolumeFromSnapshot",
+        "StartMisconfiguredStateRecovery",
         "TagResource",
         "UntagResource",
         "UpdateDataRepositoryAssociation",
@@ -15031,11 +15048,13 @@
       "name": "Amazon Managed Blockchain Query",
       "servicePrefix": "managedblockchain-query",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedblockchainquery.html",
-      "actionsCount": 6,
+      "actionsCount": 8,
       "actions": [
         "BatchGetTokenBalance",
+        "GetAssetContract",
         "GetTokenBalance",
         "GetTransaction",
+        "ListAssetContracts",
         "ListTokenBalances",
         "ListTransactionEvents",
         "ListTransactions"

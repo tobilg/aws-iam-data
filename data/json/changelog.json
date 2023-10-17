@@ -1,5 +1,36 @@
 [
   {
+    "dateOfChange": "2023-10-17",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Control Tower": [
+        "controltower:GetEnabledControl"
+      ],
+      "AWS Entity Resolution": [
+        "entityresolution:CreateIdMappingWorkflow",
+        "entityresolution:DeleteIdMappingWorkflow",
+        "entityresolution:GetIdMappingJob",
+        "entityresolution:GetIdMappingWorkflow",
+        "entityresolution:GetProviderService",
+        "entityresolution:ListIdMappingJobs",
+        "entityresolution:ListIdMappingWorkflows",
+        "entityresolution:ListProviderServices",
+        "entityresolution:StartIdMappingJob",
+        "entityresolution:UpdateIdMappingWorkflow",
+        "entityresolution:UpdateSchemaMapping"
+      ],
+      "Amazon FSx": [
+        "fsx:StartMisconfiguredStateRecovery"
+      ],
+      "Amazon Managed Blockchain Query": [
+        "managedblockchain-query:GetAssetContract",
+        "managedblockchain-query:ListAssetContracts"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-10-16",
     "addedServices": [],
     "removedServices": [],
