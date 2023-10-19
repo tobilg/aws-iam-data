@@ -1,5 +1,57 @@
 [
   {
+    "dateOfChange": "2023-10-19",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon AppIntegrations": [
+        "app-integrations:CreateApplication",
+        "app-integrations:GetApplication",
+        "app-integrations:ListApplications",
+        "app-integrations:UpdateApplication"
+      ],
+      "AWS Application Discovery Service": [
+        "discovery:BatchDeleteAgents",
+        "discovery:DescribeBatchDeleteConfigurationTask",
+        "discovery:StartBatchDeleteConfigurationTask"
+      ],
+      "Amazon Chime": [
+        "chime:CreateMediaPipelineKinesisVideoStreamPool",
+        "chime:CreateMediaStreamPipeline",
+        "chime:DeleteMediaPipelineKinesisVideoStreamPool",
+        "chime:GetMediaPipelineKinesisVideoStreamPool",
+        "chime:ListMediaPipelineKinesisVideoStreamPools",
+        "chime:UpdateMediaPipelineKinesisVideoStreamPool"
+      ],
+      "Amazon CodeWhisperer": [
+        "codewhisperer:AssociateCustomizationPermission",
+        "codewhisperer:CreateCustomization",
+        "codewhisperer:DeleteCustomization",
+        "codewhisperer:DisassociateCustomizationPermission",
+        "codewhisperer:GetCustomization",
+        "codewhisperer:ListCustomizationPermissions",
+        "codewhisperer:ListCustomizations",
+        "codewhisperer:UpdateCustomization"
+      ],
+      "Amazon Managed Streaming for Apache Kafka": [
+        "kafka:CreateReplicator",
+        "kafka:DeleteReplicator",
+        "kafka:DescribeReplicator",
+        "kafka:ListReplicators",
+        "kafka:UpdateReplicationInfo"
+      ],
+      "Amazon OpenSearch Service": [
+        "es:GetDomainMaintenanceStatus",
+        "es:ListDomainMaintenances",
+        "es:StartDomainMaintenance"
+      ],
+      "Amazon Route 53 Recovery Controls": [
+        "route53-recovery-control-config:GetResourcePolicy"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-10-17",
     "addedServices": [],
     "removedServices": [],
