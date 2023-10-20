@@ -564,7 +564,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 563,161,ServicePrincipalName,https://docs.aws.amazon.com/pca-connector-ad/latest/userguide/API_ServicePrincipalName.html,arn:${Partition}:pca-connector-ad:${Region}:${Account}:directory-registration/${DirectoryId}
 564,161,Template,https://docs.aws.amazon.com/pca-connector-ad/latest/userguide/API_Template.html,arn:${Partition}:pca-connector-ad:${Region}:${Account}:connector/${ConnectorId}/template/${TemplateId}
 565,161,TemplateGroupAccessControlEntry,https://docs.aws.amazon.com/pca-connector-ad/latest/userguide/API_TemplateGroupAccessControlEntry.html,arn:${Partition}:pca-connector-ad:${Region}:${Account}:connector/${ConnectorId}/template/${TemplateId}
-566,162,certificate-authority,https://docs.aws.amazon.com/privateca/latest/userguide/authen-overview.html#acm-pca-resources-operations,arn:${Partition}:acm-pca:${Region}:${Account}:certificate-authority/${CertificateAuthorityId}
+566,162,certificate-authority,https://docs.aws.amazon.com/privateca/latest/userguide/api-permissions.html,arn:${Partition}:acm-pca:${Region}:${Account}:certificate-authority/${CertificateAuthorityId}
 567,163,environment-template,https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-templates.html,arn:${Partition}:proton:${Region}:${Account}:environment-template/${Name}
 568,163,environment-template-version,https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-templates.html,arn:${Partition}:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersion}.${MinorVersion}
 569,163,environment-template-major-version,https://docs.aws.amazon.com/proton/latest/adminguide/ag-env-templates.html,arn:${Partition}:proton:${Region}:${Account}:environment-template/${TemplateName}:${MajorVersionId}

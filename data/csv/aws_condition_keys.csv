@@ -8,7 +8,7 @@ condition_key_id,name,reference_url,description,type
 7,accounts.google.com:aud,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_aud,Filters access by the Google application ID,String
 8,accounts.google.com:oaud,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_oaud,Filters access by the Google audience,String
 9,accounts.google.com:sub,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_sub,Filters access by the subject of the claim (the Google user ID),String
-10,acm-pca:TemplateArn,https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-varieties,Filters issue certificate requests based on the presence of TemplateArn in the request,String
+10,acm-pca:TemplateArn,https://docs.aws.amazon.com/privateca/latest/userguide/UsingTemplates.html#template-varieties,Filters access by the arn of the certificate template used in Issue Certificate request,ARN
 11,acm:CertificateAuthority,https://docs.aws.amazon.com/acm/latest/userguide/security-iam.html,Filters access by certificateAuthority in the request. Can be used to restrict which Certificate Authorites certificates can be issued from,String
 12,acm:CertificateTransparencyLogging,https://docs.aws.amazon.com/acm/latest/userguide/security-iam.html,Filters access by certificateTransparencyLogging option in the request. Default 'ENABLED' if no key is present in the request,String
 13,acm:DomainNames,https://docs.aws.amazon.com/acm/latest/userguide/security-iam.html,Filters access by domainNames in the request. This key can be used to restrict which domains can be in certificate requests,ArrayOfString
