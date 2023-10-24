@@ -1288,7 +1288,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 1287,313,cluster,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn.html,arn:${Partition}:kafka:${Region}:${Account}:cluster/${ClusterName}/${Uuid}
 1288,313,configuration,https://docs.aws.amazon.com/msk/1.0/apireference/configurations-arn.html,arn:${Partition}:kafka:${Region}:${Account}:configuration/${ConfigurationName}/${Uuid}
 1289,313,vpc-connection,https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connections-arn.html,arn:${Partition}:kafka:${Region}:${VpcOwnerAccount}:vpc-connection/${ClusterOwnerAccount}/${ClusterName}/${Uuid}
-1290,313,replicator,https://docs.aws.amazon.com/msk/1.0/apireference/replicators-replicatorarn.html,arn:${Partition}:kafka:${Region}:${Account}:replicator/${ReplicatorName}/${Uuid}
+1290,313,replicator,https://docs.aws.amazon.com/msk/latest/developerguide/v1-replicators.html,arn:${Partition}:kafka:${Region}:${Account}:replicator/${ReplicatorName}/${Uuid}
 1291,313,topic,https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources,arn:${Partition}:kafka:${Region}:${Account}:topic/${ClusterName}/${ClusterUuid}/${TopicName}
 1292,313,group,https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources,arn:${Partition}:kafka:${Region}:${Account}:group/${ClusterName}/${ClusterUuid}/${GroupName}
 1293,313,transactional-id,https://docs.aws.amazon.com/msk/latest/developerguide/iam-access-control.html#msk-iam-resources,arn:${Partition}:kafka:${Region}:${Account}:transactional-id/${ClusterName}/${ClusterUuid}/${TransactionalId}

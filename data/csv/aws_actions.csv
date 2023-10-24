@@ -12251,12 +12251,12 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 12250,313,kafka:CreateCluster,https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#CreateCluster,false,Write
 12251,313,kafka:CreateClusterV2,https://docs.aws.amazon.com/MSK/2.0/APIReference/v2-clusters.html#CreateClusterV2,false,Write
 12252,313,kafka:CreateConfiguration,https://docs.aws.amazon.com/msk/1.0/apireference/configurations.html#CreateConfiguration,false,Write
-12253,313,kafka:CreateReplicator,https://docs.aws.amazon.com/msk/1.0/apireference/replicators.html#CreateReplicator,false,Write
+12253,313,kafka:CreateReplicator,https://docs.aws.amazon.com/msk/latest/developerguide/v1-replicators.html#CreateReplicator,false,Write
 12254,313,kafka:CreateVpcConnection,https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connection.html#CreateVpcConnection,false,Write
 12255,313,kafka:DeleteCluster,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn.html#DeleteCluster,false,Write
 12256,313,kafka:DeleteClusterPolicy,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-policy.html#DeleteClusterPolicy,false,Write
 12257,313,kafka:DeleteConfiguration,https://docs.aws.amazon.com/msk/1.0/apireference/configurations-arn.html#DeleteConfiguration,false,Write
-12258,313,kafka:DeleteReplicator,https://docs.aws.amazon.com/msk/1.0/apireference/replicators-replicatorarn.html#DeleteReplicator,false,Write
+12258,313,kafka:DeleteReplicator,https://docs.aws.amazon.com/msk/latest/developerguide/v1-replicators.html#DeleteReplicator,false,Write
 12259,313,kafka:DeleteVpcConnection,https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connection-arn.html#DeleteVpcConnection,false,Write
 12260,313,kafka:DescribeCluster,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn.html#DescribeCluster,false,Read
 12261,313,kafka:DescribeClusterOperation,https://docs.aws.amazon.com/msk/1.0/apireference/operations-clusteroperationarn.html#DescribeClusterOperation,false,Read
@@ -12264,7 +12264,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 12263,313,kafka:DescribeClusterV2,https://docs.aws.amazon.com/MSK/2.0/APIReference/v2-clusters-clusterarn.html#DescribeClusterV2,false,Read
 12264,313,kafka:DescribeConfiguration,https://docs.aws.amazon.com/msk/1.0/apireference/configurations-arn.html#DescribeConfiguration,false,Read
 12265,313,kafka:DescribeConfigurationRevision,https://docs.aws.amazon.com/msk/1.0/apireference/configurations-arn-revisions-revision.html#DescribeConfigurationRevision,false,Read
-12266,313,kafka:DescribeReplicator,https://docs.aws.amazon.com/msk/1.0/apireference/replicators-replicatorarn.html#DescribeReplicator,false,Read
+12266,313,kafka:DescribeReplicator,https://docs.aws.amazon.com/msk/latest/developerguide/v1-replicators.html#DescribeReplicator,false,Read
 12267,313,kafka:DescribeVpcConnection,https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connection-arn.html#DescribeVpcConnection,false,Read
 12268,313,kafka:GetBootstrapBrokers,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-bootstrap-brokers.html#GetBootstrapBrokers,false,Read
 12269,313,kafka:GetClusterPolicy,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-policy.html#GetClusterPolicy,false,Read
@@ -12278,7 +12278,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 12277,313,kafka:ListConfigurations,https://docs.aws.amazon.com/msk/1.0/apireference/configurations.html#ListConfigurations,false,List
 12278,313,kafka:ListKafkaVersions,https://docs.aws.amazon.com/msk/1.0/apireference/kafka-versions.html#ListKafkaVersions,false,List
 12279,313,kafka:ListNodes,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-nodes.html#ListNodes,false,List
-12280,313,kafka:ListReplicators,https://docs.aws.amazon.com/msk/1.0/apireference/replicators.html#ListReplicators,false,List
+12280,313,kafka:ListReplicators,https://docs.aws.amazon.com/msk/latest/developerguide/v1-replicators.html#ListReplicators,false,List
 12281,313,kafka:ListScramSecrets,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-scram-secrets.html#ListScramSecrets,false,List
 12282,313,kafka:ListTagsForResource,https://docs.aws.amazon.com/msk/1.0/apireference/tags-resourcearn.html#ListTagsForResource,false,Read
 12283,313,kafka:ListVpcConnections,https://docs.aws.amazon.com/msk/1.0/apireference/vpc-connections.html#ListVpcConnections,false,List
@@ -12295,7 +12295,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 12294,313,kafka:UpdateConfiguration,https://docs.aws.amazon.com/msk/1.0/apireference/configurations-arn.html#UpdateConfiguration,false,Write
 12295,313,kafka:UpdateConnectivity,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-connectivity.html#UpdateConnectivity,false,Write
 12296,313,kafka:UpdateMonitoring,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-monitoring.html#UpdateMonitoring,false,Write
-12297,313,kafka:UpdateReplicationInfo,https://docs.aws.amazon.com/msk/1.0/apireference/replicators-replicatorarn-replication-info.html#UpdateReplicationInfo,false,Write
+12297,313,kafka:UpdateReplicationInfo,https://docs.aws.amazon.com/msk/latest/developerguide/v1-replicators.html#UpdateReplicationInfo,false,Write
 12298,313,kafka:UpdateSecurity,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-security.html#UpdateSecurity,false,Write
 12299,313,kafka:UpdateStorage,https://docs.aws.amazon.com/msk/1.0/apireference/clusters-clusterarn-storage.html#UpdateStorage,false,Write
 12300,314,kafkaconnect:CreateConnector,https://docs.aws.amazon.com/MSKC/latest/mskc/API_CreateConnector.html,false,Write
