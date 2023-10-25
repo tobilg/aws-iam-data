@@ -1,5 +1,51 @@
 [
   {
+    "dateOfChange": "2023-10-25",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Braket": [
+        "braket:AcceptUserAgreement",
+        "braket:AccessBraketFeature",
+        "braket:GetServiceLinkedRoleStatus",
+        "braket:GetUserAgreementStatus"
+      ],
+      "Amazon Connect": [
+        "connect:BatchGetFlowAssociation",
+        "connect:CreatePredefinedAttribute",
+        "connect:DeletePredefinedAttribute",
+        "connect:DescribePredefinedAttribute",
+        "connect:ListPredefinedAttributes",
+        "connect:ListSecurityProfileApplications",
+        "connect:UpdatePhoneNumberMetadata",
+        "connect:UpdatePredefinedAttribute"
+      ],
+      "Amazon Connect Wisdom": [
+        "wisdom:CreateQuickResponse",
+        "wisdom:DeleteImportJob",
+        "wisdom:DeleteQuickResponse",
+        "wisdom:GetImportJob",
+        "wisdom:GetQuickResponse",
+        "wisdom:ListImportJobs",
+        "wisdom:ListQuickResponses",
+        "wisdom:SearchQuickResponses",
+        "wisdom:StartImportJob",
+        "wisdom:UpdateQuickResponse"
+      ],
+      "AWS Lake Formation": [
+        "lakeformation:CreateLakeFormationOptIn",
+        "lakeformation:DeleteLakeFormationOptIn",
+        "lakeformation:ListLakeFormationOptIns"
+      ],
+      "Amazon Rekognition": [
+        "rekognition:GetMediaAnalysisJob",
+        "rekognition:ListMediaAnalysisJobs",
+        "rekognition:StartMediaAnalysisJob"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-10-20",
     "addedServices": [],
     "removedServices": [],

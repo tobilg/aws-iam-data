@@ -810,6 +810,7 @@ condition_key_id,name,reference_url,description,type
 809,vpc-lattice:ServiceNetworkArn,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the ARN of a service network,ARN
 810,vpc-lattice:TargetGroupArns,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the ARNs of target groups,ArrayOfARN
 811,vpc-lattice:VpcId,https://docs.aws.amazon.com/vpc-lattice/latest/ug/,Filters access by the ID of a virtual private cloud (VPC),String
-812,workspaces:userId,https://docs.aws.amazon.com/workspaces/latest/adminguide/external-identity-providers-setting-up-saml.html#external-identity-providers-embed-inline-policy-for-IAM-role,Filters access by the ID of the Workspaces user,String
-813,www.amazon.com:app_id,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_id,Filters access by the Login with Amazon application ID,String
-814,www.amazon.com:user_id,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_id,Filters access by the Login with Amazon user ID,String
+812,wisdom:SearchFilter/RoutingProfileArn,https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonconnectwisdom.html#amazonconnectwisdom-policy-keys,Filters access by the connect routing profile arn that is passed in the request,ARN
+813,workspaces:userId,https://docs.aws.amazon.com/workspaces/latest/adminguide/external-identity-providers-setting-up-saml.html#external-identity-providers-embed-inline-policy-for-IAM-role,Filters access by the ID of the Workspaces user,String
+814,www.amazon.com:app_id,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_id,Filters access by the Login with Amazon application ID,String
+815,www.amazon.com:user_id,https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#ck_id,Filters access by the Login with Amazon user ID,String
