@@ -1,5 +1,5 @@
 {
-  "serviceCount": 384,
+  "serviceCount": 382,
   "services": [
     {
       "name": "AWS Account Management",
@@ -10374,59 +10374,6 @@
         "matchmakingConfiguration",
         "matchmakingRuleSet",
         "script"
-      ],
-      "conditionKeysCount": 3,
-      "conditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
-      ]
-    },
-    {
-      "name": "Amazon GameSparks",
-      "servicePrefix": "gamesparks",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongamesparks.html",
-      "actionsCount": 34,
-      "actions": [
-        "CreateGame",
-        "CreateSnapshot",
-        "CreateStage",
-        "DeleteGame",
-        "DeleteStage",
-        "DisconnectPlayer",
-        "ExportSnapshot",
-        "GetExtension",
-        "GetExtensionVersion",
-        "GetGame",
-        "GetGameConfiguration",
-        "GetGeneratedCodeJob",
-        "GetPlayerConnectionStatus",
-        "GetSnapshot",
-        "GetStage",
-        "GetStageDeployment",
-        "ImportGameConfiguration",
-        "InvokeBackend",
-        "ListExtensionVersions",
-        "ListExtensions",
-        "ListGames",
-        "ListGeneratedCodeJobs",
-        "ListSnapshots",
-        "ListStageDeployments",
-        "ListStages",
-        "ListTagsForResource",
-        "StartGeneratedCodeJob",
-        "StartStageDeployment",
-        "TagResource",
-        "UntagResource",
-        "UpdateGame",
-        "UpdateGameConfiguration",
-        "UpdateSnapshot",
-        "UpdateStage"
-      ],
-      "resourceTypesCount": 2,
-      "resourceTypes": [
-        "game",
-        "stage"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -22210,21 +22157,6 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
-    },
-    {
-      "name": "AWS Tag Editor",
-      "servicePrefix": "resource-explorer",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstageditor.html",
-      "actionsCount": 3,
-      "actions": [
-        "ListResourceTypes",
-        "ListResources",
-        "ListTags"
-      ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
     },
     {
       "name": "AWS Tax Settings",

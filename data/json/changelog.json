@@ -1,5 +1,57 @@
 [
   {
+    "dateOfChange": "2023-10-28",
+    "addedServices": [],
+    "removedServices": [
+      "Amazon GameSparks",
+      "AWS Tag Editor"
+    ],
+    "addedActions": {},
+    "removedActions": {
+      "Amazon GameSparks": [
+        "gamesparks:CreateGame",
+        "gamesparks:CreateSnapshot",
+        "gamesparks:CreateStage",
+        "gamesparks:DeleteGame",
+        "gamesparks:DeleteStage",
+        "gamesparks:DisconnectPlayer",
+        "gamesparks:ExportSnapshot",
+        "gamesparks:GetExtension",
+        "gamesparks:GetExtensionVersion",
+        "gamesparks:GetGame",
+        "gamesparks:GetGameConfiguration",
+        "gamesparks:GetGeneratedCodeJob",
+        "gamesparks:GetPlayerConnectionStatus",
+        "gamesparks:GetSnapshot",
+        "gamesparks:GetStage",
+        "gamesparks:GetStageDeployment",
+        "gamesparks:ImportGameConfiguration",
+        "gamesparks:InvokeBackend",
+        "gamesparks:ListExtensionVersions",
+        "gamesparks:ListExtensions",
+        "gamesparks:ListGames",
+        "gamesparks:ListGeneratedCodeJobs",
+        "gamesparks:ListSnapshots",
+        "gamesparks:ListStageDeployments",
+        "gamesparks:ListStages",
+        "gamesparks:ListTagsForResource",
+        "gamesparks:StartGeneratedCodeJob",
+        "gamesparks:StartStageDeployment",
+        "gamesparks:TagResource",
+        "gamesparks:UntagResource",
+        "gamesparks:UpdateGame",
+        "gamesparks:UpdateGameConfiguration",
+        "gamesparks:UpdateSnapshot",
+        "gamesparks:UpdateStage"
+      ],
+      "AWS Tag Editor": [
+        "resource-explorer:ListResourceTypes",
+        "resource-explorer:ListResources",
+        "resource-explorer:ListTags"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2023-10-27",
     "addedServices": [],
     "removedServices": [],
