@@ -1,5 +1,5 @@
 {
-  "serviceCount": 382,
+  "serviceCount": 383,
   "services": [
     {
       "name": "AWS Account Management",
@@ -1248,6 +1248,28 @@
         "aws:TagKeys",
         "mgn:CreateAction"
       ]
+    },
+    {
+      "name": "AWS Application Transformation Service",
+      "servicePrefix": "application-transformation",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationtransformationservice.html",
+      "actionsCount": 10,
+      "actions": [
+        "GetGroupingAssessment",
+        "GetPortingCompatibilityAssessment",
+        "GetPortingRecommendationAssessment",
+        "GetRuntimeAssessment",
+        "PutLogData",
+        "PutMetricData",
+        "StartGroupingAssessment",
+        "StartPortingCompatibilityAssessment",
+        "StartPortingRecommendationAssessment",
+        "StartRuntimeAssessment"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
     },
     {
       "name": "Amazon AppStream 2.0",
@@ -6931,7 +6953,7 @@
       "name": "Amazon EC2",
       "servicePrefix": "ec2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html",
-      "actionsCount": 612,
+      "actionsCount": 614,
       "actions": [
         "AcceptAddressTransfer",
         "AcceptReservedInstancesExchangeQuote",
@@ -7314,6 +7336,7 @@
         "DisableEbsEncryptionByDefault",
         "DisableFastLaunch",
         "DisableFastSnapshotRestores",
+        "DisableImage",
         "DisableImageBlockPublicAccess",
         "DisableImageDeprecation",
         "DisableIpamOrganizationAdminAccount",
@@ -7342,6 +7365,7 @@
         "EnableEbsEncryptionByDefault",
         "EnableFastLaunch",
         "EnableFastSnapshotRestores",
+        "EnableImage",
         "EnableImageBlockPublicAccess",
         "EnableImageDeprecation",
         "EnableIpamOrganizationAdminAccount",

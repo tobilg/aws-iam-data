@@ -1,6 +1,6 @@
 report_name,metric_name,value
-Actions by type,Write Actions,8544
-Actions by type,Read Actions,4154
+Actions by type,Write Actions,8551
+Actions by type,Read Actions,4159
 Actions by type,List Actions,2449
 Actions by type,Permissions Actions,241
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
@@ -29,10 +29,10 @@ Longest service prefixes,route53-recovery-control-config,31
 Longest service prefixes,sagemaker-groundtruth-synthetic,31
 Longest service prefixes,elemental-appliances-software,29
 Longest service prefixes,marketplacecommerceanalytics,28
+Longest service prefixes,application-transformation,26
 Longest service prefixes,aws-marketplace-management,26
 Longest service prefixes,codedeploy-commands-secure,26
 Longest service prefixes,route53-recovery-readiness,26
-Longest service prefixes,application-cost-profiler,25
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},130
 Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},85
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},81
@@ -53,7 +53,7 @@ Services with least actions,AWS Microservice Extractor for .NET,1
 Services with least actions,AWS Marketplace Seller Reporting,1
 Services with least actions,AWS Marketplace Entitlement Service,1
 Services with least actions,AWS Marketplace Discovery,1
-Services with most actions,Amazon EC2,612
+Services with most actions,Amazon EC2,614
 Services with most actions,Amazon SageMaker,330
 Services with most actions,Amazon Chime,309
 Services with most actions,AWS IoT,266
@@ -95,6 +95,6 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Summary,Total number of distinct resource ARNS,1576
 Summary,Total number of distinct condition keys,815
-Summary,Total number of services,382
+Summary,Total number of services,383
 Summary,Average number of actions per service,40
 Summary,Median number of actions per service,28

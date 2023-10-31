@@ -235,7 +235,7 @@ condition_key_id,name,reference_url,description,type
 234,ec2:IsLaunchTemplateResource,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#amazon-ec2-keys,Filters access by whether users are able to override resources that are specified in the launch template,Bool
 235,ec2:KeyPairName,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#amazon-ec2-keys,Filters access by the name of a key pair,String
 236,ec2:KeyPairType,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#amazon-ec2-keys,Filters access by the type of a key pair,String
-237,ec2:KmsKeyId,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#amazon-ec2-keys,Filters access by the ID of an AWS KMS key,String
+237,ec2:KmsKeyId,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#amazon-ec2-keys,Filters access by the ID of an AWS KMS key provided in the request,String
 238,ec2:LaunchTemplate,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#amazon-ec2-keys,Filters access by the ARN of a launch template,ARN
 239,ec2:MetadataHttpEndpoint,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#amazon-ec2-keys,Filters access by whether the HTTP endpoint is enabled for the instance metadata service,String
 240,ec2:MetadataHttpPutResponseHopLimit,https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policy-structure.html#amazon-ec2-keys,Filters access by the allowed number of hops when calling the instance metadata service,Numeric
