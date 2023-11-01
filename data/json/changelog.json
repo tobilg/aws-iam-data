@@ -1,5 +1,26 @@
 [
   {
+    "dateOfChange": "2023-11-01",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Data Exchange": [
+        "dataexchange:SendDataSetNotification"
+      ],
+      "AWS DeepRacer": [
+        "deepracer:ListLeaderboardEvaluations"
+      ],
+      "Amazon Redshift Serverless": [
+        "redshift-serverless:CreateCustomDomainAssociation",
+        "redshift-serverless:DeleteCustomDomainAssociation",
+        "redshift-serverless:GetCustomDomainAssociation",
+        "redshift-serverless:ListCustomDomainAssociations",
+        "redshift-serverless:UpdateCustomDomainAssociation"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-10-31",
     "addedServices": [
       "AWS Application Transformation Service"
