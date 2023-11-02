@@ -641,7 +641,7 @@ condition_key_id,name,reference_url,description,type
 640,s3:x-amz-metadata-directive,https://docs.aws.amazon.com/AmazonS3/latest/API/API_CopyObject.html,Filters access by object metadata behavior (COPY or REPLACE) when objects are copied,String
 641,s3:x-amz-object-ownership,https://docs.aws.amazon.com/AmazonS3/latest/userguide/ensure-object-ownership.html#object-ownership-requiring-bucket-owner-enforced,Filters access by Object Ownership,String
 642,s3:x-amz-server-side-encryption,https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingServerSideEncryption.html,Filters access by server-side encryption,String
-643,s3:x-amz-server-side-encryption-aws-kms-key-id,https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingKMSEncryption.html#require-sse-kms,Filters access by AWS KMS customer managed CMK for server-side encryption,String
+643,s3:x-amz-server-side-encryption-aws-kms-key-id,https://docs.aws.amazon.com/AmazonS3/latest/userguide/UsingKMSEncryption.html#require-sse-kms,Filters access by AWS KMS customer managed CMK for server-side encryption,ARN
 644,s3:x-amz-server-side-encryption-customer-algorithm,https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerSideEncryptionCustomerKeys.html,Filters access by customer specified algorithm for server-side encryption,String
 645,s3:x-amz-storage-class,https://docs.aws.amazon.com/AmazonS3/latest/userguide/storage-class-intro.html#sc-howtoset,Filters access by storage class,String
 646,s3:x-amz-website-redirect-location,https://docs.aws.amazon.com/AmazonS3/latest/userguide/how-to-page-redirect.html#page-redirect-using-rest-api,Filters access by a specific website redirect location for buckets that are configured as static websites,String
