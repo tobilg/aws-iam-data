@@ -15884,7 +15884,7 @@
       "name": "AWS Migration Hub Strategy Recommendations",
       "servicePrefix": "migrationhub-strategy",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhubstrategyrecommendations.html",
-      "actionsCount": 28,
+      "actionsCount": 29,
       "actions": [
         "GetAntiPattern",
         "GetApplicationComponentDetails",
@@ -15898,6 +15898,7 @@
         "GetRecommendationReportDetails",
         "GetServerDetails",
         "GetServerStrategies",
+        "ListAnalyzableServers",
         "ListAntiPatterns",
         "ListApplicationComponents",
         "ListCollectors",
@@ -18240,7 +18241,7 @@
       "name": "Amazon Redshift",
       "servicePrefix": "redshift",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshift.html",
-      "actionsCount": 141,
+      "actionsCount": 142,
       "actions": [
         "AcceptReservedNodeExchange",
         "AddPartner",
@@ -18339,6 +18340,7 @@
         "EnableLogging",
         "EnableSnapshotCopy",
         "ExecuteQuery",
+        "FailoverPrimaryCompute",
         "FetchResults",
         "GetClusterCredentials",
         "GetClusterCredentialsWithIAM",
