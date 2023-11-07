@@ -1,6 +1,6 @@
 report_name,metric_name,value
-Actions by type,Write Actions,8560
-Actions by type,Read Actions,4162
+Actions by type,Write Actions,8561
+Actions by type,Read Actions,4165
 Actions by type,List Actions,2454
 Actions by type,Permissions Actions,241
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
@@ -35,7 +35,7 @@ Longest service prefixes,codedeploy-commands-secure,26
 Longest service prefixes,route53-recovery-readiness,26
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},130
 Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},85
-Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},81
+Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},82
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},80
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},71
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},67
@@ -62,7 +62,7 @@ Services with most actions,AWS Glue,211
 Services with most actions,Amazon QuickSight,187
 Services with most actions,AWS Identity and Access Management (IAM),171
 Services with most actions,Amazon Lightsail,159
-Services with most actions,Amazon RDS,149
+Services with most actions,AWS Systems Manager,149
 Shortest action names,iq:EndCall,10
 Shortest action names,ce:GetTags,10
 Shortest action names,es:AddTags,10
