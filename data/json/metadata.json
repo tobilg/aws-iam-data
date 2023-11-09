@@ -4976,7 +4976,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 226,
+      "actionsCount": 227,
       "actions": [
         "ActivateEvaluationForm",
         "AssociateApprovedOrigin",
@@ -4994,6 +4994,7 @@
         "BatchAssociateAnalyticsDataSet",
         "BatchDisassociateAnalyticsDataSet",
         "BatchGetFlowAssociation",
+        "BatchPutContact",
         "ClaimPhoneNumber",
         "CreateAgentStatus",
         "CreateContactFlow",
@@ -5300,11 +5301,12 @@
         "RelatedItem",
         "Template"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 4,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "connect:UserArn"
       ]
     },
     {
@@ -19718,7 +19720,7 @@
       "name": "Amazon SageMaker",
       "servicePrefix": "sagemaker",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemaker.html",
-      "actionsCount": 330,
+      "actionsCount": 337,
       "actions": [
         "AddAssociation",
         "AddTags",
@@ -19753,6 +19755,7 @@
         "CreateHyperParameterTuningJob",
         "CreateImage",
         "CreateImageVersion",
+        "CreateInferenceComponent",
         "CreateInferenceExperiment",
         "CreateInferenceRecommendationsJob",
         "CreateLabelingJob",
@@ -19807,6 +19810,7 @@
         "DeleteHumanTaskUi",
         "DeleteImage",
         "DeleteImageVersion",
+        "DeleteInferenceComponent",
         "DeleteInferenceExperiment",
         "DeleteLineageGroupPolicy",
         "DeleteModel",
@@ -19861,6 +19865,7 @@
         "DescribeHyperParameterTuningJob",
         "DescribeImage",
         "DescribeImageVersion",
+        "DescribeInferenceComponent",
         "DescribeInferenceExperiment",
         "DescribeInferenceRecommendationsJob",
         "DescribeLabelingJob",
@@ -19907,6 +19912,7 @@
         "ImportHubContent",
         "InvokeEndpoint",
         "InvokeEndpointAsync",
+        "InvokeEndpointWithResponseStream",
         "ListActions",
         "ListAlgorithms",
         "ListAliases",
@@ -19938,6 +19944,7 @@
         "ListHyperParameterTuningJobs",
         "ListImageVersions",
         "ListImages",
+        "ListInferenceComponents",
         "ListInferenceExperiments",
         "ListInferenceRecommendationsJobSteps",
         "ListInferenceRecommendationsJobs",
@@ -20032,6 +20039,8 @@
         "UpdateHub",
         "UpdateImage",
         "UpdateImageVersion",
+        "UpdateInferenceComponent",
+        "UpdateInferenceComponentRuntimeConfig",
         "UpdateInferenceExperiment",
         "UpdateModelCard",
         "UpdateModelPackage",
@@ -20051,7 +20060,7 @@
         "UpdateWorkforce",
         "UpdateWorkteam"
       ],
-      "resourceTypesCount": 59,
+      "resourceTypesCount": 60,
       "resourceTypes": [
         "device",
         "device-fleet",
@@ -20088,6 +20097,7 @@
         "model",
         "endpoint-config",
         "endpoint",
+        "inference-component",
         "transform-job",
         "compilation-job",
         "automl-job",

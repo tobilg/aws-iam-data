@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,8561
-Actions by type,Read Actions,4165
-Actions by type,List Actions,2454
+Actions by type,Write Actions,8566
+Actions by type,Read Actions,4167
+Actions by type,List Actions,2455
 Actions by type,Permissions Actions,241
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
 Longest action names,aws-marketplace-management:GetAdditionalSellerNotificationRecipients,68
@@ -34,7 +34,7 @@ Longest service prefixes,aws-marketplace-management,26
 Longest service prefixes,codedeploy-commands-secure,26
 Longest service prefixes,route53-recovery-readiness,26
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},130
-Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},85
+Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},86
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},82
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},80
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},71
@@ -54,10 +54,10 @@ Services with least actions,AWS Marketplace Seller Reporting,1
 Services with least actions,AWS Marketplace Entitlement Service,1
 Services with least actions,AWS Marketplace Discovery,1
 Services with most actions,Amazon EC2,614
-Services with most actions,Amazon SageMaker,330
+Services with most actions,Amazon SageMaker,337
 Services with most actions,Amazon Chime,309
 Services with most actions,AWS IoT,266
-Services with most actions,Amazon Connect,226
+Services with most actions,Amazon Connect,227
 Services with most actions,AWS Glue,211
 Services with most actions,Amazon QuickSight,187
 Services with most actions,AWS Identity and Access Management (IAM),171
@@ -93,8 +93,8 @@ Shortest service prefixes,ds,2
 Shortest service prefixes,s3,2
 Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
-Summary,Total number of distinct resource ARNS,1577
-Summary,Total number of distinct condition keys,815
+Summary,Total number of distinct resource ARNS,1578
+Summary,Total number of distinct condition keys,816
 Summary,Total number of services,383
 Summary,Average number of actions per service,40
 Summary,Median number of actions per service,28

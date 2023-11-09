@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2023-11-09",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect": [
+        "connect:BatchPutContact"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:CreateInferenceComponent",
+        "sagemaker:DeleteInferenceComponent",
+        "sagemaker:DescribeInferenceComponent",
+        "sagemaker:InvokeEndpointWithResponseStream",
+        "sagemaker:ListInferenceComponents",
+        "sagemaker:UpdateInferenceComponent",
+        "sagemaker:UpdateInferenceComponentRuntimeConfig"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-11-07",
     "addedServices": [],
     "removedServices": [],
