@@ -1,5 +1,5 @@
 {
-  "serviceCount": 383,
+  "serviceCount": 384,
   "services": [
     {
       "name": "AWS Account Management",
@@ -3558,16 +3558,21 @@
       "name": "Amazon CloudWatch Logs",
       "servicePrefix": "logs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchlogs.html",
-      "actionsCount": 60,
+      "actionsCount": 75,
       "actions": [
         "AssociateKmsKey",
         "CancelExportTask",
+        "CreateDelivery",
         "CreateExportTask",
         "CreateLogDelivery",
         "CreateLogGroup",
         "CreateLogStream",
         "DeleteAccountPolicy",
         "DeleteDataProtectionPolicy",
+        "DeleteDelivery",
+        "DeleteDeliveryDestination",
+        "DeleteDeliveryDestinationPolicy",
+        "DeleteDeliverySource",
         "DeleteDestination",
         "DeleteLogDelivery",
         "DeleteLogGroup",
@@ -3578,6 +3583,9 @@
         "DeleteRetentionPolicy",
         "DeleteSubscriptionFilter",
         "DescribeAccountPolicies",
+        "DescribeDeliveries",
+        "DescribeDeliveryDestinations",
+        "DescribeDeliverySources",
         "DescribeDestinations",
         "DescribeExportTasks",
         "DescribeLogGroups",
@@ -3590,6 +3598,10 @@
         "DisassociateKmsKey",
         "FilterLogEvents",
         "GetDataProtectionPolicy",
+        "GetDelivery",
+        "GetDeliveryDestination",
+        "GetDeliveryDestinationPolicy",
+        "GetDeliverySource",
         "GetLogDelivery",
         "GetLogEvents",
         "GetLogGroupFields",
@@ -3601,6 +3613,9 @@
         "ListTagsLogGroup",
         "PutAccountPolicy",
         "PutDataProtectionPolicy",
+        "PutDeliveryDestination",
+        "PutDeliveryDestinationPolicy",
+        "PutDeliverySource",
         "PutDestination",
         "PutDestinationPolicy",
         "PutLogEvents",
@@ -3621,17 +3636,22 @@
         "UntagResource",
         "UpdateLogDelivery"
       ],
-      "resourceTypesCount": 3,
+      "resourceTypesCount": 6,
       "resourceTypes": [
         "log-group",
         "log-stream",
-        "destination"
+        "destination",
+        "delivery-source",
+        "delivery",
+        "delivery-destination"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "logs:DeliveryDestinationResourceArn",
+        "logs:LogGeneratingResourceArns"
       ]
     },
     {
@@ -4660,7 +4680,7 @@
       "name": "Amazon Comprehend",
       "servicePrefix": "comprehend",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncomprehend.html",
-      "actionsCount": 84,
+      "actionsCount": 85,
       "actions": [
         "BatchDetectDominantLanguage",
         "BatchDetectEntities",
@@ -4703,6 +4723,7 @@
         "DetectSentiment",
         "DetectSyntax",
         "DetectTargetedSentiment",
+        "DetectToxicContent",
         "ImportModel",
         "ListDatasets",
         "ListDocumentClassificationJobs",
@@ -6960,7 +6981,7 @@
       "name": "Amazon EC2",
       "servicePrefix": "ec2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html",
-      "actionsCount": 614,
+      "actionsCount": 616,
       "actions": [
         "AcceptAddressTransfer",
         "AcceptReservedInstancesExchangeQuote",
@@ -7417,6 +7438,7 @@
         "GetPasswordData",
         "GetReservedInstancesExchangeQuote",
         "GetResourcePolicy",
+        "GetSecurityGroupsForVpc",
         "GetSerialConsoleAccessStatus",
         "GetSpotPlacementScores",
         "GetSubnetCidrReservations",
@@ -7440,6 +7462,7 @@
         "ImportKeyPair",
         "ImportSnapshot",
         "ImportVolume",
+        "InjectApiError",
         "ListImagesInRecycleBin",
         "ListSnapshotsInRecycleBin",
         "ModifyAddressAttribute",
@@ -7669,7 +7692,7 @@
         "vpn-connection",
         "vpn-gateway"
       ],
-      "conditionKeysCount": 109,
+      "conditionKeysCount": 111,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -7698,6 +7721,8 @@
         "ec2:EbsOptimized",
         "ec2:ElasticGpuType",
         "ec2:Encrypted",
+        "ec2:FisActionId",
+        "ec2:FisTargetArns",
         "ec2:GatewayType",
         "ec2:HostRecovery",
         "ec2:IKEVersions",
@@ -8501,17 +8526,19 @@
       "name": "Amazon Elastic Kubernetes Service",
       "servicePrefix": "eks",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelastickubernetesservice.html",
-      "actionsCount": 36,
+      "actionsCount": 41,
       "actions": [
         "AccessKubernetesApi",
         "AssociateEncryptionConfig",
         "AssociateIdentityProviderConfig",
         "CreateAddon",
         "CreateCluster",
+        "CreateEksAnywhereSubscription",
         "CreateFargateProfile",
         "CreateNodegroup",
         "DeleteAddon",
         "DeleteCluster",
+        "DeleteEksAnywhereSubscription",
         "DeleteFargateProfile",
         "DeleteNodegroup",
         "DeregisterCluster",
@@ -8519,6 +8546,7 @@
         "DescribeAddonConfiguration",
         "DescribeAddonVersions",
         "DescribeCluster",
+        "DescribeEksAnywhereSubscription",
         "DescribeFargateProfile",
         "DescribeIdentityProviderConfig",
         "DescribeNodegroup",
@@ -8526,6 +8554,7 @@
         "DisassociateIdentityProviderConfig",
         "ListAddons",
         "ListClusters",
+        "ListEksAnywhereSubscriptions",
         "ListFargateProfiles",
         "ListIdentityProviderConfigs",
         "ListNodegroups",
@@ -8537,16 +8566,18 @@
         "UpdateAddon",
         "UpdateClusterConfig",
         "UpdateClusterVersion",
+        "UpdateEksAnywhereSubscription",
         "UpdateNodegroupConfig",
         "UpdateNodegroupVersion"
       ],
-      "resourceTypesCount": 5,
+      "resourceTypesCount": 6,
       "resourceTypes": [
         "cluster",
         "nodegroup",
         "addon",
         "fargateprofile",
-        "identityproviderconfig"
+        "identityproviderconfig",
+        "eks-anywhere-subscription"
       ],
       "conditionKeysCount": 5,
       "conditionKeys": [
@@ -8596,14 +8627,19 @@
       "resourceTypes": [
         "loadbalancer"
       ],
-      "conditionKeysCount": 6,
+      "conditionKeysCount": 11,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "elasticloadbalancing:CreateAction",
+        "elasticloadbalancing:ListenerProtocol",
         "elasticloadbalancing:ResourceTag/",
-        "elasticloadbalancing:ResourceTag/${TagKey}"
+        "elasticloadbalancing:ResourceTag/${TagKey}",
+        "elasticloadbalancing:Scheme",
+        "elasticloadbalancing:SecurityGroup",
+        "elasticloadbalancing:SecurityPolicy",
+        "elasticloadbalancing:Subnet"
       ]
     },
     {
@@ -8658,13 +8694,18 @@
         "loadbalancer/net/",
         "targetgroup"
       ],
-      "conditionKeysCount": 5,
+      "conditionKeysCount": 10,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "elasticloadbalancing:CreateAction",
-        "elasticloadbalancing:ResourceTag/${TagKey}"
+        "elasticloadbalancing:ListenerProtocol",
+        "elasticloadbalancing:ResourceTag/${TagKey}",
+        "elasticloadbalancing:Scheme",
+        "elasticloadbalancing:SecurityGroup",
+        "elasticloadbalancing:SecurityPolicy",
+        "elasticloadbalancing:Subnet"
       ]
     },
     {
@@ -16834,6 +16875,21 @@
       ]
     },
     {
+      "name": "AWS Partner central account management",
+      "servicePrefix": "partnercentral-account-management",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspartnercentralaccountmanagement.html",
+      "actionsCount": 3,
+      "actions": [
+        "AssociatePartnerAccount",
+        "AssociatePartnerUser",
+        "DisassociatePartnerUser"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
       "name": "AWS Payment Cryptography",
       "servicePrefix": "payment-cryptography",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspaymentcryptography.html",
@@ -17968,7 +18024,7 @@
       "name": "Amazon RDS",
       "servicePrefix": "rds",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrds.html",
-      "actionsCount": 149,
+      "actionsCount": 157,
       "actions": [
         "AddRoleToDBCluster",
         "AddRoleToDBInstance",
@@ -17999,7 +18055,9 @@
         "CreateDBSubnetGroup",
         "CreateEventSubscription",
         "CreateGlobalCluster",
+        "CreateIntegration",
         "CreateOptionGroup",
+        "CreateTenantDatabase",
         "CrossRegionCommunication",
         "DeleteBlueGreenDeployment",
         "DeleteCustomDBEngineVersion",
@@ -18018,7 +18076,9 @@
         "DeleteDBSubnetGroup",
         "DeleteEventSubscription",
         "DeleteGlobalCluster",
+        "DeleteIntegration",
         "DeleteOptionGroup",
+        "DeleteTenantDatabase",
         "DeregisterDBProxyTargets",
         "DescribeAccountAttributes",
         "DescribeBlueGreenDeployments",
@@ -18045,6 +18105,7 @@
         "DescribeDBSnapshotAttributes",
         "DescribeDBSnapshots",
         "DescribeDBSubnetGroups",
+        "DescribeDbSnapshotTenantDatabases",
         "DescribeEngineDefaultClusterParameters",
         "DescribeEngineDefaultParameters",
         "DescribeEventCategories",
@@ -18052,6 +18113,7 @@
         "DescribeEvents",
         "DescribeExportTasks",
         "DescribeGlobalClusters",
+        "DescribeIntegrations",
         "DescribeOptionGroupOptions",
         "DescribeOptionGroups",
         "DescribeOrderableDBInstanceOptions",
@@ -18061,6 +18123,7 @@
         "DescribeReservedDBInstances",
         "DescribeReservedDBInstancesOfferings",
         "DescribeSourceRegions",
+        "DescribeTenantDatabases",
         "DescribeValidDBInstanceModifications",
         "DownloadCompleteDBLogFile",
         "DownloadDBLogFilePortion",
@@ -18087,6 +18150,7 @@
         "ModifyGlobalCluster",
         "ModifyOptionGroup",
         "ModifyRecommendation",
+        "ModifyTenantDatabase",
         "PromoteReadReplica",
         "PromoteReadReplicaDBCluster",
         "PurchaseReservedDBInstancesOffering",
@@ -18120,10 +18184,11 @@
         "SwitchoverGlobalCluster",
         "SwitchoverReadReplica"
       ],
-      "resourceTypesCount": 20,
+      "resourceTypesCount": 24,
       "resourceTypes": [
         "cluster",
         "cluster-auto-backup",
+        "auto-backup",
         "cluster-endpoint",
         "cluster-pg",
         "cluster-snapshot",
@@ -18141,9 +18206,12 @@
         "target",
         "target-group",
         "cev",
-        "deployment"
+        "deployment",
+        "integration",
+        "snapshot-tenant-database",
+        "tenant-database"
       ],
-      "conditionKeysCount": 27,
+      "conditionKeysCount": 29,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -18156,9 +18224,11 @@
         "rds:EndpointType",
         "rds:ManageMasterUserPassword",
         "rds:MultiAz",
+        "rds:MultiTenant",
         "rds:Piops",
         "rds:StorageEncrypted",
         "rds:StorageSize",
+        "rds:TenantDatabaseName",
         "rds:Vpc",
         "rds:cluster-pg-tag/${TagKey}",
         "rds:cluster-snapshot-tag/${TagKey}",

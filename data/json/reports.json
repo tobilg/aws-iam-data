@@ -2,15 +2,15 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 8566
+      "value": 8586
     },
     {
       "key": "Read Actions",
-      "value": 4167
+      "value": 4174
     },
     {
       "key": "List Actions",
-      "value": 2455
+      "value": 2462
     },
     {
       "key": "Permissions Actions",
@@ -111,6 +111,10 @@
       "value": 34
     },
     {
+      "key": "partnercentral-account-management",
+      "value": 33
+    },
+    {
       "key": "route53-recovery-control-config",
       "value": 31
     },
@@ -136,10 +140,6 @@
     },
     {
       "key": "codedeploy-commands-secure",
-      "value": 26
-    },
-    {
-      "key": "route53-recovery-readiness",
       "value": 26
     }
   ],
@@ -230,7 +230,7 @@
   "Services with most actions": [
     {
       "key": "Amazon EC2",
-      "value": 614
+      "value": 616
     },
     {
       "key": "Amazon SageMaker",
@@ -265,8 +265,8 @@
       "value": 159
     },
     {
-      "key": "AWS Systems Manager",
-      "value": 149
+      "key": "Amazon RDS",
+      "value": 157
     }
   ],
   "Shortest action names": [
@@ -398,7 +398,7 @@
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 383
+      "value": 384
     },
     {
       "key": "Average number of actions per service",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1578
+      "value": 1586
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 816
+      "value": 827
     }
   ]
 }

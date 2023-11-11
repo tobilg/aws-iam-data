@@ -1,5 +1,61 @@
 [
   {
+    "dateOfChange": "2023-11-11",
+    "addedServices": [
+      "AWS Partner central account management"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudWatch Logs": [
+        "logs:CreateDelivery",
+        "logs:DeleteDelivery",
+        "logs:DeleteDeliveryDestination",
+        "logs:DeleteDeliveryDestinationPolicy",
+        "logs:DeleteDeliverySource",
+        "logs:DescribeDeliveries",
+        "logs:DescribeDeliveryDestinations",
+        "logs:DescribeDeliverySources",
+        "logs:GetDelivery",
+        "logs:GetDeliveryDestination",
+        "logs:GetDeliveryDestinationPolicy",
+        "logs:GetDeliverySource",
+        "logs:PutDeliveryDestination",
+        "logs:PutDeliveryDestinationPolicy",
+        "logs:PutDeliverySource"
+      ],
+      "Amazon Comprehend": [
+        "comprehend:DetectToxicContent"
+      ],
+      "Amazon EC2": [
+        "ec2:GetSecurityGroupsForVpc",
+        "ec2:InjectApiError"
+      ],
+      "Amazon Elastic Kubernetes Service": [
+        "eks:CreateEksAnywhereSubscription",
+        "eks:DeleteEksAnywhereSubscription",
+        "eks:DescribeEksAnywhereSubscription",
+        "eks:ListEksAnywhereSubscriptions",
+        "eks:UpdateEksAnywhereSubscription"
+      ],
+      "Amazon RDS": [
+        "rds:CreateIntegration",
+        "rds:CreateTenantDatabase",
+        "rds:DeleteIntegration",
+        "rds:DeleteTenantDatabase",
+        "rds:DescribeDbSnapshotTenantDatabases",
+        "rds:DescribeIntegrations",
+        "rds:DescribeTenantDatabases",
+        "rds:ModifyTenantDatabase"
+      ],
+      "AWS Partner central account management": [
+        "partnercentral-account-management:AssociatePartnerAccount",
+        "partnercentral-account-management:AssociatePartnerUser",
+        "partnercentral-account-management:DisassociatePartnerUser"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-11-09",
     "addedServices": [],
     "removedServices": [],
