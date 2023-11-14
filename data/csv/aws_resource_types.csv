@@ -146,7 +146,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 145,52,AggregationAuthorization,https://docs.aws.amazon.com/config/latest/APIReference/API_AggregationAuthorization.html,arn:${Partition}:config:${Region}:${Account}:aggregation-authorization/${AggregatorAccount}/${AggregatorRegion}
 146,52,ConfigurationAggregator,https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigurationAggregator.html,arn:${Partition}:config:${Region}:${Account}:config-aggregator/${AggregatorId}
 147,52,ConfigRule,https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigRule.html,arn:${Partition}:config:${Region}:${Account}:config-rule/${ConfigRuleId}
-148,52,ConformancePack,https://docs.aws.amazon.com/config/latest/APIReference/API_ConformancePack.html,arn:${Partition}:config:${Region}:${Account}:conformance-pack/${ConformancePackName}/${ConformancePackId}
+148,52,ConformancePack,https://docs.aws.amazon.com/config/latest/APIReference/API_ConformancePackDetail.html,arn:${Partition}:config:${Region}:${Account}:conformance-pack/${ConformancePackName}/${ConformancePackId}
 149,52,OrganizationConfigRule,https://docs.aws.amazon.com/config/latest/APIReference/API_OrganizationConfigRule.html,arn:${Partition}:config:${Region}:${Account}:organization-config-rule/${OrganizationConfigRuleId}
 150,52,OrganizationConformancePack,https://docs.aws.amazon.com/config/latest/APIReference/API_OrganizationConformancePack.html,arn:${Partition}:config:${Region}:${Account}:organization-conformance-pack/${OrganizationConformancePackId}
 151,52,RemediationConfiguration,https://docs.aws.amazon.com/config/latest/APIReference/API_RemediationConfiguration.html,arn:${Partition}:config:${Region}:${Account}:remediation-configuration/${RemediationConfigurationId}

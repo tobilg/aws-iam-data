@@ -18896,10 +18896,12 @@
       "name": "AWS Resource Groups",
       "servicePrefix": "resource-groups",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourcegroups.html",
-      "actionsCount": 19,
+      "actionsCount": 21,
       "actions": [
+        "AssociateResource",
         "CreateGroup",
         "DeleteGroup",
+        "DisassociateResource",
         "GetAccountSettings",
         "GetGroup",
         "GetGroupConfiguration",
