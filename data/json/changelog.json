@@ -1,5 +1,31 @@
 [
   {
+    "dateOfChange": "2023-11-16",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CodeWhisperer": [
+        "codewhisperer:AllowVendedLogDeliveryForResource"
+      ],
+      "AWS Launch Wizard": [
+        "launchwizard:CreateDeployment",
+        "launchwizard:DeleteDeployment",
+        "launchwizard:GetDeployment",
+        "launchwizard:GetResourceRecommendation",
+        "launchwizard:GetSettingsSet",
+        "launchwizard:GetWorkload",
+        "launchwizard:GetWorkloadAsset",
+        "launchwizard:ListAllowedResources",
+        "launchwizard:ListDeploymentEvents",
+        "launchwizard:ListDeployments",
+        "launchwizard:ListResourceCostEstimates",
+        "launchwizard:ListWorkloadDeploymentPatterns",
+        "launchwizard:PutSettingsSet"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-11-14",
     "addedServices": [],
     "removedServices": [],
