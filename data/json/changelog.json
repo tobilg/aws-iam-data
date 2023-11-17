@@ -1,5 +1,59 @@
 [
   {
+    "dateOfChange": "2023-11-17",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Backup": [
+        "backup:ListBackupJobSummaries",
+        "backup:ListCopyJobSummaries",
+        "backup:ListRestoreJobSummaries"
+      ],
+      "Amazon Connect Wisdom": [
+        "wisdom:PutFeedback"
+      ],
+      "AWS Control Tower": [
+        "controltower:ListTagsForResource",
+        "controltower:TagResource",
+        "controltower:UntagResource"
+      ],
+      "AWS Cost Explorer Service": [
+        "ce:GetApproximateUsageRecords"
+      ],
+      "Amazon FinSpace": [
+        "finspace:UpdateKxClusterCodeConfiguration"
+      ],
+      "Amazon Redshift": [
+        "redshift:DeleteResourcePolicy",
+        "redshift:DescribeInboundIntegrations",
+        "redshift:GetResourcePolicy",
+        "redshift:PutResourcePolicy"
+      ],
+      "AWS Resource Explorer": [
+        "resource-explorer-2:GetAccountLevelServiceConfiguration",
+        "resource-explorer-2:ListIndexesForMembers"
+      ],
+      "Amazon S3": [
+        "s3:CreateStorageLensGroup",
+        "s3:DeleteStorageLensGroup",
+        "s3:GetStorageLensGroup",
+        "s3:ListStorageLensGroups",
+        "s3:ListTagsForResource",
+        "s3:TagResource",
+        "s3:UntagResource",
+        "s3:UpdateStorageLensGroup"
+      ],
+      "AWS Step Functions": [
+        "states:RedriveExecution"
+      ],
+      "AWS Systems Manager Incident Manager": [
+        "ssm-incidents:BatchGetIncidentFindings",
+        "ssm-incidents:ListIncidentFindings"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-11-16",
     "addedServices": [],
     "removedServices": [],

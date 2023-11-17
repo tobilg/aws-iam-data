@@ -1685,7 +1685,7 @@
       "name": "AWS Backup",
       "servicePrefix": "backup",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackup.html",
-      "actionsCount": 79,
+      "actionsCount": 82,
       "actions": [
         "CancelLegalHold",
         "CopyFromBackupVault",
@@ -1731,12 +1731,14 @@
         "GetLegalHold",
         "GetRecoveryPointRestoreMetadata",
         "GetSupportedResourceTypes",
+        "ListBackupJobSummaries",
         "ListBackupJobs",
         "ListBackupPlanTemplates",
         "ListBackupPlanVersions",
         "ListBackupPlans",
         "ListBackupSelections",
         "ListBackupVaults",
+        "ListCopyJobSummaries",
         "ListCopyJobs",
         "ListFrameworks",
         "ListLegalHolds",
@@ -1747,6 +1749,7 @@
         "ListRecoveryPointsByResource",
         "ListReportJobs",
         "ListReportPlans",
+        "ListRestoreJobSummaries",
         "ListRestoreJobs",
         "ListTags",
         "PutBackupVaultAccessPolicy",
@@ -5457,7 +5460,7 @@
       "name": "Amazon Connect Wisdom",
       "servicePrefix": "wisdom",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectwisdom.html",
-      "actionsCount": 41,
+      "actionsCount": 42,
       "actions": [
         "CreateAssistant",
         "CreateAssistantAssociation",
@@ -5488,6 +5491,7 @@
         "ListQuickResponses",
         "ListTagsForResource",
         "NotifyRecommendationsReceived",
+        "PutFeedback",
         "QueryAssistant",
         "RemoveKnowledgeBaseTemplateUri",
         "SearchContent",
@@ -5567,7 +5571,7 @@
       "name": "AWS Control Tower",
       "servicePrefix": "controltower",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscontroltower.html",
-      "actionsCount": 43,
+      "actionsCount": 46,
       "actions": [
         "CreateManagedAccount",
         "DeleteLandingZone",
@@ -5608,17 +5612,24 @@
         "ListManagedAccountsForParent",
         "ListManagedOrganizationalUnits",
         "ListManagedOrganizationalUnitsForGuardrail",
+        "ListTagsForResource",
         "ManageOrganizationalUnit",
         "PerformPreLaunchChecks",
         "SetupLandingZone",
+        "TagResource",
+        "UntagResource",
         "UpdateAccountFactoryConfig"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
         "EnabledControl"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "AWS Cost and Usage Report",
@@ -5647,7 +5658,7 @@
       "name": "AWS Cost Explorer Service",
       "servicePrefix": "ce",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostexplorerservice.html",
-      "actionsCount": 50,
+      "actionsCount": 51,
       "actions": [
         "CreateAnomalyMonitor",
         "CreateAnomalySubscription",
@@ -5665,6 +5676,7 @@
         "GetAnomalies",
         "GetAnomalyMonitors",
         "GetAnomalySubscriptions",
+        "GetApproximateUsageRecords",
         "GetConsoleActionSetEnforced",
         "GetCostAndUsage",
         "GetCostAndUsageWithResources",
@@ -9856,7 +9868,7 @@
       "name": "Amazon FinSpace",
       "servicePrefix": "finspace",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfinspace.html",
-      "actionsCount": 43,
+      "actionsCount": 44,
       "actions": [
         "ConnectKxCluster",
         "CreateEnvironment",
@@ -9895,6 +9907,7 @@
         "TagResource",
         "UntagResource",
         "UpdateEnvironment",
+        "UpdateKxClusterCodeConfiguration",
         "UpdateKxClusterDatabases",
         "UpdateKxDatabase",
         "UpdateKxEnvironment",
@@ -18330,7 +18343,7 @@
       "name": "Amazon Redshift",
       "servicePrefix": "redshift",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshift.html",
-      "actionsCount": 142,
+      "actionsCount": 146,
       "actions": [
         "AcceptReservedNodeExchange",
         "AddPartner",
@@ -18376,6 +18389,7 @@
         "DeleteHsmClientCertificate",
         "DeleteHsmConfiguration",
         "DeletePartner",
+        "DeleteResourcePolicy",
         "DeleteSavedQueries",
         "DeleteScheduledAction",
         "DeleteSnapshotCopyGrant",
@@ -18405,6 +18419,7 @@
         "DescribeEvents",
         "DescribeHsmClientCertificates",
         "DescribeHsmConfigurations",
+        "DescribeInboundIntegrations",
         "DescribeLoggingStatus",
         "DescribeNodeConfigurationOptions",
         "DescribeOrderableClusterOptions",
@@ -18435,6 +18450,7 @@
         "GetClusterCredentialsWithIAM",
         "GetReservedNodeExchangeConfigurationOptions",
         "GetReservedNodeExchangeOfferings",
+        "GetResourcePolicy",
         "JoinGroup",
         "ListDatabases",
         "ListSavedQueries",
@@ -18460,6 +18476,7 @@
         "ModifyUsageLimit",
         "PauseCluster",
         "PurchaseReservedNodeOffering",
+        "PutResourcePolicy",
         "RebootCluster",
         "RejectDataShare",
         "ResetClusterParameterGroup",
@@ -18496,7 +18513,7 @@
         "subnetgroup",
         "usagelimit"
       ],
-      "conditionKeysCount": 8,
+      "conditionKeysCount": 9,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -18505,7 +18522,8 @@
         "redshift:ConsumerIdentifier",
         "redshift:DbName",
         "redshift:DbUser",
-        "redshift:DurationSeconds"
+        "redshift:DurationSeconds",
+        "redshift:InboundIntegrationArn"
       ]
     },
     {
@@ -18852,7 +18870,7 @@
       "name": "AWS Resource Explorer",
       "servicePrefix": "resource-explorer-2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourceexplorer.html",
-      "actionsCount": 19,
+      "actionsCount": 21,
       "actions": [
         "AssociateDefaultView",
         "BatchGetView",
@@ -18861,10 +18879,12 @@
         "DeleteIndex",
         "DeleteView",
         "DisassociateDefaultView",
+        "GetAccountLevelServiceConfiguration",
         "GetDefaultView",
         "GetIndex",
         "GetView",
         "ListIndexes",
+        "ListIndexesForMembers",
         "ListSupportedResourceTypes",
         "ListTagsForResource",
         "ListViews",
@@ -19429,7 +19449,7 @@
       "name": "Amazon S3",
       "servicePrefix": "s3",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html",
-      "actionsCount": 130,
+      "actionsCount": 138,
       "actions": [
         "AbortMultipartUpload",
         "BypassGovernanceRetention",
@@ -19438,6 +19458,7 @@
         "CreateBucket",
         "CreateJob",
         "CreateMultiRegionAccessPoint",
+        "CreateStorageLensGroup",
         "DeleteAccessPoint",
         "DeleteAccessPointForObjectLambda",
         "DeleteAccessPointPolicy",
@@ -19453,6 +19474,7 @@
         "DeleteObjectVersionTagging",
         "DeleteStorageLensConfiguration",
         "DeleteStorageLensConfigurationTagging",
+        "DeleteStorageLensGroup",
         "DescribeJob",
         "DescribeMultiRegionAccessPointOperation",
         "GetAccelerateConfiguration",
@@ -19506,6 +19528,7 @@
         "GetStorageLensConfiguration",
         "GetStorageLensConfigurationTagging",
         "GetStorageLensDashboard",
+        "GetStorageLensGroup",
         "InitiateReplication",
         "ListAccessPoints",
         "ListAccessPointsForObjectLambda",
@@ -19517,6 +19540,8 @@
         "ListMultiRegionAccessPoints",
         "ListMultipartUploadParts",
         "ListStorageLensConfigurations",
+        "ListStorageLensGroups",
+        "ListTagsForResource",
         "ObjectOwnerOverrideToBucketOwner",
         "PutAccelerateConfiguration",
         "PutAccessPointConfigurationForObjectLambda",
@@ -19559,16 +19584,20 @@
         "ReplicateTags",
         "RestoreObject",
         "SubmitMultiRegionAccessPointRoutes",
+        "TagResource",
+        "UntagResource",
         "UpdateJobPriority",
-        "UpdateJobStatus"
+        "UpdateJobStatus",
+        "UpdateStorageLensGroup"
       ],
-      "resourceTypesCount": 8,
+      "resourceTypesCount": 9,
       "resourceTypes": [
         "accesspoint",
         "bucket",
         "object",
         "job",
         "storagelensconfiguration",
+        "storagelensgroup",
         "objectlambdaaccesspoint",
         "multiregionaccesspoint",
         "multiregionaccesspointrequestarn"
@@ -21663,7 +21692,7 @@
       "name": "AWS Step Functions",
       "servicePrefix": "states",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsstepfunctions.html",
-      "actionsCount": 34,
+      "actionsCount": 35,
       "actions": [
         "CreateActivity",
         "CreateStateMachine",
@@ -21688,6 +21717,7 @@
         "ListStateMachines",
         "ListTagsForResource",
         "PublishStateMachineVersion",
+        "RedriveExecution",
         "SendTaskFailure",
         "SendTaskHeartbeat",
         "SendTaskSuccess",
@@ -21700,7 +21730,7 @@
         "UpdateStateMachine",
         "UpdateStateMachineAlias"
       ],
-      "resourceTypesCount": 7,
+      "resourceTypesCount": 8,
       "resourceTypes": [
         "activity",
         "execution",
@@ -21708,7 +21738,8 @@
         "statemachine",
         "statemachineversion",
         "statemachinealias",
-        "maprun"
+        "maprun",
+        "labelled execution"
       ],
       "conditionKeysCount": 4,
       "conditionKeys": [
@@ -22193,8 +22224,9 @@
       "name": "AWS Systems Manager Incident Manager",
       "servicePrefix": "ssm-incidents",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerincidentmanager.html",
-      "actionsCount": 29,
+      "actionsCount": 31,
       "actions": [
+        "BatchGetIncidentFindings",
         "CreateReplicationSet",
         "CreateResponsePlan",
         "CreateTimelineEvent",
@@ -22208,6 +22240,7 @@
         "GetResourcePolicies",
         "GetResponsePlan",
         "GetTimelineEvent",
+        "ListIncidentFindings",
         "ListIncidentRecords",
         "ListRelatedItems",
         "ListReplicationSets",
