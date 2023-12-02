@@ -2,22 +2,26 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 8601
+      "value": 8957
     },
     {
       "key": "Read Actions",
-      "value": 4185
+      "value": 4363
     },
     {
       "key": "List Actions",
-      "value": 2475
+      "value": 2596
     },
     {
       "key": "Permissions Actions",
-      "value": 244
+      "value": 247
     }
   ],
   "Longest action names": [
+    {
+      "key": "codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication",
+      "value": 69
+    },
     {
       "key": "servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact",
       "value": 69
@@ -52,10 +56,6 @@
     },
     {
       "key": "iotwireless:StartBulkDisassociateWirelessDeviceFromMulticastGroup",
-      "value": 65
-    },
-    {
-      "key": "license-manager-user-subscriptions:UpdateIdentityProviderSettings",
       "value": 65
     }
   ],
@@ -150,7 +150,7 @@
     },
     {
       "key": "instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}",
-      "value": 86
+      "value": 91
     },
     {
       "key": "userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId}",
@@ -195,6 +195,10 @@
       "value": 1
     },
     {
+      "key": "AWS IAM Identity Center OIDC service",
+      "value": 1
+    },
+    {
       "key": "AWS Marketplace Discovery",
       "value": 1
     },
@@ -221,20 +225,16 @@
     {
       "key": "Amazon CodeGuru",
       "value": 1
-    },
-    {
-      "key": "Amazon FinSpace API",
-      "value": 1
     }
   ],
   "Services with most actions": [
     {
       "key": "Amazon EC2",
-      "value": 616
+      "value": 631
     },
     {
       "key": "Amazon SageMaker",
-      "value": 337
+      "value": 344
     },
     {
       "key": "Amazon Chime",
@@ -246,15 +246,15 @@
     },
     {
       "key": "Amazon Connect",
-      "value": 227
+      "value": 235
     },
     {
       "key": "AWS Glue",
-      "value": 211
+      "value": 214
     },
     {
       "key": "Amazon QuickSight",
-      "value": 187
+      "value": 193
     },
     {
       "key": "AWS Identity and Access Management (IAM)",
@@ -265,8 +265,8 @@
       "value": 159
     },
     {
-      "key": "Amazon RDS",
-      "value": 157
+      "key": "Amazon S3",
+      "value": 158
     }
   ],
   "Shortest action names": [
@@ -355,6 +355,10 @@
   ],
   "Shortest service prefixes": [
     {
+      "key": "q",
+      "value": 1
+    },
+    {
       "key": "ce",
       "value": 2
     },
@@ -387,18 +391,14 @@
       "value": 2
     },
     {
-      "key": "a2c",
-      "value": 3
-    },
-    {
-      "key": "a4b",
-      "value": 3
+      "key": "ts",
+      "value": 2
     }
   ],
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 384
+      "value": 402
     },
     {
       "key": "Average number of actions per service",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1588
+      "value": 1659
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 828
+      "value": 855
     }
   ]
 }

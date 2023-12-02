@@ -1,17 +1,17 @@
 report_name,metric_name,value
-Actions by type,Write Actions,8601
-Actions by type,Read Actions,4185
-Actions by type,List Actions,2475
-Actions by type,Permissions Actions,244
+Actions by type,Write Actions,8957
+Actions by type,Read Actions,4363
+Actions by type,List Actions,2596
+Actions by type,Permissions Actions,247
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
-Longest action names,aws-marketplace-management:GetAdditionalSellerNotificationRecipients,68
+Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
 Longest action names,servicecatalog:NotifyTerminateProvisionedProductEngineWorkflowResult,68
 Longest action names,aws-marketplace-management:PutAdditionalSellerNotificationRecipients,68
+Longest action names,aws-marketplace-management:GetAdditionalSellerNotificationRecipients,68
 Longest action names,ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations,67
 Longest action names,vendor-insights:UpdateSecurityProfileSnapshotCreationConfiguration,66
 Longest action names,servicecatalog:BatchAssociateServiceActionWithProvisioningArtifact,66
 Longest action names,license-manager-linux-subscriptions:ListLinuxSubscriptionInstances,66
-Longest action names,license-manager-user-subscriptions:UpdateIdentityProviderSettings,65
 Longest action names,iotwireless:StartBulkDisassociateWirelessDeviceFromMulticastGroup,65
 Longest condition key names,payment-cryptography:CertificateAuthorityPublicKeyIdentifier,60
 Longest condition key names,route53:ChangeResourceRecordSetsNormalizedRecordNames,53
@@ -34,7 +34,7 @@ Longest service prefixes,application-transformation,26
 Longest service prefixes,aws-marketplace-management,26
 Longest service prefixes,codedeploy-commands-secure,26
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},130
-Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},86
+Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},91
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},82
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},80
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},71
@@ -44,25 +44,25 @@ Most referenced resource ARNs,index - arn:${Partition}:kendra:${Region}:${Accoun
 Most referenced resource ARNs,hub - arn:${Partition}:securityhub:${Region}:${Account}:hub/default,61
 Most referenced resource ARNs,app-instance-user - arn:${Partition}:chime:${Region}:${AccountId}:app-instance/${AppInstanceId}/user/${AppInstanceUserId},55
 Services with least actions,AWS Elemental Support Content,1
+Services with least actions,AWS Sustainability,1
 Services with least actions,AWS Verified Access,1
 Services with least actions,Amazon CodeGuru,1
-Services with least actions,Amazon FinSpace API,1
 Services with least actions,AWS CloudTrail Data,1
-Services with least actions,AWS Sustainability,1
 Services with least actions,AWS Microservice Extractor for .NET,1
 Services with least actions,AWS Marketplace Seller Reporting,1
 Services with least actions,AWS Marketplace Entitlement Service,1
 Services with least actions,AWS Marketplace Discovery,1
-Services with most actions,Amazon EC2,616
-Services with most actions,Amazon SageMaker,337
+Services with least actions,AWS IAM Identity Center OIDC service,1
+Services with most actions,Amazon EC2,631
+Services with most actions,Amazon SageMaker,344
 Services with most actions,Amazon Chime,309
 Services with most actions,AWS IoT,266
-Services with most actions,Amazon Connect,227
-Services with most actions,AWS Glue,211
-Services with most actions,Amazon QuickSight,187
+Services with most actions,Amazon Connect,235
+Services with most actions,AWS Glue,214
+Services with most actions,Amazon QuickSight,193
 Services with most actions,AWS Identity and Access Management (IAM),171
 Services with most actions,Amazon Lightsail,159
-Services with most actions,Amazon RDS,157
+Services with most actions,Amazon S3,158
 Shortest action names,iq:EndCall,10
 Shortest action names,ce:GetTags,10
 Shortest action names,es:AddTags,10
@@ -83,18 +83,18 @@ Shortest condition key names,swf:name,8
 Shortest condition key names,ec2:Vpc,7
 Shortest condition key names,rds:Vpc,7
 Shortest condition key names,saml:cn,7
-Shortest service prefixes,a4b,3
-Shortest service prefixes,a2c,3
-Shortest service prefixes,m2,2
-Shortest service prefixes,ce,2
-Shortest service prefixes,es,2
 Shortest service prefixes,iq,2
 Shortest service prefixes,ds,2
+Shortest service prefixes,es,2
+Shortest service prefixes,ce,2
+Shortest service prefixes,ts,2
 Shortest service prefixes,s3,2
 Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
-Summary,Total number of distinct resource ARNS,1588
-Summary,Total number of distinct condition keys,828
-Summary,Total number of services,384
+Shortest service prefixes,m2,2
+Shortest service prefixes,q,1
+Summary,Total number of distinct resource ARNS,1659
+Summary,Total number of distinct condition keys,855
+Summary,Total number of services,402
 Summary,Average number of actions per service,40
 Summary,Median number of actions per service,28
