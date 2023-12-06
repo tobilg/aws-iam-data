@@ -230,7 +230,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 229,70,testgrid-project,https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_TestGridProject.html,arn:${Partition}:devicefarm:${Region}:${Account}:testgrid-project:${ResourceId}
 230,70,testgrid-session,https://docs.aws.amazon.com/devicefarm/latest/APIReference/API_TestGridSession.html,arn:${Partition}:devicefarm:${Region}:${Account}:testgrid-session:${ResourceId}
 231,71,execution,https://docs.aws.amazon.com/diagnostic-tools/latest/APIReference/API_Execution.html,arn:${Partition}:ts::${Account}:execution/${UserId}/${ToolId}/${ExecutionId}
-232,71,tool,https://docs.aws.amazon.com/diagnostic-tools/latest/APIReference/API_Tool.html,arn:${Partition}:ts::tool/${ToolId}
+232,71,tool,https://docs.aws.amazon.com/diagnostic-tools/latest/APIReference/API_Tool.html,arn:${Partition}:ts::aws:tool/${ToolId}
 233,72,dxcon,https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Connection.html,arn:${Partition}:directconnect:${Region}:${Account}:dxcon/${ConnectionId}
 234,72,dxlag,https://docs.aws.amazon.com/directconnect/latest/APIReference/API_Lag.html,arn:${Partition}:directconnect:${Region}:${Account}:dxlag/${LagId}
 235,72,dxvif,https://docs.aws.amazon.com/directconnect/latest/APIReference/API_VirtualInterface.html,arn:${Partition}:directconnect:${Region}:${Account}:dxvif/${VirtualInterfaceId}
@@ -367,10 +367,10 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 366,102,ArchiveRule,https://docs.aws.amazon.com/IAM/latest/UserGuide/access-analyzer-getting-started.html#permission-resources,arn:${Partition}:access-analyzer:${Region}:${Account}:analyzer/${AnalyzerName}/archive-rule/${RuleName}
 367,103,PermissionSet,https://docs.aws.amazon.com/singlesignon/latest/userguide/permissionsetsconcept.html,arn:${Partition}:sso:::permissionSet/${InstanceId}/${PermissionSetId}
 368,103,Account,https://docs.aws.amazon.com/singlesignon/latest/userguide/manage-your-accounts.html,arn:${Partition}:sso:::account/${AccountId}
-369,103,Instance,https://docs.aws.amazon.com/singlesignon/latest/userguide/get-started-enable-identity-center.html,arn:${Partition}:sso:::instance/${InstanceId}
-370,103,Application,https://docs.aws.amazon.com/singlesignon/latest/userguide/get-started-enable-identity-center.html,arn:${Partition}:sso::${AccountId}:application/${InstanceId}/${ApplicationId}
-371,103,TrustedTokenIssuer,https://docs.aws.amazon.com/singlesignon/latest/userguide/get-started-enable-identity-center.html,arn:${Partition}:sso::${AccountId}:trustedTokenIssuer/${InstanceId}/${TrustedTokenIssuerId}
-372,103,ApplicationProvider,https://docs.aws.amazon.com/singlesignon/latest/userguide/get-started-enable-identity-center.html,arn:${Partition}:sso::aws:applicationProvider/${ApplicationProviderId}
+369,103,Instance,https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_InstanceMetadata.html,arn:${Partition}:sso:::instance/${InstanceId}
+370,103,Application,https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_Application.html,arn:${Partition}:sso::${AccountId}:application/${InstanceId}/${ApplicationId}
+371,103,TrustedTokenIssuer,https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_TrustedTokenIssuerMetadata.html,arn:${Partition}:sso::${AccountId}:trustedTokenIssuer/${InstanceId}/${TrustedTokenIssuerId}
+372,103,ApplicationProvider,https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_ApplicationProvider.html,arn:${Partition}:sso::aws:applicationProvider/${ApplicationProviderId}
 373,105,Application,https://docs.aws.amazon.com/singlesignon/latest/userguide/get-started-enable-identity-center.html,arn:${Partition}:sso::${AccountId}:application/${InstanceId}/${ApplicationId}
 374,106,conversation,https://aws.amazon.com/iq/,arn:${Partition}:iq:${Region}::conversation/${ConversationId}
 375,106,buyer,https://aws.amazon.com/iq/,arn:${Partition}:iq:${Region}::buyer/${BuyerId}

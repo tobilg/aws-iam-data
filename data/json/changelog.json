@@ -1,5 +1,87 @@
 [
   {
+    "dateOfChange": "2023-12-06",
+    "addedServices": [
+      "AWS Fault Injection Service"
+    ],
+    "removedServices": [
+      "AWS Fault Injection Simulator"
+    ],
+    "addedActions": {
+      "AWS Glue": [
+        "glue:BatchGetTableOptimizer",
+        "glue:CreateTableOptimizer",
+        "glue:DeleteTableOptimizer",
+        "glue:GetColumnStatisticsTaskRun",
+        "glue:GetColumnStatisticsTaskRuns",
+        "glue:GetTableOptimizer",
+        "glue:ListColumnStatisticsTaskRuns",
+        "glue:ListTableOptimizerRuns",
+        "glue:PassConnection",
+        "glue:StartColumnStatisticsTaskRun",
+        "glue:StopColumnStatisticsTaskRun",
+        "glue:UpdateTableOptimizer"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:DeleteIdentityPropagationConfig",
+        "quicksight:ListIdentityPropagationConfigs",
+        "quicksight:UpdateIdentityPropagationConfig"
+      ],
+      "AWS Fault Injection Service": [
+        "fis:CreateExperimentTemplate",
+        "fis:CreateTargetAccountConfiguration",
+        "fis:DeleteExperimentTemplate",
+        "fis:DeleteTargetAccountConfiguration",
+        "fis:GetAction",
+        "fis:GetExperiment",
+        "fis:GetExperimentTargetAccountConfiguration",
+        "fis:GetExperimentTemplate",
+        "fis:GetTargetAccountConfiguration",
+        "fis:GetTargetResourceType",
+        "fis:InjectApiInternalError",
+        "fis:InjectApiThrottleError",
+        "fis:InjectApiUnavailableError",
+        "fis:ListActions",
+        "fis:ListExperimentResolvedTargets",
+        "fis:ListExperimentTargetAccountConfigurations",
+        "fis:ListExperimentTemplates",
+        "fis:ListExperiments",
+        "fis:ListTagsForResource",
+        "fis:ListTargetAccountConfigurations",
+        "fis:ListTargetResourceTypes",
+        "fis:StartExperiment",
+        "fis:StopExperiment",
+        "fis:TagResource",
+        "fis:UntagResource",
+        "fis:UpdateExperimentTemplate",
+        "fis:UpdateTargetAccountConfiguration"
+      ]
+    },
+    "removedActions": {
+      "AWS Fault Injection Simulator": [
+        "fis:CreateExperimentTemplate",
+        "fis:DeleteExperimentTemplate",
+        "fis:GetAction",
+        "fis:GetExperiment",
+        "fis:GetExperimentTemplate",
+        "fis:GetTargetResourceType",
+        "fis:InjectApiInternalError",
+        "fis:InjectApiThrottleError",
+        "fis:InjectApiUnavailableError",
+        "fis:ListActions",
+        "fis:ListExperimentTemplates",
+        "fis:ListExperiments",
+        "fis:ListTagsForResource",
+        "fis:ListTargetResourceTypes",
+        "fis:StartExperiment",
+        "fis:StopExperiment",
+        "fis:TagResource",
+        "fis:UntagResource",
+        "fis:UpdateExperimentTemplate"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2023-12-02",
     "addedServices": [
       "AWS B2B Data Interchange",

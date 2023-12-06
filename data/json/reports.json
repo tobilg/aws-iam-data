@@ -2,15 +2,15 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 8957
+      "value": 8967
     },
     {
       "key": "Read Actions",
-      "value": 4363
+      "value": 4371
     },
     {
       "key": "List Actions",
-      "value": 2596
+      "value": 2601
     },
     {
       "key": "Permissions Actions",
@@ -181,8 +181,8 @@
       "value": 61
     },
     {
-      "key": "app-instance-user - arn:${Partition}:chime:${Region}:${AccountId}:app-instance/${AppInstanceId}/user/${AppInstanceUserId}",
-      "value": 55
+      "key": "catalog - arn:${Partition}:glue:${Region}:${Account}:catalog",
+      "value": 59
     }
   ],
   "Services with least actions": [
@@ -250,11 +250,11 @@
     },
     {
       "key": "AWS Glue",
-      "value": 214
+      "value": 226
     },
     {
       "key": "Amazon QuickSight",
-      "value": 193
+      "value": 196
     },
     {
       "key": "AWS Identity and Access Management (IAM)",

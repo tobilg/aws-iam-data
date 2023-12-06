@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,8957
-Actions by type,Read Actions,4363
-Actions by type,List Actions,2596
+Actions by type,Write Actions,8967
+Actions by type,Read Actions,4371
+Actions by type,List Actions,2601
 Actions by type,Permissions Actions,247
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -42,7 +42,7 @@ Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Accoun
 Most referenced resource ARNs,stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/,66
 Most referenced resource ARNs,index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId},64
 Most referenced resource ARNs,hub - arn:${Partition}:securityhub:${Region}:${Account}:hub/default,61
-Most referenced resource ARNs,app-instance-user - arn:${Partition}:chime:${Region}:${AccountId}:app-instance/${AppInstanceId}/user/${AppInstanceUserId},55
+Most referenced resource ARNs,catalog - arn:${Partition}:glue:${Region}:${Account}:catalog,59
 Services with least actions,AWS Elemental Support Content,1
 Services with least actions,AWS Sustainability,1
 Services with least actions,AWS Verified Access,1
@@ -58,8 +58,8 @@ Services with most actions,Amazon SageMaker,344
 Services with most actions,Amazon Chime,309
 Services with most actions,AWS IoT,266
 Services with most actions,Amazon Connect,235
-Services with most actions,AWS Glue,214
-Services with most actions,Amazon QuickSight,193
+Services with most actions,AWS Glue,226
+Services with most actions,Amazon QuickSight,196
 Services with most actions,AWS Identity and Access Management (IAM),171
 Services with most actions,Amazon Lightsail,159
 Services with most actions,Amazon S3,158
