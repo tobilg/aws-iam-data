@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2023-12-09",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Athena": [
+        "athena:CancelQueryExecution",
+        "athena:GetCatalogs",
+        "athena:GetExecutionEngine",
+        "athena:GetExecutionEngines",
+        "athena:GetNamespace",
+        "athena:GetNamespaces",
+        "athena:GetQueryExecutions",
+        "athena:GetTable",
+        "athena:GetTables",
+        "athena:RunQuery"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-12-08",
     "addedServices": [],
     "removedServices": [],
