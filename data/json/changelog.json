@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2023-12-15",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon EC2 Image Builder": [
+        "imagebuilder:CreateWorkflow",
+        "imagebuilder:DeleteWorkflow",
+        "imagebuilder:GetWorkflow",
+        "imagebuilder:ListWaitingWorkflowSteps",
+        "imagebuilder:ListWorkflowBuildVersions",
+        "imagebuilder:ListWorkflows",
+        "imagebuilder:SendWorkflowStepAction"
+      ],
+      "Amazon Monitron": [
+        "monitron:CreateProjectUserAssociation",
+        "monitron:CreateUserAccessRoleAssociation",
+        "monitron:DeleteProjectUserAssociation",
+        "monitron:DeleteUserAccessRoleAssociation",
+        "monitron:ListProjectUserAssociations",
+        "monitron:ListUserAccessRoleAssociations"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-12-13",
     "addedServices": [],
     "removedServices": [],
