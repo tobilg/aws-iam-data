@@ -2177,7 +2177,7 @@
       "name": "AWS Billing Conductor",
       "servicePrefix": "billingconductor",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingconductor.html",
-      "actionsCount": 31,
+      "actionsCount": 32,
       "actions": [
         "AssociateAccounts",
         "AssociatePricingRules",
@@ -2193,6 +2193,7 @@
         "DeletePricingRule",
         "DisassociateAccounts",
         "DisassociatePricingRules",
+        "GetBillingGroupCostReport",
         "ListAccountAssociations",
         "ListBillingGroupCostReports",
         "ListBillingGroups",
