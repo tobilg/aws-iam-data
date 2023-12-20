@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,8987
-Actions by type,Read Actions,4387
-Actions by type,List Actions,2612
+Actions by type,Write Actions,8996
+Actions by type,Read Actions,4388
+Actions by type,List Actions,2615
 Actions by type,Permissions Actions,251
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -34,7 +34,7 @@ Longest service prefixes,application-transformation,26
 Longest service prefixes,aws-marketplace-management,26
 Longest service prefixes,codedeploy-commands-secure,26
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},130
-Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},92
+Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},94
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},82
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},80
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},75
@@ -57,7 +57,7 @@ Services with most actions,Amazon EC2,631
 Services with most actions,Amazon SageMaker,344
 Services with most actions,Amazon Chime,309
 Services with most actions,AWS IoT,266
-Services with most actions,Amazon Connect,236
+Services with most actions,Amazon Connect,240
 Services with most actions,AWS Glue,226
 Services with most actions,Amazon QuickSight,196
 Services with most actions,AWS Identity and Access Management (IAM),171
@@ -93,8 +93,8 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1666
-Summary,Total number of distinct condition keys,855
+Summary,Total number of distinct resource ARNS,1668
+Summary,Total number of distinct condition keys,864
 Summary,Total number of services,402
 Summary,Average number of actions per service,40
 Summary,Median number of actions per service,28

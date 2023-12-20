@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2023-12-20",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect": [
+        "connect:PauseContact",
+        "connect:ResumeContact",
+        "connect:TagContact",
+        "connect:UntagContact"
+      ],
+      "Amazon Elastic Kubernetes Service": [
+        "eks:AssociateAccessPolicy",
+        "eks:CreateAccessEntry",
+        "eks:DeleteAccessEntry",
+        "eks:DescribeAccessEntry",
+        "eks:DisassociateAccessPolicy",
+        "eks:ListAccessEntries",
+        "eks:ListAccessPolicies",
+        "eks:ListAssociatedAccessPolicies",
+        "eks:UpdateAccessEntry"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-12-16",
     "addedServices": [],
     "removedServices": [],
