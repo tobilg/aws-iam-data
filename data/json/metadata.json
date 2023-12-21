@@ -1494,8 +1494,11 @@
         "agreement",
         "report"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 2,
+      "conditionKeys": [
+        "artifact:ReportCategory",
+        "artifact:ReportSeries"
+      ]
     },
     {
       "name": "Amazon Athena",
@@ -10719,7 +10722,7 @@
       "name": "Amazon FSx",
       "servicePrefix": "fsx",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfsx.html",
-      "actionsCount": 50,
+      "actionsCount": 53,
       "actions": [
         "AssociateFileGateway",
         "AssociateFileSystemAliases",
@@ -10741,6 +10744,7 @@
         "DeleteDataRepositoryAssociation",
         "DeleteFileCache",
         "DeleteFileSystem",
+        "DeleteResourcePolicy",
         "DeleteSnapshot",
         "DeleteStorageVirtualMachine",
         "DeleteVolume",
@@ -10757,8 +10761,10 @@
         "DescribeVolumes",
         "DisassociateFileGateway",
         "DisassociateFileSystemAliases",
+        "GetResourcePolicy",
         "ListTagsForResource",
         "ManageBackupPrincipalAssociations",
+        "PutResourcePolicy",
         "ReleaseFileSystemNfsV3Locks",
         "RestoreVolumeFromSnapshot",
         "StartMisconfiguredStateRecovery",
@@ -18760,7 +18766,7 @@
       "name": "Amazon QuickSight",
       "servicePrefix": "quicksight",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonquicksight.html",
-      "actionsCount": 196,
+      "actionsCount": 197,
       "actions": [
         "AccountConfigurations",
         "CancelIngestion",
@@ -18930,6 +18936,7 @@
         "UpdateAnalysisPermissions",
         "UpdateCustomPermissions",
         "UpdateDashboard",
+        "UpdateDashboardLinks",
         "UpdateDashboardPermissions",
         "UpdateDashboardPublishedVersion",
         "UpdateDataSet",

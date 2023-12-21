@@ -1,5 +1,21 @@
 [
   {
+    "dateOfChange": "2023-12-21",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon FSx": [
+        "fsx:DeleteResourcePolicy",
+        "fsx:GetResourcePolicy",
+        "fsx:PutResourcePolicy"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:UpdateDashboardLinks"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-12-20",
     "addedServices": [],
     "removedServices": [],
