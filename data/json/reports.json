@@ -1,16 +1,16 @@
 {
   "Actions by type": [
     {
-      "key": "Read Actions",
-      "value": 4388
+      "key": "Write Actions",
+      "value": 9014
     },
     {
-      "key": "Write Actions",
-      "value": 8997
+      "key": "Read Actions",
+      "value": 4395
     },
     {
       "key": "List Actions",
-      "value": 2615
+      "value": 2619
     },
     {
       "key": "Permissions Actions",
@@ -150,7 +150,7 @@
     },
     {
       "key": "instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}",
-      "value": 94
+      "value": 100
     },
     {
       "key": "userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId}",
@@ -158,7 +158,7 @@
     },
     {
       "key": "repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName}",
-      "value": 80
+      "value": 81
     },
     {
       "key": "bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}",
@@ -234,7 +234,7 @@
     },
     {
       "key": "Amazon SageMaker",
-      "value": 344
+      "value": 345
     },
     {
       "key": "Amazon Chime",
@@ -246,7 +246,7 @@
     },
     {
       "key": "Amazon Connect",
-      "value": 240
+      "value": 247
     },
     {
       "key": "AWS Glue",
@@ -261,12 +261,12 @@
       "value": 171
     },
     {
-      "key": "Amazon Lightsail",
-      "value": 159
+      "key": "Amazon RDS",
+      "value": 161
     },
     {
-      "key": "Amazon S3",
-      "value": 158
+      "key": "Amazon Lightsail",
+      "value": 159
     }
   ],
   "Shortest action names": [
@@ -398,7 +398,7 @@
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 402
+      "value": 403
     },
     {
       "key": "Average number of actions per service",
@@ -406,15 +406,15 @@
     },
     {
       "key": "Median number of actions per service",
-      "value": 28
+      "value": 27
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1668
+      "value": 1670
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 866
+      "value": 868
     }
   ]
 }

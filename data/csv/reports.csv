@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,8997
-Actions by type,Read Actions,4388
-Actions by type,List Actions,2615
+Actions by type,Write Actions,9014
+Actions by type,Read Actions,4395
+Actions by type,List Actions,2619
 Actions by type,Permissions Actions,254
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -34,9 +34,9 @@ Longest service prefixes,application-transformation,26
 Longest service prefixes,aws-marketplace-management,26
 Longest service prefixes,codedeploy-commands-secure,26
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},130
-Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},94
+Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},100
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},82
-Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},80
+Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},81
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},75
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},67
 Most referenced resource ARNs,stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/,66
@@ -54,15 +54,15 @@ Services with least actions,AWS Marketplace Entitlement Service,1
 Services with least actions,AWS Marketplace Discovery,1
 Services with least actions,AWS IAM Identity Center OIDC service,1
 Services with most actions,Amazon EC2,631
-Services with most actions,Amazon SageMaker,344
+Services with most actions,Amazon SageMaker,345
 Services with most actions,Amazon Chime,309
 Services with most actions,AWS IoT,266
-Services with most actions,Amazon Connect,240
+Services with most actions,Amazon Connect,247
 Services with most actions,AWS Glue,226
 Services with most actions,Amazon QuickSight,197
 Services with most actions,AWS Identity and Access Management (IAM),171
+Services with most actions,Amazon RDS,161
 Services with most actions,Amazon Lightsail,159
-Services with most actions,Amazon S3,158
 Shortest action names,iq:EndCall,10
 Shortest action names,ce:GetTags,10
 Shortest action names,es:AddTags,10
@@ -93,8 +93,8 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1668
-Summary,Total number of distinct condition keys,866
-Summary,Total number of services,402
+Summary,Total number of distinct resource ARNS,1670
+Summary,Total number of distinct condition keys,868
+Summary,Total number of services,403
 Summary,Average number of actions per service,40
-Summary,Median number of actions per service,28
+Summary,Median number of actions per service,27

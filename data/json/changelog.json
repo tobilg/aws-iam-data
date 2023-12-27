@@ -1,5 +1,57 @@
 [
   {
+    "dateOfChange": "2023-12-27",
+    "addedServices": [
+      "Amazon CloudWatch Network Monitor"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS CodeCommit": [
+        "codecommit:UpdateRepositoryEncryptionKey"
+      ],
+      "Amazon Connect": [
+        "connect:AssociateUserProficiencies",
+        "connect:DisassociateUserProficiencies",
+        "connect:ListUserProficiencies",
+        "connect:SearchContacts",
+        "connect:SearchPredefinedAttributes",
+        "connect:UpdateContactRoutingData",
+        "connect:UpdateUserProficiencies"
+      ],
+      "Amazon Elastic Kubernetes Service": [
+        "eks:DescribeInsight",
+        "eks:ListInsights"
+      ],
+      "Amazon GuardDuty": [
+        "guardduty:GetOrganizationStatistics"
+      ],
+      "Amazon RDS": [
+        "rds:DescribeDBRecommendations",
+        "rds:DisableHttpEndpoint",
+        "rds:EnableHttpEndpoint",
+        "rds:ModifyDBRecommendation"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:DeleteCompilationJob"
+      ],
+      "Amazon CloudWatch Network Monitor": [
+        "networkmonitor:CreateMonitor",
+        "networkmonitor:CreateProbe",
+        "networkmonitor:DeleteMonitor",
+        "networkmonitor:DeleteProbe",
+        "networkmonitor:GetMonitor",
+        "networkmonitor:GetProbe",
+        "networkmonitor:ListMonitors",
+        "networkmonitor:ListTagsForResource",
+        "networkmonitor:TagResource",
+        "networkmonitor:UntagResource",
+        "networkmonitor:UpdateMonitor",
+        "networkmonitor:UpdateProbe"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-12-21",
     "addedServices": [],
     "removedServices": [],

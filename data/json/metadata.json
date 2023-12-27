@@ -1,5 +1,5 @@
 {
-  "serviceCount": 402,
+  "serviceCount": 403,
   "services": [
     {
       "name": "AWS Account Management",
@@ -3912,6 +3912,37 @@
       ]
     },
     {
+      "name": "Amazon CloudWatch Network Monitor",
+      "servicePrefix": "networkmonitor",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchnetworkmonitor.html",
+      "actionsCount": 12,
+      "actions": [
+        "CreateMonitor",
+        "CreateProbe",
+        "DeleteMonitor",
+        "DeleteProbe",
+        "GetMonitor",
+        "GetProbe",
+        "ListMonitors",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateMonitor",
+        "UpdateProbe"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "monitor",
+        "probe"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
       "name": "Amazon CloudWatch Observability Access Manager",
       "servicePrefix": "oam",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchobservabilityaccessmanager.html",
@@ -4213,7 +4244,7 @@
       "name": "AWS CodeCommit",
       "servicePrefix": "codecommit",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodecommit.html",
-      "actionsCount": 89,
+      "actionsCount": 90,
       "actions": [
         "AssociateApprovalRuleTemplateWithRepository",
         "BatchAssociateApprovalRuleTemplateWithRepositories",
@@ -4302,6 +4333,7 @@
         "UpdatePullRequestStatus",
         "UpdatePullRequestTitle",
         "UpdateRepositoryDescription",
+        "UpdateRepositoryEncryptionKey",
         "UpdateRepositoryName",
         "UploadArchive"
       ],
@@ -5292,7 +5324,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 240,
+      "actionsCount": 247,
       "actions": [
         "ActivateEvaluationForm",
         "AssociateApprovedOrigin",
@@ -5308,6 +5340,7 @@
         "AssociateRoutingProfileQueues",
         "AssociateSecurityKey",
         "AssociateTrafficDistributionGroupUser",
+        "AssociateUserProficiencies",
         "BatchAssociateAnalyticsDataSet",
         "BatchDisassociateAnalyticsDataSet",
         "BatchGetFlowAssociation",
@@ -5397,6 +5430,7 @@
         "DisassociateRoutingProfileQueues",
         "DisassociateSecurityKey",
         "DisassociateTrafficDistributionGroupUser",
+        "DisassociateUserProficiencies",
         "DismissUserContact",
         "GetContactAttributes",
         "GetCurrentMetricData",
@@ -5450,6 +5484,7 @@
         "ListTrafficDistributionGroups",
         "ListUseCases",
         "ListUserHierarchyGroups",
+        "ListUserProficiencies",
         "ListUsers",
         "ListViewVersions",
         "ListViews",
@@ -5461,7 +5496,9 @@
         "ResumeContact",
         "ResumeContactRecording",
         "SearchAvailablePhoneNumbers",
+        "SearchContacts",
         "SearchHoursOfOperations",
+        "SearchPredefinedAttributes",
         "SearchPrompts",
         "SearchQueues",
         "SearchQuickConnects",
@@ -5499,6 +5536,7 @@
         "UpdateContactFlowModuleContent",
         "UpdateContactFlowModuleMetadata",
         "UpdateContactFlowName",
+        "UpdateContactRoutingData",
         "UpdateContactSchedule",
         "UpdateEvaluationForm",
         "UpdateHoursOfOperation",
@@ -5530,6 +5568,7 @@
         "UpdateUserHierarchyStructure",
         "UpdateUserIdentityInfo",
         "UpdateUserPhoneConfig",
+        "UpdateUserProficiencies",
         "UpdateUserRoutingProfile",
         "UpdateUserSecurityProfiles",
         "UpdateViewContent",
@@ -5572,7 +5611,7 @@
         "qualified-aws-managed-view",
         "customer-managed-view-version"
       ],
-      "conditionKeysCount": 8,
+      "conditionKeysCount": 9,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -5580,6 +5619,7 @@
         "connect:AttributeType",
         "connect:InstanceId",
         "connect:MonitorCapabilities",
+        "connect:SearchContactsByContactAnalysis",
         "connect:SearchTag/${TagKey}",
         "connect:StorageResourceType"
       ]
@@ -8912,7 +8952,7 @@
       "name": "Amazon Elastic Kubernetes Service",
       "servicePrefix": "eks",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelastickubernetesservice.html",
-      "actionsCount": 55,
+      "actionsCount": 57,
       "actions": [
         "AccessKubernetesApi",
         "AssociateAccessPolicy",
@@ -8941,6 +8981,7 @@
         "DescribeEksAnywhereSubscription",
         "DescribeFargateProfile",
         "DescribeIdentityProviderConfig",
+        "DescribeInsight",
         "DescribeNodegroup",
         "DescribePodIdentityAssociation",
         "DescribeUpdate",
@@ -8954,6 +8995,7 @@
         "ListEksAnywhereSubscriptions",
         "ListFargateProfiles",
         "ListIdentityProviderConfigs",
+        "ListInsights",
         "ListNodegroups",
         "ListPodIdentityAssociations",
         "ListTagsForResource",
@@ -11422,7 +11464,7 @@
       "name": "Amazon GuardDuty",
       "servicePrefix": "guardduty",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonguardduty.html",
-      "actionsCount": 69,
+      "actionsCount": 70,
       "actions": [
         "AcceptAdministratorInvitation",
         "AcceptInvitation",
@@ -11462,6 +11504,7 @@
         "GetMasterAccount",
         "GetMemberDetectors",
         "GetMembers",
+        "GetOrganizationStatistics",
         "GetRemainingFreeTrialDays",
         "GetThreatIntelSet",
         "GetUsageStatistics",
@@ -19007,7 +19050,7 @@
       "name": "Amazon RDS",
       "servicePrefix": "rds",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrds.html",
-      "actionsCount": 157,
+      "actionsCount": 161,
       "actions": [
         "AddRoleToDBCluster",
         "AddRoleToDBInstance",
@@ -19084,6 +19127,7 @@
         "DescribeDBProxyEndpoints",
         "DescribeDBProxyTargetGroups",
         "DescribeDBProxyTargets",
+        "DescribeDBRecommendations",
         "DescribeDBSecurityGroups",
         "DescribeDBSnapshotAttributes",
         "DescribeDBSnapshots",
@@ -19108,8 +19152,10 @@
         "DescribeSourceRegions",
         "DescribeTenantDatabases",
         "DescribeValidDBInstanceModifications",
+        "DisableHttpEndpoint",
         "DownloadCompleteDBLogFile",
         "DownloadDBLogFilePortion",
+        "EnableHttpEndpoint",
         "FailoverDBCluster",
         "FailoverGlobalCluster",
         "ListTagsForResource",
@@ -19126,6 +19172,7 @@
         "ModifyDBProxy",
         "ModifyDBProxyEndpoint",
         "ModifyDBProxyTargetGroup",
+        "ModifyDBRecommendation",
         "ModifyDBSnapshot",
         "ModifyDBSnapshotAttribute",
         "ModifyDBSubnetGroup",
@@ -20894,7 +20941,7 @@
       "name": "Amazon SageMaker",
       "servicePrefix": "sagemaker",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemaker.html",
-      "actionsCount": 344,
+      "actionsCount": 345,
       "actions": [
         "AddAssociation",
         "AddTags",
@@ -20969,6 +21016,7 @@
         "DeleteAssociation",
         "DeleteCluster",
         "DeleteCodeRepository",
+        "DeleteCompilationJob",
         "DeleteContext",
         "DeleteDataQualityJobDefinition",
         "DeleteDeviceFleet",
@@ -21305,7 +21353,7 @@
         "shared-model-event",
         "sagemaker-catalog"
       ],
-      "conditionKeysCount": 45,
+      "conditionKeysCount": 46,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -21316,6 +21364,7 @@
         "sagemaker:CustomerMetadataPropertiesToRemove",
         "sagemaker:DirectInternetAccess",
         "sagemaker:DomainSharingOutputKmsKey",
+        "sagemaker:EnableRemoteDebug",
         "sagemaker:FeatureGroupDisableGlueTableCreation",
         "sagemaker:FeatureGroupEnableOnlineStore",
         "sagemaker:FeatureGroupOfflineStoreConfig",
