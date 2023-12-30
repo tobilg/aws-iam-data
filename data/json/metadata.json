@@ -969,13 +969,16 @@
       "name": "Amazon AppIntegrations",
       "servicePrefix": "app-integrations",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappintegrations.html",
-      "actionsCount": 23,
+      "actionsCount": 27,
       "actions": [
         "CreateApplication",
+        "CreateApplicationAssociation",
         "CreateDataIntegration",
         "CreateDataIntegrationAssociation",
         "CreateEventIntegration",
         "CreateEventIntegrationAssociation",
+        "DeleteApplication",
+        "DeleteApplicationAssociation",
         "DeleteDataIntegration",
         "DeleteDataIntegrationAssociation",
         "DeleteEventIntegration",
@@ -983,6 +986,7 @@
         "GetApplication",
         "GetDataIntegration",
         "GetEventIntegration",
+        "ListApplicationAssociations",
         "ListApplications",
         "ListDataIntegrationAssociations",
         "ListDataIntegrations",
@@ -995,13 +999,14 @@
         "UpdateDataIntegration",
         "UpdateEventIntegration"
       ],
-      "resourceTypesCount": 5,
+      "resourceTypesCount": 6,
       "resourceTypes": [
         "event-integration",
         "event-integration-association",
         "data-integration",
         "data-integration-association",
-        "application"
+        "application",
+        "application-association"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [

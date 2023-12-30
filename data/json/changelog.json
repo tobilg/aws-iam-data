@@ -1,5 +1,19 @@
 [
   {
+    "dateOfChange": "2023-12-30",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon AppIntegrations": [
+        "app-integrations:CreateApplicationAssociation",
+        "app-integrations:DeleteApplication",
+        "app-integrations:DeleteApplicationAssociation",
+        "app-integrations:ListApplicationAssociations"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-12-27",
     "addedServices": [
       "Amazon CloudWatch Network Monitor"
