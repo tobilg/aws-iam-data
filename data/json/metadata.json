@@ -7219,7 +7219,7 @@
       "name": "Amazon DynamoDB",
       "servicePrefix": "dynamodb",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondynamodb.html",
-      "actionsCount": 65,
+      "actionsCount": 66,
       "actions": [
         "BatchGetItem",
         "BatchWriteItem",
@@ -7253,6 +7253,7 @@
         "ExportTableToPointInTime",
         "GetItem",
         "GetRecords",
+        "GetResourcePolicy",
         "GetShardIterator",
         "ImportTable",
         "ListBackups",
@@ -12771,7 +12772,7 @@
       "name": "AWS IoT",
       "servicePrefix": "iot",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html",
-      "actionsCount": 266,
+      "actionsCount": 271,
       "actions": [
         "AcceptCertificateTransfer",
         "AddThingToBillingGroup",
@@ -12795,6 +12796,7 @@
         "CreateAuthorizer",
         "CreateBillingGroup",
         "CreateCertificateFromCsr",
+        "CreateCertificateProvider",
         "CreateCustomMetric",
         "CreateDimension",
         "CreateDomainConfiguration",
@@ -12827,6 +12829,7 @@
         "DeleteBillingGroup",
         "DeleteCACertificate",
         "DeleteCertificate",
+        "DeleteCertificateProvider",
         "DeleteCustomMetric",
         "DeleteDimension",
         "DeleteDomainConfiguration",
@@ -12865,6 +12868,7 @@
         "DescribeBillingGroup",
         "DescribeCACertificate",
         "DescribeCertificate",
+        "DescribeCertificateProvider",
         "DescribeCustomMetric",
         "DescribeDefaultAuthorizer",
         "DescribeDetectMitigationActionsTask",
@@ -12927,6 +12931,7 @@
         "ListAuthorizers",
         "ListBillingGroups",
         "ListCACertificates",
+        "ListCertificateProviders",
         "ListCertificates",
         "ListCertificatesByCA",
         "ListCustomMetrics",
@@ -13016,6 +13021,7 @@
         "UpdateBillingGroup",
         "UpdateCACertificate",
         "UpdateCertificate",
+        "UpdateCertificateProvider",
         "UpdateCustomMetric",
         "UpdateDimension",
         "UpdateDomainConfiguration",
@@ -13040,7 +13046,7 @@
         "UpdateTopicRuleDestination",
         "ValidateSecurityProfileBehaviors"
       ],
-      "resourceTypesCount": 31,
+      "resourceTypesCount": 32,
       "resourceTypes": [
         "client",
         "index",
@@ -13072,7 +13078,8 @@
         "provisioningtemplate",
         "domainconfiguration",
         "package",
-        "packageversion"
+        "packageversion",
+        "certificateprovider"
       ],
       "conditionKeysCount": 8,
       "conditionKeys": [

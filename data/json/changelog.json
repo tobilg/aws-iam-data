@@ -1,5 +1,23 @@
 [
   {
+    "dateOfChange": "2024-01-06",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon DynamoDB": [
+        "dynamodb:GetResourcePolicy"
+      ],
+      "AWS IoT": [
+        "iot:CreateCertificateProvider",
+        "iot:DeleteCertificateProvider",
+        "iot:DescribeCertificateProvider",
+        "iot:ListCertificateProviders",
+        "iot:UpdateCertificateProvider"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2023-12-30",
     "addedServices": [],
     "removedServices": [],
