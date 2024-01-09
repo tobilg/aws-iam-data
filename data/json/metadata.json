@@ -20690,11 +20690,12 @@
         "accessgrantslocation",
         "accessgrant"
       ],
-      "conditionKeysCount": 43,
+      "conditionKeysCount": 44,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "s3:AccessGrantsInstanceArn",
         "s3:AccessPointNetworkOrigin",
         "s3:DataAccessPointAccount",
         "s3:DataAccessPointArn",
