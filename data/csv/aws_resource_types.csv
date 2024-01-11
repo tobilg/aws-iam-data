@@ -915,7 +915,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 914,241,destination,https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_Destination.html,arn:${Partition}:logs:${Region}:${Account}:destination:${DestinationName}
 915,241,delivery-source,https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DeliverySource.html,arn:${Partition}:logs:${Region}:${Account}:delivery-source:${DeliverySourceName}
 916,241,delivery,https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_Delivery.html,arn:${Partition}:logs:${Region}:${Account}:delivery:${DeliveryName}
-917,241,delivery-destination,https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DeliveryDestination.html,arn:${Partition}:logs:${Region}:${Account}:delivery-destination:${DeliverySourceName}
+917,241,delivery-destination,https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DeliveryDestination.html,arn:${Partition}:logs:${Region}:${Account}:delivery-destination:${DeliveryDestinationName}
 918,241,anomaly-detector,https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_AnomalyDetector.html,arn:${Partition}:logs:${Region}:${Account}:anomaly-detector:${DetectorId}
 919,242,monitor,https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-NM-components.html,arn:${Partition}:networkmonitor:${Region}:${Account}:monitor/${MonitorName}
 920,242,probe,https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-NM-components.html,arn:${Partition}:networkmonitor:${Region}:${Account}:probe/${ProbeId}
