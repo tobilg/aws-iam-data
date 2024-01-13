@@ -8739,7 +8739,7 @@
         "capacity-provider",
         "task-set"
       ],
-      "conditionKeysCount": 16,
+      "conditionKeysCount": 17,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -8751,6 +8751,7 @@
         "ecs:cluster",
         "ecs:container-instances",
         "ecs:container-name",
+        "ecs:enable-ebs-volumes",
         "ecs:enable-execute-command",
         "ecs:enable-service-connect",
         "ecs:namespace",
