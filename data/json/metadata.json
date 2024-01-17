@@ -23029,14 +23029,16 @@
       "name": "AWS Supply Chain",
       "servicePrefix": "scn",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupplychain.html",
-      "actionsCount": 13,
+      "actionsCount": 15,
       "actions": [
         "AssignAdminPermissionsToUser",
+        "CreateBillOfMaterialsImportJob",
         "CreateInstance",
         "CreateSSOApplication",
         "DeleteInstance",
         "DeleteSSOApplication",
         "DescribeInstance",
+        "GetBillOfMaterialsImportJob",
         "ListAdminUsers",
         "ListInstances",
         "ListTagsForResource",
@@ -23045,9 +23047,10 @@
         "UntagResource",
         "UpdateInstance"
       ],
-      "resourceTypesCount": 1,
+      "resourceTypesCount": 2,
       "resourceTypes": [
-        "instance"
+        "instance",
+        "bill-of-materials-import-job"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
