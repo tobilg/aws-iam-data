@@ -1,5 +1,26 @@
 [
   {
+    "dateOfChange": "2024-01-23",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS CodeBuild": [
+        "codebuild:BatchGetFleets",
+        "codebuild:CreateFleet",
+        "codebuild:DeleteFleet",
+        "codebuild:ListFleets",
+        "codebuild:UpdateFleet"
+      ],
+      "Amazon Connect Cases": [
+        "cases:GetCaseAuditEvents"
+      ],
+      "Amazon Elastic MapReduce": [
+        "elasticmapreduce:SetKeepJobFlowAliveWhenNoSteps"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-01-17",
     "addedServices": [],
     "removedServices": [],
