@@ -1,5 +1,28 @@
 [
   {
+    "dateOfChange": "2024-01-25",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Inspector2": [
+        "inspector2:CreateCisScanConfiguration",
+        "inspector2:DeleteCisScanConfiguration",
+        "inspector2:GetCisScanReport",
+        "inspector2:GetCisScanResultDetails",
+        "inspector2:ListCisScanConfigurations",
+        "inspector2:ListCisScanResultsAggregatedByChecks",
+        "inspector2:ListCisScanResultsAggregatedByTargetResource",
+        "inspector2:ListCisScans",
+        "inspector2:SendCisSessionHealth",
+        "inspector2:SendCisSessionTelemetry",
+        "inspector2:StartCisSession",
+        "inspector2:StopCisSession",
+        "inspector2:UpdateCisScanConfiguration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-01-23",
     "addedServices": [],
     "removedServices": [],
