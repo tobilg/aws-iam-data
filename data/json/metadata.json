@@ -21393,7 +21393,7 @@
         "shared-model-event",
         "sagemaker-catalog"
       ],
-      "conditionKeysCount": 48,
+      "conditionKeysCount": 49,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -21432,6 +21432,7 @@
         "sagemaker:ResourceTag/",
         "sagemaker:ResourceTag/${TagKey}",
         "sagemaker:RootAccess",
+        "sagemaker:SearchVisibilityCondition/${FilterKey}",
         "sagemaker:ServerlessMaxConcurrency",
         "sagemaker:ServerlessMemorySize",
         "sagemaker:SpaceSharingType",
