@@ -291,8 +291,9 @@
         "UpdateBackendJob",
         "UpdateBackendStorage"
       ],
-      "resourceTypesCount": 8,
+      "resourceTypesCount": 9,
       "resourceTypes": [
+        "created-backend",
         "backend",
         "environment",
         "api",
@@ -9494,7 +9495,7 @@
       "name": "AWS Elemental MediaConnect",
       "servicePrefix": "mediaconnect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediaconnect.html",
-      "actionsCount": 53,
+      "actionsCount": 54,
       "actions": [
         "AddBridgeOutputs",
         "AddBridgeSources",
@@ -9511,6 +9512,7 @@
         "DeregisterGatewayInstance",
         "DescribeBridge",
         "DescribeFlow",
+        "DescribeFlowSourceMetadata",
         "DescribeGateway",
         "DescribeGatewayInstance",
         "DescribeOffering",
