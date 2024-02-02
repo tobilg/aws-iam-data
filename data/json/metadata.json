@@ -2152,7 +2152,7 @@
       "conditionKeys": []
     },
     {
-      "name": "AWS Billing and Cost Management And Cost Management Data Exports",
+      "name": "AWS Billing And Cost Management Data Exports",
       "servicePrefix": "bcm-data-exports",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingandcostmanagementdataexports.html",
       "actionsCount": 12,
@@ -6481,7 +6481,7 @@
       "name": "Amazon DataZone",
       "servicePrefix": "datazone",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondatazone.html",
-      "actionsCount": 122,
+      "actionsCount": 123,
       "actions": [
         "AcceptPredictions",
         "AcceptSubscriptionRequest",
@@ -6555,6 +6555,7 @@
         "ListDataSourceRuns",
         "ListDataSources",
         "ListDomains",
+        "ListEnvironmentBlueprintConfigurationSummaries",
         "ListEnvironmentBlueprintConfigurations",
         "ListEnvironmentBlueprints",
         "ListEnvironmentProfiles",
@@ -12666,7 +12667,7 @@
       "name": "Amazon Interactive Video Service",
       "servicePrefix": "ivs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninteractivevideoservice.html",
-      "actionsCount": 54,
+      "actionsCount": 59,
       "actions": [
         "BatchGetChannel",
         "BatchGetStreamKey",
@@ -12674,6 +12675,7 @@
         "CreateChannel",
         "CreateEncoderConfiguration",
         "CreateParticipantToken",
+        "CreatePlaybackRestrictionPolicy",
         "CreateRecordingConfiguration",
         "CreateStage",
         "CreateStorageConfiguration",
@@ -12681,6 +12683,7 @@
         "DeleteChannel",
         "DeleteEncoderConfiguration",
         "DeletePlaybackKeyPair",
+        "DeletePlaybackRestrictionPolicy",
         "DeleteRecordingConfiguration",
         "DeleteStage",
         "DeleteStorageConfiguration",
@@ -12691,6 +12694,7 @@
         "GetEncoderConfiguration",
         "GetParticipant",
         "GetPlaybackKeyPair",
+        "GetPlaybackRestrictionPolicy",
         "GetRecordingConfiguration",
         "GetStage",
         "GetStageSession",
@@ -12705,6 +12709,7 @@
         "ListParticipantEvents",
         "ListParticipants",
         "ListPlaybackKeyPairs",
+        "ListPlaybackRestrictionPolicies",
         "ListRecordingConfigurations",
         "ListStageSessions",
         "ListStages",
@@ -12721,13 +12726,15 @@
         "TagResource",
         "UntagResource",
         "UpdateChannel",
+        "UpdatePlaybackRestrictionPolicy",
         "UpdateStage"
       ],
-      "resourceTypesCount": 8,
+      "resourceTypesCount": 9,
       "resourceTypes": [
         "Channel",
         "Stream-Key",
         "Playback-Key-Pair",
+        "Playback-Restriction-Policy",
         "Recording-Configuration",
         "Stage",
         "Composition",
@@ -19091,7 +19098,7 @@
       "name": "Amazon RDS",
       "servicePrefix": "rds",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrds.html",
-      "actionsCount": 161,
+      "actionsCount": 166,
       "actions": [
         "AddRoleToDBCluster",
         "AddRoleToDBInstance",
@@ -19118,6 +19125,7 @@
         "CreateDBProxy",
         "CreateDBProxyEndpoint",
         "CreateDBSecurityGroup",
+        "CreateDBShardGroup",
         "CreateDBSnapshot",
         "CreateDBSubnetGroup",
         "CreateEventSubscription",
@@ -19139,6 +19147,7 @@
         "DeleteDBProxy",
         "DeleteDBProxyEndpoint",
         "DeleteDBSecurityGroup",
+        "DeleteDBShardGroup",
         "DeleteDBSnapshot",
         "DeleteDBSubnetGroup",
         "DeleteEventSubscription",
@@ -19170,6 +19179,7 @@
         "DescribeDBProxyTargets",
         "DescribeDBRecommendations",
         "DescribeDBSecurityGroups",
+        "DescribeDBShardGroups",
         "DescribeDBSnapshotAttributes",
         "DescribeDBSnapshots",
         "DescribeDBSubnetGroups",
@@ -19214,6 +19224,7 @@
         "ModifyDBProxyEndpoint",
         "ModifyDBProxyTargetGroup",
         "ModifyDBRecommendation",
+        "ModifyDBShardGroup",
         "ModifyDBSnapshot",
         "ModifyDBSnapshotAttribute",
         "ModifyDBSubnetGroup",
@@ -19227,6 +19238,7 @@
         "PurchaseReservedDBInstancesOffering",
         "RebootDBCluster",
         "RebootDBInstance",
+        "RebootDBShardGroup",
         "RegisterDBProxyTargets",
         "RemoveFromGlobalCluster",
         "RemoveRoleFromDBCluster",
@@ -19255,9 +19267,10 @@
         "SwitchoverGlobalCluster",
         "SwitchoverReadReplica"
       ],
-      "resourceTypesCount": 24,
+      "resourceTypesCount": 25,
       "resourceTypes": [
         "cluster",
+        "shardgrp",
         "cluster-auto-backup",
         "auto-backup",
         "cluster-endpoint",
@@ -22915,7 +22928,7 @@
         "UpdateStateMachine",
         "UpdateStateMachineAlias"
       ],
-      "resourceTypesCount": 8,
+      "resourceTypesCount": 9,
       "resourceTypes": [
         "activity",
         "execution",
@@ -22924,7 +22937,8 @@
         "statemachineversion",
         "statemachinealias",
         "maprun",
-        "labelled execution"
+        "labelled execution",
+        "labelled express"
       ],
       "conditionKeysCount": 6,
       "conditionKeys": [

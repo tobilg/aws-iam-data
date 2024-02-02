@@ -1,5 +1,63 @@
 [
   {
+    "dateOfChange": "2024-02-02",
+    "addedServices": [
+      "AWS Billing And Cost Management Data Exports"
+    ],
+    "removedServices": [
+      "AWS Billing and Cost Management And Cost Management Data Exports"
+    ],
+    "addedActions": {
+      "Amazon DataZone": [
+        "datazone:ListEnvironmentBlueprintConfigurationSummaries"
+      ],
+      "Amazon Interactive Video Service": [
+        "ivs:CreatePlaybackRestrictionPolicy",
+        "ivs:DeletePlaybackRestrictionPolicy",
+        "ivs:GetPlaybackRestrictionPolicy",
+        "ivs:ListPlaybackRestrictionPolicies",
+        "ivs:UpdatePlaybackRestrictionPolicy"
+      ],
+      "Amazon RDS": [
+        "rds:CreateDBShardGroup",
+        "rds:DeleteDBShardGroup",
+        "rds:DescribeDBShardGroups",
+        "rds:ModifyDBShardGroup",
+        "rds:RebootDBShardGroup"
+      ],
+      "AWS Billing And Cost Management Data Exports": [
+        "bcm-data-exports:CreateExport",
+        "bcm-data-exports:DeleteExport",
+        "bcm-data-exports:GetExecution",
+        "bcm-data-exports:GetExport",
+        "bcm-data-exports:GetTable",
+        "bcm-data-exports:ListExecutions",
+        "bcm-data-exports:ListExports",
+        "bcm-data-exports:ListTables",
+        "bcm-data-exports:ListTagsForResource",
+        "bcm-data-exports:TagResource",
+        "bcm-data-exports:UntagResource",
+        "bcm-data-exports:UpdateExport"
+      ]
+    },
+    "removedActions": {
+      "AWS Billing and Cost Management And Cost Management Data Exports": [
+        "bcm-data-exports:CreateExport",
+        "bcm-data-exports:DeleteExport",
+        "bcm-data-exports:GetExecution",
+        "bcm-data-exports:GetExport",
+        "bcm-data-exports:GetTable",
+        "bcm-data-exports:ListExecutions",
+        "bcm-data-exports:ListExports",
+        "bcm-data-exports:ListTables",
+        "bcm-data-exports:ListTagsForResource",
+        "bcm-data-exports:TagResource",
+        "bcm-data-exports:UntagResource",
+        "bcm-data-exports:UpdateExport"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-01-31",
     "addedServices": [],
     "removedServices": [],
