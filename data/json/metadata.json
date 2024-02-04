@@ -2152,7 +2152,7 @@
       "conditionKeys": []
     },
     {
-      "name": "AWS Billing And Cost Management Data Exports",
+      "name": "AWS Billing and Cost Management And Cost Management Data Exports",
       "servicePrefix": "bcm-data-exports",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingandcostmanagementdataexports.html",
       "actionsCount": 12,
@@ -20996,7 +20996,7 @@
       "name": "Amazon SageMaker",
       "servicePrefix": "sagemaker",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemaker.html",
-      "actionsCount": 345,
+      "actionsCount": 346,
       "actions": [
         "AddAssociation",
         "AddTags",
@@ -21087,6 +21087,7 @@
         "DeleteHubContent",
         "DeleteHumanLoop",
         "DeleteHumanTaskUi",
+        "DeleteHyperParameterTuningJob",
         "DeleteImage",
         "DeleteImageVersion",
         "DeleteInferenceComponent",
