@@ -1167,8 +1167,8 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 1166,281,identityproviderconfig,https://docs.aws.amazon.com/eks/latest/userguide/authenticate-oidc-identity-provider.html,arn:${Partition}:eks:${Region}:${Account}:identityproviderconfig/${ClusterName}/${IdentityProviderType}/${IdentityProviderConfigName}/${UUID}
 1167,281,eks-anywhere-subscription,https://anywhere.eks.amazonaws.com/docs/clustermgmt/support/cluster-license/,arn:${Partition}:eks:${Region}:${Account}:eks-anywhere-subscription/${UUID}
 1168,281,podidentityassociation,https://docs.aws.amazon.com/eks/latest/userguide/pod-identities.html,arn:${Partition}:eks:${Region}:${Account}:podidentityassociation/${ClusterName}/${UUID}
-1169,281,access-entry,https://docs.aws.amazon.com/eks/latest/userguide/access-entry.html,arn:${Partition}:eks:${Region}:${Account}:access-entry/${ClusterName}/${IamIdentityType}/${IamIdentityAccountID}/${IamIdentityName}/${UUID}
-1170,281,access-policy,https://docs.aws.amazon.com/eks/latest/userguide/access-policy.html,arn:${Partition}:eks::aws:cluster-access-policy/${AccessPolicyName}
+1169,281,access-entry,https://docs.aws.amazon.com/eks/latest/userguide/access-entries.html,arn:${Partition}:eks:${Region}:${Account}:access-entry/${ClusterName}/${IamIdentityType}/${IamIdentityAccountID}/${IamIdentityName}/${UUID}
+1170,281,access-policy,https://docs.aws.amazon.com/eks/latest/userguide/access-policies.html,arn:${Partition}:eks::aws:cluster-access-policy/${AccessPolicyName}
 1171,282,cluster,https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-overview.html,arn:${Partition}:elasticmapreduce:${Region}:${Account}:cluster/${ClusterId}
 1172,282,editor,https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks.html,arn:${Partition}:elasticmapreduce:${Region}:${Account}:editor/${EditorId}
 1173,282,notebook-execution,https://docs.aws.amazon.com/emr/latest/ManagementGuide/emr-managed-notebooks-headless.html,arn:${Partition}:elasticmapreduce:${Region}:${Account}:notebook-execution/${NotebookExecutionId}
