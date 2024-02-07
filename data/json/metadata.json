@@ -1386,7 +1386,7 @@
       "name": "AWS AppSync",
       "servicePrefix": "appsync",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappsync.html",
-      "actionsCount": 68,
+      "actionsCount": 70,
       "actions": [
         "AssociateApi",
         "AssociateMergedGraphqlApi",
@@ -1421,6 +1421,7 @@
         "GetDomainName",
         "GetFunction",
         "GetGraphqlApi",
+        "GetGraphqlApiEnvironmentVariables",
         "GetIntrospectionSchema",
         "GetResolver",
         "GetResourcePolicy",
@@ -1439,6 +1440,7 @@
         "ListTagsForResource",
         "ListTypes",
         "ListTypesByAssociation",
+        "PutGraphqlApiEnvironmentVariables",
         "PutResourcePolicy",
         "SetWebACL",
         "SourceGraphQL",
@@ -2152,7 +2154,7 @@
       "conditionKeys": []
     },
     {
-      "name": "AWS Billing and Cost Management And Cost Management Data Exports",
+      "name": "AWS Billing And Cost Management Data Exports",
       "servicePrefix": "bcm-data-exports",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingandcostmanagementdataexports.html",
       "actionsCount": 12,
