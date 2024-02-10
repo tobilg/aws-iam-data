@@ -1,5 +1,117 @@
 [
   {
+    "dateOfChange": "2024-02-10",
+    "addedServices": [
+      "AWS Billing",
+      "AWS Billing Console",
+      "Tag Editor"
+    ],
+    "removedServices": [
+      "AWS Billing and Cost Management",
+      "AWS Billing and Cost Management Console"
+    ],
+    "addedActions": {
+      "AWS CloudFormation": [
+        "cloudformation:CreateGeneratedTemplate",
+        "cloudformation:DeleteGeneratedTemplate",
+        "cloudformation:DescribeGeneratedTemplate",
+        "cloudformation:DescribeResourceScan",
+        "cloudformation:GetGeneratedTemplate",
+        "cloudformation:ListGeneratedTemplates",
+        "cloudformation:ListResourceScanRelatedResources",
+        "cloudformation:ListResourceScanResources",
+        "cloudformation:ListResourceScans",
+        "cloudformation:StartResourceScan",
+        "cloudformation:UpdateGeneratedTemplate"
+      ],
+      "AWS Database Migration Service": [
+        "dms:CreateTest",
+        "dms:CreateTestEnvironments",
+        "dms:CreateTestPlan",
+        "dms:CreateTestRun",
+        "dms:DeleteTest",
+        "dms:DeleteTestPlan",
+        "dms:DescribeTestEnvironments",
+        "dms:DescribeTestGenerationStatus",
+        "dms:DescribeTestPlans",
+        "dms:DescribeTestRunResultsSummaries",
+        "dms:DescribeTestRuns",
+        "dms:DescribeTests",
+        "dms:ModifyTest",
+        "dms:ModifyTestPlan",
+        "dms:StartGenerateTests",
+        "dms:StopGenerateTests",
+        "dms:StopTestRun",
+        "dms:ViewTestRunResults"
+      ],
+      "Amazon Redshift": [
+        "redshift:ListRecommendations"
+      ],
+      "AWS Tax Settings": [
+        "tax:GetTaxInfoReportingDocument"
+      ],
+      "AWS Billing": [
+        "billing:GetBillingData",
+        "billing:GetBillingDetails",
+        "billing:GetBillingNotifications",
+        "billing:GetBillingPreferences",
+        "billing:GetContractInformation",
+        "billing:GetCredits",
+        "billing:GetIAMAccessPreference",
+        "billing:GetSellerOfRecord",
+        "billing:ListBillingViews",
+        "billing:PutContractInformation",
+        "billing:RedeemCredits",
+        "billing:UpdateBillingPreferences",
+        "billing:UpdateIAMAccessPreference"
+      ],
+      "AWS Billing Console": [
+        "aws-portal:GetConsoleActionSetEnforced",
+        "aws-portal:ModifyAccount",
+        "aws-portal:ModifyBilling",
+        "aws-portal:ModifyPaymentMethods",
+        "aws-portal:UpdateConsoleActionSetEnforced",
+        "aws-portal:ViewAccount",
+        "aws-portal:ViewBilling",
+        "aws-portal:ViewPaymentMethods",
+        "aws-portal:ViewUsage"
+      ],
+      "Tag Editor": [
+        "resource-explorer:ListResourceTypes",
+        "resource-explorer:ListResources",
+        "resource-explorer:ListTags"
+      ]
+    },
+    "removedActions": {
+      "AWS Billing and Cost Management": [
+        "billing:GetBillingData",
+        "billing:GetBillingDetails",
+        "billing:GetBillingNotifications",
+        "billing:GetBillingPreferences",
+        "billing:GetContractInformation",
+        "billing:GetCredits",
+        "billing:GetIAMAccessPreference",
+        "billing:GetSellerOfRecord",
+        "billing:ListBillingViews",
+        "billing:PutContractInformation",
+        "billing:RedeemCredits",
+        "billing:UpdateBillingPreferences",
+        "billing:UpdateIAMAccessPreference"
+      ],
+      "AWS Billing and Cost Management Console": [
+        "aws-portal:GetConsoleActionSetEnforced",
+        "aws-portal:ModifyAccount",
+        "aws-portal:ModifyBilling",
+        "aws-portal:ModifyPaymentMethods",
+        "aws-portal:UpdateConsoleActionSetEnforced",
+        "aws-portal:ViewAccount",
+        "aws-portal:ViewBilling",
+        "aws-portal:ViewPaymentMethods",
+        "aws-portal:ViewUsage"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-02-07",
     "addedServices": [
       "AWS Billing And Cost Management Data Exports"

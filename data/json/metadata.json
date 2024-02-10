@@ -1,5 +1,5 @@
 {
-  "serviceCount": 403,
+  "serviceCount": 404,
   "services": [
     {
       "name": "AWS Account Management",
@@ -2129,7 +2129,7 @@
       ]
     },
     {
-      "name": "AWS Billing and Cost Management",
+      "name": "AWS Billing",
       "servicePrefix": "billing",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbilling.html",
       "actionsCount": 13,
@@ -2238,7 +2238,7 @@
       ]
     },
     {
-      "name": "AWS Billing and Cost Management Console",
+      "name": "AWS Billing Console",
       "servicePrefix": "aws-portal",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingconsole.html",
       "actionsCount": 9,
@@ -3118,7 +3118,7 @@
       "name": "AWS CloudFormation",
       "servicePrefix": "cloudformation",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudformation.html",
-      "actionsCount": 73,
+      "actionsCount": 84,
       "actions": [
         "ActivateOrganizationsAccess",
         "ActivateType",
@@ -3126,6 +3126,7 @@
         "CancelUpdateStack",
         "ContinueUpdateRollback",
         "CreateChangeSet",
+        "CreateGeneratedTemplate",
         "CreateStack",
         "CreateStackInstances",
         "CreateStackSet",
@@ -3133,6 +3134,7 @@
         "DeactivateOrganizationsAccess",
         "DeactivateType",
         "DeleteChangeSet",
+        "DeleteGeneratedTemplate",
         "DeleteStack",
         "DeleteStackInstances",
         "DeleteStackSet",
@@ -3140,8 +3142,10 @@
         "DescribeAccountLimits",
         "DescribeChangeSet",
         "DescribeChangeSetHooks",
+        "DescribeGeneratedTemplate",
         "DescribeOrganizationsAccess",
         "DescribePublisher",
+        "DescribeResourceScan",
         "DescribeStackDriftDetectionStatus",
         "DescribeStackEvents",
         "DescribeStackInstance",
@@ -3158,13 +3162,18 @@
         "DetectStackSetDrift",
         "EstimateTemplateCost",
         "ExecuteChangeSet",
+        "GetGeneratedTemplate",
         "GetStackPolicy",
         "GetTemplate",
         "GetTemplateSummary",
         "ImportStacksToStackSet",
         "ListChangeSets",
         "ListExports",
+        "ListGeneratedTemplates",
         "ListImports",
+        "ListResourceScanRelatedResources",
+        "ListResourceScanResources",
+        "ListResourceScans",
         "ListStackInstanceResourceDrifts",
         "ListStackInstances",
         "ListStackResources",
@@ -3184,23 +3193,27 @@
         "SetTypeConfiguration",
         "SetTypeDefaultVersion",
         "SignalResource",
+        "StartResourceScan",
         "StopStackSetOperation",
         "TagResource",
         "TestType",
         "UntagResource",
+        "UpdateGeneratedTemplate",
         "UpdateStack",
         "UpdateStackInstances",
         "UpdateStackSet",
         "UpdateTerminationProtection",
         "ValidateTemplate"
       ],
-      "resourceTypesCount": 5,
+      "resourceTypesCount": 7,
       "resourceTypes": [
         "changeset",
         "stack",
         "stackset",
         "stackset-target",
-        "type"
+        "type",
+        "generatedtemplate",
+        "resourcescan"
       ],
       "conditionKeysCount": 10,
       "conditionKeys": [
@@ -6199,7 +6212,7 @@
       "name": "AWS Database Migration Service",
       "servicePrefix": "dms",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatabasemigrationservice.html",
-      "actionsCount": 134,
+      "actionsCount": 152,
       "actions": [
         "AddTagsToResource",
         "ApplyPendingMaintenanceAction",
@@ -6220,6 +6233,10 @@
         "CreateReplicationInstance",
         "CreateReplicationSubnetGroup",
         "CreateReplicationTask",
+        "CreateTest",
+        "CreateTestEnvironments",
+        "CreateTestPlan",
+        "CreateTestRun",
         "DeleteCertificate",
         "DeleteConnection",
         "DeleteDataMigration",
@@ -6235,6 +6252,8 @@
         "DeleteReplicationSubnetGroup",
         "DeleteReplicationTask",
         "DeleteReplicationTaskAssessmentRun",
+        "DeleteTest",
+        "DeleteTestPlan",
         "DescribeAccountAttributes",
         "DescribeApplicableIndividualAssessments",
         "DescribeCertificates",
@@ -6279,6 +6298,12 @@
         "DescribeReplications",
         "DescribeSchemas",
         "DescribeTableStatistics",
+        "DescribeTestEnvironments",
+        "DescribeTestGenerationStatus",
+        "DescribeTestPlans",
+        "DescribeTestRunResultsSummaries",
+        "DescribeTestRuns",
+        "DescribeTests",
         "DisassociateExtensionPack",
         "ExportMetadataModelAssessment",
         "GetMetadataModel",
@@ -6305,6 +6330,8 @@
         "ModifyReplicationInstance",
         "ModifyReplicationSubnetGroup",
         "ModifyReplicationTask",
+        "ModifyTest",
+        "ModifyTestPlan",
         "MoveReplicationTask",
         "RebootReplicationInstance",
         "RefreshSchemas",
@@ -6314,6 +6341,7 @@
         "RunFleetAdvisorLsaAnalysis",
         "StartDataMigration",
         "StartExtensionPackAssociation",
+        "StartGenerateTests",
         "StartMetadataModelAssessment",
         "StartMetadataModelConversion",
         "StartMetadataModelExportAsScript",
@@ -6326,17 +6354,20 @@
         "StartReplicationTaskAssessment",
         "StartReplicationTaskAssessmentRun",
         "StopDataMigration",
+        "StopGenerateTests",
         "StopReplication",
         "StopReplicationTask",
+        "StopTestRun",
         "TestConnection",
         "UpdateConversionConfiguration",
         "UpdateDataProvider",
         "UpdateInstanceProfile",
         "UpdateMigrationProject",
         "UpdateSubscriptionsToEventBridge",
-        "UploadFileMetadataList"
+        "UploadFileMetadataList",
+        "ViewTestRunResults"
       ],
-      "resourceTypesCount": 13,
+      "resourceTypesCount": 17,
       "resourceTypes": [
         "Certificate",
         "DataProvider",
@@ -6350,9 +6381,13 @@
         "ReplicationSubnetGroup",
         "ReplicationTask",
         "ReplicationTaskAssessmentRun",
-        "ReplicationTaskIndividualAssessment"
+        "ReplicationTaskIndividualAssessment",
+        "TestPlan",
+        "Test",
+        "TestRun",
+        "TestEnvironment"
       ],
-      "conditionKeysCount": 15,
+      "conditionKeysCount": 19,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -6368,7 +6403,11 @@
         "dms:replication-config-tag/${TagKey}",
         "dms:req-tag/${TagKey}",
         "dms:subgrp-tag/${TagKey}",
-        "dms:task-tag/${TagKey}"
+        "dms:task-tag/${TagKey}",
+        "dms:test-environment-tag/${TagKey}",
+        "dms:test-plan-tag/${TagKey}",
+        "dms:test-run-tag/${TagKey}",
+        "dms:test-tag/${TagKey}"
       ]
     },
     {
@@ -16145,8 +16184,9 @@
         "Entity",
         "ChangeSet"
       ],
-      "conditionKeysCount": 4,
+      "conditionKeysCount": 5,
       "conditionKeys": [
+        "aws-marketplace:Intent",
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
@@ -19431,7 +19471,7 @@
       "name": "Amazon Redshift",
       "servicePrefix": "redshift",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshift.html",
-      "actionsCount": 150,
+      "actionsCount": 151,
       "actions": [
         "AcceptReservedNodeExchange",
         "AddPartner",
@@ -19544,6 +19584,7 @@
         "GetResourcePolicy",
         "JoinGroup",
         "ListDatabases",
+        "ListRecommendations",
         "ListSavedQueries",
         "ListSchemas",
         "ListTables",
@@ -23541,14 +23582,30 @@
       ]
     },
     {
+      "name": "Tag Editor",
+      "servicePrefix": "resource-explorer",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_tageditor.html",
+      "actionsCount": 3,
+      "actions": [
+        "ListResourceTypes",
+        "ListResources",
+        "ListTags"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
       "name": "AWS Tax Settings",
       "servicePrefix": "tax",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstaxsettings.html",
-      "actionsCount": 12,
+      "actionsCount": 13,
       "actions": [
         "BatchPutTaxRegistration",
         "DeleteTaxRegistration",
         "GetExemptions",
+        "GetTaxInfoReportingDocument",
         "GetTaxInheritance",
         "GetTaxInterview",
         "GetTaxRegistration",
