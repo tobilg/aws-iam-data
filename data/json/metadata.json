@@ -20775,7 +20775,7 @@
         "accessgrantslocation",
         "accessgrant"
       ],
-      "conditionKeysCount": 44,
+      "conditionKeysCount": 45,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -20787,6 +20787,7 @@
         "s3:ExistingJobOperation",
         "s3:ExistingJobPriority",
         "s3:ExistingObjectTag/<key>",
+        "s3:InventoryAccessibleOptionalFields",
         "s3:JobSuspendedCause",
         "s3:RequestJobOperation",
         "s3:RequestJobPriority",
@@ -24575,11 +24576,13 @@
         "apprunner",
         "verified-access-instance"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "wafv2:LogDestinationResource",
+        "wafv2:LogScope"
       ]
     },
     {
