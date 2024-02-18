@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2024-02-18",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:DetectGeneratedContent"
+      ],
+      "AWS Control Tower": [
+        "controltower:DisableBaseline",
+        "controltower:EnableBaseline",
+        "controltower:GetBaseline",
+        "controltower:GetBaselineOperation",
+        "controltower:GetEnabledBaseline",
+        "controltower:ListBaselines",
+        "controltower:ListEnabledBaselines",
+        "controltower:ResetEnabledBaseline",
+        "controltower:UpdateEnabledBaseline"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:UpdateClusterSoftware"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-02-10",
     "addedServices": [
       "AWS Billing",
