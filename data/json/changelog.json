@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2024-02-21",
+    "addedServices": [
+      "Amazon Message Gateway Service"
+    ],
+    "removedServices": [
+      "Amazon Session Manager Message Gateway Service"
+    ],
+    "addedActions": {
+      "Amazon Message Gateway Service": [
+        "ssmmessages:CreateControlChannel",
+        "ssmmessages:CreateDataChannel",
+        "ssmmessages:OpenControlChannel",
+        "ssmmessages:OpenDataChannel"
+      ]
+    },
+    "removedActions": {
+      "Amazon Session Manager Message Gateway Service": [
+        "ssmmessages:CreateControlChannel",
+        "ssmmessages:CreateDataChannel",
+        "ssmmessages:OpenControlChannel",
+        "ssmmessages:OpenDataChannel"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-02-18",
     "addedServices": [],
     "removedServices": [],

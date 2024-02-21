@@ -16548,6 +16548,25 @@
       ]
     },
     {
+      "name": "Amazon Message Gateway Service",
+      "servicePrefix": "ssmmessages",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmessagegatewayservice.html",
+      "actionsCount": 4,
+      "actions": [
+        "CreateControlChannel",
+        "CreateDataChannel",
+        "OpenControlChannel",
+        "OpenDataChannel"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 2,
+      "conditionKeys": [
+        "ec2:SourceInstanceARN",
+        "ssm:SourceInstanceARN"
+      ]
+    },
+    {
       "name": "AWS Microservice Extractor for .NET",
       "servicePrefix": "serviceextract",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmicroserviceextractorfor.net.html",
@@ -22301,25 +22320,6 @@
         "ses:FromAddress",
         "ses:FromDisplayName",
         "ses:Recipients"
-      ]
-    },
-    {
-      "name": "Amazon Session Manager Message Gateway Service",
-      "servicePrefix": "ssmmessages",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsessionmanagermessagegatewayservice.html",
-      "actionsCount": 4,
-      "actions": [
-        "CreateControlChannel",
-        "CreateDataChannel",
-        "OpenControlChannel",
-        "OpenDataChannel"
-      ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
-      "conditionKeysCount": 2,
-      "conditionKeys": [
-        "ec2:SourceInstanceARN",
-        "ssm:SourceInstanceARN"
       ]
     },
     {
