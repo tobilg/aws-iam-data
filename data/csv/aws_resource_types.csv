@@ -281,10 +281,10 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 280,81,Preset,https://docs.aws.amazon.com/mediaconvert/latest/apireference/presets.html,arn:${Partition}:mediaconvert:${Region}:${Account}:presets/${PresetName}
 281,81,JobTemplate,https://docs.aws.amazon.com/mediaconvert/latest/apireference/jobtemplates.html,arn:${Partition}:mediaconvert:${Region}:${Account}:jobTemplates/${JobTemplateName}
 282,81,CertificateAssociation,https://docs.aws.amazon.com/mediaconvert/latest/apireference/certificates.html,arn:${Partition}:mediaconvert:${Region}:${Account}:certificates/${CertificateArn}
-283,82,channel,https://docs.aws.amazon.com/medialive/latest/ug/channels.html,arn:${Partition}:medialive:${Region}:${Account}:channel:${ChannelId}
-284,82,input,https://docs.aws.amazon.com/medialive/latest/ug/inputs.html,arn:${Partition}:medialive:${Region}:${Account}:input:${InputId}
+283,82,channel,https://docs.aws.amazon.com/medialive/latest/ug/container-channel.html,arn:${Partition}:medialive:${Region}:${Account}:channel:${ChannelId}
+284,82,input,https://docs.aws.amazon.com/medialive/latest/ug/creating-input.html,arn:${Partition}:medialive:${Region}:${Account}:input:${InputId}
 285,82,input-device,https://docs.aws.amazon.com/medialive/latest/ug/eml-devices.html,arn:${Partition}:medialive:${Region}:${Account}:inputDevice:${DeviceId}
-286,82,input-security-group,https://docs.aws.amazon.com/medialive/latest/ug/inputsecuritygroups.html,arn:${Partition}:medialive:${Region}:${Account}:inputSecurityGroup:${InputSecurityGroupId}
+286,82,input-security-group,https://docs.aws.amazon.com/medialive/latest/ug/working-with-input-security-groups.html,arn:${Partition}:medialive:${Region}:${Account}:inputSecurityGroup:${InputSecurityGroupId}
 287,82,multiplex,https://docs.aws.amazon.com/medialive/latest/ug/eml-multiplex.html,arn:${Partition}:medialive:${Region}:${Account}:multiplex:${MultiplexId}
 288,82,reservation,https://docs.aws.amazon.com/medialive/latest/ug/reservations.html,arn:${Partition}:medialive:${Region}:${Account}:reservation:${ReservationId}
 289,82,offering,https://docs.aws.amazon.com/medialive/latest/ug/input-output-reservations.html,arn:${Partition}:medialive:${Region}:${Account}:offering:${OfferingId}
