@@ -1,5 +1,33 @@
 [
   {
+    "dateOfChange": "2024-03-02",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {},
+    "removedActions": {
+      "AWS Database Migration Service": [
+        "dms:CreateTest",
+        "dms:CreateTestEnvironments",
+        "dms:CreateTestPlan",
+        "dms:CreateTestRun",
+        "dms:DeleteTest",
+        "dms:DeleteTestPlan",
+        "dms:DescribeTestEnvironments",
+        "dms:DescribeTestGenerationStatus",
+        "dms:DescribeTestPlans",
+        "dms:DescribeTestRunResultsSummaries",
+        "dms:DescribeTestRuns",
+        "dms:DescribeTests",
+        "dms:ModifyTest",
+        "dms:ModifyTestPlan",
+        "dms:StartGenerateTests",
+        "dms:StopGenerateTests",
+        "dms:StopTestRun",
+        "dms:ViewTestRunResults"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-02-27",
     "addedServices": [],
     "removedServices": [],
