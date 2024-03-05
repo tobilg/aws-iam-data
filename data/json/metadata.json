@@ -310,7 +310,7 @@
       "name": "AWS Amplify UI Builder",
       "servicePrefix": "amplifyuibuilder",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsamplifyuibuilder.html",
-      "actionsCount": 26,
+      "actionsCount": 29,
       "actions": [
         "CreateComponent",
         "CreateForm",
@@ -330,11 +330,14 @@
         "ListCodegenJobs",
         "ListComponents",
         "ListForms",
+        "ListTagsForResource",
         "ListThemes",
         "PutMetadataFlag",
         "RefreshToken",
         "ResetMetadataFlag",
         "StartCodegenJob",
+        "TagResource",
+        "UntagResource",
         "UpdateComponent",
         "UpdateForm",
         "UpdateTheme"
@@ -16055,19 +16058,23 @@
       "name": "Amazon Managed Streaming for Kafka Connect",
       "servicePrefix": "kafkaconnect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedstreamingforkafkaconnect.html",
-      "actionsCount": 12,
+      "actionsCount": 16,
       "actions": [
         "CreateConnector",
         "CreateCustomPlugin",
         "CreateWorkerConfiguration",
         "DeleteConnector",
         "DeleteCustomPlugin",
+        "DeleteWorkerConfiguration",
         "DescribeConnector",
         "DescribeCustomPlugin",
         "DescribeWorkerConfiguration",
         "ListConnectors",
         "ListCustomPlugins",
+        "ListTagsForResource",
         "ListWorkerConfigurations",
+        "TagResource",
+        "UntagResource",
         "UpdateConnector"
       ],
       "resourceTypesCount": 3,
@@ -16076,8 +16083,12 @@
         "custom plugin",
         "worker configuration"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "Amazon Managed Workflows for Apache Airflow",
@@ -24494,7 +24505,7 @@
       "name": "AWS WAF V2",
       "servicePrefix": "wafv2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswafv2.html",
-      "actionsCount": 55,
+      "actionsCount": 56,
       "actions": [
         "AssociateWebACL",
         "CheckCapacity",
@@ -24503,6 +24514,7 @@
         "CreateRegexPatternSet",
         "CreateRuleGroup",
         "CreateWebACL",
+        "DeleteAPIKey",
         "DeleteFirewallManagerRuleGroups",
         "DeleteIPSet",
         "DeleteLoggingConfiguration",

@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2024-03-05",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Amplify UI Builder": [
+        "amplifyuibuilder:ListTagsForResource",
+        "amplifyuibuilder:TagResource",
+        "amplifyuibuilder:UntagResource"
+      ],
+      "Amazon Managed Streaming for Kafka Connect": [
+        "kafkaconnect:DeleteWorkerConfiguration",
+        "kafkaconnect:ListTagsForResource",
+        "kafkaconnect:TagResource",
+        "kafkaconnect:UntagResource"
+      ],
+      "AWS WAF V2": [
+        "wafv2:DeleteAPIKey"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-03-02",
     "addedServices": [],
     "removedServices": [],
