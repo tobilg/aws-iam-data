@@ -12512,8 +12512,9 @@
       "name": "AWS Identity Sync",
       "servicePrefix": "identity-sync",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitysync.html",
-      "actionsCount": 12,
+      "actionsCount": 13,
       "actions": [
+        "AllowVendedLogDeliveryForResource",
         "CreateSyncFilter",
         "CreateSyncProfile",
         "CreateSyncTarget",
@@ -18690,10 +18691,11 @@
       "name": "Amazon Q",
       "servicePrefix": "q",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonq.html",
-      "actionsCount": 6,
+      "actionsCount": 7,
       "actions": [
         "GetConversation",
         "GetTroubleshootingResults",
+        "ListConversations",
         "SendMessage",
         "StartConversation",
         "StartTroubleshootingAnalysis",
@@ -19487,7 +19489,7 @@
       "name": "Amazon Redshift",
       "servicePrefix": "redshift",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshift.html",
-      "actionsCount": 151,
+      "actionsCount": 155,
       "actions": [
         "AcceptReservedNodeExchange",
         "AddPartner",
@@ -19514,6 +19516,7 @@
         "CreateEventSubscription",
         "CreateHsmClientCertificate",
         "CreateHsmConfiguration",
+        "CreateQev2IdcApplication",
         "CreateRedshiftIdcApplication",
         "CreateSavedQuery",
         "CreateScheduledAction",
@@ -19534,6 +19537,7 @@
         "DeleteHsmClientCertificate",
         "DeleteHsmConfiguration",
         "DeletePartner",
+        "DeleteQev2IdcApplication",
         "DeleteRedshiftIdcApplication",
         "DeleteResourcePolicy",
         "DeleteSavedQueries",
@@ -19570,6 +19574,7 @@
         "DescribeNodeConfigurationOptions",
         "DescribeOrderableClusterOptions",
         "DescribePartners",
+        "DescribeQev2IdcApplications",
         "DescribeQuery",
         "DescribeRedshiftIdcApplications",
         "DescribeReservedNodeExchangeStatus",
@@ -19617,6 +19622,7 @@
         "ModifyCustomDomainAssociation",
         "ModifyEndpointAccess",
         "ModifyEventSubscription",
+        "ModifyQev2IdcApplication",
         "ModifyRedshiftIdcApplication",
         "ModifySavedQuery",
         "ModifyScheduledAction",
@@ -19641,7 +19647,7 @@
         "ViewQueriesFromConsole",
         "ViewQueriesInConsole"
       ],
-      "resourceTypesCount": 19,
+      "resourceTypesCount": 20,
       "resourceTypes": [
         "cluster",
         "datashare",
@@ -19661,7 +19667,8 @@
         "snapshotschedule",
         "subnetgroup",
         "usagelimit",
-        "redshiftidcapplication"
+        "redshiftidcapplication",
+        "qev2idcapplication"
       ],
       "conditionKeysCount": 10,
       "conditionKeys": [

@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2024-03-07",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Identity Sync": [
+        "identity-sync:AllowVendedLogDeliveryForResource"
+      ],
+      "Amazon Q": [
+        "q:ListConversations"
+      ],
+      "Amazon Redshift": [
+        "redshift:CreateQev2IdcApplication",
+        "redshift:DeleteQev2IdcApplication",
+        "redshift:DescribeQev2IdcApplications",
+        "redshift:ModifyQev2IdcApplication"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-03-05",
     "addedServices": [],
     "removedServices": [],
