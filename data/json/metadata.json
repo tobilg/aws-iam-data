@@ -9223,7 +9223,7 @@
       "name": "Amazon Elastic MapReduce",
       "servicePrefix": "elasticmapreduce",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticmapreduce.html",
-      "actionsCount": 81,
+      "actionsCount": 82,
       "actions": [
         "AddInstanceFleet",
         "AddInstanceGroups",
@@ -9294,6 +9294,7 @@
         "RunJobFlow",
         "SetKeepJobFlowAliveWhenNoSteps",
         "SetTerminationProtection",
+        "SetUnhealthyNodeReplacement",
         "SetVisibleToAllUsers",
         "StartEditor",
         "StartNotebookExecution",
