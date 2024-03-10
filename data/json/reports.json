@@ -1,16 +1,16 @@
 {
   "Actions by type": [
     {
-      "key": "Read Actions",
-      "value": 4417
+      "key": "Write Actions",
+      "value": 9067
     },
     {
-      "key": "Write Actions",
-      "value": 9065
+      "key": "Read Actions",
+      "value": 4418
     },
     {
       "key": "List Actions",
-      "value": 2643
+      "value": 2646
     },
     {
       "key": "Permissions Actions",
@@ -157,12 +157,12 @@
       "value": 82
     },
     {
-      "key": "repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName}",
+      "key": "bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}",
       "value": 81
     },
     {
-      "key": "bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}",
-      "value": 75
+      "key": "repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName}",
+      "value": 81
     },
     {
       "key": "directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId}",
