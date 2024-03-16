@@ -1,5 +1,5 @@
 {
-  "serviceCount": 404,
+  "serviceCount": 405,
   "services": [
     {
       "name": "AWS Account Management",
@@ -23788,6 +23788,36 @@
         "database",
         "table",
         "scheduled-query"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "Amazon Timestream Influxdb",
+      "servicePrefix": "timestream-influxdb",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestreaminfluxdb.html",
+      "actionsCount": 11,
+      "actions": [
+        "CreateDbInstance",
+        "CreateDbParameterGroup",
+        "DeleteDbInstance",
+        "GetDbInstance",
+        "GetDbParameterGroup",
+        "ListDbInstances",
+        "ListDbParameterGroups",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateDbInstance"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "db-instance",
+        "db-parameter-group"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
