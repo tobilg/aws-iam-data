@@ -1,5 +1,44 @@
 [
   {
+    "dateOfChange": "2024-03-19",
+    "addedServices": [
+      "Amazon Timestream InfluxDB"
+    ],
+    "removedServices": [
+      "Amazon Timestream Influxdb"
+    ],
+    "addedActions": {
+      "Amazon Timestream InfluxDB": [
+        "timestream-influxdb:CreateDbInstance",
+        "timestream-influxdb:CreateDbParameterGroup",
+        "timestream-influxdb:DeleteDbInstance",
+        "timestream-influxdb:GetDbInstance",
+        "timestream-influxdb:GetDbParameterGroup",
+        "timestream-influxdb:ListDbInstances",
+        "timestream-influxdb:ListDbParameterGroups",
+        "timestream-influxdb:ListTagsForResource",
+        "timestream-influxdb:TagResource",
+        "timestream-influxdb:UntagResource",
+        "timestream-influxdb:UpdateDbInstance"
+      ]
+    },
+    "removedActions": {
+      "Amazon Timestream Influxdb": [
+        "timestream-influxdb:CreateDbInstance",
+        "timestream-influxdb:CreateDbParameterGroup",
+        "timestream-influxdb:DeleteDbInstance",
+        "timestream-influxdb:GetDbInstance",
+        "timestream-influxdb:GetDbParameterGroup",
+        "timestream-influxdb:ListDbInstances",
+        "timestream-influxdb:ListDbParameterGroups",
+        "timestream-influxdb:ListTagsForResource",
+        "timestream-influxdb:TagResource",
+        "timestream-influxdb:UntagResource",
+        "timestream-influxdb:UpdateDbInstance"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-03-16",
     "addedServices": [
       "Amazon Timestream Influxdb"

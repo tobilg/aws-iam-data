@@ -1688,8 +1688,8 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 1687,384,database,https://docs.aws.amazon.com/timestream/latest/developerguide/API_Database.html,arn:${Partition}:timestream:${Region}:${Account}:database/${DatabaseName}
 1688,384,table,https://docs.aws.amazon.com/timestream/latest/developerguide/API_Table.html,arn:${Partition}:timestream:${Region}:${Account}:database/${DatabaseName}/table/${TableName}
 1689,384,scheduled-query,https://docs.aws.amazon.com/timestream/latest/developerguide/API_ScheduledQuery.html,arn:${Partition}:timestream:${Region}:${Account}:scheduled-query/${ScheduledQueryName}
-1690,385,db-instance,https://docs.aws.amazon.com/timestream/latest/developerguide/API_DbInstance.html,arn:${Partition}:timestream-influxdb:${Region}:${Account}:db-instance/${DbInstanceIdentifier}
-1691,385,db-parameter-group,https://docs.aws.amazon.com/timestream/latest/developerguide/API_DbParameterGroup.html,arn:${Partition}:timestream-influxdb:${Region}:${Account}:db-parameter-group/${DbParameterGroupIdentifier}
+1690,385,db-instance,https://docs.aws.amazon.com/ts-influxdb/latest/ts-influxdb-api/API_DbInstanceSummary.html,arn:${Partition}:timestream-influxdb:${Region}:${Account}:db-instance/${DbInstanceIdentifier}
+1691,385,db-parameter-group,https://docs.aws.amazon.com/ts-influxdb/latest/ts-influxdb-api/API_DbParameterGroupSummary.html,arn:${Partition}:timestream-influxdb:${Region}:${Account}:db-parameter-group/${DbParameterGroupIdentifier}
 1692,386,transcriptionjob,https://docs.aws.amazon.com/transcribe/latest/dg/API_TranscriptionJob.html,arn:${Partition}:transcribe:${Region}:${Account}:transcription-job/${JobName}
 1693,386,vocabulary,https://docs.aws.amazon.com/transcribe/latest/dg/API_CreateVocabulary.html,arn:${Partition}:transcribe:${Region}:${Account}:vocabulary/${VocabularyName}
 1694,386,vocabularyfilter,https://docs.aws.amazon.com/transcribe/latest/dg/API_CreateVocabularyFilter.html,arn:${Partition}:transcribe:${Region}:${Account}:vocabulary-filter/${VocabularyFilterName}
