@@ -15872,13 +15872,14 @@
       "name": "Amazon Managed Blockchain Query",
       "servicePrefix": "managedblockchain-query",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedblockchainquery.html",
-      "actionsCount": 8,
+      "actionsCount": 9,
       "actions": [
         "BatchGetTokenBalance",
         "GetAssetContract",
         "GetTokenBalance",
         "GetTransaction",
         "ListAssetContracts",
+        "ListFilteredTransactionEvents",
         "ListTokenBalances",
         "ListTransactionEvents",
         "ListTransactions"
