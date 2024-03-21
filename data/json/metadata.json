@@ -8117,7 +8117,7 @@
         "vpn-connection",
         "vpn-gateway"
       ],
-      "conditionKeysCount": 113,
+      "conditionKeysCount": 112,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -8191,7 +8191,6 @@
         "ec2:PlacementGroup",
         "ec2:PlacementGroupName",
         "ec2:PlacementGroupStrategy",
-        "ec2:PreSharedKeys",
         "ec2:ProductCode",
         "ec2:Public",
         "ec2:PublicIpAddress",
