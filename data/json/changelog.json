@@ -1,5 +1,33 @@
 [
   {
+    "dateOfChange": "2024-03-23",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS CodeArtifact": [
+        "codeartifact:CreatePackageGroup",
+        "codeartifact:DeletePackageGroup",
+        "codeartifact:DescribePackageGroup",
+        "codeartifact:GetAssociatedPackageGroup",
+        "codeartifact:ListAllowedRepositoriesForGroup",
+        "codeartifact:ListAssociatedPackages",
+        "codeartifact:ListPackageGroups",
+        "codeartifact:ListSubPackageGroups",
+        "codeartifact:UpdatePackageGroup",
+        "codeartifact:UpdatePackageGroupOriginConfiguration"
+      ],
+      "Amazon DynamoDB": [
+        "dynamodb:DeleteResourcePolicy",
+        "dynamodb:PutResourcePolicy",
+        "dynamodb:UpdateKinesisStreamingDestination"
+      ],
+      "Amazon WorkMail": [
+        "workmail:AllowVendedLogDeliveryForResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-03-20",
     "addedServices": [],
     "removedServices": [],
