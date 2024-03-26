@@ -3799,7 +3799,7 @@
       "name": "Amazon CloudWatch Internet Monitor",
       "servicePrefix": "internetmonitor",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchinternetmonitor.html",
-      "actionsCount": 14,
+      "actionsCount": 15,
       "actions": [
         "CreateMonitor",
         "DeleteMonitor",
@@ -3807,6 +3807,7 @@
         "GetMonitor",
         "GetQueryResults",
         "GetQueryStatus",
+        "Link",
         "ListHealthEvents",
         "ListMonitors",
         "ListTagsForResource",
