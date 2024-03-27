@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2024-03-27",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Cost Explorer Service": [
+        "ce:ListCostAllocationTagBackfillHistory",
+        "ce:StartCostAllocationTagBackfill"
+      ],
+      "AWS Migration Hub Orchestrator": [
+        "migrationhub-orchestrator:CreateTemplate",
+        "migrationhub-orchestrator:DeleteTemplate",
+        "migrationhub-orchestrator:UpdateTemplate"
+      ],
+      "AWS Savings Plans": [
+        "savingsplans:ReturnSavingsPlan"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-03-26",
     "addedServices": [],
     "removedServices": [],

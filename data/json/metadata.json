@@ -6002,7 +6002,7 @@
       "name": "AWS Cost Explorer Service",
       "servicePrefix": "ce",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostexplorerservice.html",
-      "actionsCount": 51,
+      "actionsCount": 53,
       "actions": [
         "CreateAnomalyMonitor",
         "CreateAnomalySubscription",
@@ -6039,11 +6039,13 @@
         "GetSavingsPlansUtilizationDetails",
         "GetTags",
         "GetUsageForecast",
+        "ListCostAllocationTagBackfillHistory",
         "ListCostAllocationTags",
         "ListCostCategoryDefinitions",
         "ListSavingsPlansPurchaseRecommendationGeneration",
         "ListTagsForResource",
         "ProvideAnomalyFeedback",
+        "StartCostAllocationTagBackfill",
         "StartSavingsPlansPurchaseRecommendationGeneration",
         "TagResource",
         "UntagResource",
@@ -16643,11 +16645,13 @@
       "name": "AWS Migration Hub Orchestrator",
       "servicePrefix": "migrationhub-orchestrator",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhuborchestrator.html",
-      "actionsCount": 31,
+      "actionsCount": 34,
       "actions": [
+        "CreateTemplate",
         "CreateWorkflow",
         "CreateWorkflowStep",
         "CreateWorkflowStepGroup",
+        "DeleteTemplate",
         "DeleteWorkflow",
         "DeleteWorkflowStep",
         "DeleteWorkflowStepGroup",
@@ -16673,13 +16677,15 @@
         "StopWorkflow",
         "TagResource",
         "UntagResource",
+        "UpdateTemplate",
         "UpdateWorkflow",
         "UpdateWorkflowStep",
         "UpdateWorkflowStepGroup"
       ],
-      "resourceTypesCount": 1,
+      "resourceTypesCount": 2,
       "resourceTypes": [
-        "workflow"
+        "workflow",
+        "template"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -21622,7 +21628,7 @@
       "name": "AWS Savings Plans",
       "servicePrefix": "savingsplans",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssavingsplans.html",
-      "actionsCount": 9,
+      "actionsCount": 10,
       "actions": [
         "CreateSavingsPlan",
         "DeleteQueuedSavingsPlan",
@@ -21631,6 +21637,7 @@
         "DescribeSavingsPlansOfferingRates",
         "DescribeSavingsPlansOfferings",
         "ListTagsForResource",
+        "ReturnSavingsPlan",
         "TagResource",
         "UntagResource"
       ],
