@@ -1,5 +1,21 @@
 [
   {
+    "dateOfChange": "2024-03-28",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon EC2": [
+        "ec2:DescribeMacHosts",
+        "ec2:GetInstanceMetadataDefaults",
+        "ec2:ModifyInstanceMetadataDefaults"
+      ],
+      "Amazon FinSpace": [
+        "finspace:DeleteKxClusterNode"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-03-27",
     "addedServices": [],
     "removedServices": [],
