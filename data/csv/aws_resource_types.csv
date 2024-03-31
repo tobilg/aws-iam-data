@@ -1630,7 +1630,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 1629,376,image,https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html,arn:${Partition}:sagemaker:${Region}:${Account}:image/${ImageName}
 1630,376,image-version,https://docs.aws.amazon.com/sagemaker/latest/dg/studio-byoi.html,arn:${Partition}:sagemaker:${Region}:${Account}:image-version/${ImageName}/${Version}
 1631,376,algorithm,https://docs.aws.amazon.com/sagemaker/latest/dg/algorithms-choose.html,arn:${Partition}:sagemaker:${Region}:${Account}:algorithm/${AlgorithmName}
-1632,376,cluster,https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-hyperpod.html,arn:${Partition}:sagemaker:${Region}:${Account}:cluster/${ClusterId}
+1632,376,cluster,https://docs.aws.amazon.com/sagemaker/latest/dg/sagemaker-cluster.html,arn:${Partition}:sagemaker:${Region}:${Account}:cluster/${ClusterId}
 1633,376,training-job,https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-training.html,arn:${Partition}:sagemaker:${Region}:${Account}:training-job/${TrainingJobName}
 1634,376,processing-job,https://docs.aws.amazon.com/sagemaker/latest/dg/processing-job.html,arn:${Partition}:sagemaker:${Region}:${Account}:processing-job/${ProcessingJobName}
 1635,376,hyper-parameter-tuning-job,https://docs.aws.amazon.com/sagemaker/latest/dg/automatic-model-tuning-how-it-works.html,arn:${Partition}:sagemaker:${Region}:${Account}:hyper-parameter-tuning-job/${HyperParameterTuningJobName}
