@@ -1,5 +1,29 @@
 [
   {
+    "dateOfChange": "2024-04-04",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Entity Resolution": [
+        "entityresolution:AddPolicyStatement",
+        "entityresolution:CreateIdNamespace",
+        "entityresolution:DeleteIdNamespace",
+        "entityresolution:DeletePolicyStatement",
+        "entityresolution:GetIdNamespace",
+        "entityresolution:GetPolicy",
+        "entityresolution:ListIdNamespaces",
+        "entityresolution:PutPolicy",
+        "entityresolution:UpdateIdNamespace",
+        "entityresolution:UseIdNamespace"
+      ],
+      "AWS Marketplace Catalog": [
+        "aws-marketplace:DescribeAssessment",
+        "aws-marketplace:ListAssessments"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-04-03",
     "addedServices": [],
     "removedServices": [],
