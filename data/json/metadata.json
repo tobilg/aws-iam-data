@@ -7447,8 +7447,9 @@
       "name": "Amazon DocumentDB Elastic Clusters",
       "servicePrefix": "docdb-elastic",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondocumentdbelasticclusters.html",
-      "actionsCount": 13,
+      "actionsCount": 16,
       "actions": [
+        "CopyClusterSnapshot",
         "CreateCluster",
         "CreateClusterSnapshot",
         "DeleteCluster",
@@ -7459,6 +7460,8 @@
         "ListClusters",
         "ListTagsForResource",
         "RestoreClusterFromSnapshot",
+        "StartCluster",
+        "StopCluster",
         "TagResource",
         "UntagResource",
         "UpdateCluster"
