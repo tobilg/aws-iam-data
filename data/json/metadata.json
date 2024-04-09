@@ -17180,7 +17180,7 @@
       "name": "Amazon Neptune Analytics",
       "servicePrefix": "neptune-graph",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonneptuneanalytics.html",
-      "actionsCount": 31,
+      "actionsCount": 32,
       "actions": [
         "CancelImportTask",
         "CancelQuery",
@@ -17209,6 +17209,7 @@
         "ReadDataViaQuery",
         "ResetGraph",
         "RestoreGraphFromSnapshot",
+        "StartImportTask",
         "TagResource",
         "UntagResource",
         "UpdateGraph",
