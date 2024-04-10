@@ -1,5 +1,5 @@
 {
-  "serviceCount": 407,
+  "serviceCount": 408,
   "services": [
     {
       "name": "AWS Account Management",
@@ -5953,6 +5953,25 @@
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
+      "name": "AWS Control Catalog",
+      "servicePrefix": "controlcatalog",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscontrolcatalog.html",
+      "actionsCount": 3,
+      "actions": [
+        "ListCommonControls",
+        "ListDomains",
+        "ListObjectives"
+      ],
+      "resourceTypesCount": 3,
+      "resourceTypes": [
+        "common-control",
+        "domain",
+        "objective"
+      ],
       "conditionKeysCount": 0,
       "conditionKeys": []
     },
