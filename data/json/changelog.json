@@ -1,5 +1,19 @@
 [
   {
+    "dateOfChange": "2024-04-11",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon DataZone": [
+        "datazone:AddPolicyGrant",
+        "datazone:ListPolicyGrants",
+        "datazone:RemovePolicyGrant",
+        "datazone:UpdateDataSourceRunActivities"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-04-10",
     "addedServices": [
       "AWS Control Catalog"
