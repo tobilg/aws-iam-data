@@ -1,5 +1,48 @@
 [
   {
+    "dateOfChange": "2024-04-12",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Elemental MediaLive": [
+        "medialive:CreateCloudWatchAlarmTemplate",
+        "medialive:CreateCloudWatchAlarmTemplateGroup",
+        "medialive:CreateEventBridgeRuleTemplate",
+        "medialive:CreateEventBridgeRuleTemplateGroup",
+        "medialive:CreateSignalMap",
+        "medialive:DeleteCloudWatchAlarmTemplate",
+        "medialive:DeleteCloudWatchAlarmTemplateGroup",
+        "medialive:DeleteEventBridgeRuleTemplate",
+        "medialive:DeleteEventBridgeRuleTemplateGroup",
+        "medialive:DeleteSignalMap",
+        "medialive:GetCloudWatchAlarmTemplate",
+        "medialive:GetCloudWatchAlarmTemplateGroup",
+        "medialive:GetEventBridgeRuleTemplate",
+        "medialive:GetEventBridgeRuleTemplateGroup",
+        "medialive:GetSignalMap",
+        "medialive:ListCloudWatchAlarmTemplateGroups",
+        "medialive:ListCloudWatchAlarmTemplates",
+        "medialive:ListEventBridgeRuleTemplateGroups",
+        "medialive:ListEventBridgeRuleTemplates",
+        "medialive:ListSignalMaps",
+        "medialive:StartDeleteMonitorDeployment",
+        "medialive:StartMonitorDeployment",
+        "medialive:StartUpdateSignalMap",
+        "medialive:UpdateCloudWatchAlarmTemplate",
+        "medialive:UpdateCloudWatchAlarmTemplateGroup",
+        "medialive:UpdateEventBridgeRuleTemplate",
+        "medialive:UpdateEventBridgeRuleTemplateGroup"
+      ],
+      "Amazon Q in Connect": [
+        "wisdom:UpdateSession"
+      ],
+      "AWS Supply Chain": [
+        "scn:SendDataIntegrationEvent"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-04-11",
     "addedServices": [],
     "removedServices": [],
