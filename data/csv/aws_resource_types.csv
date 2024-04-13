@@ -1174,7 +1174,7 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 1173,280,repository,https://docs.aws.amazon.com/AmazonECR/latest/userguide/iam-policy-structure.html#ECR-Public_ARN_Format,arn:${Partition}:ecr-public::${Account}:repository/${RepositoryName}
 1174,280,registry,https://docs.aws.amazon.com/AmazonECR/latest/userguide/iam-policy-structure.html#ECR-Public_ARN_Format,arn:${Partition}:ecr-public::${Account}:registry/${RegistryId}
 1175,281,cluster,https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html,arn:${Partition}:ecs:${Region}:${Account}:cluster/${ClusterName}
-1176,281,container-instance,https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ECS_instances.html,arn:${Partition}:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}
+1176,281,container-instance,https://docs.aws.amazon.com/AmazonECS/latest/developerguide/manage-capacity.html,arn:${Partition}:ecs:${Region}:${Account}:container-instance/${ClusterName}/${ContainerInstanceId}
 1177,281,service,https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html,arn:${Partition}:ecs:${Region}:${Account}:service/${ClusterName}/${ServiceName}
 1178,281,task,https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html,arn:${Partition}:ecs:${Region}:${Account}:task/${ClusterName}/${TaskId}
 1179,281,task-definition,https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html,arn:${Partition}:ecs:${Region}:${Account}:task-definition/${TaskDefinitionFamilyName}:${TaskDefinitionRevisionNumber}
