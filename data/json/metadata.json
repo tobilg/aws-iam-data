@@ -14606,7 +14606,7 @@
       "name": "AWS Key Management Service",
       "servicePrefix": "kms",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awskeymanagementservice.html",
-      "actionsCount": 52,
+      "actionsCount": 54,
       "actions": [
         "CancelKeyDeletion",
         "ConnectCustomKeyStore",
@@ -14640,6 +14640,7 @@
         "ListAliases",
         "ListGrants",
         "ListKeyPolicies",
+        "ListKeyRotations",
         "ListKeys",
         "ListResourceTags",
         "ListRetirableGrants",
@@ -14649,6 +14650,7 @@
         "ReplicateKey",
         "RetireGrant",
         "RevokeGrant",
+        "RotateKeyOnDemand",
         "ScheduleKeyDeletion",
         "Sign",
         "SynchronizeMultiRegionKey",
@@ -14666,7 +14668,7 @@
         "alias",
         "key"
       ],
-      "conditionKeysCount": 37,
+      "conditionKeysCount": 38,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -14699,6 +14701,7 @@
         "kms:RequestAlias",
         "kms:ResourceAliases",
         "kms:RetiringPrincipal",
+        "kms:RotationPeriodInDays",
         "kms:ScheduleKeyDeletionPendingWindowInDays",
         "kms:SigningAlgorithm",
         "kms:ValidTo",
@@ -24981,10 +24984,11 @@
       "name": "AWS Well-Architected Tool",
       "servicePrefix": "wellarchitected",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswell-architectedtool.html",
-      "actionsCount": 70,
+      "actionsCount": 73,
       "actions": [
         "AssociateLenses",
         "AssociateProfiles",
+        "ConfigureIntegration",
         "CreateLensShare",
         "CreateLensVersion",
         "CreateMilestone",
@@ -25007,6 +25011,7 @@
         "ExportLens",
         "GetAnswer",
         "GetConsolidatedReport",
+        "GetGlobalSettings",
         "GetLens",
         "GetLensReview",
         "GetLensReviewReport",
@@ -25042,6 +25047,7 @@
         "UntagResource",
         "UpdateAnswer",
         "UpdateGlobalSettings",
+        "UpdateIntegration",
         "UpdateLensReview",
         "UpdateProfile",
         "UpdateReviewTemplate",
@@ -25061,11 +25067,12 @@
         "profile",
         "review-template"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 4,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "wellarchitected:JiraProjectKey"
       ]
     },
     {

@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2024-04-17",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Key Management Service": [
+        "kms:ListKeyRotations",
+        "kms:RotateKeyOnDemand"
+      ],
+      "AWS Well-Architected Tool": [
+        "wellarchitected:ConfigureIntegration",
+        "wellarchitected:GetGlobalSettings",
+        "wellarchitected:UpdateIntegration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-04-13",
     "addedServices": [],
     "removedServices": [],
