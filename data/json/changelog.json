@@ -1,5 +1,29 @@
 [
   {
+    "dateOfChange": "2024-04-18",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudWatch Internet Monitor": [
+        "internetmonitor:GetInternetEvent",
+        "internetmonitor:ListInternetEvents"
+      ],
+      "Amazon EMR on EKS (EMR Containers)": [
+        "emr-containers:CreateSecurityConfiguration",
+        "emr-containers:DescribeSecurityConfiguration",
+        "emr-containers:ListSecurityConfigurations"
+      ],
+      "AWS Outposts": [
+        "outposts:CancelCapacityTask",
+        "outposts:GetCapacityTask",
+        "outposts:GetOutpostSupportedInstanceTypes",
+        "outposts:ListCapacityTasks",
+        "outposts:StartCapacityTask"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-04-17",
     "addedServices": [],
     "removedServices": [],
