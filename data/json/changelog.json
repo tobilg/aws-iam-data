@@ -1,5 +1,26 @@
 [
   {
+    "dateOfChange": "2024-04-20",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Q": [
+        "q:GetIdentityMetadata",
+        "q:PassRequest",
+        "q:UpdateTroubleshootingCommandResult"
+      ],
+      "Amazon WorkSpaces": [
+        "workspaces:AcceptAccountLinkInvitation",
+        "workspaces:CreateAccountLinkInvitation",
+        "workspaces:DeleteAccountLinkInvitation",
+        "workspaces:GetAccountLink",
+        "workspaces:ListAccountLinks",
+        "workspaces:RejectAccountLinkInvitation"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-04-18",
     "addedServices": [],
     "removedServices": [],
