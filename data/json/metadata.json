@@ -1,5 +1,5 @@
 {
-  "serviceCount": 408,
+  "serviceCount": 409,
   "services": [
     {
       "name": "AWS Account Management",
@@ -2027,14 +2027,16 @@
       "name": "Amazon Bedrock",
       "servicePrefix": "bedrock",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html",
-      "actionsCount": 84,
+      "actionsCount": 89,
       "actions": [
+        "ApplyGuardrail",
         "AssociateAgentKnowledgeBase",
         "AssociateThirdPartyKnowledgeBase",
         "CreateAgent",
         "CreateAgentActionGroup",
         "CreateAgentAlias",
         "CreateDataSource",
+        "CreateEvaluationJob",
         "CreateFoundationModelAgreement",
         "CreateGuardrail",
         "CreateGuardrailVersion",
@@ -2063,6 +2065,7 @@
         "GetAgentVersion",
         "GetCustomModel",
         "GetDataSource",
+        "GetEvaluationJob",
         "GetFoundationModel",
         "GetFoundationModelAvailability",
         "GetGuardrail",
@@ -2084,6 +2087,7 @@
         "ListAgents",
         "ListCustomModels",
         "ListDataSources",
+        "ListEvaluationJobs",
         "ListFoundationModelAgreementOffers",
         "ListFoundationModels",
         "ListGuardrails",
@@ -2101,6 +2105,7 @@
         "Retrieve",
         "RetrieveAndGenerate",
         "StartIngestionJob",
+        "StopEvaluationJob",
         "StopModelCustomizationJob",
         "StopModelInvocationJob",
         "TagResource",
@@ -2114,7 +2119,7 @@
         "UpdateKnowledgeBase",
         "UpdateProvisionedModelThroughput"
       ],
-      "resourceTypesCount": 10,
+      "resourceTypesCount": 11,
       "resourceTypes": [
         "foundation-model",
         "custom-model",
@@ -2124,6 +2129,7 @@
         "agent-alias",
         "knowledge-base",
         "model-evaluation-job",
+        "evaluation-job",
         "model-invocation-job",
         "guardrail"
       ],
@@ -12742,10 +12748,11 @@
       "name": "AWS Identity and Access Management Roles Anywhere",
       "servicePrefix": "rolesanywhere",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentityandaccessmanagementrolesanywhere.html",
-      "actionsCount": 28,
+      "actionsCount": 30,
       "actions": [
         "CreateProfile",
         "CreateTrustAnchor",
+        "DeleteAttributeMapping",
         "DeleteCrl",
         "DeleteProfile",
         "DeleteTrustAnchor",
@@ -12765,6 +12772,7 @@
         "ListSubjects",
         "ListTagsForResource",
         "ListTrustAnchors",
+        "PutAttributeMapping",
         "PutNotificationSettings",
         "ResetNotificationSettings",
         "TagResource",
@@ -20775,6 +20783,41 @@
       "resourceTypes": [],
       "conditionKeysCount": 0,
       "conditionKeys": []
+    },
+    {
+      "name": "Amazon Route 53 Profiles enables sharing DNS settings with VPCs",
+      "servicePrefix": "route53profiles",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53profilesenablessharingdnssettingswithvpcs.html",
+      "actionsCount": 16,
+      "actions": [
+        "AssociateProfile",
+        "AssociateResourceToProfile",
+        "CreateProfile",
+        "DeleteProfile",
+        "DisassociateProfile",
+        "DisassociateResourceFromProfile",
+        "GetProfile",
+        "GetProfileAssociation",
+        "GetProfileResourceAssociation",
+        "ListProfileAssociations",
+        "ListProfileResourceAssociations",
+        "ListProfiles",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateProfileResourceAssociation"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "profile",
+        "profile-association"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "Amazon Route 53 Recovery Cluster",
