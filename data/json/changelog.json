@@ -1,5 +1,45 @@
 [
   {
+    "dateOfChange": "2024-04-26",
+    "addedServices": [
+      "AWS Signin"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS App Mesh Preview": [
+        "appmesh-preview:DeleteMeshPolicy",
+        "appmesh-preview:GetMeshPolicy",
+        "appmesh-preview:PutMeshPolicy"
+      ],
+      "Amazon Connect Cases": [
+        "cases:DeleteField",
+        "cases:DeleteLayout",
+        "cases:DeleteTemplate"
+      ],
+      "Amazon GameLift": [
+        "gamelift:CreateContainerGroupDefinition",
+        "gamelift:DeleteContainerGroupDefinition",
+        "gamelift:DescribeContainerGroupDefinition",
+        "gamelift:ListContainerGroupDefinitions"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:UpdateSPICECapacityConfiguration"
+      ],
+      "AWS Step Functions": [
+        "states:ValidateStateMachineDefinition"
+      ],
+      "Amazon WorkDocs": [
+        "workdocs:DescribeInstanceExports",
+        "workdocs:StartInstanceExport"
+      ],
+      "AWS Signin": [
+        "signin:CreateTrustedIdentityPropagationApplicationForConsole",
+        "signin:ListTrustedIdentityPropagationApplicationsForConsole"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-04-24",
     "addedServices": [
       "Amazon Route 53 Profiles enables sharing DNS settings with VPCs"

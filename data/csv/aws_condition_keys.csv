@@ -174,7 +174,7 @@ condition_key_id,name,reference_url,description,type
 173,connect:SearchContactsByContactAnalysis,https://docs.aws.amazon.com/connect/latest/adminguide/security_iam_service-with-iam.html,Filters access by restricting searches using analysis outputs from Amazon Connect Contact Lens,ArrayOfString
 174,connect:SearchTag/${TagKey},https://docs.aws.amazon.com/connect/latest/adminguide/security_iam_service-with-iam.html,Filters access by TagFilter condition passed in the search request,String
 175,connect:StorageResourceType,https://docs.aws.amazon.com/connect/latest/adminguide/security_iam_service-with-iam.html,Filters access by restricting the storage resource type of the Amazon Connect instance storage configuration,String
-176,connect:UserArn,https://docs.aws.amazon.com/connect/latest/APIReference/API_UserReference.html,Filters access by connect's UserArn,ARN
+176,connect:UserArn,https://docs.aws.amazon.com/connect/latest/APIReference/API_User.html,Filters access by connect's UserArn,ARN
 177,dataexchange:JobType,https://docs.aws.amazon.com/data-exchange/latest/userguide/access-control.html,Filters access by the specified job type,String
 178,datapipeline:PipelineCreator,https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-example-tag-policies.html#ex3,Filters access by the IAM user that created the pipeline,ArrayOfString
 179,datapipeline:Tag,https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-iam-resourcebased-access.html#dp-control-access-tags,Filters access by customer-specified key/value pair that can be attached to a resource,ArrayOfString

@@ -1,5 +1,5 @@
 {
-  "serviceCount": 409,
+  "serviceCount": 410,
   "services": [
     {
       "name": "AWS Account Management",
@@ -662,7 +662,7 @@
       "name": "AWS App Mesh Preview",
       "servicePrefix": "appmesh-preview",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappmeshpreview.html",
-      "actionsCount": 36,
+      "actionsCount": 39,
       "actions": [
         "CreateGatewayRoute",
         "CreateMesh",
@@ -673,6 +673,7 @@
         "CreateVirtualService",
         "DeleteGatewayRoute",
         "DeleteMesh",
+        "DeleteMeshPolicy",
         "DeleteRoute",
         "DeleteVirtualGateway",
         "DeleteVirtualNode",
@@ -685,6 +686,7 @@
         "DescribeVirtualNode",
         "DescribeVirtualRouter",
         "DescribeVirtualService",
+        "GetMeshPolicy",
         "ListGatewayRoutes",
         "ListMeshes",
         "ListRoutes",
@@ -692,6 +694,7 @@
         "ListVirtualNodes",
         "ListVirtualRouters",
         "ListVirtualServices",
+        "PutMeshPolicy",
         "StreamAggregatedResources",
         "UpdateGatewayRoute",
         "UpdateMesh",
@@ -5749,7 +5752,7 @@
       "name": "Amazon Connect Cases",
       "servicePrefix": "cases",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcases.html",
-      "actionsCount": 31,
+      "actionsCount": 34,
       "actions": [
         "BatchGetField",
         "BatchPutFieldOptions",
@@ -5760,6 +5763,9 @@
         "CreateRelatedItem",
         "CreateTemplate",
         "DeleteDomain",
+        "DeleteField",
+        "DeleteLayout",
+        "DeleteTemplate",
         "GetCase",
         "GetCaseAuditEvents",
         "GetCaseEventConfiguration",
@@ -11202,12 +11208,13 @@
       "name": "Amazon GameLift",
       "servicePrefix": "gamelift",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongamelift.html",
-      "actionsCount": 104,
+      "actionsCount": 108,
       "actions": [
         "AcceptMatch",
         "ClaimGameServer",
         "CreateAlias",
         "CreateBuild",
+        "CreateContainerGroupDefinition",
         "CreateFleet",
         "CreateFleetLocations",
         "CreateGameServerGroup",
@@ -11223,6 +11230,7 @@
         "CreateVpcPeeringConnection",
         "DeleteAlias",
         "DeleteBuild",
+        "DeleteContainerGroupDefinition",
         "DeleteFleet",
         "DeleteFleetLocations",
         "DeleteGameServerGroup",
@@ -11239,6 +11247,7 @@
         "DescribeAlias",
         "DescribeBuild",
         "DescribeCompute",
+        "DescribeContainerGroupDefinition",
         "DescribeEC2InstanceLimits",
         "DescribeFleetAttributes",
         "DescribeFleetCapacity",
@@ -11272,6 +11281,7 @@
         "ListAliases",
         "ListBuilds",
         "ListCompute",
+        "ListContainerGroupDefinitions",
         "ListFleets",
         "ListGameServerGroups",
         "ListGameServers",
@@ -11309,10 +11319,11 @@
         "UpdateScript",
         "ValidateMatchmakingRuleSet"
       ],
-      "resourceTypesCount": 9,
+      "resourceTypesCount": 10,
       "resourceTypes": [
         "alias",
         "build",
+        "containerGroupDefinition",
         "fleet",
         "gameServerGroup",
         "gameSessionQueue",
@@ -19294,7 +19305,7 @@
       "name": "Amazon QuickSight",
       "servicePrefix": "quicksight",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonquicksight.html",
-      "actionsCount": 197,
+      "actionsCount": 198,
       "actions": [
         "AccountConfigurations",
         "CancelIngestion",
@@ -19482,6 +19493,7 @@
         "UpdateRefreshSchedule",
         "UpdateResourcePermissions",
         "UpdateRoleCustomPermission",
+        "UpdateSPICECapacityConfiguration",
         "UpdateTemplate",
         "UpdateTemplateAlias",
         "UpdateTemplatePermissions",
@@ -22829,6 +22841,20 @@
       ]
     },
     {
+      "name": "AWS Signin",
+      "servicePrefix": "signin",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssignin.html",
+      "actionsCount": 2,
+      "actions": [
+        "CreateTrustedIdentityPropagationApplicationForConsole",
+        "ListTrustedIdentityPropagationApplicationsForConsole"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
       "name": "Amazon Simple Email Service v2",
       "servicePrefix": "ses",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservicev2.html",
@@ -23356,7 +23382,7 @@
       "name": "AWS Step Functions",
       "servicePrefix": "states",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsstepfunctions.html",
-      "actionsCount": 38,
+      "actionsCount": 39,
       "actions": [
         "CreateActivity",
         "CreateStateMachine",
@@ -23395,7 +23421,8 @@
         "UntagResource",
         "UpdateMapRun",
         "UpdateStateMachine",
-        "UpdateStateMachineAlias"
+        "UpdateStateMachineAlias",
+        "ValidateStateMachineDefinition"
       ],
       "resourceTypesCount": 9,
       "resourceTypes": [
@@ -25165,7 +25192,7 @@
       "name": "Amazon WorkDocs",
       "servicePrefix": "workdocs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkdocs.html",
-      "actionsCount": 59,
+      "actionsCount": 61,
       "actions": [
         "AbortDocumentVersionUpload",
         "ActivateUser",
@@ -25199,6 +25226,7 @@
         "DescribeDocumentVersions",
         "DescribeFolderContents",
         "DescribeGroups",
+        "DescribeInstanceExports",
         "DescribeInstances",
         "DescribeNotificationPermissions",
         "DescribeNotificationSubscriptions",
@@ -25220,6 +25248,7 @@
         "RemoveResourcePermission",
         "RestoreDocumentVersions",
         "SearchResources",
+        "StartInstanceExport",
         "UpdateDocument",
         "UpdateDocumentVersion",
         "UpdateFolder",
@@ -25227,8 +25256,10 @@
         "UpdateUser",
         "UpdateUserAdministrativeSettings"
       ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "organization"
+      ],
       "conditionKeysCount": 0,
       "conditionKeys": []
     },
