@@ -1,5 +1,26 @@
 [
   {
+    "dateOfChange": "2024-04-27",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {},
+    "removedActions": {
+      "Amazon WorkMail": [
+        "workmail:AddMembersToGroup",
+        "workmail:DescribeDirectories",
+        "workmail:DescribeKmsKeys",
+        "workmail:DescribeMailGroups",
+        "workmail:DescribeMailUsers",
+        "workmail:DescribeOrganizations",
+        "workmail:GetMailGroupDetails",
+        "workmail:ListMembersInMailGroup",
+        "workmail:RemoveMembersFromGroup",
+        "workmail:ResetUserPassword",
+        "workmail:SetAdmin"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-04-26",
     "addedServices": [
       "AWS Signin"
