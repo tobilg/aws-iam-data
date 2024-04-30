@@ -4685,7 +4685,7 @@
       "name": "AWS CodePipeline",
       "servicePrefix": "codepipeline",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodepipeline.html",
-      "actionsCount": 39,
+      "actionsCount": 40,
       "actions": [
         "AcknowledgeJob",
         "AcknowledgeThirdPartyJob",
@@ -4720,6 +4720,7 @@
         "PutWebhook",
         "RegisterWebhookWithThirdParty",
         "RetryStageExecution",
+        "RollbackStage",
         "StartPipelineExecution",
         "StopPipelineExecution",
         "TagResource",
@@ -8388,7 +8389,7 @@
         "vpn-connection",
         "vpn-gateway"
       ],
-      "conditionKeysCount": 112,
+      "conditionKeysCount": 119,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -8501,7 +8502,14 @@
         "ec2:VpcPeeringConnectionID",
         "ec2:VpceServiceName",
         "ec2:VpceServiceOwner",
-        "ec2:VpceServicePrivateDnsName"
+        "ec2:VpceServicePrivateDnsName",
+        "ec2:transitGatewayAttachmentId",
+        "ec2:transitGatewayConnectPeerId",
+        "ec2:transitGatewayId",
+        "ec2:transitGatewayMulticastDomainId",
+        "ec2:transitGatewayPolicyTableId",
+        "ec2:transitGatewayRouteTableAnnouncementId",
+        "ec2:transitGatewayRouteTableId"
       ]
     },
     {
@@ -12025,7 +12033,7 @@
       "name": "AWS HealthLake",
       "servicePrefix": "healthlake",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthlake.html",
-      "actionsCount": 20,
+      "actionsCount": 21,
       "actions": [
         "CreateFHIRDatastore",
         "CreateResource",
@@ -12040,6 +12048,7 @@
         "ListFHIRImportJobs",
         "ListTagsForResource",
         "ReadResource",
+        "SearchEverything",
         "SearchWithGet",
         "SearchWithPost",
         "StartFHIRExportJob",
