@@ -1,5 +1,5 @@
 {
-  "serviceCount": 410,
+  "serviceCount": 411,
   "services": [
     {
       "name": "AWS Account Management",
@@ -19105,11 +19105,12 @@
       "name": "Amazon Q Business",
       "servicePrefix": "qbusiness",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusiness.html",
-      "actionsCount": 61,
+      "actionsCount": 65,
       "actions": [
         "AddUserLicenses",
         "BatchDeleteDocument",
         "BatchPutDocument",
+        "CancelSubscription",
         "Chat",
         "ChatSync",
         "CreateApplication",
@@ -19118,6 +19119,7 @@
         "CreateLicense",
         "CreatePlugin",
         "CreateRetriever",
+        "CreateSubscription",
         "CreateUser",
         "CreateWebExperience",
         "DeleteApplication",
@@ -19150,6 +19152,7 @@
         "ListMessages",
         "ListPlugins",
         "ListRetrievers",
+        "ListSubscriptions",
         "ListTagsForResource",
         "ListUserLicenses",
         "ListWebExperiences",
@@ -19166,10 +19169,11 @@
         "UpdateIndex",
         "UpdatePlugin",
         "UpdateRetriever",
+        "UpdateSubscription",
         "UpdateUser",
         "UpdateWebExperience"
       ],
-      "resourceTypesCount": 7,
+      "resourceTypesCount": 8,
       "resourceTypes": [
         "application",
         "retriever",
@@ -19177,7 +19181,8 @@
         "data-source",
         "plugin",
         "web-experience",
-        "user-license"
+        "user-license",
+        "subscription"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -19185,6 +19190,41 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
+    },
+    {
+      "name": "Amazon Q Business Q Apps",
+      "servicePrefix": "qapps",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusinessqapps.html",
+      "actionsCount": 21,
+      "actions": [
+        "AssociateQAppWithUser",
+        "CopyQApp",
+        "CreateLibraryItem",
+        "CreateLibraryItemReview",
+        "CreateQApp",
+        "CreateSubscriptionToken",
+        "DeleteLibraryItem",
+        "DeleteQApp",
+        "DisassociateQAppFromUser",
+        "GetLibraryItem",
+        "GetQApp",
+        "ImportDocumentToQApp",
+        "ImportDocumentToQAppSession",
+        "ListLibraryItems",
+        "ListQApps",
+        "PredictProblemStatementFromConversation",
+        "PredictQAppFromProblemStatement",
+        "StartQAppSession",
+        "StopQAppSession",
+        "UpdateLibraryItem",
+        "UpdateQApp"
+      ],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "application"
+      ],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
     },
     {
       "name": "Amazon Q in Connect",
@@ -22300,10 +22340,11 @@
         "SetSourceIdentity",
         "TagSession"
       ],
-      "resourceTypesCount": 2,
+      "resourceTypesCount": 3,
       "resourceTypes": [
         "role",
-        "user"
+        "user",
+        "self-session"
       ],
       "conditionKeysCount": 54,
       "conditionKeys": [
@@ -24186,7 +24227,7 @@
       "name": "Amazon Timestream",
       "servicePrefix": "timestream",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestream.html",
-      "actionsCount": 35,
+      "actionsCount": 37,
       "actions": [
         "CancelQuery",
         "CreateBatchLoadTask",
@@ -24196,6 +24237,7 @@
         "DeleteDatabase",
         "DeleteScheduledQuery",
         "DeleteTable",
+        "DescribeAccountSettings",
         "DescribeBatchLoadTask",
         "DescribeDatabase",
         "DescribeEndpoints",
@@ -24219,6 +24261,7 @@
         "TagResource",
         "Unload",
         "UntagResource",
+        "UpdateAccountSettings",
         "UpdateDatabase",
         "UpdateScheduledQuery",
         "UpdateTable",

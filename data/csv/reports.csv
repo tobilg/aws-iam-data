@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,9220
-Actions by type,Read Actions,4490
-Actions by type,List Actions,2714
+Actions by type,Write Actions,9241
+Actions by type,Read Actions,4493
+Actions by type,List Actions,2717
 Actions by type,Permissions Actions,284
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -38,11 +38,11 @@ Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Ac
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},82
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},81
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},81
+Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},79
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},67
 Most referenced resource ARNs,stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/,66
 Most referenced resource ARNs,index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId},64
 Most referenced resource ARNs,hub - arn:${Partition}:securityhub:${Region}:${Account}:hub/default,61
-Most referenced resource ARNs,catalog - arn:${Partition}:glue:${Region}:${Account}:catalog,59
 Services with least actions,AWS Elemental Support Content,1
 Services with least actions,AWS Sustainability,1
 Services with least actions,AWS Verified Access,1
@@ -93,8 +93,8 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1711
+Summary,Total number of distinct resource ARNS,1713
 Summary,Total number of distinct condition keys,907
-Summary,Total number of services,410
+Summary,Total number of services,411
 Summary,Average number of actions per service,41
-Summary,Median number of actions per service,28
+Summary,Median number of actions per service,27

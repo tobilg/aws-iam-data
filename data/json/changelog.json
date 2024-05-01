@@ -1,5 +1,48 @@
 [
   {
+    "dateOfChange": "2024-05-01",
+    "addedServices": [
+      "Amazon Q Business Q Apps"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Q Business": [
+        "qbusiness:CancelSubscription",
+        "qbusiness:CreateSubscription",
+        "qbusiness:ListSubscriptions",
+        "qbusiness:UpdateSubscription"
+      ],
+      "Amazon Timestream": [
+        "timestream:DescribeAccountSettings",
+        "timestream:UpdateAccountSettings"
+      ],
+      "Amazon Q Business Q Apps": [
+        "qapps:AssociateQAppWithUser",
+        "qapps:CopyQApp",
+        "qapps:CreateLibraryItem",
+        "qapps:CreateLibraryItemReview",
+        "qapps:CreateQApp",
+        "qapps:CreateSubscriptionToken",
+        "qapps:DeleteLibraryItem",
+        "qapps:DeleteQApp",
+        "qapps:DisassociateQAppFromUser",
+        "qapps:GetLibraryItem",
+        "qapps:GetQApp",
+        "qapps:ImportDocumentToQApp",
+        "qapps:ImportDocumentToQAppSession",
+        "qapps:ListLibraryItems",
+        "qapps:ListQApps",
+        "qapps:PredictProblemStatementFromConversation",
+        "qapps:PredictQAppFromProblemStatement",
+        "qapps:StartQAppSession",
+        "qapps:StopQAppSession",
+        "qapps:UpdateLibraryItem",
+        "qapps:UpdateQApp"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-04-30",
     "addedServices": [],
     "removedServices": [],
