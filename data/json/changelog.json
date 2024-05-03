@@ -1,5 +1,28 @@
 [
   {
+    "dateOfChange": "2024-05-03",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Pinpoint SMS Voice V2": [
+        "sms-voice:AssociateProtectConfiguration",
+        "sms-voice:CreateProtectConfiguration",
+        "sms-voice:DeleteAccountDefaultProtectConfiguration",
+        "sms-voice:DeleteMediaMessageSpendLimitOverride",
+        "sms-voice:DeleteProtectConfiguration",
+        "sms-voice:DescribeProtectConfigurations",
+        "sms-voice:DisassociateProtectConfiguration",
+        "sms-voice:GetProtectConfigurationCountryRuleSet",
+        "sms-voice:SendMediaMessage",
+        "sms-voice:SetAccountDefaultProtectConfiguration",
+        "sms-voice:SetMediaMessageSpendLimitOverride",
+        "sms-voice:UpdateProtectConfiguration",
+        "sms-voice:UpdateProtectConfigurationCountryRuleSet"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-05-01",
     "addedServices": [
       "Amazon Q Business Q Apps"
