@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2024-05-07",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect": [
+        "connect:AdminGetEmergencyAccessToken"
+      ],
+      "Amazon Personalize": [
+        "personalize:CreateDataDeletionJob",
+        "personalize:DescribeDataDeletionJob",
+        "personalize:ListDataDeletionJobs"
+      ]
+    },
+    "removedActions": {
+      "Amazon Connect": [
+        "connect:GetFederationTokens"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-05-03",
     "addedServices": [],
     "removedServices": [],
