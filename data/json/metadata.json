@@ -16886,11 +16886,13 @@
         "acl",
         "reservednode"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "memorydb:TLSEnabled",
+        "memorydb:UserAuthenticationMode"
       ]
     },
     {
