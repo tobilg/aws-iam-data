@@ -106,8 +106,8 @@ resource_type_id,service_id,name,reference_url,arn_pattern
 105,28,pricingplan,https://docs.aws.amazon.com/billingconductor/latest/userguide/understanding-abc.html,arn:${Partition}:billingconductor::${Account}:pricingplan/${PricingPlanId}
 106,28,pricingrule,https://docs.aws.amazon.com/billingconductor/latest/userguide/understanding-abc.html,arn:${Partition}:billingconductor::${Account}:pricingrule/${PricingRuleId}
 107,28,customlineitem,https://docs.aws.amazon.com/billingconductor/latest/userguide/understanding-abc.html,arn:${Partition}:billingconductor::${Account}:customlineitem/${CustomLineItemId}
-108,30,budget,https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html,arn:${Partition}:budgets::${Account}:budget/${BudgetName}
-109,30,budgetAction,https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/budgets-managing-costs.html,arn:${Partition}:budgets::${Account}:budget/${BudgetName}/action/${ActionId}
+108,30,budget,https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-managing-costs.html,arn:${Partition}:budgets::${Account}:budget/${BudgetName}
+109,30,budgetAction,https://docs.aws.amazon.com/cost-management/latest/userguide/budgets-controls.html,arn:${Partition}:budgets::${Account}:budget/${BudgetName}/action/${ActionId}
 110,31,Event,https://docs.aws.amazon.com/codeguru/latest/bugbust-ug/event-managing.html,arn:${Partition}:bugbust:${Region}:${Account}:events/${EventId}
 111,32,certificate,https://docs.aws.amazon.com/acm/latest/userguide/acm-concepts.html#concept-acm-cert,arn:${Partition}:acm:${Region}:${Account}:certificate/${CertificateId}
 112,33,ChatbotConfiguration,https://docs.aws.amazon.com/chatbot/latest/adminguide/what-is.html,arn:${Partition}:chatbot::${Account}:chat-configuration/${ConfigurationType}/${ChatbotConfigurationName}

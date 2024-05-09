@@ -2314,7 +2314,7 @@
       "name": "AWS Budget Service",
       "servicePrefix": "budgets",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbudgetservice.html",
-      "actionsCount": 10,
+      "actionsCount": 13,
       "actions": [
         "CreateBudgetAction",
         "DeleteBudgetAction",
@@ -2323,7 +2323,10 @@
         "DescribeBudgetActionsForAccount",
         "DescribeBudgetActionsForBudget",
         "ExecuteBudgetAction",
+        "ListTagsForResource",
         "ModifyBudget",
+        "TagResource",
+        "UntagResource",
         "UpdateBudgetAction",
         "ViewBudget"
       ],
@@ -2332,8 +2335,12 @@
         "budget",
         "budgetAction"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "AWS BugBust",
@@ -20357,7 +20364,7 @@
       "name": "AWS Resilience Hub",
       "servicePrefix": "resiliencehub",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresiliencehub.html",
-      "actionsCount": 54,
+      "actionsCount": 55,
       "actions": [
         "AddDraftAppVersionResourceMappings",
         "BatchUpdateRecommendationStatus",
@@ -20385,6 +20392,7 @@
         "ImportResourcesToDraftAppVersion",
         "ListAlarmRecommendations",
         "ListAppAssessmentComplianceDrifts",
+        "ListAppAssessmentResourceDrifts",
         "ListAppAssessments",
         "ListAppComponentCompliances",
         "ListAppComponentRecommendations",
@@ -24553,8 +24561,9 @@
       "name": "AWS Trusted Advisor",
       "servicePrefix": "trustedadvisor",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstrustedadvisor.html",
-      "actionsCount": 51,
+      "actionsCount": 52,
       "actions": [
+        "BatchUpdateRecommendationResourceExclusion",
         "CreateEngagement",
         "CreateEngagementAttachment",
         "CreateEngagementCommunication",

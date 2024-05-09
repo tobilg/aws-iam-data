@@ -1,5 +1,24 @@
 [
   {
+    "dateOfChange": "2024-05-09",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Budget Service": [
+        "budgets:ListTagsForResource",
+        "budgets:TagResource",
+        "budgets:UntagResource"
+      ],
+      "AWS Resilience Hub": [
+        "resiliencehub:ListAppAssessmentResourceDrifts"
+      ],
+      "AWS Trusted Advisor": [
+        "trustedadvisor:BatchUpdateRecommendationResourceExclusion"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-05-07",
     "addedServices": [],
     "removedServices": [],
