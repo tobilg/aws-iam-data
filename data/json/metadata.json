@@ -16137,7 +16137,7 @@
       "name": "AWS Mainframe Modernization Service",
       "servicePrefix": "m2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmainframemodernizationservice.html",
-      "actionsCount": 33,
+      "actionsCount": 34,
       "actions": [
         "CancelBatchJobExecution",
         "CreateApplication",
@@ -16159,6 +16159,7 @@
         "ListApplications",
         "ListBatchJobDefinitions",
         "ListBatchJobExecutions",
+        "ListBatchJobRestartPoints",
         "ListDataSetImportHistory",
         "ListDataSets",
         "ListDeployments",
@@ -24439,7 +24440,7 @@
       "name": "AWS Transfer Family",
       "servicePrefix": "transfer",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstransferfamily.html",
-      "actionsCount": 59,
+      "actionsCount": 60,
       "actions": [
         "CreateAccess",
         "CreateAgreement",
@@ -24485,6 +24486,7 @@
         "ListUsers",
         "ListWorkflows",
         "SendWorkflowStepState",
+        "StartDirectoryListing",
         "StartFileTransfer",
         "StartServer",
         "StopServer",
@@ -24827,13 +24829,15 @@
       "name": "Amazon VPC Lattice Services",
       "servicePrefix": "vpc-lattice-svcs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonvpclatticeservices.html",
-      "actionsCount": 1,
+      "actionsCount": 2,
       "actions": [
+        "Connect",
         "Invoke"
       ],
-      "resourceTypesCount": 1,
+      "resourceTypesCount": 2,
       "resourceTypes": [
-        "Service"
+        "Service",
+        "TCP Service"
       ],
       "conditionKeysCount": 8,
       "conditionKeys": [
