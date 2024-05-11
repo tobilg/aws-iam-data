@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2024-05-11",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Q": [
+        "q:CreateAssignment",
+        "q:DeleteAssignment"
+      ],
+      "AWS Systems Manager for SAP": [
+        "ssm-sap:ListOperationEvents",
+        "ssm-sap:StartApplication",
+        "ssm-sap:StopApplication"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-05-10",
     "addedServices": [],
     "removedServices": [],
