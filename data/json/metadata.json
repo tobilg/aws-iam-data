@@ -5760,7 +5760,7 @@
       "name": "Amazon Connect Cases",
       "servicePrefix": "cases",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcases.html",
-      "actionsCount": 34,
+      "actionsCount": 35,
       "actions": [
         "BatchGetField",
         "BatchPutFieldOptions",
@@ -5773,6 +5773,7 @@
         "DeleteDomain",
         "DeleteField",
         "DeleteLayout",
+        "DeleteRelatedItem",
         "DeleteTemplate",
         "GetCase",
         "GetCaseAuditEvents",
