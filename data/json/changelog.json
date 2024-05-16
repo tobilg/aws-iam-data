@@ -1,5 +1,23 @@
 [
   {
+    "dateOfChange": "2024-05-16",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect": [
+        "connect:BatchGetAttachedFileMetadata",
+        "connect:CompleteAttachedFileUpload",
+        "connect:DeleteAttachedFile",
+        "connect:GetAttachedFile",
+        "connect:StartAttachedFileUpload"
+      ],
+      "Amazon EventBridge": [
+        "events:UpdateEventBus"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-05-14",
     "addedServices": [],
     "removedServices": [],

@@ -5456,7 +5456,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 247,
+      "actionsCount": 252,
       "actions": [
         "ActivateEvaluationForm",
         "AdminGetEmergencyAccessToken",
@@ -5476,9 +5476,11 @@
         "AssociateUserProficiencies",
         "BatchAssociateAnalyticsDataSet",
         "BatchDisassociateAnalyticsDataSet",
+        "BatchGetAttachedFileMetadata",
         "BatchGetFlowAssociation",
         "BatchPutContact",
         "ClaimPhoneNumber",
+        "CompleteAttachedFileUpload",
         "CreateAgentStatus",
         "CreateContactFlow",
         "CreateContactFlowModule",
@@ -5504,6 +5506,7 @@
         "CreateViewVersion",
         "CreateVocabulary",
         "DeactivateEvaluationForm",
+        "DeleteAttachedFile",
         "DeleteContactEvaluation",
         "DeleteContactFlow",
         "DeleteContactFlowModule",
@@ -5565,6 +5568,7 @@
         "DisassociateTrafficDistributionGroupUser",
         "DisassociateUserProficiencies",
         "DismissUserContact",
+        "GetAttachedFile",
         "GetContactAttributes",
         "GetCurrentMetricData",
         "GetCurrentUserData",
@@ -5640,6 +5644,7 @@
         "SearchUsers",
         "SearchVocabularies",
         "SendChatIntegrationEvent",
+        "StartAttachedFileUpload",
         "StartChatContact",
         "StartContactEvaluation",
         "StartContactRecording",
@@ -5706,7 +5711,7 @@
         "UpdateViewContent",
         "UpdateViewMetadata"
       ],
-      "resourceTypesCount": 34,
+      "resourceTypesCount": 35,
       "resourceTypes": [
         "instance",
         "contact",
@@ -5741,9 +5746,10 @@
         "aws-managed-view",
         "qualified-customer-managed-view",
         "qualified-aws-managed-view",
-        "customer-managed-view-version"
+        "customer-managed-view-version",
+        "attached-file"
       ],
-      "conditionKeysCount": 9,
+      "conditionKeysCount": 10,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -5753,7 +5759,8 @@
         "connect:MonitorCapabilities",
         "connect:SearchContactsByContactAnalysis",
         "connect:SearchTag/${TagKey}",
-        "connect:StorageResourceType"
+        "connect:StorageResourceType",
+        "connect:UserArn"
       ]
     },
     {
@@ -10470,7 +10477,7 @@
       "name": "Amazon EventBridge",
       "servicePrefix": "events",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridge.html",
-      "actionsCount": 58,
+      "actionsCount": 59,
       "actions": [
         "ActivateEventSource",
         "CancelReplay",
@@ -10529,7 +10536,8 @@
         "UpdateApiDestination",
         "UpdateArchive",
         "UpdateConnection",
-        "UpdateEndpoint"
+        "UpdateEndpoint",
+        "UpdateEventBus"
       ],
       "resourceTypesCount": 9,
       "resourceTypes": [

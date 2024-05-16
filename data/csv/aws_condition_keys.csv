@@ -174,7 +174,7 @@ condition_key_id,name,reference_url,description,type
 173,connect:SearchContactsByContactAnalysis,https://docs.aws.amazon.com/connect/latest/adminguide/security_iam_service-with-iam.html,Filters access by restricting searches using analysis outputs from Amazon Connect Contact Lens,ArrayOfString
 174,connect:SearchTag/${TagKey},https://docs.aws.amazon.com/connect/latest/adminguide/security_iam_service-with-iam.html,Filters access by TagFilter condition passed in the search request,String
 175,connect:StorageResourceType,https://docs.aws.amazon.com/connect/latest/adminguide/security_iam_service-with-iam.html,Filters access by restricting the storage resource type of the Amazon Connect instance storage configuration,String
-176,connect:UserArn,https://docs.aws.amazon.com/connect/latest/APIReference/API_User.html,Filters access by connect's UserArn,ARN
+176,connect:UserArn,https://docs.aws.amazon.com/connect/latest/APIReference/API_User.html,Filters access by UserArn,ARN
 177,dataexchange:JobType,https://docs.aws.amazon.com/data-exchange/latest/userguide/access-control.html,Filters access by the specified job type,String
 178,datapipeline:PipelineCreator,https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-example-tag-policies.html#ex3,Filters access by the IAM user that created the pipeline,ArrayOfString
 179,datapipeline:Tag,https://docs.aws.amazon.com/datapipeline/latest/DeveloperGuide/dp-iam-resourcebased-access.html#dp-control-access-tags,Filters access by customer-specified key/value pair that can be attached to a resource,ArrayOfString
@@ -553,7 +553,7 @@ condition_key_id,name,reference_url,description,type
 552,memorydb:TLSEnabled,https://docs.aws.amazon.com/memorydb/latest/devguide/IAM.ConditionKeys.html#IAM.SpecifyingConditions,Filters access by the TLSEnabled parameter present in the request or defaults to true value if parameter is not present,Bool
 553,memorydb:UserAuthenticationMode,https://docs.aws.amazon.com/memorydb/latest/devguide/IAM.ConditionKeys.html#IAM.SpecifyingConditions,Filters access by the UserAuthenticationMode.Type parameter in the request,String
 554,mgn:CreateAction,https://docs.aws.amazon.com/mgn/latest/ug/supported-iam-actions-tagging.html,Filters access by the name of a resource-creating API action,String
-555,neptune-db:QueryLanguage,https://docs.aws.amazon.com/neptune/latest/userguide/iam-dp-context-keys.html#querylanguage,Filters access by graph model,String
+555,neptune-db:QueryLanguage,https://docs.aws.amazon.com/neptune/latest/userguide/iam-data-condition-keys.html#iam-neptune-condition-keys,Filters access by graph model,String
 556,neptune-graph:PublicConnectivity,https://docs.aws.amazon.com/neptune-analytics/latest/userguide/iam-condition-keys.html#publicconnectivity,"Filters access by the value of the public connectivity parameter provided in the request or its default value, if unspecified. All access to graphs is IAM authenticated",Bool
 557,networkmanager:cgwArn,https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html,Filters access by which customer gateways can be associated or disassociated,ARN
 558,networkmanager:subnetArns,https://docs.aws.amazon.com/vpc/latest/tgw/nm-security-iam.html,Filters access by which VPC subnets can be added or removed from a VPC attachment,ArrayOfARN
