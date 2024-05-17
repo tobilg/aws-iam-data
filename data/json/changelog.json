@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2024-05-17",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Managed Grafana": [
+        "grafana:CreateWorkspaceServiceAccount",
+        "grafana:CreateWorkspaceServiceAccountToken",
+        "grafana:DeleteWorkspaceServiceAccount",
+        "grafana:DeleteWorkspaceServiceAccountToken",
+        "grafana:ListWorkspaceServiceAccountTokens",
+        "grafana:ListWorkspaceServiceAccounts"
+      ],
+      "Amazon Q in Connect": [
+        "wisdom:CreateContentAssociation",
+        "wisdom:DeleteContentAssociation",
+        "wisdom:GetContentAssociation",
+        "wisdom:ListContentAssociations"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-05-16",
     "addedServices": [],
     "removedServices": [],
