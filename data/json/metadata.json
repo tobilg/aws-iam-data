@@ -1,5 +1,5 @@
 {
-  "serviceCount": 411,
+  "serviceCount": 412,
   "services": [
     {
       "name": "AWS Account Management",
@@ -12012,13 +12012,14 @@
       "name": "AWS HealthImaging",
       "servicePrefix": "medical-imaging",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthimaging.html",
-      "actionsCount": 18,
+      "actionsCount": 19,
       "actions": [
         "CopyImageSet",
         "CreateDatastore",
         "DeleteDatastore",
         "DeleteImageSet",
         "GetDICOMImportJob",
+        "GetDICOMInstance",
         "GetDatastore",
         "GetImageFrame",
         "GetImageSet",
@@ -19405,7 +19406,7 @@
       "name": "Amazon QuickSight",
       "servicePrefix": "quicksight",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonquicksight.html",
-      "actionsCount": 198,
+      "actionsCount": 200,
       "actions": [
         "AccountConfigurations",
         "CancelIngestion",
@@ -19490,6 +19491,7 @@
         "DescribeIAMPolicyAssignment",
         "DescribeIngestion",
         "DescribeIpRestriction",
+        "DescribeKeyRegistration",
         "DescribeNamespace",
         "DescribeRefreshSchedule",
         "DescribeRoleCustomPermission",
@@ -19589,6 +19591,7 @@
         "UpdateIAMPolicyAssignment",
         "UpdateIdentityPropagationConfig",
         "UpdateIpRestriction",
+        "UpdateKeyRegistration",
         "UpdatePublicSharingSettings",
         "UpdateRefreshSchedule",
         "UpdateResourcePermissions",
@@ -19630,7 +19633,7 @@
         "topic",
         "dashboardSnapshotJob"
       ],
-      "conditionKeysCount": 9,
+      "conditionKeysCount": 10,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -19639,6 +19642,7 @@
         "quicksight:DirectoryType",
         "quicksight:Edition",
         "quicksight:IamArn",
+        "quicksight:KmsKeyArns",
         "quicksight:SessionName",
         "quicksight:UserName"
       ]
@@ -24715,6 +24719,24 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
+    },
+    {
+      "name": "AWS User Subscriptions",
+      "servicePrefix": "user-subscriptions",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsusersubscriptions.html",
+      "actionsCount": 6,
+      "actions": [
+        "CreateClaim",
+        "DeleteClaim",
+        "ListApplicationClaims",
+        "ListClaims",
+        "ListUserSubscriptions",
+        "UpdateClaim"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
     },
     {
       "name": "AWS Verified Access",

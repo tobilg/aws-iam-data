@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2024-05-21",
+    "addedServices": [
+      "AWS User Subscriptions"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS HealthImaging": [
+        "medical-imaging:GetDICOMInstance"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:DescribeKeyRegistration",
+        "quicksight:UpdateKeyRegistration"
+      ],
+      "AWS User Subscriptions": [
+        "user-subscriptions:CreateClaim",
+        "user-subscriptions:DeleteClaim",
+        "user-subscriptions:ListApplicationClaims",
+        "user-subscriptions:ListClaims",
+        "user-subscriptions:ListUserSubscriptions",
+        "user-subscriptions:UpdateClaim"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-05-17",
     "addedServices": [],
     "removedServices": [],
