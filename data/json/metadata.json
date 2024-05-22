@@ -6013,7 +6013,7 @@
       "name": "AWS Control Tower",
       "servicePrefix": "controltower",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscontroltower.html",
-      "actionsCount": 62,
+      "actionsCount": 63,
       "actions": [
         "CreateLandingZone",
         "CreateManagedAccount",
@@ -6049,6 +6049,7 @@
         "GetLandingZoneOperation",
         "GetLandingZoneStatus",
         "ListBaselines",
+        "ListControlOperations",
         "ListDirectoryGroups",
         "ListDriftDetails",
         "ListEnabledBaselines",
