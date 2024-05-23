@@ -1,5 +1,5 @@
 {
-  "serviceCount": 412,
+  "serviceCount": 413,
   "services": [
     {
       "name": "AWS Account Management",
@@ -18294,20 +18294,31 @@
       "name": "AWS Payments",
       "servicePrefix": "payments",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspayments.html",
-      "actionsCount": 7,
+      "actionsCount": 12,
       "actions": [
         "CreatePaymentInstrument",
         "DeletePaymentInstrument",
         "GetPaymentInstrument",
         "GetPaymentStatus",
+        "ListPaymentInstruments",
         "ListPaymentPreferences",
+        "ListTagsForResource",
         "MakePayment",
+        "TagResource",
+        "UntagResource",
+        "UpdatePaymentInstrument",
         "UpdatePaymentPreferences"
       ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "payment-instrument"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "AWS Performance Insights",
@@ -18334,11 +18345,12 @@
         "metric-resource",
         "perf-reports-resource"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 4,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "pi:Dimensions"
       ]
     },
     {
@@ -22960,6 +22972,81 @@
       "resourceTypes": [],
       "conditionKeysCount": 0,
       "conditionKeys": []
+    },
+    {
+      "name": "Amazon Simple Email Service - Mail Manager",
+      "servicePrefix": "ses",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservice-mailmanager.html",
+      "actionsCount": 47,
+      "actions": [
+        "CreateAddonInstance",
+        "CreateAddonSubscription",
+        "CreateArchive",
+        "CreateIngressPoint",
+        "CreateRelay",
+        "CreateRuleSet",
+        "CreateTrafficPolicy",
+        "DeleteAddonInstance",
+        "DeleteAddonSubscription",
+        "DeleteArchive",
+        "DeleteIngressPoint",
+        "DeleteRelay",
+        "DeleteRuleSet",
+        "DeleteTrafficPolicy",
+        "GetAddonInstance",
+        "GetAddonSubscription",
+        "GetArchive",
+        "GetArchiveExport",
+        "GetArchiveMessage",
+        "GetArchiveMessageContent",
+        "GetArchiveSearch",
+        "GetArchiveSearchResults",
+        "GetIngressPoint",
+        "GetRelay",
+        "GetRuleSet",
+        "GetTrafficPolicy",
+        "ListAddonInstances",
+        "ListAddonSubscriptions",
+        "ListArchiveExports",
+        "ListArchiveSearches",
+        "ListArchives",
+        "ListIngressPoints",
+        "ListRelays",
+        "ListRuleSets",
+        "ListTagsForResource",
+        "ListTrafficPolicies",
+        "StartArchiveExport",
+        "StartArchiveSearch",
+        "StopArchiveExport",
+        "StopArchiveSearch",
+        "TagResource",
+        "UntagResource",
+        "UpdateArchive",
+        "UpdateIngressPoint",
+        "UpdateRelay",
+        "UpdateRuleSet",
+        "UpdateTrafficPolicy"
+      ],
+      "resourceTypesCount": 7,
+      "resourceTypes": [
+        "addon-instance",
+        "addon-subscription",
+        "mailmanager-archive",
+        "mailmanager-ingress-point",
+        "mailmanager-smtp-relay",
+        "mailmanager-rule-set",
+        "mailmanager-traffic-policy"
+      ],
+      "conditionKeysCount": 7,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "ses:AddonSubscriptionArn",
+        "ses:MailManagerIngressPointType",
+        "ses:MailManagerRuleSetArn",
+        "ses:MailManagerTrafficPolicyArn"
+      ]
     },
     {
       "name": "Amazon Simple Email Service v2",
