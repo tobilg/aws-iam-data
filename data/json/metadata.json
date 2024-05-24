@@ -1,5 +1,5 @@
 {
-  "serviceCount": 413,
+  "serviceCount": 414,
   "services": [
     {
       "name": "AWS Account Management",
@@ -23863,6 +23863,20 @@
         "GetSupportPlan",
         "GetSupportPlanUpdateStatus",
         "StartSupportPlanUpdate"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
+      "name": "AWS Support Recommendations",
+      "servicePrefix": "supportrecommendations",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupportrecommendations.html",
+      "actionsCount": 2,
+      "actions": [
+        "GetSupportTroubleshootingResponse",
+        "StartSupportTroubleshooting"
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],

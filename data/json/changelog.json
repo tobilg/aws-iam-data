@@ -1,5 +1,19 @@
 [
   {
+    "dateOfChange": "2024-05-24",
+    "addedServices": [
+      "AWS Support Recommendations"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Support Recommendations": [
+        "supportrecommendations:GetSupportTroubleshootingResponse",
+        "supportrecommendations:StartSupportTroubleshooting"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-05-23",
     "addedServices": [
       "Amazon Simple Email Service - Mail Manager"
