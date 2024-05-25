@@ -1,5 +1,26 @@
 [
   {
+    "dateOfChange": "2024-05-25",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Chatbot": [
+        "chatbot:ListTagsForResource",
+        "chatbot:TagResource",
+        "chatbot:UntagResource"
+      ],
+      "Amazon EC2": [
+        "ec2:DisableImageDeregistrationProtection",
+        "ec2:EnableImageDeregistrationProtection",
+        "ec2:GetInstanceTpmEkPub"
+      ],
+      "Amazon EMR Serverless": [
+        "emr-serverless:AccessLivyEndpoints"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-05-24",
     "addedServices": [
       "AWS Support Recommendations"
