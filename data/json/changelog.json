@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2024-05-30",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Glue": [
+        "glue:BatchPutDataQualityStatisticAnnotation",
+        "glue:DescribeConnectionType",
+        "glue:DescribeEntity",
+        "glue:GetDataQualityModel",
+        "glue:GetDataQualityModelResult",
+        "glue:ListConnectionTypes",
+        "glue:ListDataQualityStatisticAnnotations",
+        "glue:ListDataQualityStatistics",
+        "glue:ListEntities",
+        "glue:PutDataQualityProfileAnnotation",
+        "glue:RefreshOAuth2Tokens"
+      ],
+      "Amazon Simple Workflow Service": [
+        "swf:DeleteActivityType",
+        "swf:DeleteWorkflowType"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-05-25",
     "addedServices": [],
     "removedServices": [],
