@@ -1,5 +1,5 @@
 {
-  "serviceCount": 414,
+  "serviceCount": 415,
   "services": [
     {
       "name": "AWS Account Management",
@@ -3752,6 +3752,39 @@
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "Amazon CloudWatch Application Signals",
+      "servicePrefix": "application-signals",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchapplicationsignals.html",
+      "actionsCount": 15,
+      "actions": [
+        "BatchGetServiceLevelObjectiveBudgetReport",
+        "CreateServiceLevelObjective",
+        "DeleteServiceLevelObjective",
+        "GetService",
+        "GetServiceLevelObjective",
+        "ListServiceDependencies",
+        "ListServiceDependents",
+        "ListServiceLevelObjectives",
+        "ListServiceOperations",
+        "ListServices",
+        "ListTagsForResource",
+        "StartDiscovery",
+        "TagResource",
+        "UntagResource",
+        "UpdateServiceLevelObjective"
+      ],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "slo"
+      ],
       "conditionKeysCount": 3,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
@@ -10390,7 +10423,7 @@
       "name": "Amazon EMR Serverless",
       "servicePrefix": "emr-serverless",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonemrserverless.html",
-      "actionsCount": 17,
+      "actionsCount": 18,
       "actions": [
         "AccessInteractiveEndpoints",
         "AccessLivyEndpoints",
@@ -10401,6 +10434,7 @@
         "GetDashboardForJobRun",
         "GetJobRun",
         "ListApplications",
+        "ListJobRunAttempts",
         "ListJobRuns",
         "ListTagsForResource",
         "StartApplication",
@@ -25840,46 +25874,9 @@
       "conditionKeys": []
     },
     {
-      "name": "Amazon WorkSpaces Thin Client",
-      "servicePrefix": "thinclient",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesthinclient.html",
-      "actionsCount": 17,
-      "actions": [
-        "CreateEnvironment",
-        "DeleteDevice",
-        "DeleteEnvironment",
-        "DeregisterDevice",
-        "GetDevice",
-        "GetEnvironment",
-        "GetSoftwareSet",
-        "ListDeviceSessions",
-        "ListDevices",
-        "ListEnvironments",
-        "ListSoftwareSets",
-        "ListTagsForResource",
-        "TagResource",
-        "UntagResource",
-        "UpdateDevice",
-        "UpdateEnvironment",
-        "UpdateSoftwareSet"
-      ],
-      "resourceTypesCount": 3,
-      "resourceTypes": [
-        "environment",
-        "device",
-        "softwareset"
-      ],
-      "conditionKeysCount": 3,
-      "conditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
-      ]
-    },
-    {
-      "name": "Amazon WorkSpaces Web",
+      "name": "Amazon WorkSpaces Secure Browser",
       "servicePrefix": "workspaces-web",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesweb.html",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacessecurebrowser.html",
       "actionsCount": 58,
       "actions": [
         "AssociateBrowserSettings",
@@ -25951,6 +25948,43 @@
         "userSettings",
         "userAccessLoggingSettings",
         "ipAccessSettings"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "Amazon WorkSpaces Thin Client",
+      "servicePrefix": "thinclient",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesthinclient.html",
+      "actionsCount": 17,
+      "actions": [
+        "CreateEnvironment",
+        "DeleteDevice",
+        "DeleteEnvironment",
+        "DeregisterDevice",
+        "GetDevice",
+        "GetEnvironment",
+        "GetSoftwareSet",
+        "ListDeviceSessions",
+        "ListDevices",
+        "ListEnvironments",
+        "ListSoftwareSets",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateDevice",
+        "UpdateEnvironment",
+        "UpdateSoftwareSet"
+      ],
+      "resourceTypesCount": 3,
+      "resourceTypes": [
+        "environment",
+        "device",
+        "softwareset"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
