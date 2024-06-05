@@ -1969,7 +1969,7 @@
       "name": "AWS Batch",
       "servicePrefix": "batch",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html",
-      "actionsCount": 24,
+      "actionsCount": 25,
       "actions": [
         "CancelJob",
         "CreateComputeEnvironment",
@@ -1984,6 +1984,7 @@
         "DescribeJobQueues",
         "DescribeJobs",
         "DescribeSchedulingPolicies",
+        "GetJobQueueSnapshot",
         "ListJobs",
         "ListSchedulingPolicies",
         "ListTagsForResource",
