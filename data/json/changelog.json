@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2024-06-06",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Lake Formation": [
+        "lakeformation:GetDataLakePrincipal"
+      ],
+      "AWS Launch Wizard": [
+        "launchwizard:GetWorkloadDeploymentPattern",
+        "launchwizard:ListTagsForResource",
+        "launchwizard:TagResource",
+        "launchwizard:UntagResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-06-05",
     "addedServices": [],
     "removedServices": [],

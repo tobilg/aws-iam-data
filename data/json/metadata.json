@@ -15083,7 +15083,7 @@
       "name": "AWS Lake Formation",
       "servicePrefix": "lakeformation",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslakeformation.html",
-      "actionsCount": 52,
+      "actionsCount": 53,
       "actions": [
         "AddLFTagsToResource",
         "BatchGrantPermissions",
@@ -15106,6 +15106,7 @@
         "ExtendTransaction",
         "GetDataAccess",
         "GetDataCellsFilter",
+        "GetDataLakePrincipal",
         "GetDataLakeSettings",
         "GetEffectivePermissionsForPath",
         "GetLFTag",
@@ -15249,7 +15250,7 @@
       "name": "AWS Launch Wizard",
       "servicePrefix": "launchwizard",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslaunchwizard.html",
-      "actionsCount": 33,
+      "actionsCount": 37,
       "actions": [
         "CreateAdditionalNode",
         "CreateDeployment",
@@ -15271,6 +15272,7 @@
         "GetWorkload",
         "GetWorkloadAsset",
         "GetWorkloadAssets",
+        "GetWorkloadDeploymentPattern",
         "ListAdditionalNodes",
         "ListAllowedResources",
         "ListDeploymentEvents",
@@ -15278,17 +15280,26 @@
         "ListProvisionedApps",
         "ListResourceCostEstimates",
         "ListSettingsSets",
+        "ListTagsForResource",
         "ListWorkloadDeploymentOptions",
         "ListWorkloadDeploymentPatterns",
         "ListWorkloads",
         "PutSettingsSet",
         "StartProvisioning",
+        "TagResource",
+        "UntagResource",
         "UpdateSettingsSet"
       ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "deployment"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "Amazon Lex",

@@ -86,7 +86,7 @@ condition_key_id,name,reference_url,description,type
 85,aws-marketplace:AgreementType,https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html,Filters access by the type of the agreement,ArrayOfString
 86,aws-marketplace:Intent,https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/api-access-control.html,Filters access by the Intent parameter in the StartChangeSet request,String
 87,aws-marketplace:PartyType,https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html,Filters access by the party type of the agreement,String
-88,aws-marketplace:ProductId,https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html,"Filters access by product id for AWS Marketplace RedHat OpenShift products in the RedHat console. Note: This condition key only applies to the RedHat console, and using it will not restrict access to products in AWS Marketplace",ArrayOfString
+88,aws-marketplace:ProductId,https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html,Filters access by product id for AWS Marketplace RedHat OpenShift and Bedrock Products. Note: Using this condition key will not restrict access to products in AWS Marketplace,ArrayOfString
 89,aws:RequestTag/${TagKey},"",Filters access based on the presence of tag key-value pairs in the request,String
 90,aws:ResourceTag/${TagKey},"",Filters access based on tag key-value pairs attached to the resource,String
 91,aws:TagKeys,"",Filters access based on the presence of tag keys in the request,ArrayOfString
