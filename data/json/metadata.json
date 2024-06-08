@@ -5,8 +5,9 @@
       "name": "AWS Account Management",
       "servicePrefix": "account",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsaccountmanagement.html",
-      "actionsCount": 13,
+      "actionsCount": 16,
       "actions": [
+        "AcceptPrimaryEmailUpdate",
         "CloseAccount",
         "DeleteAlternateContact",
         "DisableRegion",
@@ -15,22 +16,25 @@
         "GetAlternateContact",
         "GetChallengeQuestions",
         "GetContactInformation",
+        "GetPrimaryEmail",
         "GetRegionOptStatus",
         "ListRegions",
         "PutAlternateContact",
         "PutChallengeQuestions",
-        "PutContactInformation"
+        "PutContactInformation",
+        "StartPrimaryEmailUpdate"
       ],
       "resourceTypesCount": 2,
       "resourceTypes": [
         "account",
         "accountInOrganization"
       ],
-      "conditionKeysCount": 4,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "account:AccountResourceOrgPaths",
         "account:AccountResourceOrgTags/${TagKey}",
         "account:AlternateContactTypes",
+        "account:EmailTargetDomain",
         "account:TargetRegion"
       ]
     },
@@ -15817,7 +15821,7 @@
       "name": "Amazon Location",
       "servicePrefix": "geo",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlocation.html",
-      "actionsCount": 58,
+      "actionsCount": 60,
       "actions": [
         "AssociateTrackerConsumer",
         "BatchDeleteDevicePositionHistory",
@@ -15847,6 +15851,7 @@
         "DescribeRouteCalculator",
         "DescribeTracker",
         "DisassociateTrackerConsumer",
+        "ForecastGeofenceEvents",
         "GetDevicePosition",
         "GetDevicePositionHistory",
         "GetGeofence",
@@ -15876,7 +15881,8 @@
         "UpdateMap",
         "UpdatePlaceIndex",
         "UpdateRouteCalculator",
-        "UpdateTracker"
+        "UpdateTracker",
+        "VerifyDevicePosition"
       ],
       "resourceTypesCount": 6,
       "resourceTypes": [

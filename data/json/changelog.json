@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2024-06-08",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Account Management": [
+        "account:AcceptPrimaryEmailUpdate",
+        "account:GetPrimaryEmail",
+        "account:StartPrimaryEmailUpdate"
+      ],
+      "Amazon Location": [
+        "geo:ForecastGeofenceEvents",
+        "geo:VerifyDevicePosition"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-06-06",
     "addedServices": [],
     "removedServices": [],
