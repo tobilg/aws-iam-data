@@ -1,5 +1,5 @@
 {
-  "serviceCount": 415,
+  "serviceCount": 416,
   "services": [
     {
       "name": "AWS Account Management",
@@ -9117,7 +9117,7 @@
         "capacity-provider",
         "task-set"
       ],
-      "conditionKeysCount": 17,
+      "conditionKeysCount": 18,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -9132,6 +9132,7 @@
         "ecs:enable-ebs-volumes",
         "ecs:enable-execute-command",
         "ecs:enable-service-connect",
+        "ecs:fargate-ephemeral-storage-kms-key",
         "ecs:namespace",
         "ecs:service",
         "ecs:task",
@@ -11947,7 +11948,7 @@
       "name": "Amazon GuardDuty",
       "servicePrefix": "guardduty",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonguardduty.html",
-      "actionsCount": 70,
+      "actionsCount": 75,
       "actions": [
         "AcceptAdministratorInvitation",
         "AcceptInvitation",
@@ -11955,6 +11956,7 @@
         "CreateDetector",
         "CreateFilter",
         "CreateIPSet",
+        "CreateMalwareProtectionPlan",
         "CreateMembers",
         "CreatePublishingDestination",
         "CreateSampleFindings",
@@ -11964,6 +11966,7 @@
         "DeleteFilter",
         "DeleteIPSet",
         "DeleteInvitations",
+        "DeleteMalwareProtectionPlan",
         "DeleteMembers",
         "DeletePublishingDestination",
         "DeleteThreatIntelSet",
@@ -11983,6 +11986,7 @@
         "GetFindingsStatistics",
         "GetIPSet",
         "GetInvitationsCount",
+        "GetMalwareProtectionPlan",
         "GetMalwareScanSettings",
         "GetMasterAccount",
         "GetMemberDetectors",
@@ -11998,6 +12002,7 @@
         "ListFindings",
         "ListIPSets",
         "ListInvitations",
+        "ListMalwareProtectionPlans",
         "ListMembers",
         "ListOrganizationAdminAccounts",
         "ListPublishingDestinations",
@@ -12014,19 +12019,21 @@
         "UpdateFilter",
         "UpdateFindingsFeedback",
         "UpdateIPSet",
+        "UpdateMalwareProtectionPlan",
         "UpdateMalwareScanSettings",
         "UpdateMemberDetectors",
         "UpdateOrganizationConfiguration",
         "UpdatePublishingDestination",
         "UpdateThreatIntelSet"
       ],
-      "resourceTypesCount": 5,
+      "resourceTypesCount": 6,
       "resourceTypes": [
         "detector",
         "filter",
         "ipset",
         "threatintelset",
-        "publishingDestination"
+        "publishingDestination",
+        "malwareprotectionplan"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -12352,22 +12359,25 @@
       "name": "AWS IAM Access Analyzer",
       "servicePrefix": "access-analyzer",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamaccessanalyzer.html",
-      "actionsCount": 31,
+      "actionsCount": 34,
       "actions": [
         "ApplyArchiveRule",
         "CancelPolicyGeneration",
         "CheckAccessNotGranted",
         "CheckNoNewAccess",
+        "CheckNoPublicAccess",
         "CreateAccessPreview",
         "CreateAnalyzer",
         "CreateArchiveRule",
         "DeleteAnalyzer",
         "DeleteArchiveRule",
+        "GenerateFindingRecommendation",
         "GetAccessPreview",
         "GetAnalyzedResource",
         "GetAnalyzer",
         "GetArchiveRule",
         "GetFinding",
+        "GetFindingRecommendation",
         "GetFindingsStatistics",
         "GetGeneratedPolicy",
         "ListAccessPreviewFindings",
@@ -18980,6 +18990,37 @@
         "ServicePrincipalName",
         "Template",
         "TemplateGroupAccessControlEntry"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "AWS Private CA Connector for SCEP",
+      "servicePrefix": "pca-connector-scep",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsprivatecaconnectorforscep.html",
+      "actionsCount": 12,
+      "actions": [
+        "CreateChallenge",
+        "CreateConnector",
+        "DeleteChallenge",
+        "DeleteConnector",
+        "GetChallengeMetadata",
+        "GetChallengePassword",
+        "GetConnector",
+        "ListChallengeMetadata",
+        "ListConnectors",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "Challenge",
+        "Connector"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [

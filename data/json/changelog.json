@@ -11,6 +11,42 @@
     "removedActions": {}
   },
   {
+    "dateOfChange": "2024-06-11",
+    "addedServices": [
+      "AWS Private CA Connector for SCEP"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon GuardDuty": [
+        "guardduty:CreateMalwareProtectionPlan",
+        "guardduty:DeleteMalwareProtectionPlan",
+        "guardduty:GetMalwareProtectionPlan",
+        "guardduty:ListMalwareProtectionPlans",
+        "guardduty:UpdateMalwareProtectionPlan"
+      ],
+      "AWS IAM Access Analyzer": [
+        "access-analyzer:CheckNoPublicAccess",
+        "access-analyzer:GenerateFindingRecommendation",
+        "access-analyzer:GetFindingRecommendation"
+      ],
+      "AWS Private CA Connector for SCEP": [
+        "pca-connector-scep:CreateChallenge",
+        "pca-connector-scep:CreateConnector",
+        "pca-connector-scep:DeleteChallenge",
+        "pca-connector-scep:DeleteConnector",
+        "pca-connector-scep:GetChallengeMetadata",
+        "pca-connector-scep:GetChallengePassword",
+        "pca-connector-scep:GetConnector",
+        "pca-connector-scep:ListChallengeMetadata",
+        "pca-connector-scep:ListConnectors",
+        "pca-connector-scep:ListTagsForResource",
+        "pca-connector-scep:TagResource",
+        "pca-connector-scep:UntagResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-06-08",
     "addedServices": [],
     "removedServices": [],
