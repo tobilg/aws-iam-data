@@ -63,6 +63,8 @@ jobs:
           # Export data \
           npm run export-data && \
           # Create reports \
+          npm run copy-database && \
+          # Create reports \
           npm run create-reports && \
           # Add new files \
           git add . && \

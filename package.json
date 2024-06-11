@@ -14,6 +14,7 @@
     "create-erd": "node_modules/.bin/mmdc -i erd.mmd -o docs/erd.png -w 1600",
     "create-tables": "scripts/create_tables.sh",
     "create-reports": "scripts/create_reports.sh",
+    "copy-database": "scripts/copy_database.sh",
     "export-data": "scripts/export_data.sh",
     "build": "rm -rf dist/ && mkdir -p src/data/json && cp data/json/*.json src/data/json && tsc --build src/ && rm -rf src/data"
   },
