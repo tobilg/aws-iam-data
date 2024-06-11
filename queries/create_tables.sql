@@ -253,7 +253,7 @@ ON
   aws_condition_keys.name = rt_condition_keys.condition_key_name;
 
 -- Remove no longer needed column
-ALTER TABLE aws_resource_types DROP COLUMN condition_keys_struct;
+-- ALTER TABLE aws_resource_types DROP COLUMN condition_keys_struct;
 
 -- Create mapping table for action resource types
 CREATE TABLE aws_actions_resource_types (
@@ -301,7 +301,7 @@ INSERT INTO aws_actions_resource_types
     aws_resource_types.name = action_resource_types.resource_type_name AND aws_resource_types.service_id = action_resource_types.service_id;
 
 -- Remove no longer needed column
-ALTER TABLE aws_actions DROP COLUMN resource_type_struct;
+-- ALTER TABLE aws_actions DROP COLUMN resource_type_struct;
 
 -- Create mapping table for action condition keys
 CREATE TABLE aws_actions_condition_keys (
@@ -360,7 +360,7 @@ ON
   aws_actions.name = action_dependent_actions.dependent_actions_name;
 
 -- Remove no longer needed columns
-ALTER TABLE aws_actions_resource_types DROP COLUMN condition_keys;
-ALTER TABLE aws_actions_resource_types DROP COLUMN dependent_actions;
+-- ALTER TABLE aws_actions_resource_types DROP COLUMN condition_keys;
+-- ALTER TABLE aws_actions_resource_types DROP COLUMN dependent_actions;
 
 DROP TABLE aws_iam_data;
