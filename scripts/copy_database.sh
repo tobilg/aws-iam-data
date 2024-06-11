@@ -1,7 +1,9 @@
 #!/bin/bash
 
-DATA_PATH="/tmp/duckdb-database-$(date '+%F').duckdb"
+DATA_PATH="$PWD/data/db/iam.duckdb"
+
+rm -f $DATA_PATH
 
 mkdir -p $PWD/data/db/
 
-cp $DATA_PATH $PWD/data/db/iam.duckdb
+duckdb $DATA_PATH < queries/create_database.sql
