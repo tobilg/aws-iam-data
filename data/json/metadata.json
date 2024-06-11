@@ -21237,7 +21237,7 @@
       "name": "Amazon S3",
       "servicePrefix": "s3",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html",
-      "actionsCount": 158,
+      "actionsCount": 159,
       "actions": [
         "AbortMultipartUpload",
         "AssociateAccessGrantsIdentityCenter",
@@ -21349,6 +21349,7 @@
         "ListStorageLensGroups",
         "ListTagsForResource",
         "ObjectOwnerOverrideToBucketOwner",
+        "PauseReplication",
         "PutAccelerateConfiguration",
         "PutAccessGrantsInstanceResourcePolicy",
         "PutAccessPointConfigurationForObjectLambda",
@@ -21413,7 +21414,7 @@
         "accessgrantslocation",
         "accessgrant"
       ],
-      "conditionKeysCount": 45,
+      "conditionKeysCount": 47,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -21435,6 +21436,8 @@
         "s3:TlsVersion",
         "s3:authType",
         "s3:delimiter",
+        "s3:destinationRegion",
+        "s3:isReplicationPauseRequest",
         "s3:locationconstraint",
         "s3:max-keys",
         "s3:object-lock-legal-hold",
