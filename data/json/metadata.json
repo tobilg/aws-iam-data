@@ -1,5 +1,5 @@
 {
-  "serviceCount": 416,
+  "serviceCount": 417,
   "services": [
     {
       "name": "AWS Account Management",
@@ -5498,7 +5498,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 252,
+      "actionsCount": 254,
       "actions": [
         "ActivateEvaluationForm",
         "AdminGetEmergencyAccessToken",
@@ -5674,6 +5674,8 @@
         "ResumeContact",
         "ResumeContactRecording",
         "SearchAvailablePhoneNumbers",
+        "SearchContactFlowModules",
+        "SearchContactFlows",
         "SearchContacts",
         "SearchHoursOfOperations",
         "SearchPredefinedAttributes",
@@ -16218,6 +16220,51 @@
         "CustomDataIdentifier",
         "FindingsFilter",
         "Member"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "AWS Mainframe Modernization Application Testing provides tools and resources for automated functional equivalence testing for your migration projects.",
+      "servicePrefix": "apptest",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmainframemodernizationapplicationtestingprovidestoolsandresourcesforautomatedfunctionalequivalencetestingforyourmigrationprojects..html",
+      "actionsCount": 24,
+      "actions": [
+        "CreateTestCase",
+        "CreateTestConfiguration",
+        "CreateTestSuite",
+        "DeleteTestCase",
+        "DeleteTestConfiguration",
+        "DeleteTestRun",
+        "DeleteTestSuite",
+        "GetTestCase",
+        "GetTestConfiguration",
+        "GetTestRunStep",
+        "GetTestSuite",
+        "ListTagsForResource",
+        "ListTestCases",
+        "ListTestConfigurations",
+        "ListTestRunSteps",
+        "ListTestRunTestCases",
+        "ListTestRuns",
+        "ListTestSuites",
+        "StartTestRun",
+        "TagResource",
+        "UntagResource",
+        "UpdateTestCase",
+        "UpdateTestConfiguration",
+        "UpdateTestSuite"
+      ],
+      "resourceTypesCount": 4,
+      "resourceTypes": [
+        "TestCase",
+        "TestConfiguration",
+        "TestRun",
+        "TestSuite"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [

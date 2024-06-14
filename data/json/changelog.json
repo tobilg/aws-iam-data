@@ -1,5 +1,45 @@
 [
   {
+    "dateOfChange": "2024-06-14",
+    "addedServices": [
+      "AWS Mainframe Modernization Application Testing provides tools and resources for automated functional equivalence testing for your migration projects."
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect": [
+        "connect:SearchContactFlowModules",
+        "connect:SearchContactFlows"
+      ],
+      "AWS Mainframe Modernization Application Testing provides tools and resources for automated functional equivalence testing for your migration projects.": [
+        "apptest:CreateTestCase",
+        "apptest:CreateTestConfiguration",
+        "apptest:CreateTestSuite",
+        "apptest:DeleteTestCase",
+        "apptest:DeleteTestConfiguration",
+        "apptest:DeleteTestRun",
+        "apptest:DeleteTestSuite",
+        "apptest:GetTestCase",
+        "apptest:GetTestConfiguration",
+        "apptest:GetTestRunStep",
+        "apptest:GetTestSuite",
+        "apptest:ListTagsForResource",
+        "apptest:ListTestCases",
+        "apptest:ListTestConfigurations",
+        "apptest:ListTestRunSteps",
+        "apptest:ListTestRunTestCases",
+        "apptest:ListTestRuns",
+        "apptest:ListTestSuites",
+        "apptest:StartTestRun",
+        "apptest:TagResource",
+        "apptest:UntagResource",
+        "apptest:UpdateTestCase",
+        "apptest:UpdateTestConfiguration",
+        "apptest:UpdateTestSuite"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-06-13",
     "addedServices": [],
     "removedServices": [],
