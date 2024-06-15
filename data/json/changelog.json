@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2024-06-15",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon DataZone": [
+        "datazone:AssociateEnvironmentRole",
+        "datazone:CreateEnvironmentAction",
+        "datazone:DeleteEnvironmentAction",
+        "datazone:DisassociateEnvironmentRole",
+        "datazone:GetEnvironmentAction",
+        "datazone:ListEnvironmentActions",
+        "datazone:UpdateEnvironmentAction"
+      ],
+      "AWS Tax Settings": [
+        "tax:BatchDeleteTaxRegistration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-06-14",
     "addedServices": [
       "AWS Mainframe Modernization Application Testing provides tools and resources for automated functional equivalence testing for your migration projects."
