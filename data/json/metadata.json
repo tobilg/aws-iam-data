@@ -14740,7 +14740,7 @@
       "name": "AWS Key Management Service",
       "servicePrefix": "kms",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awskeymanagementservice.html",
-      "actionsCount": 54,
+      "actionsCount": 55,
       "actions": [
         "CancelKeyDeletion",
         "ConnectCustomKeyStore",
@@ -14752,6 +14752,7 @@
         "DeleteAlias",
         "DeleteCustomKeyStore",
         "DeleteImportedKeyMaterial",
+        "DeriveSharedSecret",
         "DescribeCustomKeyStores",
         "DescribeKey",
         "DisableKey",
@@ -14802,7 +14803,7 @@
         "alias",
         "key"
       ],
-      "conditionKeysCount": 38,
+      "conditionKeysCount": 39,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -14820,6 +14821,7 @@
         "kms:GrantIsForAWSResource",
         "kms:GrantOperations",
         "kms:GranteePrincipal",
+        "kms:KeyAgreementAlgorithm",
         "kms:KeyOrigin",
         "kms:KeySpec",
         "kms:KeyUsage",
