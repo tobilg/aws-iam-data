@@ -1,5 +1,79 @@
 [
   {
+    "dateOfChange": "2024-06-20",
+    "addedServices": [
+      "Amazon SageMaker with MLflow"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:AllowVendedLogDeliveryForResource"
+      ],
+      "Amazon Macie": [
+        "macie2:BatchUpdateAutomatedDiscoveryAccounts",
+        "macie2:ListAutomatedDiscoveryAccounts"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:CreateMlflowTrackingServer",
+        "sagemaker:CreatePresignedMlflowTrackingServerUrl",
+        "sagemaker:DeleteMlflowTrackingServer",
+        "sagemaker:DescribeMlflowTrackingServer",
+        "sagemaker:ListMlflowTrackingServers",
+        "sagemaker:StartMlflowTrackingServer",
+        "sagemaker:StopMlflowTrackingServer",
+        "sagemaker:UpdateMlflowTrackingServer"
+      ],
+      "Amazon SageMaker with MLflow": [
+        "sagemaker-mlflow:AccessUI",
+        "sagemaker-mlflow:CreateExperiment",
+        "sagemaker-mlflow:CreateModelVersion",
+        "sagemaker-mlflow:CreateRegisteredModel",
+        "sagemaker-mlflow:CreateRun",
+        "sagemaker-mlflow:DeleteExperiment",
+        "sagemaker-mlflow:DeleteModelVersion",
+        "sagemaker-mlflow:DeleteModelVersionTag",
+        "sagemaker-mlflow:DeleteRegisteredModel",
+        "sagemaker-mlflow:DeleteRegisteredModelAlias",
+        "sagemaker-mlflow:DeleteRegisteredModelTag",
+        "sagemaker-mlflow:DeleteRun",
+        "sagemaker-mlflow:DeleteTag",
+        "sagemaker-mlflow:GetDownloadURIForModelVersionArtifacts",
+        "sagemaker-mlflow:GetExperiment",
+        "sagemaker-mlflow:GetExperimentByName",
+        "sagemaker-mlflow:GetLatestModelVersions",
+        "sagemaker-mlflow:GetMetricHistory",
+        "sagemaker-mlflow:GetModelVersion",
+        "sagemaker-mlflow:GetModelVersionByAlias",
+        "sagemaker-mlflow:GetRegisteredModel",
+        "sagemaker-mlflow:GetRun",
+        "sagemaker-mlflow:ListArtifacts",
+        "sagemaker-mlflow:LogBatch",
+        "sagemaker-mlflow:LogInputs",
+        "sagemaker-mlflow:LogMetric",
+        "sagemaker-mlflow:LogModel",
+        "sagemaker-mlflow:LogParam",
+        "sagemaker-mlflow:RenameRegisteredModel",
+        "sagemaker-mlflow:RestoreExperiment",
+        "sagemaker-mlflow:RestoreRun",
+        "sagemaker-mlflow:SearchExperiments",
+        "sagemaker-mlflow:SearchModelVersions",
+        "sagemaker-mlflow:SearchRegisteredModels",
+        "sagemaker-mlflow:SearchRuns",
+        "sagemaker-mlflow:SetExperimentTag",
+        "sagemaker-mlflow:SetModelVersionTag",
+        "sagemaker-mlflow:SetRegisteredModelAlias",
+        "sagemaker-mlflow:SetRegisteredModelTag",
+        "sagemaker-mlflow:SetTag",
+        "sagemaker-mlflow:TransitionModelVersionStage",
+        "sagemaker-mlflow:UpdateExperiment",
+        "sagemaker-mlflow:UpdateModelVersion",
+        "sagemaker-mlflow:UpdateRegisteredModel",
+        "sagemaker-mlflow:UpdateRun"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-06-18",
     "addedServices": [],
     "removedServices": [],
