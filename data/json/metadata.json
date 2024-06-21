@@ -3529,11 +3529,12 @@
       "name": "AWS CloudShell",
       "servicePrefix": "cloudshell",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudshell.html",
-      "actionsCount": 9,
+      "actionsCount": 10,
       "actions": [
         "CreateEnvironment",
         "CreateSession",
         "DeleteEnvironment",
+        "DescribeEnvironments",
         "GetEnvironmentStatus",
         "GetFileDownloadUrls",
         "GetFileUploadUrls",
@@ -3545,8 +3546,12 @@
       "resourceTypes": [
         "Environment"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "cloudshell:SecurityGroupIds",
+        "cloudshell:SubnetIds",
+        "cloudshell:VpcIds"
+      ]
     },
     {
       "name": "AWS CloudTrail",
