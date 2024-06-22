@@ -1,5 +1,24 @@
 [
   {
+    "dateOfChange": "2024-06-22",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Compute Optimizer": [
+        "compute-optimizer:ExportRDSDatabaseRecommendations",
+        "compute-optimizer:GetRDSDatabaseRecommendationProjectedMetrics",
+        "compute-optimizer:GetRDSDatabaseRecommendations"
+      ],
+      "Amazon Connect": [
+        "connect:CreateAuthenticationProfile",
+        "connect:DescribeAuthenticationProfile",
+        "connect:ListAuthenticationProfiles",
+        "connect:UpdateAuthenticationProfile"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-06-21",
     "addedServices": [],
     "removedServices": [],
