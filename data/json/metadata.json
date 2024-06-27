@@ -7741,7 +7741,7 @@
       "name": "Amazon EC2",
       "servicePrefix": "ec2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html",
-      "actionsCount": 637,
+      "actionsCount": 638,
       "actions": [
         "AcceptAddressTransfer",
         "AcceptReservedInstancesExchangeQuote",
@@ -8083,6 +8083,7 @@
         "DescribeStoreImageTasks",
         "DescribeSubnets",
         "DescribeTags",
+        "DescribeTrafficMirrorFilterRules",
         "DescribeTrafficMirrorFilters",
         "DescribeTrafficMirrorSessions",
         "DescribeTrafficMirrorTargets",
@@ -9434,7 +9435,7 @@
         "access-entry",
         "access-policy"
       ],
-      "conditionKeysCount": 14,
+      "conditionKeysCount": 15,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -9442,6 +9443,7 @@
         "eks:accessEntryType",
         "eks:accessScope",
         "eks:bootstrapClusterCreatorAdminPermissions",
+        "eks:bootstrapSelfManagedAddons",
         "eks:clientId",
         "eks:clusterName",
         "eks:issuerUrl",
