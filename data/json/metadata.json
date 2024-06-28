@@ -6071,7 +6071,7 @@
       "name": "AWS Control Tower",
       "servicePrefix": "controltower",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscontroltower.html",
-      "actionsCount": 63,
+      "actionsCount": 64,
       "actions": [
         "CreateLandingZone",
         "CreateManagedAccount",
@@ -6118,6 +6118,7 @@
         "ListGuardrailViolations",
         "ListGuardrails",
         "ListGuardrailsForTarget",
+        "ListLandingZoneOperations",
         "ListLandingZones",
         "ListManagedAccounts",
         "ListManagedAccountsForGuardrail",
