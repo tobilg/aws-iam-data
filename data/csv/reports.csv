@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,9400
-Actions by type,Read Actions,4572
-Actions by type,List Actions,2759
+Actions by type,Write Actions,9421
+Actions by type,Read Actions,4578
+Actions by type,List Actions,2763
 Actions by type,Permissions Actions,290
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -38,7 +38,7 @@ Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Ac
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},82
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},81
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},81
-Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},79
+Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},80
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},67
 Most referenced resource ARNs,stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/,66
 Most referenced resource ARNs,index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId},64
@@ -93,7 +93,7 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1737
+Summary,Total number of distinct resource ARNS,1740
 Summary,Total number of distinct condition keys,925
 Summary,Total number of services,418
 Summary,Average number of actions per service,41

@@ -1,5 +1,54 @@
 [
   {
+    "dateOfChange": "2024-07-02",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS CloudHSM": [
+        "cloudhsm:DeleteResourcePolicy",
+        "cloudhsm:GetResourcePolicy",
+        "cloudhsm:PutResourcePolicy"
+      ],
+      "Amazon Connect Customer Profiles": [
+        "profile:CreateSnapshot",
+        "profile:GetSnapshot"
+      ],
+      "Amazon DataZone": [
+        "datazone:CreateAssetFilter",
+        "datazone:DeleteAssetFilter",
+        "datazone:GetAssetFilter",
+        "datazone:GetLineageNode",
+        "datazone:ListAssetFilters",
+        "datazone:ListLineageNodeHistory",
+        "datazone:PostLineageEvent",
+        "datazone:UpdateAssetFilter"
+      ],
+      "Amazon Q Business Q Apps": [
+        "qapps:AssociateLibraryItemReview",
+        "qapps:DisassociateLibraryItemReview",
+        "qapps:GetQAppSession",
+        "qapps:GetQAppSessionMetadata",
+        "qapps:ImportDocument",
+        "qapps:PredictQApp",
+        "qapps:TagResource",
+        "qapps:UpdateQAppSession",
+        "qapps:UpdateQAppSessionMetadata"
+      ],
+      "Amazon WorkSpaces": [
+        "workspaces:CreateWorkspacesPool",
+        "workspaces:DescribeWorkspacesPoolSessions",
+        "workspaces:DescribeWorkspacesPools",
+        "workspaces:ModifyStreamingProperties",
+        "workspaces:StartWorkspacesPool",
+        "workspaces:StopWorkspacesPool",
+        "workspaces:TerminateWorkspacesPool",
+        "workspaces:TerminateWorkspacesPoolSession",
+        "workspaces:UpdateWorkspacesPool"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-06-28",
     "addedServices": [],
     "removedServices": [],
