@@ -1,5 +1,5 @@
 {
-  "serviceCount": 418,
+  "serviceCount": 419,
   "services": [
     {
       "name": "AWS Account Management",
@@ -21833,7 +21833,7 @@
       "name": "Amazon SageMaker",
       "servicePrefix": "sagemaker",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemaker.html",
-      "actionsCount": 358,
+      "actionsCount": 361,
       "actions": [
         "AddAssociation",
         "AddTags",
@@ -21865,6 +21865,7 @@
         "CreateFeatureGroup",
         "CreateFlowDefinition",
         "CreateHub",
+        "CreateHubContentReference",
         "CreateHumanTaskUi",
         "CreateHyperParameterTuningJob",
         "CreateImage",
@@ -21924,6 +21925,7 @@
         "DeleteFlowDefinition",
         "DeleteHub",
         "DeleteHubContent",
+        "DeleteHubContentReference",
         "DeleteHumanLoop",
         "DeleteHumanTaskUi",
         "DeleteHyperParameterTuningJob",
@@ -21956,6 +21958,7 @@
         "DeleteUserProfile",
         "DeleteWorkforce",
         "DeleteWorkteam",
+        "DeployHubModel",
         "DeregisterDevices",
         "DescribeAction",
         "DescribeAlgorithm",
@@ -24532,6 +24535,36 @@
         "engagement",
         "page",
         "rotation"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "AWS Systems Manager Quick Setup",
+      "servicePrefix": "ssm-quicksetup",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerquicksetup.html",
+      "actionsCount": 12,
+      "actions": [
+        "CreateConfigurationManager",
+        "DeleteConfigurationManager",
+        "GetConfigurationManager",
+        "GetServiceSettings",
+        "ListConfigurationManagers",
+        "ListQuickSetupTypes",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateConfigurationDefinition",
+        "UpdateConfigurationManager",
+        "UpdateServiceSettings"
+      ],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "configuration-manager"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [

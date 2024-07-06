@@ -1,5 +1,34 @@
 [
   {
+    "dateOfChange": "2024-07-06",
+    "addedServices": [
+      "AWS Systems Manager Quick Setup"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon SageMaker": [
+        "sagemaker:CreateHubContentReference",
+        "sagemaker:DeleteHubContentReference",
+        "sagemaker:DeployHubModel"
+      ],
+      "AWS Systems Manager Quick Setup": [
+        "ssm-quicksetup:CreateConfigurationManager",
+        "ssm-quicksetup:DeleteConfigurationManager",
+        "ssm-quicksetup:GetConfigurationManager",
+        "ssm-quicksetup:GetServiceSettings",
+        "ssm-quicksetup:ListConfigurationManagers",
+        "ssm-quicksetup:ListQuickSetupTypes",
+        "ssm-quicksetup:ListTagsForResource",
+        "ssm-quicksetup:TagResource",
+        "ssm-quicksetup:UntagResource",
+        "ssm-quicksetup:UpdateConfigurationDefinition",
+        "ssm-quicksetup:UpdateConfigurationManager",
+        "ssm-quicksetup:UpdateServiceSettings"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-07-02",
     "addedServices": [],
     "removedServices": [],
