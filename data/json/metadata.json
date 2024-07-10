@@ -9981,7 +9981,7 @@
       "name": "AWS Elemental MediaConvert",
       "servicePrefix": "mediaconvert",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediaconvert.html",
-      "actionsCount": 28,
+      "actionsCount": 29,
       "actions": [
         "AssociateCertificate",
         "CancelJob",
@@ -10006,6 +10006,7 @@
         "ListQueues",
         "ListTagsForResource",
         "PutPolicy",
+        "SearchJobs",
         "TagResource",
         "UntagResource",
         "UpdateJobTemplate",
@@ -19462,7 +19463,7 @@
       "name": "Amazon Q Business Q Apps",
       "servicePrefix": "qapps",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusinessqapps.html",
-      "actionsCount": 30,
+      "actionsCount": 32,
       "actions": [
         "AssociateLibraryItemReview",
         "AssociateQAppWithUser",
@@ -19484,12 +19485,14 @@
         "ImportDocumentToQAppSession",
         "ListLibraryItems",
         "ListQApps",
+        "ListTagsForResource",
         "PredictProblemStatementFromConversation",
         "PredictQApp",
         "PredictQAppFromProblemStatement",
         "StartQAppSession",
         "StopQAppSession",
         "TagResource",
+        "UntagResource",
         "UpdateLibraryItem",
         "UpdateQApp",
         "UpdateQAppSession",
@@ -19501,11 +19504,15 @@
         "qapp",
         "qapp-session"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 7,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "qapps:AppIsPublished",
+        "qapps:SessionIsShared",
+        "qapps:UserIsAppOwner",
+        "qapps:UserIsSessionModerator"
       ]
     },
     {
