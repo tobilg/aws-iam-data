@@ -1,5 +1,29 @@
 [
   {
+    "dateOfChange": "2024-07-11",
+    "addedServices": [
+      "AWS App Studio"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon SageMaker": [
+        "sagemaker:CreateOptimizationJob",
+        "sagemaker:DeleteOptimization",
+        "sagemaker:DescribeOptimizationJob",
+        "sagemaker:ListOptimizationJobs",
+        "sagemaker:StopOptimizationJob"
+      ],
+      "AWS App Studio": [
+        "appstudio:GetAccountStatus",
+        "appstudio:GetEnablementJobStatus",
+        "appstudio:StartEnablementJob",
+        "appstudio:StartRollbackEnablementJob",
+        "appstudio:StartTeamDeployment"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-07-10",
     "addedServices": [],
     "removedServices": [],

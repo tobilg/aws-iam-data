@@ -1,5 +1,5 @@
 {
-  "serviceCount": 419,
+  "serviceCount": 420,
   "services": [
     {
       "name": "AWS Account Management",
@@ -793,6 +793,23 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
+    },
+    {
+      "name": "AWS App Studio",
+      "servicePrefix": "appstudio",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappstudio.html",
+      "actionsCount": 5,
+      "actions": [
+        "GetAccountStatus",
+        "GetEnablementJobStatus",
+        "StartEnablementJob",
+        "StartRollbackEnablementJob",
+        "StartTeamDeployment"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
     },
     {
       "name": "AWS App2Container",
@@ -21840,7 +21857,7 @@
       "name": "Amazon SageMaker",
       "servicePrefix": "sagemaker",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemaker.html",
-      "actionsCount": 361,
+      "actionsCount": 366,
       "actions": [
         "AddAssociation",
         "AddTags",
@@ -21894,6 +21911,7 @@
         "CreateMonitoringSchedule",
         "CreateNotebookInstance",
         "CreateNotebookInstanceLifecycleConfig",
+        "CreateOptimizationJob",
         "CreatePipeline",
         "CreatePresignedDomainUrl",
         "CreatePresignedMlflowTrackingServerUrl",
@@ -21953,6 +21971,7 @@
         "DeleteMonitoringSchedule",
         "DeleteNotebookInstance",
         "DeleteNotebookInstanceLifecycleConfig",
+        "DeleteOptimization",
         "DeletePipeline",
         "DeleteProject",
         "DeleteRecord",
@@ -22015,6 +22034,7 @@
         "DescribeMonitoringSchedule",
         "DescribeNotebookInstance",
         "DescribeNotebookInstanceLifecycleConfig",
+        "DescribeOptimizationJob",
         "DescribePipeline",
         "DescribePipelineDefinitionForExecution",
         "DescribePipelineExecution",
@@ -22105,6 +22125,7 @@
         "ListMonitoringSchedules",
         "ListNotebookInstanceLifecycleConfigs",
         "ListNotebookInstances",
+        "ListOptimizationJobs",
         "ListPipelineExecutionSteps",
         "ListPipelineExecutions",
         "ListPipelineParametersForExecution",
@@ -22160,6 +22181,7 @@
         "StopMlflowTrackingServer",
         "StopMonitoringSchedule",
         "StopNotebookInstance",
+        "StopOptimizationJob",
         "StopPipelineExecution",
         "StopProcessingJob",
         "StopTrainingJob",
@@ -22204,7 +22226,7 @@
         "UpdateWorkforce",
         "UpdateWorkteam"
       ],
-      "resourceTypesCount": 62,
+      "resourceTypesCount": 63,
       "resourceTypes": [
         "device",
         "device-fleet",
@@ -22245,6 +22267,7 @@
         "inference-component",
         "transform-job",
         "compilation-job",
+        "optimization-job",
         "automl-job",
         "monitoring-schedule",
         "monitoring-schedule-alert",
