@@ -1,5 +1,55 @@
 [
   {
+    "dateOfChange": "2024-07-12",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:CreateFlow",
+        "bedrock:CreateFlowAlias",
+        "bedrock:CreateFlowVersion",
+        "bedrock:CreatePrompt",
+        "bedrock:CreatePromptVersion",
+        "bedrock:DeleteAgentMemory",
+        "bedrock:DeleteFlow",
+        "bedrock:DeleteFlowAlias",
+        "bedrock:DeleteFlowVersion",
+        "bedrock:DeletePrompt",
+        "bedrock:GetAgentMemory",
+        "bedrock:GetFlow",
+        "bedrock:GetFlowAlias",
+        "bedrock:GetFlowVersion",
+        "bedrock:GetPrompt",
+        "bedrock:InvokeFlow",
+        "bedrock:ListFlowAliases",
+        "bedrock:ListFlowVersions",
+        "bedrock:ListFlows",
+        "bedrock:ListPrompts",
+        "bedrock:PrepareFlow",
+        "bedrock:UpdateFlow",
+        "bedrock:UpdateFlowAlias",
+        "bedrock:UpdatePrompt"
+      ],
+      "Amazon CloudFront": [
+        "cloudfront:UpdateDistributionWithStagingConfig"
+      ],
+      "AWS HealthImaging": [
+        "medical-imaging:GetDICOMInstanceFrames",
+        "medical-imaging:GetDICOMInstanceMetadata"
+      ],
+      "AWS License Manager Linux Subscriptions Manager": [
+        "license-manager-linux-subscriptions:DeregisterSubscriptionProvider",
+        "license-manager-linux-subscriptions:GetRegisteredSubscriptionProvider",
+        "license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders",
+        "license-manager-linux-subscriptions:ListTagsForResource",
+        "license-manager-linux-subscriptions:RegisterSubscriptionProvider",
+        "license-manager-linux-subscriptions:TagResource",
+        "license-manager-linux-subscriptions:UntagResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-07-11",
     "addedServices": [
       "AWS App Studio"

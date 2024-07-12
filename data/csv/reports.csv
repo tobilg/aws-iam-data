@@ -1,18 +1,18 @@
 report_name,metric_name,value
-Actions by type,Write Actions,9438
-Actions by type,Read Actions,4586
-Actions by type,List Actions,2766
+Actions by type,Write Actions,9457
+Actions by type,Read Actions,4597
+Actions by type,List Actions,2770
 Actions by type,Permissions Actions,290
-Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
+Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
+Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
+Longest action names,license-manager-linux-subscriptions:GetRegisteredSubscriptionProvider,69
 Longest action names,servicecatalog:NotifyTerminateProvisionedProductEngineWorkflowResult,68
 Longest action names,aws-marketplace-management:PutAdditionalSellerNotificationRecipients,68
 Longest action names,aws-marketplace-management:GetAdditionalSellerNotificationRecipients,68
 Longest action names,ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations,67
-Longest action names,vendor-insights:UpdateSecurityProfileSnapshotCreationConfiguration,66
-Longest action names,servicecatalog:BatchAssociateServiceActionWithProvisioningArtifact,66
 Longest action names,license-manager-linux-subscriptions:ListLinuxSubscriptionInstances,66
-Longest action names,iotwireless:StartBulkDisassociateWirelessDeviceFromMulticastGroup,65
+Longest action names,license-manager-linux-subscriptions:DeregisterSubscriptionProvider,66
 Longest condition key names,payment-cryptography:CertificateAuthorityPublicKeyIdentifier,60
 Longest condition key names,route53:ChangeResourceRecordSetsNormalizedRecordNames,53
 Longest condition key names,vpc-lattice-svcs:RequestQueryString/${QueryStringKey},53
@@ -93,8 +93,8 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1742
-Summary,Total number of distinct condition keys,929
+Summary,Total number of distinct resource ARNS,1747
+Summary,Total number of distinct condition keys,928
 Summary,Total number of services,420
 Summary,Average number of actions per service,41
 Summary,Median number of actions per service,27

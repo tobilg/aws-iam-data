@@ -1,25 +1,33 @@
 {
   "Actions by type": [
     {
-      "key": "Write Actions",
-      "value": 9438
-    },
-    {
       "key": "Read Actions",
-      "value": 4586
+      "value": 4597
     },
     {
       "key": "List Actions",
-      "value": 2766
+      "value": 2770
     },
     {
       "key": "Permissions Actions",
       "value": 290
+    },
+    {
+      "key": "Write Actions",
+      "value": 9457
     }
   ],
   "Longest action names": [
     {
+      "key": "license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders",
+      "value": 71
+    },
+    {
       "key": "codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication",
+      "value": 69
+    },
+    {
+      "key": "license-manager-linux-subscriptions:GetRegisteredSubscriptionProvider",
       "value": 69
     },
     {
@@ -43,20 +51,12 @@
       "value": 67
     },
     {
+      "key": "license-manager-linux-subscriptions:DeregisterSubscriptionProvider",
+      "value": 66
+    },
+    {
       "key": "license-manager-linux-subscriptions:ListLinuxSubscriptionInstances",
       "value": 66
-    },
-    {
-      "key": "servicecatalog:BatchAssociateServiceActionWithProvisioningArtifact",
-      "value": 66
-    },
-    {
-      "key": "vendor-insights:UpdateSecurityProfileSnapshotCreationConfiguration",
-      "value": 66
-    },
-    {
-      "key": "iotwireless:StartBulkDisassociateWirelessDeviceFromMulticastGroup",
-      "value": 65
     }
   ],
   "Longest condition key names": [
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1742
+      "value": 1747
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 929
+      "value": 928
     }
   ]
 }
