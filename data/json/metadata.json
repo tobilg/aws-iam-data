@@ -13243,7 +13243,7 @@
       "name": "Amazon Interactive Video Service",
       "servicePrefix": "ivs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninteractivevideoservice.html",
-      "actionsCount": 59,
+      "actionsCount": 63,
       "actions": [
         "BatchGetChannel",
         "BatchGetStreamKey",
@@ -13260,6 +13260,7 @@
         "DeleteEncoderConfiguration",
         "DeletePlaybackKeyPair",
         "DeletePlaybackRestrictionPolicy",
+        "DeletePublicKey",
         "DeleteRecordingConfiguration",
         "DeleteStage",
         "DeleteStorageConfiguration",
@@ -13271,6 +13272,7 @@
         "GetParticipant",
         "GetPlaybackKeyPair",
         "GetPlaybackRestrictionPolicy",
+        "GetPublicKey",
         "GetRecordingConfiguration",
         "GetStage",
         "GetStageSession",
@@ -13279,6 +13281,7 @@
         "GetStreamKey",
         "GetStreamSession",
         "ImportPlaybackKeyPair",
+        "ImportPublicKey",
         "ListChannels",
         "ListCompositions",
         "ListEncoderConfigurations",
@@ -13286,6 +13289,7 @@
         "ListParticipants",
         "ListPlaybackKeyPairs",
         "ListPlaybackRestrictionPolicies",
+        "ListPublicKeys",
         "ListRecordingConfigurations",
         "ListStageSessions",
         "ListStages",
@@ -13305,7 +13309,7 @@
         "UpdatePlaybackRestrictionPolicy",
         "UpdateStage"
       ],
-      "resourceTypesCount": 9,
+      "resourceTypesCount": 10,
       "resourceTypes": [
         "Channel",
         "Stream-Key",
@@ -13315,7 +13319,8 @@
         "Stage",
         "Composition",
         "Encoder-Configuration",
-        "Storage-Configuration"
+        "Storage-Configuration",
+        "Public-Key"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
