@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2024-07-23",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect": [
+        "connect:SearchAgentStatuses",
+        "connect:SearchUserHierarchyGroups"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:BatchCreateTopicReviewedAnswer",
+        "quicksight:BatchDeleteTopicReviewedAnswer",
+        "quicksight:ListTopicReviewedAnswers"
+      ],
+      "AWS Resource Explorer": [
+        "resource-explorer-2:DeleteResourcePolicy",
+        "resource-explorer-2:GetResourcePolicy",
+        "resource-explorer-2:PutResourcePolicy"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-07-13",
     "addedServices": [],
     "removedServices": [],
