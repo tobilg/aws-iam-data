@@ -9497,13 +9497,14 @@
         "access-entry",
         "access-policy"
       ],
-      "conditionKeysCount": 15,
+      "conditionKeysCount": 17,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "eks:accessEntryType",
         "eks:accessScope",
+        "eks:authenticationMode",
         "eks:bootstrapClusterCreatorAdminPermissions",
         "eks:bootstrapSelfManagedAddons",
         "eks:clientId",
@@ -9513,6 +9514,7 @@
         "eks:namespaces",
         "eks:policyArn",
         "eks:principalArn",
+        "eks:supportType",
         "eks:username"
       ]
     },
