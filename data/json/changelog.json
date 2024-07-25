@@ -1,5 +1,41 @@
 [
   {
+    "dateOfChange": "2024-07-25",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Clean Rooms": [
+        "cleanrooms:CreateIdMappingTable",
+        "cleanrooms:CreateIdNamespaceAssociation",
+        "cleanrooms:DeleteIdMappingTable",
+        "cleanrooms:DeleteIdNamespaceAssociation",
+        "cleanrooms:GetCollaborationIdNamespaceAssociation",
+        "cleanrooms:GetIdMappingTable",
+        "cleanrooms:GetIdNamespaceAssociation",
+        "cleanrooms:ListCollaborationIdNamespaceAssociations",
+        "cleanrooms:ListIdMappingTables",
+        "cleanrooms:ListIdNamespaceAssociations",
+        "cleanrooms:PopulateIdMappingTable",
+        "cleanrooms:UpdateIdMappingTable",
+        "cleanrooms:UpdateIdNamespaceAssociation"
+      ],
+      "AWS Entity Resolution": [
+        "entityresolution:UseWorkflow"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:DeleteOptimizationJob"
+      ],
+      "Amazon WorkMail": [
+        "workmail:DeliverToMailbox"
+      ]
+    },
+    "removedActions": {
+      "Amazon SageMaker": [
+        "sagemaker:DeleteOptimization"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-07-23",
     "addedServices": [],
     "removedServices": [],
