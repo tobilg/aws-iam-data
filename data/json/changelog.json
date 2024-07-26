@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2024-07-26",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Clean Rooms": [
+        "cleanrooms:CreateConfiguredTableAssociationAnalysisRule",
+        "cleanrooms:DeleteConfiguredTableAssociationAnalysisRule",
+        "cleanrooms:GetConfiguredTableAssociationAnalysisRule",
+        "cleanrooms:UpdateConfiguredTableAssociationAnalysisRule"
+      ],
+      "Amazon Elastic Container Registry": [
+        "ecr:DescribeRepositoryCreationTemplates",
+        "ecr:UpdateRepositoryCreationTemplate"
+      ]
+    },
+    "removedActions": {
+      "Amazon Elastic Container Registry": [
+        "ecr:DescribeRepositoryCreationTemplate"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-07-25",
     "addedServices": [],
     "removedServices": [],
