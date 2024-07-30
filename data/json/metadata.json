@@ -6350,9 +6350,10 @@
       "name": "AWS Customer Verification Service",
       "servicePrefix": "customer-verification",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscustomerverificationservice.html",
-      "actionsCount": 4,
+      "actionsCount": 5,
       "actions": [
         "CreateCustomerVerificationDetails",
+        "CreateUploadUrls",
         "GetCustomerVerificationDetails",
         "GetCustomerVerificationEligibility",
         "UpdateCustomerVerificationDetails"
