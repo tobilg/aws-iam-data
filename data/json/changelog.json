@@ -1,5 +1,29 @@
 [
   {
+    "dateOfChange": "2024-08-02",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:CreateModelCopyJob",
+        "bedrock:GetModelCopyJob",
+        "bedrock:ListModelCopyJobs"
+      ],
+      "AWS Resilience Hub": [
+        "resiliencehub:AcceptResourceGroupingRecommendations",
+        "resiliencehub:DescribeResourceGroupingRecommendationTask",
+        "resiliencehub:ListResourceGroupingRecommendations",
+        "resiliencehub:RejectResourceGroupingRecommendations",
+        "resiliencehub:StartResourceGroupingRecommendationTask"
+      ],
+      "Amazon Route 53 Application Recovery Controller - Zonal Shift": [
+        "arc-zonal-shift:GetAutoshiftObserverNotificationStatus",
+        "arc-zonal-shift:UpdateAutoshiftObserverNotificationStatus"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-07-30",
     "addedServices": [],
     "removedServices": [],
