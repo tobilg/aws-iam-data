@@ -1,5 +1,61 @@
 [
   {
+    "dateOfChange": "2024-08-06",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:BatchDeleteEvaluationJob"
+      ],
+      "AWS CodePipeline": [
+        "codepipeline:ListRuleExecutions",
+        "codepipeline:ListRuleTypes",
+        "codepipeline:OverrideStageCondition"
+      ],
+      "AWS Control Catalog": [
+        "controlcatalog:GetControl",
+        "controlcatalog:ListControls"
+      ],
+      "Amazon DataZone": [
+        "datazone:AddEntityOwner",
+        "datazone:CreateDataProduct",
+        "datazone:CreateDataProductRevision",
+        "datazone:CreateDomainUnit",
+        "datazone:DeleteDataProduct",
+        "datazone:DeleteDomainUnit",
+        "datazone:GetDataProduct",
+        "datazone:GetDomainUnit",
+        "datazone:ListDataProductRevisions",
+        "datazone:ListDomainUnitsForParent",
+        "datazone:ListEntityOwners",
+        "datazone:RemoveEntityOwner",
+        "datazone:UpdateDomainUnit"
+      ]
+    },
+    "removedActions": {
+      "AWS CloudHSM": [
+        "cloudhsm:AddTagsToResource",
+        "cloudhsm:CreateHapg",
+        "cloudhsm:CreateLunaClient",
+        "cloudhsm:DeleteHapg",
+        "cloudhsm:DeleteLunaClient",
+        "cloudhsm:DescribeHapg",
+        "cloudhsm:DescribeHsm",
+        "cloudhsm:DescribeLunaClient",
+        "cloudhsm:GetConfig",
+        "cloudhsm:ListAvailableZones",
+        "cloudhsm:ListHapgs",
+        "cloudhsm:ListHsms",
+        "cloudhsm:ListLunaClients",
+        "cloudhsm:ListTagsForResource",
+        "cloudhsm:ModifyHapg",
+        "cloudhsm:ModifyHsm",
+        "cloudhsm:ModifyLunaClient",
+        "cloudhsm:RemoveTagsFromResource"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-08-02",
     "addedServices": [],
     "removedServices": [],
