@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2024-08-08",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Glue": [
+        "glue:PutDataQualityStatisticAnnotation"
+      ],
+      "Amazon Kinesis Video Streams": [
+        "kinesisvideo:JoinStorageSessionAsViewer"
+      ]
+    },
+    "removedActions": {
+      "AWS Glue": [
+        "glue:BatchPutDataQualityStatisticAnnotation",
+        "glue:ListDataQualityStatisticAnnotations",
+        "glue:ListDataQualityStatistics"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-08-07",
     "addedServices": [],
     "removedServices": [],
