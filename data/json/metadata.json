@@ -7830,7 +7830,7 @@
       "name": "Amazon EC2",
       "servicePrefix": "ec2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html",
-      "actionsCount": 638,
+      "actionsCount": 641,
       "actions": [
         "AcceptAddressTransfer",
         "AcceptReservedInstancesExchangeQuote",
@@ -7910,6 +7910,7 @@
         "CreateInstanceExportTask",
         "CreateInternetGateway",
         "CreateIpam",
+        "CreateIpamExternalResourceVerificationToken",
         "CreateIpamPool",
         "CreateIpamResourceDiscovery",
         "CreateIpamScope",
@@ -7988,6 +7989,7 @@
         "DeleteInstanceEventWindow",
         "DeleteInternetGateway",
         "DeleteIpam",
+        "DeleteIpamExternalResourceVerificationToken",
         "DeleteIpamPool",
         "DeleteIpamResourceDiscovery",
         "DeleteIpamScope",
@@ -8114,6 +8116,7 @@
         "DescribeInstances",
         "DescribeInternetGateways",
         "DescribeIpamByoasn",
+        "DescribeIpamExternalResourceVerificationTokens",
         "DescribeIpamPools",
         "DescribeIpamResourceDiscoveries",
         "DescribeIpamResourceDiscoveryAssociations",
@@ -8471,7 +8474,7 @@
         "UpdateSecurityGroupRuleDescriptionsIngress",
         "WithdrawByoipCidr"
       ],
-      "resourceTypesCount": 89,
+      "resourceTypesCount": 90,
       "resourceTypes": [
         "elastic-ip",
         "capacity-reservation-fleet",
@@ -8497,6 +8500,7 @@
         "instance-event-window",
         "instance",
         "internet-gateway",
+        "ipam-external-resource-verification-token",
         "ipam",
         "ipam-pool",
         "ipam-resource-discovery-association",
@@ -8563,7 +8567,7 @@
         "vpn-connection",
         "vpn-gateway"
       ],
-      "conditionKeysCount": 119,
+      "conditionKeysCount": 120,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -8584,6 +8588,7 @@
         "ec2:ClientRootCertificateChainArn",
         "ec2:CloudwatchLogGroupArn",
         "ec2:CloudwatchLogStreamArn",
+        "ec2:CpuOptionsAmdSevSnp",
         "ec2:CreateAction",
         "ec2:DPDTimeoutSeconds",
         "ec2:DhcpOptionsID",
