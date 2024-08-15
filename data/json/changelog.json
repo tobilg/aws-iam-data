@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2024-08-15",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Glue": [
+        "glue:GetRecipeAction",
+        "glue:SendRecipeAction"
+      ],
+      "Amazon Kinesis Analytics V2": [
+        "kinesisanalytics:DescribeApplicationOperation",
+        "kinesisanalytics:ListApplicationOperations"
+      ],
+      "Amazon Route 53 Profiles enables sharing DNS settings with VPCs": [
+        "route53profiles:GetProfilePolicy",
+        "route53profiles:PutProfilePolicy"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-08-14",
     "addedServices": [],
     "removedServices": [],
