@@ -1,5 +1,41 @@
 [
   {
+    "dateOfChange": "2024-08-17",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon AppStream 2.0": [
+        "appstream:CreateThemeForStack",
+        "appstream:DeleteThemeForStack",
+        "appstream:DescribeThemeForStack",
+        "appstream:UpdateThemeForStack"
+      ],
+      "AWS CodeConnections": [
+        "codeconnections:GetConnectionToken"
+      ],
+      "AWS CodeStar Connections": [
+        "codestar-connections:GetConnectionToken"
+      ],
+      "Amazon DataZone": [
+        "datazone:CreateProjectProfile",
+        "datazone:DeleteProjectProfile",
+        "datazone:GetProjectProfile",
+        "datazone:ListProjectProfiles",
+        "datazone:UpdateProjectProfile"
+      ],
+      "AWS HealthLake": [
+        "healthlake:CancelFHIRExportJobWithDelete",
+        "healthlake:DescribeFHIRExportJobWithGet",
+        "healthlake:StartFHIRExportJobWithPost"
+      ],
+      "AWS Lambda": [
+        "lambda:GetFunctionRecursionConfig",
+        "lambda:PutFunctionRecursionConfig"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-08-15",
     "addedServices": [],
     "removedServices": [],
