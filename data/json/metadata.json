@@ -9943,7 +9943,7 @@
       "name": "AWS Elemental Appliances and Software",
       "servicePrefix": "elemental-appliances-software",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalappliancesandsoftware.html",
-      "actionsCount": 17,
+      "actionsCount": 14,
       "actions": [
         "CompleteUpload",
         "CreateOrderV1",
@@ -9956,29 +9956,22 @@
         "GetQuote",
         "GetTaxes",
         "ListQuotes",
-        "ListTagsForResource",
         "StartUpload",
         "SubmitOrderV1",
-        "TagResource",
-        "UntagResource",
         "UpdateQuote"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
         "quote"
       ],
-      "conditionKeysCount": 3,
-      "conditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
-      ]
+      "conditionKeysCount": 0,
+      "conditionKeys": []
     },
     {
       "name": "AWS Elemental Appliances and Software Activation Service",
       "servicePrefix": "elemental-activations",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalappliancesandsoftwareactivationservice.html",
-      "actionsCount": 18,
+      "actionsCount": 13,
       "actions": [
         "CompleteAccountRegistration",
         "CompleteFileUpload",
@@ -9987,28 +9980,17 @@
         "DownloadSoftware",
         "GenerateLicense",
         "GenerateLicenses",
-        "GetActivation",
         "GetArtifactGroupSoftwareVersions",
         "GetAsset",
         "GetAssets",
         "GetProductAdvisories",
         "GetSoftwareVersions",
-        "ListTagsForResource",
-        "StartAccountRegistration",
-        "StartFileUpload",
-        "TagResource",
-        "UntagResource"
+        "StartFileUpload"
       ],
-      "resourceTypesCount": 1,
-      "resourceTypes": [
-        "activation"
-      ],
-      "conditionKeysCount": 3,
-      "conditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
-      ]
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
     },
     {
       "name": "AWS Elemental MediaConnect",
@@ -10508,8 +10490,10 @@
         "GetCases",
         "UpdateCase"
       ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "case"
+      ],
       "conditionKeysCount": 0,
       "conditionKeys": []
     },

@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2024-08-22",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {},
+    "removedActions": {
+      "AWS Elemental Appliances and Software": [
+        "elemental-appliances-software:ListTagsForResource",
+        "elemental-appliances-software:TagResource",
+        "elemental-appliances-software:UntagResource"
+      ],
+      "AWS Elemental Appliances and Software Activation Service": [
+        "elemental-activations:GetActivation",
+        "elemental-activations:ListTagsForResource",
+        "elemental-activations:StartAccountRegistration",
+        "elemental-activations:TagResource",
+        "elemental-activations:UntagResource"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-08-17",
     "addedServices": [],
     "removedServices": [],
