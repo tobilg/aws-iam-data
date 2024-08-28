@@ -25881,10 +25881,11 @@
       "name": "AWS Wickr",
       "servicePrefix": "wickr",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswickr.html",
-      "actionsCount": 7,
+      "actionsCount": 8,
       "actions": [
         "CreateAdminSession",
         "CreateNetwork",
+        "DeleteNetwork",
         "ListNetworks",
         "ListTagsForResource",
         "TagResource",
