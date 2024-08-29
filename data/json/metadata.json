@@ -1,5 +1,5 @@
 {
-  "serviceCount": 420,
+  "serviceCount": 421,
   "services": [
     {
       "name": "AWS Account Management",
@@ -2057,7 +2057,7 @@
       "name": "Amazon Bedrock",
       "servicePrefix": "bedrock",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html",
-      "actionsCount": 121,
+      "actionsCount": 129,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "ApplyGuardrail",
@@ -2079,6 +2079,7 @@
         "CreateModelCopyJob",
         "CreateModelCustomizationJob",
         "CreateModelEvaluationJob",
+        "CreateModelImportJob",
         "CreateModelInvocationJob",
         "CreatePrompt",
         "CreatePromptVersion",
@@ -2095,6 +2096,7 @@
         "DeleteFlowVersion",
         "DeleteFoundationModelAgreement",
         "DeleteGuardrail",
+        "DeleteImportedModel",
         "DeleteKnowledgeBase",
         "DeleteModelInvocationLoggingConfiguration",
         "DeletePrompt",
@@ -2117,11 +2119,14 @@
         "GetFoundationModel",
         "GetFoundationModelAvailability",
         "GetGuardrail",
+        "GetImportedModel",
+        "GetInferenceProfile",
         "GetIngestionJob",
         "GetKnowledgeBase",
         "GetModelCopyJob",
         "GetModelCustomizationJob",
         "GetModelEvaluationJob",
+        "GetModelImportJob",
         "GetModelInvocationJob",
         "GetModelInvocationLoggingConfiguration",
         "GetPrompt",
@@ -2146,11 +2151,14 @@
         "ListFoundationModelAgreementOffers",
         "ListFoundationModels",
         "ListGuardrails",
+        "ListImportedModels",
+        "ListInferenceProfiles",
         "ListIngestionJobs",
         "ListKnowledgeBases",
         "ListModelCopyJobs",
         "ListModelCustomizationJobs",
         "ListModelEvaluationJobs",
+        "ListModelImportJobs",
         "ListModelInvocationJobs",
         "ListPrompts",
         "ListProvisionedModelThroughputs",
@@ -2181,9 +2189,10 @@
         "UpdatePrompt",
         "UpdateProvisionedModelThroughput"
       ],
-      "resourceTypesCount": 16,
+      "resourceTypesCount": 19,
       "resourceTypes": [
         "foundation-model",
+        "inference-profile",
         "custom-model",
         "provisioned-model",
         "model-customization-job",
@@ -2198,13 +2207,16 @@
         "flow-alias",
         "model-copy-job",
         "prompt",
-        "prompt-version"
+        "prompt-version",
+        "model-import-job",
+        "imported-model"
       ],
-      "conditionKeysCount": 4,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "bedrock:InferenceProfileArn",
         "bedrock:ThirdPartyKnowledgeBaseCredentialsSecretArn"
       ]
     },
@@ -18508,6 +18520,45 @@
         "device",
         "package",
         "applicationInstance"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "AWS Parallel Computing Service",
+      "servicePrefix": "pcs",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsparallelcomputingservice.html",
+      "actionsCount": 19,
+      "actions": [
+        "AllowVendedLogDeliveryForResource",
+        "CreateCluster",
+        "CreateComputeNodeGroup",
+        "CreateQueue",
+        "DeleteCluster",
+        "DeleteComputeNodeGroup",
+        "DeleteQueue",
+        "GetCluster",
+        "GetComputeNodeGroup",
+        "GetQueue",
+        "ListClusters",
+        "ListComputeNodeGroups",
+        "ListQueues",
+        "ListTagsForResource",
+        "RegisterComputeNodeGroupInstance",
+        "TagResource",
+        "UntagResource",
+        "UpdateComputeNodeGroup",
+        "UpdateQueue"
+      ],
+      "resourceTypesCount": 3,
+      "resourceTypes": [
+        "cluster",
+        "computenodegroup",
+        "queue"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [

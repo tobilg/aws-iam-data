@@ -1,5 +1,46 @@
 [
   {
+    "dateOfChange": "2024-08-29",
+    "addedServices": [
+      "AWS Parallel Computing Service"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:CreateModelImportJob",
+        "bedrock:DeleteImportedModel",
+        "bedrock:GetImportedModel",
+        "bedrock:GetInferenceProfile",
+        "bedrock:GetModelImportJob",
+        "bedrock:ListImportedModels",
+        "bedrock:ListInferenceProfiles",
+        "bedrock:ListModelImportJobs"
+      ],
+      "AWS Parallel Computing Service": [
+        "pcs:AllowVendedLogDeliveryForResource",
+        "pcs:CreateCluster",
+        "pcs:CreateComputeNodeGroup",
+        "pcs:CreateQueue",
+        "pcs:DeleteCluster",
+        "pcs:DeleteComputeNodeGroup",
+        "pcs:DeleteQueue",
+        "pcs:GetCluster",
+        "pcs:GetComputeNodeGroup",
+        "pcs:GetQueue",
+        "pcs:ListClusters",
+        "pcs:ListComputeNodeGroups",
+        "pcs:ListQueues",
+        "pcs:ListTagsForResource",
+        "pcs:RegisterComputeNodeGroupInstance",
+        "pcs:TagResource",
+        "pcs:UntagResource",
+        "pcs:UpdateComputeNodeGroup",
+        "pcs:UpdateQueue"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-08-28",
     "addedServices": [],
     "removedServices": [],
