@@ -10735,7 +10735,7 @@
         "UpdateEndpoint",
         "UpdateEventBus"
       ],
-      "resourceTypesCount": 9,
+      "resourceTypesCount": 13,
       "resourceTypes": [
         "event-source",
         "event-bus",
@@ -10745,7 +10745,11 @@
         "replay",
         "connection",
         "api-destination",
-        "endpoint"
+        "endpoint",
+        "create-snapshot",
+        "reboot-instance",
+        "stop-instance",
+        "terminate-instance"
       ],
       "conditionKeysCount": 13,
       "conditionKeys": [
