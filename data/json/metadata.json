@@ -20621,9 +20621,10 @@
         "cluster",
         "workgroup"
       ],
-      "conditionKeysCount": 2,
+      "conditionKeysCount": 3,
       "conditionKeys": [
         "aws:ResourceTag/${TagKey}",
+        "redshift-data:session-owner-iam-userid",
         "redshift-data:statement-owner-iam-userid"
       ]
     },
