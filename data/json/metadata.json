@@ -10882,7 +10882,7 @@
       "name": "AWS Fault Injection Service",
       "servicePrefix": "fis",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsfaultinjectionservice.html",
-      "actionsCount": 27,
+      "actionsCount": 29,
       "actions": [
         "CreateExperimentTemplate",
         "CreateTargetAccountConfiguration",
@@ -10892,6 +10892,7 @@
         "GetExperiment",
         "GetExperimentTargetAccountConfiguration",
         "GetExperimentTemplate",
+        "GetSafetyLever",
         "GetTargetAccountConfiguration",
         "GetTargetResourceType",
         "InjectApiInternalError",
@@ -10910,13 +10911,15 @@
         "TagResource",
         "UntagResource",
         "UpdateExperimentTemplate",
+        "UpdateSafetyLeverState",
         "UpdateTargetAccountConfiguration"
       ],
-      "resourceTypesCount": 3,
+      "resourceTypesCount": 4,
       "resourceTypes": [
         "action",
         "experiment",
-        "experiment-template"
+        "experiment-template",
+        "safety-lever"
       ],
       "conditionKeysCount": 7,
       "conditionKeys": [
