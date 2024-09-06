@@ -1,5 +1,32 @@
 [
   {
+    "dateOfChange": "2024-09-06",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS AppConfig": [
+        "appconfig:GetAccountSettings",
+        "appconfig:UpdateAccountSettings"
+      ],
+      "Amazon CloudWatch Logs": [
+        "logs:DescribeConfigurationTemplates",
+        "logs:UpdateDeliveryConfiguration"
+      ],
+      "Amazon EC2": [
+        "ec2:CreateCapacityReservationBySplitting",
+        "ec2:MoveCapacityReservationInstances"
+      ],
+      "AWS Elastic Load Balancing V2": [
+        "elasticloadbalancing:DescribeListenerAttributes",
+        "elasticloadbalancing:ModifyListenerAttributes"
+      ],
+      "Amazon S3": [
+        "s3:ListCallerAccessGrants"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-09-05",
     "addedServices": [],
     "removedServices": [],
