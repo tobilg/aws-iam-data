@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,9532
-Actions by type,Read Actions,4629
-Actions by type,List Actions,2790
+Actions by type,Write Actions,9541
+Actions by type,Read Actions,4636
+Actions by type,List Actions,2795
 Actions by type,Permissions Actions,293
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -42,7 +42,7 @@ Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},67
 Most referenced resource ARNs,stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/,66
 Most referenced resource ARNs,index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId},64
-Most referenced resource ARNs,catalog - arn:${Partition}:glue:${Region}:${Account}:catalog,62
+Most referenced resource ARNs,domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName},63
 Services with least actions,AWS Elemental Support Content,1
 Services with least actions,AWS Sustainability,1
 Services with least actions,AWS Verified Access,1
@@ -61,7 +61,7 @@ Services with most actions,Amazon Connect,260
 Services with most actions,AWS Glue,258
 Services with most actions,Amazon QuickSight,204
 Services with most actions,AWS Identity and Access Management (IAM),171
-Services with most actions,Amazon RDS,167
+Services with most actions,Amazon RDS,168
 Services with most actions,Amazon DataZone,165
 Shortest action names,iq:EndCall,10
 Shortest action names,ce:GetTags,10
@@ -93,7 +93,7 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1765
+Summary,Total number of distinct resource ARNS,1767
 Summary,Total number of distinct condition keys,944
 Summary,Total number of services,421
 Summary,Average number of actions per service,41

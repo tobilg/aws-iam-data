@@ -1,5 +1,49 @@
 [
   {
+    "dateOfChange": "2024-09-10",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect Customer Profiles": [
+        "profile:BatchGetCalculatedAttributeForProfile",
+        "profile:BatchGetProfile",
+        "profile:CreateSegmentDefinition",
+        "profile:CreateSegmentEstimate",
+        "profile:CreateSegmentSnapshot",
+        "profile:DeleteSegmentDefinition",
+        "profile:GetSegmentDefinition",
+        "profile:GetSegmentEstimate",
+        "profile:GetSegmentMembership",
+        "profile:GetSegmentSnapshot",
+        "profile:ListObjectTypeAttributes",
+        "profile:ListProfileAttributeValues",
+        "profile:ListSegmentDefinitions"
+      ],
+      "Amazon Interactive Video Service": [
+        "ivs:CreateIngestConfiguration",
+        "ivs:DeleteIngestConfiguration",
+        "ivs:GetIngestConfiguration",
+        "ivs:ListIngestConfigurations",
+        "ivs:UpdateIngestConfiguration"
+      ],
+      "Amazon Q Business Q Apps": [
+        "qapps:UpdateLibraryItemMetadata"
+      ],
+      "Amazon RDS": [
+        "rds:CopyCustomDBEngineVersion",
+        "rds:DescribeDBSnapshotTenantDatabases"
+      ],
+      "AWS Support Plans": [
+        "supportplans:ListSupportPlanModifiers"
+      ]
+    },
+    "removedActions": {
+      "Amazon RDS": [
+        "rds:DescribeDbSnapshotTenantDatabases"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-09-07",
     "addedServices": [],
     "removedServices": [],
