@@ -1,5 +1,5 @@
 {
-  "serviceCount": 421,
+  "serviceCount": 420,
   "services": [
     {
       "name": "AWS Account Management",
@@ -14327,48 +14327,6 @@
       "conditionKeysCount": 1,
       "conditionKeys": [
         "iot:JobId"
-      ]
-    },
-    {
-      "name": "AWS IoT RoboRunner",
-      "servicePrefix": "iotroborunner",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotroborunner.html",
-      "actionsCount": 20,
-      "actions": [
-        "CreateDestination",
-        "CreateSite",
-        "CreateWorker",
-        "CreateWorkerFleet",
-        "DeleteDestination",
-        "DeleteSite",
-        "DeleteWorker",
-        "DeleteWorkerFleet",
-        "GetDestination",
-        "GetSite",
-        "GetWorker",
-        "GetWorkerFleet",
-        "ListDestinations",
-        "ListSites",
-        "ListWorkerFleets",
-        "ListWorkers",
-        "UpdateDestination",
-        "UpdateSite",
-        "UpdateWorker",
-        "UpdateWorkerFleet"
-      ],
-      "resourceTypesCount": 4,
-      "resourceTypes": [
-        "DestinationResource",
-        "SiteResource",
-        "WorkerFleetResource",
-        "WorkerResource"
-      ],
-      "conditionKeysCount": 4,
-      "conditionKeys": [
-        "iotroborunner:DestinationResourceId",
-        "iotroborunner:SiteResourceId",
-        "iotroborunner:WorkerFleetResourceId",
-        "iotroborunner:WorkerResourceId"
       ]
     },
     {
