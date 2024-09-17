@@ -7609,9 +7609,10 @@
       "name": "AWS Directory Service",
       "servicePrefix": "ds",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdirectoryservice.html",
-      "actionsCount": 77,
+      "actionsCount": 78,
       "actions": [
         "AcceptSharedDirectory",
+        "AccessDSData",
         "AddIpRoutes",
         "AddRegion",
         "AddTagsToResource",
@@ -18708,7 +18709,7 @@
       "name": "Amazon Personalize",
       "servicePrefix": "personalize",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpersonalize.html",
-      "actionsCount": 82,
+      "actionsCount": 83,
       "actions": [
         "CreateBatchInferenceJob",
         "CreateBatchSegmentJob",
@@ -18791,7 +18792,8 @@
         "UpdateCampaign",
         "UpdateDataset",
         "UpdateMetricAttribution",
-        "UpdateRecommender"
+        "UpdateRecommender",
+        "UpdateSolution"
       ],
       "resourceTypesCount": 18,
       "resourceTypes": [
