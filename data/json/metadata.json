@@ -13492,11 +13492,12 @@
       "name": "AWS IoT",
       "servicePrefix": "iot",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html",
-      "actionsCount": 271,
+      "actionsCount": 274,
       "actions": [
         "AcceptCertificateTransfer",
         "AddThingToBillingGroup",
         "AddThingToThingGroup",
+        "AssociateSbomWithPackageVersion",
         "AssociateTargetsWithJob",
         "AttachPolicy",
         "AttachPrincipalPolicy",
@@ -13619,6 +13620,7 @@
         "DetachSecurityProfile",
         "DetachThingPrincipal",
         "DisableTopicRule",
+        "DisassociateSbomFromPackageVersion",
         "EnableTopicRule",
         "GetBehaviorModelTrainingSummaries",
         "GetBucketsAggregation",
@@ -13683,6 +13685,7 @@
         "ListRelatedResourcesForAuditFinding",
         "ListRetainedMessages",
         "ListRoleAliases",
+        "ListSbomValidationResults",
         "ListScheduledAudits",
         "ListSecurityProfiles",
         "ListSecurityProfilesForTarget",
@@ -21845,21 +21848,23 @@
       "name": "Amazon S3 Express",
       "servicePrefix": "s3express",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3express.html",
-      "actionsCount": 7,
+      "actionsCount": 9,
       "actions": [
         "CreateBucket",
         "CreateSession",
         "DeleteBucket",
         "DeleteBucketPolicy",
         "GetBucketPolicy",
+        "GetEncryptionConfiguration",
         "ListAllMyDirectoryBuckets",
-        "PutBucketPolicy"
+        "PutBucketPolicy",
+        "PutEncryptionConfiguration"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
         "bucket"
       ],
-      "conditionKeysCount": 8,
+      "conditionKeysCount": 10,
       "conditionKeys": [
         "s3express:LocationName",
         "s3express:ResourceAccount",
@@ -21868,7 +21873,9 @@
         "s3express:authType",
         "s3express:signatureAge",
         "s3express:signatureversion",
-        "s3express:x-amz-content-sha256"
+        "s3express:x-amz-content-sha256",
+        "s3express:x-amz-server-side-encryption",
+        "s3express:x-amz-server-side-encryption-aws-kms-key-id"
       ]
     },
     {

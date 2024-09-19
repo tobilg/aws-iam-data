@@ -1,20 +1,20 @@
 {
   "Actions by type": [
     {
-      "key": "Write Actions",
-      "value": 9532
-    },
-    {
       "key": "Read Actions",
-      "value": 4632
+      "value": 4633
     },
     {
       "key": "List Actions",
-      "value": 2795
+      "value": 2796
     },
     {
       "key": "Permissions Actions",
       "value": 297
+    },
+    {
+      "key": "Write Actions",
+      "value": 9535
     }
   ],
   "Longest action names": [
@@ -69,6 +69,10 @@
       "value": 53
     },
     {
+      "key": "s3express:x-amz-server-side-encryption-aws-kms-key-id",
+      "value": 53
+    },
+    {
       "key": "vpc-lattice-svcs:RequestQueryString/${QueryStringKey}",
       "value": 53
     },
@@ -95,10 +99,6 @@
     {
       "key": "amplifyuibuilder:ComponentResourceEnvironmentName",
       "value": 49
-    },
-    {
-      "key": "codestar-connections:ProviderPermissionsRequired",
-      "value": 48
     }
   ],
   "Longest service prefixes": [
@@ -242,7 +242,7 @@
     },
     {
       "key": "AWS IoT",
-      "value": 271
+      "value": 274
     },
     {
       "key": "Amazon Connect",
@@ -414,7 +414,7 @@
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 940
+      "value": 942
     }
   ]
 }

@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,9532
-Actions by type,Read Actions,4632
-Actions by type,List Actions,2795
+Actions by type,Write Actions,9535
+Actions by type,Read Actions,4633
+Actions by type,List Actions,2796
 Actions by type,Permissions Actions,297
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -14,15 +14,15 @@ Longest action names,ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAsso
 Longest action names,license-manager-linux-subscriptions:ListLinuxSubscriptionInstances,66
 Longest action names,license-manager-linux-subscriptions:DeregisterSubscriptionProvider,66
 Longest condition key names,payment-cryptography:CertificateAuthorityPublicKeyIdentifier,60
-Longest condition key names,route53:ChangeResourceRecordSetsNormalizedRecordNames,53
 Longest condition key names,vpc-lattice-svcs:RequestQueryString/${QueryStringKey},53
+Longest condition key names,route53:ChangeResourceRecordSetsNormalizedRecordNames,53
+Longest condition key names,s3express:x-amz-server-side-encryption-aws-kms-key-id,53
 Longest condition key names,sagemaker:CustomerMetadataProperties/${MetadataKey},51
 Longest condition key names,bedrock:ThirdPartyKnowledgeBaseCredentialsSecretArn,51
-Longest condition key names,s3:x-amz-server-side-encryption-customer-algorithm,50
 Longest condition key names,route53-recovery-cluster:AllowSafetyRulesOverrides,50
 Longest condition key names,amplifyuibuilder:CodegenJobResourceEnvironmentName,50
+Longest condition key names,s3:x-amz-server-side-encryption-customer-algorithm,50
 Longest condition key names,amplifyuibuilder:ComponentResourceEnvironmentName,49
-Longest condition key names,codestar-connections:ProviderPermissionsRequired,48
 Longest service prefixes,license-manager-linux-subscriptions,35
 Longest service prefixes,license-manager-user-subscriptions,34
 Longest service prefixes,partnercentral-account-management,33
@@ -56,7 +56,7 @@ Services with least actions,AWS IAM Identity Center OIDC service,1
 Services with most actions,Amazon EC2,643
 Services with most actions,Amazon SageMaker,366
 Services with most actions,Amazon Chime,309
-Services with most actions,AWS IoT,271
+Services with most actions,AWS IoT,274
 Services with most actions,Amazon Connect,260
 Services with most actions,AWS Glue,258
 Services with most actions,Amazon QuickSight,204
@@ -94,7 +94,7 @@ Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
 Summary,Total number of distinct resource ARNS,1763
-Summary,Total number of distinct condition keys,940
+Summary,Total number of distinct condition keys,942
 Summary,Total number of services,420
 Summary,Average number of actions per service,41
 Summary,Median number of actions per service,27

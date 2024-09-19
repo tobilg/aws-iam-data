@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2024-09-19",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS IoT": [
+        "iot:AssociateSbomWithPackageVersion",
+        "iot:DisassociateSbomFromPackageVersion",
+        "iot:ListSbomValidationResults"
+      ],
+      "Amazon S3 Express": [
+        "s3express:GetEncryptionConfiguration",
+        "s3express:PutEncryptionConfiguration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-09-18",
     "addedServices": [],
     "removedServices": [],
