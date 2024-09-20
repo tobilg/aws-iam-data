@@ -1,5 +1,49 @@
 [
   {
+    "dateOfChange": "2024-09-20",
+    "addedServices": [
+      "AWS Directory Service Data"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect": [
+        "connect:CreateHoursOfOperationOverride",
+        "connect:DeleteHoursOfOperationOverride",
+        "connect:DescribeHoursOfOperationOverride",
+        "connect:GetEffectiveHoursOfOperations",
+        "connect:ListHoursOfOperationOverrides",
+        "connect:SearchHoursOfOperationOverrides",
+        "connect:SendOutboundEmail",
+        "connect:UpdateHoursOfOperationOverride"
+      ],
+      "AWS Directory Service": [
+        "ds:DescribeDirectoryDataAccess",
+        "ds:DisableDirectoryDataAccess",
+        "ds:EnableDirectoryDataAccess"
+      ],
+      "AWS Directory Service Data": [
+        "ds-data:AddGroupMember",
+        "ds-data:CreateGroup",
+        "ds-data:CreateUser",
+        "ds-data:DeleteGroup",
+        "ds-data:DeleteUser",
+        "ds-data:DescribeGroup",
+        "ds-data:DescribeUser",
+        "ds-data:DisableUser",
+        "ds-data:ListGroupMembers",
+        "ds-data:ListGroups",
+        "ds-data:ListGroupsForMember",
+        "ds-data:ListUsers",
+        "ds-data:RemoveGroupMember",
+        "ds-data:SearchGroups",
+        "ds-data:SearchUsers",
+        "ds-data:UpdateGroup",
+        "ds-data:UpdateUser"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-09-19",
     "addedServices": [],
     "removedServices": [],
