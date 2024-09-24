@@ -1,5 +1,44 @@
 [
   {
+    "dateOfChange": "2024-09-24",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Elemental MediaLive": [
+        "medialive:CreateChannelPlacementGroup",
+        "medialive:CreateCluster",
+        "medialive:CreateNetwork",
+        "medialive:CreateNode",
+        "medialive:CreateNodeRegistrationScript",
+        "medialive:DeleteChannelPlacementGroup",
+        "medialive:DeleteCluster",
+        "medialive:DeleteNetwork",
+        "medialive:DeleteNode",
+        "medialive:DescribeChannelPlacementGroup",
+        "medialive:DescribeCluster",
+        "medialive:DescribeNetwork",
+        "medialive:DescribeNode",
+        "medialive:ListChannelPlacementGroups",
+        "medialive:ListClusters",
+        "medialive:ListNetworks",
+        "medialive:ListNodes",
+        "medialive:PollAnywhere",
+        "medialive:SubmitAnywhereStateChange",
+        "medialive:UpdateChannelPlacementGroup",
+        "medialive:UpdateCluster",
+        "medialive:UpdateNetwork",
+        "medialive:UpdateNode",
+        "medialive:UpdateNodeState"
+      ],
+      "AWS Service Catalog": [
+        "servicecatalog:DeleteResourcePolicy",
+        "servicecatalog:GetResourcePolicy",
+        "servicecatalog:PutResourcePolicy"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-09-20",
     "addedServices": [
       "AWS Directory Service Data"
