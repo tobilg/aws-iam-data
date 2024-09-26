@@ -19626,10 +19626,15 @@
         "StartTroubleshootingResolutionExplanation",
         "UpdateTroubleshootingCommandResult"
       ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "profile"
+      ],
+      "conditionKeysCount": 2,
+      "conditionKeys": [
+        "identitystore:GroupId",
+        "identitystore:UserId"
+      ]
     },
     {
       "name": "Amazon Q Business",
@@ -21127,9 +21132,10 @@
       "name": "AWS Resource Groups",
       "servicePrefix": "resource-groups",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourcegroups.html",
-      "actionsCount": 24,
+      "actionsCount": 29,
       "actions": [
         "AssociateResource",
+        "CancelTagSyncTask",
         "CreateGroup",
         "DeleteGroup",
         "DeleteGroupPolicy",
@@ -21139,14 +21145,18 @@
         "GetGroupConfiguration",
         "GetGroupPolicy",
         "GetGroupQuery",
+        "GetTagSyncTask",
         "GetTags",
         "GroupResources",
         "ListGroupResources",
+        "ListGroupingStatuses",
         "ListGroups",
         "ListResourceTypes",
+        "ListTagSyncTasks",
         "PutGroupConfiguration",
         "PutGroupPolicy",
         "SearchResources",
+        "StartTagSyncTask",
         "Tag",
         "UngroupResources",
         "Untag",
@@ -21154,9 +21164,10 @@
         "UpdateGroup",
         "UpdateGroupQuery"
       ],
-      "resourceTypesCount": 1,
+      "resourceTypesCount": 2,
       "resourceTypes": [
-        "group"
+        "group",
+        "tagSyncTask"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
