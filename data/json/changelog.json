@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2024-09-27",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Pinpoint SMS Voice V2": [
+        "sms-voice:DeleteResourcePolicy",
+        "sms-voice:GetResourcePolicy",
+        "sms-voice:PutResourcePolicy"
+      ],
+      "Amazon Q Business Q Apps": [
+        "qapps:ExportQAppSessionData",
+        "qapps:ListQAppSessionData"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-09-26",
     "addedServices": [],
     "removedServices": [],

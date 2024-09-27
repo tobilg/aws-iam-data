@@ -15249,8 +15249,12 @@
         "consumer",
         "kmsKey"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "Amazon Kinesis Firehose",
@@ -19166,7 +19170,7 @@
       "name": "Amazon Pinpoint SMS Voice V2",
       "servicePrefix": "sms-voice",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpinpointsmsvoicev2.html",
-      "actionsCount": 82,
+      "actionsCount": 85,
       "actions": [
         "AssociateOriginationIdentity",
         "AssociateProtectConfiguration",
@@ -19194,6 +19198,7 @@
         "DeleteRegistration",
         "DeleteRegistrationAttachment",
         "DeleteRegistrationFieldValue",
+        "DeleteResourcePolicy",
         "DeleteTextMessageSpendLimitOverride",
         "DeleteVerifiedDestinationNumber",
         "DeleteVoiceMessageSpendLimitOverride",
@@ -19220,12 +19225,14 @@
         "DisassociateProtectConfiguration",
         "DiscardRegistrationVersion",
         "GetProtectConfigurationCountryRuleSet",
+        "GetResourcePolicy",
         "ListPoolOriginationIdentities",
         "ListRegistrationAssociations",
         "ListTagsForResource",
         "PutKeyword",
         "PutOptedOutNumber",
         "PutRegistrationFieldValue",
+        "PutResourcePolicy",
         "ReleasePhoneNumber",
         "ReleaseSenderId",
         "RequestPhoneNumber",
@@ -19730,7 +19737,7 @@
       "name": "Amazon Q Business Q Apps",
       "servicePrefix": "qapps",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusinessqapps.html",
-      "actionsCount": 33,
+      "actionsCount": 35,
       "actions": [
         "AssociateLibraryItemReview",
         "AssociateQAppWithUser",
@@ -19743,6 +19750,7 @@
         "DeleteQApp",
         "DisassociateLibraryItemReview",
         "DisassociateQAppFromUser",
+        "ExportQAppSessionData",
         "GetLibraryItem",
         "GetQApp",
         "GetQAppSession",
@@ -19751,6 +19759,7 @@
         "ImportDocumentToQApp",
         "ImportDocumentToQAppSession",
         "ListLibraryItems",
+        "ListQAppSessionData",
         "ListQApps",
         "ListTagsForResource",
         "PredictProblemStatementFromConversation",
