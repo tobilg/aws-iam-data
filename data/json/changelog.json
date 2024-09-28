@@ -1,5 +1,19 @@
 [
   {
+    "dateOfChange": "2024-09-28",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS IAM Identity Center (successor to AWS Single Sign-On) directory": [
+        "sso-directory:GetGroupId",
+        "sso-directory:GetUserId",
+        "sso-directory:ListGroups",
+        "sso-directory:ListUsers"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-09-27",
     "addedServices": [],
     "removedServices": [],
