@@ -1,5 +1,26 @@
 [
   {
+    "dateOfChange": "2024-10-01",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Supply Chain": [
+        "scn:CreateDataIntegrationFlow",
+        "scn:CreateDataLakeDataset",
+        "scn:DeleteDataIntegrationFlow",
+        "scn:DeleteDataLakeDataset",
+        "scn:GetDataIntegrationFlow",
+        "scn:GetDataLakeDataset",
+        "scn:GetInstance",
+        "scn:ListDataIntegrationFlows",
+        "scn:ListDataLakeDatasets",
+        "scn:UpdateDataIntegrationFlow",
+        "scn:UpdateDataLakeDataset"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-09-28",
     "addedServices": [],
     "removedServices": [],
