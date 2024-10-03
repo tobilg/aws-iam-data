@@ -1749,11 +1749,12 @@
       "name": "AWS B2B Data Interchange",
       "servicePrefix": "b2bi",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsb2bdatainterchange.html",
-      "actionsCount": 27,
+      "actionsCount": 29,
       "actions": [
         "CreateCapability",
         "CreatePartnership",
         "CreateProfile",
+        "CreateStarterMappingTemplate",
         "CreateTransformer",
         "DeleteCapability",
         "DeletePartnership",
@@ -1771,6 +1772,7 @@
         "ListTransformers",
         "StartTransformerJob",
         "TagResource",
+        "TestConversion",
         "TestMapping",
         "TestParsing",
         "UntagResource",
@@ -2059,7 +2061,7 @@
       "name": "Amazon Bedrock",
       "servicePrefix": "bedrock",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html",
-      "actionsCount": 129,
+      "actionsCount": 131,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "ApplyGuardrail",
@@ -2136,6 +2138,7 @@
         "GetResourcePolicy",
         "GetUseCaseForModelAccess",
         "InvokeAgent",
+        "InvokeBuilder",
         "InvokeFlow",
         "InvokeModel",
         "InvokeModelWithResponseStream",
@@ -2175,6 +2178,7 @@
         "RetrieveAndGenerate",
         "StartIngestionJob",
         "StopEvaluationJob",
+        "StopIngestionJob",
         "StopModelCustomizationJob",
         "StopModelInvocationJob",
         "TagResource",
@@ -21463,9 +21467,9 @@
       "conditionKeys": []
     },
     {
-      "name": "Amazon Route 53 Profiles enables sharing DNS settings with VPCs",
+      "name": "Amazon Route 53 Profiles",
       "servicePrefix": "route53profiles",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53profilesenablessharingdnssettingswithvpcs.html",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53profiles.html",
       "actionsCount": 18,
       "actions": [
         "AssociateProfile",

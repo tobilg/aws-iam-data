@@ -1,5 +1,66 @@
 [
   {
+    "dateOfChange": "2024-10-03",
+    "addedServices": [
+      "Amazon Route 53 Profiles"
+    ],
+    "removedServices": [
+      "Amazon Route 53 Profiles enables sharing DNS settings with VPCs"
+    ],
+    "addedActions": {
+      "AWS B2B Data Interchange": [
+        "b2bi:CreateStarterMappingTemplate",
+        "b2bi:TestConversion"
+      ],
+      "Amazon Bedrock": [
+        "bedrock:InvokeBuilder",
+        "bedrock:StopIngestionJob"
+      ],
+      "Amazon Route 53 Profiles": [
+        "route53profiles:AssociateProfile",
+        "route53profiles:AssociateResourceToProfile",
+        "route53profiles:CreateProfile",
+        "route53profiles:DeleteProfile",
+        "route53profiles:DisassociateProfile",
+        "route53profiles:DisassociateResourceFromProfile",
+        "route53profiles:GetProfile",
+        "route53profiles:GetProfileAssociation",
+        "route53profiles:GetProfilePolicy",
+        "route53profiles:GetProfileResourceAssociation",
+        "route53profiles:ListProfileAssociations",
+        "route53profiles:ListProfileResourceAssociations",
+        "route53profiles:ListProfiles",
+        "route53profiles:ListTagsForResource",
+        "route53profiles:PutProfilePolicy",
+        "route53profiles:TagResource",
+        "route53profiles:UntagResource",
+        "route53profiles:UpdateProfileResourceAssociation"
+      ]
+    },
+    "removedActions": {
+      "Amazon Route 53 Profiles enables sharing DNS settings with VPCs": [
+        "route53profiles:AssociateProfile",
+        "route53profiles:AssociateResourceToProfile",
+        "route53profiles:CreateProfile",
+        "route53profiles:DeleteProfile",
+        "route53profiles:DisassociateProfile",
+        "route53profiles:DisassociateResourceFromProfile",
+        "route53profiles:GetProfile",
+        "route53profiles:GetProfileAssociation",
+        "route53profiles:GetProfilePolicy",
+        "route53profiles:GetProfileResourceAssociation",
+        "route53profiles:ListProfileAssociations",
+        "route53profiles:ListProfileResourceAssociations",
+        "route53profiles:ListProfiles",
+        "route53profiles:ListTagsForResource",
+        "route53profiles:PutProfilePolicy",
+        "route53profiles:TagResource",
+        "route53profiles:UntagResource",
+        "route53profiles:UpdateProfileResourceAssociation"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-10-01",
     "addedServices": [],
     "removedServices": [],
