@@ -1,5 +1,20 @@
 [
   {
+    "dateOfChange": "2024-10-05",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon QuickSight": [
+        "quicksight:DescribeQPersonalizationConfiguration",
+        "quicksight:UpdateQPersonalizationConfiguration"
+      ],
+      "AWS Systems Manager GUI Connect": [
+        "ssm-guiconnect:ListConnections"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-10-03",
     "addedServices": [
       "Amazon Route 53 Profiles"

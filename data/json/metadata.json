@@ -19950,7 +19950,7 @@
       "name": "Amazon QuickSight",
       "servicePrefix": "quicksight",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonquicksight.html",
-      "actionsCount": 204,
+      "actionsCount": 206,
       "actions": [
         "AccountConfigurations",
         "BatchCreateTopicReviewedAnswer",
@@ -20039,6 +20039,7 @@
         "DescribeIpRestriction",
         "DescribeKeyRegistration",
         "DescribeNamespace",
+        "DescribeQPersonalizationConfiguration",
         "DescribeRefreshSchedule",
         "DescribeRoleCustomPermission",
         "DescribeTemplate",
@@ -20141,6 +20142,7 @@
         "UpdateIpRestriction",
         "UpdateKeyRegistration",
         "UpdatePublicSharingSettings",
+        "UpdateQPersonalizationConfiguration",
         "UpdateRefreshSchedule",
         "UpdateResourcePermissions",
         "UpdateRoleCustomPermission",
@@ -24784,10 +24786,11 @@
       "name": "AWS Systems Manager GUI Connect",
       "servicePrefix": "ssm-guiconnect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerguiconnect.html",
-      "actionsCount": 3,
+      "actionsCount": 4,
       "actions": [
         "CancelConnection",
         "GetConnection",
+        "ListConnections",
         "StartConnection"
       ],
       "resourceTypesCount": 0,
