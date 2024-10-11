@@ -1,5 +1,43 @@
 [
   {
+    "dateOfChange": "2024-10-11",
+    "addedServices": [
+      "AWS Marketplace Reporting"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Deadline Cloud": [
+        "deadline:GetJobTemplate",
+        "deadline:ListJobParameterDefinitions"
+      ],
+      "Amazon Q in Connect": [
+        "wisdom:CreateAIAgent",
+        "wisdom:CreateAIAgentVersion",
+        "wisdom:CreateAIPrompt",
+        "wisdom:CreateAIPromptVersion",
+        "wisdom:DeleteAIAgent",
+        "wisdom:DeleteAIAgentVersion",
+        "wisdom:DeleteAIPrompt",
+        "wisdom:DeleteAIPromptVersion",
+        "wisdom:GetAIAgent",
+        "wisdom:GetAIPrompt",
+        "wisdom:ListAIAgentVersions",
+        "wisdom:ListAIAgents",
+        "wisdom:ListAIPromptVersions",
+        "wisdom:ListAIPrompts",
+        "wisdom:RemoveAssistantAIAgent",
+        "wisdom:UpdateAIAgent",
+        "wisdom:UpdateAIPrompt",
+        "wisdom:UpdateAssistantAIAgent",
+        "wisdom:UpdateSessionData"
+      ],
+      "AWS Marketplace Reporting": [
+        "aws-marketplace:GetBuyerDashboard"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-10-05",
     "addedServices": [],
     "removedServices": [],

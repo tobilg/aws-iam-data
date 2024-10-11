@@ -1,5 +1,5 @@
 {
-  "serviceCount": 421,
+  "serviceCount": 422,
   "services": [
     {
       "name": "AWS Account Management",
@@ -7005,7 +7005,7 @@
       "name": "AWS Deadline Cloud",
       "servicePrefix": "deadline",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeadlinecloud.html",
-      "actionsCount": 103,
+      "actionsCount": 105,
       "actions": [
         "AssociateMemberToFarm",
         "AssociateMemberToFleet",
@@ -7049,6 +7049,7 @@
         "GetFarm",
         "GetFleet",
         "GetJob",
+        "GetJobTemplate",
         "GetLicenseEndpoint",
         "GetMonitor",
         "GetQueue",
@@ -7069,6 +7070,7 @@
         "ListFleetMembers",
         "ListFleets",
         "ListJobMembers",
+        "ListJobParameterDefinitions",
         "ListJobs",
         "ListLicenseEndpoints",
         "ListMeteredProducts",
@@ -17158,6 +17160,21 @@
       "conditionKeys": []
     },
     {
+      "name": "AWS Marketplace Reporting",
+      "servicePrefix": "aws-marketplace",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacereporting.html",
+      "actionsCount": 1,
+      "actions": [
+        "GetBuyerDashboard"
+      ],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "Dashboard"
+      ],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
       "name": "AWS Marketplace Seller Reporting",
       "servicePrefix": "aws-marketplace",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacesellerreporting.html",
@@ -19804,9 +19821,13 @@
       "name": "Amazon Q in Connect",
       "servicePrefix": "wisdom",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqinconnect.html",
-      "actionsCount": 61,
+      "actionsCount": 80,
       "actions": [
         "ActivateMessageTemplate",
+        "CreateAIAgent",
+        "CreateAIAgentVersion",
+        "CreateAIPrompt",
+        "CreateAIPromptVersion",
         "CreateAssistant",
         "CreateAssistantAssociation",
         "CreateContent",
@@ -19818,6 +19839,10 @@
         "CreateQuickResponse",
         "CreateSession",
         "DeactivateMessageTemplate",
+        "DeleteAIAgent",
+        "DeleteAIAgentVersion",
+        "DeleteAIPrompt",
+        "DeleteAIPromptVersion",
         "DeleteAssistant",
         "DeleteAssistantAssociation",
         "DeleteContent",
@@ -19827,6 +19852,8 @@
         "DeleteMessageTemplate",
         "DeleteMessageTemplateAttachment",
         "DeleteQuickResponse",
+        "GetAIAgent",
+        "GetAIPrompt",
         "GetAssistant",
         "GetAssistantAssociation",
         "GetContent",
@@ -19838,6 +19865,10 @@
         "GetQuickResponse",
         "GetRecommendations",
         "GetSession",
+        "ListAIAgentVersions",
+        "ListAIAgents",
+        "ListAIPromptVersions",
+        "ListAIPrompts",
         "ListAssistantAssociations",
         "ListAssistants",
         "ListContentAssociations",
@@ -19851,6 +19882,7 @@
         "NotifyRecommendationsReceived",
         "PutFeedback",
         "QueryAssistant",
+        "RemoveAssistantAIAgent",
         "RemoveKnowledgeBaseTemplateUri",
         "RenderMessageTemplate",
         "SearchContent",
@@ -19861,15 +19893,21 @@
         "StartImportJob",
         "TagResource",
         "UntagResource",
+        "UpdateAIAgent",
+        "UpdateAIPrompt",
+        "UpdateAssistantAIAgent",
         "UpdateContent",
         "UpdateKnowledgeBaseTemplateUri",
         "UpdateMessageTemplate",
         "UpdateMessageTemplateMetadata",
         "UpdateQuickResponse",
-        "UpdateSession"
+        "UpdateSession",
+        "UpdateSessionData"
       ],
-      "resourceTypesCount": 8,
+      "resourceTypesCount": 10,
       "resourceTypes": [
+        "AIAgent",
+        "AIPrompt",
         "Assistant",
         "AssistantAssociation",
         "Content",
