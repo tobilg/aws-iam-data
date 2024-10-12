@@ -1,5 +1,33 @@
 [
   {
+    "dateOfChange": "2024-10-12",
+    "addedServices": [
+      "AWS End User Messaging Social"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Q Business": [
+        "qbusiness:DisableAclOnDataSource"
+      ],
+      "AWS End User Messaging Social": [
+        "social-messaging:AssociateWhatsAppBusinessAccount",
+        "social-messaging:DeleteWhatsAppMessageMedia",
+        "social-messaging:DisassociateWhatsAppBusinessAccount",
+        "social-messaging:GetLinkedWhatsAppBusinessAccount",
+        "social-messaging:GetLinkedWhatsAppBusinessAccountPhoneNumber",
+        "social-messaging:GetWhatsAppMessageMedia",
+        "social-messaging:ListLinkedWhatsAppBusinessAccounts",
+        "social-messaging:ListTagsForResource",
+        "social-messaging:PostWhatsAppMessageMedia",
+        "social-messaging:PutWhatsAppBusinessAccountEventDestinations",
+        "social-messaging:SendWhatsAppMessage",
+        "social-messaging:TagResource",
+        "social-messaging:UntagResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-10-11",
     "addedServices": [
       "AWS Marketplace Reporting"

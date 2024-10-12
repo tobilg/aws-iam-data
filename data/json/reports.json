@@ -1,20 +1,20 @@
 {
   "Actions by type": [
     {
+      "key": "Write Actions",
+      "value": 9606
+    },
+    {
       "key": "Read Actions",
-      "value": 4660
+      "value": 4663
     },
     {
       "key": "List Actions",
-      "value": 2816
+      "value": 2817
     },
     {
       "key": "Permissions Actions",
       "value": 299
-    },
-    {
-      "key": "Write Actions",
-      "value": 9596
     }
   ],
   "Longest action names": [
@@ -161,16 +161,16 @@
       "value": 82
     },
     {
+      "key": "application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId}",
+      "value": 81
+    },
+    {
       "key": "bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}",
       "value": 81
     },
     {
       "key": "repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName}",
       "value": 81
-    },
-    {
-      "key": "application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId}",
-      "value": 80
     },
     {
       "key": "stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/",
@@ -398,7 +398,7 @@
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 422
+      "value": 423
     },
     {
       "key": "Average number of actions per service",
@@ -406,11 +406,11 @@
     },
     {
       "key": "Median number of actions per service",
-      "value": 28
+      "value": 27
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1772
+      "value": 1774
     },
     {
       "key": "Total number of distinct condition keys",

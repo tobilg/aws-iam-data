@@ -1,5 +1,5 @@
 {
-  "serviceCount": 422,
+  "serviceCount": 423,
   "services": [
     {
       "name": "AWS Account Management",
@@ -10724,6 +10724,38 @@
       ]
     },
     {
+      "name": "AWS End User Messaging Social",
+      "servicePrefix": "social-messaging",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsendusermessagingsocial.html",
+      "actionsCount": 13,
+      "actions": [
+        "AssociateWhatsAppBusinessAccount",
+        "DeleteWhatsAppMessageMedia",
+        "DisassociateWhatsAppBusinessAccount",
+        "GetLinkedWhatsAppBusinessAccount",
+        "GetLinkedWhatsAppBusinessAccountPhoneNumber",
+        "GetWhatsAppMessageMedia",
+        "ListLinkedWhatsAppBusinessAccounts",
+        "ListTagsForResource",
+        "PostWhatsAppMessageMedia",
+        "PutWhatsAppBusinessAccountEventDestinations",
+        "SendWhatsAppMessage",
+        "TagResource",
+        "UntagResource"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "phone-number-id",
+        "waba"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
       "name": "AWS Entity Resolution",
       "servicePrefix": "entityresolution",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsentityresolution.html",
@@ -19672,7 +19704,7 @@
       "name": "Amazon Q Business",
       "servicePrefix": "qbusiness",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusiness.html",
-      "actionsCount": 65,
+      "actionsCount": 66,
       "actions": [
         "AddUserLicenses",
         "BatchDeleteDocument",
@@ -19699,6 +19731,7 @@
         "DeleteRetriever",
         "DeleteUser",
         "DeleteWebExperience",
+        "DisableAclOnDataSource",
         "GetApplication",
         "GetChatControlsConfiguration",
         "GetDataSource",
