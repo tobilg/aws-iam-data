@@ -3,7 +3,12 @@ This repository provides AWS IAM data gathered from the official [AWS IAM docs](
 
 The package also includes the [TypeScript interface definitions](src/awsIamData.d.ts).
 
-## Usage
+## Interactively query the dataset
+You can query the dataset with [sql-workbench.com](https://www.sql-workbench.com/) by clicking on the link below:
+
+[AWS IAM Data on SQL Workbench](https://sql-workbench.com/#queries=v0,ATTACH-'https%3A%2F%2Fraw.githubusercontent.com%2Ftobilg%2Faws%20iam%20data%2Fmain%2Fdata%2Fdb%2Fiam.duckdb'-as-aws_iam-(READ_ONLY)~,SELECT-s.name%2C-count(distinct-a.action_id)%3A%3Aint-AS-action_cnt-FROM-aws_iam.services-s-INNER-JOIN-aws_iam.actions-a-ON-a.service_id-%3D-s.service_id-GROUP-BY-ALL-ORDER-BY-action_cnt-DESC~)
+
+## Library usage
 You can install [aws-iam-data](https://www.npmjs.com/package/aws-iam-data) as a dependecy to your Node/TypeScript project via 
 
 ```bash
