@@ -43,11 +43,11 @@ The CI pipeline will check for AWS IAM docs updates everyday at 4AM UTC, and aut
 
 
 ## Data exports
-The JSON-based data gets automatically exported as CSV and Parquet files as well. Please look in the respective directories:
+The JSON-based data gets automatically exported as CSV and Parquet files, as well as a DuckDB database. Please look in the respective directories:
 
 * [data/csv/](data/csv/)
 * [data/parquet/](data/parquet/)
-
+* [data/db/](data/db/)
 ## Entity Relationship Diagram
 The ERD of the exported data tables looks like this:
 ![ERD](docs/erd.png)
