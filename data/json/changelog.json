@@ -1,5 +1,24 @@
 [
   {
+    "dateOfChange": "2024-10-16",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Elemental MediaConnect": [
+        "mediaconnect:DescribeFlowSourceThumbnail"
+      ]
+    },
+    "removedActions": {
+      "AWS Lambda": [
+        "lambda:DeleteResourcePolicy",
+        "lambda:GetPublicAccessBlockConfig",
+        "lambda:GetResourcePolicy",
+        "lambda:PutPublicAccessBlockConfig",
+        "lambda:PutResourcePolicy"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-10-12",
     "addedServices": [
       "AWS End User Messaging Social"
