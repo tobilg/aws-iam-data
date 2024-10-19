@@ -1,5 +1,24 @@
 [
   {
+    "dateOfChange": "2024-10-19",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Q": [
+        "q:GenerateCodeFromCommands"
+      ],
+      "Amazon Redshift": [
+        "redshift:AuthorizeInboundIntegration",
+        "redshift:CreateInboundIntegration",
+        "redshift:CreateIntegration",
+        "redshift:DeleteIntegration",
+        "redshift:DescribeIntegrations",
+        "redshift:ModifyIntegration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-10-17",
     "addedServices": [],
     "removedServices": [],

@@ -19671,10 +19671,11 @@
       "name": "Amazon Q",
       "servicePrefix": "q",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonq.html",
-      "actionsCount": 12,
+      "actionsCount": 13,
       "actions": [
         "CreateAssignment",
         "DeleteAssignment",
+        "GenerateCodeFromCommands",
         "GetConversation",
         "GetIdentityMetadata",
         "GetTroubleshootingResults",
@@ -20600,7 +20601,7 @@
       "name": "Amazon Redshift",
       "servicePrefix": "redshift",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshift.html",
-      "actionsCount": 155,
+      "actionsCount": 161,
       "actions": [
         "AcceptReservedNodeExchange",
         "AddPartner",
@@ -20608,6 +20609,7 @@
         "AuthorizeClusterSecurityGroupIngress",
         "AuthorizeDataShare",
         "AuthorizeEndpointAccess",
+        "AuthorizeInboundIntegration",
         "AuthorizeSnapshotAccess",
         "BatchDeleteClusterSnapshots",
         "BatchModifyClusterSnapshots",
@@ -20627,6 +20629,8 @@
         "CreateEventSubscription",
         "CreateHsmClientCertificate",
         "CreateHsmConfiguration",
+        "CreateInboundIntegration",
+        "CreateIntegration",
         "CreateQev2IdcApplication",
         "CreateRedshiftIdcApplication",
         "CreateSavedQuery",
@@ -20647,6 +20651,7 @@
         "DeleteEventSubscription",
         "DeleteHsmClientCertificate",
         "DeleteHsmConfiguration",
+        "DeleteIntegration",
         "DeletePartner",
         "DeleteQev2IdcApplication",
         "DeleteRedshiftIdcApplication",
@@ -20681,6 +20686,7 @@
         "DescribeHsmClientCertificates",
         "DescribeHsmConfigurations",
         "DescribeInboundIntegrations",
+        "DescribeIntegrations",
         "DescribeLoggingStatus",
         "DescribeNodeConfigurationOptions",
         "DescribeOrderableClusterOptions",
@@ -20733,6 +20739,7 @@
         "ModifyCustomDomainAssociation",
         "ModifyEndpointAccess",
         "ModifyEventSubscription",
+        "ModifyIntegration",
         "ModifyQev2IdcApplication",
         "ModifyRedshiftIdcApplication",
         "ModifySavedQuery",
@@ -20758,7 +20765,7 @@
         "ViewQueriesFromConsole",
         "ViewQueriesInConsole"
       ],
-      "resourceTypesCount": 20,
+      "resourceTypesCount": 21,
       "resourceTypes": [
         "cluster",
         "datashare",
@@ -20768,6 +20775,7 @@
         "eventsubscription",
         "hsmclientcertificate",
         "hsmconfiguration",
+        "integration",
         "namespace",
         "parametergroup",
         "securitygroup",
@@ -20781,7 +20789,7 @@
         "redshiftidcapplication",
         "qev2idcapplication"
       ],
-      "conditionKeysCount": 10,
+      "conditionKeysCount": 12,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -20792,7 +20800,9 @@
         "redshift:DbName",
         "redshift:DbUser",
         "redshift:DurationSeconds",
-        "redshift:InboundIntegrationArn"
+        "redshift:InboundIntegrationArn",
+        "redshift:IntegrationSourceArn",
+        "redshift:IntegrationTargetArn"
       ]
     },
     {
