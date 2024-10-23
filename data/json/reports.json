@@ -2,19 +2,19 @@
   "Actions by type": [
     {
       "key": "Read Actions",
-      "value": 4663
+      "value": 4667
     },
     {
       "key": "List Actions",
-      "value": 2818
+      "value": 2820
     },
     {
       "key": "Permissions Actions",
-      "value": 296
+      "value": 297
     },
     {
       "key": "Write Actions",
-      "value": 9612
+      "value": 9617
     }
   ],
   "Longest action names": [
@@ -157,12 +157,12 @@
       "value": 88
     },
     {
-      "key": "userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId}",
+      "key": "application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId}",
       "value": 82
     },
     {
-      "key": "application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId}",
-      "value": 81
+      "key": "userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId}",
+      "value": 82
     },
     {
       "key": "bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1775
+      "value": 1776
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 950
+      "value": 952
     }
   ]
 }

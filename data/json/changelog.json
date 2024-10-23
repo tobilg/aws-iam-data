@@ -1,5 +1,31 @@
 [
   {
+    "dateOfChange": "2024-10-23",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Data Exchange": [
+        "dataexchange:AcceptDataGrant",
+        "dataexchange:CreateDataGrant",
+        "dataexchange:DeleteDataGrant",
+        "dataexchange:GetDataGrant",
+        "dataexchange:GetReceivedDataGrant",
+        "dataexchange:ListDataGrants",
+        "dataexchange:ListReceivedDataGrants",
+        "dataexchange:PublishToDataGrant"
+      ],
+      "Amazon Q Business": [
+        "qbusiness:AllowVendedLogDeliveryForResource"
+      ],
+      "Amazon WorkSpaces Secure Browser": [
+        "workspaces-web:ExpireSession",
+        "workspaces-web:GetSession",
+        "workspaces-web:ListSessions"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-10-19",
     "addedServices": [],
     "removedServices": [],
