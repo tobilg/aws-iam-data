@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2024-10-30",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudWatch Logs": [
+        "logs:ListEntitiesForLogGroup",
+        "logs:ListLogGroupsForEntity"
+      ],
+      "Amazon Elastic Container Service": [
+        "ecs:DescribeServiceDeployments",
+        "ecs:DescribeServiceRevisions",
+        "ecs:ListServiceDeployments"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-10-26",
     "addedServices": [],
     "removedServices": [],
