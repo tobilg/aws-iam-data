@@ -1,5 +1,37 @@
 [
   {
+    "dateOfChange": "2024-11-01",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:CreateInferenceProfile",
+        "bedrock:DeleteInferenceProfile"
+      ],
+      "Amazon OpenSearch Service": [
+        "es:CreateApplication",
+        "es:DeleteApplication",
+        "es:GetApplication",
+        "es:ListApplications",
+        "es:UpdateApplication"
+      ],
+      "AWS Payment Cryptography": [
+        "payment-cryptography:GenerateMacEmvPinChange"
+      ],
+      "Amazon WorkMail": [
+        "workmail:CreateIdentityCenterApplication",
+        "workmail:DeleteIdentityCenterApplication",
+        "workmail:DeleteIdentityProviderConfiguration",
+        "workmail:DeletePersonalAccessToken",
+        "workmail:DescribeIdentityProviderConfiguration",
+        "workmail:GetPersonalAccessTokenMetadata",
+        "workmail:ListPersonalAccessTokens",
+        "workmail:PutIdentityProviderConfiguration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-10-30",
     "addedServices": [],
     "removedServices": [],
