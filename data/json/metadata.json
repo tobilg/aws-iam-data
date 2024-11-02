@@ -22281,11 +22281,12 @@
       "name": "Amazon SageMaker",
       "servicePrefix": "sagemaker",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemaker.html",
-      "actionsCount": 366,
+      "actionsCount": 367,
       "actions": [
         "AddAssociation",
         "AddTags",
         "AssociateTrialComponent",
+        "BatchDeleteClusterNodes",
         "BatchDescribeModelPackage",
         "BatchGetMetrics",
         "BatchGetRecord",
