@@ -1,5 +1,92 @@
 [
   {
+    "dateOfChange": "2024-11-07",
+    "addedServices": [
+      "Amazon Location Service Maps",
+      "Amazon Location Service Places",
+      "Amazon Location Service Routes"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS AppSync": [
+        "appsync:CreateApi",
+        "appsync:CreateChannelNamespace",
+        "appsync:DeleteApi",
+        "appsync:DeleteChannelNamespace",
+        "appsync:EventConnect",
+        "appsync:EventPublish",
+        "appsync:EventSubscribe",
+        "appsync:GetApi",
+        "appsync:GetChannelNamespace",
+        "appsync:ListApis",
+        "appsync:ListChannelNamespaces",
+        "appsync:UpdateApi",
+        "appsync:UpdateChannelNamespace"
+      ],
+      "Amazon CloudWatch": [
+        "cloudwatch:ListEntitiesForMetric"
+      ],
+      "Amazon CloudWatch Application Signals": [
+        "application-signals:ListObservedEntities"
+      ],
+      "Amazon DocumentDB Elastic Clusters": [
+        "docdb-elastic:ApplyPendingMaintenanceAction",
+        "docdb-elastic:GetPendingMaintenanceAction",
+        "docdb-elastic:ListPendingMaintenanceActions"
+      ],
+      "Amazon EC2": [
+        "ec2:AcceptCapacityReservationBillingOwnership",
+        "ec2:AssociateCapacityReservationBillingOwner",
+        "ec2:AssociateSecurityGroupVpc",
+        "ec2:DescribeCapacityReservationBillingRequests",
+        "ec2:DescribeInstanceImageMetadata",
+        "ec2:DescribeSecurityGroupVpcAssociations",
+        "ec2:DisassociateCapacityReservationBillingOwner",
+        "ec2:DisassociateSecurityGroupVpc",
+        "ec2:ModifyInstanceCpuOptions",
+        "ec2:RejectCapacityReservationBillingOwnership"
+      ],
+      "Amazon Managed Service for Prometheus": [
+        "aps:UpdateScraper"
+      ],
+      "Amazon Q Business Q Apps": [
+        "qapps:BatchCreateCategory",
+        "qapps:BatchDeleteCategory",
+        "qapps:BatchUpdateCategory",
+        "qapps:ListCategories"
+      ],
+      "AWS Tax Settings": [
+        "tax:DeleteSupplementalTaxRegistration",
+        "tax:ListSupplementalTaxRegistrations",
+        "tax:PutSupplementalTaxRegistration"
+      ],
+      "Amazon WorkSpaces Thin Client": [
+        "thinclient:GetDeviceDetails"
+      ],
+      "Amazon Location Service Maps": [
+        "geo-maps:GetStaticMap",
+        "geo-maps:GetTile"
+      ],
+      "Amazon Location Service Places": [
+        "geo-places:Autocomplete",
+        "geo-places:Geocode",
+        "geo-places:GetPlace",
+        "geo-places:ReverseGeocode",
+        "geo-places:SearchNearby",
+        "geo-places:SearchText",
+        "geo-places:Suggest"
+      ],
+      "Amazon Location Service Routes": [
+        "geo-routes:CalculateIsolines",
+        "geo-routes:CalculateRouteMatrix",
+        "geo-routes:CalculateRoutes",
+        "geo-routes:OptimizeWaypoints",
+        "geo-routes:SnapToRoads"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-11-02",
     "addedServices": [],
     "removedServices": [],
