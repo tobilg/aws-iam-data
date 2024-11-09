@@ -1,5 +1,5 @@
 {
-  "serviceCount": 426,
+  "serviceCount": 427,
   "services": [
     {
       "name": "AWS Account Management",
@@ -2076,7 +2076,7 @@
       "name": "Amazon Bedrock",
       "servicePrefix": "bedrock",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html",
-      "actionsCount": 133,
+      "actionsCount": 135,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "ApplyGuardrail",
@@ -2191,6 +2191,7 @@
         "PutModelInvocationLoggingConfiguration",
         "PutResourcePolicy",
         "PutUseCaseForModelAccess",
+        "RenderPrompt",
         "Retrieve",
         "RetrieveAndGenerate",
         "StartIngestionJob",
@@ -2210,7 +2211,8 @@
         "UpdateGuardrail",
         "UpdateKnowledgeBase",
         "UpdatePrompt",
-        "UpdateProvisionedModelThroughput"
+        "UpdateProvisionedModelThroughput",
+        "ValidateFlowDefinition"
       ],
       "resourceTypesCount": 20,
       "resourceTypes": [
@@ -5617,10 +5619,11 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 268,
+      "actionsCount": 273,
       "actions": [
         "ActivateEvaluationForm",
         "AdminGetEmergencyAccessToken",
+        "AssociateAnalyticsDataSet",
         "AssociateApprovedOrigin",
         "AssociateBot",
         "AssociateCustomerProfilesDomain",
@@ -5720,6 +5723,7 @@
         "DescribeUserHierarchyStructure",
         "DescribeView",
         "DescribeVocabulary",
+        "DisassociateAnalyticsDataSet",
         "DisassociateApprovedOrigin",
         "DisassociateBot",
         "DisassociateCustomerProfilesDomain",
@@ -5748,6 +5752,7 @@
         "GetTrafficDistribution",
         "ImportPhoneNumber",
         "ListAgentStatuses",
+        "ListAnalyticsDataAssociations",
         "ListApprovedOrigins",
         "ListAuthenticationProfiles",
         "ListBots",
@@ -5825,7 +5830,9 @@
         "StartContactRecording",
         "StartContactStreaming",
         "StartForecastingPlanningSchedulingIntegration",
+        "StartOutboundChatContact",
         "StartOutboundVoiceContact",
+        "StartScreenSharing",
         "StartTaskContact",
         "StartWebRTCContact",
         "StopContact",
@@ -5927,7 +5934,7 @@
         "customer-managed-view-version",
         "attached-file"
       ],
-      "conditionKeysCount": 10,
+      "conditionKeysCount": 11,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -5938,6 +5945,7 @@
         "connect:SearchContactsByContactAnalysis",
         "connect:SearchTag/${TagKey}",
         "connect:StorageResourceType",
+        "connect:Subtype",
         "connect:UserArn"
       ]
     },
@@ -9541,7 +9549,7 @@
       "name": "Amazon Elastic File System",
       "servicePrefix": "elasticfilesystem",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticfilesystem.html",
-      "actionsCount": 36,
+      "actionsCount": 38,
       "actions": [
         "Backup",
         "ClientMount",
@@ -9574,6 +9582,8 @@
         "PutBackupPolicy",
         "PutFileSystemPolicy",
         "PutLifecycleConfiguration",
+        "ReplicationRead",
+        "ReplicationWrite",
         "Restore",
         "TagResource",
         "UntagResource",
@@ -10465,10 +10475,12 @@
       "name": "AWS Elemental MediaPackage V2",
       "servicePrefix": "mediapackagev2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackagev2.html",
-      "actionsCount": 27,
+      "actionsCount": 32,
       "actions": [
+        "CancelHarvestJob",
         "CreateChannel",
         "CreateChannelGroup",
+        "CreateHarvestJob",
         "CreateOriginEndpoint",
         "DeleteChannel",
         "DeleteChannelGroup",
@@ -10478,12 +10490,15 @@
         "GetChannel",
         "GetChannelGroup",
         "GetChannelPolicy",
+        "GetHarvestJob",
         "GetHeadObject",
         "GetObject",
         "GetOriginEndpoint",
         "GetOriginEndpointPolicy",
+        "HarvestObject",
         "ListChannelGroups",
         "ListChannels",
+        "ListHarvestJobs",
         "ListOriginEndpoints",
         "ListTagsForResource",
         "PutChannelPolicy",
@@ -10495,11 +10510,14 @@
         "UpdateChannelGroup",
         "UpdateOriginEndpoint"
       ],
-      "resourceTypesCount": 3,
+      "resourceTypesCount": 6,
       "resourceTypes": [
         "ChannelGroup",
+        "ChannelPolicy",
         "Channel",
-        "OriginEndpoint"
+        "OriginEndpointPolicy",
+        "OriginEndpoint",
+        "HarvestJob"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -18259,6 +18277,21 @@
       ]
     },
     {
+      "name": "Amazon OpenSearch",
+      "servicePrefix": "opensearch",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearch.html",
+      "actionsCount": 1,
+      "actions": [
+        "ApplicationAccessAll"
+      ],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "application"
+      ],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
       "name": "Amazon OpenSearch Ingestion",
       "servicePrefix": "osis",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchingestion.html",
@@ -22928,7 +22961,7 @@
       "name": "Amazon SageMaker with MLflow",
       "servicePrefix": "sagemaker-mlflow",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakerwithmlflow.html",
-      "actionsCount": 45,
+      "actionsCount": 52,
       "actions": [
         "AccessUI",
         "CreateExperiment",
@@ -22943,6 +22976,9 @@
         "DeleteRegisteredModelTag",
         "DeleteRun",
         "DeleteTag",
+        "DeleteTraceTag",
+        "DeleteTraces",
+        "EndTrace",
         "GetDownloadURIForModelVersionArtifacts",
         "GetExperiment",
         "GetExperimentByName",
@@ -22952,6 +22988,7 @@
         "GetModelVersionByAlias",
         "GetRegisteredModel",
         "GetRun",
+        "GetTraceInfo",
         "ListArtifacts",
         "LogBatch",
         "LogInputs",
@@ -22965,11 +23002,14 @@
         "SearchModelVersions",
         "SearchRegisteredModels",
         "SearchRuns",
+        "SearchTraces",
         "SetExperimentTag",
         "SetModelVersionTag",
         "SetRegisteredModelAlias",
         "SetRegisteredModelTag",
         "SetTag",
+        "SetTraceTag",
+        "StartTrace",
         "TransitionModelVersionStage",
         "UpdateExperiment",
         "UpdateModelVersion",
@@ -22980,8 +23020,11 @@
       "resourceTypes": [
         "mlflow-tracking-server"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 2,
+      "conditionKeys": [
+        "aws:ResourceTag/${TagKey}",
+        "sagemaker:ResourceTag/${TagKey}"
+      ]
     },
     {
       "name": "AWS Savings Plans",

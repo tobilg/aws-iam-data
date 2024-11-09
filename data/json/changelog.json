@@ -1,5 +1,49 @@
 [
   {
+    "dateOfChange": "2024-11-09",
+    "addedServices": [
+      "Amazon OpenSearch"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:RenderPrompt",
+        "bedrock:ValidateFlowDefinition"
+      ],
+      "Amazon Connect": [
+        "connect:AssociateAnalyticsDataSet",
+        "connect:DisassociateAnalyticsDataSet",
+        "connect:ListAnalyticsDataAssociations",
+        "connect:StartOutboundChatContact",
+        "connect:StartScreenSharing"
+      ],
+      "Amazon Elastic File System": [
+        "elasticfilesystem:ReplicationRead",
+        "elasticfilesystem:ReplicationWrite"
+      ],
+      "AWS Elemental MediaPackage V2": [
+        "mediapackagev2:CancelHarvestJob",
+        "mediapackagev2:CreateHarvestJob",
+        "mediapackagev2:GetHarvestJob",
+        "mediapackagev2:HarvestObject",
+        "mediapackagev2:ListHarvestJobs"
+      ],
+      "Amazon SageMaker with MLflow": [
+        "sagemaker-mlflow:DeleteTraceTag",
+        "sagemaker-mlflow:DeleteTraces",
+        "sagemaker-mlflow:EndTrace",
+        "sagemaker-mlflow:GetTraceInfo",
+        "sagemaker-mlflow:SearchTraces",
+        "sagemaker-mlflow:SetTraceTag",
+        "sagemaker-mlflow:StartTrace"
+      ],
+      "Amazon OpenSearch": [
+        "opensearch:ApplicationAccessAll"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-11-07",
     "addedServices": [
       "Amazon Location Service Maps",
