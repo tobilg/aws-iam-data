@@ -6863,13 +6863,15 @@
       "name": "Amazon DataZone",
       "servicePrefix": "datazone",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondatazone.html",
-      "actionsCount": 165,
+      "actionsCount": 168,
       "actions": [
         "AcceptPredictions",
         "AcceptSubscriptionRequest",
         "AddEntityOwner",
         "AddPolicyGrant",
         "AssociateEnvironmentRole",
+        "BatchDeleteLinkedTypes",
+        "BatchPutLinkedTypes",
         "CancelMetadataGenerationRun",
         "CancelSubscription",
         "CreateAsset",
@@ -6973,6 +6975,7 @@
         "ListEnvironments",
         "ListGroupsForUser",
         "ListLineageNodeHistory",
+        "ListLinkedTypes",
         "ListMetadataGenerationRuns",
         "ListNotifications",
         "ListPolicyGrants",
@@ -19850,7 +19853,7 @@
       "name": "Amazon Q Business",
       "servicePrefix": "qbusiness",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusiness.html",
-      "actionsCount": 67,
+      "actionsCount": 68,
       "actions": [
         "AddUserLicenses",
         "AllowVendedLogDeliveryForResource",
@@ -19890,6 +19893,7 @@
         "GetUser",
         "GetWebExperience",
         "ListApplications",
+        "ListAttachments",
         "ListConversations",
         "ListDataSourceSyncJobs",
         "ListDataSources",
@@ -19931,11 +19935,13 @@
         "user-license",
         "subscription"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "identitystore:GroupId",
+        "identitystore:UserId"
       ]
     },
     {
@@ -21321,11 +21327,12 @@
       "name": "AWS Resource Explorer",
       "servicePrefix": "resource-explorer-2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourceexplorer.html",
-      "actionsCount": 24,
+      "actionsCount": 27,
       "actions": [
         "AssociateDefaultView",
         "BatchGetView",
         "CreateIndex",
+        "CreateManagedView",
         "CreateView",
         "DeleteIndex",
         "DeleteResourcePolicy",
@@ -21334,10 +21341,12 @@
         "GetAccountLevelServiceConfiguration",
         "GetDefaultView",
         "GetIndex",
+        "GetManagedView",
         "GetResourcePolicy",
         "GetView",
         "ListIndexes",
         "ListIndexesForMembers",
+        "ListManagedViews",
         "ListSupportedResourceTypes",
         "ListTagsForResource",
         "ListViews",
@@ -21348,16 +21357,18 @@
         "UpdateIndexType",
         "UpdateView"
       ],
-      "resourceTypesCount": 2,
+      "resourceTypesCount": 3,
       "resourceTypes": [
         "view",
-        "index"
+        "index",
+        "managed-view"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 4,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "resource-explorer-2:Operation"
       ]
     },
     {

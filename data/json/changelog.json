@@ -1,5 +1,26 @@
 [
   {
+    "dateOfChange": "2024-11-12",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon DataZone": [
+        "datazone:BatchDeleteLinkedTypes",
+        "datazone:BatchPutLinkedTypes",
+        "datazone:ListLinkedTypes"
+      ],
+      "Amazon Q Business": [
+        "qbusiness:ListAttachments"
+      ],
+      "AWS Resource Explorer": [
+        "resource-explorer-2:CreateManagedView",
+        "resource-explorer-2:GetManagedView",
+        "resource-explorer-2:ListManagedViews"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-11-09",
     "addedServices": [
       "Amazon OpenSearch"
