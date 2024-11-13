@@ -1,5 +1,36 @@
 [
   {
+    "dateOfChange": "2024-11-13",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon OpenSearch Service": [
+        "es:AssociatePackages",
+        "es:DissociatePackages",
+        "es:UpdatePackageScope"
+      ],
+      "AWS Outposts": [
+        "outposts:ListAssetInstances",
+        "outposts:ListBlockingInstancesForCapacityTask"
+      ],
+      "AWS Payments": [
+        "payments:AcceptFinancingApplicationTerms",
+        "payments:CreateFinancingApplication",
+        "payments:GetFinancingApplication",
+        "payments:GetFinancingLine",
+        "payments:GetFinancingLineWithdrawal",
+        "payments:GetFinancingOption",
+        "payments:ListFinancingApplications",
+        "payments:ListFinancingLineWithdrawals",
+        "payments:ListFinancingLines",
+        "payments:ListPaymentProgramOptions",
+        "payments:ListPaymentProgramStatus",
+        "payments:UpdateFinancingApplication"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-11-12",
     "addedServices": [],
     "removedServices": [],
