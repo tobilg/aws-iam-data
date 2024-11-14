@@ -1,5 +1,68 @@
 [
   {
+    "dateOfChange": "2024-11-14",
+    "addedServices": [
+      "Amazon Application Recovery Controller - Zonal Shift"
+    ],
+    "removedServices": [
+      "Amazon Route 53 Application Recovery Controller - Zonal Shift"
+    ],
+    "addedActions": {
+      "AWS B2B Data Interchange": [
+        "b2bi:GenerateMapping"
+      ],
+      "AWS CloudTrail": [
+        "cloudtrail:GenerateQueryResultsSummary"
+      ],
+      "AWS Control Tower": [
+        "controltower:ResetEnabledControl"
+      ],
+      "Amazon GameLift": [
+        "gamelift:CreateContainerFleet",
+        "gamelift:DeleteContainerFleet",
+        "gamelift:DescribeContainerFleet",
+        "gamelift:DescribeFleetDeployment",
+        "gamelift:ListContainerFleets",
+        "gamelift:ListContainerGroupDefinitionVersions",
+        "gamelift:ListFleetDeployments",
+        "gamelift:UpdateContainerFleet",
+        "gamelift:UpdateContainerGroupDefinition"
+      ],
+      "Amazon Application Recovery Controller - Zonal Shift": [
+        "arc-zonal-shift:CancelZonalShift",
+        "arc-zonal-shift:CreatePracticeRunConfiguration",
+        "arc-zonal-shift:DeletePracticeRunConfiguration",
+        "arc-zonal-shift:GetAutoshiftObserverNotificationStatus",
+        "arc-zonal-shift:GetManagedResource",
+        "arc-zonal-shift:ListAutoshifts",
+        "arc-zonal-shift:ListManagedResources",
+        "arc-zonal-shift:ListZonalShifts",
+        "arc-zonal-shift:StartZonalShift",
+        "arc-zonal-shift:UpdateAutoshiftObserverNotificationStatus",
+        "arc-zonal-shift:UpdatePracticeRunConfiguration",
+        "arc-zonal-shift:UpdateZonalAutoshiftConfiguration",
+        "arc-zonal-shift:UpdateZonalShift"
+      ]
+    },
+    "removedActions": {
+      "Amazon Route 53 Application Recovery Controller - Zonal Shift": [
+        "arc-zonal-shift:CancelZonalShift",
+        "arc-zonal-shift:CreatePracticeRunConfiguration",
+        "arc-zonal-shift:DeletePracticeRunConfiguration",
+        "arc-zonal-shift:GetAutoshiftObserverNotificationStatus",
+        "arc-zonal-shift:GetManagedResource",
+        "arc-zonal-shift:ListAutoshifts",
+        "arc-zonal-shift:ListManagedResources",
+        "arc-zonal-shift:ListZonalShifts",
+        "arc-zonal-shift:StartZonalShift",
+        "arc-zonal-shift:UpdateAutoshiftObserverNotificationStatus",
+        "arc-zonal-shift:UpdatePracticeRunConfiguration",
+        "arc-zonal-shift:UpdateZonalAutoshiftConfiguration",
+        "arc-zonal-shift:UpdateZonalShift"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-11-13",
     "addedServices": [],
     "removedServices": [],

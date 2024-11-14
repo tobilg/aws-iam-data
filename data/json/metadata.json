@@ -1289,6 +1289,38 @@
       ]
     },
     {
+      "name": "Amazon Application Recovery Controller - Zonal Shift",
+      "servicePrefix": "arc-zonal-shift",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonapplicationrecoverycontroller-zonalshift.html",
+      "actionsCount": 13,
+      "actions": [
+        "CancelZonalShift",
+        "CreatePracticeRunConfiguration",
+        "DeletePracticeRunConfiguration",
+        "GetAutoshiftObserverNotificationStatus",
+        "GetManagedResource",
+        "ListAutoshifts",
+        "ListManagedResources",
+        "ListZonalShifts",
+        "StartZonalShift",
+        "UpdateAutoshiftObserverNotificationStatus",
+        "UpdatePracticeRunConfiguration",
+        "UpdateZonalAutoshiftConfiguration",
+        "UpdateZonalShift"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "ALB",
+        "NLB"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "arc-zonal-shift:ResourceIdentifier",
+        "aws:ResourceTag/${TagKey}",
+        "elasticloadbalancing:ResourceTag/${TagKey}"
+      ]
+    },
+    {
       "name": "AWS Application Transformation Service",
       "servicePrefix": "application-transformation",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationtransformationservice.html",
@@ -1764,7 +1796,7 @@
       "name": "AWS B2B Data Interchange",
       "servicePrefix": "b2bi",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsb2bdatainterchange.html",
-      "actionsCount": 29,
+      "actionsCount": 30,
       "actions": [
         "CreateCapability",
         "CreatePartnership",
@@ -1775,6 +1807,7 @@
         "DeletePartnership",
         "DeleteProfile",
         "DeleteTransformer",
+        "GenerateMapping",
         "GetCapability",
         "GetPartnership",
         "GetProfile",
@@ -3658,7 +3691,7 @@
       "name": "AWS CloudTrail",
       "servicePrefix": "cloudtrail",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudtrail.html",
-      "actionsCount": 55,
+      "actionsCount": 56,
       "actions": [
         "AddTags",
         "CancelQuery",
@@ -3677,6 +3710,7 @@
         "DisableFederation",
         "EnableFederation",
         "GenerateQuery",
+        "GenerateQueryResultsSummary",
         "GetChannel",
         "GetEventDataStore",
         "GetEventDataStoreData",
@@ -6218,7 +6252,7 @@
       "name": "AWS Control Tower",
       "servicePrefix": "controltower",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscontroltower.html",
-      "actionsCount": 64,
+      "actionsCount": 65,
       "actions": [
         "CreateLandingZone",
         "CreateManagedAccount",
@@ -6276,6 +6310,7 @@
         "ManageOrganizationalUnit",
         "PerformPreLaunchChecks",
         "ResetEnabledBaseline",
+        "ResetEnabledControl",
         "ResetLandingZone",
         "SetupLandingZone",
         "TagResource",
@@ -11655,12 +11690,13 @@
       "name": "Amazon GameLift",
       "servicePrefix": "gamelift",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongamelift.html",
-      "actionsCount": 108,
+      "actionsCount": 117,
       "actions": [
         "AcceptMatch",
         "ClaimGameServer",
         "CreateAlias",
         "CreateBuild",
+        "CreateContainerFleet",
         "CreateContainerGroupDefinition",
         "CreateFleet",
         "CreateFleetLocations",
@@ -11677,6 +11713,7 @@
         "CreateVpcPeeringConnection",
         "DeleteAlias",
         "DeleteBuild",
+        "DeleteContainerFleet",
         "DeleteContainerGroupDefinition",
         "DeleteFleet",
         "DeleteFleetLocations",
@@ -11694,10 +11731,12 @@
         "DescribeAlias",
         "DescribeBuild",
         "DescribeCompute",
+        "DescribeContainerFleet",
         "DescribeContainerGroupDefinition",
         "DescribeEC2InstanceLimits",
         "DescribeFleetAttributes",
         "DescribeFleetCapacity",
+        "DescribeFleetDeployment",
         "DescribeFleetEvents",
         "DescribeFleetLocationAttributes",
         "DescribeFleetLocationCapacity",
@@ -11728,7 +11767,10 @@
         "ListAliases",
         "ListBuilds",
         "ListCompute",
+        "ListContainerFleets",
+        "ListContainerGroupDefinitionVersions",
         "ListContainerGroupDefinitions",
+        "ListFleetDeployments",
         "ListFleets",
         "ListGameServerGroups",
         "ListGameServers",
@@ -11754,6 +11796,8 @@
         "UntagResource",
         "UpdateAlias",
         "UpdateBuild",
+        "UpdateContainerFleet",
+        "UpdateContainerGroupDefinition",
         "UpdateFleetAttributes",
         "UpdateFleetCapacity",
         "UpdateFleetPortSettings",
@@ -11766,11 +11810,12 @@
         "UpdateScript",
         "ValidateMatchmakingRuleSet"
       ],
-      "resourceTypesCount": 10,
+      "resourceTypesCount": 11,
       "resourceTypes": [
         "alias",
         "build",
         "containerGroupDefinition",
+        "containerFleet",
         "fleet",
         "gameServerGroup",
         "gameSessionQueue",
@@ -21650,37 +21695,6 @@
         "route53:ChangeResourceRecordSetsActions",
         "route53:ChangeResourceRecordSetsNormalizedRecordNames",
         "route53:ChangeResourceRecordSetsRecordTypes"
-      ]
-    },
-    {
-      "name": "Amazon Route 53 Application Recovery Controller - Zonal Shift",
-      "servicePrefix": "arc-zonal-shift",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53applicationrecoverycontroller-zonalshift.html",
-      "actionsCount": 13,
-      "actions": [
-        "CancelZonalShift",
-        "CreatePracticeRunConfiguration",
-        "DeletePracticeRunConfiguration",
-        "GetAutoshiftObserverNotificationStatus",
-        "GetManagedResource",
-        "ListAutoshifts",
-        "ListManagedResources",
-        "ListZonalShifts",
-        "StartZonalShift",
-        "UpdateAutoshiftObserverNotificationStatus",
-        "UpdatePracticeRunConfiguration",
-        "UpdateZonalAutoshiftConfiguration",
-        "UpdateZonalShift"
-      ],
-      "resourceTypesCount": 2,
-      "resourceTypes": [
-        "ALB",
-        "NLB"
-      ],
-      "conditionKeysCount": 2,
-      "conditionKeys": [
-        "aws:ResourceTag/${TagKey}",
-        "elasticloadbalancing:ResourceTag/${TagKey}"
       ]
     },
     {
