@@ -1,5 +1,120 @@
 [
   {
+    "dateOfChange": "2024-11-16",
+    "addedServices": [
+      "AWS Partner Central Selling"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Clean Rooms ML": [
+        "cleanrooms-ml:CancelTrainedModel",
+        "cleanrooms-ml:CancelTrainedModelInferenceJob",
+        "cleanrooms-ml:CreateConfiguredModelAlgorithm",
+        "cleanrooms-ml:CreateConfiguredModelAlgorithmAssociation",
+        "cleanrooms-ml:CreateMLInputChannel",
+        "cleanrooms-ml:CreateTrainedModel",
+        "cleanrooms-ml:DeleteConfiguredModelAlgorithm",
+        "cleanrooms-ml:DeleteConfiguredModelAlgorithmAssociation",
+        "cleanrooms-ml:DeleteMLConfiguration",
+        "cleanrooms-ml:DeleteMLInputChannelData",
+        "cleanrooms-ml:DeleteTrainedModelOutput",
+        "cleanrooms-ml:GetCollaborationConfiguredModelAlgorithmAssociation",
+        "cleanrooms-ml:GetCollaborationMLInputChannel",
+        "cleanrooms-ml:GetCollaborationTrainedModel",
+        "cleanrooms-ml:GetConfiguredModelAlgorithm",
+        "cleanrooms-ml:GetConfiguredModelAlgorithmAssociation",
+        "cleanrooms-ml:GetMLConfiguration",
+        "cleanrooms-ml:GetMLInputChannel",
+        "cleanrooms-ml:GetTrainedModel",
+        "cleanrooms-ml:GetTrainedModelInferenceJob",
+        "cleanrooms-ml:ListCollaborationConfiguredModelAlgorithmAssociations",
+        "cleanrooms-ml:ListCollaborationMLInputChannels",
+        "cleanrooms-ml:ListCollaborationTrainedModelExportJobs",
+        "cleanrooms-ml:ListCollaborationTrainedModelInferenceJobs",
+        "cleanrooms-ml:ListCollaborationTrainedModels",
+        "cleanrooms-ml:ListConfiguredModelAlgorithmAssociations",
+        "cleanrooms-ml:ListConfiguredModelAlgorithms",
+        "cleanrooms-ml:ListMLInputChannels",
+        "cleanrooms-ml:ListTrainedModelInferenceJobs",
+        "cleanrooms-ml:ListTrainedModels",
+        "cleanrooms-ml:PutMLConfiguration",
+        "cleanrooms-ml:StartTrainedModelExportJob",
+        "cleanrooms-ml:StartTrainedModelInferenceJob"
+      ],
+      "AWS DeepRacer": [
+        "deepracer:AdminDescribeAccountKey",
+        "deepracer:AdminUpdateAccountKey"
+      ],
+      "AWS IAM Access Analyzer": [
+        "access-analyzer:UpdateAnalyzer"
+      ],
+      "AWS Identity and Access Management (IAM)": [
+        "iam:DisableOrganizationsRootCredentialsManagement",
+        "iam:DisableOrganizationsRootSessions",
+        "iam:EnableOrganizationsRootCredentialsManagement",
+        "iam:EnableOrganizationsRootSessions",
+        "iam:ListOrganizationsFeatures"
+      ],
+      "AWS IoT": [
+        "iot:UpdateThingType"
+      ],
+      "AWS License Manager User Subscriptions": [
+        "license-manager-user-subscriptions:CreateLicenseServerEndpoint",
+        "license-manager-user-subscriptions:DeleteLicenseServerEndpoint",
+        "license-manager-user-subscriptions:ListLicenseServerEndpoints",
+        "license-manager-user-subscriptions:ListTagsForResource",
+        "license-manager-user-subscriptions:TagResource",
+        "license-manager-user-subscriptions:UntagResource"
+      ],
+      "Amazon Q": [
+        "q:CreatePlugin",
+        "q:DeletePlugin",
+        "q:GetPlugin",
+        "q:ListPluginProviders",
+        "q:ListPlugins",
+        "q:ListTagsForResource",
+        "q:TagResource",
+        "q:UntagResource",
+        "q:UsePlugin"
+      ],
+      "Amazon Q in Connect": [
+        "wisdom:CreateAIGuardrail",
+        "wisdom:CreateAIGuardrailVersion",
+        "wisdom:DeleteAIGuardrail",
+        "wisdom:DeleteAIGuardrailVersion",
+        "wisdom:GetAIGuardrail",
+        "wisdom:GetNextMessage",
+        "wisdom:ListAIGuardrailVersions",
+        "wisdom:ListAIGuardrails",
+        "wisdom:ListMessages",
+        "wisdom:SendMessage",
+        "wisdom:UpdateAIGuardrail"
+      ],
+      "AWS Security Token Service": [
+        "sts:AssumeRoot"
+      ],
+      "AWS Partner Central Selling": [
+        "partnercentral:AcceptEngagementInvitation",
+        "partnercentral:AssignOpportunity",
+        "partnercentral:AssociateOpportunity",
+        "partnercentral:CreateOpportunity",
+        "partnercentral:DisassociateOpportunity",
+        "partnercentral:GetAwsOpportunitySummary",
+        "partnercentral:GetEngagementInvitation",
+        "partnercentral:GetOpportunity",
+        "partnercentral:ListEngagementInvitations",
+        "partnercentral:ListOpportunities",
+        "partnercentral:ListSolutions",
+        "partnercentral:RejectEngagementInvitation",
+        "partnercentral:StartEngagementByAcceptingInvitationTask",
+        "partnercentral:StartEngagementFromOpportunityTask",
+        "partnercentral:SubmitOpportunity",
+        "partnercentral:UpdateOpportunity"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-11-14",
     "addedServices": [
       "Amazon Application Recovery Controller - Zonal Shift"
