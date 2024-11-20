@@ -1,20 +1,20 @@
 {
   "Actions by type": [
     {
+      "key": "Write Actions",
+      "value": 9779
+    },
+    {
       "key": "Read Actions",
-      "value": 4728
+      "value": 4738
     },
     {
       "key": "List Actions",
-      "value": 2872
+      "value": 2877
     },
     {
       "key": "Permissions Actions",
       "value": 299
-    },
-    {
-      "key": "Write Actions",
-      "value": 9749
     }
   ],
   "Longest action names": [
@@ -173,16 +173,16 @@
       "value": 81
     },
     {
+      "key": "rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog",
+      "value": 67
+    },
+    {
       "key": "stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/",
       "value": 66
     },
     {
       "key": "index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId}",
       "value": 64
-    },
-    {
-      "key": "domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}",
-      "value": 63
     }
   ],
   "Services with least actions": [
@@ -241,16 +241,16 @@
       "value": 309
     },
     {
+      "key": "AWS Glue",
+      "value": 283
+    },
+    {
       "key": "AWS IoT",
       "value": 275
     },
     {
       "key": "Amazon Connect",
       "value": 273
-    },
-    {
-      "key": "AWS Glue",
-      "value": 258
     },
     {
       "key": "Amazon QuickSight",
@@ -262,7 +262,7 @@
     },
     {
       "key": "Amazon DataZone",
-      "value": 168
+      "value": 174
     },
     {
       "key": "Amazon RDS",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1807
+      "value": 1808
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 962
+      "value": 958
     }
   ]
 }

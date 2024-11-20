@@ -1,5 +1,66 @@
 [
   {
+    "dateOfChange": "2024-11-20",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon DataZone": [
+        "datazone:CreateRule",
+        "datazone:DeleteRule",
+        "datazone:GetRule",
+        "datazone:ListRules",
+        "datazone:SearchRules",
+        "datazone:UpdateRule"
+      ],
+      "AWS Glue": [
+        "glue:AuthorizeInboundIntegration",
+        "glue:CreateCatalog",
+        "glue:CreateColumnStatisticsTaskSettings",
+        "glue:CreateInboundIntegration",
+        "glue:CreateIntegration",
+        "glue:CreateIntegrationResourceProperty",
+        "glue:CreateIntegrationTableProperties",
+        "glue:DeleteCatalog",
+        "glue:DeleteColumnStatisticsTaskSettings",
+        "glue:DeleteIntegration",
+        "glue:DeleteIntegrationTableProperties",
+        "glue:DescribeInboundIntegrations",
+        "glue:DescribeIntegrations",
+        "glue:GetCatalog",
+        "glue:GetCatalogs",
+        "glue:GetColumnStatisticsTaskSettings",
+        "glue:GetIntegrationResourceProperty",
+        "glue:GetIntegrationTableProperties",
+        "glue:ModifyIntegration",
+        "glue:StartColumnStatisticsTaskRunSchedule",
+        "glue:StopColumnStatisticsTaskRunSchedule",
+        "glue:UpdateCatalog",
+        "glue:UpdateColumnStatisticsTaskSettings",
+        "glue:UpdateIntegrationResourceProperty",
+        "glue:UpdateIntegrationTableProperties"
+      ],
+      "AWS HealthOmics": [
+        "omics:CreateRunCache",
+        "omics:DeleteRunCache",
+        "omics:DeleteS3AccessPolicy",
+        "omics:GetRunCache",
+        "omics:GetS3AccessPolicy",
+        "omics:ListRunCaches",
+        "omics:PutS3AccessPolicy",
+        "omics:UpdateRunCache",
+        "omics:UpdateSequenceStore"
+      ],
+      "AWS SQL Workbench": [
+        "sqlworkbench:DeleteSqlGenerationContext",
+        "sqlworkbench:GetSqlGenerationContext",
+        "sqlworkbench:GetSqlRecommendations",
+        "sqlworkbench:PassAccountSettings",
+        "sqlworkbench:PutSqlGenerationContext"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-11-19",
     "addedServices": [
       "Amazon Connect Outbound Campaigns",
