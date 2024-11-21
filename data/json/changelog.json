@@ -1,5 +1,42 @@
 [
   {
+    "dateOfChange": "2024-11-21",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon DataZone": [
+        "datazone:CreateConnection",
+        "datazone:DeleteConnection",
+        "datazone:GetConnection",
+        "datazone:GetDomainExecutionRoleCredentials",
+        "datazone:GetJobRun",
+        "datazone:GetLineageEvent",
+        "datazone:ListConnections",
+        "datazone:ListJobRuns",
+        "datazone:ListLineageEvents",
+        "datazone:UpdateConnection"
+      ],
+      "AWS Glue": [
+        "glue:GetDashboardUrl",
+        "glue:GetEntityRecords",
+        "glue:GetGeneratedCode"
+      ],
+      "AWS Marketplace": [
+        "aws-marketplace:ListAgreementCharges",
+        "aws-marketplace:UpdatePurchaseOrders"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:CreatePartnerApp",
+        "sagemaker:CreatePartnerAppPresignedUrl",
+        "sagemaker:DeletePartnerApp",
+        "sagemaker:DescribePartnerApp",
+        "sagemaker:ListPartnerApps",
+        "sagemaker:UpdatePartnerApp"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-11-20",
     "addedServices": [],
     "removedServices": [],
