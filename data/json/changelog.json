@@ -1,5 +1,54 @@
 [
   {
+    "dateOfChange": "2024-11-22",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:InvokeInlineAgent"
+      ],
+      "Amazon CloudFront": [
+        "cloudfront:AllowVendedLogDeliveryForResource",
+        "cloudfront:CreateAnycastIpList",
+        "cloudfront:CreateVpcOrigin",
+        "cloudfront:DeleteAnycastIpList",
+        "cloudfront:DeleteVpcOrigin",
+        "cloudfront:GetAnycastIpList",
+        "cloudfront:GetVpcOrigin",
+        "cloudfront:ListAnycastIpLists",
+        "cloudfront:ListDistributionsByAnycastIpListId",
+        "cloudfront:ListDistributionsByVpcOriginId",
+        "cloudfront:ListVpcOrigins",
+        "cloudfront:UpdateVpcOrigin"
+      ],
+      "AWS Compute Optimizer": [
+        "compute-optimizer:ExportIdleRecommendations",
+        "compute-optimizer:GetIdleRecommendations"
+      ],
+      "Amazon Connect": [
+        "connect:CreateContactFlowVersion",
+        "connect:ListContactFlowVersions"
+      ],
+      "AWS Elastic Load Balancing V2": [
+        "elasticloadbalancing:DescribeCapacityReservation",
+        "elasticloadbalancing:ModifyCapacityReservation"
+      ],
+      "AWS X-Ray": [
+        "xray:CancelTraceRetrieval",
+        "xray:GetIndexingRules",
+        "xray:GetRetrievedTracesGraph",
+        "xray:GetTraceSegmentDestination",
+        "xray:ListRetrievedTraces",
+        "xray:PutSpans",
+        "xray:PutSpansForIndexing",
+        "xray:StartTraceRetrieval",
+        "xray:UpdateIndexingRule",
+        "xray:UpdateTraceSegmentDestination"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-11-21",
     "addedServices": [],
     "removedServices": [],
