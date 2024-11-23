@@ -1,5 +1,106 @@
 [
   {
+    "dateOfChange": "2024-11-23",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Application Auto Scaling": [
+        "application-autoscaling:GetPredictiveScalingForecast"
+      ],
+      "AWS Artifact": [
+        "artifact:AcceptNdaForAgreement",
+        "artifact:GetAgreement",
+        "artifact:GetCustomerAgreement",
+        "artifact:GetNdaForAgreement",
+        "artifact:ListAgreements",
+        "artifact:ListCustomerAgreements"
+      ],
+      "AWS Chatbot": [
+        "chatbot:AssociateToConfiguration",
+        "chatbot:CreateCustomAction",
+        "chatbot:DeleteCustomAction",
+        "chatbot:DisassociateFromConfiguration",
+        "chatbot:GetCustomAction",
+        "chatbot:ListAssociations",
+        "chatbot:ListCustomActions",
+        "chatbot:UpdateCustomAction"
+      ],
+      "AWS Clean Rooms": [
+        "cleanrooms:PassCollaboration",
+        "cleanrooms:PassMembership"
+      ],
+      "AWS CloudTrail": [
+        "cloudtrail:CreateDashboard",
+        "cloudtrail:DeleteDashboard",
+        "cloudtrail:GetDashboard",
+        "cloudtrail:ListDashboards",
+        "cloudtrail:StartDashboardRefresh",
+        "cloudtrail:UpdateDashboard"
+      ],
+      "Amazon CloudWatch Logs": [
+        "logs:DeleteIndexPolicy",
+        "logs:DeleteTransformer",
+        "logs:DescribeFieldIndexes",
+        "logs:DescribeIndexPolicies",
+        "logs:GetTransformer",
+        "logs:ListLogGroupsForQuery",
+        "logs:PutIndexPolicy",
+        "logs:PutTransformer",
+        "logs:TestTransformer"
+      ],
+      "AWS Cost Explorer Service": [
+        "ce:GetCommitmentPurchaseAnalysis",
+        "ce:ListCommitmentPurchaseAnalyses",
+        "ce:StartCommitmentPurchaseAnalysis"
+      ],
+      "AWS IoT": [
+        "iot:CreateCommand",
+        "iot:DeleteCommand",
+        "iot:DeleteCommandExecution",
+        "iot:GetCommand",
+        "iot:GetCommandExecution",
+        "iot:ListCommandExecutions",
+        "iot:ListCommands",
+        "iot:StartCommandExecution",
+        "iot:UpdateCommand"
+      ],
+      "AWS IoT FleetWise": [
+        "iotfleetwise:CreateStateTemplate",
+        "iotfleetwise:DeleteStateTemplate",
+        "iotfleetwise:GenerateCommandPayload",
+        "iotfleetwise:GetStateTemplate",
+        "iotfleetwise:ListStateTemplates",
+        "iotfleetwise:UpdateStateTemplate"
+      ],
+      "Amazon Q Business Q Apps": [
+        "qapps:CreatePresignedUrl",
+        "qapps:DescribeQAppPermissions",
+        "qapps:UpdateQAppPermissions"
+      ],
+      "AWS Resilience Hub": [
+        "resiliencehub:DescribeMetricsExport",
+        "resiliencehub:ListMetrics",
+        "resiliencehub:StartMetricsExport"
+      ],
+      "Amazon S3 Express": [
+        "s3express:GetLifecycleConfiguration",
+        "s3express:PutLifecycleConfiguration"
+      ],
+      "AWS Systems Manager": [
+        "ssm:ExecuteAPI",
+        "ssm:GetExecutionPreview",
+        "ssm:ListNodes",
+        "ssm:ListNodesSummary",
+        "ssm:StartExecutionPreview"
+      ],
+      "AWS Systems Manager Quick Setup": [
+        "ssm-quicksetup:GetConfiguration",
+        "ssm-quicksetup:ListConfigurations"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-11-22",
     "addedServices": [],
     "removedServices": [],

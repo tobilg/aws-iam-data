@@ -1,20 +1,20 @@
 {
   "Actions by type": [
     {
+      "key": "Write Actions",
+      "value": 9828
+    },
+    {
       "key": "Read Actions",
-      "value": 4755
+      "value": 4775
     },
     {
       "key": "List Actions",
-      "value": 2889
+      "value": 2904
     },
     {
       "key": "Permissions Actions",
-      "value": 300
-    },
-    {
-      "key": "Write Actions",
-      "value": 9799
+      "value": 301
     }
   ],
   "Longest action names": [
@@ -61,8 +61,20 @@
   ],
   "Longest condition key names": [
     {
+      "key": "iot:CommandExecutionParameterBoolean/${CommandParameterName}",
+      "value": 60
+    },
+    {
       "key": "payment-cryptography:CertificateAuthorityPublicKeyIdentifier",
       "value": 60
+    },
+    {
+      "key": "iot:CommandExecutionParameterNumber/${CommandParameterName}",
+      "value": 59
+    },
+    {
+      "key": "iot:CommandExecutionParameterString/${CommandParameterName}",
+      "value": 59
     },
     {
       "key": "route53:ChangeResourceRecordSetsNormalizedRecordNames",
@@ -87,18 +99,6 @@
     {
       "key": "amplifyuibuilder:CodegenJobResourceEnvironmentName",
       "value": 50
-    },
-    {
-      "key": "route53-recovery-cluster:AllowSafetyRulesOverrides",
-      "value": 50
-    },
-    {
-      "key": "s3:x-amz-server-side-encryption-customer-algorithm",
-      "value": 50
-    },
-    {
-      "key": "amplifyuibuilder:ComponentResourceEnvironmentName",
-      "value": 49
     }
   ],
   "Longest service prefixes": [
@@ -153,12 +153,12 @@
       "value": 114
     },
     {
-      "key": "directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId}",
-      "value": 88
+      "key": "application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId}",
+      "value": 89
     },
     {
-      "key": "application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId}",
-      "value": 87
+      "key": "directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId}",
+      "value": 88
     },
     {
       "key": "userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId}",
@@ -246,7 +246,7 @@
     },
     {
       "key": "AWS IoT",
-      "value": 275
+      "value": 284
     },
     {
       "key": "Amazon Connect",
@@ -402,7 +402,7 @@
     },
     {
       "key": "Average number of actions per service",
-      "value": 41
+      "value": 42
     },
     {
       "key": "Median number of actions per service",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1811
+      "value": 1814
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 962
+      "value": 965
     }
   ]
 }
