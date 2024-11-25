@@ -1,20 +1,20 @@
 {
   "Actions by type": [
     {
-      "key": "Write Actions",
-      "value": 9828
-    },
-    {
       "key": "Read Actions",
-      "value": 4775
+      "value": 4785
     },
     {
       "key": "List Actions",
-      "value": 2904
+      "value": 2919
     },
     {
       "key": "Permissions Actions",
-      "value": 301
+      "value": 298
+    },
+    {
+      "key": "Write Actions",
+      "value": 9863
     }
   ],
   "Longest action names": [
@@ -47,16 +47,16 @@
       "value": 68
     },
     {
+      "key": "bcm-pricing-calculator:ListBillEstimateInputCommitmentModifications",
+      "value": 67
+    },
+    {
       "key": "cleanrooms-ml:ListCollaborationConfiguredModelAlgorithmAssociations",
       "value": 67
     },
     {
       "key": "ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations",
       "value": 67
-    },
-    {
-      "key": "license-manager-linux-subscriptions:DeregisterSubscriptionProvider",
-      "value": 66
     }
   ],
   "Longest condition key names": [
@@ -77,6 +77,10 @@
       "value": 59
     },
     {
+      "key": "bcm-pricing-calculator:workload-estimateWorkloadEstimateId",
+      "value": 58
+    },
+    {
       "key": "route53:ChangeResourceRecordSetsNormalizedRecordNames",
       "value": 53
     },
@@ -95,10 +99,6 @@
     {
       "key": "sagemaker:CustomerMetadataProperties/${MetadataKey}",
       "value": 51
-    },
-    {
-      "key": "amplifyuibuilder:CodegenJobResourceEnvironmentName",
-      "value": 50
     }
   ],
   "Longest service prefixes": [
@@ -173,16 +173,16 @@
       "value": 81
     },
     {
+      "key": "domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}",
+      "value": 68
+    },
+    {
       "key": "rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog",
       "value": 67
     },
     {
       "key": "stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/",
       "value": 66
-    },
-    {
-      "key": "index - arn:${Partition}:kendra:${Region}:${Account}:index/${IndexId}",
-      "value": 64
     }
   ],
   "Services with least actions": [
@@ -254,7 +254,7 @@
     },
     {
       "key": "Amazon QuickSight",
-      "value": 207
+      "value": 222
     },
     {
       "key": "Amazon DataZone",
@@ -398,7 +398,7 @@
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 428
+      "value": 429
     },
     {
       "key": "Average number of actions per service",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1814
+      "value": 1820
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 965
+      "value": 973
     }
   ]
 }

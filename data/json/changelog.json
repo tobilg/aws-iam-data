@@ -1,5 +1,80 @@
 [
   {
+    "dateOfChange": "2024-11-25",
+    "addedServices": [
+      "AWS Billing And Cost Management Pricing Calculator"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect Customer Profiles": [
+        "profile:CreateEventTrigger",
+        "profile:DeleteEventTrigger",
+        "profile:GetEventTrigger",
+        "profile:ListEventTriggers",
+        "profile:UpdateEventTrigger"
+      ],
+      "Amazon Q": [
+        "q:ListDashboardMetrics"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:CreateBrand",
+        "quicksight:DeleteBrand",
+        "quicksight:DeleteBrandAssignment",
+        "quicksight:DeleteUserCustomPermission",
+        "quicksight:DescribeBrand",
+        "quicksight:DescribeBrandAssignment",
+        "quicksight:DescribeBrandPublishedVersion",
+        "quicksight:DescribeDashboardsQAConfiguration",
+        "quicksight:ListBrands",
+        "quicksight:SearchTopics",
+        "quicksight:UpdateBrand",
+        "quicksight:UpdateBrandAssignment",
+        "quicksight:UpdateBrandPublishedVersion",
+        "quicksight:UpdateDashboardsQAConfiguration",
+        "quicksight:UpdateUserCustomPermission"
+      ],
+      "AWS Billing And Cost Management Pricing Calculator": [
+        "bcm-pricing-calculator:CreateBillEstimate",
+        "bcm-pricing-calculator:CreateBillScenario",
+        "bcm-pricing-calculator:CreateBillScenarioCommitmentModification",
+        "bcm-pricing-calculator:CreateBillScenarioUsageModification",
+        "bcm-pricing-calculator:CreateWorkloadEstimate",
+        "bcm-pricing-calculator:CreateWorkloadEstimateUsage",
+        "bcm-pricing-calculator:DeleteBillEstimate",
+        "bcm-pricing-calculator:DeleteBillScenario",
+        "bcm-pricing-calculator:DeleteBillScenarioCommitmentModification",
+        "bcm-pricing-calculator:DeleteBillScenarioUsageModification",
+        "bcm-pricing-calculator:DeleteWorkloadEstimate",
+        "bcm-pricing-calculator:DeleteWorkloadEstimateUsage",
+        "bcm-pricing-calculator:GetBillEstimate",
+        "bcm-pricing-calculator:GetBillScenario",
+        "bcm-pricing-calculator:GetPreferences",
+        "bcm-pricing-calculator:GetWorkloadEstimate",
+        "bcm-pricing-calculator:ListBillEstimateCommitments",
+        "bcm-pricing-calculator:ListBillEstimateInputCommitmentModifications",
+        "bcm-pricing-calculator:ListBillEstimateInputUsageModifications",
+        "bcm-pricing-calculator:ListBillEstimateLineItems",
+        "bcm-pricing-calculator:ListBillEstimates",
+        "bcm-pricing-calculator:ListBillScenarioCommitmentModifications",
+        "bcm-pricing-calculator:ListBillScenarioUsageModifications",
+        "bcm-pricing-calculator:ListBillScenarios",
+        "bcm-pricing-calculator:ListTagsForResource",
+        "bcm-pricing-calculator:ListWorkloadEstimateUsage",
+        "bcm-pricing-calculator:ListWorkloadEstimates",
+        "bcm-pricing-calculator:TagResource",
+        "bcm-pricing-calculator:UntagResource",
+        "bcm-pricing-calculator:UpdateBillEstimate",
+        "bcm-pricing-calculator:UpdateBillScenario",
+        "bcm-pricing-calculator:UpdateBillScenarioCommitmentModification",
+        "bcm-pricing-calculator:UpdateBillScenarioUsageModification",
+        "bcm-pricing-calculator:UpdatePreferences",
+        "bcm-pricing-calculator:UpdateWorkloadEstimate",
+        "bcm-pricing-calculator:UpdateWorkloadEstimateUsage"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-11-23",
     "addedServices": [],
     "removedServices": [],
