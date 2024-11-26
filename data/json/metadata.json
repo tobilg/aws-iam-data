@@ -18463,7 +18463,7 @@
       "name": "AWS Network Manager",
       "servicePrefix": "networkmanager",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsnetworkmanager.html",
-      "actionsCount": 85,
+      "actionsCount": 88,
       "actions": [
         "AcceptAttachment",
         "AssociateConnectPeer",
@@ -18475,6 +18475,7 @@
         "CreateConnection",
         "CreateCoreNetwork",
         "CreateDevice",
+        "CreateDirectConnectGatewayAttachment",
         "CreateGlobalNetwork",
         "CreateLink",
         "CreateSite",
@@ -18510,6 +18511,7 @@
         "GetCoreNetworkPolicy",
         "GetCustomerGatewayAssociations",
         "GetDevices",
+        "GetDirectConnectGatewayAttachment",
         "GetLinkAssociations",
         "GetLinks",
         "GetNetworkResourceCounts",
@@ -18545,6 +18547,7 @@
         "UpdateConnection",
         "UpdateCoreNetwork",
         "UpdateDevice",
+        "UpdateDirectConnectGatewayAttachment",
         "UpdateGlobalNetwork",
         "UpdateLink",
         "UpdateNetworkResourceMetadata",
@@ -18563,12 +18566,14 @@
         "connect-peer",
         "peering"
       ],
-      "conditionKeysCount": 10,
+      "conditionKeysCount": 12,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "networkmanager:cgwArn",
+        "networkmanager:directConnectGatewayArn",
+        "networkmanager:edgeLocations",
         "networkmanager:subnetArns",
         "networkmanager:tgwArn",
         "networkmanager:tgwConnectPeerArn",
@@ -21379,27 +21384,30 @@
       "name": "Amazon Redshift Data API",
       "servicePrefix": "redshift-data",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshiftdataapi.html",
-      "actionsCount": 10,
+      "actionsCount": 11,
       "actions": [
         "BatchExecuteStatement",
         "CancelStatement",
         "DescribeStatement",
         "DescribeTable",
         "ExecuteStatement",
+        "GetStagingBucketLocation",
         "GetStatementResult",
         "ListDatabases",
         "ListSchemas",
         "ListStatements",
         "ListTables"
       ],
-      "resourceTypesCount": 2,
+      "resourceTypesCount": 3,
       "resourceTypes": [
         "cluster",
-        "workgroup"
+        "workgroup",
+        "managed-workgroup"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 4,
       "conditionKeys": [
         "aws:ResourceTag/${TagKey}",
+        "redshift-data:glue-catalog-arn",
         "redshift-data:session-owner-iam-userid",
         "redshift-data:statement-owner-iam-userid"
       ]
@@ -21408,7 +21416,7 @@
       "name": "Amazon Redshift Serverless",
       "servicePrefix": "redshift-serverless",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshiftserverless.html",
-      "actionsCount": 56,
+      "actionsCount": 57,
       "actions": [
         "ConvertRecoveryPointToSnapshot",
         "CreateCustomDomainAssociation",
@@ -21432,6 +21440,7 @@
         "GetCredentials",
         "GetCustomDomainAssociation",
         "GetEndpointAccess",
+        "GetManagedWorkgroup",
         "GetNamespace",
         "GetRecoveryPoint",
         "GetResourcePolicy",
@@ -21467,20 +21476,22 @@
         "UpdateUsageLimit",
         "UpdateWorkgroup"
       ],
-      "resourceTypesCount": 5,
+      "resourceTypesCount": 6,
       "resourceTypes": [
         "namespace",
         "snapshot",
         "workgroup",
+        "managed-workgroup",
         "recoveryPoint",
         "endpointAccess"
       ],
-      "conditionKeysCount": 9,
+      "conditionKeysCount": 10,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "redshift-serverless:endpointAccessId",
+        "redshift-serverless:managedWorkgroupName",
         "redshift-serverless:namespaceId",
         "redshift-serverless:recoveryPointId",
         "redshift-serverless:snapshotId",

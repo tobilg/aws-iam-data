@@ -1,5 +1,24 @@
 [
   {
+    "dateOfChange": "2024-11-26",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Network Manager": [
+        "networkmanager:CreateDirectConnectGatewayAttachment",
+        "networkmanager:GetDirectConnectGatewayAttachment",
+        "networkmanager:UpdateDirectConnectGatewayAttachment"
+      ],
+      "Amazon Redshift Data API": [
+        "redshift-data:GetStagingBucketLocation"
+      ],
+      "Amazon Redshift Serverless": [
+        "redshift-serverless:GetManagedWorkgroup"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-11-25",
     "addedServices": [
       "AWS Billing And Cost Management Pricing Calculator"
