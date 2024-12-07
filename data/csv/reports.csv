@@ -1,17 +1,17 @@
 report_name,metric_name,value
-Actions by type,Write Actions,9865
-Actions by type,Read Actions,4788
-Actions by type,List Actions,2919
-Actions by type,Permissions Actions,298
+Actions by type,Write Actions,10034
+Actions by type,Read Actions,4880
+Actions by type,List Actions,2957
+Actions by type,Permissions Actions,304
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
+Longest action names,networkflowmonitor:GetQueryResultsWorkloadInsightsTopContributorsData,69
 Longest action names,license-manager-linux-subscriptions:GetRegisteredSubscriptionProvider,69
 Longest action names,servicecatalog:NotifyTerminateProvisionedProductEngineWorkflowResult,68
+Longest action names,networkflowmonitor:GetQueryStatusWorkloadInsightsTopContributorsData,68
 Longest action names,aws-marketplace-management:PutAdditionalSellerNotificationRecipients,68
 Longest action names,aws-marketplace-management:GetAdditionalSellerNotificationRecipients,68
-Longest action names,ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations,67
-Longest action names,cleanrooms-ml:ListCollaborationConfiguredModelAlgorithmAssociations,67
 Longest action names,bcm-pricing-calculator:ListBillEstimateInputCommitmentModifications,67
 Longest condition key names,payment-cryptography:CertificateAuthorityPublicKeyIdentifier,60
 Longest condition key names,iot:CommandExecutionParameterBoolean/${CommandParameterName},60
@@ -26,16 +26,16 @@ Longest condition key names,bedrock:ThirdPartyKnowledgeBaseCredentialsSecretArn,
 Longest service prefixes,license-manager-linux-subscriptions,35
 Longest service prefixes,license-manager-user-subscriptions,34
 Longest service prefixes,partnercentral-account-management,33
-Longest service prefixes,route53-recovery-control-config,31
+Longest service prefixes,sagemaker-data-science-assistant,32
 Longest service prefixes,sagemaker-groundtruth-synthetic,31
+Longest service prefixes,route53-recovery-control-config,31
 Longest service prefixes,elemental-appliances-software,29
 Longest service prefixes,marketplacecommerceanalytics,28
 Longest service prefixes,application-transformation,26
 Longest service prefixes,aws-marketplace-management,26
-Longest service prefixes,codedeploy-commands-secure,26
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},122
-Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},114
-Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},89
+Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},115
+Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},107
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},88
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},82
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},81
@@ -45,8 +45,8 @@ Most referenced resource ARNs,rootcatalog - arn:${Partition}:glue:${Region}:${Ac
 Most referenced resource ARNs,stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/,66
 Services with least actions,AWS Elemental Support Content,1
 Services with least actions,AWS Microservice Extractor for .NET,1
+Services with least actions,AWS PrivateLink,1
 Services with least actions,AWS Sustainability,1
-Services with least actions,AWS Verified Access,1
 Services with least actions,AWS CloudTrail Data,1
 Services with least actions,AWS Marketplace Seller Reporting,1
 Services with least actions,AWS Marketplace Reporting,1
@@ -54,15 +54,15 @@ Services with least actions,AWS Marketplace Entitlement Service,1
 Services with least actions,AWS Marketplace Discovery,1
 Services with least actions,AWS IAM Identity Center OIDC service,1
 Services with most actions,Amazon EC2,653
-Services with most actions,Amazon SageMaker,373
-Services with most actions,Amazon Chime,309
-Services with most actions,AWS Glue,286
+Services with most actions,Amazon SageMaker,389
+Services with most actions,Amazon Chime,316
+Services with most actions,AWS Glue,291
 Services with most actions,AWS IoT,284
-Services with most actions,Amazon Connect,275
-Services with most actions,Amazon QuickSight,222
+Services with most actions,Amazon Connect,277
+Services with most actions,Amazon QuickSight,230
 Services with most actions,Amazon DataZone,184
 Services with most actions,AWS Identity and Access Management (IAM),176
-Services with most actions,Amazon RDS,168
+Services with most actions,Amazon Bedrock,175
 Shortest action names,iq:EndCall,10
 Shortest action names,ce:GetTags,10
 Shortest action names,es:AddTags,10
@@ -93,8 +93,8 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1822
-Summary,Total number of distinct condition keys,977
-Summary,Total number of services,429
+Summary,Total number of distinct resource ARNS,1855
+Summary,Total number of distinct condition keys,988
+Summary,Total number of services,437
 Summary,Average number of actions per service,42
-Summary,Median number of actions per service,28
+Summary,Median number of actions per service,27

@@ -1,20 +1,20 @@
 {
   "Actions by type": [
     {
-      "key": "Write Actions",
-      "value": 9865
-    },
-    {
       "key": "Read Actions",
-      "value": 4788
+      "value": 4880
     },
     {
       "key": "List Actions",
-      "value": 2919
+      "value": 2957
     },
     {
       "key": "Permissions Actions",
-      "value": 298
+      "value": 304
+    },
+    {
+      "key": "Write Actions",
+      "value": 10034
     }
   ],
   "Longest action names": [
@@ -31,6 +31,10 @@
       "value": 69
     },
     {
+      "key": "networkflowmonitor:GetQueryResultsWorkloadInsightsTopContributorsData",
+      "value": 69
+    },
+    {
       "key": "servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact",
       "value": 69
     },
@@ -43,19 +47,15 @@
       "value": 68
     },
     {
+      "key": "networkflowmonitor:GetQueryStatusWorkloadInsightsTopContributorsData",
+      "value": 68
+    },
+    {
       "key": "servicecatalog:NotifyTerminateProvisionedProductEngineWorkflowResult",
       "value": 68
     },
     {
       "key": "bcm-pricing-calculator:ListBillEstimateInputCommitmentModifications",
-      "value": 67
-    },
-    {
-      "key": "cleanrooms-ml:ListCollaborationConfiguredModelAlgorithmAssociations",
-      "value": 67
-    },
-    {
-      "key": "ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations",
       "value": 67
     }
   ],
@@ -115,6 +115,10 @@
       "value": 33
     },
     {
+      "key": "sagemaker-data-science-assistant",
+      "value": 32
+    },
+    {
       "key": "route53-recovery-control-config",
       "value": 31
     },
@@ -137,10 +141,6 @@
     {
       "key": "aws-marketplace-management",
       "value": 26
-    },
-    {
-      "key": "codedeploy-commands-secure",
-      "value": 26
     }
   ],
   "Most referenced resource ARNs": [
@@ -150,11 +150,11 @@
     },
     {
       "key": "instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}",
-      "value": 114
+      "value": 115
     },
     {
       "key": "application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId}",
-      "value": 89
+      "value": 107
     },
     {
       "key": "directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId}",
@@ -219,11 +219,11 @@
       "value": 1
     },
     {
-      "key": "AWS Sustainability",
+      "key": "AWS PrivateLink",
       "value": 1
     },
     {
-      "key": "AWS Verified Access",
+      "key": "AWS Sustainability",
       "value": 1
     }
   ],
@@ -234,15 +234,15 @@
     },
     {
       "key": "Amazon SageMaker",
-      "value": 373
+      "value": 389
     },
     {
       "key": "Amazon Chime",
-      "value": 309
+      "value": 316
     },
     {
       "key": "AWS Glue",
-      "value": 286
+      "value": 291
     },
     {
       "key": "AWS IoT",
@@ -250,11 +250,11 @@
     },
     {
       "key": "Amazon Connect",
-      "value": 275
+      "value": 277
     },
     {
       "key": "Amazon QuickSight",
-      "value": 222
+      "value": 230
     },
     {
       "key": "Amazon DataZone",
@@ -265,8 +265,8 @@
       "value": 176
     },
     {
-      "key": "Amazon RDS",
-      "value": 168
+      "key": "Amazon Bedrock",
+      "value": 175
     }
   ],
   "Shortest action names": [
@@ -398,7 +398,7 @@
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 429
+      "value": 437
     },
     {
       "key": "Average number of actions per service",
@@ -406,15 +406,15 @@
     },
     {
       "key": "Median number of actions per service",
-      "value": 28
+      "value": 27
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1822
+      "value": 1855
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 977
+      "value": 988
     }
   ]
 }
