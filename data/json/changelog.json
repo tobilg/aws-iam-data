@@ -1,5 +1,35 @@
 [
   {
+    "dateOfChange": "2024-12-10",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon EC2": [
+        "ec2:CancelDeclarativePoliciesReport",
+        "ec2:CreateVpcBlockPublicAccessExclusion",
+        "ec2:DeleteVpcBlockPublicAccessExclusion",
+        "ec2:DescribeCapacityBlockExtensionHistory",
+        "ec2:DescribeCapacityBlockExtensionOfferings",
+        "ec2:DescribeDeclarativePoliciesReports",
+        "ec2:DescribeVpcBlockPublicAccessExclusions",
+        "ec2:DescribeVpcBlockPublicAccessOptions",
+        "ec2:DescribeVpcEndpointAssociations",
+        "ec2:DisableAllowedImagesSettings",
+        "ec2:EnableAllowedImagesSettings",
+        "ec2:ExportVerifiedAccessInstanceClientConfiguration",
+        "ec2:GetAllowedImagesSettings",
+        "ec2:GetDeclarativePoliciesReportSummary",
+        "ec2:GetVerifiedAccessEndpointTargets",
+        "ec2:ModifyVpcBlockPublicAccessExclusion",
+        "ec2:ModifyVpcBlockPublicAccessOptions",
+        "ec2:PurchaseCapacityBlockExtension",
+        "ec2:ReplaceImageCriteriaInAllowedImagesSettings",
+        "ec2:StartDeclarativePoliciesReport"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-12-07",
     "addedServices": [
       "Amazon AI Operations",
