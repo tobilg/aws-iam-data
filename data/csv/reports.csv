@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10043
-Actions by type,Read Actions,4884
-Actions by type,List Actions,2964
+Actions by type,Write Actions,10054
+Actions by type,Read Actions,4890
+Actions by type,List Actions,2976
 Actions by type,Permissions Actions,304
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -37,7 +37,7 @@ Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}
 Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},115
 Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},107
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},88
-Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},82
+Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},87
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},81
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},81
 Most referenced resource ARNs,domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName},68
@@ -93,7 +93,7 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1858
+Summary,Total number of distinct resource ARNS,1859
 Summary,Total number of distinct condition keys,991
 Summary,Total number of services,437
 Summary,Average number of actions per service,42
