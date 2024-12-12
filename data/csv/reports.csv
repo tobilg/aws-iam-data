@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10054
-Actions by type,Read Actions,4890
-Actions by type,List Actions,2976
+Actions by type,Write Actions,10069
+Actions by type,Read Actions,4893
+Actions by type,List Actions,2983
 Actions by type,Permissions Actions,304
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -17,12 +17,12 @@ Longest condition key names,payment-cryptography:CertificateAuthorityPublicKeyId
 Longest condition key names,iot:CommandExecutionParameterBoolean/${CommandParameterName},60
 Longest condition key names,iot:CommandExecutionParameterString/${CommandParameterName},59
 Longest condition key names,iot:CommandExecutionParameterNumber/${CommandParameterName},59
-Longest condition key names,bcm-pricing-calculator:workload-estimateWorkloadEstimateId,58
 Longest condition key names,vpc-lattice-svcs:RequestQueryString/${QueryStringKey},53
 Longest condition key names,s3express:x-amz-server-side-encryption-aws-kms-key-id,53
 Longest condition key names,route53:ChangeResourceRecordSetsNormalizedRecordNames,53
-Longest condition key names,sagemaker:CustomerMetadataProperties/${MetadataKey},51
 Longest condition key names,bedrock:ThirdPartyKnowledgeBaseCredentialsSecretArn,51
+Longest condition key names,sagemaker:CustomerMetadataProperties/${MetadataKey},51
+Longest condition key names,amplifyuibuilder:CodegenJobResourceEnvironmentName,50
 Longest service prefixes,license-manager-linux-subscriptions,35
 Longest service prefixes,license-manager-user-subscriptions,34
 Longest service prefixes,partnercentral-account-management,33
@@ -93,8 +93,8 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1859
+Summary,Total number of distinct resource ARNS,1862
 Summary,Total number of distinct condition keys,991
 Summary,Total number of services,437
 Summary,Average number of actions per service,42
-Summary,Median number of actions per service,27
+Summary,Median number of actions per service,28

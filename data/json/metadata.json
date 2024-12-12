@@ -2534,14 +2534,11 @@
         "bill-scenario",
         "workload-estimate"
       ],
-      "conditionKeysCount": 6,
+      "conditionKeysCount": 3,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys",
-        "bcm-pricing-calculator:bill-estimateBillEstimateId",
-        "bcm-pricing-calculator:bill-scenarioBillScenarioId",
-        "bcm-pricing-calculator:workload-estimateWorkloadEstimateId"
+        "aws:TagKeys"
       ]
     },
     {
@@ -18274,37 +18271,72 @@
       "name": "AWS Migration Hub",
       "servicePrefix": "mgh",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhub.html",
-      "actionsCount": 21,
+      "actionsCount": 46,
       "actions": [
+        "AcceptConnection",
+        "AssociateAutomationUnitRole",
         "AssociateCreatedArtifact",
         "AssociateDiscoveredResource",
+        "AssociateSourceResource",
+        "BatchAssociateIamRoleWithConnection",
+        "BatchDisassociateIamRoleFromConnection",
+        "CreateAutomationRun",
+        "CreateAutomationUnit",
         "CreateHomeRegionControl",
         "CreateProgressUpdateStream",
+        "DeleteAutomationRun",
+        "DeleteAutomationUnit",
+        "DeleteConnection",
         "DeleteHomeRegionControl",
         "DeleteProgressUpdateStream",
         "DescribeApplicationState",
+        "DescribeAutomationRun",
+        "DescribeAutomationUnit",
         "DescribeHomeRegionControls",
         "DescribeMigrationTask",
+        "DisassociateAutomationUnitRole",
         "DisassociateCreatedArtifact",
         "DisassociateDiscoveredResource",
+        "DisassociateSourceResource",
+        "GetConnection",
         "GetHomeRegion",
         "ImportMigrationTask",
         "ListApplicationStates",
+        "ListAutomationRuns",
+        "ListAutomationUnits",
+        "ListConnectionRoles",
+        "ListConnections",
         "ListCreatedArtifacts",
         "ListDiscoveredResources",
+        "ListMigrationTaskUpdates",
         "ListMigrationTasks",
         "ListProgressUpdateStreams",
+        "ListSourceResources",
+        "ListTagsForResource",
         "NotifyApplicationState",
         "NotifyMigrationTaskState",
-        "PutResourceAttributes"
+        "PutResourceAttributes",
+        "RejectConnection",
+        "TagResource",
+        "UntagResource"
       ],
-      "resourceTypesCount": 2,
+      "resourceTypesCount": 5,
       "resourceTypes": [
         "progressUpdateStream",
-        "migrationTask"
+        "migrationTask",
+        "AutomationRunResource",
+        "AutomationUnitResource",
+        "ConnectionResource"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 6,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "mgh:AutomationRunResourceRunID",
+        "mgh:AutomationUnitResourceAutomationUnitArn",
+        "mgh:ConnectionResourceConnectionArn"
+      ]
     },
     {
       "name": "AWS Migration Hub Orchestrator",

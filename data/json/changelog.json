@@ -1,5 +1,40 @@
 [
   {
+    "dateOfChange": "2024-12-12",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Migration Hub": [
+        "mgh:AcceptConnection",
+        "mgh:AssociateAutomationUnitRole",
+        "mgh:AssociateSourceResource",
+        "mgh:BatchAssociateIamRoleWithConnection",
+        "mgh:BatchDisassociateIamRoleFromConnection",
+        "mgh:CreateAutomationRun",
+        "mgh:CreateAutomationUnit",
+        "mgh:DeleteAutomationRun",
+        "mgh:DeleteAutomationUnit",
+        "mgh:DeleteConnection",
+        "mgh:DescribeAutomationRun",
+        "mgh:DescribeAutomationUnit",
+        "mgh:DisassociateAutomationUnitRole",
+        "mgh:DisassociateSourceResource",
+        "mgh:GetConnection",
+        "mgh:ListAutomationRuns",
+        "mgh:ListAutomationUnits",
+        "mgh:ListConnectionRoles",
+        "mgh:ListConnections",
+        "mgh:ListMigrationTaskUpdates",
+        "mgh:ListSourceResources",
+        "mgh:ListTagsForResource",
+        "mgh:RejectConnection",
+        "mgh:TagResource",
+        "mgh:UntagResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-12-11",
     "addedServices": [],
     "removedServices": [],
