@@ -1,5 +1,31 @@
 [
   {
+    "dateOfChange": "2024-12-13",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect": [
+        "connect:CreatePushNotificationRegistration",
+        "connect:DeletePushNotificationRegistration"
+      ],
+      "AWS Lake Formation": [
+        "lakeformation:CreateLFTagExpression",
+        "lakeformation:DeleteLFTagExpression",
+        "lakeformation:GetLFTagExpression",
+        "lakeformation:ListLFTagExpressions",
+        "lakeformation:UpdateLFTagExpression"
+      ],
+      "Amazon Simple Email Service v2": [
+        "ses:CreateMultiRegionEndpoint",
+        "ses:DeleteMultiRegionEndpoint",
+        "ses:GetMultiRegionEndpoint",
+        "ses:ListMultiRegionEndpoints",
+        "ses:ReplicateEmailIdentityDkimSigningKey"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2024-12-12",
     "addedServices": [],
     "removedServices": [],
