@@ -3456,7 +3456,7 @@
       "name": "AWS Cloud Map",
       "servicePrefix": "servicediscovery",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudmap.html",
-      "actionsCount": 27,
+      "actionsCount": 30,
       "actions": [
         "CreateHttpNamespace",
         "CreatePrivateDnsNamespace",
@@ -3464,6 +3464,7 @@
         "CreateService",
         "DeleteNamespace",
         "DeleteService",
+        "DeleteServiceAttributes",
         "DeregisterInstance",
         "DiscoverInstances",
         "DiscoverInstancesRevision",
@@ -3472,6 +3473,7 @@
         "GetNamespace",
         "GetOperation",
         "GetService",
+        "GetServiceAttributes",
         "ListInstances",
         "ListNamespaces",
         "ListOperations",
@@ -3484,7 +3486,8 @@
         "UpdateInstanceCustomHealthStatus",
         "UpdatePrivateDnsNamespace",
         "UpdatePublicDnsNamespace",
-        "UpdateService"
+        "UpdateService",
+        "UpdateServiceAttributes"
       ],
       "resourceTypesCount": 2,
       "resourceTypes": [
