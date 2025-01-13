@@ -1,5 +1,139 @@
 [
   {
+    "dateOfChange": "2025-01-13",
+    "addedServices": [
+      "AWS Backup Search"
+    ],
+    "removedServices": [
+      "AWS IoT 1-Click"
+    ],
+    "addedActions": {
+      "Amazon API Gateway Management": [
+        "apigateway:CreateAccessAssociation",
+        "apigateway:RejectAccessAssociation",
+        "apigateway:UpdateDomainNameManagementPolicy",
+        "apigateway:UpdateDomainNamePolicy"
+      ],
+      "AWS Backup": [
+        "backup:GetRecoveryPointIndexDetails",
+        "backup:ListIndexedRecoveryPoints",
+        "backup:ListIndexedRecoveryPointsForSearch",
+        "backup:SearchRecoveryPoint",
+        "backup:UpdateRecoveryPointIndexSettings"
+      ],
+      "AWS Billing": [
+        "billing:CreateBillingView",
+        "billing:DeleteBillingView",
+        "billing:DeleteResourcePolicy",
+        "billing:GetBillingView",
+        "billing:GetResourcePolicy",
+        "billing:ListSourceViewsForBillingView",
+        "billing:ListTagsForResource",
+        "billing:PutResourcePolicy",
+        "billing:TagResource",
+        "billing:UntagResource",
+        "billing:UpdateBillingView"
+      ],
+      "AWS CloudFormation": [
+        "cloudformation:ListHookResults"
+      ],
+      "Amazon Connect": [
+        "connect:UpdateParticipantAuthentication"
+      ],
+      "Amazon EC2 Image Builder": [
+        "imagebuilder:ImportDiskImage"
+      ],
+      "Amazon Elastic Kubernetes Service": [
+        "eks:DescribeClusterVersions"
+      ],
+      "AWS Elemental MediaLive": [
+        "medialive:ListVersions"
+      ],
+      "AWS Elemental Support Cases": [
+        "elemental-support-cases:AddCaseComment",
+        "elemental-support-cases:CompleteMultipartUpload",
+        "elemental-support-cases:CreateS3CLIUploadCommand",
+        "elemental-support-cases:CreateS3DownloadUrl",
+        "elemental-support-cases:GetCasePermission",
+        "elemental-support-cases:GetUICache",
+        "elemental-support-cases:ListTagsForCase",
+        "elemental-support-cases:StartMultipartUpload",
+        "elemental-support-cases:TagCase",
+        "elemental-support-cases:UntagCase",
+        "elemental-support-cases:UpdateCaseStatus",
+        "elemental-support-cases:UpdateMultipartUpload"
+      ],
+      "Amazon GameLift": [
+        "gamelift:TerminateGameSession"
+      ],
+      "AWS IoT": [
+        "iot:GetThingConnectivityData"
+      ],
+      "Amazon Neptune Analytics": [
+        "neptune-graph:CancelExportTask",
+        "neptune-graph:GetExportTask",
+        "neptune-graph:ListExportTasks",
+        "neptune-graph:StartExportTask"
+      ],
+      "Amazon Simple Email Service - Mail Manager": [
+        "ses:AllowVendedLogDeliveryForResource"
+      ],
+      "Amazon WorkSpaces Secure Browser": [
+        "workspaces-web:AssociateDataProtectionSettings",
+        "workspaces-web:CreateDataProtectionSettings",
+        "workspaces-web:DeleteDataProtectionSettings",
+        "workspaces-web:DisassociateDataProtectionSettings",
+        "workspaces-web:GetDataProtectionSettings",
+        "workspaces-web:ListDataProtectionSettings",
+        "workspaces-web:UpdateDataProtectionSettings"
+      ],
+      "AWS Backup Search": [
+        "backup-search:GetSearchJob",
+        "backup-search:GetSearchResultExportJob",
+        "backup-search:ListSearchJobBackups",
+        "backup-search:ListSearchJobResults",
+        "backup-search:ListSearchJobs",
+        "backup-search:ListSearchResultExportJobs",
+        "backup-search:ListTagsForResource",
+        "backup-search:StartSearchJob",
+        "backup-search:StartSearchResultExportJob",
+        "backup-search:StopSearchJob",
+        "backup-search:TagResource",
+        "backup-search:UntagResource"
+      ]
+    },
+    "removedActions": {
+      "AWS IoT 1-Click": [
+        "iot1click:AssociateDeviceWithPlacement",
+        "iot1click:ClaimDevicesByClaimCode",
+        "iot1click:CreatePlacement",
+        "iot1click:CreateProject",
+        "iot1click:DeletePlacement",
+        "iot1click:DeleteProject",
+        "iot1click:DescribeDevice",
+        "iot1click:DescribePlacement",
+        "iot1click:DescribeProject",
+        "iot1click:DisassociateDeviceFromPlacement",
+        "iot1click:FinalizeDeviceClaim",
+        "iot1click:GetDeviceMethods",
+        "iot1click:GetDevicesInPlacement",
+        "iot1click:InitiateDeviceClaim",
+        "iot1click:InvokeDeviceMethod",
+        "iot1click:ListDeviceEvents",
+        "iot1click:ListDevices",
+        "iot1click:ListPlacements",
+        "iot1click:ListProjects",
+        "iot1click:ListTagsForResource",
+        "iot1click:TagResource",
+        "iot1click:UnclaimDevice",
+        "iot1click:UntagResource",
+        "iot1click:UpdateDeviceState",
+        "iot1click:UpdatePlacement",
+        "iot1click:UpdateProject"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2024-12-14",
     "addedServices": [],
     "removedServices": [],

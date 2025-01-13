@@ -471,19 +471,23 @@
       "name": "Amazon API Gateway Management",
       "servicePrefix": "apigateway",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonapigatewaymanagement.html",
-      "actionsCount": 9,
+      "actionsCount": 13,
       "actions": [
         "AddCertificateToDomain",
+        "CreateAccessAssociation",
         "DELETE",
         "GET",
         "PATCH",
         "POST",
         "PUT",
+        "RejectAccessAssociation",
         "RemoveCertificateFromDomain",
         "SetWebACL",
+        "UpdateDomainNameManagementPolicy",
+        "UpdateDomainNamePolicy",
         "UpdateRestApiPolicy"
       ],
-      "resourceTypesCount": 42,
+      "resourceTypesCount": 47,
       "resourceTypes": [
         "Account",
         "ApiKey",
@@ -502,6 +506,8 @@
         "DocumentationVersions",
         "DomainName",
         "DomainNames",
+        "DomainNameAccessAssociation",
+        "DomainNameAccessAssociations",
         "GatewayResponse",
         "GatewayResponses",
         "Integration",
@@ -510,6 +516,9 @@
         "MethodResponse",
         "Model",
         "Models",
+        "PrivateBasePathMapping",
+        "PrivateBasePathMappings",
+        "PrivateDomainName",
         "RequestValidator",
         "RequestValidators",
         "Resource",
@@ -528,8 +537,9 @@
         "VpcLinks",
         "Tags"
       ],
-      "conditionKeysCount": 28,
+      "conditionKeysCount": 30,
       "conditionKeys": [
+        "apigateway:Request/AccessAssociationSource",
         "apigateway:Request/AccessLoggingDestination",
         "apigateway:Request/AccessLoggingFormat",
         "apigateway:Request/ApiKeyRequired",
@@ -537,6 +547,7 @@
         "apigateway:Request/AuthorizerType",
         "apigateway:Request/AuthorizerUri",
         "apigateway:Request/DisableExecuteApiEndpoint",
+        "apigateway:Request/DomainNameArn",
         "apigateway:Request/EndpointType",
         "apigateway:Request/MtlsTrustStoreUri",
         "apigateway:Request/MtlsTrustStoreVersion",
@@ -1950,7 +1961,7 @@
       "name": "AWS Backup",
       "servicePrefix": "backup",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackup.html",
-      "actionsCount": 96,
+      "actionsCount": 101,
       "actions": [
         "CancelLegalHold",
         "CopyFromBackupVault",
@@ -1998,6 +2009,7 @@
         "GetBackupVaultNotifications",
         "GetBackupVaultSharingPolicy",
         "GetLegalHold",
+        "GetRecoveryPointIndexDetails",
         "GetRecoveryPointRestoreMetadata",
         "GetRestoreJobMetadata",
         "GetRestoreTestingInferredMetadata",
@@ -2014,6 +2026,8 @@
         "ListCopyJobSummaries",
         "ListCopyJobs",
         "ListFrameworks",
+        "ListIndexedRecoveryPoints",
+        "ListIndexedRecoveryPointsForSearch",
         "ListLegalHolds",
         "ListProtectedResources",
         "ListProtectedResourcesByBackupVault",
@@ -2033,6 +2047,7 @@
         "PutBackupVaultNotifications",
         "PutBackupVaultSharingPolicy",
         "PutRestoreValidationResult",
+        "SearchRecoveryPoint",
         "StartBackupJob",
         "StartCopyJob",
         "StartReportJob",
@@ -2043,6 +2058,7 @@
         "UpdateBackupPlan",
         "UpdateFramework",
         "UpdateGlobalSettings",
+        "UpdateRecoveryPointIndexSettings",
         "UpdateRecoveryPointLifecycle",
         "UpdateRegionSettings",
         "UpdateReportPlan",
@@ -2059,7 +2075,7 @@
         "legalHold",
         "restoreTestingPlan"
       ],
-      "conditionKeysCount": 9,
+      "conditionKeysCount": 10,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -2068,6 +2084,7 @@
         "backup:CopyTargetOrgPaths",
         "backup:CopyTargets",
         "backup:FrameworkArns",
+        "backup:Index",
         "backup:MaxRetentionDays",
         "backup:MinRetentionDays"
       ]
@@ -2111,6 +2128,37 @@
         "gateway",
         "hypervisor",
         "virtualmachine"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "AWS Backup Search",
+      "servicePrefix": "backup-search",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackupsearch.html",
+      "actionsCount": 12,
+      "actions": [
+        "GetSearchJob",
+        "GetSearchResultExportJob",
+        "ListSearchJobBackups",
+        "ListSearchJobResults",
+        "ListSearchJobs",
+        "ListSearchResultExportJobs",
+        "ListTagsForResource",
+        "StartSearchJob",
+        "StartSearchResultExportJob",
+        "StopSearchJob",
+        "TagResource",
+        "UntagResource"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "searchJob",
+        "searchExportJob"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -2187,7 +2235,7 @@
         "job",
         "scheduling-policy"
       ],
-      "conditionKeysCount": 17,
+      "conditionKeysCount": 18,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -2197,6 +2245,7 @@
         "batch:AWSLogsRegion",
         "batch:AWSLogsStreamPrefix",
         "batch:EKSImage",
+        "batch:EKSNamespace",
         "batch:EKSPrivileged",
         "batch:EKSRunAsGroup",
         "batch:EKSRunAsUser",
@@ -2433,26 +2482,43 @@
       "name": "AWS Billing",
       "servicePrefix": "billing",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbilling.html",
-      "actionsCount": 13,
+      "actionsCount": 24,
       "actions": [
+        "CreateBillingView",
+        "DeleteBillingView",
+        "DeleteResourcePolicy",
         "GetBillingData",
         "GetBillingDetails",
         "GetBillingNotifications",
         "GetBillingPreferences",
+        "GetBillingView",
         "GetContractInformation",
         "GetCredits",
         "GetIAMAccessPreference",
+        "GetResourcePolicy",
         "GetSellerOfRecord",
         "ListBillingViews",
+        "ListSourceViewsForBillingView",
+        "ListTagsForResource",
         "PutContractInformation",
+        "PutResourcePolicy",
         "RedeemCredits",
+        "TagResource",
+        "UntagResource",
         "UpdateBillingPreferences",
+        "UpdateBillingView",
         "UpdateIAMAccessPreference"
       ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "billingview"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "AWS Billing And Cost Management Data Exports",
@@ -3564,7 +3630,7 @@
       "name": "AWS CloudFormation",
       "servicePrefix": "cloudformation",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudformation.html",
-      "actionsCount": 85,
+      "actionsCount": 86,
       "actions": [
         "ActivateOrganizationsAccess",
         "ActivateType",
@@ -3616,6 +3682,7 @@
         "ListChangeSets",
         "ListExports",
         "ListGeneratedTemplates",
+        "ListHookResults",
         "ListImports",
         "ListResourceScanRelatedResources",
         "ListResourceScanResources",
@@ -3662,12 +3729,13 @@
         "generatedtemplate",
         "resourcescan"
       ],
-      "conditionKeysCount": 10,
+      "conditionKeysCount": 11,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "cloudformation:ChangeSetName",
+        "cloudformation:CreateAction",
         "cloudformation:ImportResourceTypes",
         "cloudformation:ResourceTypes",
         "cloudformation:RoleArn",
@@ -5985,7 +6053,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 279,
+      "actionsCount": 280,
       "actions": [
         "ActivateEvaluationForm",
         "AdminGetEmergencyAccessToken",
@@ -6235,6 +6303,7 @@
         "UpdateHoursOfOperationOverride",
         "UpdateInstanceAttribute",
         "UpdateInstanceStorageConfig",
+        "UpdateParticipantAuthentication",
         "UpdateParticipantRoleConfig",
         "UpdatePhoneNumber",
         "UpdatePhoneNumberMetadata",
@@ -6827,11 +6896,12 @@
         "UpdatePreferences",
         "UpdateReport"
       ],
-      "resourceTypesCount": 3,
+      "resourceTypesCount": 4,
       "resourceTypes": [
         "anomalysubscription",
         "anomalymonitor",
-        "costcategory"
+        "costcategory",
+        "billingview"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -9207,7 +9277,7 @@
         "vpn-connection",
         "vpn-gateway"
       ],
-      "conditionKeysCount": 132,
+      "conditionKeysCount": 134,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -9267,6 +9337,7 @@
         "ec2:KeyPairType",
         "ec2:KmsKeyId",
         "ec2:LaunchTemplate",
+        "ec2:Location",
         "ec2:ManagedResourceOperator",
         "ec2:MetadataHttpEndpoint",
         "ec2:MetadataHttpPutResponseHopLimit",
@@ -9314,6 +9385,7 @@
         "ec2:SnapshotID",
         "ec2:SnapshotLockDuration",
         "ec2:SnapshotTime",
+        "ec2:SourceAvailabilityZone",
         "ec2:SourceCapacityReservationId",
         "ec2:SourceInstanceARN",
         "ec2:SourceOutpostArn",
@@ -9449,7 +9521,7 @@
       "name": "Amazon EC2 Image Builder",
       "servicePrefix": "imagebuilder",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2imagebuilder.html",
-      "actionsCount": 74,
+      "actionsCount": 75,
       "actions": [
         "CancelImageCreation",
         "CancelLifecycleExecution",
@@ -9489,6 +9561,7 @@
         "GetWorkflowExecution",
         "GetWorkflowStepExecution",
         "ImportComponent",
+        "ImportDiskImage",
         "ImportVmImage",
         "ListComponentBuildVersions",
         "ListComponents",
@@ -9768,11 +9841,12 @@
       "resourceTypes": [
         "repository"
       ],
-      "conditionKeysCount": 4,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "ecr:AccountSetting",
         "ecr:ResourceTag/${TagKey}"
       ]
     },
@@ -10123,7 +10197,7 @@
       "name": "Amazon Elastic Kubernetes Service",
       "servicePrefix": "eks",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelastickubernetesservice.html",
-      "actionsCount": 57,
+      "actionsCount": 58,
       "actions": [
         "AccessKubernetesApi",
         "AssociateAccessPolicy",
@@ -10149,6 +10223,7 @@
         "DescribeAddonConfiguration",
         "DescribeAddonVersions",
         "DescribeCluster",
+        "DescribeClusterVersions",
         "DescribeEksAnywhereSubscription",
         "DescribeFargateProfile",
         "DescribeIdentityProviderConfig",
@@ -10784,7 +10859,7 @@
       "name": "AWS Elemental MediaLive",
       "servicePrefix": "medialive",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmedialive.html",
-      "actionsCount": 116,
+      "actionsCount": 117,
       "actions": [
         "AcceptInputDeviceTransfer",
         "BatchDelete",
@@ -10867,6 +10942,7 @@
         "ListReservations",
         "ListSignalMaps",
         "ListTagsForResource",
+        "ListVersions",
         "PollAnywhere",
         "PurchaseOffering",
         "RebootInputDevice",
@@ -11178,20 +11254,36 @@
       "name": "AWS Elemental Support Cases",
       "servicePrefix": "elemental-support-cases",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalsupportcases.html",
-      "actionsCount": 5,
+      "actionsCount": 17,
       "actions": [
+        "AddCaseComment",
         "CheckCasePermission",
+        "CompleteMultipartUpload",
         "CreateCase",
+        "CreateS3CLIUploadCommand",
+        "CreateS3DownloadUrl",
         "GetCase",
+        "GetCasePermission",
         "GetCases",
-        "UpdateCase"
+        "GetUICache",
+        "ListTagsForCase",
+        "StartMultipartUpload",
+        "TagCase",
+        "UntagCase",
+        "UpdateCase",
+        "UpdateCaseStatus",
+        "UpdateMultipartUpload"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
         "case"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "AWS Elemental Support Content",
@@ -12266,7 +12358,7 @@
       "name": "Amazon GameLift",
       "servicePrefix": "gamelift",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongamelift.html",
-      "actionsCount": 117,
+      "actionsCount": 118,
       "actions": [
         "AcceptMatch",
         "ClaimGameServer",
@@ -12369,6 +12461,7 @@
         "StopMatchmaking",
         "SuspendGameServerGroup",
         "TagResource",
+        "TerminateGameSession",
         "UntagResource",
         "UpdateAlias",
         "UpdateBuild",
@@ -14326,7 +14419,7 @@
       "name": "AWS IoT",
       "servicePrefix": "iot",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html",
-      "actionsCount": 284,
+      "actionsCount": 285,
       "actions": [
         "AcceptCertificateTransfer",
         "AddThingToBillingGroup",
@@ -14478,6 +14571,7 @@
         "GetRegistrationCode",
         "GetRetainedMessage",
         "GetStatistics",
+        "GetThingConnectivityData",
         "GetThingShadow",
         "GetTopicRule",
         "GetTopicRuleDestination",
@@ -14662,51 +14756,6 @@
         "iot:DomainName",
         "iot:ThingGroupArn",
         "iot:TunnelDestinationService"
-      ]
-    },
-    {
-      "name": "AWS IoT 1-Click",
-      "servicePrefix": "iot1click",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot1-click.html",
-      "actionsCount": 26,
-      "actions": [
-        "AssociateDeviceWithPlacement",
-        "ClaimDevicesByClaimCode",
-        "CreatePlacement",
-        "CreateProject",
-        "DeletePlacement",
-        "DeleteProject",
-        "DescribeDevice",
-        "DescribePlacement",
-        "DescribeProject",
-        "DisassociateDeviceFromPlacement",
-        "FinalizeDeviceClaim",
-        "GetDeviceMethods",
-        "GetDevicesInPlacement",
-        "InitiateDeviceClaim",
-        "InvokeDeviceMethod",
-        "ListDeviceEvents",
-        "ListDevices",
-        "ListPlacements",
-        "ListProjects",
-        "ListTagsForResource",
-        "TagResource",
-        "UnclaimDevice",
-        "UntagResource",
-        "UpdateDeviceState",
-        "UpdatePlacement",
-        "UpdateProject"
-      ],
-      "resourceTypesCount": 2,
-      "resourceTypes": [
-        "device",
-        "project"
-      ],
-      "conditionKeysCount": 3,
-      "conditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
       ]
     },
     {
@@ -18641,8 +18690,9 @@
       "name": "Amazon Neptune Analytics",
       "servicePrefix": "neptune-graph",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonneptuneanalytics.html",
-      "actionsCount": 32,
+      "actionsCount": 36,
       "actions": [
+        "CancelExportTask",
         "CancelImportTask",
         "CancelQuery",
         "CreateGraph",
@@ -18654,6 +18704,7 @@
         "DeleteGraphSnapshot",
         "DeletePrivateGraphEndpoint",
         "GetEngineStatus",
+        "GetExportTask",
         "GetGraph",
         "GetGraphSnapshot",
         "GetGraphSummary",
@@ -18661,6 +18712,7 @@
         "GetPrivateGraphEndpoint",
         "GetQueryStatus",
         "GetStatisticsStatus",
+        "ListExportTasks",
         "ListGraphSnapshots",
         "ListGraphs",
         "ListImportTasks",
@@ -18670,17 +18722,19 @@
         "ReadDataViaQuery",
         "ResetGraph",
         "RestoreGraphFromSnapshot",
+        "StartExportTask",
         "StartImportTask",
         "TagResource",
         "UntagResource",
         "UpdateGraph",
         "WriteDataViaQuery"
       ],
-      "resourceTypesCount": 3,
+      "resourceTypesCount": 4,
       "resourceTypes": [
         "graph",
         "graph-snapshot",
-        "import-task"
+        "import-task",
+        "export-task"
       ],
       "conditionKeysCount": 4,
       "conditionKeys": [
@@ -24031,7 +24085,7 @@
       "resourceTypes": [
         "Secret"
       ],
-      "conditionKeysCount": 20,
+      "conditionKeysCount": 21,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -24041,6 +24095,7 @@
         "secretsmanager:Description",
         "secretsmanager:ForceDeleteWithoutRecovery",
         "secretsmanager:ForceOverwriteReplicaSecret",
+        "secretsmanager:KmsKeyArn",
         "secretsmanager:KmsKeyId",
         "secretsmanager:ModifyRotationRules",
         "secretsmanager:Name",
@@ -24852,8 +24907,9 @@
       "name": "Amazon Simple Email Service - Mail Manager",
       "servicePrefix": "ses",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservice-mailmanager.html",
-      "actionsCount": 47,
+      "actionsCount": 48,
       "actions": [
+        "AllowVendedLogDeliveryForResource",
         "CreateAddonInstance",
         "CreateAddonSubscription",
         "CreateArchive",
@@ -27828,15 +27884,17 @@
       "name": "Amazon WorkSpaces Secure Browser",
       "servicePrefix": "workspaces-web",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacessecurebrowser.html",
-      "actionsCount": 61,
+      "actionsCount": 68,
       "actions": [
         "AssociateBrowserSettings",
+        "AssociateDataProtectionSettings",
         "AssociateIpAccessSettings",
         "AssociateNetworkSettings",
         "AssociateTrustStore",
         "AssociateUserAccessLoggingSettings",
         "AssociateUserSettings",
         "CreateBrowserSettings",
+        "CreateDataProtectionSettings",
         "CreateIdentityProvider",
         "CreateIpAccessSettings",
         "CreateNetworkSettings",
@@ -27845,6 +27903,7 @@
         "CreateUserAccessLoggingSettings",
         "CreateUserSettings",
         "DeleteBrowserSettings",
+        "DeleteDataProtectionSettings",
         "DeleteIdentityProvider",
         "DeleteIpAccessSettings",
         "DeleteNetworkSettings",
@@ -27853,6 +27912,7 @@
         "DeleteUserAccessLoggingSettings",
         "DeleteUserSettings",
         "DisassociateBrowserSettings",
+        "DisassociateDataProtectionSettings",
         "DisassociateIpAccessSettings",
         "DisassociateNetworkSettings",
         "DisassociateTrustStore",
@@ -27860,6 +27920,7 @@
         "DisassociateUserSettings",
         "ExpireSession",
         "GetBrowserSettings",
+        "GetDataProtectionSettings",
         "GetIdentityProvider",
         "GetIpAccessSettings",
         "GetNetworkSettings",
@@ -27871,6 +27932,7 @@
         "GetUserAccessLoggingSettings",
         "GetUserSettings",
         "ListBrowserSettings",
+        "ListDataProtectionSettings",
         "ListIdentityProviders",
         "ListIpAccessSettings",
         "ListNetworkSettings",
@@ -27884,6 +27946,7 @@
         "TagResource",
         "UntagResource",
         "UpdateBrowserSettings",
+        "UpdateDataProtectionSettings",
         "UpdateIdentityProvider",
         "UpdateIpAccessSettings",
         "UpdateNetworkSettings",
@@ -27892,7 +27955,7 @@
         "UpdateUserAccessLoggingSettings",
         "UpdateUserSettings"
       ],
-      "resourceTypesCount": 8,
+      "resourceTypesCount": 9,
       "resourceTypes": [
         "browserSettings",
         "identityProvider",
@@ -27901,7 +27964,8 @@
         "trustStore",
         "userSettings",
         "userAccessLoggingSettings",
-        "ipAccessSettings"
+        "ipAccessSettings",
+        "dataProtectionSettings"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
