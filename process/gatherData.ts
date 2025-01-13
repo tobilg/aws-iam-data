@@ -199,6 +199,9 @@ const getTopicPage = async (topic: Topic): Promise<ServiceAuthReference> => {
 // Start page for parsing
 const startPage = 'https://docs.aws.amazon.com/service-authorization/latest/reference/reference_policies_actions-resources-contextkeys.html';
 
+// List of deprecated services / topics
+const topicBlacklist: string[] = ['AWS IoT 1-Click'];
+
 const run = async () => {
   // Get start page
   const html = await downloadAsHTML(startPage);
@@ -207,7 +210,7 @@ const run = async () => {
     // Parse topics
     const topics = getTopics(html);
 
-    const serviceAuthReferenceData: ServiceAuthReference[] = await Promise.all(topics.map(async topic => {
+    const serviceAuthReferenceData: ServiceAuthReference[] = await Promise.all(topics.filter(topic => !topicBlacklist.includes(topic.name)).map(async topic => {
       console.log(`Gathering data for ${topic.name}`);
       const topicPageResult = await getTopicPage(topic);
       return topicPageResult;
