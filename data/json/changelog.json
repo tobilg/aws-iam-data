@@ -1,5 +1,21 @@
 [
   {
+    "dateOfChange": "2025-01-14",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS DataSync": [
+        "datasync:UpdateLocationEfs",
+        "datasync:UpdateLocationFsxLustre",
+        "datasync:UpdateLocationFsxOntap",
+        "datasync:UpdateLocationFsxOpenZfs",
+        "datasync:UpdateLocationFsxWindows",
+        "datasync:UpdateLocationS3"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-01-13",
     "addedServices": [
       "AWS Backup Search"
