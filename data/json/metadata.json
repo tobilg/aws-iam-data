@@ -17777,7 +17777,7 @@
       "name": "Amazon Managed Streaming for Kafka Connect",
       "servicePrefix": "kafkaconnect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedstreamingforkafkaconnect.html",
-      "actionsCount": 16,
+      "actionsCount": 18,
       "actions": [
         "CreateConnector",
         "CreateCustomPlugin",
@@ -17786,8 +17786,10 @@
         "DeleteCustomPlugin",
         "DeleteWorkerConfiguration",
         "DescribeConnector",
+        "DescribeConnectorOperation",
         "DescribeCustomPlugin",
         "DescribeWorkerConfiguration",
+        "ListConnectorOperations",
         "ListConnectors",
         "ListCustomPlugins",
         "ListTagsForResource",
@@ -17796,11 +17798,12 @@
         "UntagResource",
         "UpdateConnector"
       ],
-      "resourceTypesCount": 3,
+      "resourceTypesCount": 4,
       "resourceTypes": [
         "connector",
         "custom plugin",
-        "worker configuration"
+        "worker configuration",
+        "connector operation"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
