@@ -460,12 +460,15 @@
         "Invoke",
         "ManageConnections"
       ],
-      "resourceTypesCount": 1,
+      "resourceTypesCount": 2,
       "resourceTypes": [
-        "execute-api-general"
+        "execute-api-general",
+        "execute-api-domain"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 1,
+      "conditionKeys": [
+        "execute-api:viaDomainArn"
+      ]
     },
     {
       "name": "Amazon API Gateway Management",
