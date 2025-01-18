@@ -16259,8 +16259,10 @@
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 1,
+      "conditionKeys": [
+        "lakeformation:EnabledOnlyForMetaDataAccess"
+      ]
     },
     {
       "name": "AWS Lambda",
@@ -19750,7 +19752,7 @@
       "name": "AWS Partner Central Selling",
       "servicePrefix": "partnercentral",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspartnercentralselling.html",
-      "actionsCount": 35,
+      "actionsCount": 38,
       "actions": [
         "AcceptEngagementInvitation",
         "AssignOpportunity",
@@ -19779,6 +19781,7 @@
         "ListResourceSnapshotJobs",
         "ListResourceSnapshots",
         "ListSolutions",
+        "ListTagsForResource",
         "PutSellingSystemSettings",
         "RejectEngagementInvitation",
         "StartEngagementByAcceptingInvitationTask",
@@ -19786,9 +19789,11 @@
         "StartResourceSnapshotJob",
         "StopResourceSnapshotJob",
         "SubmitOpportunity",
+        "TagResource",
+        "UntagResource",
         "UpdateOpportunity"
       ],
-      "resourceTypesCount": 8,
+      "resourceTypesCount": 9,
       "resourceTypes": [
         "Engagement",
         "engagement-by-accepting-invitation-task",
@@ -19797,10 +19802,14 @@
         "Opportunity",
         "resource-snapshot-job",
         "ResourceSnapshot",
+        "selling-system-settings",
         "Solution"
       ],
-      "conditionKeysCount": 2,
+      "conditionKeysCount": 5,
       "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
         "partnercentral:Catalog",
         "partnercentral:RelatedEntityType"
       ]
@@ -26786,35 +26795,54 @@
       "name": "AWS User Notifications",
       "servicePrefix": "notifications",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsusernotifications.html",
-      "actionsCount": 21,
+      "actionsCount": 37,
       "actions": [
         "AssociateChannel",
+        "AssociateManagedNotificationAccountContact",
+        "AssociateManagedNotificationAdditionalChannel",
         "CreateEventRule",
         "CreateNotificationConfiguration",
         "DeleteEventRule",
         "DeleteNotificationConfiguration",
         "DeregisterNotificationHub",
+        "DisableNotificationsAccessForOrganization",
         "DisassociateChannel",
+        "DisassociateManagedNotificationAccountContact",
+        "DisassociateManagedNotificationAdditionalChannel",
+        "EnableNotificationsAccessForOrganization",
         "GetEventRule",
+        "GetFeatureOptInStatus",
+        "GetManagedNotificationChildEvent",
+        "GetManagedNotificationConfiguration",
+        "GetManagedNotificationEvent",
         "GetNotificationConfiguration",
         "GetNotificationEvent",
+        "GetNotificationsAccessForOrganization",
         "ListChannels",
         "ListEventRules",
+        "ListManagedNotificationChannelAssociations",
+        "ListManagedNotificationChildEvents",
+        "ListManagedNotificationConfigurations",
+        "ListManagedNotificationEvents",
         "ListNotificationConfigurations",
         "ListNotificationEvents",
         "ListNotificationHubs",
         "ListTagsForResource",
+        "PutFeatureOptInStatus",
         "RegisterNotificationHub",
         "TagResource",
         "UntagResource",
         "UpdateEventRule",
         "UpdateNotificationConfiguration"
       ],
-      "resourceTypesCount": 3,
+      "resourceTypesCount": 6,
       "resourceTypes": [
         "EventRule",
         "NotificationConfiguration",
-        "NotificationEvent"
+        "NotificationEvent",
+        "ManagedNotificationChildEvent",
+        "ManagedNotificationConfiguration",
+        "ManagedNotificationEvent"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
