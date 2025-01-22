@@ -1,5 +1,23 @@
 [
   {
+    "dateOfChange": "2025-01-22",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect": [
+        "connect:CreateEmailAddress",
+        "connect:DeleteEmailAddress",
+        "connect:DescribeEmailAddress",
+        "connect:ListAssociatedContacts",
+        "connect:SearchEmailAddresses",
+        "connect:StartOutboundEmailContact",
+        "connect:UpdateEmailAddressMetadata",
+        "connect:UpdateQueueOutboundEmailConfig"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-01-18",
     "addedServices": [],
     "removedServices": [],

@@ -4822,11 +4822,13 @@
         "report",
         "fleet"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "codebuild:buildArn",
+        "codebuild:projectArn"
       ]
     },
     {
@@ -6056,7 +6058,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 280,
+      "actionsCount": 288,
       "actions": [
         "ActivateEvaluationForm",
         "AdminGetEmergencyAccessToken",
@@ -6087,6 +6089,7 @@
         "CreateContactFlow",
         "CreateContactFlowModule",
         "CreateContactFlowVersion",
+        "CreateEmailAddress",
         "CreateEvaluationForm",
         "CreateHoursOfOperation",
         "CreateHoursOfOperationOverride",
@@ -6115,6 +6118,7 @@
         "DeleteContactEvaluation",
         "DeleteContactFlow",
         "DeleteContactFlowModule",
+        "DeleteEmailAddress",
         "DeleteEvaluationForm",
         "DeleteHoursOfOperation",
         "DeleteHoursOfOperationOverride",
@@ -6142,6 +6146,7 @@
         "DescribeContactEvaluation",
         "DescribeContactFlow",
         "DescribeContactFlowModule",
+        "DescribeEmailAddress",
         "DescribeEvaluationForm",
         "DescribeForecastingPlanningSchedulingIntegration",
         "DescribeHoursOfOperation",
@@ -6194,6 +6199,7 @@
         "ListAgentStatuses",
         "ListAnalyticsDataAssociations",
         "ListApprovedOrigins",
+        "ListAssociatedContacts",
         "ListAuthenticationProfiles",
         "ListBots",
         "ListContactEvaluations",
@@ -6251,6 +6257,7 @@
         "SearchContactFlowModules",
         "SearchContactFlows",
         "SearchContacts",
+        "SearchEmailAddresses",
         "SearchHoursOfOperationOverrides",
         "SearchHoursOfOperations",
         "SearchPredefinedAttributes",
@@ -6274,6 +6281,7 @@
         "StartEmailContact",
         "StartForecastingPlanningSchedulingIntegration",
         "StartOutboundChatContact",
+        "StartOutboundEmailContact",
         "StartOutboundVoiceContact",
         "StartScreenSharing",
         "StartTaskContact",
@@ -6301,6 +6309,7 @@
         "UpdateContactFlowName",
         "UpdateContactRoutingData",
         "UpdateContactSchedule",
+        "UpdateEmailAddressMetadata",
         "UpdateEvaluationForm",
         "UpdateHoursOfOperation",
         "UpdateHoursOfOperationOverride",
@@ -6316,6 +6325,7 @@
         "UpdateQueueMaxContacts",
         "UpdateQueueName",
         "UpdateQueueOutboundCallerConfig",
+        "UpdateQueueOutboundEmailConfig",
         "UpdateQueueStatus",
         "UpdateQuickConnectConfig",
         "UpdateQuickConnectName",
@@ -6339,7 +6349,7 @@
         "UpdateViewContent",
         "UpdateViewMetadata"
       ],
-      "resourceTypesCount": 36,
+      "resourceTypesCount": 37,
       "resourceTypes": [
         "instance",
         "contact",
@@ -6376,7 +6386,8 @@
         "qualified-customer-managed-view",
         "qualified-aws-managed-view",
         "customer-managed-view-version",
-        "attached-file"
+        "attached-file",
+        "email-address"
       ],
       "conditionKeysCount": 13,
       "conditionKeys": [
