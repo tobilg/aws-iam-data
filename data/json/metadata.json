@@ -6058,7 +6058,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 288,
+      "actionsCount": 289,
       "actions": [
         "ActivateEvaluationForm",
         "AdminGetEmergencyAccessToken",
@@ -6118,6 +6118,7 @@
         "DeleteContactEvaluation",
         "DeleteContactFlow",
         "DeleteContactFlowModule",
+        "DeleteContactFlowVersion",
         "DeleteEmailAddress",
         "DeleteEvaluationForm",
         "DeleteHoursOfOperation",
@@ -7582,11 +7583,14 @@
       "resourceTypes": [
         "domain"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 6,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "datazone:domainId",
+        "datazone:projectId",
+        "datazone:userId"
       ]
     },
     {
@@ -13268,7 +13272,7 @@
       "name": "AWS HealthLake",
       "servicePrefix": "healthlake",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthlake.html",
-      "actionsCount": 24,
+      "actionsCount": 26,
       "actions": [
         "CancelFHIRExportJobWithDelete",
         "CreateFHIRDatastore",
@@ -13280,6 +13284,7 @@
         "DescribeFHIRExportJobWithGet",
         "DescribeFHIRImportJob",
         "GetCapabilities",
+        "GetExportedFile",
         "ListFHIRDatastores",
         "ListFHIRExportJobs",
         "ListFHIRImportJobs",
@@ -13289,6 +13294,7 @@
         "SearchWithGet",
         "SearchWithPost",
         "StartFHIRExportJob",
+        "StartFHIRExportJobWithGet",
         "StartFHIRExportJobWithPost",
         "StartFHIRImportJob",
         "TagResource",
