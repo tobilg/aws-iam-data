@@ -1,5 +1,29 @@
 [
   {
+    "dateOfChange": "2025-01-30",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Deadline Cloud": [
+        "deadline:CreateLimit",
+        "deadline:CreateQueueLimitAssociation",
+        "deadline:DeleteLimit",
+        "deadline:DeleteQueueLimitAssociation",
+        "deadline:GetLimit",
+        "deadline:GetQueueLimitAssociation",
+        "deadline:ListLimits",
+        "deadline:ListQueueLimitAssociations",
+        "deadline:UpdateLimit",
+        "deadline:UpdateQueueLimitAssociation"
+      ],
+      "Amazon Transcribe": [
+        "transcribe:GetMedicalScribeStream",
+        "transcribe:StartMedicalScribeStream"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-01-28",
     "addedServices": [],
     "removedServices": [],
