@@ -8540,7 +8540,7 @@
       "name": "Amazon EC2",
       "servicePrefix": "ec2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html",
-      "actionsCount": 673,
+      "actionsCount": 674,
       "actions": [
         "AcceptAddressTransfer",
         "AcceptCapacityReservationBillingOwnership",
@@ -9091,6 +9091,7 @@
         "ModifyInstanceMaintenanceOptions",
         "ModifyInstanceMetadataDefaults",
         "ModifyInstanceMetadataOptions",
+        "ModifyInstanceNetworkPerformanceOptions",
         "ModifyInstancePlacement",
         "ModifyIpam",
         "ModifyIpamPool",
@@ -9312,7 +9313,7 @@
         "vpn-connection",
         "vpn-gateway"
       ],
-      "conditionKeysCount": 134,
+      "conditionKeysCount": 135,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -9356,6 +9357,7 @@
         "ec2:InsideTunnelCidr",
         "ec2:InsideTunnelIpv6Cidr",
         "ec2:InstanceAutoRecovery",
+        "ec2:InstanceBandwidthWeighting",
         "ec2:InstanceCount",
         "ec2:InstanceID",
         "ec2:InstanceMarketType",
