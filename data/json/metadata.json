@@ -1,5 +1,5 @@
 {
-  "serviceCount": 437,
+  "serviceCount": 436,
   "services": [
     {
       "name": "AWS Account Management",
@@ -10208,27 +10208,6 @@
         "elasticfilesystem:CreateAction",
         "elasticfilesystem:Encrypted"
       ]
-    },
-    {
-      "name": "Amazon Elastic Inference",
-      "servicePrefix": "elastic-inference",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticinference.html",
-      "actionsCount": 7,
-      "actions": [
-        "Connect",
-        "DescribeAcceleratorOfferings",
-        "DescribeAcceleratorTypes",
-        "DescribeAccelerators",
-        "ListTagsForResource",
-        "TagResource",
-        "UntagResource"
-      ],
-      "resourceTypesCount": 1,
-      "resourceTypes": [
-        "accelerator"
-      ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
     },
     {
       "name": "Amazon Elastic Kubernetes Service",
@@ -20747,7 +20726,7 @@
       "name": "Amazon Q Business",
       "servicePrefix": "qbusiness",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusiness.html",
-      "actionsCount": 88,
+      "actionsCount": 89,
       "actions": [
         "AddUserLicenses",
         "AllowVendedLogDeliveryForResource",
@@ -20769,6 +20748,7 @@
         "CreateUser",
         "CreateWebExperience",
         "DeleteApplication",
+        "DeleteAttachment",
         "DeleteChatControlsConfiguration",
         "DeleteConversation",
         "DeleteDataAccessor",

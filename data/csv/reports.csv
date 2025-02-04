@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10124
-Actions by type,Read Actions,4917
-Actions by type,List Actions,2996
+Actions by type,Write Actions,10122
+Actions by type,Read Actions,4916
+Actions by type,List Actions,2993
 Actions by type,Permissions Actions,316
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -35,7 +35,7 @@ Longest service prefixes,application-transformation,26
 Longest service prefixes,aws-marketplace-management,26
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},122
 Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},121
-Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},107
+Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},108
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},88
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},87
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},81
@@ -95,6 +95,6 @@ Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
 Summary,Total number of distinct resource ARNS,1878
 Summary,Total number of distinct condition keys,1010
-Summary,Total number of services,437
+Summary,Total number of services,436
 Summary,Average number of actions per service,42
 Summary,Median number of actions per service,28
