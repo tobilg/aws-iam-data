@@ -1,5 +1,34 @@
 [
   {
+    "dateOfChange": "2025-02-07",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Amplify": [
+        "amplify:AssociateWebACL",
+        "amplify:DisassociateWebACL",
+        "amplify:GetWebACLForResource",
+        "amplify:ListResourcesForWebACL"
+      ],
+      "Amazon Simple Email Service - Mail Manager": [
+        "ses:CreateAddressList",
+        "ses:CreateAddressListImportJob",
+        "ses:DeleteAddressList",
+        "ses:DeregisterMemberFromAddressList",
+        "ses:GetAddressList",
+        "ses:GetAddressListImportJob",
+        "ses:GetMemberOfAddressList",
+        "ses:ListAddressListImportJobs",
+        "ses:ListAddressLists",
+        "ses:ListMembersOfAddressList",
+        "ses:RegisterMemberToAddressList",
+        "ses:StartAddressListImportJob",
+        "ses:StopAddressListImportJob"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-02-04",
     "addedServices": [],
     "removedServices": [
