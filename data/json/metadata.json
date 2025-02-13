@@ -6068,7 +6068,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 289,
+      "actionsCount": 290,
       "actions": [
         "ActivateEvaluationForm",
         "AdminGetEmergencyAccessToken",
@@ -6096,6 +6096,7 @@
         "CompleteAttachedFileUpload",
         "CreateAgentStatus",
         "CreateAuthenticationProfile",
+        "CreateContact",
         "CreateContactFlow",
         "CreateContactFlowModule",
         "CreateContactFlowVersion",
@@ -6400,13 +6401,14 @@
         "attached-file",
         "email-address"
       ],
-      "conditionKeysCount": 13,
+      "conditionKeysCount": 14,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "connect:AssignmentType",
         "connect:AttributeType",
+        "connect:ContactInitiationMethod",
         "connect:FlowType",
         "connect:InstanceId",
         "connect:MonitorCapabilities",
