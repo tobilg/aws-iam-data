@@ -1,5 +1,24 @@
 [
   {
+    "dateOfChange": "2025-02-15",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect Cases": [
+        "cases:BatchGetCaseRule",
+        "cases:CreateCaseRule",
+        "cases:DeleteCaseRule",
+        "cases:ListCaseRules",
+        "cases:UpdateCaseRule"
+      ],
+      "AWS HealthLake": [
+        "healthlake:GetHistoryByResourceId",
+        "healthlake:VersionReadResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-02-13",
     "addedServices": [],
     "removedServices": [],

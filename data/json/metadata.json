@@ -6423,16 +6423,19 @@
       "name": "Amazon Connect Cases",
       "servicePrefix": "cases",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcases.html",
-      "actionsCount": 35,
+      "actionsCount": 40,
       "actions": [
+        "BatchGetCaseRule",
         "BatchGetField",
         "BatchPutFieldOptions",
         "CreateCase",
+        "CreateCaseRule",
         "CreateDomain",
         "CreateField",
         "CreateLayout",
         "CreateRelatedItem",
         "CreateTemplate",
+        "DeleteCaseRule",
         "DeleteDomain",
         "DeleteField",
         "DeleteLayout",
@@ -6444,6 +6447,7 @@
         "GetDomain",
         "GetLayout",
         "GetTemplate",
+        "ListCaseRules",
         "ListCasesForContact",
         "ListDomains",
         "ListFieldOptions",
@@ -6457,18 +6461,20 @@
         "TagResource",
         "UntagResource",
         "UpdateCase",
+        "UpdateCaseRule",
         "UpdateField",
         "UpdateLayout",
         "UpdateTemplate"
       ],
-      "resourceTypesCount": 6,
+      "resourceTypesCount": 7,
       "resourceTypes": [
         "Case",
         "Domain",
         "Field",
         "Layout",
         "RelatedItem",
-        "Template"
+        "Template",
+        "CaseRule"
       ],
       "conditionKeysCount": 4,
       "conditionKeys": [
@@ -7104,7 +7110,7 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "datapipeline:PipelineCreator",
-        "datapipeline:Tag",
+        "datapipeline:Tag/${TagKey}",
         "datapipeline:workerGroup"
       ]
     },
@@ -13275,7 +13281,7 @@
       "name": "AWS HealthLake",
       "servicePrefix": "healthlake",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthlake.html",
-      "actionsCount": 26,
+      "actionsCount": 28,
       "actions": [
         "CancelFHIRExportJobWithDelete",
         "CreateFHIRDatastore",
@@ -13288,6 +13294,7 @@
         "DescribeFHIRImportJob",
         "GetCapabilities",
         "GetExportedFile",
+        "GetHistoryByResourceId",
         "ListFHIRDatastores",
         "ListFHIRExportJobs",
         "ListFHIRImportJobs",
@@ -13302,7 +13309,8 @@
         "StartFHIRImportJob",
         "TagResource",
         "UntagResource",
-        "UpdateResource"
+        "UpdateResource",
+        "VersionReadResource"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [

@@ -2,15 +2,15 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 10141
+      "value": 10144
     },
     {
       "key": "Read Actions",
-      "value": 4922
+      "value": 4925
     },
     {
       "key": "List Actions",
-      "value": 2999
+      "value": 3000
     },
     {
       "key": "Permissions Actions",
@@ -173,12 +173,12 @@
       "value": 81
     },
     {
-      "key": "domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}",
-      "value": 68
+      "key": "rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog",
+      "value": 74
     },
     {
-      "key": "rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog",
-      "value": 67
+      "key": "domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}",
+      "value": 68
     },
     {
       "key": "stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/",
@@ -410,7 +410,7 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1879
+      "value": 1880
     },
     {
       "key": "Total number of distinct condition keys",
