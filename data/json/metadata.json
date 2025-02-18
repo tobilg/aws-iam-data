@@ -11335,9 +11335,10 @@
       "name": "Amazon EMR on EKS (EMR Containers)",
       "servicePrefix": "emr-containers",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonemroneksemrcontainers.html",
-      "actionsCount": 23,
+      "actionsCount": 24,
       "actions": [
         "CancelJobRun",
+        "CreateCertificate",
         "CreateJobTemplate",
         "CreateManagedEndpoint",
         "CreateSecurityConfiguration",
@@ -11361,13 +11362,14 @@
         "TagResource",
         "UntagResource"
       ],
-      "resourceTypesCount": 5,
+      "resourceTypesCount": 6,
       "resourceTypes": [
         "virtualCluster",
         "jobRun",
         "jobTemplate",
         "managedEndpoint",
-        "securityConfiguration"
+        "securityConfiguration",
+        "certificate"
       ],
       "conditionKeysCount": 5,
       "conditionKeys": [
