@@ -1,5 +1,21 @@
 [
   {
+    "dateOfChange": "2025-02-19",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Timestream InfluxDB": [
+        "timestream-influxdb:CreateDbCluster",
+        "timestream-influxdb:DeleteDbCluster",
+        "timestream-influxdb:GetDbCluster",
+        "timestream-influxdb:ListDbClusters",
+        "timestream-influxdb:ListDbInstancesForCluster",
+        "timestream-influxdb:UpdateDbCluster"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-02-18",
     "addedServices": [],
     "removedServices": [],
