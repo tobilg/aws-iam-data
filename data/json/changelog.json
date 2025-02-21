@@ -1,5 +1,26 @@
 [
   {
+    "dateOfChange": "2025-02-21",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Network Firewall": [
+        "network-firewall:GetAnalysisReportResults",
+        "network-firewall:ListAnalysisReports",
+        "network-firewall:StartAnalysisReport",
+        "network-firewall:UpdateFirewallAnalysisSettings"
+      ],
+      "AWS Storage Gateway": [
+        "storagegateway:CancelCacheReport",
+        "storagegateway:DeleteCacheReport",
+        "storagegateway:DescribeCacheReport",
+        "storagegateway:ListCacheReports",
+        "storagegateway:StartCacheReport"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-02-19",
     "addedServices": [],
     "removedServices": [],
