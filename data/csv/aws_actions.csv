@@ -1749,7 +1749,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 1748,52,codedeploy:BatchGetOnPremisesInstances,https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_BatchGetOnPremisesInstances.html,false,Read
 1749,52,codedeploy:ContinueDeployment,https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_ContinueDeployment.html,false,Write
 1750,52,codedeploy:CreateApplication,https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateApplication.html,false,Write
-1751,52,codedeploy:CreateCloudFormationDeployment,,true,Write
+1751,52,codedeploy:CreateCloudFormationDeployment,https://docs.aws.amazon.com/codedeploy/latest/APIReference/codedeploy/latest/userguide/deployments-create-ecs-cfn.html,true,Write
 1752,52,codedeploy:CreateDeployment,https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeployment.html,false,Write
 1753,52,codedeploy:CreateDeploymentConfig,https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeploymentConfig.html,false,Write
 1754,52,codedeploy:CreateDeploymentGroup,https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_CreateDeploymentGroup.html,false,Write
