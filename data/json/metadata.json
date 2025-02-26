@@ -4022,8 +4022,9 @@
       "name": "AWS CloudShell",
       "servicePrefix": "cloudshell",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudshell.html",
-      "actionsCount": 10,
+      "actionsCount": 11,
       "actions": [
+        "ApproveCommand",
         "CreateEnvironment",
         "CreateSession",
         "DeleteEnvironment",
