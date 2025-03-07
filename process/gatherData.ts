@@ -5,7 +5,7 @@ import { Topic, Action, ActionResourceType, ConditionKey, ResourceType, ServiceA
 
 const getTopics = (root: HTMLElement): Topic[] => {
   // Get topics
-  const topicNodes = root?.querySelectorAll('#main-col-body > div.highlights > ul > li > a');
+  const topicNodes = root?.querySelectorAll('#main-col-body > div.highlights > ul > li > p > a');
 
   // Extract topic data
   const topics: Topic[] = Array.from(topicNodes).map(topicNode => ({
