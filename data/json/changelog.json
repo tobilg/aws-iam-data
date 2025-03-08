@@ -1,5 +1,24 @@
 [
   {
+    "dateOfChange": "2025-03-08",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS CloudWatch RUM": [
+        "rum:DeleteResourcePolicy",
+        "rum:GetResourcePolicy",
+        "rum:PutResourcePolicy"
+      ],
+      "AWS IAM Identity Center (successor to AWS Single Sign-On) directory": [
+        "sso-directory:IsMemberInGroups"
+      ],
+      "Amazon WorkSpaces": [
+        "workspaces:ModifyEndpointEncryptionMode"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-02-26",
     "addedServices": [],
     "removedServices": [],
