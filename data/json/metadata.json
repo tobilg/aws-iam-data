@@ -5071,7 +5071,7 @@
         "Host",
         "RepositoryLink"
       ],
-      "conditionKeysCount": 15,
+      "conditionKeysCount": 16,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -5087,7 +5087,8 @@
         "codeconnections:ProviderPermissionsRequired",
         "codeconnections:ProviderType",
         "codeconnections:ProviderTypeFilter",
-        "codeconnections:RepositoryName"
+        "codeconnections:RepositoryName",
+        "codeconnections:VpcId"
       ]
     },
     {
@@ -5456,7 +5457,7 @@
         "Host",
         "RepositoryLink"
       ],
-      "conditionKeysCount": 15,
+      "conditionKeysCount": 16,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -5472,7 +5473,8 @@
         "codestar-connections:ProviderPermissionsRequired",
         "codestar-connections:ProviderType",
         "codestar-connections:ProviderTypeFilter",
-        "codestar-connections:RepositoryName"
+        "codestar-connections:RepositoryName",
+        "codestar-connections:VpcId"
       ]
     },
     {
@@ -10415,7 +10417,7 @@
       "name": "AWS Elastic Load Balancing V2",
       "servicePrefix": "elasticloadbalancing",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticloadbalancingv2.html",
-      "actionsCount": 51,
+      "actionsCount": 52,
       "actions": [
         "AddListenerCertificates",
         "AddTags",
@@ -10452,6 +10454,7 @@
         "GetTrustStoreCaCertificatesBundle",
         "GetTrustStoreRevocationContent",
         "ModifyCapacityReservation",
+        "ModifyIpPools",
         "ModifyListener",
         "ModifyListenerAttributes",
         "ModifyLoadBalancerAttributes",
@@ -26053,7 +26056,7 @@
       "name": "AWS Support",
       "servicePrefix": "support",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupport.html",
-      "actionsCount": 25,
+      "actionsCount": 27,
       "actions": [
         "AddAttachmentsToSet",
         "AddCommunicationToCase",
@@ -26073,13 +26076,15 @@
         "DescribeTrustedAdvisorCheckResult",
         "DescribeTrustedAdvisorCheckSummaries",
         "DescribeTrustedAdvisorChecks",
+        "GetInteraction",
         "InitiateCallForCase",
         "InitiateChatForCase",
         "PutCaseAttributes",
         "RateCaseCommunication",
         "RefreshTrustedAdvisorCheck",
         "ResolveCase",
-        "SearchForCases"
+        "SearchForCases",
+        "StartInteraction"
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],
