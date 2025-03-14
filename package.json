@@ -16,7 +16,7 @@
     "create-reports": "scripts/create_reports.sh",
     "copy-database": "scripts/copy_database.sh",
     "export-data": "scripts/export_data.sh",
-    "build": "rm -rf dist/ && mkdir -p src/data/json && cp data/json/*.json src/data/json && tsc --build src/ && rm -rf src/data"
+    "build": "rm -rf dist/ && mkdir -p src/data/json && cp data/json/*.json src/data/json && tsc -build src/"
   },
   "repository": {
     "type": "git",

@@ -5,8 +5,10 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "incremental": false,
+    "module": "node16",
     "moduleResolution": "node16",
-    "declaration": true
+    "declaration": true,
+    "skipLibCheck": true
   },
   "references": [
     { "path": "../" }
