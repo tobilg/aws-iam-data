@@ -1,5 +1,26 @@
 [
   {
+    "dateOfChange": "2025-03-14",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Batch": [
+        "batch:CreateConsumableResource",
+        "batch:DeleteConsumableResource",
+        "batch:DescribeConsumableResource",
+        "batch:ListConsumableResources",
+        "batch:ListJobsByConsumableResource",
+        "batch:UpdateConsumableResource"
+      ]
+    },
+    "removedActions": {
+      "AWS Account Management": [
+        "account:GetChallengeQuestions",
+        "account:PutChallengeQuestions"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-03-12",
     "addedServices": [],
     "removedServices": [],
