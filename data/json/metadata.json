@@ -1,5 +1,5 @@
 {
-  "serviceCount": 439,
+  "serviceCount": 438,
   "services": [
     {
       "name": "AWS Account Management",
@@ -7832,46 +7832,6 @@
       ]
     },
     {
-      "name": "AWS DeepLens",
-      "servicePrefix": "deeplens",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeeplens.html",
-      "actionsCount": 24,
-      "actions": [
-        "AssociateServiceRoleToAccount",
-        "BatchGetDevice",
-        "BatchGetModel",
-        "BatchGetProject",
-        "CreateDeviceCertificates",
-        "CreateModel",
-        "CreateProject",
-        "DeleteModel",
-        "DeleteProject",
-        "DeployProject",
-        "DeregisterDevice",
-        "GetAssociatedResources",
-        "GetDeploymentStatus",
-        "GetDevice",
-        "GetModel",
-        "GetProject",
-        "ImportProjectFromTemplate",
-        "ListDeployments",
-        "ListDevices",
-        "ListModels",
-        "ListProjects",
-        "RegisterDevice",
-        "RemoveProject",
-        "UpdateProject"
-      ],
-      "resourceTypesCount": 3,
-      "resourceTypes": [
-        "device",
-        "project",
-        "model"
-      ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
-    },
-    {
       "name": "AWS DeepRacer",
       "servicePrefix": "deepracer",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeepracer.html",
@@ -10880,7 +10840,7 @@
       "name": "AWS Elemental MediaConvert",
       "servicePrefix": "mediaconvert",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediaconvert.html",
-      "actionsCount": 30,
+      "actionsCount": 31,
       "actions": [
         "AssociateCertificate",
         "CancelJob",
@@ -10905,6 +10865,7 @@
         "ListQueues",
         "ListTagsForResource",
         "ListVersions",
+        "Probe",
         "PutPolicy",
         "SearchJobs",
         "TagResource",
@@ -25386,7 +25347,7 @@
         "UpdateEmailIdentityPolicy",
         "UpdateEmailTemplate"
       ],
-      "resourceTypesCount": 10,
+      "resourceTypesCount": 11,
       "resourceTypes": [
         "configuration-set",
         "contact-list",
@@ -25397,7 +25358,8 @@
         "identity",
         "import-job",
         "template",
-        "multi-region-endpoint"
+        "multi-region-endpoint",
+        "mailmanager-archive"
       ],
       "conditionKeysCount": 11,
       "conditionKeys": [

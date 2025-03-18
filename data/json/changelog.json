@@ -1,5 +1,45 @@
 [
   {
+    "dateOfChange": "2025-03-18",
+    "addedServices": [],
+    "removedServices": [
+      "AWS DeepLens"
+    ],
+    "addedActions": {
+      "AWS Elemental MediaConvert": [
+        "mediaconvert:Probe"
+      ]
+    },
+    "removedActions": {
+      "AWS DeepLens": [
+        "deeplens:AssociateServiceRoleToAccount",
+        "deeplens:BatchGetDevice",
+        "deeplens:BatchGetModel",
+        "deeplens:BatchGetProject",
+        "deeplens:CreateDeviceCertificates",
+        "deeplens:CreateModel",
+        "deeplens:CreateProject",
+        "deeplens:DeleteModel",
+        "deeplens:DeleteProject",
+        "deeplens:DeployProject",
+        "deeplens:DeregisterDevice",
+        "deeplens:GetAssociatedResources",
+        "deeplens:GetDeploymentStatus",
+        "deeplens:GetDevice",
+        "deeplens:GetModel",
+        "deeplens:GetProject",
+        "deeplens:ImportProjectFromTemplate",
+        "deeplens:ListDeployments",
+        "deeplens:ListDevices",
+        "deeplens:ListModels",
+        "deeplens:ListProjects",
+        "deeplens:RegisterDevice",
+        "deeplens:RemoveProject",
+        "deeplens:UpdateProject"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-03-15",
     "addedServices": [],
     "removedServices": [],
