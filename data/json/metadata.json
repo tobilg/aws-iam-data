@@ -16383,7 +16383,7 @@
       "name": "AWS Lake Formation",
       "servicePrefix": "lakeformation",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslakeformation.html",
-      "actionsCount": 58,
+      "actionsCount": 59,
       "actions": [
         "AddLFTagsToResource",
         "BatchGrantPermissions",
@@ -16430,6 +16430,7 @@
         "ListTransactions",
         "PutDataLakeSettings",
         "RegisterResource",
+        "RegisterResourceWithPrivilegedAccess",
         "RemoveLFTagsFromResource",
         "RevokePermissions",
         "SearchDatabasesByLFTags",
