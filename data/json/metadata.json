@@ -6103,7 +6103,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 290,
+      "actionsCount": 291,
       "actions": [
         "ActivateEvaluationForm",
         "AdminGetEmergencyAccessToken",
@@ -6245,6 +6245,7 @@
         "ImportPhoneNumber",
         "ListAgentStatuses",
         "ListAnalyticsDataAssociations",
+        "ListAnalyticsDataLakeDataSets",
         "ListApprovedOrigins",
         "ListAssociatedContacts",
         "ListAuthenticationProfiles",
@@ -22912,7 +22913,7 @@
       "name": "Amazon Route 53 Recovery Controls",
       "servicePrefix": "route53-recovery-control-config",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoverycontrols.html",
-      "actionsCount": 25,
+      "actionsCount": 26,
       "actions": [
         "CreateCluster",
         "CreateControlPanel",
@@ -22936,6 +22937,7 @@
         "ListTagsForResource",
         "TagResource",
         "UntagResource",
+        "UpdateCluster",
         "UpdateControlPanel",
         "UpdateRoutingControl",
         "UpdateSafetyRule"

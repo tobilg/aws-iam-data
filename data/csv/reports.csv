@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10217
+Actions by type,Write Actions,10218
 Actions by type,Read Actions,4957
-Actions by type,List Actions,3019
+Actions by type,List Actions,3020
 Actions by type,Permissions Actions,315
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -33,8 +33,8 @@ Longest service prefixes,elemental-appliances-software,29
 Longest service prefixes,marketplacecommerceanalytics,28
 Longest service prefixes,application-transformation,26
 Longest service prefixes,aws-marketplace-management,26
+Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},123
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},122
-Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},122
 Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},108
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},88
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},87
@@ -57,7 +57,7 @@ Services with most actions,Amazon EC2,674
 Services with most actions,Amazon SageMaker,392
 Services with most actions,Amazon Chime,316
 Services with most actions,AWS Glue,291
-Services with most actions,Amazon Connect,290
+Services with most actions,Amazon Connect,291
 Services with most actions,AWS IoT,285
 Services with most actions,Amazon QuickSight,230
 Services with most actions,Amazon Bedrock,188
