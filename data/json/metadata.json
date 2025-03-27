@@ -11091,7 +11091,7 @@
       "name": "AWS Elemental MediaPackage V2",
       "servicePrefix": "mediapackagev2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackagev2.html",
-      "actionsCount": 32,
+      "actionsCount": 34,
       "actions": [
         "CancelHarvestJob",
         "CreateChannel",
@@ -11120,6 +11120,8 @@
         "PutChannelPolicy",
         "PutObject",
         "PutOriginEndpointPolicy",
+        "ResetChannelState",
+        "ResetOriginEndpointState",
         "TagResource",
         "UntagResource",
         "UpdateChannel",
