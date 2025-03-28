@@ -1,5 +1,20 @@
 [
   {
+    "dateOfChange": "2025-03-28",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Network Firewall": [
+        "network-firewall:DescribeFlowOperation",
+        "network-firewall:ListFlowOperationResults",
+        "network-firewall:ListFlowOperations",
+        "network-firewall:StartFlowCapture",
+        "network-firewall:StartFlowFlush"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-03-27",
     "addedServices": [],
     "removedServices": [],
