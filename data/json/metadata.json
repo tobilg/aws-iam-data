@@ -13338,7 +13338,7 @@
       "name": "AWS HealthLake",
       "servicePrefix": "healthlake",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthlake.html",
-      "actionsCount": 28,
+      "actionsCount": 29,
       "actions": [
         "CancelFHIRExportJobWithDelete",
         "CreateFHIRDatastore",
@@ -13356,6 +13356,7 @@
         "ListFHIRExportJobs",
         "ListFHIRImportJobs",
         "ListTagsForResource",
+        "ProcessBundle",
         "ReadResource",
         "SearchEverything",
         "SearchWithGet",
@@ -14514,7 +14515,7 @@
       "name": "AWS IoT",
       "servicePrefix": "iot",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html",
-      "actionsCount": 285,
+      "actionsCount": 287,
       "actions": [
         "AcceptCertificateTransfer",
         "AddThingToBillingGroup",
@@ -14710,6 +14711,7 @@
         "ListPolicyVersions",
         "ListPrincipalPolicies",
         "ListPrincipalThings",
+        "ListPrincipalThingsV2",
         "ListProvisioningTemplateVersions",
         "ListProvisioningTemplates",
         "ListRelatedResourcesForAuditFinding",
@@ -14726,6 +14728,7 @@
         "ListThingGroups",
         "ListThingGroupsForThing",
         "ListThingPrincipals",
+        "ListThingPrincipalsV2",
         "ListThingRegistrationTaskReports",
         "ListThingRegistrationTasks",
         "ListThingTypes",
@@ -14838,7 +14841,7 @@
         "certificateprovider",
         "command"
       ],
-      "conditionKeysCount": 11,
+      "conditionKeysCount": 12,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -14850,7 +14853,8 @@
         "iot:Delete",
         "iot:DomainName",
         "iot:ThingGroupArn",
-        "iot:TunnelDestinationService"
+        "iot:TunnelDestinationService",
+        "iot:thingArn"
       ]
     },
     {
@@ -27640,7 +27644,7 @@
         "UpdateRuleGroup",
         "UpdateWebACL"
       ],
-      "resourceTypesCount": 11,
+      "resourceTypesCount": 12,
       "resourceTypes": [
         "webacl",
         "ipset",
@@ -27652,7 +27656,8 @@
         "appsync",
         "userpool",
         "apprunner",
-        "verified-access-instance"
+        "verified-access-instance",
+        "amplify-app"
       ],
       "conditionKeysCount": 5,
       "conditionKeys": [

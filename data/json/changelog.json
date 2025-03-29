@@ -1,5 +1,20 @@
 [
   {
+    "dateOfChange": "2025-03-29",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS HealthLake": [
+        "healthlake:ProcessBundle"
+      ],
+      "AWS IoT": [
+        "iot:ListPrincipalThingsV2",
+        "iot:ListThingPrincipalsV2"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-03-28",
     "addedServices": [],
     "removedServices": [],
