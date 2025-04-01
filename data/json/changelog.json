@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2025-04-01",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon S3 Express": [
+        "s3express:CreateAccessPoint",
+        "s3express:DeleteAccessPoint",
+        "s3express:DeleteAccessPointPolicy",
+        "s3express:DeleteAccessPointScope",
+        "s3express:GetAccessPoint",
+        "s3express:GetAccessPointPolicy",
+        "s3express:GetAccessPointScope",
+        "s3express:ListAccessPointsForDirectoryBuckets",
+        "s3express:PutAccessPointPolicy",
+        "s3express:PutAccessPointScope"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-03-29",
     "addedServices": [],
     "removedServices": [],
