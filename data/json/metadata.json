@@ -4795,15 +4795,17 @@
       "name": "AWS CodeBuild",
       "servicePrefix": "codebuild",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodebuild.html",
-      "actionsCount": 58,
+      "actionsCount": 67,
       "actions": [
         "BatchDeleteBuilds",
         "BatchGetBuildBatches",
         "BatchGetBuilds",
+        "BatchGetCommandExecutions",
         "BatchGetFleets",
         "BatchGetProjects",
         "BatchGetReportGroups",
         "BatchGetReports",
+        "BatchGetSandboxes",
         "BatchPutCodeCoverages",
         "BatchPutTestCases",
         "CreateFleet",
@@ -4830,6 +4832,7 @@
         "ListBuildBatchesForProject",
         "ListBuilds",
         "ListBuildsForProject",
+        "ListCommandExecutionsForSandbox",
         "ListConnectedOAuthAccounts",
         "ListCuratedEnvironmentImages",
         "ListFleets",
@@ -4838,6 +4841,8 @@
         "ListReports",
         "ListReportsForReportGroup",
         "ListRepositories",
+        "ListSandboxes",
+        "ListSandboxesForProject",
         "ListSharedProjects",
         "ListSharedReportGroups",
         "ListSourceCredentials",
@@ -4847,8 +4852,12 @@
         "RetryBuildBatch",
         "StartBuild",
         "StartBuildBatch",
+        "StartCommandExecution",
+        "StartSandbox",
+        "StartSandboxConnection",
         "StopBuild",
         "StopBuildBatch",
+        "StopSandbox",
         "UpdateFleet",
         "UpdateProject",
         "UpdateProjectVisibility",
@@ -4856,14 +4865,15 @@
         "UpdateReportGroup",
         "UpdateWebhook"
       ],
-      "resourceTypesCount": 6,
+      "resourceTypesCount": 7,
       "resourceTypes": [
         "build",
         "build-batch",
         "project",
         "report-group",
         "report",
-        "fleet"
+        "fleet",
+        "sandbox"
       ],
       "conditionKeysCount": 5,
       "conditionKeys": [
@@ -27191,8 +27201,10 @@
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 1,
+      "conditionKeys": [
+        "user-subscriptions:CreateForSelf"
+      ]
     },
     {
       "name": "AWS Verified Access",

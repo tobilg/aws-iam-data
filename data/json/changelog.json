@@ -1,5 +1,24 @@
 [
   {
+    "dateOfChange": "2025-04-08",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS CodeBuild": [
+        "codebuild:BatchGetCommandExecutions",
+        "codebuild:BatchGetSandboxes",
+        "codebuild:ListCommandExecutionsForSandbox",
+        "codebuild:ListSandboxes",
+        "codebuild:ListSandboxesForProject",
+        "codebuild:StartCommandExecution",
+        "codebuild:StartSandbox",
+        "codebuild:StartSandboxConnection",
+        "codebuild:StopSandbox"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-04-01",
     "addedServices": [],
     "removedServices": [],
