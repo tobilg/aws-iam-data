@@ -20887,7 +20887,7 @@
       "name": "Amazon Q",
       "servicePrefix": "q",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonq.html",
-      "actionsCount": 31,
+      "actionsCount": 34,
       "actions": [
         "AssociateConnectorResource",
         "CreateAssignment",
@@ -20895,8 +20895,10 @@
         "CreateOAuthAppConnection",
         "CreatePlugin",
         "DeleteAssignment",
+        "DeleteOAuthAppConnection",
         "DeletePlugin",
         "GenerateCodeFromCommands",
+        "GenerateCodeRecommendations",
         "GetConnector",
         "GetConversation",
         "GetIdentityMetadata",
@@ -20919,7 +20921,8 @@
         "UpdateAuthGrant",
         "UpdateOAuthAppConnection",
         "UpdateTroubleshootingCommandResult",
-        "UsePlugin"
+        "UsePlugin",
+        "VerifyOAuthAppConnection"
       ],
       "resourceTypesCount": 2,
       "resourceTypes": [
