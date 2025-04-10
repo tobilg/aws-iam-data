@@ -862,8 +862,12 @@
         "StartRollbackEnablementJob",
         "StartTeamDeployment"
       ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
+      "resourceTypesCount": 3,
+      "resourceTypes": [
+        "instance",
+        "application",
+        "connector"
+      ],
       "conditionKeysCount": 0,
       "conditionKeys": []
     },
