@@ -10462,12 +10462,14 @@
         "SetSubnets",
         "SetWebAcl"
       ],
-      "resourceTypesCount": 8,
+      "resourceTypesCount": 10,
       "resourceTypes": [
+        "listener/gwy",
         "listener/app",
         "listener-rule/app",
         "listener/net",
         "listener-rule/net",
+        "loadbalancer/gwy/",
         "loadbalancer/app/",
         "loadbalancer/net/",
         "targetgroup",
