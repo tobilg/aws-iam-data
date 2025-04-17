@@ -1,5 +1,39 @@
 [
   {
+    "dateOfChange": "2025-04-17",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Elemental MediaLive": [
+        "medialive:CreateSdiSource",
+        "medialive:DeleteSdiSource",
+        "medialive:DescribeSdiSource",
+        "medialive:ListSdiSource",
+        "medialive:UpdateSdiSource"
+      ],
+      "AWS Mainframe Modernization Service": [
+        "m2:CreateDataSetExportTask",
+        "m2:GetDataSetExportTask",
+        "m2:ListDataSetExportHistory"
+      ],
+      "AWS Marketplace": [
+        "aws-marketplace:GetAgreementEntitlements"
+      ],
+      "Amazon S3 Tables": [
+        "s3tables:DeleteTableBucketEncryption",
+        "s3tables:GetTableBucketEncryption",
+        "s3tables:GetTableEncryption",
+        "s3tables:PutTableBucketEncryption",
+        "s3tables:PutTableEncryption"
+      ],
+      "AWS Transfer Family": [
+        "transfer:StartRemoteDelete",
+        "transfer:StartRemoteMove"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-04-09",
     "addedServices": [],
     "removedServices": [],
