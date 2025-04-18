@@ -17862,7 +17862,7 @@
       "name": "Amazon Managed Service for Prometheus",
       "servicePrefix": "aps",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedserviceforprometheus.html",
-      "actionsCount": 43,
+      "actionsCount": 45,
       "actions": [
         "CreateAlertManagerAlerts",
         "CreateAlertManagerDefinition",
@@ -17881,6 +17881,7 @@
         "DescribeRuleGroupsNamespace",
         "DescribeScraper",
         "DescribeWorkspace",
+        "DescribeWorkspaceConfiguration",
         "GetAlertManagerSilence",
         "GetAlertManagerStatus",
         "GetDefaultScraperConfiguration",
@@ -17906,7 +17907,8 @@
         "UntagResource",
         "UpdateLoggingConfiguration",
         "UpdateScraper",
-        "UpdateWorkspaceAlias"
+        "UpdateWorkspaceAlias",
+        "UpdateWorkspaceConfiguration"
       ],
       "resourceTypesCount": 4,
       "resourceTypes": [
