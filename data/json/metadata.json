@@ -13407,7 +13407,7 @@
       "name": "AWS HealthOmics",
       "servicePrefix": "omics",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthomics.html",
-      "actionsCount": 91,
+      "actionsCount": 96,
       "actions": [
         "AbortMultipartReadSetUpload",
         "AcceptShare",
@@ -13426,6 +13426,7 @@
         "CreateShare",
         "CreateVariantStore",
         "CreateWorkflow",
+        "CreateWorkflowVersion",
         "DeleteAnnotationStore",
         "DeleteAnnotationStoreVersions",
         "DeleteReference",
@@ -13438,6 +13439,7 @@
         "DeleteShare",
         "DeleteVariantStore",
         "DeleteWorkflow",
+        "DeleteWorkflowVersion",
         "GetAnnotationImportJob",
         "GetAnnotationStore",
         "GetAnnotationStoreVersion",
@@ -13460,6 +13462,7 @@
         "GetVariantImportJob",
         "GetVariantStore",
         "GetWorkflow",
+        "GetWorkflowVersion",
         "ListAnnotationImportJobs",
         "ListAnnotationStoreVersions",
         "ListAnnotationStores",
@@ -13481,6 +13484,7 @@
         "ListTagsForResource",
         "ListVariantImportJobs",
         "ListVariantStores",
+        "ListWorkflowVersions",
         "ListWorkflows",
         "PutS3AccessPolicy",
         "StartAnnotationImportJob",
@@ -13499,9 +13503,10 @@
         "UpdateSequenceStore",
         "UpdateVariantStore",
         "UpdateWorkflow",
+        "UpdateWorkflowVersion",
         "UploadReadSetPart"
       ],
-      "resourceTypesCount": 13,
+      "resourceTypesCount": 14,
       "resourceTypes": [
         "AnnotationStore",
         "AnnotationStoreVersion",
@@ -13515,7 +13520,8 @@
         "TaggingResource",
         "TaskResource",
         "VariantStore",
-        "workflow"
+        "workflow",
+        "WorkflowVersion"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
