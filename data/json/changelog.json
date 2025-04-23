@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2025-04-23",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Account Management": [
+        "account:PutAccountName"
+      ],
+      "Amazon Elastic Container Service": [
+        "ecs:StopServiceDeployment"
+      ],
+      "Amazon Q Business": [
+        "qbusiness:CheckDocumentAccess"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-04-19",
     "addedServices": [],
     "removedServices": [],

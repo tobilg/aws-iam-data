@@ -5,7 +5,7 @@
       "name": "AWS Account Management",
       "servicePrefix": "account",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsaccountmanagement.html",
-      "actionsCount": 14,
+      "actionsCount": 15,
       "actions": [
         "AcceptPrimaryEmailUpdate",
         "CloseAccount",
@@ -18,6 +18,7 @@
         "GetPrimaryEmail",
         "GetRegionOptStatus",
         "ListRegions",
+        "PutAccountName",
         "PutAlternateContact",
         "PutContactInformation",
         "StartPrimaryEmailUpdate"
@@ -9967,7 +9968,7 @@
       "name": "Amazon Elastic Container Service",
       "servicePrefix": "ecs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerservice.html",
-      "actionsCount": 61,
+      "actionsCount": 62,
       "actions": [
         "CreateCapacityProvider",
         "CreateCluster",
@@ -10015,6 +10016,7 @@
         "RunTask",
         "StartTask",
         "StartTelemetrySession",
+        "StopServiceDeployment",
         "StopTask",
         "SubmitAttachmentStateChanges",
         "SubmitContainerStateChange",
@@ -20968,7 +20970,7 @@
       "name": "Amazon Q Business",
       "servicePrefix": "qbusiness",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusiness.html",
-      "actionsCount": 89,
+      "actionsCount": 90,
       "actions": [
         "AddUserLicenses",
         "AllowVendedLogDeliveryForResource",
@@ -20978,6 +20980,7 @@
         "CancelSubscription",
         "Chat",
         "ChatSync",
+        "CheckDocumentAccess",
         "CreateApplication",
         "CreateDataAccessor",
         "CreateDataSource",
