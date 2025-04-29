@@ -1,5 +1,65 @@
 [
   {
+    "dateOfChange": "2025-04-29",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudFront": [
+        "cloudfront:AssociateDistributionTenantWebACL",
+        "cloudfront:AssociateDistributionWebACL",
+        "cloudfront:CreateConnectionGroup",
+        "cloudfront:CreateDistributionTenant",
+        "cloudfront:CreateInvalidationForDistributionTenant",
+        "cloudfront:DeleteConnectionGroup",
+        "cloudfront:DeleteDistributionTenant",
+        "cloudfront:DisassociateDistributionTenantWebACL",
+        "cloudfront:DisassociateDistributionWebACL",
+        "cloudfront:GetConnectionGroup",
+        "cloudfront:GetConnectionGroupByRoutingEndpoint",
+        "cloudfront:GetDistributionTenant",
+        "cloudfront:GetDistributionTenantByDomain",
+        "cloudfront:GetInvalidationForDistributionTenant",
+        "cloudfront:GetManagedCertificateDetails",
+        "cloudfront:ListConnectionGroups",
+        "cloudfront:ListDistributionTenants",
+        "cloudfront:ListDistributionTenantsByCustomization",
+        "cloudfront:ListDistributionsByConnectionMode",
+        "cloudfront:ListDomainConflicts",
+        "cloudfront:ListInvalidationsForDistributionTenant",
+        "cloudfront:UpdateConnectionGroup",
+        "cloudfront:UpdateDistributionTenant",
+        "cloudfront:UpdateDomainAssociation",
+        "cloudfront:VerifyDnsConfiguration"
+      ],
+      "Amazon Q": [
+        "q:UpdatePlugin"
+      ]
+    },
+    "removedActions": {
+      "AWS Database Migration Service": [
+        "dms:CancelMetadataModelAssessment",
+        "dms:CancelMetadataModelConversion",
+        "dms:CancelMetadataModelExport",
+        "dms:DescribeDataProviders",
+        "dms:DescribeExtensionPackAssociations",
+        "dms:DescribeInstanceProfiles",
+        "dms:DescribeMetadataModelAssessments",
+        "dms:DescribeMetadataModelConversions",
+        "dms:DescribeMetadataModelExportsAsScript",
+        "dms:DescribeMetadataModelExportsToTarget",
+        "dms:DescribeMigrationProjects",
+        "dms:DisassociateExtensionPack",
+        "dms:GetMetadataModel",
+        "dms:ModifyConversionConfiguration",
+        "dms:ModifyDataProvider",
+        "dms:ModifyInstanceProfile",
+        "dms:ModifyMigrationProject",
+        "dms:StartExtensionPackAssociation",
+        "dms:StartMetadataModelExportAsScript"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-04-26",
     "addedServices": [],
     "removedServices": [],
