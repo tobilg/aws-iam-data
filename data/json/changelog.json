@@ -1,5 +1,35 @@
 [
   {
+    "dateOfChange": "2025-04-30",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Aurora DSQL": [
+        "dsql:GetVpcEndpointServiceName"
+      ],
+      "Amazon EC2": [
+        "ec2:AssociateRouteServer",
+        "ec2:CreateRouteServer",
+        "ec2:CreateRouteServerEndpoint",
+        "ec2:CreateRouteServerPeer",
+        "ec2:DeleteRouteServer",
+        "ec2:DeleteRouteServerEndpoint",
+        "ec2:DeleteRouteServerPeer",
+        "ec2:DescribeRouteServerEndpoints",
+        "ec2:DescribeRouteServerPeers",
+        "ec2:DescribeRouteServers",
+        "ec2:DisableRouteServerPropagation",
+        "ec2:DisassociateRouteServer",
+        "ec2:EnableRouteServerPropagation",
+        "ec2:GetRouteServerAssociations",
+        "ec2:GetRouteServerPropagations",
+        "ec2:GetRouteServerRoutingDatabase",
+        "ec2:ModifyRouteServer"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-04-29",
     "addedServices": [],
     "removedServices": [],
