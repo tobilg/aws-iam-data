@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2025-05-01",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Kinesis Data Streams": [
+        "kinesis:ListTagsForResource",
+        "kinesis:TagResource",
+        "kinesis:UntagResource"
+      ],
+      "AWS Systems Manager": [
+        "ssm:GetAccessToken",
+        "ssm:StartAccessRequest"
+      ],
+      "AWS Systems Manager GUI Connect": [
+        "ssm-guiconnect:DeleteConnectionRecordingPreferences",
+        "ssm-guiconnect:GetConnectionRecordingPreferences",
+        "ssm-guiconnect:UpdateConnectionRecordingPreferences"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-04-30",
     "addedServices": [],
     "removedServices": [],
