@@ -27315,7 +27315,7 @@
       "name": "Amazon Verified Permissions",
       "servicePrefix": "verifiedpermissions",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonverifiedpermissions.html",
-      "actionsCount": 24,
+      "actionsCount": 27,
       "actions": [
         "CreateIdentitySource",
         "CreatePolicy",
@@ -27336,7 +27336,10 @@
         "ListPolicies",
         "ListPolicyStores",
         "ListPolicyTemplates",
+        "ListTagsForResource",
         "PutSchema",
+        "TagResource",
+        "UntagResource",
         "UpdateIdentitySource",
         "UpdatePolicy",
         "UpdatePolicyStore",
@@ -27346,8 +27349,12 @@
       "resourceTypes": [
         "policy-store"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "Amazon VPC Lattice",
