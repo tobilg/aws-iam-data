@@ -1,5 +1,46 @@
 [
   {
+    "dateOfChange": "2025-05-09",
+    "addedServices": [
+      "Amazon CloudWatch Network Synthetic Monitor"
+    ],
+    "removedServices": [
+      "Amazon CloudWatch Network Monitor"
+    ],
+    "addedActions": {
+      "Amazon CloudWatch Network Synthetic Monitor": [
+        "networkmonitor:CreateMonitor",
+        "networkmonitor:CreateProbe",
+        "networkmonitor:DeleteMonitor",
+        "networkmonitor:DeleteProbe",
+        "networkmonitor:GetMonitor",
+        "networkmonitor:GetProbe",
+        "networkmonitor:ListMonitors",
+        "networkmonitor:ListTagsForResource",
+        "networkmonitor:TagResource",
+        "networkmonitor:UntagResource",
+        "networkmonitor:UpdateMonitor",
+        "networkmonitor:UpdateProbe"
+      ]
+    },
+    "removedActions": {
+      "Amazon CloudWatch Network Monitor": [
+        "networkmonitor:CreateMonitor",
+        "networkmonitor:CreateProbe",
+        "networkmonitor:DeleteMonitor",
+        "networkmonitor:DeleteProbe",
+        "networkmonitor:GetMonitor",
+        "networkmonitor:GetProbe",
+        "networkmonitor:ListMonitors",
+        "networkmonitor:ListTagsForResource",
+        "networkmonitor:TagResource",
+        "networkmonitor:UntagResource",
+        "networkmonitor:UpdateMonitor",
+        "networkmonitor:UpdateProbe"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-05-07",
     "addedServices": [],
     "removedServices": [],
