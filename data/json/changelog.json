@@ -1,5 +1,35 @@
 [
   {
+    "dateOfChange": "2025-05-14",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudWatch Synthetics": [
+        "synthetics:StartCanaryDryRun"
+      ],
+      "Amazon EC2": [
+        "ec2:CreateLocalGatewayVirtualInterface",
+        "ec2:CreateLocalGatewayVirtualInterfaceGroup",
+        "ec2:DeleteLocalGatewayVirtualInterface",
+        "ec2:DeleteLocalGatewayVirtualInterfaceGroup",
+        "ec2:DescribeOutpostLags",
+        "ec2:DescribeServiceLinkVirtualInterfaces"
+      ],
+      "AWS Supply Chain": [
+        "scn:CreateDataLakeNamespace",
+        "scn:DeleteDataLakeNamespace",
+        "scn:GetDataIntegrationEvent",
+        "scn:GetDataIntegrationFlowExecution",
+        "scn:GetDataLakeNamespace",
+        "scn:ListDataIntegrationEvents",
+        "scn:ListDataIntegrationFlowExecutions",
+        "scn:ListDataLakeNamespaces",
+        "scn:UpdateDataLakeNamespace"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-05-13",
     "addedServices": [],
     "removedServices": [],
