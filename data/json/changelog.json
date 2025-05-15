@@ -1,5 +1,19 @@
 [
   {
+    "dateOfChange": "2025-05-15",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Aurora DSQL": [
+        "dsql:AddPeerCluster",
+        "dsql:PutMultiRegionProperties",
+        "dsql:PutWitnessRegion",
+        "dsql:RemovePeerCluster"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-05-14",
     "addedServices": [],
     "removedServices": [],

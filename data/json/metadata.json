@@ -1873,8 +1873,9 @@
       "name": "Amazon Aurora DSQL",
       "servicePrefix": "dsql",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonauroradsql.html",
-      "actionsCount": 13,
+      "actionsCount": 17,
       "actions": [
+        "AddPeerCluster",
         "CreateCluster",
         "CreateMultiRegionClusters",
         "DbConnect",
@@ -1885,6 +1886,9 @@
         "GetVpcEndpointServiceName",
         "ListClusters",
         "ListTagsForResource",
+        "PutMultiRegionProperties",
+        "PutWitnessRegion",
+        "RemovePeerCluster",
         "TagResource",
         "UntagResource",
         "UpdateCluster"
@@ -16964,9 +16968,10 @@
         "grant",
         "report-generator"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 4,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "license-manager:ResourceTag/${TagKey}"
       ]
