@@ -11776,7 +11776,7 @@
         "UpdateEndpoint",
         "UpdateEventBus"
       ],
-      "resourceTypesCount": 13,
+      "resourceTypesCount": 15,
       "resourceTypes": [
         "event-source",
         "event-bus",
@@ -11790,7 +11790,9 @@
         "create-snapshot",
         "reboot-instance",
         "stop-instance",
-        "terminate-instance"
+        "terminate-instance",
+        "alias",
+        "key"
       ],
       "conditionKeysCount": 13,
       "conditionKeys": [
