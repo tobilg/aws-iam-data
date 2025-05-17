@@ -1,5 +1,43 @@
 [
   {
+    "dateOfChange": "2025-05-17",
+    "addedServices": [
+      "AWS Transform"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS CodePipeline": [
+        "codepipeline:ListDeployActionExecutionTargets"
+      ],
+      "Amazon Connect Customer Profiles": [
+        "profile:CreateDomainLayout",
+        "profile:DeleteDomainLayout",
+        "profile:GetDomainLayout",
+        "profile:ListDomainLayouts",
+        "profile:UpdateDomainLayout"
+      ],
+      "AWS HealthImaging": [
+        "medical-imaging:SearchDICOMInstances",
+        "medical-imaging:SearchDICOMSeries",
+        "medical-imaging:SearchDICOMStudies"
+      ],
+      "AWS Support": [
+        "support:DescribeCaseOptions",
+        "support:UpdateCaseSeverity"
+      ],
+      "AWS Transform": [
+        "transform:AssociateConnectorResource",
+        "transform:CreateProfile",
+        "transform:DeleteProfile",
+        "transform:GetConnector",
+        "transform:ListProfiles",
+        "transform:RejectConnector",
+        "transform:UpdateProfile"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-05-15",
     "addedServices": [],
     "removedServices": [],

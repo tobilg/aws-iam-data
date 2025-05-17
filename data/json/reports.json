@@ -2,15 +2,15 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 10275
+      "value": 10284
     },
     {
       "key": "Read Actions",
-      "value": 4985
+      "value": 4992
     },
     {
       "key": "List Actions",
-      "value": 3045
+      "value": 3047
     },
     {
       "key": "Permissions Actions",
@@ -61,6 +61,26 @@
   ],
   "Longest condition key names": [
     {
+      "key": "codebuild:secondarySources/${sourceIdentifier}.buildStatusConfig.targetUrl",
+      "value": 74
+    },
+    {
+      "key": "codebuild:secondarySources/${sourceIdentifier}.buildStatusConfig.context",
+      "value": 72
+    },
+    {
+      "key": "codebuild:secondaryArtifacts/${artifactIdentifier}.encryptionDisabled",
+      "value": 69
+    },
+    {
+      "key": "codebuild:secondaryArtifacts/${artifactIdentifier}.bucketOwnerAccess",
+      "value": 68
+    },
+    {
+      "key": "codebuild:secondarySources/${sourceIdentifier}.auth.resource",
+      "value": 60
+    },
+    {
       "key": "iot:CommandExecutionParameterBoolean/${CommandParameterName}",
       "value": 60
     },
@@ -69,36 +89,16 @@
       "value": 60
     },
     {
-      "key": "iot:CommandExecutionParameterNumber/${CommandParameterName}",
+      "key": "codebuild:buildBatchConfig.restrictions.computeTypesAllowed",
       "value": 59
     },
     {
-      "key": "iot:CommandExecutionParameterString/${CommandParameterName}",
+      "key": "codebuild:environment.registryCredential.credentialProvider",
       "value": 59
     },
     {
-      "key": "route53:ChangeResourceRecordSetsNormalizedRecordNames",
-      "value": 53
-    },
-    {
-      "key": "s3express:x-amz-server-side-encryption-aws-kms-key-id",
-      "value": 53
-    },
-    {
-      "key": "vpc-lattice-svcs:RequestQueryString/${QueryStringKey}",
-      "value": 53
-    },
-    {
-      "key": "bedrock:ThirdPartyKnowledgeBaseCredentialsSecretArn",
-      "value": 51
-    },
-    {
-      "key": "sagemaker:CustomerMetadataProperties/${MetadataKey}",
-      "value": 51
-    },
-    {
-      "key": "amplifyuibuilder:CodegenJobResourceEnvironmentName",
-      "value": 50
+      "key": "codebuild:secondaryArtifacts/${artifactIdentifier}.location",
+      "value": 59
     }
   ],
   "Longest service prefixes": [
@@ -178,7 +178,7 @@
     },
     {
       "key": "domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}",
-      "value": 68
+      "value": 73
     },
     {
       "key": "stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/",
@@ -398,11 +398,11 @@
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 438
+      "value": 439
     },
     {
       "key": "Average number of actions per service",
-      "value": 43
+      "value": 42
     },
     {
       "key": "Median number of actions per service",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1908
+      "value": 1910
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 1074
+      "value": 1185
     }
   ]
 }

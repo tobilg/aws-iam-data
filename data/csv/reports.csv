@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10275
-Actions by type,Read Actions,4985
-Actions by type,List Actions,3045
+Actions by type,Write Actions,10284
+Actions by type,Read Actions,4992
+Actions by type,List Actions,3047
 Actions by type,Permissions Actions,331
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -13,16 +13,16 @@ Longest action names,networkflowmonitor:GetQueryStatusWorkloadInsightsTopContrib
 Longest action names,aws-marketplace-management:PutAdditionalSellerNotificationRecipients,68
 Longest action names,aws-marketplace-management:GetAdditionalSellerNotificationRecipients,68
 Longest action names,bcm-pricing-calculator:ListBillEstimateInputCommitmentModifications,67
+Longest condition key names,codebuild:secondarySources/${sourceIdentifier}.buildStatusConfig.targetUrl,74
+Longest condition key names,codebuild:secondarySources/${sourceIdentifier}.buildStatusConfig.context,72
+Longest condition key names,codebuild:secondaryArtifacts/${artifactIdentifier}.encryptionDisabled,69
+Longest condition key names,codebuild:secondaryArtifacts/${artifactIdentifier}.bucketOwnerAccess,68
 Longest condition key names,payment-cryptography:CertificateAuthorityPublicKeyIdentifier,60
 Longest condition key names,iot:CommandExecutionParameterBoolean/${CommandParameterName},60
-Longest condition key names,iot:CommandExecutionParameterString/${CommandParameterName},59
-Longest condition key names,iot:CommandExecutionParameterNumber/${CommandParameterName},59
-Longest condition key names,vpc-lattice-svcs:RequestQueryString/${QueryStringKey},53
-Longest condition key names,s3express:x-amz-server-side-encryption-aws-kms-key-id,53
-Longest condition key names,route53:ChangeResourceRecordSetsNormalizedRecordNames,53
-Longest condition key names,bedrock:ThirdPartyKnowledgeBaseCredentialsSecretArn,51
-Longest condition key names,sagemaker:CustomerMetadataProperties/${MetadataKey},51
-Longest condition key names,amplifyuibuilder:CodegenJobResourceEnvironmentName,50
+Longest condition key names,codebuild:secondarySources/${sourceIdentifier}.auth.resource,60
+Longest condition key names,codebuild:buildBatchConfig.restrictions.computeTypesAllowed,59
+Longest condition key names,codebuild:secondaryArtifacts/${artifactIdentifier}.location,59
+Longest condition key names,codebuild:environment.registryCredential.credentialProvider,59
 Longest service prefixes,license-manager-linux-subscriptions,35
 Longest service prefixes,license-manager-user-subscriptions,34
 Longest service prefixes,partnercentral-account-management,33
@@ -41,7 +41,7 @@ Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},81
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},81
 Most referenced resource ARNs,rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog,74
-Most referenced resource ARNs,domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName},68
+Most referenced resource ARNs,domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName},73
 Most referenced resource ARNs,stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/,66
 Services with least actions,AWS Elemental Support Content,1
 Services with least actions,AWS Microservice Extractor for .NET,1
@@ -93,8 +93,8 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1908
-Summary,Total number of distinct condition keys,1074
-Summary,Total number of services,438
-Summary,Average number of actions per service,43
+Summary,Total number of distinct resource ARNS,1910
+Summary,Total number of distinct condition keys,1185
+Summary,Total number of services,439
+Summary,Average number of actions per service,42
 Summary,Median number of actions per service,29
