@@ -1,5 +1,47 @@
 [
   {
+    "dateOfChange": "2025-05-23",
+    "addedServices": [
+      "AWS Service for managing account level display settings"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Aurora DSQL": [
+        "dsql:GetBackupJob",
+        "dsql:GetRestoreJob",
+        "dsql:StartBackupJob",
+        "dsql:StartRestoreJob",
+        "dsql:StopBackupJob",
+        "dsql:StopRestoreJob"
+      ],
+      "Amazon CloudWatch": [
+        "cloudwatch:GenerateQueryResultsSummary"
+      ],
+      "Amazon Elastic Kubernetes Service": [
+        "eks:ListDashboardData",
+        "eks:ListDashboardResources"
+      ],
+      "AWS HealthImaging": [
+        "medical-imaging:GetDICOMSeriesMetadata"
+      ],
+      "AWS Service for managing account level display settings": [
+        "uxc:DeleteAccountColor",
+        "uxc:GetAccountColor",
+        "uxc:PutAccountColor"
+      ]
+    },
+    "removedActions": {
+      "Amazon Aurora DSQL": [
+        "dsql:CreateMultiRegionClusters",
+        "dsql:DeleteMultiRegionClusters"
+      ],
+      "AWS IoT FleetWise": [
+        "iotfleetwise:BatchCreateVehicle",
+        "iotfleetwise:BatchUpdateVehicle"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-05-21",
     "addedServices": [
       "AWS IAM Identity Center directory"

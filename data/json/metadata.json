@@ -1,5 +1,5 @@
 {
-  "serviceCount": 439,
+  "serviceCount": 440,
   "services": [
     {
       "name": "AWS Account Management",
@@ -1873,22 +1873,26 @@
       "name": "Amazon Aurora DSQL",
       "servicePrefix": "dsql",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonauroradsql.html",
-      "actionsCount": 17,
+      "actionsCount": 21,
       "actions": [
         "AddPeerCluster",
         "CreateCluster",
-        "CreateMultiRegionClusters",
         "DbConnect",
         "DbConnectAdmin",
         "DeleteCluster",
-        "DeleteMultiRegionClusters",
+        "GetBackupJob",
         "GetCluster",
+        "GetRestoreJob",
         "GetVpcEndpointServiceName",
         "ListClusters",
         "ListTagsForResource",
         "PutMultiRegionProperties",
         "PutWitnessRegion",
         "RemovePeerCluster",
+        "StartBackupJob",
+        "StartRestoreJob",
+        "StopBackupJob",
+        "StopRestoreJob",
         "TagResource",
         "UntagResource",
         "UpdateCluster"
@@ -4213,7 +4217,7 @@
       "name": "Amazon CloudWatch",
       "servicePrefix": "cloudwatch",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatch.html",
-      "actionsCount": 54,
+      "actionsCount": 55,
       "actions": [
         "BatchGetServiceLevelIndicatorReport",
         "BatchGetServiceLevelObjectiveBudgetReport",
@@ -4235,6 +4239,7 @@
         "EnableInsightRules",
         "EnableTopologyDiscovery",
         "GenerateQuery",
+        "GenerateQueryResultsSummary",
         "GetDashboard",
         "GetInsightRuleReport",
         "GetMetricData",
@@ -6599,7 +6604,7 @@
         "attached-file",
         "email-address"
       ],
-      "conditionKeysCount": 16,
+      "conditionKeysCount": 18,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -6611,6 +6616,8 @@
         "connect:ContactInitiationMethod",
         "connect:FlowType",
         "connect:InstanceId",
+        "connect:ListRealtimeContactAnalysisSegmentsByOutputType",
+        "connect:ListRealtimeContactAnalysisSegmentsBySegmentType",
         "connect:MonitorCapabilities",
         "connect:SearchContactsByContactAnalysis",
         "connect:SearchTag/${TagKey}",
@@ -10418,7 +10425,7 @@
       "name": "Amazon Elastic Kubernetes Service",
       "servicePrefix": "eks",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelastickubernetesservice.html",
-      "actionsCount": 58,
+      "actionsCount": 60,
       "actions": [
         "AccessKubernetesApi",
         "AssociateAccessPolicy",
@@ -10459,6 +10466,8 @@
         "ListAddons",
         "ListAssociatedAccessPolicies",
         "ListClusters",
+        "ListDashboardData",
+        "ListDashboardResources",
         "ListEksAnywhereSubscriptions",
         "ListFargateProfiles",
         "ListIdentityProviderConfigs",
@@ -10479,7 +10488,7 @@
         "UpdateNodegroupVersion",
         "UpdatePodIdentityAssociation"
       ],
-      "resourceTypesCount": 9,
+      "resourceTypesCount": 10,
       "resourceTypes": [
         "cluster",
         "nodegroup",
@@ -10489,7 +10498,8 @@
         "eks-anywhere-subscription",
         "podidentityassociation",
         "access-entry",
-        "access-policy"
+        "access-policy",
+        "dashboard"
       ],
       "conditionKeysCount": 20,
       "conditionKeys": [
@@ -13488,7 +13498,7 @@
       "name": "AWS HealthImaging",
       "servicePrefix": "medical-imaging",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthimaging.html",
-      "actionsCount": 24,
+      "actionsCount": 25,
       "actions": [
         "CopyImageSet",
         "CreateDatastore",
@@ -13498,6 +13508,7 @@
         "GetDICOMInstance",
         "GetDICOMInstanceFrames",
         "GetDICOMInstanceMetadata",
+        "GetDICOMSeriesMetadata",
         "GetDatastore",
         "GetImageFrame",
         "GetImageSet",
@@ -15251,11 +15262,9 @@
       "name": "AWS IoT FleetWise",
       "servicePrefix": "iotfleetwise",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleetwise.html",
-      "actionsCount": 58,
+      "actionsCount": 56,
       "actions": [
         "AssociateVehicleFleet",
-        "BatchCreateVehicle",
-        "BatchUpdateVehicle",
         "CreateCampaign",
         "CreateDecoderManifest",
         "CreateFleet",
@@ -25126,6 +25135,21 @@
         "Portfolio",
         "Product"
       ],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
+      "name": "AWS Service for managing account level display settings",
+      "servicePrefix": "uxc",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceformanagingaccountleveldisplaysettings.html",
+      "actionsCount": 3,
+      "actions": [
+        "DeleteAccountColor",
+        "GetAccountColor",
+        "PutAccountColor"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
       "conditionKeysCount": 0,
       "conditionKeys": []
     },
