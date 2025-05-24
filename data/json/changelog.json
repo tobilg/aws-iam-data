@@ -1,5 +1,33 @@
 [
   {
+    "dateOfChange": "2025-05-24",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:GetExecutionFlowSnapshot",
+        "bedrock:GetFlowExecution",
+        "bedrock:ListFlowExecutionEvents",
+        "bedrock:ListFlowExecutions",
+        "bedrock:StartFlowExecution",
+        "bedrock:StopFlowExecution"
+      ],
+      "Amazon Managed Service for Prometheus": [
+        "aps:CreateQueryLoggingConfiguration",
+        "aps:DeleteQueryLoggingConfiguration",
+        "aps:DescribeQueryLoggingConfiguration",
+        "aps:UpdateQueryLoggingConfiguration"
+      ]
+    },
+    "removedActions": {
+      "Amazon Q Business Q Apps": [
+        "qapps:CreatePresignedUrl",
+        "qapps:ImportDocumentToQApp",
+        "qapps:ImportDocumentToQAppSession"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-05-23",
     "addedServices": [
       "AWS Service for managing account level display settings"
