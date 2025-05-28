@@ -1,5 +1,40 @@
 [
   {
+    "dateOfChange": "2025-05-28",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudWatch Logs": [
+        "logs:ListLogGroups"
+      ],
+      "AWS Cost Explorer Service": [
+        "ce:GetCostAndUsageComparisons",
+        "ce:GetCostComparisonDrivers"
+      ],
+      "Amazon Inspector2": [
+        "inspector2:GetClustersForImage"
+      ],
+      "AWS Network Firewall": [
+        "network-firewall:CreateVpcEndpointAssociation",
+        "network-firewall:DeleteVpcEndpointAssociation",
+        "network-firewall:DescribeFirewallMetadata",
+        "network-firewall:DescribeVpcEndpointAssociation",
+        "network-firewall:ListVpcEndpointAssociations"
+      ],
+      "Service Quotas": [
+        "servicequotas:CreateSupportCase"
+      ]
+    },
+    "removedActions": {
+      "AWS Marketplace Catalog": [
+        "aws-marketplace:CompleteTask",
+        "aws-marketplace:DescribeTask",
+        "aws-marketplace:ListTasks",
+        "aws-marketplace:UpdateTask"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-05-24",
     "addedServices": [],
     "removedServices": [],
