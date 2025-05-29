@@ -1,5 +1,29 @@
 [
   {
+    "dateOfChange": "2025-05-29",
+    "addedServices": [],
+    "removedServices": [
+      "Amazon SageMaker Ground Truth Synthetic"
+    ],
+    "addedActions": {},
+    "removedActions": {
+      "Amazon SageMaker Ground Truth Synthetic": [
+        "sagemaker-groundtruth-synthetic:CreateProject",
+        "sagemaker-groundtruth-synthetic:DeleteProject",
+        "sagemaker-groundtruth-synthetic:GetAccountDetails",
+        "sagemaker-groundtruth-synthetic:GetBatch",
+        "sagemaker-groundtruth-synthetic:GetProject",
+        "sagemaker-groundtruth-synthetic:ListBatchDataTransfers",
+        "sagemaker-groundtruth-synthetic:ListBatchSummaries",
+        "sagemaker-groundtruth-synthetic:ListProjectDataTransfers",
+        "sagemaker-groundtruth-synthetic:ListProjectSummaries",
+        "sagemaker-groundtruth-synthetic:StartBatchDataTransfer",
+        "sagemaker-groundtruth-synthetic:StartProjectDataTransfer",
+        "sagemaker-groundtruth-synthetic:UpdateBatch"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-05-28",
     "addedServices": [],
     "removedServices": [],

@@ -1,5 +1,5 @@
 {
-  "serviceCount": 440,
+  "serviceCount": 439,
   "services": [
     {
       "name": "AWS Account Management",
@@ -24467,30 +24467,6 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
-    },
-    {
-      "name": "Amazon SageMaker Ground Truth Synthetic",
-      "servicePrefix": "sagemaker-groundtruth-synthetic",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakergroundtruthsynthetic.html",
-      "actionsCount": 12,
-      "actions": [
-        "CreateProject",
-        "DeleteProject",
-        "GetAccountDetails",
-        "GetBatch",
-        "GetProject",
-        "ListBatchDataTransfers",
-        "ListBatchSummaries",
-        "ListProjectDataTransfers",
-        "ListProjectSummaries",
-        "StartBatchDataTransfer",
-        "StartProjectDataTransfer",
-        "UpdateBatch"
-      ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
     },
     {
       "name": "Amazon SageMaker with MLflow",

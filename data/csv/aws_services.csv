@@ -407,35 +407,34 @@ service_id,name,prefix,reference_url
 406,Amazon SNS,sns,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsns.html
 407,Amazon SQS,sqs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsqs.html
 408,Amazon SageMaker,sagemaker,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemaker.html
-409,Amazon SageMaker Ground Truth Synthetic,sagemaker-groundtruth-synthetic,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakergroundtruthsynthetic.html
-410,Amazon SageMaker data science assistant,sagemaker-data-science-assistant,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakerdatascienceassistant.html
-411,Amazon SageMaker geospatial capabilities,sagemaker-geospatial,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakergeospatialcapabilities.html
-412,Amazon SageMaker with MLflow,sagemaker-mlflow,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakerwithmlflow.html
-413,Amazon Security Lake,securitylake,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsecuritylake.html
-414,Amazon Simple Email Service - Mail Manager,ses,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservice-mailmanager.html
-415,Amazon Simple Email Service v2,ses,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservicev2.html
-416,Amazon Simple Workflow Service,swf,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleworkflowservice.html
-417,Amazon SimpleDB,sdb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpledb.html
-418,Amazon Textract,textract,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontextract.html
-419,Amazon Timestream,timestream,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestream.html
-420,Amazon Timestream InfluxDB,timestream-influxdb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestreaminfluxdb.html
-421,Amazon Transcribe,transcribe,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontranscribe.html
-422,Amazon Translate,translate,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontranslate.html
-423,Amazon VPC Lattice,vpc-lattice,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonvpclattice.html
-424,Amazon VPC Lattice Services,vpc-lattice-svcs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonvpclatticeservices.html
-425,Amazon Verified Permissions,verifiedpermissions,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonverifiedpermissions.html
-426,Amazon WorkDocs,workdocs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkdocs.html
-427,Amazon WorkLink,worklink,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworklink.html
-428,Amazon WorkMail,workmail,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkmail.html
-429,Amazon WorkMail Message Flow,workmailmessageflow,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkmailmessageflow.html
-430,Amazon WorkSpaces,workspaces,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspaces.html
-431,Amazon WorkSpaces Application Manager,wam,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesapplicationmanager.html
-432,Amazon WorkSpaces Secure Browser,workspaces-web,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacessecurebrowser.html
-433,Amazon WorkSpaces Thin Client,thinclient,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesthinclient.html
-434,AmazonMediaImport,mediaimport,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmediaimport.html
-435,Apache Kafka APIs for Amazon MSK clusters,kafka-cluster,https://docs.aws.amazon.com/service-authorization/latest/reference/list_apachekafkaapisforamazonmskclusters.html
-436,Application Discovery Arsenal,arsenal,https://docs.aws.amazon.com/service-authorization/latest/reference/list_applicationdiscoveryarsenal.html
-437,Database Query Metadata Service,dbqms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_databasequerymetadataservice.html
-438,Network Flow Monitor,networkflowmonitor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_networkflowmonitor.html
-439,Service Quotas,servicequotas,https://docs.aws.amazon.com/service-authorization/latest/reference/list_servicequotas.html
-440,Tag Editor,resource-explorer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_tageditor.html
+409,Amazon SageMaker data science assistant,sagemaker-data-science-assistant,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakerdatascienceassistant.html
+410,Amazon SageMaker geospatial capabilities,sagemaker-geospatial,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakergeospatialcapabilities.html
+411,Amazon SageMaker with MLflow,sagemaker-mlflow,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakerwithmlflow.html
+412,Amazon Security Lake,securitylake,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsecuritylake.html
+413,Amazon Simple Email Service - Mail Manager,ses,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservice-mailmanager.html
+414,Amazon Simple Email Service v2,ses,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservicev2.html
+415,Amazon Simple Workflow Service,swf,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleworkflowservice.html
+416,Amazon SimpleDB,sdb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpledb.html
+417,Amazon Textract,textract,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontextract.html
+418,Amazon Timestream,timestream,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestream.html
+419,Amazon Timestream InfluxDB,timestream-influxdb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestreaminfluxdb.html
+420,Amazon Transcribe,transcribe,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontranscribe.html
+421,Amazon Translate,translate,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontranslate.html
+422,Amazon VPC Lattice,vpc-lattice,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonvpclattice.html
+423,Amazon VPC Lattice Services,vpc-lattice-svcs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonvpclatticeservices.html
+424,Amazon Verified Permissions,verifiedpermissions,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonverifiedpermissions.html
+425,Amazon WorkDocs,workdocs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkdocs.html
+426,Amazon WorkLink,worklink,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworklink.html
+427,Amazon WorkMail,workmail,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkmail.html
+428,Amazon WorkMail Message Flow,workmailmessageflow,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkmailmessageflow.html
+429,Amazon WorkSpaces,workspaces,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspaces.html
+430,Amazon WorkSpaces Application Manager,wam,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesapplicationmanager.html
+431,Amazon WorkSpaces Secure Browser,workspaces-web,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacessecurebrowser.html
+432,Amazon WorkSpaces Thin Client,thinclient,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesthinclient.html
+433,AmazonMediaImport,mediaimport,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmediaimport.html
+434,Apache Kafka APIs for Amazon MSK clusters,kafka-cluster,https://docs.aws.amazon.com/service-authorization/latest/reference/list_apachekafkaapisforamazonmskclusters.html
+435,Application Discovery Arsenal,arsenal,https://docs.aws.amazon.com/service-authorization/latest/reference/list_applicationdiscoveryarsenal.html
+436,Database Query Metadata Service,dbqms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_databasequerymetadataservice.html
+437,Network Flow Monitor,networkflowmonitor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_networkflowmonitor.html
+438,Service Quotas,servicequotas,https://docs.aws.amazon.com/service-authorization/latest/reference/list_servicequotas.html
+439,Tag Editor,resource-explorer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_tageditor.html

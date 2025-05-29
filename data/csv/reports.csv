@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10289
-Actions by type,Read Actions,5006
-Actions by type,List Actions,3050
+Actions by type,Write Actions,10284
+Actions by type,Read Actions,5003
+Actions by type,List Actions,3046
 Actions by type,Permissions Actions,331
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -27,12 +27,12 @@ Longest service prefixes,license-manager-linux-subscriptions,35
 Longest service prefixes,license-manager-user-subscriptions,34
 Longest service prefixes,partnercentral-account-management,33
 Longest service prefixes,sagemaker-data-science-assistant,32
-Longest service prefixes,sagemaker-groundtruth-synthetic,31
 Longest service prefixes,route53-recovery-control-config,31
 Longest service prefixes,elemental-appliances-software,29
 Longest service prefixes,marketplacecommerceanalytics,28
 Longest service prefixes,application-transformation,26
 Longest service prefixes,aws-marketplace-management,26
+Longest service prefixes,codedeploy-commands-secure,26
 Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},123
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},122
 Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},108
@@ -95,6 +95,6 @@ Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
 Summary,Total number of distinct resource ARNS,1914
 Summary,Total number of distinct condition keys,1185
-Summary,Total number of services,440
-Summary,Average number of actions per service,42
+Summary,Total number of services,439
+Summary,Average number of actions per service,43
 Summary,Median number of actions per service,29
