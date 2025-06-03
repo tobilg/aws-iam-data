@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2025-06-03",
+    "addedServices": [],
+    "removedServices": [
+      "AWS Service for managing account level display settings"
+    ],
+    "addedActions": {
+      "Amazon EC2": [
+        "ec2:CreateDelegateMacVolumeOwnershipTask",
+        "ec2:CreateMacSystemIntegrityProtectionModificationTask",
+        "ec2:DescribeMacModificationTasks",
+        "ec2:ModifyPublicIpDnsNameOptions"
+      ]
+    },
+    "removedActions": {
+      "AWS Service for managing account level display settings": [
+        "uxc:DeleteAccountColor",
+        "uxc:GetAccountColor",
+        "uxc:PutAccountColor"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-05-30",
     "addedServices": [],
     "removedServices": [],

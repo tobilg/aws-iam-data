@@ -1,5 +1,5 @@
 {
-  "serviceCount": 439,
+  "serviceCount": 438,
   "services": [
     {
       "name": "AWS Account Management",
@@ -8726,7 +8726,7 @@
       "name": "Amazon EC2",
       "servicePrefix": "ec2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html",
-      "actionsCount": 697,
+      "actionsCount": 701,
       "actions": [
         "AcceptAddressTransfer",
         "AcceptCapacityReservationBillingOwnership",
@@ -8801,6 +8801,7 @@
         "CreateCustomerGateway",
         "CreateDefaultSubnet",
         "CreateDefaultVpc",
+        "CreateDelegateMacVolumeOwnershipTask",
         "CreateDhcpOptions",
         "CreateEgressOnlyInternetGateway",
         "CreateFleet",
@@ -8826,6 +8827,7 @@
         "CreateLocalGatewayRouteTableVpcAssociation",
         "CreateLocalGatewayVirtualInterface",
         "CreateLocalGatewayVirtualInterfaceGroup",
+        "CreateMacSystemIntegrityProtectionModificationTask",
         "CreateManagedPrefixList",
         "CreateNatGateway",
         "CreateNetworkAcl",
@@ -9054,6 +9056,7 @@
         "DescribeLocalGateways",
         "DescribeLockedSnapshots",
         "DescribeMacHosts",
+        "DescribeMacModificationTasks",
         "DescribeManagedPrefixLists",
         "DescribeMovingAddresses",
         "DescribeNatGateways",
@@ -9311,6 +9314,7 @@
         "ModifyManagedPrefixList",
         "ModifyNetworkInterfaceAttribute",
         "ModifyPrivateDnsNameOptions",
+        "ModifyPublicIpDnsNameOptions",
         "ModifyReservedInstances",
         "ModifyRouteServer",
         "ModifySecurityGroupRules",
@@ -9426,7 +9430,7 @@
         "UpdateSecurityGroupRuleDescriptionsIngress",
         "WithdrawByoipCidr"
       ],
-      "resourceTypesCount": 97,
+      "resourceTypesCount": 98,
       "resourceTypes": [
         "elastic-ip",
         "capacity-reservation-fleet",
@@ -9471,6 +9475,7 @@
         "local-gateway-route-table",
         "local-gateway-virtual-interface-group",
         "local-gateway-virtual-interface",
+        "mac-modification-task",
         "natgateway",
         "network-acl",
         "network-insights-access-scope-analysis",
@@ -25128,21 +25133,6 @@
         "Portfolio",
         "Product"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
-    },
-    {
-      "name": "AWS Service for managing account level display settings",
-      "servicePrefix": "uxc",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceformanagingaccountleveldisplaysettings.html",
-      "actionsCount": 3,
-      "actions": [
-        "DeleteAccountColor",
-        "GetAccountColor",
-        "PutAccountColor"
-      ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
       "conditionKeysCount": 0,
       "conditionKeys": []
     },
