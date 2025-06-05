@@ -11798,7 +11798,7 @@
       "name": "AWS Entity Resolution",
       "servicePrefix": "entityresolution",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsentityresolution.html",
-      "actionsCount": 39,
+      "actionsCount": 40,
       "actions": [
         "AddPolicyStatement",
         "BatchDeleteUniqueId",
@@ -11811,6 +11811,7 @@
         "DeleteMatchingWorkflow",
         "DeletePolicyStatement",
         "DeleteSchemaMapping",
+        "GenerateMatchId",
         "GetIdMappingJob",
         "GetIdMappingWorkflow",
         "GetIdNamespace",
@@ -21847,7 +21848,7 @@
       "name": "Amazon RDS",
       "servicePrefix": "rds",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrds.html",
-      "actionsCount": 168,
+      "actionsCount": 169,
       "actions": [
         "AddRoleToDBCluster",
         "AddRoleToDBInstance",
@@ -21921,6 +21922,7 @@
         "DescribeDBInstanceAutomatedBackups",
         "DescribeDBInstances",
         "DescribeDBLogFiles",
+        "DescribeDBMajorEngineVersions",
         "DescribeDBParameterGroups",
         "DescribeDBParameters",
         "DescribeDBProxies",
