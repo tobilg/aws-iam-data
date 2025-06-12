@@ -1,5 +1,44 @@
 [
   {
+    "dateOfChange": "2025-06-12",
+    "addedServices": [
+      "Amazon Elastic Virtualization Service",
+      "AWS WorkSpaces Managed Instances"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Elastic Virtualization Service": [
+        "evs:CreateEnvironment",
+        "evs:CreateEnvironmentHost",
+        "evs:DeleteEnvironment",
+        "evs:DeleteEnvironmentHost",
+        "evs:GetEnvironment",
+        "evs:ListEnvironmentHosts",
+        "evs:ListEnvironmentVlans",
+        "evs:ListEnvironments",
+        "evs:ListTagsForResource",
+        "evs:TagResource",
+        "evs:UntagResource"
+      ],
+      "AWS WorkSpaces Managed Instances": [
+        "workspaces-instances:AssociateVolume",
+        "workspaces-instances:CreateVolume",
+        "workspaces-instances:CreateWorkspaceInstance",
+        "workspaces-instances:DeleteVolume",
+        "workspaces-instances:DeleteWorkspaceInstance",
+        "workspaces-instances:DisassociateVolume",
+        "workspaces-instances:GetWorkspaceInstance",
+        "workspaces-instances:ListInstanceTypes",
+        "workspaces-instances:ListRegions",
+        "workspaces-instances:ListTagsForResource",
+        "workspaces-instances:ListWorkspaceInstances",
+        "workspaces-instances:TagResource",
+        "workspaces-instances:UntagResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-06-11",
     "addedServices": [],
     "removedServices": [],

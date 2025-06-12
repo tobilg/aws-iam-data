@@ -1,5 +1,5 @@
 {
-  "serviceCount": 438,
+  "serviceCount": 440,
   "services": [
     {
       "name": "AWS Account Management",
@@ -10822,6 +10822,35 @@
       ],
       "conditionKeysCount": 0,
       "conditionKeys": []
+    },
+    {
+      "name": "Amazon Elastic Virtualization Service",
+      "servicePrefix": "evs",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticvirtualizationservice.html",
+      "actionsCount": 11,
+      "actions": [
+        "CreateEnvironment",
+        "CreateEnvironmentHost",
+        "DeleteEnvironment",
+        "DeleteEnvironmentHost",
+        "GetEnvironment",
+        "ListEnvironmentHosts",
+        "ListEnvironmentVlans",
+        "ListEnvironments",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource"
+      ],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "environment"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "Amazon ElastiCache",
@@ -28544,6 +28573,38 @@
       "resourceTypes": [],
       "conditionKeysCount": 0,
       "conditionKeys": []
+    },
+    {
+      "name": "AWS WorkSpaces Managed Instances",
+      "servicePrefix": "workspaces-instances",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsworkspacesmanagedinstances.html",
+      "actionsCount": 13,
+      "actions": [
+        "AssociateVolume",
+        "CreateVolume",
+        "CreateWorkspaceInstance",
+        "DeleteVolume",
+        "DeleteWorkspaceInstance",
+        "DisassociateVolume",
+        "GetWorkspaceInstance",
+        "ListInstanceTypes",
+        "ListRegions",
+        "ListTagsForResource",
+        "ListWorkspaceInstances",
+        "TagResource",
+        "UntagResource"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "WorkspaceInstanceId",
+        "VolumeId"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "Amazon WorkSpaces Secure Browser",
