@@ -6956,10 +6956,11 @@
       "name": "AWS Control Catalog",
       "servicePrefix": "controlcatalog",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscontrolcatalog.html",
-      "actionsCount": 5,
+      "actionsCount": 6,
       "actions": [
         "GetControl",
         "ListCommonControls",
+        "ListControlMappings",
         "ListControls",
         "ListDomains",
         "ListObjectives"
