@@ -1,5 +1,5 @@
 {
-  "serviceCount": 440,
+  "serviceCount": 441,
   "services": [
     {
       "name": "AWS Account Management",
@@ -5821,7 +5821,7 @@
       "name": "Amazon Cognito User Pools",
       "servicePrefix": "cognito-idp",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitouserpools.html",
-      "actionsCount": 112,
+      "actionsCount": 113,
       "actions": [
         "AddCustomAttributes",
         "AdminAddUserToGroup",
@@ -5891,6 +5891,7 @@
         "GetIdentityProviderByIdentifier",
         "GetLogDeliveryConfiguration",
         "GetSigningCertificate",
+        "GetTokensFromRefreshToken",
         "GetUICustomization",
         "GetUser",
         "GetUserAttributeVerificationCode",
@@ -10825,9 +10826,9 @@
       "conditionKeys": []
     },
     {
-      "name": "Amazon Elastic Virtualization Service",
+      "name": "Amazon Elastic VMware Service",
       "servicePrefix": "evs",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticvirtualizationservice.html",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticvmwareservice.html",
       "actionsCount": 11,
       "actions": [
         "CreateEnvironment",
@@ -26435,6 +26436,29 @@
         "RedeemSlackOauthCode",
         "RegisterSlackWorkspaceForOrganization",
         "UpdateSlackChannelConfiguration"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
+      "name": "AWS Support Console",
+      "servicePrefix": "support-console",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupportconsole.html",
+      "actionsCount": 11,
+      "actions": [
+        "CheckSubscription",
+        "CreateCaseDraft",
+        "CreateContact",
+        "DeleteCaseDraft",
+        "DescribeDynamicHelp",
+        "GetAccountGovCloudEnabled",
+        "GetAccountState",
+        "GetBanner",
+        "GetCaseDraft",
+        "GetQuestionnaire",
+        "SaveFeedback"
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],

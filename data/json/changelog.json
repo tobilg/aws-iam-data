@@ -1,5 +1,61 @@
 [
   {
+    "dateOfChange": "2025-06-14",
+    "addedServices": [
+      "Amazon Elastic VMware Service",
+      "AWS Support Console"
+    ],
+    "removedServices": [
+      "Amazon Elastic Virtualization Service"
+    ],
+    "addedActions": {
+      "Amazon Cognito User Pools": [
+        "cognito-idp:GetTokensFromRefreshToken"
+      ],
+      "Amazon Elastic VMware Service": [
+        "evs:CreateEnvironment",
+        "evs:CreateEnvironmentHost",
+        "evs:DeleteEnvironment",
+        "evs:DeleteEnvironmentHost",
+        "evs:GetEnvironment",
+        "evs:ListEnvironmentHosts",
+        "evs:ListEnvironmentVlans",
+        "evs:ListEnvironments",
+        "evs:ListTagsForResource",
+        "evs:TagResource",
+        "evs:UntagResource"
+      ],
+      "AWS Support Console": [
+        "support-console:CheckSubscription",
+        "support-console:CreateCaseDraft",
+        "support-console:CreateContact",
+        "support-console:DeleteCaseDraft",
+        "support-console:DescribeDynamicHelp",
+        "support-console:GetAccountGovCloudEnabled",
+        "support-console:GetAccountState",
+        "support-console:GetBanner",
+        "support-console:GetCaseDraft",
+        "support-console:GetQuestionnaire",
+        "support-console:SaveFeedback"
+      ]
+    },
+    "removedActions": {
+      "Amazon Elastic Virtualization Service": [
+        "evs:CreateEnvironment",
+        "evs:CreateEnvironmentHost",
+        "evs:DeleteEnvironment",
+        "evs:DeleteEnvironmentHost",
+        "evs:GetEnvironment",
+        "evs:ListEnvironmentHosts",
+        "evs:ListEnvironmentVlans",
+        "evs:ListEnvironments",
+        "evs:ListTagsForResource",
+        "evs:TagResource",
+        "evs:UntagResource"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-06-13",
     "addedServices": [],
     "removedServices": [],
