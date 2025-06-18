@@ -1,5 +1,33 @@
 [
   {
+    "dateOfChange": "2025-06-18",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Network Firewall": [
+        "network-firewall:AcceptNetworkFirewallTransitGatewayAttachment",
+        "network-firewall:AssociateAvailabilityZones",
+        "network-firewall:DeleteNetworkFirewallTransitGatewayAttachment",
+        "network-firewall:DisassociateAvailabilityZones",
+        "network-firewall:RejectNetworkFirewallTransitGatewayAttachment",
+        "network-firewall:UpdateAvailabilityZoneChangeProtection"
+      ],
+      "AWS Security Hub": [
+        "securityhub:GetResourcesStatisticsV2",
+        "securityhub:ListAggregatorsV2"
+      ]
+    },
+    "removedActions": {
+      "Amazon Braket": [
+        "braket:AccessBraketFeature"
+      ],
+      "AWS Security Hub": [
+        "securityhub:GetResourceStatisticsV2",
+        "securityhub:ListAggregatorV2s"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-06-14",
     "addedServices": [
       "Amazon Elastic VMware Service",
