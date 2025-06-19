@@ -1,5 +1,58 @@
 [
   {
+    "dateOfChange": "2025-06-19",
+    "addedServices": [
+      "Multi-party approval"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Backup": [
+        "backup:AssociateBackupVaultMpaApprovalTeam",
+        "backup:CreateRestoreAccessBackupVault",
+        "backup:DisassociateBackupVaultMpaApprovalTeam",
+        "backup:ListRestoreAccessBackupVaults",
+        "backup:RevokeRestoreAccessBackupVault"
+      ],
+      "AWS Certificate Manager": [
+        "acm:RevokeCertificate"
+      ],
+      "Amazon Lex V2": [
+        "lex:CreateResourcePolicyStatement",
+        "lex:DeleteResourcePolicyStatement"
+      ],
+      "AWS Support": [
+        "support:UpdateInteraction"
+      ],
+      "Multi-party approval": [
+        "mpa:CancelSession",
+        "mpa:CreateApprovalTeam",
+        "mpa:CreateIdentitySource",
+        "mpa:DeleteIdentitySource",
+        "mpa:DeleteInactiveApprovalTeamVersion",
+        "mpa:DeleteResourcePolicy",
+        "mpa:GetApprovalTeam",
+        "mpa:GetIdentitySource",
+        "mpa:GetPolicyVersion",
+        "mpa:GetResourcePolicy",
+        "mpa:GetSession",
+        "mpa:ListApprovalTeams",
+        "mpa:ListIdentitySources",
+        "mpa:ListPolicies",
+        "mpa:ListPolicyVersions",
+        "mpa:ListResourcePolicies",
+        "mpa:ListSessions",
+        "mpa:ListTagsForResource",
+        "mpa:PutResourcePolicy",
+        "mpa:StartActiveApprovalTeamDeletion",
+        "mpa:StartSession",
+        "mpa:TagResource",
+        "mpa:UntagResource",
+        "mpa:UpdateApprovalTeam"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-06-18",
     "addedServices": [],
     "removedServices": [],

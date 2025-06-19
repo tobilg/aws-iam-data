@@ -1,5 +1,5 @@
 {
-  "serviceCount": 441,
+  "serviceCount": 442,
   "services": [
     {
       "name": "AWS Account Management",
@@ -1982,8 +1982,9 @@
       "name": "AWS Backup",
       "servicePrefix": "backup",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackup.html",
-      "actionsCount": 101,
+      "actionsCount": 106,
       "actions": [
+        "AssociateBackupVaultMpaApprovalTeam",
         "CancelLegalHold",
         "CopyFromBackupVault",
         "CopyIntoBackupVault",
@@ -1994,6 +1995,7 @@
         "CreateLegalHold",
         "CreateLogicallyAirGappedBackupVault",
         "CreateReportPlan",
+        "CreateRestoreAccessBackupVault",
         "CreateRestoreTestingPlan",
         "CreateRestoreTestingSelection",
         "DeleteBackupPlan",
@@ -2019,6 +2021,7 @@
         "DescribeReportJob",
         "DescribeReportPlan",
         "DescribeRestoreJob",
+        "DisassociateBackupVaultMpaApprovalTeam",
         "DisassociateRecoveryPoint",
         "DisassociateRecoveryPointFromParent",
         "ExportBackupPlanTemplate",
@@ -2057,6 +2060,7 @@
         "ListRecoveryPointsByResource",
         "ListReportJobs",
         "ListReportPlans",
+        "ListRestoreAccessBackupVaults",
         "ListRestoreJobSummaries",
         "ListRestoreJobs",
         "ListRestoreJobsByProtectedResource",
@@ -2068,6 +2072,7 @@
         "PutBackupVaultNotifications",
         "PutBackupVaultSharingPolicy",
         "PutRestoreValidationResult",
+        "RevokeRestoreAccessBackupVault",
         "SearchRecoveryPoint",
         "StartBackupJob",
         "StartCopyJob",
@@ -2096,7 +2101,7 @@
         "legalHold",
         "restoreTestingPlan"
       ],
-      "conditionKeysCount": 10,
+      "conditionKeysCount": 11,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -2107,7 +2112,8 @@
         "backup:FrameworkArns",
         "backup:Index",
         "backup:MaxRetentionDays",
-        "backup:MinRetentionDays"
+        "backup:MinRetentionDays",
+        "backup:MpaApprovalTeamArn"
       ]
     },
     {
@@ -2841,7 +2847,7 @@
       "name": "AWS Certificate Manager",
       "servicePrefix": "acm",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscertificatemanager.html",
-      "actionsCount": 15,
+      "actionsCount": 16,
       "actions": [
         "AddTagsToCertificate",
         "DeleteCertificate",
@@ -2857,17 +2863,19 @@
         "RenewCertificate",
         "RequestCertificate",
         "ResendValidationEmail",
+        "RevokeCertificate",
         "UpdateCertificateOptions"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
         "certificate"
       ],
-      "conditionKeysCount": 8,
+      "conditionKeysCount": 9,
       "conditionKeys": [
         "acm:CertificateAuthority",
         "acm:CertificateTransparencyLogging",
         "acm:DomainNames",
+        "acm:Export",
         "acm:KeyAlgorithm",
         "acm:ValidationMethod",
         "aws:RequestTag/${TagKey}",
@@ -16961,7 +16969,7 @@
       "name": "Amazon Lex V2",
       "servicePrefix": "lex",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlexv2.html",
-      "actionsCount": 112,
+      "actionsCount": 114,
       "actions": [
         "BatchCreateCustomVocabularyItem",
         "BatchDeleteCustomVocabularyItem",
@@ -16977,6 +16985,7 @@
         "CreateExport",
         "CreateIntent",
         "CreateResourcePolicy",
+        "CreateResourcePolicyStatement",
         "CreateSlot",
         "CreateSlotType",
         "CreateTestSet",
@@ -16993,6 +17002,7 @@
         "DeleteImport",
         "DeleteIntent",
         "DeleteResourcePolicy",
+        "DeleteResourcePolicyStatement",
         "DeleteSession",
         "DeleteSlot",
         "DeleteSlotType",
@@ -19118,6 +19128,52 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "Multi-party approval",
+      "servicePrefix": "mpa",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_multi-partyapproval.html",
+      "actionsCount": 24,
+      "actions": [
+        "CancelSession",
+        "CreateApprovalTeam",
+        "CreateIdentitySource",
+        "DeleteIdentitySource",
+        "DeleteInactiveApprovalTeamVersion",
+        "DeleteResourcePolicy",
+        "GetApprovalTeam",
+        "GetIdentitySource",
+        "GetPolicyVersion",
+        "GetResourcePolicy",
+        "GetSession",
+        "ListApprovalTeams",
+        "ListIdentitySources",
+        "ListPolicies",
+        "ListPolicyVersions",
+        "ListResourcePolicies",
+        "ListSessions",
+        "ListTagsForResource",
+        "PutResourcePolicy",
+        "StartActiveApprovalTeamDeletion",
+        "StartSession",
+        "TagResource",
+        "UntagResource",
+        "UpdateApprovalTeam"
+      ],
+      "resourceTypesCount": 3,
+      "resourceTypes": [
+        "approval-team",
+        "identity-source",
+        "session"
+      ],
+      "conditionKeysCount": 5,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "mpa:ProtectedResourceAccount",
+        "mpa:RequestedOperation"
       ]
     },
     {
@@ -26385,7 +26441,7 @@
       "name": "AWS Support",
       "servicePrefix": "support",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupport.html",
-      "actionsCount": 29,
+      "actionsCount": 30,
       "actions": [
         "AddAttachmentsToSet",
         "AddCommunicationToCase",
@@ -26415,7 +26471,8 @@
         "ResolveCase",
         "SearchForCases",
         "StartInteraction",
-        "UpdateCaseSeverity"
+        "UpdateCaseSeverity",
+        "UpdateInteraction"
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],
