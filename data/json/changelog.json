@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2025-06-20",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect Customer Profiles": [
+        "profile:CreateUploadJob",
+        "profile:GetUploadJob",
+        "profile:GetUploadJobPath",
+        "profile:ListUploadJobs",
+        "profile:StartUploadJob",
+        "profile:StopUploadJob"
+      ],
+      "Amazon Connect Outbound Campaigns": [
+        "connect-campaigns:GetInstanceCommunicationLimits",
+        "connect-campaigns:PutInstanceCommunicationLimits"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-06-19",
     "addedServices": [
       "Multi-party approval"
