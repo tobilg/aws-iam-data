@@ -61,7 +61,7 @@
       "name": "Amazon AI Operations",
       "servicePrefix": "aiops",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonaioperations.html",
-      "actionsCount": 22,
+      "actionsCount": 23,
       "actions": [
         "CreateInvestigation",
         "CreateInvestigationEvent",
@@ -84,7 +84,8 @@
         "UntagResource",
         "UpdateInvestigation",
         "UpdateInvestigationEvent",
-        "UpdateInvestigationGroup"
+        "UpdateInvestigationGroup",
+        "ValidateInvestigationGroup"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
@@ -3642,7 +3643,7 @@
       "name": "AWS Cloud9",
       "servicePrefix": "cloud9",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloud9.html",
-      "actionsCount": 30,
+      "actionsCount": 29,
       "actions": [
         "ActivateEC2Remote",
         "CreateEnvironmentEC2",
@@ -3672,8 +3673,7 @@
         "UpdateEnvironmentSettings",
         "UpdateMembershipSettings",
         "UpdateSSHRemote",
-        "UpdateUserSettings",
-        "ValidateEnvironmentName"
+        "UpdateUserSettings"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
@@ -12598,7 +12598,7 @@
       "name": "Amazon FSx",
       "servicePrefix": "fsx",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfsx.html",
-      "actionsCount": 53,
+      "actionsCount": 56,
       "actions": [
         "AssociateFileGateway",
         "AssociateFileSystemAliases",
@@ -12606,6 +12606,7 @@
         "CancelDataRepositoryTask",
         "CopyBackup",
         "CopySnapshotAndUpdateVolume",
+        "CreateAndAttachS3AccessPoint",
         "CreateBackup",
         "CreateDataRepositoryAssociation",
         "CreateDataRepositoryTask",
@@ -12631,10 +12632,12 @@
         "DescribeFileCaches",
         "DescribeFileSystemAliases",
         "DescribeFileSystems",
+        "DescribeS3AccessPointAttachments",
         "DescribeSharedVpcConfiguration",
         "DescribeSnapshots",
         "DescribeStorageVirtualMachines",
         "DescribeVolumes",
+        "DetachAndDeleteS3AccessPoint",
         "DisassociateFileGateway",
         "DisassociateFileSystemAliases",
         "GetResourcePolicy",
@@ -12670,9 +12673,9 @@
       ]
     },
     {
-      "name": "Amazon GameLift",
+      "name": "Amazon GameLift Servers",
       "servicePrefix": "gamelift",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongamelift.html",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongameliftservers.html",
       "actionsCount": 118,
       "actions": [
         "AcceptMatch",
