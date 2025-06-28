@@ -1,8 +1,8 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10331
-Actions by type,Read Actions,5030
-Actions by type,List Actions,3069
-Actions by type,Permissions Actions,354
+Actions by type,Write Actions,10348
+Actions by type,Read Actions,5038
+Actions by type,List Actions,3071
+Actions by type,Permissions Actions,355
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
@@ -35,7 +35,7 @@ Longest service prefixes,aws-marketplace-management,26
 Longest service prefixes,codedeploy-commands-secure,26
 Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},123
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},122
-Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},108
+Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},109
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},88
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},87
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},83
@@ -93,8 +93,8 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1925
+Summary,Total number of distinct resource ARNS,1926
 Summary,Total number of distinct condition keys,1190
 Summary,Total number of services,442
-Summary,Average number of actions per service,42
+Summary,Average number of actions per service,43
 Summary,Median number of actions per service,29
