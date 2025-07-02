@@ -1,5 +1,80 @@
 [
   {
+    "dateOfChange": "2025-07-02",
+    "addedServices": [
+      "AWS Service - Oracle Database@AWS"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon API Gateway Management V2": [
+        "apigateway:CreateRoutingRule",
+        "apigateway:DeleteRoutingRule",
+        "apigateway:GetRoutingRule",
+        "apigateway:ListRoutingRule",
+        "apigateway:UpdateRoutingRule"
+      ],
+      "Amazon DynamoDB": [
+        "dynamodb:CreateGlobalTableWitness",
+        "dynamodb:DeleteGlobalTableWitness"
+      ],
+      "Amazon Keyspaces (for Apache Cassandra)": [
+        "cassandra:GetRecords",
+        "cassandra:GetShardIterator",
+        "cassandra:GetStream",
+        "cassandra:ListStreams"
+      ],
+      "AWS Service - Oracle Database@AWS": [
+        "odb:AcceptMarketplaceRegistration",
+        "odb:CreateCloudAutonomousVmCluster",
+        "odb:CreateCloudExadataInfrastructure",
+        "odb:CreateCloudVmCluster",
+        "odb:CreateDbNode",
+        "odb:CreateOdbNetwork",
+        "odb:CreateOdbPeeringConnection",
+        "odb:CreateOutboundIntegration",
+        "odb:DeleteCloudAutonomousVmCluster",
+        "odb:DeleteCloudExadataInfrastructure",
+        "odb:DeleteCloudVmCluster",
+        "odb:DeleteDbNode",
+        "odb:DeleteOdbNetwork",
+        "odb:DeleteOdbPeeringConnection",
+        "odb:DeleteResourcePolicy",
+        "odb:GetCloudAutonomousVmCluster",
+        "odb:GetCloudExadataInfrastructure",
+        "odb:GetCloudExadataInfrastructureUnallocatedResources",
+        "odb:GetCloudVmCluster",
+        "odb:GetDbNode",
+        "odb:GetDbServer",
+        "odb:GetOciOnboardingStatus",
+        "odb:GetOdbNetwork",
+        "odb:GetOdbPeeringConnection",
+        "odb:GetResourcePolicy",
+        "odb:InitializeService",
+        "odb:ListAutonomousVirtualMachines",
+        "odb:ListCloudAutonomousVmClusters",
+        "odb:ListCloudExadataInfrastructures",
+        "odb:ListCloudVmClusters",
+        "odb:ListDbNodes",
+        "odb:ListDbServers",
+        "odb:ListDbSystemShapes",
+        "odb:ListGiVersions",
+        "odb:ListOdbNetworks",
+        "odb:ListOdbPeeringConnections",
+        "odb:ListSystemVersions",
+        "odb:ListTagsForResource",
+        "odb:PutResourcePolicy",
+        "odb:RebootDbNode",
+        "odb:StartDbNode",
+        "odb:StopDbNode",
+        "odb:TagResource",
+        "odb:UntagResource",
+        "odb:UpdateCloudExadataInfrastructure",
+        "odb:UpdateOdbNetwork"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-06-28",
     "addedServices": [
       "AWS IoT Managed Integrations"
