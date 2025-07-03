@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2025-07-03",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon AppIntegrations": [
+        "app-integrations:CreateDataIntegrationSchedule",
+        "app-integrations:GetDataIntegrationExecution",
+        "app-integrations:GetDataIntegrationSchedule",
+        "app-integrations:ListDataIntegrationExecutions",
+        "app-integrations:ListDataIntegrationSchedules",
+        "app-integrations:StartDataIntegrationExecution",
+        "app-integrations:UpdateDataIntegrationSchedule"
+      ]
+    },
+    "removedActions": {
+      "AWS Artifact": [
+        "artifact:DownloadAgreement",
+        "artifact:Get"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-07-02",
     "addedServices": [
       "AWS Service - Oracle Database@AWS"
