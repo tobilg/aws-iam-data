@@ -21343,7 +21343,7 @@
       "name": "Amazon Q Business",
       "servicePrefix": "qbusiness",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusiness.html",
-      "actionsCount": 92,
+      "actionsCount": 97,
       "actions": [
         "AddUserLicenses",
         "AllowVendedLogDeliveryForResource",
@@ -21356,6 +21356,7 @@
         "CheckDocumentAccess",
         "CreateAnonymousWebExperienceUrl",
         "CreateApplication",
+        "CreateChatResponseConfiguration",
         "CreateDataAccessor",
         "CreateDataAccessorWithTti",
         "CreateDataSource",
@@ -21370,6 +21371,7 @@
         "DeleteApplication",
         "DeleteAttachment",
         "DeleteChatControlsConfiguration",
+        "DeleteChatResponseConfiguration",
         "DeleteConversation",
         "DeleteDataAccessor",
         "DeleteDataSource",
@@ -21384,6 +21386,7 @@
         "DisassociatePermission",
         "GetApplication",
         "GetChatControlsConfiguration",
+        "GetChatResponseConfiguration",
         "GetDataAccessor",
         "GetDataSource",
         "GetGroup",
@@ -21398,6 +21401,7 @@
         "GetWebExperience",
         "ListApplications",
         "ListAttachments",
+        "ListChatResponseConfigurations",
         "ListConversations",
         "ListDataAccessors",
         "ListDataSourceSyncJobs",
@@ -21428,6 +21432,7 @@
         "UntagResource",
         "UpdateApplication",
         "UpdateChatControlsConfiguration",
+        "UpdateChatResponseConfiguration",
         "UpdateDataAccessor",
         "UpdateDataSource",
         "UpdateIndex",
@@ -21438,7 +21443,7 @@
         "UpdateUser",
         "UpdateWebExperience"
       ],
-      "resourceTypesCount": 10,
+      "resourceTypesCount": 11,
       "resourceTypes": [
         "application",
         "integration",
@@ -21449,7 +21454,8 @@
         "web-experience",
         "user-license",
         "subscription",
-        "data-accessor"
+        "data-accessor",
+        "chat-response-configuration"
       ],
       "conditionKeysCount": 5,
       "conditionKeys": [
@@ -23782,7 +23788,7 @@
       "name": "Amazon S3 Express",
       "servicePrefix": "s3express",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3express.html",
-      "actionsCount": 21,
+      "actionsCount": 24,
       "actions": [
         "CreateAccessPoint",
         "CreateBucket",
@@ -23800,21 +23806,28 @@
         "GetLifecycleConfiguration",
         "ListAccessPointsForDirectoryBuckets",
         "ListAllMyDirectoryBuckets",
+        "ListTagsForResource",
         "PutAccessPointPolicy",
         "PutAccessPointScope",
         "PutBucketPolicy",
         "PutEncryptionConfiguration",
-        "PutLifecycleConfiguration"
+        "PutLifecycleConfiguration",
+        "TagResource",
+        "UntagResource"
       ],
       "resourceTypesCount": 2,
       "resourceTypes": [
         "bucket",
         "accesspoint"
       ],
-      "conditionKeysCount": 15,
+      "conditionKeysCount": 19,
       "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
         "s3express:AccessPointNetworkOrigin",
         "s3express:AllAccessRestrictedToLocalZoneGroup",
+        "s3express:BucketTag/${TagKey}",
         "s3express:DataAccessPointAccount",
         "s3express:DataAccessPointArn",
         "s3express:LocationName",

@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2025-07-04",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Q Business": [
+        "qbusiness:CreateChatResponseConfiguration",
+        "qbusiness:DeleteChatResponseConfiguration",
+        "qbusiness:GetChatResponseConfiguration",
+        "qbusiness:ListChatResponseConfigurations",
+        "qbusiness:UpdateChatResponseConfiguration"
+      ],
+      "Amazon S3 Express": [
+        "s3express:ListTagsForResource",
+        "s3express:TagResource",
+        "s3express:UntagResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-07-03",
     "addedServices": [],
     "removedServices": [],
