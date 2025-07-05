@@ -1,5 +1,18 @@
 [
   {
+    "dateOfChange": "2025-07-05",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Shield": [
+        "shield:DescribeAttackContributors",
+        "shield:GetGlobalThreatData",
+        "shield:ListMitigations"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-07-04",
     "addedServices": [],
     "removedServices": [],

@@ -25215,7 +25215,7 @@
     {
       "name": "AWS Service - Oracle Database@AWS",
       "servicePrefix": "odb",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservice-oracledatabaseataws.html",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservice-oracledatabase_aws.html",
       "actionsCount": 46,
       "actions": [
         "AcceptMarketplaceRegistration",
@@ -25600,7 +25600,7 @@
       "name": "AWS Shield",
       "servicePrefix": "shield",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsshield.html",
-      "actionsCount": 36,
+      "actionsCount": 39,
       "actions": [
         "AssociateDRTLogBucket",
         "AssociateDRTRole",
@@ -25613,6 +25613,7 @@
         "DeleteProtectionGroup",
         "DeleteSubscription",
         "DescribeAttack",
+        "DescribeAttackContributors",
         "DescribeAttackStatistics",
         "DescribeDRTAccess",
         "DescribeEmergencyContactSettings",
@@ -25626,8 +25627,10 @@
         "DisassociateHealthCheck",
         "EnableApplicationLayerAutomaticResponse",
         "EnableProactiveEngagement",
+        "GetGlobalThreatData",
         "GetSubscriptionState",
         "ListAttacks",
+        "ListMitigations",
         "ListProtectionGroups",
         "ListProtections",
         "ListResourcesInProtectionGroup",
