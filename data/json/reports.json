@@ -2,15 +2,15 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 10383
+      "value": 10404
     },
     {
       "key": "Read Actions",
-      "value": 5063
+      "value": 5078
     },
     {
       "key": "List Actions",
-      "value": 3084
+      "value": 3094
     },
     {
       "key": "Permissions Actions",
@@ -181,8 +181,8 @@
       "value": 74
     },
     {
-      "key": "stack - arn:${Partition}:opsworks:${Region}:${Account}:stack/${StackId}/",
-      "value": 66
+      "key": "mlflow-tracking-server - arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-tracking-server/${MlflowTrackingServerName}",
+      "value": 70
     }
   ],
   "Services with least actions": [
@@ -234,7 +234,7 @@
     },
     {
       "key": "Amazon SageMaker",
-      "value": 392
+      "value": 398
     },
     {
       "key": "Amazon Chime",
@@ -262,7 +262,7 @@
     },
     {
       "key": "Amazon DataZone",
-      "value": 185
+      "value": 186
     },
     {
       "key": "AWS Identity and Access Management (IAM)",
@@ -398,7 +398,7 @@
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 443
+      "value": 445
     },
     {
       "key": "Average number of actions per service",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1934
+      "value": 1936
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 1198
+      "value": 1204
     }
   ]
 }
