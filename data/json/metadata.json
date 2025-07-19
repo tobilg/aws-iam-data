@@ -2314,7 +2314,7 @@
       "name": "Amazon Bedrock",
       "servicePrefix": "bedrock",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html",
-      "actionsCount": 196,
+      "actionsCount": 200,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "ApplyGuardrail",
@@ -2329,6 +2329,7 @@
         "CreateBlueprint",
         "CreateBlueprintVersion",
         "CreateCustomModel",
+        "CreateCustomModelDeployment",
         "CreateDataAutomationProject",
         "CreateDataSource",
         "CreateEvaluationJob",
@@ -2359,6 +2360,7 @@
         "DeleteAgentVersion",
         "DeleteBlueprint",
         "DeleteCustomModel",
+        "DeleteCustomModelDeployment",
         "DeleteDataAutomationProject",
         "DeleteDataSource",
         "DeleteFlow",
@@ -2395,6 +2397,7 @@
         "GetBlueprint",
         "GetBlueprintRecommendation",
         "GetCustomModel",
+        "GetCustomModelDeployment",
         "GetDataAutomationProject",
         "GetDataAutomationStatus",
         "GetDataSource",
@@ -2443,6 +2446,7 @@
         "ListAgents",
         "ListAsyncInvokes",
         "ListBlueprints",
+        "ListCustomModelDeployments",
         "ListCustomModels",
         "ListDataAutomationProjects",
         "ListDataSources",
@@ -2513,7 +2517,7 @@
         "UpdateSession",
         "ValidateFlowDefinition"
       ],
-      "resourceTypesCount": 31,
+      "resourceTypesCount": 32,
       "resourceTypes": [
         "foundation-model",
         "async-invoke",
@@ -2545,7 +2549,8 @@
         "blueprint",
         "data-automation-invocation-job",
         "data-automation-profile",
-        "session"
+        "session",
+        "custom-model-deployment"
       ],
       "conditionKeysCount": 8,
       "conditionKeys": [
@@ -13704,12 +13709,13 @@
       "name": "AWS HealthImaging",
       "servicePrefix": "medical-imaging",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthimaging.html",
-      "actionsCount": 25,
+      "actionsCount": 28,
       "actions": [
         "CopyImageSet",
         "CreateDatastore",
         "DeleteDatastore",
         "DeleteImageSet",
+        "GetDICOMBulkdata",
         "GetDICOMImportJob",
         "GetDICOMInstance",
         "GetDICOMInstanceFrames",
@@ -13728,6 +13734,8 @@
         "SearchDICOMStudies",
         "SearchImageSets",
         "StartDICOMImportJob",
+        "StoreDICOM",
+        "StoreDICOMStudy",
         "TagResource",
         "UntagResource",
         "UpdateImageSetMetadata"
@@ -18861,7 +18869,7 @@
       "name": "Amazon MemoryDB",
       "servicePrefix": "memorydb",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmemorydb.html",
-      "actionsCount": 46,
+      "actionsCount": 47,
       "actions": [
         "BatchUpdateCluster",
         "Connect",
@@ -18899,6 +18907,7 @@
         "ListAllowedMultiRegionClusterUpdates",
         "ListAllowedNodeTypeUpdates",
         "ListTags",
+        "PauseMultiRegionClusterReplication",
         "PurchaseReservedNodesOffering",
         "ResetParameterGroup",
         "TagResource",

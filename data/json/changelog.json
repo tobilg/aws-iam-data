@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2025-07-19",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:CreateCustomModelDeployment",
+        "bedrock:DeleteCustomModelDeployment",
+        "bedrock:GetCustomModelDeployment",
+        "bedrock:ListCustomModelDeployments"
+      ],
+      "AWS HealthImaging": [
+        "medical-imaging:GetDICOMBulkdata",
+        "medical-imaging:StoreDICOM",
+        "medical-imaging:StoreDICOMStudy"
+      ],
+      "Amazon MemoryDB": [
+        "memorydb:PauseMultiRegionClusterReplication"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-07-17",
     "addedServices": [
       "Amazon Bedrock Agentcore"
