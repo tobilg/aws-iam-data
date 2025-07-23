@@ -9146,7 +9146,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 9145,248,apigateway:DeleteRoutingRule,https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/domainnames-domainname-routingrules-routingruleid.html#domainnames-domainname-routingrules-routingruleiddelete,false,Write
 9146,248,apigateway:GET,https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/api-reference.html,false,Read
 9147,248,apigateway:GetRoutingRule,https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/domainnames-domainname-routingrules-routingruleid.html#domainnames-domainname-routingrules-routingruleidget,false,Read
-9148,248,apigateway:ListRoutingRule,https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/domainnames-domainname-routingrules.html#domainnames-domainname-routingrulesget,false,List
+9148,248,apigateway:ListRoutingRules,https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/domainnames-domainname-routingrules.html#domainnames-domainname-routingrulesget,false,List
 9149,248,apigateway:PATCH,https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/api-reference.html,false,Write
 9150,248,apigateway:POST,https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/api-reference.html,false,Write
 9151,248,apigateway:PUT,https://docs.aws.amazon.com/apigatewayv2/latest/api-reference/api-reference.html,false,Write
@@ -17341,7 +17341,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 17340,408,s3vectors:CreateVectorBucket,https://docs.aws.amazon.com/AmazonS3/latest/API/API_CreateVectorBucket.html,false,Write
 17341,408,s3vectors:DeleteIndex,https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteIndex.html,false,Write
 17342,408,s3vectors:DeleteVectorBucket,https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteVectorBucket.html,false,Write
-17343,408,s3vectors:DeleteVectorBucketPolicy,https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteVectorBucketPolicy.html,false,Write
+17343,408,s3vectors:DeleteVectorBucketPolicy,https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteVectorBucketPolicy.html,false,Permissions management
 17344,408,s3vectors:DeleteVectors,https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteVectors.html,false,Write
 17345,408,s3vectors:GetIndex,https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetIndex.html,false,Read
 17346,408,s3vectors:GetVectorBucket,https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetVectorBucket.html,false,Read
@@ -17350,7 +17350,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 17349,408,s3vectors:ListIndexes,https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListIndexes.html,false,List
 17350,408,s3vectors:ListVectorBuckets,https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListVectorBuckets.html,false,List
 17351,408,s3vectors:ListVectors,https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListVectors.html,false,List
-17352,408,s3vectors:PutVectorBucketPolicy,https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutVectorBucketPolicy.html,false,Write
+17352,408,s3vectors:PutVectorBucketPolicy,https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutVectorBucketPolicy.html,false,Permissions management
 17353,408,s3vectors:PutVectors,https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutVectors.html,false,Write
 17354,408,s3vectors:QueryVectors,https://docs.aws.amazon.com/AmazonS3/latest/API/API_QueryVectors.html,false,Read
 17355,409,s3-outposts:AbortMultipartUpload,https://docs.aws.amazon.com/AmazonS3/latest/API/API_AbortMultipartUpload.html,false,Write
