@@ -1,5 +1,23 @@
 [
   {
+    "dateOfChange": "2025-07-24",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Billing": [
+        "billing:GetBillingViewData"
+      ],
+      "Amazon EC2": [
+        "ec2:DescribeCapacityBlockStatus",
+        "ec2:DescribeCapacityBlocks"
+      ],
+      "Amazon EMR Serverless": [
+        "emr-serverless:AccessSystemProfileLogs"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-07-23",
     "addedServices": [],
     "removedServices": [],

@@ -2678,7 +2678,7 @@
       "name": "AWS Billing",
       "servicePrefix": "billing",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbilling.html",
-      "actionsCount": 24,
+      "actionsCount": 25,
       "actions": [
         "CreateBillingView",
         "DeleteBillingView",
@@ -2688,6 +2688,7 @@
         "GetBillingNotifications",
         "GetBillingPreferences",
         "GetBillingView",
+        "GetBillingViewData",
         "GetContractInformation",
         "GetCredits",
         "GetIAMAccessPreference",
@@ -8881,7 +8882,7 @@
       "name": "Amazon EC2",
       "servicePrefix": "ec2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html",
-      "actionsCount": 702,
+      "actionsCount": 704,
       "actions": [
         "AcceptAddressTransfer",
         "AcceptCapacityReservationBillingOwnership",
@@ -9142,6 +9143,8 @@
         "DescribeCapacityBlockExtensionHistory",
         "DescribeCapacityBlockExtensionOfferings",
         "DescribeCapacityBlockOfferings",
+        "DescribeCapacityBlockStatus",
+        "DescribeCapacityBlocks",
         "DescribeCapacityReservationBillingRequests",
         "DescribeCapacityReservationFleets",
         "DescribeCapacityReservations",
@@ -9586,9 +9589,10 @@
         "UpdateSecurityGroupRuleDescriptionsIngress",
         "WithdrawByoipCidr"
       ],
-      "resourceTypesCount": 98,
+      "resourceTypesCount": 99,
       "resourceTypes": [
         "elastic-ip",
+        "capacity-block",
         "capacity-reservation-fleet",
         "capacity-reservation",
         "carrier-gateway",
@@ -9687,7 +9691,7 @@
         "vpn-connection",
         "vpn-gateway"
       ],
-      "conditionKeysCount": 137,
+      "conditionKeysCount": 138,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -9806,6 +9810,7 @@
         "ec2:SubnetID",
         "ec2:Tenancy",
         "ec2:VolumeID",
+        "ec2:VolumeInitializationRate",
         "ec2:VolumeIops",
         "ec2:VolumeSize",
         "ec2:VolumeThroughput",
@@ -11797,10 +11802,11 @@
       "name": "Amazon EMR Serverless",
       "servicePrefix": "emr-serverless",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonemrserverless.html",
-      "actionsCount": 18,
+      "actionsCount": 19,
       "actions": [
         "AccessInteractiveEndpoints",
         "AccessLivyEndpoints",
+        "AccessSystemProfileLogs",
         "CancelJobRun",
         "CreateApplication",
         "DeleteApplication",
