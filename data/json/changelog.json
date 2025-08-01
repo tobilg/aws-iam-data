@@ -1,5 +1,23 @@
 [
   {
+    "dateOfChange": "2025-08-01",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon EventBridge": [
+        "events:AllowVendedLogDeliveryForResource"
+      ],
+      "Amazon WorkSpaces": [
+        "workspaces:CreateRootClientCertificate",
+        "workspaces:DeleteRootClientCertificate",
+        "workspaces:DescribeRootClientCertificates",
+        "workspaces:DirectoryAccessManagement",
+        "workspaces:UpdateRootClientCertificate"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-07-31",
     "addedServices": [],
     "removedServices": [],
