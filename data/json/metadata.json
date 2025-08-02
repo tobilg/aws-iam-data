@@ -1,5 +1,5 @@
 {
-  "serviceCount": 445,
+  "serviceCount": 446,
   "services": [
     {
       "name": "AWS Account Management",
@@ -1668,6 +1668,47 @@
       "conditionKeysCount": 4,
       "conditionKeys": [
         "appsync:Visibility",
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "Amazon ARC Region switch",
+      "servicePrefix": "arc-region-switch",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonarcregionswitch.html",
+      "actionsCount": 23,
+      "actions": [
+        "ApprovePlanExecutionStep",
+        "CancelPlanExecution",
+        "CreatePlan",
+        "DeletePlan",
+        "DeleteResourcePolicy",
+        "GetPlan",
+        "GetPlanEvaluationStatus",
+        "GetPlanExecution",
+        "GetPlanInRegion",
+        "GetResourcePolicy",
+        "ListPlanExecutionEvents",
+        "ListPlanExecutions",
+        "ListPlans",
+        "ListPlansInRegion",
+        "ListRoute53HealthChecks",
+        "ListTagsForResource",
+        "PutResourcePolicy",
+        "StartPlanExecution",
+        "TagResource",
+        "UntagResource",
+        "UpdatePlan",
+        "UpdatePlanExecution",
+        "UpdatePlanExecutionStep"
+      ],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "plan"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
@@ -8570,7 +8611,7 @@
       "name": "AWS Directory Service",
       "servicePrefix": "ds",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdirectoryservice.html",
-      "actionsCount": 81,
+      "actionsCount": 88,
       "actions": [
         "AcceptSharedDirectory",
         "AccessDSData",
@@ -8585,11 +8626,13 @@
         "CreateComputer",
         "CreateConditionalForwarder",
         "CreateDirectory",
+        "CreateHybridAD",
         "CreateIdentityPoolDirectory",
         "CreateLogSubscription",
         "CreateMicrosoftAD",
         "CreateSnapshot",
         "CreateTrust",
+        "DeleteADAssessment",
         "DeleteConditionalForwarder",
         "DeleteDirectory",
         "DeleteLogSubscription",
@@ -8597,6 +8640,7 @@
         "DeleteTrust",
         "DeregisterCertificate",
         "DeregisterEventTopic",
+        "DescribeADAssessment",
         "DescribeCertificate",
         "DescribeClientAuthenticationSettings",
         "DescribeConditionalForwarders",
@@ -8604,6 +8648,7 @@
         "DescribeDirectoryDataAccess",
         "DescribeDomainControllers",
         "DescribeEventTopics",
+        "DescribeHybridADUpdate",
         "DescribeLDAPSSettings",
         "DescribeRegions",
         "DescribeSettings",
@@ -8626,6 +8671,7 @@
         "GetAuthorizedApplicationDetails",
         "GetDirectoryLimits",
         "GetSnapshotLimits",
+        "ListADAssessments",
         "ListAuthorizedApplications",
         "ListCertificates",
         "ListIpRoutes",
@@ -8641,6 +8687,7 @@
         "ResetUserPassword",
         "RestoreFromSnapshot",
         "ShareDirectory",
+        "StartADAssessment",
         "StartSchemaExtension",
         "UnauthorizeApplication",
         "UnshareDirectory",
@@ -8648,6 +8695,7 @@
         "UpdateConditionalForwarder",
         "UpdateDirectory",
         "UpdateDirectorySetup",
+        "UpdateHybridAD",
         "UpdateNumberOfDomainControllers",
         "UpdateRadius",
         "UpdateSettings",
@@ -23893,7 +23941,7 @@
         "accessgrantslocation",
         "accessgrant"
       ],
-      "conditionKeysCount": 52,
+      "conditionKeysCount": 53,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -23902,6 +23950,7 @@
         "s3:AccessGrantsInstanceArn",
         "s3:AccessGrantsLocationScope",
         "s3:AccessPointNetworkOrigin",
+        "s3:AccessPointTag/${TagKey}",
         "s3:DataAccessPointAccount",
         "s3:DataAccessPointArn",
         "s3:ExistingJobOperation",
@@ -23985,12 +24034,13 @@
         "bucket",
         "accesspoint"
       ],
-      "conditionKeysCount": 19,
+      "conditionKeysCount": 20,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "s3express:AccessPointNetworkOrigin",
+        "s3express:AccessPointTag/${TagKey}",
         "s3express:AllAccessRestrictedToLocalZoneGroup",
         "s3express:BucketTag/${TagKey}",
         "s3express:DataAccessPointAccount",
@@ -26039,7 +26089,7 @@
       "name": "Amazon Simple Email Service v2",
       "servicePrefix": "ses",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservicev2.html",
-      "actionsCount": 98,
+      "actionsCount": 110,
       "actions": [
         "BatchGetMetricData",
         "CancelExportJob",
@@ -26056,6 +26106,8 @@
         "CreateExportJob",
         "CreateImportJob",
         "CreateMultiRegionEndpoint",
+        "CreateTenant",
+        "CreateTenantResourceAssociation",
         "DeleteConfigurationSet",
         "DeleteConfigurationSetEventDestination",
         "DeleteContact",
@@ -26067,6 +26119,8 @@
         "DeleteEmailTemplate",
         "DeleteMultiRegionEndpoint",
         "DeleteSuppressedDestination",
+        "DeleteTenant",
+        "DeleteTenantResourceAssociation",
         "GetAccount",
         "GetBlacklistReports",
         "GetConfigurationSet",
@@ -26088,7 +26142,9 @@
         "GetImportJob",
         "GetMessageInsights",
         "GetMultiRegionEndpoint",
+        "GetReputationEntity",
         "GetSuppressedDestination",
+        "GetTenant",
         "ListConfigurationSets",
         "ListContactLists",
         "ListContacts",
@@ -26102,8 +26158,12 @@
         "ListImportJobs",
         "ListMultiRegionEndpoints",
         "ListRecommendations",
+        "ListReputationEntities",
+        "ListResourceTenants",
         "ListSuppressedDestinations",
         "ListTagsForResource",
+        "ListTenantResources",
+        "ListTenants",
         "PutAccountDedicatedIpWarmupAttributes",
         "PutAccountDetails",
         "PutAccountSendingAttributes",
@@ -26138,10 +26198,13 @@
         "UpdateContactList",
         "UpdateCustomVerificationEmailTemplate",
         "UpdateEmailIdentityPolicy",
-        "UpdateEmailTemplate"
+        "UpdateEmailTemplate",
+        "UpdateReputationEntityCustomerManagedStatus",
+        "UpdateReputationEntityPolicy"
       ],
-      "resourceTypesCount": 11,
+      "resourceTypesCount": 13,
       "resourceTypes": [
+        "reputation-policy",
         "configuration-set",
         "contact-list",
         "custom-verification-email-template",
@@ -26152,9 +26215,10 @@
         "import-job",
         "template",
         "multi-region-endpoint",
-        "mailmanager-archive"
+        "mailmanager-archive",
+        "tenant"
       ],
-      "conditionKeysCount": 11,
+      "conditionKeysCount": 12,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -26166,7 +26230,8 @@
         "ses:FromDisplayName",
         "ses:MultiRegionEndpointId",
         "ses:Recipients",
-        "ses:ReplicaRegion"
+        "ses:ReplicaRegion",
+        "ses:TenantName"
       ]
     },
     {
@@ -29083,12 +29148,13 @@
       "name": "Amazon WorkSpaces Secure Browser",
       "servicePrefix": "workspaces-web",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacessecurebrowser.html",
-      "actionsCount": 68,
+      "actionsCount": 75,
       "actions": [
         "AssociateBrowserSettings",
         "AssociateDataProtectionSettings",
         "AssociateIpAccessSettings",
         "AssociateNetworkSettings",
+        "AssociateSessionLogger",
         "AssociateTrustStore",
         "AssociateUserAccessLoggingSettings",
         "AssociateUserSettings",
@@ -29098,6 +29164,7 @@
         "CreateIpAccessSettings",
         "CreateNetworkSettings",
         "CreatePortal",
+        "CreateSessionLogger",
         "CreateTrustStore",
         "CreateUserAccessLoggingSettings",
         "CreateUserSettings",
@@ -29107,6 +29174,7 @@
         "DeleteIpAccessSettings",
         "DeleteNetworkSettings",
         "DeletePortal",
+        "DeleteSessionLogger",
         "DeleteTrustStore",
         "DeleteUserAccessLoggingSettings",
         "DeleteUserSettings",
@@ -29114,6 +29182,7 @@
         "DisassociateDataProtectionSettings",
         "DisassociateIpAccessSettings",
         "DisassociateNetworkSettings",
+        "DisassociateSessionLogger",
         "DisassociateTrustStore",
         "DisassociateUserAccessLoggingSettings",
         "DisassociateUserSettings",
@@ -29126,6 +29195,7 @@
         "GetPortal",
         "GetPortalServiceProviderMetadata",
         "GetSession",
+        "GetSessionLogger",
         "GetTrustStore",
         "GetTrustStoreCertificate",
         "GetUserAccessLoggingSettings",
@@ -29136,6 +29206,7 @@
         "ListIpAccessSettings",
         "ListNetworkSettings",
         "ListPortals",
+        "ListSessionLoggers",
         "ListSessions",
         "ListTagsForResource",
         "ListTrustStoreCertificates",
@@ -29150,11 +29221,12 @@
         "UpdateIpAccessSettings",
         "UpdateNetworkSettings",
         "UpdatePortal",
+        "UpdateSessionLogger",
         "UpdateTrustStore",
         "UpdateUserAccessLoggingSettings",
         "UpdateUserSettings"
       ],
-      "resourceTypesCount": 9,
+      "resourceTypesCount": 10,
       "resourceTypes": [
         "browserSettings",
         "identityProvider",
@@ -29164,7 +29236,8 @@
         "userSettings",
         "userAccessLoggingSettings",
         "ipAccessSettings",
-        "dataProtectionSettings"
+        "dataProtectionSettings",
+        "sessionLogger"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [

@@ -1,5 +1,72 @@
 [
   {
+    "dateOfChange": "2025-08-02",
+    "addedServices": [
+      "Amazon ARC Region switch"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Directory Service": [
+        "ds:CreateHybridAD",
+        "ds:DeleteADAssessment",
+        "ds:DescribeADAssessment",
+        "ds:DescribeHybridADUpdate",
+        "ds:ListADAssessments",
+        "ds:StartADAssessment",
+        "ds:UpdateHybridAD"
+      ],
+      "Amazon Simple Email Service v2": [
+        "ses:CreateTenant",
+        "ses:CreateTenantResourceAssociation",
+        "ses:DeleteTenant",
+        "ses:DeleteTenantResourceAssociation",
+        "ses:GetReputationEntity",
+        "ses:GetTenant",
+        "ses:ListReputationEntities",
+        "ses:ListResourceTenants",
+        "ses:ListTenantResources",
+        "ses:ListTenants",
+        "ses:UpdateReputationEntityCustomerManagedStatus",
+        "ses:UpdateReputationEntityPolicy"
+      ],
+      "Amazon WorkSpaces Secure Browser": [
+        "workspaces-web:AssociateSessionLogger",
+        "workspaces-web:CreateSessionLogger",
+        "workspaces-web:DeleteSessionLogger",
+        "workspaces-web:DisassociateSessionLogger",
+        "workspaces-web:GetSessionLogger",
+        "workspaces-web:ListSessionLoggers",
+        "workspaces-web:UpdateSessionLogger"
+      ],
+      "Amazon ARC Region switch": [
+        "arc-region-switch:ApprovePlanExecutionStep",
+        "arc-region-switch:CancelPlanExecution",
+        "arc-region-switch:CreatePlan",
+        "arc-region-switch:DeletePlan",
+        "arc-region-switch:DeleteResourcePolicy",
+        "arc-region-switch:GetPlan",
+        "arc-region-switch:GetPlanEvaluationStatus",
+        "arc-region-switch:GetPlanExecution",
+        "arc-region-switch:GetPlanInRegion",
+        "arc-region-switch:GetResourcePolicy",
+        "arc-region-switch:ListPlanExecutionEvents",
+        "arc-region-switch:ListPlanExecutions",
+        "arc-region-switch:ListPlans",
+        "arc-region-switch:ListPlansInRegion",
+        "arc-region-switch:ListRoute53HealthChecks",
+        "arc-region-switch:ListTagsForResource",
+        "arc-region-switch:PutResourcePolicy",
+        "arc-region-switch:StartPlanExecution",
+        "arc-region-switch:TagResource",
+        "arc-region-switch:UntagResource",
+        "arc-region-switch:UpdatePlan",
+        "arc-region-switch:UpdatePlanExecution",
+        "arc-region-switch:UpdatePlanExecutionStep"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-08-01",
     "addedServices": [],
     "removedServices": [],

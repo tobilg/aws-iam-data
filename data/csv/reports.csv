@@ -1,8 +1,8 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10471
-Actions by type,Read Actions,5091
-Actions by type,List Actions,3136
-Actions by type,Permissions Actions,359
+Actions by type,Write Actions,10496
+Actions by type,Read Actions,5102
+Actions by type,List Actions,3146
+Actions by type,Permissions Actions,362
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
@@ -36,7 +36,7 @@ Longest service prefixes,codedeploy-commands-secure,26
 Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},123
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},122
 Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},114
-Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},88
+Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},90
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},87
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},83
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},81
@@ -93,8 +93,8 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1952
-Summary,Total number of distinct condition keys,1209
-Summary,Total number of services,445
+Summary,Total number of distinct resource ARNS,1956
+Summary,Total number of distinct condition keys,1212
+Summary,Total number of services,446
 Summary,Average number of actions per service,43
 Summary,Median number of actions per service,29
