@@ -2657,7 +2657,7 @@
         "GetWorkloadAccessTokenForJWT",
         "GetWorkloadAccessTokenForUserId",
         "GetWorkloadIdentity",
-        "InvokeAgentRuntimeEndpoint",
+        "InvokeAgentRuntime",
         "InvokeCodeInterpreter",
         "ListActors",
         "ListAgentRuntimeEndpoints",
@@ -2693,7 +2693,7 @@
         "UpdateOauth2CredentialProvider",
         "UpdateWorkloadIdentity"
       ],
-      "resourceTypesCount": 11,
+      "resourceTypesCount": 13,
       "resourceTypes": [
         "memory",
         "gateway",
@@ -2705,7 +2705,9 @@
         "code-interpreter-custom",
         "code-interpreter",
         "browser-custom",
-        "browser"
+        "browser",
+        "workload-identity-directory",
+        "token-vault"
       ],
       "conditionKeysCount": 4,
       "conditionKeys": [
@@ -4871,21 +4873,41 @@
       "name": "Amazon CloudWatch Observability Admin Service",
       "servicePrefix": "observabilityadmin",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchobservabilityadminservice.html",
-      "actionsCount": 8,
+      "actionsCount": 21,
       "actions": [
+        "CreateTelemetryRule",
+        "CreateTelemetryRuleForOrganization",
+        "DeleteTelemetryRule",
+        "DeleteTelemetryRuleForOrganization",
         "GetTelemetryEvaluationStatus",
         "GetTelemetryEvaluationStatusForOrganization",
+        "GetTelemetryRule",
+        "GetTelemetryRuleForOrganization",
         "ListResourceTelemetry",
         "ListResourceTelemetryForOrganization",
+        "ListTagsForResource",
+        "ListTelemetryRules",
+        "ListTelemetryRulesForOrganization",
         "StartTelemetryEvaluation",
         "StartTelemetryEvaluationForOrganization",
         "StopTelemetryEvaluation",
-        "StopTelemetryEvaluationForOrganization"
+        "StopTelemetryEvaluationForOrganization",
+        "TagResource",
+        "UntagResource",
+        "UpdateTelemetryRule",
+        "UpdateTelemetryRuleForOrganization"
       ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "telemetry-rule",
+        "organization-telemetry-rule"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "AWS CloudWatch RUM",
@@ -15945,7 +15967,7 @@
       "name": "AWS IoT SiteWise",
       "servicePrefix": "iotsitewise",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotsitewise.html",
-      "actionsCount": 102,
+      "actionsCount": 106,
       "actions": [
         "AssociateAssets",
         "AssociateTimeSeriesToAssetProperty",
@@ -15970,6 +15992,7 @@
         "DeleteAsset",
         "DeleteAssetModel",
         "DeleteAssetModelCompositeModel",
+        "DeleteAssetModelInterfaceRelationship",
         "DeleteComputationModel",
         "DeleteDashboard",
         "DeleteDataset",
@@ -15983,6 +16006,7 @@
         "DescribeAssetCompositeModel",
         "DescribeAssetModel",
         "DescribeAssetModelCompositeModel",
+        "DescribeAssetModelInterfaceRelationship",
         "DescribeAssetProperty",
         "DescribeBulkImportJob",
         "DescribeComputationModel",
@@ -16026,11 +16050,13 @@
         "ListDatasets",
         "ListExecutions",
         "ListGateways",
+        "ListInterfaceRelationships",
         "ListPortals",
         "ListProjectAssets",
         "ListProjects",
         "ListTagsForResource",
         "ListTimeSeries",
+        "PutAssetModelInterfaceRelationship",
         "PutDefaultEncryptionConfiguration",
         "PutLoggingOptions",
         "PutStorageConfiguration",
@@ -29339,11 +29365,13 @@
         "group",
         "sampling-rule"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "xray:ResourcePolicyName",
+        "xray:TraceSegmentDestination"
       ]
     }
   ]

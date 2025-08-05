@@ -1,5 +1,41 @@
 [
   {
+    "dateOfChange": "2025-08-05",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:InvokeAgentRuntime"
+      ],
+      "Amazon CloudWatch Observability Admin Service": [
+        "observabilityadmin:CreateTelemetryRule",
+        "observabilityadmin:CreateTelemetryRuleForOrganization",
+        "observabilityadmin:DeleteTelemetryRule",
+        "observabilityadmin:DeleteTelemetryRuleForOrganization",
+        "observabilityadmin:GetTelemetryRule",
+        "observabilityadmin:GetTelemetryRuleForOrganization",
+        "observabilityadmin:ListTagsForResource",
+        "observabilityadmin:ListTelemetryRules",
+        "observabilityadmin:ListTelemetryRulesForOrganization",
+        "observabilityadmin:TagResource",
+        "observabilityadmin:UntagResource",
+        "observabilityadmin:UpdateTelemetryRule",
+        "observabilityadmin:UpdateTelemetryRuleForOrganization"
+      ],
+      "AWS IoT SiteWise": [
+        "iotsitewise:DeleteAssetModelInterfaceRelationship",
+        "iotsitewise:DescribeAssetModelInterfaceRelationship",
+        "iotsitewise:ListInterfaceRelationships",
+        "iotsitewise:PutAssetModelInterfaceRelationship"
+      ]
+    },
+    "removedActions": {
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:InvokeAgentRuntimeEndpoint"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-08-02",
     "addedServices": [
       "Amazon ARC Region switch"
