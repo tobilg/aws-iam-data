@@ -1,5 +1,52 @@
 [
   {
+    "dateOfChange": "2025-08-06",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:CancelAutomatedReasoningPolicyBuildWorkflow",
+        "bedrock:CreateAutomatedReasoningPolicy",
+        "bedrock:CreateAutomatedReasoningPolicyTestCase",
+        "bedrock:CreateAutomatedReasoningPolicyVersion",
+        "bedrock:DeleteAutomatedReasoningPolicy",
+        "bedrock:DeleteAutomatedReasoningPolicyBuildWorkflow",
+        "bedrock:DeleteAutomatedReasoningPolicyTestCase",
+        "bedrock:ExportAutomatedReasoningPolicyVersion",
+        "bedrock:GetAutomatedReasoningPolicy",
+        "bedrock:GetAutomatedReasoningPolicyAnnotations",
+        "bedrock:GetAutomatedReasoningPolicyBuildWorkflow",
+        "bedrock:GetAutomatedReasoningPolicyBuildWorkflowResultAssets",
+        "bedrock:GetAutomatedReasoningPolicyNextScenario",
+        "bedrock:GetAutomatedReasoningPolicyTestCase",
+        "bedrock:GetAutomatedReasoningPolicyTestResult",
+        "bedrock:InvokeAutomatedReasoningPolicy",
+        "bedrock:ListAutomatedReasoningPolicies",
+        "bedrock:ListAutomatedReasoningPolicyBuildWorkflows",
+        "bedrock:ListAutomatedReasoningPolicyTestCases",
+        "bedrock:ListAutomatedReasoningPolicyTestResults",
+        "bedrock:StartAutomatedReasoningPolicyBuildWorkflow",
+        "bedrock:StartAutomatedReasoningPolicyTestWorkflow",
+        "bedrock:UpdateAutomatedReasoningPolicy",
+        "bedrock:UpdateAutomatedReasoningPolicyAnnotations",
+        "bedrock:UpdateAutomatedReasoningPolicyTestCase"
+      ],
+      "Amazon Q Business": [
+        "qbusiness:GetDocumentContent"
+      ]
+    },
+    "removedActions": {
+      "Amazon Q Business": [
+        "qbusiness:AddUserLicenses",
+        "qbusiness:AllowVendedLogDeliveryForResource",
+        "qbusiness:CreateLicense",
+        "qbusiness:GetLicense",
+        "qbusiness:ListUserLicenses",
+        "qbusiness:RemoveUserLicenses"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-08-05",
     "addedServices": [],
     "removedServices": [],
