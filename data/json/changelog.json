@@ -1,5 +1,38 @@
 [
   {
+    "dateOfChange": "2025-08-07",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Batch": [
+        "batch:CreateServiceEnvironment",
+        "batch:DeleteServiceEnvironment",
+        "batch:DescribeServiceEnvironments",
+        "batch:DescribeServiceJob",
+        "batch:ListServiceJobs",
+        "batch:SubmitServiceJob",
+        "batch:TerminateServiceJob",
+        "batch:UpdateServiceEnvironment"
+      ],
+      "AWS rePost Private": [
+        "repostspace:BatchAddChannelRoleToAccessors",
+        "repostspace:BatchRemoveChannelRoleFromAccessors",
+        "repostspace:CreateChannel",
+        "repostspace:GetChannel",
+        "repostspace:ListChannels",
+        "repostspace:UpdateChannel"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:AttachClusterNodeVolume",
+        "sagemaker:BatchAddClusterNodes",
+        "sagemaker:DescribeClusterEvent",
+        "sagemaker:DetachClusterNodeVolume",
+        "sagemaker:ListClusterEvents"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-08-06",
     "addedServices": [],
     "removedServices": [],
