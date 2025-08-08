@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2025-08-08",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon DataZone": [
+        "datazone:CreateAccountPool",
+        "datazone:DeleteAccountPool",
+        "datazone:GetAccountPool",
+        "datazone:ListAccountPools",
+        "datazone:ListAccountsInAccountPool",
+        "datazone:UpdateAccountPool"
+      ],
+      "Amazon OpenSearch Serverless": [
+        "aoss:CreateIndex",
+        "aoss:DeleteIndex",
+        "aoss:GetIndex",
+        "aoss:UpdateIndex"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-08-07",
     "addedServices": [],
     "removedServices": [],
