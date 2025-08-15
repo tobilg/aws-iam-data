@@ -6532,7 +6532,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 291,
+      "actionsCount": 292,
       "actions": [
         "ActivateEvaluationForm",
         "AdminGetEmergencyAccessToken",
@@ -6661,6 +6661,7 @@
         "DismissUserContact",
         "GetAttachedFile",
         "GetContactAttributes",
+        "GetContactMetrics",
         "GetCurrentMetricData",
         "GetCurrentUserData",
         "GetEffectiveHoursOfOperations",
@@ -20496,7 +20497,7 @@
       "name": "AWS Outposts",
       "servicePrefix": "outposts",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsoutposts.html",
-      "actionsCount": 35,
+      "actionsCount": 36,
       "actions": [
         "CancelCapacityTask",
         "CancelOrder",
@@ -20511,6 +20512,7 @@
         "GetConnection",
         "GetOrder",
         "GetOutpost",
+        "GetOutpostBillingInformation",
         "GetOutpostInstanceTypes",
         "GetOutpostSupportedInstanceTypes",
         "GetPrivateConnectivityConfig",
@@ -22503,7 +22505,7 @@
         "snapshot-tenant-database",
         "tenant-database"
       ],
-      "conditionKeysCount": 28,
+      "conditionKeysCount": 29,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -22517,6 +22519,7 @@
         "rds:ManageMasterUserPassword",
         "rds:MultiAz",
         "rds:Piops",
+        "rds:PubliclyAccessible",
         "rds:StorageEncrypted",
         "rds:StorageSize",
         "rds:TenantDatabaseName",

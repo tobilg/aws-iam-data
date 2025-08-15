@@ -1,6 +1,6 @@
 report_name,metric_name,value
 Actions by type,Write Actions,10536
-Actions by type,Read Actions,5123
+Actions by type,Read Actions,5125
 Actions by type,List Actions,3159
 Actions by type,Permissions Actions,361
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
@@ -33,7 +33,7 @@ Longest service prefixes,marketplacecommerceanalytics,28
 Longest service prefixes,application-transformation,26
 Longest service prefixes,aws-marketplace-management,26
 Longest service prefixes,codedeploy-commands-secure,26
-Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},123
+Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},124
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},122
 Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},114
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},90
@@ -56,8 +56,8 @@ Services with least actions,AWS IAM Identity Center OIDC service,1
 Services with most actions,Amazon EC2,704
 Services with most actions,Amazon SageMaker,405
 Services with most actions,Amazon Chime,316
+Services with most actions,Amazon Connect,292
 Services with most actions,AWS Glue,291
-Services with most actions,Amazon Connect,291
 Services with most actions,AWS IoT,288
 Services with most actions,Amazon QuickSight,230
 Services with most actions,Amazon Bedrock,225
@@ -94,7 +94,7 @@ Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
 Summary,Total number of distinct resource ARNS,1963
-Summary,Total number of distinct condition keys,1216
+Summary,Total number of distinct condition keys,1217
 Summary,Total number of services,446
 Summary,Average number of actions per service,43
 Summary,Median number of actions per service,29
