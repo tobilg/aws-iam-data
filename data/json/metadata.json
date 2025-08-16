@@ -1,5 +1,5 @@
 {
-  "serviceCount": 446,
+  "serviceCount": 448,
   "services": [
     {
       "name": "AWS Account Management",
@@ -1403,8 +1403,9 @@
       "name": "Amazon Application Recovery Controller - Zonal Shift",
       "servicePrefix": "arc-zonal-shift",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonapplicationrecoverycontroller-zonalshift.html",
-      "actionsCount": 13,
+      "actionsCount": 15,
       "actions": [
+        "CancelPracticeRun",
         "CancelZonalShift",
         "CreatePracticeRunConfiguration",
         "DeletePracticeRunConfiguration",
@@ -1413,6 +1414,7 @@
         "ListAutoshifts",
         "ListManagedResources",
         "ListZonalShifts",
+        "StartPracticeRun",
         "StartZonalShift",
         "UpdateAutoshiftObserverNotificationStatus",
         "UpdatePracticeRunConfiguration",
@@ -2885,6 +2887,19 @@
       ]
     },
     {
+      "name": "AWS Billing And Cost Management Recommended Actions",
+      "servicePrefix": "bcm-recommended-actions",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingandcostmanagementrecommendedactions.html",
+      "actionsCount": 1,
+      "actions": [
+        "ListRecommendedActions"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
       "name": "AWS Billing Conductor",
       "servicePrefix": "billingconductor",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingconductor.html",
@@ -3811,13 +3826,14 @@
       "name": "AWS Cloud Map",
       "servicePrefix": "servicediscovery",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudmap.html",
-      "actionsCount": 30,
+      "actionsCount": 33,
       "actions": [
         "CreateHttpNamespace",
         "CreatePrivateDnsNamespace",
         "CreatePublicDnsNamespace",
         "CreateService",
         "DeleteNamespace",
+        "DeleteResourcePolicy",
         "DeleteService",
         "DeleteServiceAttributes",
         "DeregisterInstance",
@@ -3827,6 +3843,7 @@
         "GetInstancesHealthStatus",
         "GetNamespace",
         "GetOperation",
+        "GetResourcePolicy",
         "GetService",
         "GetServiceAttributes",
         "ListInstances",
@@ -3834,6 +3851,7 @@
         "ListOperations",
         "ListServices",
         "ListTagsForResource",
+        "PutResourcePolicy",
         "RegisterInstance",
         "TagResource",
         "UntagResource",
@@ -3849,7 +3867,7 @@
         "namespace",
         "service"
       ],
-      "conditionKeysCount": 7,
+      "conditionKeysCount": 8,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -3857,6 +3875,7 @@
         "servicediscovery:NamespaceArn",
         "servicediscovery:NamespaceName",
         "servicediscovery:ServiceArn",
+        "servicediscovery:ServiceCreatedByAccount",
         "servicediscovery:ServiceName"
       ]
     },
@@ -25776,6 +25795,21 @@
       "conditionKeys": []
     },
     {
+      "name": "AWS Service for managing AWS Management Console user experience capabilities.",
+      "servicePrefix": "uxc",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceformanagingawsconsoleuserexperiencecapabilities..html",
+      "actionsCount": 3,
+      "actions": [
+        "DeleteAccountColor",
+        "GetAccountColor",
+        "PutAccountColor"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
       "name": "AWS service providing managed private networks",
       "servicePrefix": "private-networks",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceprovidingmanagedprivatenetworks.html",
@@ -29075,7 +29109,7 @@
       "name": "Amazon WorkSpaces",
       "servicePrefix": "workspaces",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspaces.html",
-      "actionsCount": 95,
+      "actionsCount": 99,
       "actions": [
         "AcceptAccountLinkInvitation",
         "AssociateConnectionAlias",
@@ -29116,6 +29150,8 @@
         "DescribeConnectClientAddIns",
         "DescribeConnectionAliasPermissions",
         "DescribeConnectionAliases",
+        "DescribeConsent",
+        "DescribeCustomWorkspaceImageImport",
         "DescribeImageAssociations",
         "DescribeIpGroups",
         "DescribeRootClientCertificates",
@@ -29136,6 +29172,7 @@
         "DisassociateWorkspaceApplication",
         "GetAccountLink",
         "ImportClientBranding",
+        "ImportCustomWorkspaceImage",
         "ImportWorkspaceImage",
         "ListAccountLinks",
         "ListAvailableManagementCidrRanges",
@@ -29167,6 +29204,7 @@
         "TerminateWorkspacesPoolSession",
         "UpdateConnectClientAddIn",
         "UpdateConnectionAliasPermission",
+        "UpdateConsent",
         "UpdateRootClientCertificate",
         "UpdateRulesOfIpGroup",
         "UpdateWorkspaceBundle",

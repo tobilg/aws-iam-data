@@ -1,5 +1,39 @@
 [
   {
+    "dateOfChange": "2025-08-16",
+    "addedServices": [
+      "AWS Billing And Cost Management Recommended Actions",
+      "AWS Service for managing AWS Management Console user experience capabilities."
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Application Recovery Controller - Zonal Shift": [
+        "arc-zonal-shift:CancelPracticeRun",
+        "arc-zonal-shift:StartPracticeRun"
+      ],
+      "AWS Cloud Map": [
+        "servicediscovery:DeleteResourcePolicy",
+        "servicediscovery:GetResourcePolicy",
+        "servicediscovery:PutResourcePolicy"
+      ],
+      "Amazon WorkSpaces": [
+        "workspaces:DescribeConsent",
+        "workspaces:DescribeCustomWorkspaceImageImport",
+        "workspaces:ImportCustomWorkspaceImage",
+        "workspaces:UpdateConsent"
+      ],
+      "AWS Billing And Cost Management Recommended Actions": [
+        "bcm-recommended-actions:ListRecommendedActions"
+      ],
+      "AWS Service for managing AWS Management Console user experience capabilities.": [
+        "uxc:DeleteAccountColor",
+        "uxc:GetAccountColor",
+        "uxc:PutAccountColor"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-08-15",
     "addedServices": [],
     "removedServices": [],
