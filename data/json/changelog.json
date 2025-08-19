@@ -1,5 +1,33 @@
 [
   {
+    "dateOfChange": "2025-08-19",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon GuardDuty": [
+        "guardduty:CreateThreatEntitySet",
+        "guardduty:CreateTrustedEntitySet",
+        "guardduty:DeleteThreatEntitySet",
+        "guardduty:DeleteTrustedEntitySet",
+        "guardduty:GetThreatEntitySet",
+        "guardduty:GetTrustedEntitySet",
+        "guardduty:ListThreatEntitySets",
+        "guardduty:ListTrustedEntitySets",
+        "guardduty:UpdateThreatEntitySet",
+        "guardduty:UpdateTrustedEntitySet"
+      ],
+      "Amazon Managed Service for Prometheus": [
+        "aps:DeleteResourcePolicy",
+        "aps:DescribeResourcePolicy",
+        "aps:PutResourcePolicy"
+      ],
+      "Amazon Q Business": [
+        "qbusiness:AllowVendedLogDeliveryForResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-08-16",
     "addedServices": [
       "AWS Billing And Cost Management Recommended Actions",
