@@ -1,5 +1,55 @@
 [
   {
+    "dateOfChange": "2025-08-22",
+    "addedServices": [
+      "AWS Billing and Cost Management Dashboards"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon DataZone": [
+        "datazone:AssociateGovernedTerms",
+        "datazone:DisassociateGovernedTerms"
+      ],
+      "AWS End User Messaging Social": [
+        "social-messaging:CreateWhatsAppMessageTemplate",
+        "social-messaging:CreateWhatsAppMessageTemplateFromLibrary",
+        "social-messaging:CreateWhatsAppMessageTemplateMedia",
+        "social-messaging:DeleteWhatsAppMessageTemplate",
+        "social-messaging:GetWhatsAppMessageTemplate",
+        "social-messaging:ListWhatsAppMessageTemplates",
+        "social-messaging:ListWhatsAppTemplateLibrary",
+        "social-messaging:UpdateWhatsAppMessageTemplate"
+      ],
+      "AWS Glue": [
+        "glue:CreateGlueIdentityCenterConfiguration",
+        "glue:DeleteGlueIdentityCenterConfiguration",
+        "glue:GetGlueIdentityCenterConfiguration",
+        "glue:UpdateGlueIdentityCenterConfiguration"
+      ],
+      "AWS Billing and Cost Management Dashboards": [
+        "bcm-dashboards:CreateDashboard",
+        "bcm-dashboards:DeleteDashboard",
+        "bcm-dashboards:GetDashboard",
+        "bcm-dashboards:GetResourcePolicy",
+        "bcm-dashboards:ListDashboards",
+        "bcm-dashboards:ListTagsForResource",
+        "bcm-dashboards:TagResource",
+        "bcm-dashboards:UntagResource",
+        "bcm-dashboards:UpdateDashboard"
+      ]
+    },
+    "removedActions": {
+      "AWS IAM Identity Center": [
+        "sso:DeletePermissionsPolicy",
+        "sso:DescribeDirectories",
+        "sso:DescribePermissionsPolicies",
+        "sso:DescribeTrusts",
+        "sso:GetPermissionsPolicy",
+        "sso:UpdateDirectoryAssociation"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-08-19",
     "addedServices": [],
     "removedServices": [],
