@@ -1,5 +1,17 @@
 [
   {
+    "dateOfChange": "2025-08-23",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS IoT": [
+        "iot:DescribeEncryptionConfiguration",
+        "iot:UpdateEncryptionConfiguration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-08-22",
     "addedServices": [
       "AWS Billing and Cost Management Dashboards"
