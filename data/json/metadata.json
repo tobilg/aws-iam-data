@@ -1935,7 +1935,7 @@
       "name": "Amazon Aurora DSQL",
       "servicePrefix": "dsql",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonauroradsql.html",
-      "actionsCount": 21,
+      "actionsCount": 22,
       "actions": [
         "AddPeerCluster",
         "CreateCluster",
@@ -1946,6 +1946,7 @@
         "GetCluster",
         "GetRestoreJob",
         "GetVpcEndpointServiceName",
+        "InjectError",
         "ListClusters",
         "ListTagsForResource",
         "PutMultiRegionProperties",
@@ -1963,11 +1964,13 @@
       "resourceTypes": [
         "Cluster"
       ],
-      "conditionKeysCount": 4,
+      "conditionKeysCount": 6,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "dsql:FisActionId",
+        "dsql:FisTargetArns",
         "dsql:WitnessRegion"
       ]
     },
