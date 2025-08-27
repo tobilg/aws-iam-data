@@ -1,5 +1,21 @@
 [
   {
+    "dateOfChange": "2025-08-27",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon EC2": [
+        "ec2:CreateImageUsageReport",
+        "ec2:DeleteImageUsageReport",
+        "ec2:DescribeImageReferences",
+        "ec2:DescribeImageUsageReportEntries",
+        "ec2:DescribeImageUsageReports",
+        "ec2:ModifyInstanceConnectEndpoint"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-08-26",
     "addedServices": [],
     "removedServices": [],

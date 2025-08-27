@@ -2820,8 +2820,11 @@
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 2,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "AWS Billing And Cost Management Data Exports",
@@ -9049,7 +9052,7 @@
       "name": "Amazon EC2",
       "servicePrefix": "ec2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html",
-      "actionsCount": 704,
+      "actionsCount": 710,
       "actions": [
         "AcceptAddressTransfer",
         "AcceptCapacityReservationBillingOwnership",
@@ -9131,6 +9134,7 @@
         "CreateFlowLogs",
         "CreateFpgaImage",
         "CreateImage",
+        "CreateImageUsageReport",
         "CreateInstanceConnectEndpoint",
         "CreateInstanceEventWindow",
         "CreateInstanceExportTask",
@@ -9218,6 +9222,7 @@
         "DeleteFleets",
         "DeleteFlowLogs",
         "DeleteFpgaImage",
+        "DeleteImageUsageReport",
         "DeleteInstanceConnectEndpoint",
         "DeleteInstanceEventWindow",
         "DeleteInternetGateway",
@@ -9346,6 +9351,9 @@
         "DescribeIdFormat",
         "DescribeIdentityIdFormat",
         "DescribeImageAttribute",
+        "DescribeImageReferences",
+        "DescribeImageUsageReportEntries",
+        "DescribeImageUsageReports",
         "DescribeImages",
         "DescribeImportImageTasks",
         "DescribeImportSnapshotTasks",
@@ -9621,6 +9629,7 @@
         "ModifyImageAttribute",
         "ModifyInstanceAttribute",
         "ModifyInstanceCapacityReservationAttributes",
+        "ModifyInstanceConnectEndpoint",
         "ModifyInstanceCpuOptions",
         "ModifyInstanceCreditSpecification",
         "ModifyInstanceEventStartTime",
@@ -9756,7 +9765,7 @@
         "UpdateSecurityGroupRuleDescriptionsIngress",
         "WithdrawByoipCidr"
       ],
-      "resourceTypesCount": 99,
+      "resourceTypesCount": 100,
       "resourceTypes": [
         "elastic-ip",
         "capacity-block",
@@ -9778,6 +9787,7 @@
         "fpga-image",
         "host-reservation",
         "image",
+        "image-usage-report",
         "import-image-task",
         "import-snapshot-task",
         "instance-connect-endpoint",
