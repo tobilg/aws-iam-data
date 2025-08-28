@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2025-08-28",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Elastic Kubernetes Service": [
+        "eks:DescribeInsightsRefresh",
+        "eks:StartInsightsRefresh"
+      ],
+      "AWS Systems Manager for SAP": [
+        "ssm-sap:GetConfigurationCheckOperation",
+        "ssm-sap:ListConfigurationCheckDefinitions",
+        "ssm-sap:ListConfigurationCheckOperations",
+        "ssm-sap:ListSubCheckResults",
+        "ssm-sap:ListSubCheckRuleResults",
+        "ssm-sap:StartConfigurationChecks"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-08-27",
     "addedServices": [],
     "removedServices": [],
