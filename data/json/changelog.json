@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2025-08-30",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Directory Service": [
+        "ds:DescribeCAEnrollmentPolicy",
+        "ds:DisableCAEnrollmentPolicy",
+        "ds:EnableCAEnrollmentPolicy"
+      ],
+      "Amazon Neptune Analytics": [
+        "neptune-graph:StartGraph",
+        "neptune-graph:StopGraph"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-08-28",
     "addedServices": [],
     "removedServices": [],
