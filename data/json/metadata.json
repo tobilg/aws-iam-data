@@ -61,7 +61,7 @@
       "name": "Amazon AI Operations",
       "servicePrefix": "aiops",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonaioperations.html",
-      "actionsCount": 23,
+      "actionsCount": 24,
       "actions": [
         "CreateInvestigation",
         "CreateInvestigationEvent",
@@ -70,6 +70,7 @@
         "DeleteInvestigation",
         "DeleteInvestigationGroup",
         "DeleteInvestigationGroupPolicy",
+        "GetEphemeralInvestigationResults",
         "GetInvestigation",
         "GetInvestigationEvent",
         "GetInvestigationGroup",
