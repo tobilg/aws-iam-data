@@ -3551,13 +3551,14 @@
       "name": "AWS Clean Rooms",
       "servicePrefix": "cleanrooms",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscleanrooms.html",
-      "actionsCount": 88,
+      "actionsCount": 91,
       "actions": [
         "BatchGetCollaborationAnalysisTemplate",
         "BatchGetSchema",
         "BatchGetSchemaAnalysisRule",
         "CreateAnalysisTemplate",
         "CreateCollaboration",
+        "CreateCollaborationChangeRequest",
         "CreateConfiguredAudienceModelAssociation",
         "CreateConfiguredTable",
         "CreateConfiguredTableAnalysisRule",
@@ -3582,6 +3583,7 @@
         "GetAnalysisTemplate",
         "GetCollaboration",
         "GetCollaborationAnalysisTemplate",
+        "GetCollaborationChangeRequest",
         "GetCollaborationConfiguredAudienceModelAssociation",
         "GetCollaborationIdNamespaceAssociation",
         "GetCollaborationPrivacyBudgetTemplate",
@@ -3600,6 +3602,7 @@
         "GetSchemaAnalysisRule",
         "ListAnalysisTemplates",
         "ListCollaborationAnalysisTemplates",
+        "ListCollaborationChangeRequests",
         "ListCollaborationConfiguredAudienceModelAssociations",
         "ListCollaborationIdNamespaceAssociations",
         "ListCollaborationPrivacyBudgetTemplates",
@@ -14670,7 +14673,7 @@
         "sms-mfa",
         "user"
       ],
-      "conditionKeysCount": 14,
+      "conditionKeysCount": 16,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -14685,7 +14688,9 @@
         "iam:PermissionsBoundary",
         "iam:PolicyARN",
         "iam:RegisterSecurityKey",
-        "iam:ResourceTag/${TagKey}"
+        "iam:ResourceTag/${TagKey}",
+        "iam:ServiceSpecificCredentialAgeDays",
+        "iam:ServiceSpecificCredentialServiceName"
       ]
     },
     {
@@ -19532,7 +19537,7 @@
       "name": "Amazon MQ",
       "servicePrefix": "mq",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmq.html",
-      "actionsCount": 25,
+      "actionsCount": 26,
       "actions": [
         "CreateBroker",
         "CreateConfiguration",
@@ -19557,6 +19562,7 @@
         "Promote",
         "RebootBroker",
         "UpdateBroker",
+        "UpdateBrokerAccessConfiguration",
         "UpdateConfiguration",
         "UpdateUser"
       ],
