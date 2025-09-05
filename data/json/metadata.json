@@ -2636,11 +2636,12 @@
         "session",
         "custom-model-deployment"
       ],
-      "conditionKeysCount": 8,
+      "conditionKeysCount": 9,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "bedrock:BearerTokenType",
         "bedrock:GuardrailIdentifier",
         "bedrock:InferenceProfileArn",
         "bedrock:InlineAgentName",
