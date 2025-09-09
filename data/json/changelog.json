@@ -1,5 +1,20 @@
 [
   {
+    "dateOfChange": "2025-09-09",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Elemental MediaConvert": [
+        "mediaconvert:CreateResourceShare"
+      ],
+      "AWS Organizations": [
+        "organizations:ListAccountsWithInvalidEffectivePolicy",
+        "organizations:ListEffectivePolicyValidationErrors"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-09-06",
     "addedServices": [],
     "removedServices": [],
