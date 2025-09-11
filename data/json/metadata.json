@@ -24287,10 +24287,8 @@
       "resourceTypes": [
         "vault"
       ],
-      "conditionKeysCount": 4,
+      "conditionKeysCount": 2,
       "conditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:TagKeys",
         "glacier:ArchiveAgeInDays",
         "glacier:ResourceTag/"
       ]
