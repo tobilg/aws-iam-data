@@ -22125,7 +22125,7 @@
       "name": "Amazon QuickSight",
       "servicePrefix": "quicksight",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonquicksight.html",
-      "actionsCount": 230,
+      "actionsCount": 233,
       "actions": [
         "AccountConfigurations",
         "BatchCreateTopicReviewedAnswer",
@@ -22159,6 +22159,7 @@
         "CreateTopicRefreshSchedule",
         "CreateUser",
         "CreateVPCConnection",
+        "DeleteAccountCustomPermission",
         "DeleteAccountCustomization",
         "DeleteAccountSubscription",
         "DeleteAnalysis",
@@ -22191,6 +22192,7 @@
         "DeleteUserByPrincipalId",
         "DeleteUserCustomPermission",
         "DeleteVPCConnection",
+        "DescribeAccountCustomPermission",
         "DescribeAccountCustomization",
         "DescribeAccountSettings",
         "DescribeAccountSubscription",
@@ -22311,6 +22313,7 @@
         "TagResource",
         "Unsubscribe",
         "UntagResource",
+        "UpdateAccountCustomPermission",
         "UpdateAccountCustomization",
         "UpdateAccountSettings",
         "UpdateAnalysis",
@@ -28057,22 +28060,31 @@
       "name": "AWS Transform",
       "servicePrefix": "transform",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstransform.html",
-      "actionsCount": 7,
+      "actionsCount": 12,
       "actions": [
         "AssociateConnectorResource",
         "CreateProfile",
+        "DeleteConnector",
         "DeleteProfile",
         "GetConnector",
+        "ListConnectors",
         "ListProfiles",
+        "ListTagsForResource",
         "RejectConnector",
+        "TagResource",
+        "UntagResource",
         "UpdateProfile"
       ],
-      "resourceTypesCount": 1,
+      "resourceTypesCount": 2,
       "resourceTypes": [
-        "profile"
+        "profile",
+        "connector"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 2,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "Amazon Translate",

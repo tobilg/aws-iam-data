@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2025-09-13",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon QuickSight": [
+        "quicksight:DeleteAccountCustomPermission",
+        "quicksight:DescribeAccountCustomPermission",
+        "quicksight:UpdateAccountCustomPermission"
+      ],
+      "AWS Transform": [
+        "transform:DeleteConnector",
+        "transform:ListConnectors",
+        "transform:ListTagsForResource",
+        "transform:TagResource",
+        "transform:UntagResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-09-09",
     "addedServices": [],
     "removedServices": [],
