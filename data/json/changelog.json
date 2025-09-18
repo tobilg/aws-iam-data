@@ -1,5 +1,21 @@
 [
   {
+    "dateOfChange": "2025-09-18",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Elastic VMware Service": [
+        "evs:AssociateEipToVlan",
+        "evs:DisassociateEipFromVlan"
+      ]
+    },
+    "removedActions": {
+      "Amazon WorkSpaces": [
+        "workspaces:DescribeRootClientCertificates"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-09-17",
     "addedServices": [],
     "removedServices": [],
