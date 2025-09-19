@@ -2371,7 +2371,7 @@
       "name": "Amazon Bedrock",
       "servicePrefix": "bedrock",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html",
-      "actionsCount": 225,
+      "actionsCount": 226,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "ApplyGuardrail",
@@ -2381,6 +2381,7 @@
         "BatchDeleteEvaluationJob",
         "CallWithBearerToken",
         "CancelAutomatedReasoningPolicyBuildWorkflow",
+        "CountTokens",
         "CreateAgent",
         "CreateAgentActionGroup",
         "CreateAgentAlias",
@@ -10109,10 +10110,11 @@
         "autoScalingGroup",
         "launchConfiguration"
       ],
-      "conditionKeysCount": 21,
+      "conditionKeysCount": 22,
       "conditionKeys": [
         "autoscaling:CapacityReservationIds",
         "autoscaling:CapacityReservationResourceGroupArns",
+        "autoscaling:ForceDelete",
         "autoscaling:ImageId",
         "autoscaling:InstanceType",
         "autoscaling:InstanceTypes",
