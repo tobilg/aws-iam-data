@@ -10523,7 +10523,7 @@
       "name": "Amazon Elastic Container Service",
       "servicePrefix": "ecs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerservice.html",
-      "actionsCount": 62,
+      "actionsCount": 63,
       "actions": [
         "CreateCapacityProvider",
         "CreateCluster",
@@ -10566,6 +10566,7 @@
         "PutAccountSettingDefault",
         "PutAttributes",
         "PutClusterCapacityProviders",
+        "PutSystemLogEvents",
         "RegisterContainerInstance",
         "RegisterTaskDefinition",
         "RunTask",
