@@ -2772,11 +2772,13 @@
       "name": "AWS Billing",
       "servicePrefix": "billing",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbilling.html",
-      "actionsCount": 25,
+      "actionsCount": 28,
       "actions": [
+        "AssociateSourceViews",
         "CreateBillingView",
         "DeleteBillingView",
         "DeleteResourcePolicy",
+        "DisassociateSourceViews",
         "GetBillingData",
         "GetBillingDetails",
         "GetBillingNotifications",
@@ -2798,7 +2800,8 @@
         "UntagResource",
         "UpdateBillingPreferences",
         "UpdateBillingView",
-        "UpdateIAMAccessPreference"
+        "UpdateIAMAccessPreference",
+        "UseSourceView"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
@@ -4649,23 +4652,28 @@
       "name": "Amazon CloudWatch Application Signals",
       "servicePrefix": "application-signals",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchapplicationsignals.html",
-      "actionsCount": 19,
+      "actionsCount": 24,
       "actions": [
         "BatchGetServiceLevelObjectiveBudgetReport",
         "BatchUpdateExclusionWindows",
         "CreateServiceLevelObjective",
+        "DeleteGroupingConfiguration",
         "DeleteServiceLevelObjective",
         "GetService",
         "GetServiceLevelObjective",
         "Link",
+        "ListAuditFindings",
+        "ListGroupingAttributeDefinitions",
         "ListObservedEntities",
         "ListServiceDependencies",
         "ListServiceDependents",
         "ListServiceLevelObjectiveExclusionWindows",
         "ListServiceLevelObjectives",
         "ListServiceOperations",
+        "ListServiceStates",
         "ListServices",
         "ListTagsForResource",
+        "PutGroupingConfiguration",
         "StartDiscovery",
         "TagResource",
         "UntagResource",
@@ -6604,13 +6612,14 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 292,
+      "actionsCount": 294,
       "actions": [
         "ActivateEvaluationForm",
         "AdminGetEmergencyAccessToken",
         "AssociateAnalyticsDataSet",
         "AssociateApprovedOrigin",
         "AssociateBot",
+        "AssociateContactWithUser",
         "AssociateCustomerProfilesDomain",
         "AssociateDefaultVocabulary",
         "AssociateFlow",
@@ -6778,6 +6787,7 @@
         "ListQuickConnects",
         "ListRealtimeContactAnalysisSegments",
         "ListRealtimeContactAnalysisSegmentsV2",
+        "ListRoutingProfileManualAssignmentQueues",
         "ListRoutingProfileQueues",
         "ListRoutingProfiles",
         "ListRules",
@@ -6939,7 +6949,7 @@
         "attached-file",
         "email-address"
       ],
-      "conditionKeysCount": 18,
+      "conditionKeysCount": 19,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -6954,6 +6964,7 @@
         "connect:ListRealtimeContactAnalysisSegmentsByOutputType",
         "connect:ListRealtimeContactAnalysisSegmentsBySegmentType",
         "connect:MonitorCapabilities",
+        "connect:PreferredUserArn",
         "connect:SearchContactsByContactAnalysis",
         "connect:SearchTag/${TagKey}",
         "connect:StorageResourceType",
@@ -14491,9 +14502,11 @@
       "name": "AWS IAM Identity Center OIDC service",
       "servicePrefix": "sso-oauth",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamidentitycenteroidcservice.html",
-      "actionsCount": 1,
+      "actionsCount": 3,
       "actions": [
-        "CreateTokenWithIAM"
+        "CreateTokenWithIAM",
+        "IntrospectTokenWithIAM",
+        "RevokeTokenWithIAM"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
@@ -20143,7 +20156,7 @@
       "name": "Amazon One Enterprise",
       "servicePrefix": "one",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazononeenterprise.html",
-      "actionsCount": 27,
+      "actionsCount": 28,
       "actions": [
         "CreateDeviceActivationQrCode",
         "CreateDeviceConfigurationTemplate",
@@ -20164,6 +20177,7 @@
         "ListDeviceInstances",
         "ListSites",
         "ListTagsForResource",
+        "ListUsers",
         "ListUsersV1",
         "RebootDevice",
         "TagResource",
@@ -20212,17 +20226,25 @@
       "name": "Amazon OpenSearch Ingestion",
       "servicePrefix": "osis",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchingestion.html",
-      "actionsCount": 15,
+      "actionsCount": 23,
       "actions": [
         "CreatePipeline",
+        "CreatePipelineEndpoint",
         "DeletePipeline",
+        "DeletePipelineEndpoint",
+        "DeleteResourcePolicy",
         "GetPipeline",
         "GetPipelineBlueprint",
         "GetPipelineChangeProgress",
+        "GetResourcePolicy",
         "Ingest",
         "ListPipelineBlueprints",
+        "ListPipelineEndpointConnections",
+        "ListPipelineEndpoints",
         "ListPipelines",
         "ListTagsForResource",
+        "PutResourcePolicy",
+        "RevokePipelineEndpointConnections",
         "StartPipeline",
         "StopPipeline",
         "TagResource",
@@ -20230,9 +20252,10 @@
         "UpdatePipeline",
         "ValidatePipeline"
       ],
-      "resourceTypesCount": 2,
+      "resourceTypesCount": 3,
       "resourceTypes": [
         "pipeline",
+        "pipeline-endpoint",
         "pipeline-blueprint"
       ],
       "conditionKeysCount": 3,
@@ -28114,11 +28137,15 @@
         "host-key",
         "webapp"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 7,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "transfer:RequestConnectorProtocol",
+        "transfer:RequestServerDomain",
+        "transfer:RequestServerEndpointType",
+        "transfer:RequestServerProtocols"
       ]
     },
     {

@@ -1,5 +1,46 @@
 [
   {
+    "dateOfChange": "2025-09-30",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Billing": [
+        "billing:AssociateSourceViews",
+        "billing:DisassociateSourceViews",
+        "billing:UseSourceView"
+      ],
+      "Amazon CloudWatch Application Signals": [
+        "application-signals:DeleteGroupingConfiguration",
+        "application-signals:ListAuditFindings",
+        "application-signals:ListGroupingAttributeDefinitions",
+        "application-signals:ListServiceStates",
+        "application-signals:PutGroupingConfiguration"
+      ],
+      "Amazon Connect": [
+        "connect:AssociateContactWithUser",
+        "connect:ListRoutingProfileManualAssignmentQueues"
+      ],
+      "AWS IAM Identity Center OIDC service": [
+        "sso-oauth:IntrospectTokenWithIAM",
+        "sso-oauth:RevokeTokenWithIAM"
+      ],
+      "Amazon One Enterprise": [
+        "one:ListUsers"
+      ],
+      "Amazon OpenSearch Ingestion": [
+        "osis:CreatePipelineEndpoint",
+        "osis:DeletePipelineEndpoint",
+        "osis:DeleteResourcePolicy",
+        "osis:GetResourcePolicy",
+        "osis:ListPipelineEndpointConnections",
+        "osis:ListPipelineEndpoints",
+        "osis:PutResourcePolicy",
+        "osis:RevokePipelineEndpointConnections"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-09-26",
     "addedServices": [],
     "removedServices": [],
