@@ -2,15 +2,15 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 10611
+      "value": 10615
     },
     {
       "key": "Read Actions",
-      "value": 5151
+      "value": 5155
     },
     {
       "key": "List Actions",
-      "value": 3188
+      "value": 3192
     },
     {
       "key": "Permissions Actions",
@@ -169,12 +169,12 @@
       "value": 83
     },
     {
-      "key": "repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName}",
+      "key": "domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}",
       "value": 81
     },
     {
-      "key": "domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}",
-      "value": 79
+      "key": "repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName}",
+      "value": 81
     },
     {
       "key": "rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog",

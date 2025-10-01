@@ -1,5 +1,29 @@
 [
   {
+    "dateOfChange": "2025-10-01",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect Customer Profiles": [
+        "profile:GetProfileHistoryRecord",
+        "profile:ListProfileHistoryRecords"
+      ],
+      "AWS Resource Explorer": [
+        "resource-explorer-2:CreateResourceExplorerSetup",
+        "resource-explorer-2:CreateStreamingAccessForService",
+        "resource-explorer-2:DeleteResourceExplorerSetup",
+        "resource-explorer-2:DeleteStreamingAccessForService",
+        "resource-explorer-2:GetResourceExplorerSetup",
+        "resource-explorer-2:GetServiceIndex",
+        "resource-explorer-2:GetServiceView",
+        "resource-explorer-2:ListServiceIndexes",
+        "resource-explorer-2:ListServiceViews",
+        "resource-explorer-2:ListStreamingAccessForServices"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-09-30",
     "addedServices": [],
     "removedServices": [],
