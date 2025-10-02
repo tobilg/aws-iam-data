@@ -20785,7 +20785,7 @@
       "name": "AWS Parallel Computing Service",
       "servicePrefix": "pcs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsparallelcomputingservice.html",
-      "actionsCount": 19,
+      "actionsCount": 20,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "CreateCluster",
@@ -20804,6 +20804,7 @@
         "RegisterComputeNodeGroupInstance",
         "TagResource",
         "UntagResource",
+        "UpdateCluster",
         "UpdateComputeNodeGroup",
         "UpdateQueue"
       ],
