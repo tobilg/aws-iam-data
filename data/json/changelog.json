@@ -1,5 +1,23 @@
 [
   {
+    "dateOfChange": "2025-10-03",
+    "addedServices": [],
+    "removedServices": [
+      "AWS Application Cost Profiler Service"
+    ],
+    "addedActions": {},
+    "removedActions": {
+      "AWS Application Cost Profiler Service": [
+        "application-cost-profiler:DeleteReportDefinition",
+        "application-cost-profiler:GetReportDefinition",
+        "application-cost-profiler:ImportApplicationUsage",
+        "application-cost-profiler:ListReportDefinitions",
+        "application-cost-profiler:PutReportDefinition",
+        "application-cost-profiler:UpdateReportDefinition"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-10-02",
     "addedServices": [],
     "removedServices": [],

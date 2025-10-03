@@ -1,5 +1,5 @@
 {
-  "serviceCount": 449,
+  "serviceCount": 448,
   "services": [
     {
       "name": "AWS Account Management",
@@ -1168,24 +1168,6 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
-    },
-    {
-      "name": "AWS Application Cost Profiler Service",
-      "servicePrefix": "application-cost-profiler",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationcostprofilerservice.html",
-      "actionsCount": 6,
-      "actions": [
-        "DeleteReportDefinition",
-        "GetReportDefinition",
-        "ImportApplicationUsage",
-        "ListReportDefinitions",
-        "PutReportDefinition",
-        "UpdateReportDefinition"
-      ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
     },
     {
       "name": "Application Discovery Arsenal",
