@@ -1,5 +1,65 @@
 [
   {
+    "dateOfChange": "2025-10-11",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon AI Operations": [
+        "aiops:CreateReport",
+        "aiops:GenerateReport",
+        "aiops:GetFact",
+        "aiops:GetFactVersions",
+        "aiops:GetReport",
+        "aiops:ListFacts",
+        "aiops:ListReports",
+        "aiops:PutFact",
+        "aiops:UpdateReport"
+      ],
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:BatchCreateMemoryRecords",
+        "bedrock-agentcore:BatchDeleteMemoryRecords",
+        "bedrock-agentcore:BatchUpdateMemoryRecords",
+        "bedrock-agentcore:GetAgentCard",
+        "bedrock-agentcore:InvokeAgentRuntimeForUser",
+        "bedrock-agentcore:InvokeGateway",
+        "bedrock-agentcore:StopRuntimeSession"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:CreateActionConnector",
+        "quicksight:CreateExtensionAccess",
+        "quicksight:DeleteActionConnector",
+        "quicksight:DeleteExtensionAccess",
+        "quicksight:DescribeActionConnector",
+        "quicksight:DescribeActionConnectorPermissions",
+        "quicksight:DescribeAgent",
+        "quicksight:DescribeAgentPermissions",
+        "quicksight:DescribeChatConfiguration",
+        "quicksight:DescribeExtensionAccess",
+        "quicksight:DescribeQuickIndexCapacity",
+        "quicksight:GetCustomPermissionsSummary",
+        "quicksight:GetFlowMetadata",
+        "quicksight:GetFlowPermissions",
+        "quicksight:ListActionConnectors",
+        "quicksight:ListAgents",
+        "quicksight:ListExtensionAccesses",
+        "quicksight:ListFlows",
+        "quicksight:QuickSuiteUsageMetrics",
+        "quicksight:SearchActionConnectors",
+        "quicksight:SearchAgents",
+        "quicksight:SearchFlows",
+        "quicksight:UnpublishFlow",
+        "quicksight:UpdateActionConnector",
+        "quicksight:UpdateActionConnectorPermissions",
+        "quicksight:UpdateAgentPermissions",
+        "quicksight:UpdateChatConfiguration",
+        "quicksight:UpdateExtensionAccess",
+        "quicksight:UpdateFlowPermissions",
+        "quicksight:UpdateQuickIndexCapacity"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-10-03",
     "addedServices": [],
     "removedServices": [
