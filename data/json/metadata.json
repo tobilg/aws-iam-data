@@ -26069,7 +26069,7 @@
       "name": "Service Quotas",
       "servicePrefix": "servicequotas",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_servicequotas.html",
-      "actionsCount": 20,
+      "actionsCount": 24,
       "actions": [
         "AssociateServiceQuotaTemplate",
         "CreateSupportCase",
@@ -26077,6 +26077,7 @@
         "DisassociateServiceQuotaTemplate",
         "GetAWSDefaultServiceQuota",
         "GetAssociationForServiceQuotaTemplate",
+        "GetAutoManagementConfiguration",
         "GetRequestedServiceQuotaChange",
         "GetServiceQuota",
         "GetServiceQuotaIncreaseRequestFromTemplate",
@@ -26089,8 +26090,11 @@
         "ListTagsForResource",
         "PutServiceQuotaIncreaseRequestIntoTemplate",
         "RequestServiceQuotaIncrease",
+        "StartAutoManagement",
+        "StopAutoManagement",
         "TagResource",
-        "UntagResource"
+        "UntagResource",
+        "UpdateAutoManagement"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
