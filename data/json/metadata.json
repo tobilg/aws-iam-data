@@ -2645,12 +2645,13 @@
       "name": "Amazon Bedrock Agentcore",
       "servicePrefix": "bedrock-agentcore",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockagentcore.html",
-      "actionsCount": 91,
+      "actionsCount": 92,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "BatchCreateMemoryRecords",
         "BatchDeleteMemoryRecords",
         "BatchUpdateMemoryRecords",
+        "CompleteResourceTokenAuth",
         "ConnectBrowserAutomationStream",
         "ConnectBrowserLiveViewStream",
         "CreateAgentRuntime",
@@ -2755,16 +2756,22 @@
         "workload-identity-directory",
         "token-vault"
       ],
-      "conditionKeysCount": 8,
+      "conditionKeysCount": 14,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "bedrock-agentcore:GatewayAuthorizerType",
+        "bedrock-agentcore:InboundJwtClaim/aud",
+        "bedrock-agentcore:InboundJwtClaim/client_id",
+        "bedrock-agentcore:InboundJwtClaim/iss",
+        "bedrock-agentcore:InboundJwtClaim/scope",
+        "bedrock-agentcore:InboundJwtClaim/sub",
         "bedrock-agentcore:actorId",
         "bedrock-agentcore:namespace",
         "bedrock-agentcore:sessionId",
-        "bedrock-agentcore:strategyId"
+        "bedrock-agentcore:strategyId",
+        "bedrock-agentcore:userid"
       ]
     },
     {
@@ -29711,11 +29718,12 @@
         "group",
         "sampling-rule"
       ],
-      "conditionKeysCount": 5,
+      "conditionKeysCount": 6,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "logs:LogGeneratingResourceArns",
         "xray:ResourcePolicyName",
         "xray:TraceSegmentDestination"
       ]
