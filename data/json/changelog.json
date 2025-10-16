@@ -1,5 +1,19 @@
 [
   {
+    "dateOfChange": "2025-10-16",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Elastic Kubernetes Service": [
+        "eks:MutateViaKubernetesApi"
+      ],
+      "Amazon Kinesis Data Streams": [
+        "kinesis:InjectApiError"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-10-15",
     "addedServices": [],
     "removedServices": [],

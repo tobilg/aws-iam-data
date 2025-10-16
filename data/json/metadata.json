@@ -2756,7 +2756,7 @@
         "workload-identity-directory",
         "token-vault"
       ],
-      "conditionKeysCount": 14,
+      "conditionKeysCount": 16,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -2769,8 +2769,10 @@
         "bedrock-agentcore:InboundJwtClaim/sub",
         "bedrock-agentcore:actorId",
         "bedrock-agentcore:namespace",
+        "bedrock-agentcore:securityGroups",
         "bedrock-agentcore:sessionId",
         "bedrock-agentcore:strategyId",
+        "bedrock-agentcore:subnets",
         "bedrock-agentcore:userid"
       ]
     },
@@ -10831,7 +10833,7 @@
       "name": "Amazon Elastic Kubernetes Service",
       "servicePrefix": "eks",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelastickubernetesservice.html",
-      "actionsCount": 62,
+      "actionsCount": 63,
       "actions": [
         "AccessKubernetesApi",
         "AssociateAccessPolicy",
@@ -10883,6 +10885,7 @@
         "ListPodIdentityAssociations",
         "ListTagsForResource",
         "ListUpdates",
+        "MutateViaKubernetesApi",
         "RegisterCluster",
         "StartInsightsRefresh",
         "TagResource",
@@ -17038,7 +17041,7 @@
       "name": "Amazon Kinesis Data Streams",
       "servicePrefix": "kinesis",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisdatastreams.html",
-      "actionsCount": 35,
+      "actionsCount": 36,
       "actions": [
         "AddTagsToStream",
         "CreateStream",
@@ -17056,6 +17059,7 @@
         "GetResourcePolicy",
         "GetShardIterator",
         "IncreaseStreamRetentionPeriod",
+        "InjectApiError",
         "ListShards",
         "ListStreamConsumers",
         "ListStreams",
@@ -17082,11 +17086,14 @@
         "consumer",
         "kmsKey"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 6,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "kinesis:FisActionId",
+        "kinesis:FisInjectPercentage",
+        "kinesis:FisTargetArns"
       ]
     },
     {
