@@ -1,449 +1,450 @@
 service_id,name,prefix,reference_url
 1,AWS Account Management,account,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsaccountmanagement.html
-2,AWS Activate,activate,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsactivate.html
-3,AWS Amplify,amplify,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsamplify.html
-4,AWS Amplify Admin,amplifybackend,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsamplifyadmin.html
-5,AWS Amplify UI Builder,amplifyuibuilder,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsamplifyuibuilder.html
-6,AWS App Mesh,appmesh,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappmesh.html
-7,AWS App Mesh Preview,appmesh-preview,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappmeshpreview.html
-8,AWS App Runner,apprunner,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapprunner.html
-9,AWS App Studio,appstudio,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappstudio.html
-10,AWS App2Container,a2c,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapp2container.html
-11,AWS AppConfig,appconfig,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappconfig.html
-12,AWS AppFabric,appfabric,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappfabric.html
-13,AWS AppSync,appsync,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappsync.html
-14,AWS Application Auto Scaling,application-autoscaling,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationautoscaling.html
-15,AWS Application Discovery Service,discovery,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationdiscoveryservice.html
-16,AWS Application Migration Service,mgn,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationmigrationservice.html
-17,AWS Application Transformation Service,application-transformation,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationtransformationservice.html
-18,AWS Artifact,artifact,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsartifact.html
-19,AWS Audit Manager,auditmanager,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsauditmanager.html
-20,AWS Auto Scaling,autoscaling-plans,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsautoscaling.html
-21,AWS B2B Data Interchange,b2bi,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsb2bdatainterchange.html
-22,AWS Backup,backup,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackup.html
-23,AWS Backup Gateway,backup-gateway,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackupgateway.html
-24,AWS Backup Search,backup-search,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackupsearch.html
-25,AWS Backup storage,backup-storage,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackupstorage.html
-26,AWS Batch,batch,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html
-27,AWS Billing,billing,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbilling.html
-28,AWS Billing And Cost Management Data Exports,bcm-data-exports,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingandcostmanagementdataexports.html
-29,AWS Billing And Cost Management Pricing Calculator,bcm-pricing-calculator,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingandcostmanagementpricingcalculator.html
-30,AWS Billing And Cost Management Recommended Actions,bcm-recommended-actions,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingandcostmanagementrecommendedactions.html
-31,AWS Billing Conductor,billingconductor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingconductor.html
-32,AWS Billing Console,aws-portal,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingconsole.html
-33,AWS Billing and Cost Management Dashboards,bcm-dashboards,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingandcostmanagementdashboards.html
-34,AWS Budget Service,budgets,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbudgetservice.html
-35,AWS BugBust,bugbust,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbugbust.html
-36,AWS Certificate Manager,acm,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscertificatemanager.html
-37,AWS Chatbot,chatbot,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awschatbot.html
-38,AWS Clean Rooms,cleanrooms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscleanrooms.html
-39,AWS Clean Rooms ML,cleanrooms-ml,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscleanroomsml.html
-40,AWS Cloud Control API,cloudformation,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudcontrolapi.html
-41,AWS Cloud Map,servicediscovery,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudmap.html
-42,AWS Cloud9,cloud9,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloud9.html
-43,AWS CloudFormation,cloudformation,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudformation.html
-44,AWS CloudHSM,cloudhsm,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudhsm.html
-45,AWS CloudShell,cloudshell,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudshell.html
-46,AWS CloudTrail,cloudtrail,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudtrail.html
-47,AWS CloudTrail Data,cloudtrail-data,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudtraildata.html
-48,AWS CloudWatch RUM,rum,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudwatchrum.html
-49,AWS CodeArtifact,codeartifact,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodeartifact.html
-50,AWS CodeBuild,codebuild,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodebuild.html
-51,AWS CodeCommit,codecommit,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodecommit.html
-52,AWS CodeConnections,codeconnections,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodeconnections.html
-53,AWS CodeDeploy,codedeploy,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodedeploy.html
-54,AWS CodeDeploy secure host commands service,codedeploy-commands-secure,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodedeploysecurehostcommandsservice.html
-55,AWS CodePipeline,codepipeline,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodepipeline.html
-56,AWS CodeStar,codestar,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodestar.html
-57,AWS CodeStar Connections,codestar-connections,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodestarconnections.html
-58,AWS CodeStar Notifications,codestar-notifications,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodestarnotifications.html
-59,AWS Compute Optimizer,compute-optimizer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscomputeoptimizer.html
-60,AWS Config,config,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconfig.html
-61,AWS Connector Service,awsconnector,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconnectorservice.html
-62,AWS Consolidated Billing,consolidatedbilling,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconsolidatedbilling.html
-63,AWS Control Catalog,controlcatalog,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscontrolcatalog.html
-64,AWS Control Tower,controltower,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscontroltower.html
-65,AWS Cost Explorer Service,ce,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostexplorerservice.html
-66,AWS Cost Optimization Hub,cost-optimization-hub,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostoptimizationhub.html
-67,AWS Cost and Usage Report,cur,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostandusagereport.html
-68,AWS Customer Verification Service,customer-verification,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscustomerverificationservice.html
-69,AWS Data Exchange,dataexchange,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdataexchange.html
-70,AWS Data Pipeline,datapipeline,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatapipeline.html
-71,AWS DataSync,datasync,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatasync.html
-72,AWS Database Migration Service,dms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatabasemigrationservice.html
-73,AWS Deadline Cloud,deadline,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeadlinecloud.html
-74,AWS DeepComposer,deepcomposer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeepcomposer.html
-75,AWS DeepRacer,deepracer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeepracer.html
-76,AWS Device Farm,devicefarm,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdevicefarm.html
-77,AWS Diagnostic tools,ts,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdiagnostictools.html
-78,AWS Direct Connect,directconnect,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdirectconnect.html
-79,AWS Directory Service,ds,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdirectoryservice.html
-80,AWS Directory Service Data,ds-data,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdirectoryservicedata.html
-81,AWS Elastic Beanstalk,elasticbeanstalk,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticbeanstalk.html
-82,AWS Elastic Disaster Recovery,drs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticdisasterrecovery.html
-83,AWS Elastic Load Balancing,elasticloadbalancing,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticloadbalancing.html
-84,AWS Elastic Load Balancing V2,elasticloadbalancing,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticloadbalancingv2.html
-85,AWS Elemental Appliances and Software,elemental-appliances-software,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalappliancesandsoftware.html
-86,AWS Elemental Appliances and Software Activation Service,elemental-activations,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalappliancesandsoftwareactivationservice.html
-87,AWS Elemental MediaConnect,mediaconnect,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediaconnect.html
-88,AWS Elemental MediaConvert,mediaconvert,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediaconvert.html
-89,AWS Elemental MediaLive,medialive,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmedialive.html
-90,AWS Elemental MediaPackage,mediapackage,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackage.html
-91,AWS Elemental MediaPackage V2,mediapackagev2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackagev2.html
-92,AWS Elemental MediaPackage VOD,mediapackage-vod,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackagevod.html
-93,AWS Elemental MediaStore,mediastore,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediastore.html
-94,AWS Elemental MediaTailor,mediatailor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediatailor.html
-95,AWS Elemental Support Cases,elemental-support-cases,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalsupportcases.html
-96,AWS Elemental Support Content,elemental-support-content,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalsupportcontent.html
-97,AWS End User Messaging SMS and Voice V2,sms-voice,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsendusermessagingsmsandvoicev2.html
-98,AWS End User Messaging Social,social-messaging,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsendusermessagingsocial.html
-99,AWS Entity Resolution,entityresolution,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsentityresolution.html
-100,AWS Fault Injection Service,fis,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsfaultinjectionservice.html
-101,AWS Firewall Manager,fms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsfirewallmanager.html
-102,AWS Free Tier,freetier,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsfreetier.html
-103,AWS Global Accelerator,globalaccelerator,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsglobalaccelerator.html
-104,AWS Glue,glue,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsglue.html
-105,AWS Glue DataBrew,databrew,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsgluedatabrew.html
-106,AWS Ground Station,groundstation,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsgroundstation.html
-107,AWS Health APIs and Notifications,health,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthapisandnotifications.html
-108,AWS HealthImaging,medical-imaging,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthimaging.html
-109,AWS HealthLake,healthlake,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthlake.html
-110,AWS HealthOmics,omics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthomics.html
-111,AWS IAM Access Analyzer,access-analyzer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamaccessanalyzer.html
-112,AWS IAM Identity Center,sso,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamidentitycenter.html
-113,AWS IAM Identity Center OIDC service,sso-oauth,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamidentitycenteroidcservice.html
-114,AWS IAM Identity Center directory,sso-directory,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamidentitycenterdirectory.html
-115,AWS IQ,iq,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiq.html
-116,AWS IQ Permissions,iq-permission,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiqpermissions.html
-117,AWS Identity Store,identitystore,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitystore.html
-118,AWS Identity Store Auth,identitystore-auth,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitystoreauth.html
-119,AWS Identity Sync,identity-sync,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitysync.html
-120,AWS Identity and Access Management (IAM),iam,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentityandaccessmanagementiam.html
-121,AWS Identity and Access Management Roles Anywhere,rolesanywhere,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentityandaccessmanagementrolesanywhere.html
-122,AWS Import Export Disk Service,importexport,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsimportexportdiskservice.html
-123,AWS Invoicing Service,invoicing,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsinvoicingservice.html
-124,AWS IoT,iot,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html
-125,AWS IoT Analytics,iotanalytics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotanalytics.html
-126,AWS IoT Core Device Advisor,iotdeviceadvisor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotcoredeviceadvisor.html
-127,AWS IoT Device Tester,iot-device-tester,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotdevicetester.html
-128,AWS IoT Events,iotevents,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotevents.html
-129,AWS IoT Fleet Hub for Device Management,iotfleethub,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html
-130,AWS IoT FleetWise,iotfleetwise,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleetwise.html
-131,AWS IoT Greengrass,greengrass,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotgreengrass.html
-132,AWS IoT Greengrass V2,greengrass,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotgreengrassv2.html
-133,AWS IoT Jobs DataPlane,iotjobsdata,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotjobsdataplane.html
-134,AWS IoT Managed Integrations,iotmanagedintegrations,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotmanagedintegrations.html
-135,AWS IoT SiteWise,iotsitewise,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotsitewise.html
-136,AWS IoT TwinMaker,iottwinmaker,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiottwinmaker.html
-137,AWS IoT Wireless,iotwireless,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotwireless.html
-138,AWS Key Management Service,kms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awskeymanagementservice.html
-139,AWS Lake Formation,lakeformation,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslakeformation.html
-140,AWS Lambda,lambda,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslambda.html
-141,AWS Launch Wizard,launchwizard,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslaunchwizard.html
-142,AWS License Manager,license-manager,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslicensemanager.html
-143,AWS License Manager Linux Subscriptions Manager,license-manager-linux-subscriptions,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslicensemanagerlinuxsubscriptionsmanager.html
-144,AWS License Manager User Subscriptions,license-manager-user-subscriptions,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslicensemanagerusersubscriptions.html
-145,AWS Mainframe Modernization Application Testing,apptest,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmainframemodernizationapplicationtesting.html
-146,AWS Mainframe Modernization Service,m2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmainframemodernizationservice.html
-147,AWS Management Console Mobile App,consoleapp,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconsolemobileapp.html
-148,AWS Marketplace,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplace.html
-149,AWS Marketplace Catalog,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacecatalog.html
-150,AWS Marketplace Commerce Analytics Service,marketplacecommerceanalytics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacecommerceanalyticsservice.html
-151,AWS Marketplace Deployment Service,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacedeploymentservice.html
-152,AWS Marketplace Discovery,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacediscovery.html
-153,AWS Marketplace Entitlement Service,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceentitlementservice.html
-154,AWS Marketplace Image Building Service,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceimagebuildingservice.html
-155,AWS Marketplace Management Portal,aws-marketplace-management,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacemanagementportal.html
-156,AWS Marketplace Metering Service,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacemeteringservice.html
-157,AWS Marketplace Private Marketplace,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceprivatemarketplace.html
-158,AWS Marketplace Procurement Systems Integration,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceprocurementsystemsintegration.html
-159,AWS Marketplace Reporting,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacereporting.html
-160,AWS Marketplace Seller Reporting,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacesellerreporting.html
-161,AWS Marketplace Vendor Insights,vendor-insights,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacevendorinsights.html
-162,AWS Microservice Extractor for .NET,serviceextract,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmicroserviceextractorfor.net.html
-163,AWS Migration Acceleration Program Credits,mapcredits,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationaccelerationprogramcredits.html
-164,AWS Migration Hub,mgh,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhub.html
-165,AWS Migration Hub Orchestrator,migrationhub-orchestrator,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhuborchestrator.html
-166,AWS Migration Hub Refactor Spaces,refactor-spaces,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhubrefactorspaces.html
-167,AWS Migration Hub Strategy Recommendations,migrationhub-strategy,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhubstrategyrecommendations.html
-168,AWS Network Firewall,network-firewall,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsnetworkfirewall.html
-169,AWS Network Manager,networkmanager,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsnetworkmanager.html
-170,AWS Network Manager Chat,networkmanager-chat,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsnetworkmanagerchat.html
-171,AWS OpsWorks,opsworks,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsopsworks.html
-172,AWS OpsWorks Configuration Management,opsworks-cm,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsopsworksconfigurationmanagement.html
-173,AWS Organizations,organizations,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html
-174,AWS Outposts,outposts,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsoutposts.html
-175,AWS Panorama,panorama,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspanorama.html
-176,AWS Parallel Computing Service,pcs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsparallelcomputingservice.html
-177,AWS Partner Central Selling,partnercentral,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspartnercentralselling.html
-178,AWS Partner central account management,partnercentral-account-management,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspartnercentralaccountmanagement.html
-179,AWS Payment Cryptography,payment-cryptography,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspaymentcryptography.html
-180,AWS Payments,payments,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspayments.html
-181,AWS Performance Insights,pi,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsperformanceinsights.html
-182,AWS Price List,pricing,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspricelist.html
-183,AWS Private CA Connector for Active Directory,pca-connector-ad,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsprivatecaconnectorforactivedirectory.html
-184,AWS Private CA Connector for SCEP,pca-connector-scep,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsprivatecaconnectorforscep.html
-185,AWS Private Certificate Authority,acm-pca,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsprivatecertificateauthority.html
-186,AWS PrivateLink,vpce,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsprivatelink.html
-187,AWS Proton,proton,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsproton.html
-188,AWS Purchase Orders Console,purchase-orders,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspurchaseordersconsole.html
-189,AWS Recycle Bin,rbin,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsrecyclebin.html
-190,AWS Resilience Hub,resiliencehub,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresiliencehub.html
-191,AWS Resource Access Manager (RAM),ram,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourceaccessmanagerram.html
-192,AWS Resource Explorer,resource-explorer-2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourceexplorer.html
-193,AWS Resource Groups,resource-groups,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourcegroups.html
-194,AWS RoboMaker,robomaker,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsrobomaker.html
-195,AWS SQL Workbench,sqlworkbench,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssqlworkbench.html
-196,AWS Savings Plans,savingsplans,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssavingsplans.html
-197,AWS Secrets Manager,secretsmanager,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html
-198,AWS Security Hub,securityhub,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecurityhub.html
-199,AWS Security Incident Response,security-ir,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecurityincidentresponse.html
-200,AWS Security Token Service,sts,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecuritytokenservice.html
-201,AWS Server Migration Service,sms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservermigrationservice.html
-202,AWS Serverless Application Repository,serverlessrepo,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserverlessapplicationrepository.html
-203,AWS Service - Oracle Database@AWS,odb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservice-oracledatabase_aws.html
-204,AWS Service Catalog,servicecatalog,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservicecatalog.html
-205,AWS Service for managing AWS Management Console user experience capabilities.,uxc,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceformanagingawsconsoleuserexperiencecapabilities..html
-206,AWS Shield,shield,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsshield.html
-207,AWS Shield network security director,network-security-director,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsshieldnetworksecuritydirector.html
-208,AWS Signer,signer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssigner.html
-209,AWS Signin,signin,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssignin.html
-210,AWS SimSpace Weaver,simspaceweaver,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssimspaceweaver.html
-211,AWS Snow Device Management,snow-device-management,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssnowdevicemanagement.html
-212,AWS Snowball,snowball,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssnowball.html
-213,AWS Step Functions,states,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsstepfunctions.html
-214,AWS Storage Gateway,storagegateway,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsstoragegateway.html
-215,AWS Supply Chain,scn,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupplychain.html
-216,AWS Support,support,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupport.html
-217,AWS Support App in Slack,supportapp,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupportappinslack.html
-218,AWS Support Console,support-console,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupportconsole.html
-219,AWS Support Plans,supportplans,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupportplans.html
-220,AWS Sustainability,sustainability,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssustainability.html
-221,AWS Systems Manager,ssm,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanager.html
-222,AWS Systems Manager GUI Connect,ssm-guiconnect,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerguiconnect.html
-223,AWS Systems Manager Incident Manager,ssm-incidents,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerincidentmanager.html
-224,AWS Systems Manager Incident Manager Contacts,ssm-contacts,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerincidentmanagercontacts.html
-225,AWS Systems Manager Quick Setup,ssm-quicksetup,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerquicksetup.html
-226,AWS Systems Manager for SAP,ssm-sap,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerforsap.html
-227,AWS Tax Settings,tax,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstaxsettings.html
-228,AWS Telco Network Builder,tnb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstelconetworkbuilder.html
-229,AWS Tiros,tiros,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstiros.html
-230,AWS Transfer Family,transfer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstransferfamily.html
-231,AWS Transform,transform,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstransform.html
-232,AWS Trusted Advisor,trustedadvisor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstrustedadvisor.html
-233,AWS User Notifications,notifications,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsusernotifications.html
-234,AWS User Notifications Contacts,notifications-contacts,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsusernotificationscontacts.html
-235,AWS User Subscriptions,user-subscriptions,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsusersubscriptions.html
-236,AWS Verified Access,verified-access,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsverifiedaccess.html
-237,AWS WAF,waf,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswaf.html
-238,AWS WAF Regional,waf-regional,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswafregional.html
-239,AWS WAF V2,wafv2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswafv2.html
-240,AWS Well-Architected Tool,wellarchitected,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswell-architectedtool.html
-241,AWS Wickr,wickr,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswickr.html
-242,AWS WorkSpaces Managed Instances,workspaces-instances,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsworkspacesmanagedinstances.html
-243,AWS X-Ray,xray,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsx-ray.html
-244,AWS rePost Private,repostspace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsrepostprivate.html
-245,AWS service providing managed private networks,private-networks,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceprovidingmanagedprivatenetworks.html
-246,Alexa for Business,a4b,https://docs.aws.amazon.com/service-authorization/latest/reference/list_alexaforbusiness.html
-247,Amazon AI Operations,aiops,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonaioperations.html
-248,Amazon API Gateway,execute-api,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonapigateway.html
-249,Amazon API Gateway Management,apigateway,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonapigatewaymanagement.html
-250,Amazon API Gateway Management V2,apigateway,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonapigatewaymanagementv2.html
-251,Amazon ARC Region switch,arc-region-switch,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonarcregionswitch.html
-252,Amazon AppFlow,appflow,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappflow.html
-253,Amazon AppIntegrations,app-integrations,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappintegrations.html
-254,Amazon AppStream 2.0,appstream,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappstream2.0.html
-255,Amazon Application Recovery Controller - Zonal Shift,arc-zonal-shift,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonapplicationrecoverycontroller-zonalshift.html
-256,Amazon Athena,athena,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonathena.html
-257,Amazon Aurora DSQL,dsql,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonauroradsql.html
-258,Amazon Bedrock,bedrock,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html
-259,Amazon Bedrock Agentcore,bedrock-agentcore,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockagentcore.html
-260,Amazon Braket,braket,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbraket.html
-261,Amazon Chime,chime,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonchime.html
-262,Amazon Cloud Directory,clouddirectory,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonclouddirectory.html
-263,Amazon CloudFront,cloudfront,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudfront.html
-264,Amazon CloudFront KeyValueStore,cloudfront-keyvaluestore,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudfrontkeyvaluestore.html
-265,Amazon CloudSearch,cloudsearch,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudsearch.html
-266,Amazon CloudWatch,cloudwatch,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatch.html
-267,Amazon CloudWatch Application Insights,applicationinsights,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchapplicationinsights.html
-268,Amazon CloudWatch Application Signals,application-signals,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchapplicationsignals.html
-269,Amazon CloudWatch Evidently,evidently,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchevidently.html
-270,Amazon CloudWatch Internet Monitor,internetmonitor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchinternetmonitor.html
-271,Amazon CloudWatch Logs,logs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchlogs.html
-272,Amazon CloudWatch Network Synthetic Monitor,networkmonitor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchnetworksyntheticmonitor.html
-273,Amazon CloudWatch Observability Access Manager,oam,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchobservabilityaccessmanager.html
-274,Amazon CloudWatch Observability Admin Service,observabilityadmin,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchobservabilityadminservice.html
-275,Amazon CloudWatch Synthetics,synthetics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchsynthetics.html
-276,Amazon CodeCatalyst,codecatalyst,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodecatalyst.html
-277,Amazon CodeGuru,codeguru,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodeguru.html
-278,Amazon CodeGuru Profiler,codeguru-profiler,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodeguruprofiler.html
-279,Amazon CodeGuru Reviewer,codeguru-reviewer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodegurureviewer.html
-280,Amazon CodeGuru Security,codeguru-security,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodegurusecurity.html
-281,Amazon CodeWhisperer,codewhisperer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodewhisperer.html
-282,Amazon Cognito Identity,cognito-identity,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitoidentity.html
-283,Amazon Cognito Sync,cognito-sync,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitosync.html
-284,Amazon Cognito User Pools,cognito-idp,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitouserpools.html
-285,Amazon Comprehend,comprehend,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncomprehend.html
-286,Amazon Comprehend Medical,comprehendmedical,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncomprehendmedical.html
-287,Amazon Connect,connect,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html
-288,Amazon Connect Cases,cases,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcases.html
-289,Amazon Connect Customer Profiles,profile,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcustomerprofiles.html
-290,Amazon Connect Outbound Campaigns,connect-campaigns,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectoutboundcampaigns.html
-291,Amazon Connect Voice ID,voiceid,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectvoiceid.html
-292,Amazon Data Lifecycle Manager,dlm,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondatalifecyclemanager.html
-293,Amazon DataZone,datazone,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondatazone.html
-294,Amazon Detective,detective,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondetective.html
-295,Amazon DevOps Guru,devops-guru,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondevopsguru.html
-296,Amazon DocumentDB Elastic Clusters,docdb-elastic,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondocumentdbelasticclusters.html
-297,Amazon DynamoDB,dynamodb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondynamodb.html
-298,Amazon DynamoDB Accelerator (DAX),dax,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondynamodbacceleratordax.html
-299,Amazon EC2,ec2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html
-300,Amazon EC2 Auto Scaling,autoscaling,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2autoscaling.html
-301,Amazon EC2 Image Builder,imagebuilder,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2imagebuilder.html
-302,Amazon EC2 Instance Connect,ec2-instance-connect,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2instanceconnect.html
-303,Amazon EKS Auth,eks-auth,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneksauth.html
-304,Amazon EMR Serverless,emr-serverless,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonemrserverless.html
-305,Amazon EMR on EKS (EMR Containers),emr-containers,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonemroneksemrcontainers.html
-306,Amazon ElastiCache,elasticache,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticache.html
-307,Amazon Elastic Block Store,ebs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticblockstore.html
-308,Amazon Elastic Container Registry,ecr,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerregistry.html
-309,Amazon Elastic Container Registry Public,ecr-public,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerregistrypublic.html
-310,Amazon Elastic Container Service,ecs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerservice.html
-311,Amazon Elastic File System,elasticfilesystem,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticfilesystem.html
-312,Amazon Elastic Kubernetes Service,eks,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelastickubernetesservice.html
-313,Amazon Elastic MapReduce,elasticmapreduce,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticmapreduce.html
-314,Amazon Elastic Transcoder,elastictranscoder,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelastictranscoder.html
-315,Amazon Elastic VMware Service,evs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticvmwareservice.html
-316,Amazon EventBridge,events,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridge.html
-317,Amazon EventBridge Pipes,pipes,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridgepipes.html
-318,Amazon EventBridge Scheduler,scheduler,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridgescheduler.html
-319,Amazon EventBridge Schemas,schemas,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridgeschemas.html
-320,Amazon FSx,fsx,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfsx.html
-321,Amazon FinSpace,finspace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfinspace.html
-322,Amazon FinSpace API,finspace-api,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfinspaceapi.html
-323,Amazon Forecast,forecast,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonforecast.html
-324,Amazon Fraud Detector,frauddetector,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html
-325,Amazon FreeRTOS,freertos,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfreertos.html
-326,Amazon GameLift Servers,gamelift,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongameliftservers.html
-327,Amazon GameLift Streams,gameliftstreams,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongameliftstreams.html
-328,Amazon GroundTruth Labeling,groundtruthlabeling,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongroundtruthlabeling.html
-329,Amazon GuardDuty,guardduty,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonguardduty.html
-330,Amazon Honeycode,honeycode,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonhoneycode.html
-331,Amazon Inspector,inspector,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninspector.html
-332,Amazon Inspector2,inspector2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninspector2.html
-333,Amazon InspectorScan,inspector-scan,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninspectorscan.html
-334,Amazon Interactive Video Service,ivs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninteractivevideoservice.html
-335,Amazon Interactive Video Service Chat,ivschat,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninteractivevideoservicechat.html
-336,Amazon Kendra,kendra,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkendra.html
-337,Amazon Kendra Intelligent Ranking,kendra-ranking,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkendraintelligentranking.html
-338,Amazon Keyspaces (for Apache Cassandra),cassandra,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkeyspacesforapachecassandra.html
-339,Amazon Kinesis Analytics,kinesisanalytics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisanalytics.html
-340,Amazon Kinesis Analytics V2,kinesisanalytics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisanalyticsv2.html
-341,Amazon Kinesis Data Streams,kinesis,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisdatastreams.html
-342,Amazon Kinesis Firehose,firehose,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisfirehose.html
-343,Amazon Kinesis Video Streams,kinesisvideo,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisvideostreams.html
-344,Amazon Lex,lex,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlex.html
-345,Amazon Lex V2,lex,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlexv2.html
-346,Amazon Lightsail,lightsail,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlightsail.html
-347,Amazon Location,geo,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlocation.html
-348,Amazon Location Service Maps,geo-maps,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlocationservicemaps.html
-349,Amazon Location Service Places,geo-places,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlocationserviceplaces.html
-350,Amazon Location Service Routes,geo-routes,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlocationserviceroutes.html
-351,Amazon Lookout for Equipment,lookoutequipment,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlookoutforequipment.html
-352,Amazon Lookout for Metrics,lookoutmetrics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlookoutformetrics.html
-353,Amazon Lookout for Vision,lookoutvision,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlookoutforvision.html
-354,Amazon MQ,mq,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmq.html
-355,Amazon Machine Learning,machinelearning,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmachinelearning.html
-356,Amazon Macie,macie2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmacie.html
-357,Amazon Managed Blockchain,managedblockchain,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedblockchain.html
-358,Amazon Managed Blockchain Query,managedblockchain-query,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedblockchainquery.html
-359,Amazon Managed Grafana,grafana,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedgrafana.html
-360,Amazon Managed Service for Prometheus,aps,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedserviceforprometheus.html
-361,Amazon Managed Streaming for Apache Kafka,kafka,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedstreamingforapachekafka.html
-362,Amazon Managed Streaming for Kafka Connect,kafkaconnect,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedstreamingforkafkaconnect.html
-363,Amazon Managed Workflows for Apache Airflow,airflow,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedworkflowsforapacheairflow.html
-364,Amazon Mechanical Turk,mechanicalturk,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmechanicalturk.html
-365,Amazon MemoryDB,memorydb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmemorydb.html
-366,Amazon Message Delivery Service,ec2messages,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmessagedeliveryservice.html
-367,Amazon Message Gateway Service,ssmmessages,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmessagegatewayservice.html
-368,Amazon Mobile Analytics,mobileanalytics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmobileanalytics.html
-369,Amazon Monitron,monitron,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmonitron.html
-370,Amazon Neptune,neptune-db,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonneptune.html
-371,Amazon Neptune Analytics,neptune-graph,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonneptuneanalytics.html
-372,Amazon Nimble Studio,nimble,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonnimblestudio.html
-373,Amazon One Enterprise,one,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazononeenterprise.html
-374,Amazon OpenSearch,opensearch,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearch.html
-375,Amazon OpenSearch Ingestion,osis,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchingestion.html
-376,Amazon OpenSearch Serverless,aoss,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchserverless.html
-377,Amazon OpenSearch Service,es,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchservice.html
-378,Amazon Personalize,personalize,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpersonalize.html
-379,Amazon Pinpoint,mobiletargeting,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpinpoint.html
-380,Amazon Pinpoint Email Service,ses,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpinpointemailservice.html
-381,Amazon Pinpoint SMS and Voice Service,sms-voice,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpinpointsmsandvoiceservice.html
-382,Amazon Polly,polly,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpolly.html
-383,Amazon Q,q,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonq.html
-384,Amazon Q Business,qbusiness,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusiness.html
-385,Amazon Q Business Q Apps,qapps,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusinessqapps.html
-386,Amazon Q Developer,qdeveloper,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqdeveloper.html
-387,Amazon Q in Connect,wisdom,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqinconnect.html
-388,Amazon QLDB,qldb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqldb.html
-389,Amazon QuickSight,quicksight,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonquicksight.html
-390,Amazon RDS,rds,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrds.html
-391,Amazon RDS Data API,rds-data,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrdsdataapi.html
-392,Amazon RDS IAM Authentication,rds-db,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrdsiamauthentication.html
-393,Amazon RHEL Knowledgebase Portal,rhelkb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrhelknowledgebaseportal.html
-394,Amazon Redshift,redshift,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshift.html
-395,Amazon Redshift Data API,redshift-data,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshiftdataapi.html
-396,Amazon Redshift Serverless,redshift-serverless,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshiftserverless.html
-397,Amazon Rekognition,rekognition,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrekognition.html
-398,Amazon Resource Group Tagging API,tag,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonresourcegrouptaggingapi.html
-399,Amazon Route 53,route53,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53.html
-400,Amazon Route 53 Domains,route53domains,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53domains.html
-401,Amazon Route 53 Profiles,route53profiles,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53profiles.html
-402,Amazon Route 53 Recovery Cluster,route53-recovery-cluster,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoverycluster.html
-403,Amazon Route 53 Recovery Controls,route53-recovery-control-config,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoverycontrols.html
-404,Amazon Route 53 Recovery Readiness,route53-recovery-readiness,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoveryreadiness.html
-405,Amazon Route 53 Resolver,route53resolver,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53resolver.html
-406,Amazon S3,s3,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html
-407,Amazon S3 Express,s3express,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3express.html
-408,Amazon S3 Glacier,glacier,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3glacier.html
-409,Amazon S3 Object Lambda,s3-object-lambda,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3objectlambda.html
-410,Amazon S3 Tables,s3tables,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3tables.html
-411,Amazon S3 Vectors,s3vectors,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3vectors.html
-412,Amazon S3 on Outposts,s3-outposts,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3onoutposts.html
-413,Amazon SES,ses,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonses.html
-414,Amazon SNS,sns,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsns.html
-415,Amazon SQS,sqs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsqs.html
-416,Amazon SageMaker,sagemaker,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemaker.html
-417,Amazon SageMaker data science assistant,sagemaker-data-science-assistant,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakerdatascienceassistant.html
-418,Amazon SageMaker geospatial capabilities,sagemaker-geospatial,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakergeospatialcapabilities.html
-419,Amazon SageMaker with MLflow,sagemaker-mlflow,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakerwithmlflow.html
-420,Amazon Security Lake,securitylake,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsecuritylake.html
-421,Amazon Simple Email Service - Mail Manager,ses,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservice-mailmanager.html
-422,Amazon Simple Email Service v2,ses,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservicev2.html
-423,Amazon Simple Workflow Service,swf,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleworkflowservice.html
-424,Amazon SimpleDB,sdb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpledb.html
-425,Amazon Textract,textract,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontextract.html
-426,Amazon Timestream,timestream,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestream.html
-427,Amazon Timestream InfluxDB,timestream-influxdb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestreaminfluxdb.html
-428,Amazon Transcribe,transcribe,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontranscribe.html
-429,Amazon Translate,translate,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontranslate.html
-430,Amazon VPC Lattice,vpc-lattice,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonvpclattice.html
-431,Amazon VPC Lattice Services,vpc-lattice-svcs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonvpclatticeservices.html
-432,Amazon Verified Permissions,verifiedpermissions,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonverifiedpermissions.html
-433,Amazon WorkDocs,workdocs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkdocs.html
-434,Amazon WorkLink,worklink,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworklink.html
-435,Amazon WorkMail,workmail,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkmail.html
-436,Amazon WorkMail Message Flow,workmailmessageflow,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkmailmessageflow.html
-437,Amazon WorkSpaces,workspaces,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspaces.html
-438,Amazon WorkSpaces Application Manager,wam,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesapplicationmanager.html
-439,Amazon WorkSpaces Secure Browser,workspaces-web,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacessecurebrowser.html
-440,Amazon WorkSpaces Thin Client,thinclient,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesthinclient.html
-441,AmazonMediaImport,mediaimport,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmediaimport.html
-442,Apache Kafka APIs for Amazon MSK clusters,kafka-cluster,https://docs.aws.amazon.com/service-authorization/latest/reference/list_apachekafkaapisforamazonmskclusters.html
-443,Application Discovery Arsenal,arsenal,https://docs.aws.amazon.com/service-authorization/latest/reference/list_applicationdiscoveryarsenal.html
-444,Database Query Metadata Service,dbqms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_databasequerymetadataservice.html
-445,Multi-party approval,mpa,https://docs.aws.amazon.com/service-authorization/latest/reference/list_multi-partyapproval.html
-446,Network Flow Monitor,networkflowmonitor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_networkflowmonitor.html
-447,Service Quotas,servicequotas,https://docs.aws.amazon.com/service-authorization/latest/reference/list_servicequotas.html
-448,Tag Editor,resource-explorer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_tageditor.html
+2,AWS Action Recommendations,action-recommendations,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsactionrecommendations.html
+3,AWS Activate,activate,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsactivate.html
+4,AWS Amplify,amplify,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsamplify.html
+5,AWS Amplify Admin,amplifybackend,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsamplifyadmin.html
+6,AWS Amplify UI Builder,amplifyuibuilder,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsamplifyuibuilder.html
+7,AWS App Mesh,appmesh,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappmesh.html
+8,AWS App Mesh Preview,appmesh-preview,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappmeshpreview.html
+9,AWS App Runner,apprunner,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapprunner.html
+10,AWS App Studio,appstudio,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappstudio.html
+11,AWS App2Container,a2c,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapp2container.html
+12,AWS AppConfig,appconfig,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappconfig.html
+13,AWS AppFabric,appfabric,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappfabric.html
+14,AWS AppSync,appsync,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsappsync.html
+15,AWS Application Auto Scaling,application-autoscaling,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationautoscaling.html
+16,AWS Application Discovery Service,discovery,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationdiscoveryservice.html
+17,AWS Application Migration Service,mgn,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationmigrationservice.html
+18,AWS Application Transformation Service,application-transformation,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsapplicationtransformationservice.html
+19,AWS Artifact,artifact,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsartifact.html
+20,AWS Audit Manager,auditmanager,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsauditmanager.html
+21,AWS Auto Scaling,autoscaling-plans,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsautoscaling.html
+22,AWS B2B Data Interchange,b2bi,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsb2bdatainterchange.html
+23,AWS Backup,backup,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackup.html
+24,AWS Backup Gateway,backup-gateway,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackupgateway.html
+25,AWS Backup Search,backup-search,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackupsearch.html
+26,AWS Backup storage,backup-storage,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackupstorage.html
+27,AWS Batch,batch,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html
+28,AWS Billing,billing,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbilling.html
+29,AWS Billing And Cost Management Data Exports,bcm-data-exports,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingandcostmanagementdataexports.html
+30,AWS Billing And Cost Management Pricing Calculator,bcm-pricing-calculator,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingandcostmanagementpricingcalculator.html
+31,AWS Billing And Cost Management Recommended Actions,bcm-recommended-actions,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingandcostmanagementrecommendedactions.html
+32,AWS Billing Conductor,billingconductor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingconductor.html
+33,AWS Billing Console,aws-portal,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingconsole.html
+34,AWS Billing and Cost Management Dashboards,bcm-dashboards,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbillingandcostmanagementdashboards.html
+35,AWS Budget Service,budgets,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbudgetservice.html
+36,AWS BugBust,bugbust,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbugbust.html
+37,AWS Certificate Manager,acm,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscertificatemanager.html
+38,AWS Chatbot,chatbot,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awschatbot.html
+39,AWS Clean Rooms,cleanrooms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscleanrooms.html
+40,AWS Clean Rooms ML,cleanrooms-ml,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscleanroomsml.html
+41,AWS Cloud Control API,cloudformation,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudcontrolapi.html
+42,AWS Cloud Map,servicediscovery,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudmap.html
+43,AWS Cloud9,cloud9,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloud9.html
+44,AWS CloudFormation,cloudformation,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudformation.html
+45,AWS CloudHSM,cloudhsm,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudhsm.html
+46,AWS CloudShell,cloudshell,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudshell.html
+47,AWS CloudTrail,cloudtrail,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudtrail.html
+48,AWS CloudTrail Data,cloudtrail-data,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudtraildata.html
+49,AWS CloudWatch RUM,rum,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudwatchrum.html
+50,AWS CodeArtifact,codeartifact,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodeartifact.html
+51,AWS CodeBuild,codebuild,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodebuild.html
+52,AWS CodeCommit,codecommit,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodecommit.html
+53,AWS CodeConnections,codeconnections,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodeconnections.html
+54,AWS CodeDeploy,codedeploy,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodedeploy.html
+55,AWS CodeDeploy secure host commands service,codedeploy-commands-secure,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodedeploysecurehostcommandsservice.html
+56,AWS CodePipeline,codepipeline,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodepipeline.html
+57,AWS CodeStar,codestar,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodestar.html
+58,AWS CodeStar Connections,codestar-connections,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodestarconnections.html
+59,AWS CodeStar Notifications,codestar-notifications,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscodestarnotifications.html
+60,AWS Compute Optimizer,compute-optimizer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscomputeoptimizer.html
+61,AWS Config,config,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconfig.html
+62,AWS Connector Service,awsconnector,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconnectorservice.html
+63,AWS Consolidated Billing,consolidatedbilling,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconsolidatedbilling.html
+64,AWS Control Catalog,controlcatalog,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscontrolcatalog.html
+65,AWS Control Tower,controltower,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscontroltower.html
+66,AWS Cost Explorer Service,ce,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostexplorerservice.html
+67,AWS Cost Optimization Hub,cost-optimization-hub,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostoptimizationhub.html
+68,AWS Cost and Usage Report,cur,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostandusagereport.html
+69,AWS Customer Verification Service,customer-verification,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscustomerverificationservice.html
+70,AWS Data Exchange,dataexchange,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdataexchange.html
+71,AWS Data Pipeline,datapipeline,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatapipeline.html
+72,AWS DataSync,datasync,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatasync.html
+73,AWS Database Migration Service,dms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdatabasemigrationservice.html
+74,AWS Deadline Cloud,deadline,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeadlinecloud.html
+75,AWS DeepComposer,deepcomposer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeepcomposer.html
+76,AWS DeepRacer,deepracer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeepracer.html
+77,AWS Device Farm,devicefarm,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdevicefarm.html
+78,AWS Diagnostic tools,ts,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdiagnostictools.html
+79,AWS Direct Connect,directconnect,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdirectconnect.html
+80,AWS Directory Service,ds,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdirectoryservice.html
+81,AWS Directory Service Data,ds-data,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdirectoryservicedata.html
+82,AWS Elastic Beanstalk,elasticbeanstalk,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticbeanstalk.html
+83,AWS Elastic Disaster Recovery,drs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticdisasterrecovery.html
+84,AWS Elastic Load Balancing,elasticloadbalancing,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticloadbalancing.html
+85,AWS Elastic Load Balancing V2,elasticloadbalancing,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticloadbalancingv2.html
+86,AWS Elemental Appliances and Software,elemental-appliances-software,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalappliancesandsoftware.html
+87,AWS Elemental Appliances and Software Activation Service,elemental-activations,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalappliancesandsoftwareactivationservice.html
+88,AWS Elemental MediaConnect,mediaconnect,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediaconnect.html
+89,AWS Elemental MediaConvert,mediaconvert,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediaconvert.html
+90,AWS Elemental MediaLive,medialive,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmedialive.html
+91,AWS Elemental MediaPackage,mediapackage,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackage.html
+92,AWS Elemental MediaPackage V2,mediapackagev2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackagev2.html
+93,AWS Elemental MediaPackage VOD,mediapackage-vod,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediapackagevod.html
+94,AWS Elemental MediaStore,mediastore,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediastore.html
+95,AWS Elemental MediaTailor,mediatailor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediatailor.html
+96,AWS Elemental Support Cases,elemental-support-cases,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalsupportcases.html
+97,AWS Elemental Support Content,elemental-support-content,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalsupportcontent.html
+98,AWS End User Messaging SMS and Voice V2,sms-voice,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsendusermessagingsmsandvoicev2.html
+99,AWS End User Messaging Social,social-messaging,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsendusermessagingsocial.html
+100,AWS Entity Resolution,entityresolution,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsentityresolution.html
+101,AWS Fault Injection Service,fis,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsfaultinjectionservice.html
+102,AWS Firewall Manager,fms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsfirewallmanager.html
+103,AWS Free Tier,freetier,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsfreetier.html
+104,AWS Global Accelerator,globalaccelerator,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsglobalaccelerator.html
+105,AWS Glue,glue,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsglue.html
+106,AWS Glue DataBrew,databrew,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsgluedatabrew.html
+107,AWS Ground Station,groundstation,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsgroundstation.html
+108,AWS Health APIs and Notifications,health,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthapisandnotifications.html
+109,AWS HealthImaging,medical-imaging,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthimaging.html
+110,AWS HealthLake,healthlake,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthlake.html
+111,AWS HealthOmics,omics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthomics.html
+112,AWS IAM Access Analyzer,access-analyzer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamaccessanalyzer.html
+113,AWS IAM Identity Center,sso,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamidentitycenter.html
+114,AWS IAM Identity Center OIDC service,sso-oauth,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamidentitycenteroidcservice.html
+115,AWS IAM Identity Center directory,sso-directory,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamidentitycenterdirectory.html
+116,AWS IQ,iq,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiq.html
+117,AWS IQ Permissions,iq-permission,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiqpermissions.html
+118,AWS Identity Store,identitystore,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitystore.html
+119,AWS Identity Store Auth,identitystore-auth,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitystoreauth.html
+120,AWS Identity Sync,identity-sync,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitysync.html
+121,AWS Identity and Access Management (IAM),iam,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentityandaccessmanagementiam.html
+122,AWS Identity and Access Management Roles Anywhere,rolesanywhere,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentityandaccessmanagementrolesanywhere.html
+123,AWS Import Export Disk Service,importexport,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsimportexportdiskservice.html
+124,AWS Invoicing Service,invoicing,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsinvoicingservice.html
+125,AWS IoT,iot,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html
+126,AWS IoT Analytics,iotanalytics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotanalytics.html
+127,AWS IoT Core Device Advisor,iotdeviceadvisor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotcoredeviceadvisor.html
+128,AWS IoT Device Tester,iot-device-tester,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotdevicetester.html
+129,AWS IoT Events,iotevents,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotevents.html
+130,AWS IoT Fleet Hub for Device Management,iotfleethub,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleethubfordevicemanagement.html
+131,AWS IoT FleetWise,iotfleetwise,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotfleetwise.html
+132,AWS IoT Greengrass,greengrass,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotgreengrass.html
+133,AWS IoT Greengrass V2,greengrass,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotgreengrassv2.html
+134,AWS IoT Jobs DataPlane,iotjobsdata,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotjobsdataplane.html
+135,AWS IoT Managed Integrations,iotmanagedintegrations,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotmanagedintegrations.html
+136,AWS IoT SiteWise,iotsitewise,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotsitewise.html
+137,AWS IoT TwinMaker,iottwinmaker,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiottwinmaker.html
+138,AWS IoT Wireless,iotwireless,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiotwireless.html
+139,AWS Key Management Service,kms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awskeymanagementservice.html
+140,AWS Lake Formation,lakeformation,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslakeformation.html
+141,AWS Lambda,lambda,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslambda.html
+142,AWS Launch Wizard,launchwizard,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslaunchwizard.html
+143,AWS License Manager,license-manager,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslicensemanager.html
+144,AWS License Manager Linux Subscriptions Manager,license-manager-linux-subscriptions,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslicensemanagerlinuxsubscriptionsmanager.html
+145,AWS License Manager User Subscriptions,license-manager-user-subscriptions,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awslicensemanagerusersubscriptions.html
+146,AWS Mainframe Modernization Application Testing,apptest,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmainframemodernizationapplicationtesting.html
+147,AWS Mainframe Modernization Service,m2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmainframemodernizationservice.html
+148,AWS Management Console Mobile App,consoleapp,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconsolemobileapp.html
+149,AWS Marketplace,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplace.html
+150,AWS Marketplace Catalog,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacecatalog.html
+151,AWS Marketplace Commerce Analytics Service,marketplacecommerceanalytics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacecommerceanalyticsservice.html
+152,AWS Marketplace Deployment Service,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacedeploymentservice.html
+153,AWS Marketplace Discovery,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacediscovery.html
+154,AWS Marketplace Entitlement Service,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceentitlementservice.html
+155,AWS Marketplace Image Building Service,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceimagebuildingservice.html
+156,AWS Marketplace Management Portal,aws-marketplace-management,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacemanagementportal.html
+157,AWS Marketplace Metering Service,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacemeteringservice.html
+158,AWS Marketplace Private Marketplace,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceprivatemarketplace.html
+159,AWS Marketplace Procurement Systems Integration,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplaceprocurementsystemsintegration.html
+160,AWS Marketplace Reporting,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacereporting.html
+161,AWS Marketplace Seller Reporting,aws-marketplace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacesellerreporting.html
+162,AWS Marketplace Vendor Insights,vendor-insights,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacevendorinsights.html
+163,AWS Microservice Extractor for .NET,serviceextract,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmicroserviceextractorfor.net.html
+164,AWS Migration Acceleration Program Credits,mapcredits,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationaccelerationprogramcredits.html
+165,AWS Migration Hub,mgh,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhub.html
+166,AWS Migration Hub Orchestrator,migrationhub-orchestrator,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhuborchestrator.html
+167,AWS Migration Hub Refactor Spaces,refactor-spaces,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhubrefactorspaces.html
+168,AWS Migration Hub Strategy Recommendations,migrationhub-strategy,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmigrationhubstrategyrecommendations.html
+169,AWS Network Firewall,network-firewall,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsnetworkfirewall.html
+170,AWS Network Manager,networkmanager,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsnetworkmanager.html
+171,AWS Network Manager Chat,networkmanager-chat,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsnetworkmanagerchat.html
+172,AWS OpsWorks,opsworks,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsopsworks.html
+173,AWS OpsWorks Configuration Management,opsworks-cm,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsopsworksconfigurationmanagement.html
+174,AWS Organizations,organizations,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsorganizations.html
+175,AWS Outposts,outposts,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsoutposts.html
+176,AWS Panorama,panorama,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspanorama.html
+177,AWS Parallel Computing Service,pcs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsparallelcomputingservice.html
+178,AWS Partner Central Selling,partnercentral,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspartnercentralselling.html
+179,AWS Partner central account management,partnercentral-account-management,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspartnercentralaccountmanagement.html
+180,AWS Payment Cryptography,payment-cryptography,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspaymentcryptography.html
+181,AWS Payments,payments,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspayments.html
+182,AWS Performance Insights,pi,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsperformanceinsights.html
+183,AWS Price List,pricing,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspricelist.html
+184,AWS Private CA Connector for Active Directory,pca-connector-ad,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsprivatecaconnectorforactivedirectory.html
+185,AWS Private CA Connector for SCEP,pca-connector-scep,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsprivatecaconnectorforscep.html
+186,AWS Private Certificate Authority,acm-pca,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsprivatecertificateauthority.html
+187,AWS PrivateLink,vpce,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsprivatelink.html
+188,AWS Proton,proton,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsproton.html
+189,AWS Purchase Orders Console,purchase-orders,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspurchaseordersconsole.html
+190,AWS Recycle Bin,rbin,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsrecyclebin.html
+191,AWS Resilience Hub,resiliencehub,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresiliencehub.html
+192,AWS Resource Access Manager (RAM),ram,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourceaccessmanagerram.html
+193,AWS Resource Explorer,resource-explorer-2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourceexplorer.html
+194,AWS Resource Groups,resource-groups,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourcegroups.html
+195,AWS RoboMaker,robomaker,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsrobomaker.html
+196,AWS SQL Workbench,sqlworkbench,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssqlworkbench.html
+197,AWS Savings Plans,savingsplans,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssavingsplans.html
+198,AWS Secrets Manager,secretsmanager,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecretsmanager.html
+199,AWS Security Hub,securityhub,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecurityhub.html
+200,AWS Security Incident Response,security-ir,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecurityincidentresponse.html
+201,AWS Security Token Service,sts,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecuritytokenservice.html
+202,AWS Server Migration Service,sms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservermigrationservice.html
+203,AWS Serverless Application Repository,serverlessrepo,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserverlessapplicationrepository.html
+204,AWS Service - Oracle Database@AWS,odb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservice-oracledatabase_aws.html
+205,AWS Service Catalog,servicecatalog,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservicecatalog.html
+206,AWS Service for managing AWS Management Console user experience capabilities.,uxc,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceformanagingawsconsoleuserexperiencecapabilities..html
+207,AWS Shield,shield,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsshield.html
+208,AWS Shield network security director,network-security-director,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsshieldnetworksecuritydirector.html
+209,AWS Signer,signer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssigner.html
+210,AWS Signin,signin,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssignin.html
+211,AWS SimSpace Weaver,simspaceweaver,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssimspaceweaver.html
+212,AWS Snow Device Management,snow-device-management,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssnowdevicemanagement.html
+213,AWS Snowball,snowball,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssnowball.html
+214,AWS Step Functions,states,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsstepfunctions.html
+215,AWS Storage Gateway,storagegateway,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsstoragegateway.html
+216,AWS Supply Chain,scn,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupplychain.html
+217,AWS Support,support,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupport.html
+218,AWS Support App in Slack,supportapp,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupportappinslack.html
+219,AWS Support Console,support-console,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupportconsole.html
+220,AWS Support Plans,supportplans,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssupportplans.html
+221,AWS Sustainability,sustainability,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssustainability.html
+222,AWS Systems Manager,ssm,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanager.html
+223,AWS Systems Manager GUI Connect,ssm-guiconnect,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerguiconnect.html
+224,AWS Systems Manager Incident Manager,ssm-incidents,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerincidentmanager.html
+225,AWS Systems Manager Incident Manager Contacts,ssm-contacts,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerincidentmanagercontacts.html
+226,AWS Systems Manager Quick Setup,ssm-quicksetup,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerquicksetup.html
+227,AWS Systems Manager for SAP,ssm-sap,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssystemsmanagerforsap.html
+228,AWS Tax Settings,tax,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstaxsettings.html
+229,AWS Telco Network Builder,tnb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstelconetworkbuilder.html
+230,AWS Tiros,tiros,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstiros.html
+231,AWS Transfer Family,transfer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstransferfamily.html
+232,AWS Transform,transform,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstransform.html
+233,AWS Trusted Advisor,trustedadvisor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstrustedadvisor.html
+234,AWS User Notifications,notifications,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsusernotifications.html
+235,AWS User Notifications Contacts,notifications-contacts,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsusernotificationscontacts.html
+236,AWS User Subscriptions,user-subscriptions,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsusersubscriptions.html
+237,AWS Verified Access,verified-access,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsverifiedaccess.html
+238,AWS WAF,waf,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswaf.html
+239,AWS WAF Regional,waf-regional,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswafregional.html
+240,AWS WAF V2,wafv2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswafv2.html
+241,AWS Well-Architected Tool,wellarchitected,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswell-architectedtool.html
+242,AWS Wickr,wickr,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awswickr.html
+243,AWS WorkSpaces Managed Instances,workspaces-instances,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsworkspacesmanagedinstances.html
+244,AWS X-Ray,xray,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsx-ray.html
+245,AWS rePost Private,repostspace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsrepostprivate.html
+246,AWS service providing managed private networks,private-networks,https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceprovidingmanagedprivatenetworks.html
+247,Alexa for Business,a4b,https://docs.aws.amazon.com/service-authorization/latest/reference/list_alexaforbusiness.html
+248,Amazon AI Operations,aiops,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonaioperations.html
+249,Amazon API Gateway,execute-api,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonapigateway.html
+250,Amazon API Gateway Management,apigateway,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonapigatewaymanagement.html
+251,Amazon API Gateway Management V2,apigateway,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonapigatewaymanagementv2.html
+252,Amazon ARC Region switch,arc-region-switch,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonarcregionswitch.html
+253,Amazon AppFlow,appflow,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappflow.html
+254,Amazon AppIntegrations,app-integrations,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappintegrations.html
+255,Amazon AppStream 2.0,appstream,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappstream2.0.html
+256,Amazon Application Recovery Controller - Zonal Shift,arc-zonal-shift,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonapplicationrecoverycontroller-zonalshift.html
+257,Amazon Athena,athena,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonathena.html
+258,Amazon Aurora DSQL,dsql,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonauroradsql.html
+259,Amazon Bedrock,bedrock,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html
+260,Amazon Bedrock Agentcore,bedrock-agentcore,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockagentcore.html
+261,Amazon Braket,braket,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbraket.html
+262,Amazon Chime,chime,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonchime.html
+263,Amazon Cloud Directory,clouddirectory,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonclouddirectory.html
+264,Amazon CloudFront,cloudfront,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudfront.html
+265,Amazon CloudFront KeyValueStore,cloudfront-keyvaluestore,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudfrontkeyvaluestore.html
+266,Amazon CloudSearch,cloudsearch,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudsearch.html
+267,Amazon CloudWatch,cloudwatch,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatch.html
+268,Amazon CloudWatch Application Insights,applicationinsights,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchapplicationinsights.html
+269,Amazon CloudWatch Application Signals,application-signals,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchapplicationsignals.html
+270,Amazon CloudWatch Evidently,evidently,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchevidently.html
+271,Amazon CloudWatch Internet Monitor,internetmonitor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchinternetmonitor.html
+272,Amazon CloudWatch Logs,logs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchlogs.html
+273,Amazon CloudWatch Network Synthetic Monitor,networkmonitor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchnetworksyntheticmonitor.html
+274,Amazon CloudWatch Observability Access Manager,oam,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchobservabilityaccessmanager.html
+275,Amazon CloudWatch Observability Admin Service,observabilityadmin,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchobservabilityadminservice.html
+276,Amazon CloudWatch Synthetics,synthetics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchsynthetics.html
+277,Amazon CodeCatalyst,codecatalyst,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodecatalyst.html
+278,Amazon CodeGuru,codeguru,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodeguru.html
+279,Amazon CodeGuru Profiler,codeguru-profiler,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodeguruprofiler.html
+280,Amazon CodeGuru Reviewer,codeguru-reviewer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodegurureviewer.html
+281,Amazon CodeGuru Security,codeguru-security,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodegurusecurity.html
+282,Amazon CodeWhisperer,codewhisperer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncodewhisperer.html
+283,Amazon Cognito Identity,cognito-identity,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitoidentity.html
+284,Amazon Cognito Sync,cognito-sync,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitosync.html
+285,Amazon Cognito User Pools,cognito-idp,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitouserpools.html
+286,Amazon Comprehend,comprehend,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncomprehend.html
+287,Amazon Comprehend Medical,comprehendmedical,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncomprehendmedical.html
+288,Amazon Connect,connect,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html
+289,Amazon Connect Cases,cases,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcases.html
+290,Amazon Connect Customer Profiles,profile,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcustomerprofiles.html
+291,Amazon Connect Outbound Campaigns,connect-campaigns,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectoutboundcampaigns.html
+292,Amazon Connect Voice ID,voiceid,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectvoiceid.html
+293,Amazon Data Lifecycle Manager,dlm,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondatalifecyclemanager.html
+294,Amazon DataZone,datazone,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondatazone.html
+295,Amazon Detective,detective,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondetective.html
+296,Amazon DevOps Guru,devops-guru,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondevopsguru.html
+297,Amazon DocumentDB Elastic Clusters,docdb-elastic,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondocumentdbelasticclusters.html
+298,Amazon DynamoDB,dynamodb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondynamodb.html
+299,Amazon DynamoDB Accelerator (DAX),dax,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondynamodbacceleratordax.html
+300,Amazon EC2,ec2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html
+301,Amazon EC2 Auto Scaling,autoscaling,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2autoscaling.html
+302,Amazon EC2 Image Builder,imagebuilder,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2imagebuilder.html
+303,Amazon EC2 Instance Connect,ec2-instance-connect,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2instanceconnect.html
+304,Amazon EKS Auth,eks-auth,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneksauth.html
+305,Amazon EMR Serverless,emr-serverless,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonemrserverless.html
+306,Amazon EMR on EKS (EMR Containers),emr-containers,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonemroneksemrcontainers.html
+307,Amazon ElastiCache,elasticache,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticache.html
+308,Amazon Elastic Block Store,ebs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticblockstore.html
+309,Amazon Elastic Container Registry,ecr,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerregistry.html
+310,Amazon Elastic Container Registry Public,ecr-public,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerregistrypublic.html
+311,Amazon Elastic Container Service,ecs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerservice.html
+312,Amazon Elastic File System,elasticfilesystem,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticfilesystem.html
+313,Amazon Elastic Kubernetes Service,eks,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelastickubernetesservice.html
+314,Amazon Elastic MapReduce,elasticmapreduce,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticmapreduce.html
+315,Amazon Elastic Transcoder,elastictranscoder,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelastictranscoder.html
+316,Amazon Elastic VMware Service,evs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticvmwareservice.html
+317,Amazon EventBridge,events,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridge.html
+318,Amazon EventBridge Pipes,pipes,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridgepipes.html
+319,Amazon EventBridge Scheduler,scheduler,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridgescheduler.html
+320,Amazon EventBridge Schemas,schemas,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneventbridgeschemas.html
+321,Amazon FSx,fsx,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfsx.html
+322,Amazon FinSpace,finspace,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfinspace.html
+323,Amazon FinSpace API,finspace-api,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfinspaceapi.html
+324,Amazon Forecast,forecast,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonforecast.html
+325,Amazon Fraud Detector,frauddetector,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfrauddetector.html
+326,Amazon FreeRTOS,freertos,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfreertos.html
+327,Amazon GameLift Servers,gamelift,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongameliftservers.html
+328,Amazon GameLift Streams,gameliftstreams,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongameliftstreams.html
+329,Amazon GroundTruth Labeling,groundtruthlabeling,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazongroundtruthlabeling.html
+330,Amazon GuardDuty,guardduty,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonguardduty.html
+331,Amazon Honeycode,honeycode,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonhoneycode.html
+332,Amazon Inspector,inspector,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninspector.html
+333,Amazon Inspector2,inspector2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninspector2.html
+334,Amazon InspectorScan,inspector-scan,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninspectorscan.html
+335,Amazon Interactive Video Service,ivs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninteractivevideoservice.html
+336,Amazon Interactive Video Service Chat,ivschat,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninteractivevideoservicechat.html
+337,Amazon Kendra,kendra,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkendra.html
+338,Amazon Kendra Intelligent Ranking,kendra-ranking,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkendraintelligentranking.html
+339,Amazon Keyspaces (for Apache Cassandra),cassandra,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkeyspacesforapachecassandra.html
+340,Amazon Kinesis Analytics,kinesisanalytics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisanalytics.html
+341,Amazon Kinesis Analytics V2,kinesisanalytics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisanalyticsv2.html
+342,Amazon Kinesis Data Streams,kinesis,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisdatastreams.html
+343,Amazon Kinesis Firehose,firehose,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisfirehose.html
+344,Amazon Kinesis Video Streams,kinesisvideo,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonkinesisvideostreams.html
+345,Amazon Lex,lex,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlex.html
+346,Amazon Lex V2,lex,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlexv2.html
+347,Amazon Lightsail,lightsail,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlightsail.html
+348,Amazon Location,geo,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlocation.html
+349,Amazon Location Service Maps,geo-maps,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlocationservicemaps.html
+350,Amazon Location Service Places,geo-places,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlocationserviceplaces.html
+351,Amazon Location Service Routes,geo-routes,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlocationserviceroutes.html
+352,Amazon Lookout for Equipment,lookoutequipment,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlookoutforequipment.html
+353,Amazon Lookout for Metrics,lookoutmetrics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlookoutformetrics.html
+354,Amazon Lookout for Vision,lookoutvision,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonlookoutforvision.html
+355,Amazon MQ,mq,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmq.html
+356,Amazon Machine Learning,machinelearning,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmachinelearning.html
+357,Amazon Macie,macie2,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmacie.html
+358,Amazon Managed Blockchain,managedblockchain,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedblockchain.html
+359,Amazon Managed Blockchain Query,managedblockchain-query,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedblockchainquery.html
+360,Amazon Managed Grafana,grafana,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedgrafana.html
+361,Amazon Managed Service for Prometheus,aps,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedserviceforprometheus.html
+362,Amazon Managed Streaming for Apache Kafka,kafka,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedstreamingforapachekafka.html
+363,Amazon Managed Streaming for Kafka Connect,kafkaconnect,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedstreamingforkafkaconnect.html
+364,Amazon Managed Workflows for Apache Airflow,airflow,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedworkflowsforapacheairflow.html
+365,Amazon Mechanical Turk,mechanicalturk,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmechanicalturk.html
+366,Amazon MemoryDB,memorydb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmemorydb.html
+367,Amazon Message Delivery Service,ec2messages,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmessagedeliveryservice.html
+368,Amazon Message Gateway Service,ssmmessages,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmessagegatewayservice.html
+369,Amazon Mobile Analytics,mobileanalytics,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmobileanalytics.html
+370,Amazon Monitron,monitron,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmonitron.html
+371,Amazon Neptune,neptune-db,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonneptune.html
+372,Amazon Neptune Analytics,neptune-graph,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonneptuneanalytics.html
+373,Amazon Nimble Studio,nimble,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonnimblestudio.html
+374,Amazon One Enterprise,one,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazononeenterprise.html
+375,Amazon OpenSearch,opensearch,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearch.html
+376,Amazon OpenSearch Ingestion,osis,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchingestion.html
+377,Amazon OpenSearch Serverless,aoss,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchserverless.html
+378,Amazon OpenSearch Service,es,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchservice.html
+379,Amazon Personalize,personalize,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpersonalize.html
+380,Amazon Pinpoint,mobiletargeting,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpinpoint.html
+381,Amazon Pinpoint Email Service,ses,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpinpointemailservice.html
+382,Amazon Pinpoint SMS and Voice Service,sms-voice,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpinpointsmsandvoiceservice.html
+383,Amazon Polly,polly,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonpolly.html
+384,Amazon Q,q,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonq.html
+385,Amazon Q Business,qbusiness,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusiness.html
+386,Amazon Q Business Q Apps,qapps,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqbusinessqapps.html
+387,Amazon Q Developer,qdeveloper,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqdeveloper.html
+388,Amazon Q in Connect,wisdom,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqinconnect.html
+389,Amazon QLDB,qldb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqldb.html
+390,Amazon QuickSight,quicksight,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonquicksight.html
+391,Amazon RDS,rds,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrds.html
+392,Amazon RDS Data API,rds-data,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrdsdataapi.html
+393,Amazon RDS IAM Authentication,rds-db,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrdsiamauthentication.html
+394,Amazon RHEL Knowledgebase Portal,rhelkb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrhelknowledgebaseportal.html
+395,Amazon Redshift,redshift,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshift.html
+396,Amazon Redshift Data API,redshift-data,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshiftdataapi.html
+397,Amazon Redshift Serverless,redshift-serverless,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshiftserverless.html
+398,Amazon Rekognition,rekognition,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonrekognition.html
+399,Amazon Resource Group Tagging API,tag,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonresourcegrouptaggingapi.html
+400,Amazon Route 53,route53,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53.html
+401,Amazon Route 53 Domains,route53domains,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53domains.html
+402,Amazon Route 53 Profiles,route53profiles,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53profiles.html
+403,Amazon Route 53 Recovery Cluster,route53-recovery-cluster,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoverycluster.html
+404,Amazon Route 53 Recovery Controls,route53-recovery-control-config,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoverycontrols.html
+405,Amazon Route 53 Recovery Readiness,route53-recovery-readiness,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoveryreadiness.html
+406,Amazon Route 53 Resolver,route53resolver,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53resolver.html
+407,Amazon S3,s3,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3.html
+408,Amazon S3 Express,s3express,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3express.html
+409,Amazon S3 Glacier,glacier,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3glacier.html
+410,Amazon S3 Object Lambda,s3-object-lambda,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3objectlambda.html
+411,Amazon S3 Tables,s3tables,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3tables.html
+412,Amazon S3 Vectors,s3vectors,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3vectors.html
+413,Amazon S3 on Outposts,s3-outposts,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3onoutposts.html
+414,Amazon SES,ses,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonses.html
+415,Amazon SNS,sns,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsns.html
+416,Amazon SQS,sqs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsqs.html
+417,Amazon SageMaker,sagemaker,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemaker.html
+418,Amazon SageMaker data science assistant,sagemaker-data-science-assistant,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakerdatascienceassistant.html
+419,Amazon SageMaker geospatial capabilities,sagemaker-geospatial,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakergeospatialcapabilities.html
+420,Amazon SageMaker with MLflow,sagemaker-mlflow,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemakerwithmlflow.html
+421,Amazon Security Lake,securitylake,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsecuritylake.html
+422,Amazon Simple Email Service - Mail Manager,ses,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservice-mailmanager.html
+423,Amazon Simple Email Service v2,ses,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservicev2.html
+424,Amazon Simple Workflow Service,swf,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleworkflowservice.html
+425,Amazon SimpleDB,sdb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpledb.html
+426,Amazon Textract,textract,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontextract.html
+427,Amazon Timestream,timestream,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestream.html
+428,Amazon Timestream InfluxDB,timestream-influxdb,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestreaminfluxdb.html
+429,Amazon Transcribe,transcribe,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontranscribe.html
+430,Amazon Translate,translate,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontranslate.html
+431,Amazon VPC Lattice,vpc-lattice,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonvpclattice.html
+432,Amazon VPC Lattice Services,vpc-lattice-svcs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonvpclatticeservices.html
+433,Amazon Verified Permissions,verifiedpermissions,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonverifiedpermissions.html
+434,Amazon WorkDocs,workdocs,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkdocs.html
+435,Amazon WorkLink,worklink,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworklink.html
+436,Amazon WorkMail,workmail,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkmail.html
+437,Amazon WorkMail Message Flow,workmailmessageflow,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkmailmessageflow.html
+438,Amazon WorkSpaces,workspaces,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspaces.html
+439,Amazon WorkSpaces Application Manager,wam,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesapplicationmanager.html
+440,Amazon WorkSpaces Secure Browser,workspaces-web,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacessecurebrowser.html
+441,Amazon WorkSpaces Thin Client,thinclient,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesthinclient.html
+442,AmazonMediaImport,mediaimport,https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmediaimport.html
+443,Apache Kafka APIs for Amazon MSK clusters,kafka-cluster,https://docs.aws.amazon.com/service-authorization/latest/reference/list_apachekafkaapisforamazonmskclusters.html
+444,Application Discovery Arsenal,arsenal,https://docs.aws.amazon.com/service-authorization/latest/reference/list_applicationdiscoveryarsenal.html
+445,Database Query Metadata Service,dbqms,https://docs.aws.amazon.com/service-authorization/latest/reference/list_databasequerymetadataservice.html
+446,Multi-party approval,mpa,https://docs.aws.amazon.com/service-authorization/latest/reference/list_multi-partyapproval.html
+447,Network Flow Monitor,networkflowmonitor,https://docs.aws.amazon.com/service-authorization/latest/reference/list_networkflowmonitor.html
+448,Service Quotas,servicequotas,https://docs.aws.amazon.com/service-authorization/latest/reference/list_servicequotas.html
+449,Tag Editor,resource-explorer,https://docs.aws.amazon.com/service-authorization/latest/reference/list_tageditor.html

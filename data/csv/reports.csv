@@ -1,7 +1,7 @@
 report_name,metric_name,value
 Actions by type,Write Actions,10635
 Actions by type,Read Actions,5170
-Actions by type,List Actions,3201
+Actions by type,List Actions,3202
 Actions by type,Permissions Actions,370
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -43,16 +43,16 @@ Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}
 Most referenced resource ARNs,domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName},81
 Most referenced resource ARNs,rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog,74
 Most referenced resource ARNs,mlflow-tracking-server - arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-tracking-server/${MlflowTrackingServerName},70
-Services with least actions,AWS CloudTrail Data,1
-Services with least actions,AWS Microservice Extractor for .NET,1
-Services with least actions,AWS PrivateLink,1
-Services with least actions,AWS Sustainability,1
 Services with least actions,AWS Billing And Cost Management Recommended Actions,1
 Services with least actions,AWS Marketplace Seller Reporting,1
+Services with least actions,AWS Microservice Extractor for .NET,1
+Services with least actions,AWS PrivateLink,1
+Services with least actions,AWS Action Recommendations,1
 Services with least actions,AWS Marketplace Reporting,1
 Services with least actions,AWS Marketplace Entitlement Service,1
 Services with least actions,AWS Marketplace Discovery,1
 Services with least actions,AWS Elemental Support Content,1
+Services with least actions,AWS CloudTrail Data,1
 Services with most actions,Amazon EC2,710
 Services with most actions,Amazon SageMaker,405
 Services with most actions,Amazon Chime,316
@@ -95,6 +95,6 @@ Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
 Summary,Total number of distinct resource ARNS,1974
 Summary,Total number of distinct condition keys,1273
-Summary,Total number of services,448
+Summary,Total number of services,449
 Summary,Average number of actions per service,43
 Summary,Median number of actions per service,29

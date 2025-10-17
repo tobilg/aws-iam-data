@@ -1,5 +1,5 @@
 {
-  "serviceCount": 448,
+  "serviceCount": 449,
   "services": [
     {
       "name": "AWS Account Management",
@@ -36,6 +36,19 @@
         "account:EmailTargetDomain",
         "account:TargetRegion"
       ]
+    },
+    {
+      "name": "AWS Action Recommendations",
+      "servicePrefix": "action-recommendations",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsactionrecommendations.html",
+      "actionsCount": 1,
+      "actions": [
+        "ListRecommendedActions"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
     },
     {
       "name": "AWS Activate",
