@@ -1,5 +1,23 @@
 [
   {
+    "dateOfChange": "2025-10-22",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS HealthLake": [
+        "healthlake:ExpandValueSetWithGet",
+        "healthlake:ExpandValueSetWithPost",
+        "healthlake:GenerateDocumentWithGet",
+        "healthlake:GenerateDocumentWithPost",
+        "healthlake:LookupCodeSystemWithGet",
+        "healthlake:LookupCodeSystemWithPost",
+        "healthlake:PatchResource",
+        "healthlake:ValidateResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-10-18",
     "addedServices": [],
     "removedServices": [],
