@@ -1,5 +1,49 @@
 [
   {
+    "dateOfChange": "2025-10-24",
+    "addedServices": [
+      "AWS RTB Fabric"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Aurora DSQL": [
+        "dsql:DeleteClusterPolicy",
+        "dsql:GetClusterPolicy",
+        "dsql:PutClusterPolicy"
+      ],
+      "AWS RTB Fabric": [
+        "rtbfabric:AcceptLink",
+        "rtbfabric:CreateInboundExternalLink",
+        "rtbfabric:CreateLink",
+        "rtbfabric:CreateOutboundExternalLink",
+        "rtbfabric:CreateRequesterGateway",
+        "rtbfabric:CreateResponderGateway",
+        "rtbfabric:DeleteInboundExternalLink",
+        "rtbfabric:DeleteLink",
+        "rtbfabric:DeleteOutboundExternalLink",
+        "rtbfabric:DeleteRequesterGateway",
+        "rtbfabric:DeleteResponderGateway",
+        "rtbfabric:GetInboundExternalLink",
+        "rtbfabric:GetLink",
+        "rtbfabric:GetOutboundExternalLink",
+        "rtbfabric:GetRequesterGateway",
+        "rtbfabric:GetResponderGateway",
+        "rtbfabric:ListLinks",
+        "rtbfabric:ListRequesterGateways",
+        "rtbfabric:ListResponderGateways",
+        "rtbfabric:ListTagsForResource",
+        "rtbfabric:RejectLink",
+        "rtbfabric:TagResource",
+        "rtbfabric:UntagResource",
+        "rtbfabric:UpdateLink",
+        "rtbfabric:UpdateLinkModuleFlow",
+        "rtbfabric:UpdateRequesterGateway",
+        "rtbfabric:UpdateResponderGateway"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-10-23",
     "addedServices": [],
     "removedServices": [],

@@ -1,5 +1,5 @@
 {
-  "serviceCount": 449,
+  "serviceCount": 450,
   "services": [
     {
       "name": "AWS Account Management",
@@ -1940,20 +1940,23 @@
       "name": "Amazon Aurora DSQL",
       "servicePrefix": "dsql",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonauroradsql.html",
-      "actionsCount": 22,
+      "actionsCount": 25,
       "actions": [
         "AddPeerCluster",
         "CreateCluster",
         "DbConnect",
         "DbConnectAdmin",
         "DeleteCluster",
+        "DeleteClusterPolicy",
         "GetBackupJob",
         "GetCluster",
+        "GetClusterPolicy",
         "GetRestoreJob",
         "GetVpcEndpointServiceName",
         "InjectError",
         "ListClusters",
         "ListTagsForResource",
+        "PutClusterPolicy",
         "PutMultiRegionProperties",
         "PutWitnessRegion",
         "RemovePeerCluster",
@@ -24102,6 +24105,61 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "AWS RTB Fabric",
+      "servicePrefix": "rtbfabric",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsrtbfabric.html",
+      "actionsCount": 27,
+      "actions": [
+        "AcceptLink",
+        "CreateInboundExternalLink",
+        "CreateLink",
+        "CreateOutboundExternalLink",
+        "CreateRequesterGateway",
+        "CreateResponderGateway",
+        "DeleteInboundExternalLink",
+        "DeleteLink",
+        "DeleteOutboundExternalLink",
+        "DeleteRequesterGateway",
+        "DeleteResponderGateway",
+        "GetInboundExternalLink",
+        "GetLink",
+        "GetOutboundExternalLink",
+        "GetRequesterGateway",
+        "GetResponderGateway",
+        "ListLinks",
+        "ListRequesterGateways",
+        "ListResponderGateways",
+        "ListTagsForResource",
+        "RejectLink",
+        "TagResource",
+        "UntagResource",
+        "UpdateLink",
+        "UpdateLinkModuleFlow",
+        "UpdateRequesterGateway",
+        "UpdateResponderGateway"
+      ],
+      "resourceTypesCount": 5,
+      "resourceTypes": [
+        "InboundExternalLink",
+        "Link",
+        "OutboundExternalLink",
+        "RequesterGateway",
+        "ResponderGateway"
+      ],
+      "conditionKeysCount": 9,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "rtbfabric:InboundExternalLinkGatewayId",
+        "rtbfabric:InboundExternalLinkLinkId",
+        "rtbfabric:LinkLinkId",
+        "rtbfabric:OutboundExternalLinkLinkId",
+        "rtbfabric:RequesterGatewayGatewayId",
+        "rtbfabric:ResponderGatewayGatewayId"
       ]
     },
     {
