@@ -14459,11 +14459,13 @@
         "TrustedTokenIssuer",
         "ApplicationProvider"
       ],
-      "conditionKeysCount": 4,
+      "conditionKeysCount": 6,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "identitycenter:ApplicationArn",
+        "identitycenter:InstanceArn",
         "sso:ApplicationAccount"
       ]
     },
