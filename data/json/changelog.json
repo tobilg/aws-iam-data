@@ -1,5 +1,77 @@
 [
   {
+    "dateOfChange": "2025-11-06",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:InvokeTool"
+      ],
+      "Amazon CloudFront": [
+        "cloudfront:DeleteResourcePolicy",
+        "cloudfront:GetResourcePolicy",
+        "cloudfront:PutResourcePolicy",
+        "cloudfront:UpdateAnycastIpList"
+      ],
+      "Amazon Cognito User Pools": [
+        "cognito-idp:CreateTerms",
+        "cognito-idp:DeleteTerms",
+        "cognito-idp:DescribeTerms",
+        "cognito-idp:ListTerms",
+        "cognito-idp:UpdateTerms"
+      ],
+      "Amazon Connect": [
+        "connect:AssociateEmailAddressAlias",
+        "connect:DisassociateEmailAddressAlias"
+      ],
+      "Amazon EC2": [
+        "ec2:CopyVolumes",
+        "ec2:CreateCapacityManagerDataExport",
+        "ec2:DeleteCapacityManagerDataExport",
+        "ec2:DescribeCapacityManagerDataExports",
+        "ec2:DisableCapacityManager",
+        "ec2:EnableCapacityManager",
+        "ec2:GetCapacityManagerAttributes",
+        "ec2:GetCapacityManagerMetricData",
+        "ec2:GetCapacityManagerMetricDimensions",
+        "ec2:UpdateCapacityManagerOrganizationsAccess"
+      ],
+      "Amazon EC2 Auto Scaling": [
+        "autoscaling:LaunchInstances"
+      ],
+      "AWS Elastic Load Balancing V2": [
+        "elasticloadbalancing:AllowVendedLogDeliveryForResource"
+      ],
+      "Amazon EMR on EKS (EMR Containers)": [
+        "emr-containers:DeleteSecurityConfiguration"
+      ],
+      "AWS IoT Managed Integrations": [
+        "iotmanagedintegrations:GetManagedThingCertificate"
+      ],
+      "Amazon Kinesis Data Streams": [
+        "kinesis:DescribeAccountSettings",
+        "kinesis:UpdateAccountSettings",
+        "kinesis:UpdateMaxRecordSize",
+        "kinesis:UpdateStreamWarmThroughput"
+      ],
+      "Amazon Managed Service for Prometheus": [
+        "aps:CreateAnomalyDetector",
+        "aps:DeleteAnomalyDetector",
+        "aps:DeleteScraperLoggingConfiguration",
+        "aps:DescribeAnomalyDetector",
+        "aps:DescribeScraperLoggingConfiguration",
+        "aps:ListAnomalyDetectors",
+        "aps:PreviewAnomalyDetector",
+        "aps:PutAnomalyDetector",
+        "aps:UpdateScraperLoggingConfiguration"
+      ],
+      "AWS Support": [
+        "support:InitiateLiveContactForCase"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-10-24",
     "addedServices": [
       "AWS RTB Fabric"
