@@ -1,5 +1,55 @@
 [
   {
+    "dateOfChange": "2025-11-08",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect Customer Profiles": [
+        "profile:CreateRecommender",
+        "profile:DeleteDomainObjectType",
+        "profile:DeleteRecommender",
+        "profile:GetDomainObjectType",
+        "profile:GetObjectTypeAttributeStatistics",
+        "profile:GetProfileInsights",
+        "profile:GetProfileRecommendations",
+        "profile:GetRecommender",
+        "profile:ListDomainObjectTypes",
+        "profile:ListDomainObjects",
+        "profile:ListObjectTypeAttributeValues",
+        "profile:ListRecommenderRecipes",
+        "profile:ListRecommenders",
+        "profile:PutDomainObjectType",
+        "profile:StartRecommender",
+        "profile:StopRecommender",
+        "profile:UpdateRecommender"
+      ],
+      "Amazon S3 Tables": [
+        "s3tables:ListTagsForResource",
+        "s3tables:TagResource",
+        "s3tables:UntagResource"
+      ],
+      "AWS Security Token Service": [
+        "sts:GetDelegatedAccessToken",
+        "sts:GetWebIdentityToken",
+        "sts:TagGetWebIdentityToken"
+      ],
+      "AWS Support Console": [
+        "support-console:GetIssueClassificationPredictions",
+        "support-console:GetIssueTextSummary"
+      ],
+      "AWS User Subscriptions": [
+        "user-subscriptions:SetOverageConfig"
+      ],
+      "Amazon VPC Lattice": [
+        "vpc-lattice:DeleteDomainVerification",
+        "vpc-lattice:GetDomainVerification",
+        "vpc-lattice:ListDomainVerifications",
+        "vpc-lattice:StartDomainVerification"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-11-06",
     "addedServices": [],
     "removedServices": [],

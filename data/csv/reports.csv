@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10684
-Actions by type,Read Actions,5192
-Actions by type,List Actions,3212
+Actions by type,Write Actions,10699
+Actions by type,Read Actions,5200
+Actions by type,List Actions,3219
 Actions by type,Permissions Actions,371
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -36,11 +36,11 @@ Longest service prefixes,codedeploy-commands-secure,26
 Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},125
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},122
 Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},115
+Most referenced resource ARNs,domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName},97
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},93
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},92
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},83
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},81
-Most referenced resource ARNs,domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName},81
 Most referenced resource ARNs,rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog,74
 Most referenced resource ARNs,mlflow-tracking-server - arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-tracking-server/${MlflowTrackingServerName},70
 Services with least actions,AWS Billing And Cost Management Recommended Actions,1
@@ -93,8 +93,8 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1979
-Summary,Total number of distinct condition keys,1281
+Summary,Total number of distinct resource ARNS,1982
+Summary,Total number of distinct condition keys,1287
 Summary,Total number of services,450
 Summary,Average number of actions per service,43
 Summary,Median number of actions per service,29

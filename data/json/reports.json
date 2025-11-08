@@ -2,15 +2,15 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 10684
+      "value": 10699
     },
     {
       "key": "Read Actions",
-      "value": 5192
+      "value": 5200
     },
     {
       "key": "List Actions",
-      "value": 3212
+      "value": 3219
     },
     {
       "key": "Permissions Actions",
@@ -157,6 +157,10 @@
       "value": 115
     },
     {
+      "key": "domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}",
+      "value": 97
+    },
+    {
       "key": "directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId}",
       "value": 93
     },
@@ -167,10 +171,6 @@
     {
       "key": "bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}",
       "value": 83
-    },
-    {
-      "key": "domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}",
-      "value": 81
     },
     {
       "key": "repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName}",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1979
+      "value": 1982
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 1281
+      "value": 1287
     }
   ]
 }
