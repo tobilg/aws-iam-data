@@ -10970,7 +10970,7 @@
         "access-policy",
         "dashboard"
       ],
-      "conditionKeysCount": 20,
+      "conditionKeysCount": 21,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -10987,6 +10987,7 @@
         "eks:elasticLoadBalancingEnabled",
         "eks:issuerUrl",
         "eks:kubernetesGroups",
+        "eks:loggingType/${type}",
         "eks:namespaces",
         "eks:policyArn",
         "eks:principalArn",
