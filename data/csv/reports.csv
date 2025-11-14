@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10699
-Actions by type,Read Actions,5200
-Actions by type,List Actions,3219
+Actions by type,Write Actions,10723
+Actions by type,Read Actions,5218
+Actions by type,List Actions,3222
 Actions by type,Permissions Actions,371
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -30,10 +30,10 @@ Longest service prefixes,sagemaker-data-science-assistant,32
 Longest service prefixes,route53-recovery-control-config,31
 Longest service prefixes,elemental-appliances-software,29
 Longest service prefixes,marketplacecommerceanalytics,28
+Longest service prefixes,sagemaker-unified-studio-mcp,28
 Longest service prefixes,application-transformation,26
 Longest service prefixes,aws-marketplace-management,26
-Longest service prefixes,codedeploy-commands-secure,26
-Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},125
+Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},126
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},122
 Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},115
 Most referenced resource ARNs,domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName},97
@@ -56,12 +56,12 @@ Services with least actions,AWS CloudTrail Data,1
 Services with most actions,Amazon EC2,720
 Services with most actions,Amazon SageMaker,405
 Services with most actions,Amazon Chime,316
-Services with most actions,Amazon Connect,296
+Services with most actions,Amazon Connect,297
 Services with most actions,AWS Glue,295
 Services with most actions,AWS IoT,290
 Services with most actions,Amazon QuickSight,263
 Services with most actions,Amazon Bedrock,227
-Services with most actions,Amazon DataZone,194
+Services with most actions,Amazon DataZone,222
 Services with most actions,AWS Identity and Access Management (IAM),176
 Shortest action names,iq:EndCall,10
 Shortest action names,ce:GetTags,10
@@ -95,6 +95,6 @@ Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
 Summary,Total number of distinct resource ARNS,1982
 Summary,Total number of distinct condition keys,1288
-Summary,Total number of services,450
+Summary,Total number of services,451
 Summary,Average number of actions per service,43
 Summary,Median number of actions per service,29

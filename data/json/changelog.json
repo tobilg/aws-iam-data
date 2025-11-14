@@ -1,5 +1,76 @@
 [
   {
+    "dateOfChange": "2025-11-14",
+    "addedServices": [
+      "AWS SageMaker Unified Studio MCP is a managed MCP solution for AWS data processing services like EMR, Glue, Athena"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect": [
+        "connect:SendOutboundChatMessage"
+      ],
+      "AWS Database Migration Service": [
+        "dms:CancelMetadataModelConversion",
+        "dms:CancelMetadataModelCreation",
+        "dms:DescribeMetadataModel",
+        "dms:DescribeMetadataModelChildren",
+        "dms:DescribeMetadataModelCreations",
+        "dms:GetTargetSelectionRules",
+        "dms:StartMetadataModelCreation"
+      ],
+      "Amazon DataZone": [
+        "datazone:BatchGetAttributesMetadata",
+        "datazone:BatchGetCell",
+        "datazone:BatchGetCellRun",
+        "datazone:BatchPutAttributesMetadata",
+        "datazone:CreateCell",
+        "datazone:CreateCellRun",
+        "datazone:CreateNotebook",
+        "datazone:DeleteCell",
+        "datazone:DeleteCellRun",
+        "datazone:DeleteNotebook",
+        "datazone:GenerateCode",
+        "datazone:GetCell",
+        "datazone:GetCellRun",
+        "datazone:GetCellRunResult",
+        "datazone:GetConversation",
+        "datazone:GetNotebook",
+        "datazone:GetNotebookCompute",
+        "datazone:ListCellRuns",
+        "datazone:ListConversations",
+        "datazone:ListNotebooks",
+        "datazone:PutCellRunResult",
+        "datazone:SendMessage",
+        "datazone:StartConversation",
+        "datazone:StartNotebookCompute",
+        "datazone:StopNotebookCompute",
+        "datazone:UpdateCell",
+        "datazone:UpdateCellRun",
+        "datazone:UpdateNotebook"
+      ],
+      "AWS Ground Station": [
+        "groundstation:GetAgentTaskResponseUrl"
+      ],
+      "Amazon Managed Streaming for Apache Kafka": [
+        "kafka:UpdateRebalancing"
+      ],
+      "Amazon Route 53": [
+        "route53:UpdateHostedZoneFeatures"
+      ],
+      "AWS Support": [
+        "support:ListInteractionEntries",
+        "support:ListInteractions",
+        "support:ResolveInteraction"
+      ],
+      "AWS SageMaker Unified Studio MCP is a managed MCP solution for AWS data processing services like EMR, Glue, Athena": [
+        "sagemaker-unified-studio-mcp:CallPrivilegedTool",
+        "sagemaker-unified-studio-mcp:CallReadOnlyTool",
+        "sagemaker-unified-studio-mcp:InvokeMcp"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-11-08",
     "addedServices": [],
     "removedServices": [],
