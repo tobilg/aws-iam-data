@@ -1,5 +1,5 @@
 {
-  "serviceCount": 451,
+  "serviceCount": 453,
   "services": [
     {
       "name": "AWS Account Management",
@@ -1468,12 +1468,13 @@
       "name": "Amazon AppStream 2.0",
       "servicePrefix": "appstream",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonappstream2.0.html",
-      "actionsCount": 80,
+      "actionsCount": 89,
       "actions": [
         "AssociateAppBlockBuilderAppBlock",
         "AssociateApplicationFleet",
         "AssociateApplicationToEntitlement",
         "AssociateFleet",
+        "AssociateSoftwareToImageBuilder",
         "BatchAssociateUserStack",
         "BatchDisassociateUserStack",
         "CopyImage",
@@ -1483,9 +1484,11 @@
         "CreateApplication",
         "CreateDirectoryConfig",
         "CreateEntitlement",
+        "CreateExportImageTask",
         "CreateFleet",
         "CreateImageBuilder",
         "CreateImageBuilderStreamingURL",
+        "CreateImportedImage",
         "CreateStack",
         "CreateStreamingURL",
         "CreateThemeForStack",
@@ -1508,6 +1511,7 @@
         "DescribeAppBlockBuilderAppBlockAssociations",
         "DescribeAppBlockBuilders",
         "DescribeAppBlocks",
+        "DescribeAppLicenseUsage",
         "DescribeApplicationFleetAssociations",
         "DescribeApplications",
         "DescribeDirectoryConfigs",
@@ -1517,6 +1521,7 @@
         "DescribeImagePermissions",
         "DescribeImages",
         "DescribeSessions",
+        "DescribeSoftwareAssociations",
         "DescribeStacks",
         "DescribeThemeForStack",
         "DescribeUsageReportSubscriptions",
@@ -1527,15 +1532,19 @@
         "DisassociateApplicationFleet",
         "DisassociateApplicationFromEntitlement",
         "DisassociateFleet",
+        "DisassociateSoftwareFromImageBuilder",
         "EnableUser",
         "ExpireSession",
+        "GetExportImageTask",
         "ListAssociatedFleets",
         "ListAssociatedStacks",
         "ListEntitledApplications",
+        "ListExportImageTasks",
         "ListTagsForResource",
         "StartAppBlockBuilder",
         "StartFleet",
         "StartImageBuilder",
+        "StartSoftwareDeploymentToImageBuilder",
         "StopAppBlockBuilder",
         "StopFleet",
         "StopImageBuilder",
@@ -1758,7 +1767,7 @@
       "name": "Amazon Athena",
       "servicePrefix": "athena",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonathena.html",
-      "actionsCount": 79,
+      "actionsCount": 81,
       "actions": [
         "BatchGetNamedQuery",
         "BatchGetPreparedStatement",
@@ -1799,7 +1808,9 @@
         "GetQueryResults",
         "GetQueryResultsStream",
         "GetQueryRuntimeStatistics",
+        "GetResourceDashboard",
         "GetSession",
+        "GetSessionEndpoint",
         "GetSessionStatus",
         "GetTable",
         "GetTableMetadata",
@@ -1840,11 +1851,12 @@
         "UpdatePreparedStatement",
         "UpdateWorkGroup"
       ],
-      "resourceTypesCount": 3,
+      "resourceTypesCount": 4,
       "resourceTypes": [
         "datacatalog",
         "workgroup",
-        "capacity-reservation"
+        "capacity-reservation",
+        "session"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -4003,7 +4015,7 @@
       "name": "AWS CloudFormation",
       "servicePrefix": "cloudformation",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscloudformation.html",
-      "actionsCount": 92,
+      "actionsCount": 93,
       "actions": [
         "ActivateOrganizationsAccess",
         "ActivateType",
@@ -4051,6 +4063,7 @@
         "ExecuteChangeSet",
         "ExecuteStackRefactor",
         "GetGeneratedTemplate",
+        "GetHookResult",
         "GetStackPolicy",
         "GetTemplate",
         "GetTemplateSummary",
@@ -4098,13 +4111,14 @@
         "UpdateTerminationProtection",
         "ValidateTemplate"
       ],
-      "resourceTypesCount": 7,
+      "resourceTypesCount": 8,
       "resourceTypes": [
         "changeset",
         "stack",
         "stackset",
         "stackset-target",
         "type",
+        "typeHook",
         "generatedtemplate",
         "resourcescan"
       ],
@@ -10413,6 +10427,21 @@
       ]
     },
     {
+      "name": "Amazon EKS MCP Server",
+      "servicePrefix": "eks-mcp",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoneksmcpserver.html",
+      "actionsCount": 3,
+      "actions": [
+        "CallPrivilegedTool",
+        "CallReadOnlyTool",
+        "InvokeMcp"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
       "name": "AWS Elastic Beanstalk",
       "servicePrefix": "elasticbeanstalk",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselasticbeanstalk.html",
@@ -13436,7 +13465,7 @@
       "name": "AWS Glue",
       "servicePrefix": "glue",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsglue.html",
-      "actionsCount": 295,
+      "actionsCount": 296,
       "actions": [
         "AuthorizeInboundIntegration",
         "BatchCreatePartition",
@@ -13528,6 +13557,7 @@
         "DescribeEntity",
         "DescribeInboundIntegrations",
         "DescribeIntegrations",
+        "FederateAuthorization",
         "GetBlueprint",
         "GetBlueprintRun",
         "GetBlueprintRuns",
@@ -13759,13 +13789,14 @@
         "completion",
         "integration"
       ],
-      "conditionKeysCount": 10,
+      "conditionKeysCount": 11,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "glue:CredentialIssuingService",
         "glue:EnabledForRedshiftAutoDiscovery",
+        "glue:FederatedAuthorizationSource",
         "glue:LakeFormationPermissions",
         "glue:RoleAssumedBy",
         "glue:SecurityGroupIds",
@@ -14128,13 +14159,15 @@
       "name": "AWS HealthLake",
       "servicePrefix": "healthlake",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthlake.html",
-      "actionsCount": 37,
+      "actionsCount": 44,
       "actions": [
         "CancelFHIRExportJobWithDelete",
+        "ConfirmAttributionList",
         "CreateFHIRDatastore",
         "CreateResource",
         "DeleteFHIRDatastore",
         "DeleteResource",
+        "DescribeFHIRBulkDeleteJob",
         "DescribeFHIRDatastore",
         "DescribeFHIRExportJob",
         "DescribeFHIRExportJobWithGet",
@@ -14152,12 +14185,17 @@
         "ListTagsForResource",
         "LookupCodeSystemWithGet",
         "LookupCodeSystemWithPost",
+        "MemberAdd",
+        "MemberMatch",
+        "MemberRemove",
         "PatchResource",
         "ProcessBundle",
         "ReadResource",
+        "RetrieveAttributionStatus",
         "SearchEverything",
         "SearchWithGet",
         "SearchWithPost",
+        "StartFHIRBulkDeleteJob",
         "StartFHIRExportJob",
         "StartFHIRExportJobWithGet",
         "StartFHIRExportJobWithPost",
@@ -19843,6 +19881,39 @@
       ]
     },
     {
+      "name": "AWS MWAA Serverless",
+      "servicePrefix": "airflow-serverless",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmwaaserverless.html",
+      "actionsCount": 15,
+      "actions": [
+        "CreateWorkflow",
+        "DeleteWorkflow",
+        "GetTaskInstance",
+        "GetWorkflow",
+        "GetWorkflowRun",
+        "ListTagsForResource",
+        "ListTaskInstances",
+        "ListWorkflowRuns",
+        "ListWorkflowVersions",
+        "ListWorkflows",
+        "StartWorkflowRun",
+        "StopWorkflowRun",
+        "TagResource",
+        "UntagResource",
+        "UpdateWorkflow"
+      ],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "Workflow"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
       "name": "Amazon Neptune",
       "servicePrefix": "neptune-db",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonneptune.html",
@@ -20481,7 +20552,7 @@
       "name": "Amazon OpenSearch Service",
       "servicePrefix": "es",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchservice.html",
-      "actionsCount": 110,
+      "actionsCount": 114,
       "actions": [
         "AcceptInboundConnection",
         "AcceptInboundCrossClusterSearchConnection",
@@ -20498,6 +20569,7 @@
         "CreateDomain",
         "CreateElasticsearchDomain",
         "CreateElasticsearchServiceRole",
+        "CreateIndex",
         "CreateOutboundConnection",
         "CreateOutboundCrossClusterSearchConnection",
         "CreatePackage",
@@ -20511,6 +20583,7 @@
         "DeleteElasticsearchServiceRole",
         "DeleteInboundConnection",
         "DeleteInboundCrossClusterSearchConnection",
+        "DeleteIndex",
         "DeleteOutboundConnection",
         "DeleteOutboundCrossClusterSearchConnection",
         "DeletePackage",
@@ -20553,6 +20626,7 @@
         "GetDataSource",
         "GetDirectQueryDataSource",
         "GetDomainMaintenanceStatus",
+        "GetIndex",
         "GetPackageVersionHistory",
         "GetUpgradeHistory",
         "GetUpgradeStatus",
@@ -20587,6 +20661,7 @@
         "UpdateDirectQueryDataSource",
         "UpdateDomainConfig",
         "UpdateElasticsearchDomainConfig",
+        "UpdateIndex",
         "UpdatePackage",
         "UpdatePackageScope",
         "UpdateScheduledAction",
@@ -23818,7 +23893,7 @@
       "name": "Amazon Route 53",
       "servicePrefix": "route53",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53.html",
-      "actionsCount": 71,
+      "actionsCount": 70,
       "actions": [
         "ActivateKeySigningKey",
         "AssociateVPCWithHostedZone",
@@ -23888,7 +23963,6 @@
         "TestDNSAnswer",
         "UpdateHealthCheck",
         "UpdateHostedZoneComment",
-        "UpdateHostedZoneFeatures",
         "UpdateTrafficPolicyComment",
         "UpdateTrafficPolicyInstance"
       ],
@@ -25446,7 +25520,7 @@
     {
       "name": "AWS SageMaker Unified Studio MCP is a managed MCP solution for AWS data processing services like EMR, Glue, Athena",
       "servicePrefix": "sagemaker-unified-studio-mcp",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssagemakerunifiedstudiomcpisamanagedmcpsolutionforawsdataprocessingserviceslikeemr-glue-athena.html",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssagemakerunifiedstudiomcpisamanagedmcpsolutionforawsdataprocessingserviceslikeemr_glue_athena.html",
       "actionsCount": 3,
       "actions": [
         "CallPrivilegedTool",

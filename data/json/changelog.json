@@ -1,5 +1,78 @@
 [
   {
+    "dateOfChange": "2025-11-18",
+    "addedServices": [
+      "Amazon EKS MCP Server",
+      "AWS MWAA Serverless"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon AppStream 2.0": [
+        "appstream:AssociateSoftwareToImageBuilder",
+        "appstream:CreateExportImageTask",
+        "appstream:CreateImportedImage",
+        "appstream:DescribeAppLicenseUsage",
+        "appstream:DescribeSoftwareAssociations",
+        "appstream:DisassociateSoftwareFromImageBuilder",
+        "appstream:GetExportImageTask",
+        "appstream:ListExportImageTasks",
+        "appstream:StartSoftwareDeploymentToImageBuilder"
+      ],
+      "Amazon Athena": [
+        "athena:GetResourceDashboard",
+        "athena:GetSessionEndpoint"
+      ],
+      "AWS CloudFormation": [
+        "cloudformation:GetHookResult"
+      ],
+      "AWS Glue": [
+        "glue:FederateAuthorization"
+      ],
+      "AWS HealthLake": [
+        "healthlake:ConfirmAttributionList",
+        "healthlake:DescribeFHIRBulkDeleteJob",
+        "healthlake:MemberAdd",
+        "healthlake:MemberMatch",
+        "healthlake:MemberRemove",
+        "healthlake:RetrieveAttributionStatus",
+        "healthlake:StartFHIRBulkDeleteJob"
+      ],
+      "Amazon OpenSearch Service": [
+        "es:CreateIndex",
+        "es:DeleteIndex",
+        "es:GetIndex",
+        "es:UpdateIndex"
+      ],
+      "Amazon EKS MCP Server": [
+        "eks-mcp:CallPrivilegedTool",
+        "eks-mcp:CallReadOnlyTool",
+        "eks-mcp:InvokeMcp"
+      ],
+      "AWS MWAA Serverless": [
+        "airflow-serverless:CreateWorkflow",
+        "airflow-serverless:DeleteWorkflow",
+        "airflow-serverless:GetTaskInstance",
+        "airflow-serverless:GetWorkflow",
+        "airflow-serverless:GetWorkflowRun",
+        "airflow-serverless:ListTagsForResource",
+        "airflow-serverless:ListTaskInstances",
+        "airflow-serverless:ListWorkflowRuns",
+        "airflow-serverless:ListWorkflowVersions",
+        "airflow-serverless:ListWorkflows",
+        "airflow-serverless:StartWorkflowRun",
+        "airflow-serverless:StopWorkflowRun",
+        "airflow-serverless:TagResource",
+        "airflow-serverless:UntagResource",
+        "airflow-serverless:UpdateWorkflow"
+      ]
+    },
+    "removedActions": {
+      "Amazon Route 53": [
+        "route53:UpdateHostedZoneFeatures"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-11-14",
     "addedServices": [
       "AWS SageMaker Unified Studio MCP is a managed MCP solution for AWS data processing services like EMR, Glue, Athena"
