@@ -1,5 +1,38 @@
 [
   {
+    "dateOfChange": "2025-11-20",
+    "addedServices": [
+      "the console Mobile App",
+      "AWS Service for managing the console user experience capabilities."
+    ],
+    "removedServices": [
+      "AWS Management Console Mobile App",
+      "AWS Service for managing AWS Management Console user experience capabilities."
+    ],
+    "addedActions": {
+      "the console Mobile App": [
+        "consoleapp:GetDeviceIdentity",
+        "consoleapp:ListDeviceIdentities"
+      ],
+      "AWS Service for managing the console user experience capabilities.": [
+        "uxc:DeleteAccountColor",
+        "uxc:GetAccountColor",
+        "uxc:PutAccountColor"
+      ]
+    },
+    "removedActions": {
+      "AWS Management Console Mobile App": [
+        "consoleapp:GetDeviceIdentity",
+        "consoleapp:ListDeviceIdentities"
+      ],
+      "AWS Service for managing AWS Management Console user experience capabilities.": [
+        "uxc:DeleteAccountColor",
+        "uxc:GetAccountColor",
+        "uxc:PutAccountColor"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-11-18",
     "addedServices": [
       "Amazon EKS MCP Server",
