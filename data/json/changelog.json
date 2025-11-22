@@ -1,5 +1,298 @@
 [
   {
+    "dateOfChange": "2025-11-22",
+    "addedServices": [
+      "AWS Management Console Mobile App",
+      "AWS Partner Central",
+      "AWS PricingPlanManager Service",
+      "AWS Service for managing AWS Management Console user experience capabilities."
+    ],
+    "removedServices": [
+      "the console Mobile App",
+      "AWS Partner Central Selling",
+      "AWS Service for managing the console user experience capabilities."
+    ],
+    "addedActions": {
+      "AWS Application Migration Service": [
+        "mgn:ListImportFileEnrichments",
+        "mgn:ListNetworkMigrationMappingUpdates",
+        "mgn:StartImportFileEnrichment",
+        "mgn:StartNetworkMigrationMappingUpdate"
+      ],
+      "AWS Backup": [
+        "backup:CreateBackupAccessPoint",
+        "backup:CreateTieringConfiguration",
+        "backup:DeleteBackupAccessPoint",
+        "backup:DeleteTieringConfiguration",
+        "backup:DescribeBackupAccessPoint",
+        "backup:DescribeScanJob",
+        "backup:GetTieringConfiguration",
+        "backup:ListScanJobSummaries",
+        "backup:ListScanJobs",
+        "backup:ListTieringConfigurations",
+        "backup:StartScanJob",
+        "backup:UpdateTieringConfiguration"
+      ],
+      "Amazon Bedrock": [
+        "bedrock:InvokeDataAutomation"
+      ],
+      "Amazon Braket": [
+        "braket:CreateSpendingLimit",
+        "braket:DeleteSpendingLimit",
+        "braket:SearchSpendingLimits",
+        "braket:UpdateSpendingLimit"
+      ],
+      "AWS CloudFormation": [
+        "cloudformation:DescribeEvents"
+      ],
+      "AWS CloudTrail": [
+        "cloudtrail:ListInsightsData"
+      ],
+      "Amazon CloudWatch Application Signals": [
+        "application-signals:ListEntityEvents"
+      ],
+      "Amazon CloudWatch Logs": [
+        "logs:CreateScheduledQuery",
+        "logs:DeleteScheduledQuery",
+        "logs:GetScheduledQuery",
+        "logs:GetScheduledQueryHistory",
+        "logs:ListScheduledQueries",
+        "logs:UpdateScheduledQuery"
+      ],
+      "AWS Cost Optimization Hub": [
+        "cost-optimization-hub:ListEfficiencyMetrics"
+      ],
+      "AWS Database Migration Service": [
+        "dms:CreateOutboundIntegration",
+        "dms:ModifyOutboundIntegration"
+      ],
+      "Amazon EC2 Auto Scaling": [
+        "autoscaling:DescribeAccountSettings",
+        "autoscaling:PutAccountSetting"
+      ],
+      "Amazon EC2 Image Builder": [
+        "imagebuilder:DistributeImage",
+        "imagebuilder:RetryImage"
+      ],
+      "Amazon Elastic Container Service": [
+        "ecs:CreateExpressGatewayService",
+        "ecs:DeleteExpressGatewayService",
+        "ecs:DescribeExpressGatewayService",
+        "ecs:UpdateExpressGatewayService"
+      ],
+      "AWS Glue": [
+        "glue:RenameTable"
+      ],
+      "Amazon GuardDuty": [
+        "guardduty:GetMalwareScan",
+        "guardduty:ListMalwareScans",
+        "guardduty:SendObjectMalwareScan"
+      ],
+      "AWS Identity and Access Management (IAM)": [
+        "iam:AcceptDelegationRequest",
+        "iam:AssociateDelegationRequest",
+        "iam:CreateDelegationRequest",
+        "iam:DisableOutboundWebIdentityFederation",
+        "iam:EnableOutboundWebIdentityFederation",
+        "iam:GetDelegationRequest",
+        "iam:GetHumanReadableSummary",
+        "iam:GetOutboundWebIdentityFederationInfo",
+        "iam:ListDelegationRequests",
+        "iam:RejectDelegationRequest",
+        "iam:SendDelegationToken"
+      ],
+      "AWS Invoicing Service": [
+        "invoicing:CreateProcurementPortalPreference",
+        "invoicing:DeleteProcurementPortalPreference",
+        "invoicing:GetProcurementPortalPreference",
+        "invoicing:ListProcurementPortalPreferences",
+        "invoicing:PutProcurementPortalPreference",
+        "invoicing:UpdateProcurementPortalPreferenceStatus"
+      ],
+      "Amazon Kinesis Video Streams": [
+        "kinesisvideo:DescribeStreamStorageConfiguration",
+        "kinesisvideo:UpdateStreamStorageConfiguration"
+      ],
+      "AWS Lake Formation": [
+        "lakeformation:GetTemporaryGluePartitionCredentials",
+        "lakeformation:GetTemporaryGlueTableCredentials"
+      ],
+      "AWS License Manager": [
+        "license-manager:CreateLicenseAssetGroup",
+        "license-manager:CreateLicenseAssetRuleset",
+        "license-manager:DeleteLicenseAssetGroup",
+        "license-manager:DeleteLicenseAssetRuleset",
+        "license-manager:GetLicenseAssetGroup",
+        "license-manager:GetLicenseAssetRuleset",
+        "license-manager:ListAssetsForLicenseAssetGroup",
+        "license-manager:ListLicenseAssetGroups",
+        "license-manager:ListLicenseAssetRulesets",
+        "license-manager:ListLicenseConfigurationsForOrganization",
+        "license-manager:UpdateLicenseAssetGroup",
+        "license-manager:UpdateLicenseAssetRuleset"
+      ],
+      "Amazon Managed Streaming for Apache Kafka": [
+        "kafka:DescribeTopic",
+        "kafka:DescribeTopicPartitions",
+        "kafka:ListTopics"
+      ],
+      "AWS Organizations": [
+        "organizations:DescribeResponsibilityTransfer",
+        "organizations:InviteOrganizationToTransferResponsibility",
+        "organizations:ListInboundResponsibilityTransfers",
+        "organizations:ListOutboundResponsibilityTransfers",
+        "organizations:TerminateResponsibilityTransfer",
+        "organizations:UpdateResponsibilityTransfer"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:AllowVendedLogDeliveryForResource"
+      ],
+      "Amazon Resource Group Tagging API": [
+        "tag:ListRequiredTags"
+      ],
+      "Amazon S3": [
+        "s3:GetBucketAbac",
+        "s3:PutBucketAbac"
+      ],
+      "AWS Security Hub": [
+        "securityhub:GetFindingsTrendsV2",
+        "securityhub:GetResourcesTrendsV2"
+      ],
+      "AWS Service - Oracle Database@AWS": [
+        "odb:UpdateOutboundIntegration"
+      ],
+      "AWS Signin": [
+        "signin:AuthorizeOAuth2Access",
+        "signin:CreateOAuth2Token"
+      ],
+      "AWS Management Console Mobile App": [
+        "consoleapp:GetDeviceIdentity",
+        "consoleapp:ListDeviceIdentities"
+      ],
+      "AWS Partner Central": [
+        "partnercentral:AcceptChannelHandshake",
+        "partnercentral:AcceptEngagementInvitation",
+        "partnercentral:AssignOpportunity",
+        "partnercentral:AssociateOpportunity",
+        "partnercentral:CancelChannelHandshake",
+        "partnercentral:CreateChannelHandshake",
+        "partnercentral:CreateEngagement",
+        "partnercentral:CreateEngagementInvitation",
+        "partnercentral:CreateOpportunity",
+        "partnercentral:CreateProgramManagementAccount",
+        "partnercentral:CreateRelationship",
+        "partnercentral:CreateResourceSnapshot",
+        "partnercentral:CreateResourceSnapshotJob",
+        "partnercentral:DeleteProgramManagementAccount",
+        "partnercentral:DeleteRelationship",
+        "partnercentral:DeleteResourceSnapshotJob",
+        "partnercentral:DisassociateOpportunity",
+        "partnercentral:GetAwsOpportunitySummary",
+        "partnercentral:GetEngagement",
+        "partnercentral:GetEngagementInvitation",
+        "partnercentral:GetOpportunity",
+        "partnercentral:GetProgramManagementAccount",
+        "partnercentral:GetRelationship",
+        "partnercentral:GetResourceSnapshot",
+        "partnercentral:GetResourceSnapshotJob",
+        "partnercentral:GetSellingSystemSettings",
+        "partnercentral:ListChannelHandshakes",
+        "partnercentral:ListEngagementByAcceptingInvitationTasks",
+        "partnercentral:ListEngagementFromOpportunityTasks",
+        "partnercentral:ListEngagementInvitations",
+        "partnercentral:ListEngagementMembers",
+        "partnercentral:ListEngagementResourceAssociations",
+        "partnercentral:ListEngagements",
+        "partnercentral:ListOpportunities",
+        "partnercentral:ListProgramManagementAccounts",
+        "partnercentral:ListRelationships",
+        "partnercentral:ListResourceSnapshotJobs",
+        "partnercentral:ListResourceSnapshots",
+        "partnercentral:ListSolutions",
+        "partnercentral:ListTagsForResource",
+        "partnercentral:PutSellingSystemSettings",
+        "partnercentral:RejectChannelHandshake",
+        "partnercentral:RejectEngagementInvitation",
+        "partnercentral:StartEngagementByAcceptingInvitationTask",
+        "partnercentral:StartEngagementFromOpportunityTask",
+        "partnercentral:StartResourceSnapshotJob",
+        "partnercentral:StopResourceSnapshotJob",
+        "partnercentral:SubmitOpportunity",
+        "partnercentral:TagResource",
+        "partnercentral:UntagResource",
+        "partnercentral:UpdateOpportunity",
+        "partnercentral:UpdateProgramManagementAccount",
+        "partnercentral:UpdateRelationship"
+      ],
+      "AWS PricingPlanManager Service": [
+        "pricingplanmanager:AssociateResourcesToSubscription",
+        "pricingplanmanager:CancelSubscription",
+        "pricingplanmanager:CancelSubscriptionChange",
+        "pricingplanmanager:CreateSubscription",
+        "pricingplanmanager:DisassociateResourcesFromSubscription",
+        "pricingplanmanager:GetSubscription",
+        "pricingplanmanager:ListSubscriptions",
+        "pricingplanmanager:UpdateSubscription"
+      ],
+      "AWS Service for managing AWS Management Console user experience capabilities.": [
+        "uxc:DeleteAccountColor",
+        "uxc:GetAccountColor",
+        "uxc:PutAccountColor"
+      ]
+    },
+    "removedActions": {
+      "the console Mobile App": [
+        "consoleapp:GetDeviceIdentity",
+        "consoleapp:ListDeviceIdentities"
+      ],
+      "AWS Partner Central Selling": [
+        "partnercentral:AcceptEngagementInvitation",
+        "partnercentral:AssignOpportunity",
+        "partnercentral:AssociateOpportunity",
+        "partnercentral:CreateEngagement",
+        "partnercentral:CreateEngagementInvitation",
+        "partnercentral:CreateOpportunity",
+        "partnercentral:CreateResourceSnapshot",
+        "partnercentral:CreateResourceSnapshotJob",
+        "partnercentral:DeleteResourceSnapshotJob",
+        "partnercentral:DisassociateOpportunity",
+        "partnercentral:GetAwsOpportunitySummary",
+        "partnercentral:GetEngagement",
+        "partnercentral:GetEngagementInvitation",
+        "partnercentral:GetOpportunity",
+        "partnercentral:GetResourceSnapshot",
+        "partnercentral:GetResourceSnapshotJob",
+        "partnercentral:GetSellingSystemSettings",
+        "partnercentral:ListEngagementByAcceptingInvitationTasks",
+        "partnercentral:ListEngagementFromOpportunityTasks",
+        "partnercentral:ListEngagementInvitations",
+        "partnercentral:ListEngagementMembers",
+        "partnercentral:ListEngagementResourceAssociations",
+        "partnercentral:ListEngagements",
+        "partnercentral:ListOpportunities",
+        "partnercentral:ListResourceSnapshotJobs",
+        "partnercentral:ListResourceSnapshots",
+        "partnercentral:ListSolutions",
+        "partnercentral:ListTagsForResource",
+        "partnercentral:PutSellingSystemSettings",
+        "partnercentral:RejectEngagementInvitation",
+        "partnercentral:StartEngagementByAcceptingInvitationTask",
+        "partnercentral:StartEngagementFromOpportunityTask",
+        "partnercentral:StartResourceSnapshotJob",
+        "partnercentral:StopResourceSnapshotJob",
+        "partnercentral:SubmitOpportunity",
+        "partnercentral:TagResource",
+        "partnercentral:UntagResource",
+        "partnercentral:UpdateOpportunity"
+      ],
+      "AWS Service for managing the console user experience capabilities.": [
+        "uxc:DeleteAccountColor",
+        "uxc:GetAccountColor",
+        "uxc:PutAccountColor"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-11-20",
     "addedServices": [
       "the console Mobile App",

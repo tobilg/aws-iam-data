@@ -1,8 +1,8 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10746
-Actions by type,Read Actions,5229
-Actions by type,List Actions,3229
-Actions by type,Permissions Actions,371
+Actions by type,Write Actions,10810
+Actions by type,Read Actions,5257
+Actions by type,List Actions,3255
+Actions by type,Permissions Actions,372
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
@@ -41,7 +41,7 @@ Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Accoun
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},92
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},83
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},81
-Most referenced resource ARNs,rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog,75
+Most referenced resource ARNs,rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog,76
 Most referenced resource ARNs,mlflow-tracking-server - arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-tracking-server/${MlflowTrackingServerName},70
 Services with least actions,AWS Billing And Cost Management Recommended Actions,1
 Services with least actions,AWS Marketplace Seller Reporting,1
@@ -56,13 +56,13 @@ Services with least actions,AWS CloudTrail Data,1
 Services with most actions,Amazon EC2,720
 Services with most actions,Amazon SageMaker,405
 Services with most actions,Amazon Chime,316
+Services with most actions,AWS Glue,297
 Services with most actions,Amazon Connect,297
-Services with most actions,AWS Glue,296
 Services with most actions,AWS IoT,290
-Services with most actions,Amazon QuickSight,263
-Services with most actions,Amazon Bedrock,227
+Services with most actions,Amazon QuickSight,264
+Services with most actions,Amazon Bedrock,228
 Services with most actions,Amazon DataZone,222
-Services with most actions,AWS Identity and Access Management (IAM),176
+Services with most actions,AWS Identity and Access Management (IAM),187
 Shortest action names,iq:EndCall,10
 Shortest action names,ce:GetTags,10
 Shortest action names,es:AddTags,10
@@ -93,8 +93,8 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,1985
-Summary,Total number of distinct condition keys,1289
-Summary,Total number of services,453
+Summary,Total number of distinct resource ARNS,1997
+Summary,Total number of distinct condition keys,1307
+Summary,Total number of services,454
 Summary,Average number of actions per service,43
 Summary,Median number of actions per service,29
