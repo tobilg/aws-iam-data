@@ -1,5 +1,62 @@
 [
   {
+    "dateOfChange": "2025-11-26",
+    "addedServices": [
+      "Amazon SageMaker Unified Studio MCP"
+    ],
+    "removedServices": [
+      "AWS SageMaker Unified Studio MCP is a managed MCP solution for AWS data processing services like EMR, Glue, Athena"
+    ],
+    "addedActions": {
+      "Amazon CloudFront": [
+        "cloudfront:CreateConnectionFunction",
+        "cloudfront:CreateTrustStore",
+        "cloudfront:DeleteConnectionFunction",
+        "cloudfront:DeleteTrustStore",
+        "cloudfront:DescribeConnectionFunction",
+        "cloudfront:GetConnectionFunction",
+        "cloudfront:GetTrustStore",
+        "cloudfront:ListConnectionFunctions",
+        "cloudfront:ListDistributionsByConnectionFunction",
+        "cloudfront:ListDistributionsByTrustStore",
+        "cloudfront:ListTrustStores",
+        "cloudfront:PublishConnectionFunction",
+        "cloudfront:TestConnectionFunction",
+        "cloudfront:UpdateConnectionFunction",
+        "cloudfront:UpdateTrustStore"
+      ],
+      "Amazon CloudWatch Logs": [
+        "logs:PutLogGroupDeletionProtection"
+      ],
+      "Amazon Elastic Container Registry": [
+        "ecr:DeleteSigningConfiguration",
+        "ecr:DeregisterPullTimeUpdateExclusion",
+        "ecr:DescribeImageSigningStatus",
+        "ecr:GetSigningConfiguration",
+        "ecr:ListPullTimeUpdateExclusions",
+        "ecr:PutSigningConfiguration",
+        "ecr:RegisterPullTimeUpdateExclusion",
+        "ecr:UpdateImageStorageClass"
+      ],
+      "AWS Security Incident Response": [
+        "security-ir:ListInvestigations",
+        "security-ir:SendFeedback"
+      ],
+      "Amazon SageMaker Unified Studio MCP": [
+        "sagemaker-unified-studio-mcp:CallPrivilegedTool",
+        "sagemaker-unified-studio-mcp:CallReadOnlyTool",
+        "sagemaker-unified-studio-mcp:InvokeMcp"
+      ]
+    },
+    "removedActions": {
+      "AWS SageMaker Unified Studio MCP is a managed MCP solution for AWS data processing services like EMR, Glue, Athena": [
+        "sagemaker-unified-studio-mcp:CallPrivilegedTool",
+        "sagemaker-unified-studio-mcp:CallReadOnlyTool",
+        "sagemaker-unified-studio-mcp:InvokeMcp"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-11-22",
     "addedServices": [
       "AWS Management Console Mobile App",
