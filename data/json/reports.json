@@ -2,19 +2,19 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 10810
+      "value": 11076
     },
     {
       "key": "Read Actions",
-      "value": 5257
+      "value": 5376
     },
     {
       "key": "List Actions",
-      "value": 3255
+      "value": 3342
     },
     {
       "key": "Permissions Actions",
-      "value": 372
+      "value": 377
     }
   ],
   "Longest action names": [
@@ -146,7 +146,7 @@
   "Most referenced resource ARNs": [
     {
       "key": "instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}",
-      "value": 126
+      "value": 139
     },
     {
       "key": "organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId}",
@@ -234,7 +234,11 @@
     },
     {
       "key": "Amazon SageMaker",
-      "value": 405
+      "value": 412
+    },
+    {
+      "key": "Amazon Connect",
+      "value": 351
     },
     {
       "key": "Amazon Chime",
@@ -242,10 +246,6 @@
     },
     {
       "key": "AWS Glue",
-      "value": 297
-    },
-    {
-      "key": "Amazon Connect",
       "value": 297
     },
     {
@@ -262,7 +262,7 @@
     },
     {
       "key": "Amazon DataZone",
-      "value": 222
+      "value": 224
     },
     {
       "key": "AWS Identity and Access Management (IAM)",
@@ -398,11 +398,11 @@
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 454
+      "value": 460
     },
     {
       "key": "Average number of actions per service",
-      "value": 43
+      "value": 44
     },
     {
       "key": "Median number of actions per service",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 1997
+      "value": 2048
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 1307
+      "value": 1323
     }
   ]
 }
