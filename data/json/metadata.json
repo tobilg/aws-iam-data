@@ -1,5 +1,5 @@
 {
-  "serviceCount": 460,
+  "serviceCount": 461,
   "services": [
     {
       "name": "AWS Account Management",
@@ -2407,7 +2407,7 @@
       "name": "Amazon Bedrock",
       "servicePrefix": "bedrock",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html",
-      "actionsCount": 228,
+      "actionsCount": 232,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "ApplyGuardrail",
@@ -2464,6 +2464,7 @@
         "DeleteCustomModelDeployment",
         "DeleteDataAutomationProject",
         "DeleteDataSource",
+        "DeleteEnforcedGuardrailConfiguration",
         "DeleteFlow",
         "DeleteFlowAlias",
         "DeleteFlowVersion",
@@ -2566,6 +2567,7 @@
         "ListCustomModels",
         "ListDataAutomationProjects",
         "ListDataSources",
+        "ListEnforcedGuardrailsConfiguration",
         "ListEvaluationJobs",
         "ListFlowAliases",
         "ListFlowExecutionEvents",
@@ -2596,6 +2598,7 @@
         "OptimizePrompt",
         "PrepareAgent",
         "PrepareFlow",
+        "PutEnforcedGuardrailConfiguration",
         "PutFoundationModelEntitlement",
         "PutInvocationStep",
         "PutModelInvocationLoggingConfiguration",
@@ -2626,6 +2629,7 @@
         "UpdateAutomatedReasoningPolicyAnnotations",
         "UpdateAutomatedReasoningPolicyTestCase",
         "UpdateBlueprint",
+        "UpdateCustomModelDeployment",
         "UpdateDataAutomationProject",
         "UpdateDataSource",
         "UpdateFlow",
@@ -2978,10 +2982,11 @@
         "UntagResource",
         "UpdateExport"
       ],
-      "resourceTypesCount": 2,
+      "resourceTypesCount": 3,
       "resourceTypes": [
         "export",
-        "table"
+        "table",
+        "billingview"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -6673,6 +6678,47 @@
       ]
     },
     {
+      "name": "AWS Compute Optimizer Automation",
+      "servicePrefix": "aco-automation",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscomputeoptimizerautomation.html",
+      "actionsCount": 23,
+      "actions": [
+        "AssociateAccounts",
+        "CreateAutomationRule",
+        "DeleteAutomationRule",
+        "DisassociateAccounts",
+        "GetAutomationEvent",
+        "GetAutomationRule",
+        "GetEnrollmentConfiguration",
+        "ListAccounts",
+        "ListAutomationEventSteps",
+        "ListAutomationEventSummaries",
+        "ListAutomationEvents",
+        "ListAutomationRulePreview",
+        "ListAutomationRulePreviewSummaries",
+        "ListAutomationRules",
+        "ListRecommendedActionSummaries",
+        "ListRecommendedActions",
+        "ListTagsForResource",
+        "RollbackAutomationEvent",
+        "StartAutomationEvent",
+        "TagResource",
+        "UntagResource",
+        "UpdateAutomationRule",
+        "UpdateEnrollmentConfiguration"
+      ],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "AutomationRule"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
       "name": "AWS Config",
       "servicePrefix": "config",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsconfig.html",
@@ -7710,7 +7756,7 @@
       "name": "AWS Cost Explorer Service",
       "servicePrefix": "ce",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscostexplorerservice.html",
-      "actionsCount": 58,
+      "actionsCount": 59,
       "actions": [
         "CreateAnomalyMonitor",
         "CreateAnomalySubscription",
@@ -7754,6 +7800,7 @@
         "ListCostAllocationTagBackfillHistory",
         "ListCostAllocationTags",
         "ListCostCategoryDefinitions",
+        "ListCostCategoryResourceAssociations",
         "ListSavingsPlansPurchaseRecommendationGeneration",
         "ListTagsForResource",
         "ProvideAnomalyFeedback",
@@ -8635,44 +8682,6 @@
       ]
     },
     {
-      "name": "AWS DeepComposer",
-      "servicePrefix": "deepcomposer",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeepcomposer.html",
-      "actionsCount": 18,
-      "actions": [
-        "AssociateCoupon",
-        "CreateAudio",
-        "CreateComposition",
-        "CreateModel",
-        "DeleteComposition",
-        "DeleteModel",
-        "GetComposition",
-        "GetModel",
-        "GetSampleModel",
-        "ListCompositions",
-        "ListModels",
-        "ListSampleModels",
-        "ListTagsForResource",
-        "ListTrainingTopics",
-        "TagResource",
-        "UntagResource",
-        "UpdateComposition",
-        "UpdateModel"
-      ],
-      "resourceTypesCount": 3,
-      "resourceTypes": [
-        "model",
-        "composition",
-        "audio"
-      ],
-      "conditionKeysCount": 3,
-      "conditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
-      ]
-    },
-    {
       "name": "AWS DeepRacer",
       "servicePrefix": "deepracer",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeepracer.html",
@@ -8920,7 +8929,7 @@
       "name": "AWS DevOps Agent Service",
       "servicePrefix": "aidevops",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdevopsagentservice.html",
-      "actionsCount": 46,
+      "actionsCount": 45,
       "actions": [
         "AssociateService",
         "CreateAgentSpace",
@@ -8947,7 +8956,6 @@
         "HandleServiceRegistrationCallback",
         "InitiateChatForCase",
         "InitiateServiceRegistration",
-        "InvokeAgent",
         "ListAgentSpaces",
         "ListAssociations",
         "ListBacklogTasks",
@@ -15296,7 +15304,7 @@
       "name": "AWS Identity Store",
       "servicePrefix": "identitystore",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsidentitystore.html",
-      "actionsCount": 22,
+      "actionsCount": 23,
       "actions": [
         "CreateGroup",
         "CreateGroupMembership",
@@ -15317,6 +15325,7 @@
         "ListGroupMembershipsForMember",
         "ListGroups",
         "ListUsers",
+        "ReserveUser",
         "UpdateGroup",
         "UpdateIdentityStore",
         "UpdateUser"
@@ -22338,8 +22347,11 @@
       "actions": [
         "AllowMultiRegion"
       ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "vpc-endpoint",
+        "vpc-endpoint-service"
+      ],
       "conditionKeysCount": 0,
       "conditionKeys": []
     },
@@ -27155,6 +27167,37 @@
         "aws:TagKeys",
         "servicequotas:service"
       ]
+    },
+    {
+      "name": "AWS service to manage AI agents for UI workflows",
+      "servicePrefix": "nova-act",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservicetomanageaiagentsforuiworkflows.html",
+      "actionsCount": 16,
+      "actions": [
+        "CreateAct",
+        "CreateSession",
+        "CreateWorkflowDefinition",
+        "CreateWorkflowRun",
+        "DeleteWorkflowDefinition",
+        "DeleteWorkflowRun",
+        "GetWorkflowDefinition",
+        "GetWorkflowRun",
+        "InvokeActStep",
+        "ListActs",
+        "ListModels",
+        "ListSessions",
+        "ListWorkflowDefinitions",
+        "ListWorkflowRuns",
+        "UpdateAct",
+        "UpdateWorkflowRun"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "workflow-definition",
+        "workflow-run"
+      ],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
     },
     {
       "name": "Amazon SES",

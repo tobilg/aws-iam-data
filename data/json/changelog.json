@@ -1,5 +1,97 @@
 [
   {
+    "dateOfChange": "2025-12-09",
+    "addedServices": [
+      "AWS Compute Optimizer Automation",
+      "AWS service to manage AI agents for UI workflows"
+    ],
+    "removedServices": [
+      "AWS DeepComposer"
+    ],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:DeleteEnforcedGuardrailConfiguration",
+        "bedrock:ListEnforcedGuardrailsConfiguration",
+        "bedrock:PutEnforcedGuardrailConfiguration",
+        "bedrock:UpdateCustomModelDeployment"
+      ],
+      "AWS Cost Explorer Service": [
+        "ce:ListCostCategoryResourceAssociations"
+      ],
+      "AWS Identity Store": [
+        "identitystore:ReserveUser"
+      ],
+      "AWS Compute Optimizer Automation": [
+        "aco-automation:AssociateAccounts",
+        "aco-automation:CreateAutomationRule",
+        "aco-automation:DeleteAutomationRule",
+        "aco-automation:DisassociateAccounts",
+        "aco-automation:GetAutomationEvent",
+        "aco-automation:GetAutomationRule",
+        "aco-automation:GetEnrollmentConfiguration",
+        "aco-automation:ListAccounts",
+        "aco-automation:ListAutomationEventSteps",
+        "aco-automation:ListAutomationEventSummaries",
+        "aco-automation:ListAutomationEvents",
+        "aco-automation:ListAutomationRulePreview",
+        "aco-automation:ListAutomationRulePreviewSummaries",
+        "aco-automation:ListAutomationRules",
+        "aco-automation:ListRecommendedActionSummaries",
+        "aco-automation:ListRecommendedActions",
+        "aco-automation:ListTagsForResource",
+        "aco-automation:RollbackAutomationEvent",
+        "aco-automation:StartAutomationEvent",
+        "aco-automation:TagResource",
+        "aco-automation:UntagResource",
+        "aco-automation:UpdateAutomationRule",
+        "aco-automation:UpdateEnrollmentConfiguration"
+      ],
+      "AWS service to manage AI agents for UI workflows": [
+        "nova-act:CreateAct",
+        "nova-act:CreateSession",
+        "nova-act:CreateWorkflowDefinition",
+        "nova-act:CreateWorkflowRun",
+        "nova-act:DeleteWorkflowDefinition",
+        "nova-act:DeleteWorkflowRun",
+        "nova-act:GetWorkflowDefinition",
+        "nova-act:GetWorkflowRun",
+        "nova-act:InvokeActStep",
+        "nova-act:ListActs",
+        "nova-act:ListModels",
+        "nova-act:ListSessions",
+        "nova-act:ListWorkflowDefinitions",
+        "nova-act:ListWorkflowRuns",
+        "nova-act:UpdateAct",
+        "nova-act:UpdateWorkflowRun"
+      ]
+    },
+    "removedActions": {
+      "AWS DevOps Agent Service": [
+        "aidevops:InvokeAgent"
+      ],
+      "AWS DeepComposer": [
+        "deepcomposer:AssociateCoupon",
+        "deepcomposer:CreateAudio",
+        "deepcomposer:CreateComposition",
+        "deepcomposer:CreateModel",
+        "deepcomposer:DeleteComposition",
+        "deepcomposer:DeleteModel",
+        "deepcomposer:GetComposition",
+        "deepcomposer:GetModel",
+        "deepcomposer:GetSampleModel",
+        "deepcomposer:ListCompositions",
+        "deepcomposer:ListModels",
+        "deepcomposer:ListSampleModels",
+        "deepcomposer:ListTagsForResource",
+        "deepcomposer:ListTrainingTopics",
+        "deepcomposer:TagResource",
+        "deepcomposer:UntagResource",
+        "deepcomposer:UpdateComposition",
+        "deepcomposer:UpdateModel"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-12-06",
     "addedServices": [
       "Amazon Bedrock Powered by AWS Mantle",
