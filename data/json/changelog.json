@@ -1,5 +1,19 @@
 [
   {
+    "dateOfChange": "2025-12-11",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Account Management": [
+        "account:GetGovCloudAccountInformation"
+      ],
+      "AWS Artifact": [
+        "artifact:ListReportVersions"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-12-09",
     "addedServices": [
       "AWS Compute Optimizer Automation",

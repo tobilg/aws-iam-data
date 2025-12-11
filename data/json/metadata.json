@@ -5,7 +5,7 @@
       "name": "AWS Account Management",
       "servicePrefix": "account",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsaccountmanagement.html",
-      "actionsCount": 15,
+      "actionsCount": 16,
       "actions": [
         "AcceptPrimaryEmailUpdate",
         "CloseAccount",
@@ -15,6 +15,7 @@
         "GetAccountInformation",
         "GetAlternateContact",
         "GetContactInformation",
+        "GetGovCloudAccountInformation",
         "GetPrimaryEmail",
         "GetRegionOptStatus",
         "ListRegions",
@@ -1738,7 +1739,7 @@
       "name": "AWS Artifact",
       "servicePrefix": "artifact",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsartifact.html",
-      "actionsCount": 14,
+      "actionsCount": 15,
       "actions": [
         "AcceptAgreement",
         "AcceptNdaForAgreement",
@@ -1751,6 +1752,7 @@
         "GetTermForReport",
         "ListAgreements",
         "ListCustomerAgreements",
+        "ListReportVersions",
         "ListReports",
         "PutAccountSettings",
         "TerminateAgreement"
