@@ -6295,11 +6295,16 @@
       "resourceTypes": [
         "identitypool"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 8,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "cognito-identity-auth:AccountId",
+        "cognito-identity-auth:IdentityPoolArn",
+        "cognito-identity-unauth:AccountId",
+        "cognito-identity-unauth:IdentityPoolArn",
+        "cognito-identity:IdentityPoolArn"
       ]
     },
     {
@@ -14210,11 +14215,12 @@
       "name": "AWS Ground Station",
       "servicePrefix": "groundstation",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsgroundstation.html",
-      "actionsCount": 34,
+      "actionsCount": 35,
       "actions": [
         "CancelContact",
         "CreateConfig",
         "CreateDataflowEndpointGroup",
+        "CreateDataflowEndpointGroupV2",
         "CreateEphemeris",
         "CreateMissionProfile",
         "DeleteConfig",
@@ -27358,16 +27364,15 @@
       "name": "AWS Shield network security director",
       "servicePrefix": "network-security-director",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsshieldnetworksecuritydirector.html",
-      "actionsCount": 9,
+      "actionsCount": 8,
       "actions": [
         "GetFinding",
-        "GetNetworkSecurityScan",
         "GetResource",
+        "ListAccountSummaries",
         "ListFindings",
         "ListInsights",
         "ListRemediations",
         "ListResources",
-        "StartNetworkSecurityScan",
         "UpdateFinding"
       ],
       "resourceTypesCount": 0,

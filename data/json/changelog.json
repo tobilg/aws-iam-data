@@ -1,5 +1,24 @@
 [
   {
+    "dateOfChange": "2025-12-13",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Ground Station": [
+        "groundstation:CreateDataflowEndpointGroupV2"
+      ],
+      "AWS Shield network security director": [
+        "network-security-director:ListAccountSummaries"
+      ]
+    },
+    "removedActions": {
+      "AWS Shield network security director": [
+        "network-security-director:GetNetworkSecurityScan",
+        "network-security-director:StartNetworkSecurityScan"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-12-11",
     "addedServices": [],
     "removedServices": [],
