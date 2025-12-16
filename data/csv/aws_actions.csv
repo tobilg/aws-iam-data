@@ -6722,7 +6722,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 6721,173,networkmanager:DeleteGlobalNetwork,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_DeleteGlobalNetwork.html,false,Write
 6722,173,networkmanager:DeleteLink,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_DeleteLink.html,false,Write
 6723,173,networkmanager:DeletePeering,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_DeletePeering.html,false,Write
-6724,173,networkmanager:DeleteResourcePolicy,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_DeleteResourcePolicy.html,false,Write
+6724,173,networkmanager:DeleteResourcePolicy,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_DeleteResourcePolicy.html,false,Permissions management
 6725,173,networkmanager:DeleteSite,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_DeleteSite.html,false,Write
 6726,173,networkmanager:DeregisterTransitGateway,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_DeregisterTransitGateway.html,false,Write
 6727,173,networkmanager:DescribeGlobalNetworks,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_DescribeGlobalNetworks.html,false,List
@@ -6766,11 +6766,11 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 6765,173,networkmanager:ListPeerings,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_ListPeerings.html,false,List
 6766,173,networkmanager:ListTagsForResource,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_ListTagsForResource.html,false,Read
 6767,173,networkmanager:PutCoreNetworkPolicy,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_PutCoreNetworkPolicy.html,false,Write
-6768,173,networkmanager:PutResourcePolicy,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_PutResourcePolicy.html,false,Write
+6768,173,networkmanager:PutResourcePolicy,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_PutResourcePolicy.html,false,Permissions management
 6769,173,networkmanager:RegisterTransitGateway,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_RegisterTransitGateway.html,false,Write
 6770,173,networkmanager:RejectAttachment,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_RejectAttachment.html,false,Write
 6771,173,networkmanager:RestoreCoreNetworkPolicyVersion,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_RestoreCoreNetworkPolicyVersion.html,false,Write
-6772,173,networkmanager:StartOrganizationServiceAccessUpdate,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_StartOrganizationServiceAccessUpdate.html,false,Write
+6772,173,networkmanager:StartOrganizationServiceAccessUpdate,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_StartOrganizationServiceAccessUpdate.html,false,Permissions management
 6773,173,networkmanager:StartRouteAnalysis,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_StartRouteAnalysis.html,false,Write
 6774,173,networkmanager:TagResource,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_TagResource.html,false,Tagging
 6775,173,networkmanager:UntagResource,https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_UntagResource.html,false,Tagging
