@@ -22992,7 +22992,7 @@
       "name": "Amazon QuickSight",
       "servicePrefix": "quicksight",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonquicksight.html",
-      "actionsCount": 264,
+      "actionsCount": 265,
       "actions": [
         "AccountConfigurations",
         "AllowVendedLogDeliveryForResource",
@@ -23131,6 +23131,7 @@
         "GetFlowMetadata",
         "GetFlowPermissions",
         "GetGroupMapping",
+        "GetIdentityContext",
         "GetSessionEmbedUrl",
         "ListActionConnectors",
         "ListAgents",
@@ -26075,7 +26076,7 @@
         "cluster-scheduler-config",
         "partner-app"
       ],
-      "conditionKeysCount": 57,
+      "conditionKeysCount": 58,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -26126,6 +26127,7 @@
         "sagemaker:ServerlessMaxConcurrency",
         "sagemaker:ServerlessMemorySize",
         "sagemaker:SpaceSharingType",
+        "sagemaker:StudioLifecycleConfigArns",
         "sagemaker:TaggingAction",
         "sagemaker:TargetModel",
         "sagemaker:UserProfileName",
@@ -27136,7 +27138,7 @@
       "name": "Service Quotas",
       "servicePrefix": "servicequotas",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_servicequotas.html",
-      "actionsCount": 24,
+      "actionsCount": 26,
       "actions": [
         "AssociateServiceQuotaTemplate",
         "CreateSupportCase",
@@ -27145,6 +27147,7 @@
         "GetAWSDefaultServiceQuota",
         "GetAssociationForServiceQuotaTemplate",
         "GetAutoManagementConfiguration",
+        "GetQuotaUtilizationReport",
         "GetRequestedServiceQuotaChange",
         "GetServiceQuota",
         "GetServiceQuotaIncreaseRequestFromTemplate",
@@ -27158,6 +27161,7 @@
         "PutServiceQuotaIncreaseRequestIntoTemplate",
         "RequestServiceQuotaIncrease",
         "StartAutoManagement",
+        "StartQuotaUtilizationReport",
         "StopAutoManagement",
         "TagResource",
         "UntagResource",
@@ -28624,7 +28628,7 @@
       ],
       "resourceTypesCount": 0,
       "resourceTypes": [],
-      "conditionKeysCount": 19,
+      "conditionKeysCount": 20,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -28634,6 +28638,7 @@
         "ssm:AutoApprove",
         "ssm:DocumentCategories",
         "ssm:DocumentType",
+        "ssm:DocumentVersion",
         "ssm:InventoryTypeName",
         "ssm:Overwrite",
         "ssm:Policies",
@@ -29342,7 +29347,7 @@
       ]
     },
     {
-      "name": "AWS Transform Custom",
+      "name": "AWS Transform custom",
       "servicePrefix": "transform-custom",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstransformcustom.html",
       "actionsCount": 22,
@@ -29370,10 +29375,9 @@
         "UpdateKnowledgeItemConfiguration",
         "UpdateKnowledgeItemStatus"
       ],
-      "resourceTypesCount": 4,
+      "resourceTypesCount": 3,
       "resourceTypes": [
         "campaign",
-        "conversation",
         "knowledge-item",
         "package"
       ],
