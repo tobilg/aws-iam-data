@@ -29076,7 +29076,7 @@
       "name": "Amazon Timestream InfluxDB",
       "servicePrefix": "timestream-influxdb",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazontimestreaminfluxdb.html",
-      "actionsCount": 17,
+      "actionsCount": 19,
       "actions": [
         "CreateDbCluster",
         "CreateDbInstance",
@@ -29091,6 +29091,8 @@
         "ListDbInstancesForCluster",
         "ListDbParameterGroups",
         "ListTagsForResource",
+        "RebootDbCluster",
+        "RebootDbInstance",
         "TagResource",
         "UntagResource",
         "UpdateDbCluster",
