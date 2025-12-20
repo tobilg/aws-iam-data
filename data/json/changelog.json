@@ -1,5 +1,53 @@
 [
   {
+    "dateOfChange": "2025-12-20",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon API Gateway Management V2": [
+        "apigateway:CreatePortal",
+        "apigateway:CreatePortalProduct",
+        "apigateway:CreateProductPage",
+        "apigateway:CreateProductRestEndpointPage",
+        "apigateway:DeletePortal",
+        "apigateway:DeletePortalProduct",
+        "apigateway:DeletePortalProductSharingPolicy",
+        "apigateway:DeleteProductPage",
+        "apigateway:DeleteProductRestEndpointPage",
+        "apigateway:DisablePortal",
+        "apigateway:GetPortal",
+        "apigateway:GetPortalProduct",
+        "apigateway:GetPortalProductSharingPolicy",
+        "apigateway:GetProductPage",
+        "apigateway:GetProductRestEndpointPage",
+        "apigateway:ListPortalProducts",
+        "apigateway:ListPortals",
+        "apigateway:ListProductPages",
+        "apigateway:ListProductRestEndpointPages",
+        "apigateway:PreviewPortal",
+        "apigateway:PublishPortal",
+        "apigateway:PutPortalProductSharingPolicy",
+        "apigateway:UpdatePortal",
+        "apigateway:UpdatePortalProduct",
+        "apigateway:UpdateProductPage",
+        "apigateway:UpdateProductRestEndpointPage"
+      ],
+      "AWS Clean Rooms": [
+        "cleanrooms:UpdateCollaborationChangeRequest"
+      ],
+      "AWS Payment Cryptography": [
+        "payment-cryptography:AddKeyReplicationRegions",
+        "payment-cryptography:DisableDefaultKeyReplicationRegions",
+        "payment-cryptography:EnableDefaultKeyReplicationRegions",
+        "payment-cryptography:GetCertificateSigningRequest",
+        "payment-cryptography:GetDefaultKeyReplicationRegions",
+        "payment-cryptography:RemoveKeyReplicationRegions",
+        "payment-cryptography:TranslateKeyMaterial"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-12-19",
     "addedServices": [],
     "removedServices": [],
