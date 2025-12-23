@@ -1,5 +1,130 @@
 [
   {
+    "dateOfChange": "2025-12-23",
+    "addedServices": [
+      "Amazon Nova Act"
+    ],
+    "removedServices": [
+      "AWS service to manage AI agents for UI workflows"
+    ],
+    "addedActions": {
+      "Amazon ARC Region switch": [
+        "arc-region-switch:ListRoute53HealthChecksInRegion"
+      ],
+      "Amazon CloudWatch Logs": [
+        "logs:CancelImportTask",
+        "logs:CreateImportTask",
+        "logs:DescribeImportTaskBatches",
+        "logs:DescribeImportTasks"
+      ],
+      "AWS Network Firewall": [
+        "network-firewall:AttachRuleGroupsToProxyConfiguration",
+        "network-firewall:CreateProxy",
+        "network-firewall:CreateProxyConfiguration",
+        "network-firewall:CreateProxyRuleGroup",
+        "network-firewall:CreateProxyRules",
+        "network-firewall:DeleteProxy",
+        "network-firewall:DeleteProxyConfiguration",
+        "network-firewall:DeleteProxyRuleGroup",
+        "network-firewall:DeleteProxyRules",
+        "network-firewall:DescribeProxy",
+        "network-firewall:DescribeProxyConfiguration",
+        "network-firewall:DescribeProxyRule",
+        "network-firewall:DescribeProxyRuleGroup",
+        "network-firewall:DetachRuleGroupsFromProxyConfiguration",
+        "network-firewall:ListProxies",
+        "network-firewall:ListProxyConfigurations",
+        "network-firewall:ListProxyRuleGroups",
+        "network-firewall:UpdateProxy",
+        "network-firewall:UpdateProxyConfiguration",
+        "network-firewall:UpdateProxyRule",
+        "network-firewall:UpdateProxyRuleGroupPriorities",
+        "network-firewall:UpdateProxyRulePriorities"
+      ],
+      "Amazon Simple Email Service v2": [
+        "ses:GetEmailAddressInsights"
+      ],
+      "AWS Wickr": [
+        "wickr:BatchCreateUser",
+        "wickr:BatchDeleteUser",
+        "wickr:BatchLookupUserUname",
+        "wickr:BatchReinviteUser",
+        "wickr:BatchResetDevicesForUser",
+        "wickr:BatchToggleUserSuspendStatus",
+        "wickr:CreateBot",
+        "wickr:CreateDataRetentionBot",
+        "wickr:CreateDataRetentionBotChallenge",
+        "wickr:CreateSecurityGroup",
+        "wickr:DeleteBot",
+        "wickr:DeleteDataRetentionBot",
+        "wickr:DeleteSecurityGroup",
+        "wickr:GetBot",
+        "wickr:GetBotsCount",
+        "wickr:GetDataRetentionBot",
+        "wickr:GetGuestUserHistoryCount",
+        "wickr:GetNetwork",
+        "wickr:GetNetworkSettings",
+        "wickr:GetOidcInfo",
+        "wickr:GetSecurityGroup",
+        "wickr:GetUser",
+        "wickr:GetUsersCount",
+        "wickr:ListBlockedGuestUsers",
+        "wickr:ListBots",
+        "wickr:ListDevicesForUser",
+        "wickr:ListGuestUsers",
+        "wickr:ListSecurityGroupUsers",
+        "wickr:ListSecurityGroups",
+        "wickr:ListUsers",
+        "wickr:RegisterOidcConfig",
+        "wickr:RegisterOidcConfigTest",
+        "wickr:UpdateBot",
+        "wickr:UpdateDataRetention",
+        "wickr:UpdateGuestUser",
+        "wickr:UpdateNetworkSettings",
+        "wickr:UpdateSecurityGroup",
+        "wickr:UpdateUser"
+      ],
+      "Amazon Nova Act": [
+        "nova-act:CreateAct",
+        "nova-act:CreateSession",
+        "nova-act:CreateWorkflowDefinition",
+        "nova-act:CreateWorkflowRun",
+        "nova-act:DeleteWorkflowDefinition",
+        "nova-act:DeleteWorkflowRun",
+        "nova-act:GetWorkflowDefinition",
+        "nova-act:GetWorkflowRun",
+        "nova-act:InvokeActStep",
+        "nova-act:ListActs",
+        "nova-act:ListModels",
+        "nova-act:ListSessions",
+        "nova-act:ListWorkflowDefinitions",
+        "nova-act:ListWorkflowRuns",
+        "nova-act:UpdateAct",
+        "nova-act:UpdateWorkflowRun"
+      ]
+    },
+    "removedActions": {
+      "AWS service to manage AI agents for UI workflows": [
+        "nova-act:CreateAct",
+        "nova-act:CreateSession",
+        "nova-act:CreateWorkflowDefinition",
+        "nova-act:CreateWorkflowRun",
+        "nova-act:DeleteWorkflowDefinition",
+        "nova-act:DeleteWorkflowRun",
+        "nova-act:GetWorkflowDefinition",
+        "nova-act:GetWorkflowRun",
+        "nova-act:InvokeActStep",
+        "nova-act:ListActs",
+        "nova-act:ListModels",
+        "nova-act:ListSessions",
+        "nova-act:ListWorkflowDefinitions",
+        "nova-act:ListWorkflowRuns",
+        "nova-act:UpdateAct",
+        "nova-act:UpdateWorkflowRun"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2025-12-20",
     "addedServices": [],
     "removedServices": [],
