@@ -26460,10 +26460,9 @@
       "resourceTypes": [
         "mlflow-tracking-server"
       ],
-      "conditionKeysCount": 2,
+      "conditionKeysCount": 1,
       "conditionKeys": [
-        "aws:ResourceTag/${TagKey}",
-        "sagemaker:ResourceTag/${TagKey}"
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {
