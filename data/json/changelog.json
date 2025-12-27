@@ -1,5 +1,21 @@
 [
   {
+    "dateOfChange": "2025-12-27",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Redshift": [
+        "redshift:DescribeAutonomicsDenylist",
+        "redshift:ModifyAutonomicsDenylist"
+      ],
+      "Amazon Redshift Serverless": [
+        "redshift-serverless:ListAutonomicsDenylist",
+        "redshift-serverless:UpdateAutonomicsDenylist"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2025-12-23",
     "addedServices": [
       "Amazon Nova Act"
