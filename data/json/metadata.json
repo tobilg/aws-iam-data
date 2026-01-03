@@ -17152,11 +17152,14 @@
         "cert",
         "ImportTask"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 6,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "iotwireless:DestinationName",
+        "iotwireless:DeviceProfileId",
+        "iotwireless:ServiceProfileId"
       ]
     },
     {
@@ -23175,12 +23178,14 @@
       "name": "Amazon QuickSight",
       "servicePrefix": "quicksight",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonquicksight.html",
-      "actionsCount": 265,
+      "actionsCount": 271,
       "actions": [
         "AccountConfigurations",
         "AllowVendedLogDeliveryForResource",
         "BatchCreateTopicReviewedAnswer",
         "BatchDeleteTopicReviewedAnswer",
+        "BatchGetPreferences",
+        "BatchUpdatePreferences",
         "CancelIngestion",
         "CreateAccountCustomization",
         "CreateAccountSubscription",
@@ -23292,6 +23297,7 @@
         "DescribeQuickSightQSearchConfiguration",
         "DescribeRefreshSchedule",
         "DescribeRoleCustomPermission",
+        "DescribeSelfUpgradeConfiguration",
         "DescribeTemplate",
         "DescribeTemplateAlias",
         "DescribeTemplatePermissions",
@@ -23343,6 +23349,7 @@
         "ListNamespaces",
         "ListRefreshSchedules",
         "ListRoleMemberships",
+        "ListSelfUpgrades",
         "ListTagsForResource",
         "ListTemplateAliases",
         "ListTemplateVersions",
@@ -23430,6 +23437,8 @@
         "UpdateResourcePermissions",
         "UpdateRoleCustomPermission",
         "UpdateSPICECapacityConfiguration",
+        "UpdateSelfUpgrade",
+        "UpdateSelfUpgradeConfiguration",
         "UpdateTemplate",
         "UpdateTemplateAlias",
         "UpdateTemplatePermissions",
