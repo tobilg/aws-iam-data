@@ -23700,7 +23700,7 @@
         "snapshot-tenant-database",
         "tenant-database"
       ],
-      "conditionKeysCount": 29,
+      "conditionKeysCount": 30,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -23717,6 +23717,7 @@
         "rds:PubliclyAccessible",
         "rds:StorageEncrypted",
         "rds:StorageSize",
+        "rds:TagsFromRequest",
         "rds:TenantDatabaseName",
         "rds:Vpc",
         "rds:cluster-pg-tag/${TagKey}",
@@ -27065,13 +27066,14 @@
       "name": "AWS Service - Oracle Database@AWS",
       "servicePrefix": "odb",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservice-oracledatabase_aws.html",
-      "actionsCount": 48,
+      "actionsCount": 51,
       "actions": [
         "AcceptMarketplaceRegistration",
         "CreateCloudAutonomousVmCluster",
         "CreateCloudExadataInfrastructure",
         "CreateCloudVmCluster",
         "CreateDbNode",
+        "CreateGrantShare",
         "CreateOdbNetwork",
         "CreateOdbPeeringConnection",
         "CreateOutboundIntegration",
@@ -27079,6 +27081,7 @@
         "DeleteCloudExadataInfrastructure",
         "DeleteCloudVmCluster",
         "DeleteDbNode",
+        "DeleteGrantShare",
         "DeleteOdbNetwork",
         "DeleteOdbPeeringConnection",
         "DeleteResourcePolicy",
@@ -27112,6 +27115,7 @@
         "TagResource",
         "UntagResource",
         "UpdateCloudExadataInfrastructure",
+        "UpdateGrantShare",
         "UpdateOdbNetwork",
         "UpdateOdbPeeringConnection",
         "UpdateOutboundIntegration"
