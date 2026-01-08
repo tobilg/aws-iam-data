@@ -1,5 +1,19 @@
 [
   {
+    "dateOfChange": "2026-01-08",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Elastic Load Balancing V2": [
+        "elasticloadbalancing:CreateWebACLAssociation",
+        "elasticloadbalancing:DeleteWebACLAssociation",
+        "elasticloadbalancing:DescribeWebACLAssociation",
+        "elasticloadbalancing:GetLoadBalancerWebACL"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-01-06",
     "addedServices": [],
     "removedServices": [],
