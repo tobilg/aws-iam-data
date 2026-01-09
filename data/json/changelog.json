@@ -1,5 +1,21 @@
 [
   {
+    "dateOfChange": "2026-01-09",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Network Manager": [
+        "networkmanager:CreateCoreNetworkPrefixListAssociation",
+        "networkmanager:DeleteCoreNetworkPrefixListAssociation",
+        "networkmanager:ListCoreNetworkPrefixListAssociations",
+        "networkmanager:ListCoreNetworkRoutingInformation",
+        "networkmanager:PutAttachmentRoutingPolicyLabel",
+        "networkmanager:RemoveAttachmentRoutingPolicyLabel"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-01-08",
     "addedServices": [],
     "removedServices": [],
