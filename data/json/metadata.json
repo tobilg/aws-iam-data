@@ -1,5 +1,5 @@
 {
-  "serviceCount": 461,
+  "serviceCount": 462,
   "services": [
     {
       "name": "AWS Account Management",
@@ -10814,6 +10814,20 @@
         "ec2:ResourceTag/${TagKey}",
         "ec2:osuser"
       ]
+    },
+    {
+      "name": "Amazon ECS MCP Service",
+      "servicePrefix": "ecs-mcp",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonecsmcpservice.html",
+      "actionsCount": 2,
+      "actions": [
+        "InvokeReadOnlyTools",
+        "UseMcp"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
     },
     {
       "name": "Amazon EKS Auth",

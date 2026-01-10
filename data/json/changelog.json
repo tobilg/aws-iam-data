@@ -1,5 +1,19 @@
 [
   {
+    "dateOfChange": "2026-01-10",
+    "addedServices": [
+      "Amazon ECS MCP Service"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon ECS MCP Service": [
+        "ecs-mcp:InvokeReadOnlyTools",
+        "ecs-mcp:UseMcp"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-01-09",
     "addedServices": [],
     "removedServices": [],
