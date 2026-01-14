@@ -1,5 +1,21 @@
 [
   {
+    "dateOfChange": "2026-01-14",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Network Manager": [
+        "networkmanager:ListAttachmentRoutingPolicyAssociations"
+      ],
+      "Amazon S3 Tables": [
+        "s3tables:DeleteTableBucketMetricsConfiguration",
+        "s3tables:GetTableBucketMetricsConfiguration",
+        "s3tables:PutTableBucketMetricsConfiguration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-01-10",
     "addedServices": [
       "Amazon ECS MCP Service"
