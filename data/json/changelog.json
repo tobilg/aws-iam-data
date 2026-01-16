@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2026-01-16",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS AppSync": [
+        "appsync:AssociateWebACL",
+        "appsync:DisassociateWebACL",
+        "appsync:GetWebACLForResource",
+        "appsync:ListResourcesForWebACL"
+      ],
+      "Amazon OpenSearch Serverless": [
+        "aoss:AddCollectionToCollectionGroup",
+        "aoss:BatchGetCollectionGroup",
+        "aoss:CreateCollectionGroup",
+        "aoss:DeleteCollectionGroup",
+        "aoss:ListCollectionGroups",
+        "aoss:UpdateCollectionGroup"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-01-15",
     "addedServices": [],
     "removedServices": [],
