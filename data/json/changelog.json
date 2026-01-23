@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2026-01-23",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon DataZone": [
+        "datazone:DeleteDataExportConfiguration",
+        "datazone:QueryGraph"
+      ],
+      "AWS Launch Wizard": [
+        "launchwizard:GetDeploymentPatternVersion",
+        "launchwizard:ListDeploymentPatternVersions",
+        "launchwizard:UpdateDeployment"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-01-21",
     "addedServices": [],
     "removedServices": [],
