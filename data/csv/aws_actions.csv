@@ -18180,7 +18180,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 18179,415,route53-recovery-control-config:CreateSafetyRule,https://docs.aws.amazon.com/recovery-cluster/latest/api/safetyrule.html,false,Write
 18180,415,route53-recovery-control-config:DeleteCluster,https://docs.aws.amazon.com/recovery-cluster/latest/api/cluster-clusterarn.html,false,Write
 18181,415,route53-recovery-control-config:DeleteControlPanel,https://docs.aws.amazon.com/recovery-cluster/latest/api/controlpanel-controlpanelarn.html,false,Write
-18182,415,route53-recovery-control-config:DeleteResourcePolicy,https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.failover-different-accounts.html,true,Write
+18182,415,route53-recovery-control-config:DeleteResourcePolicy,https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.failover-different-accounts.html,true,Permissions management
 18183,415,route53-recovery-control-config:DeleteRoutingControl,https://docs.aws.amazon.com/recovery-cluster/latest/api/routingcontrol-routingcontrolarn.html,false,Write
 18184,415,route53-recovery-control-config:DeleteSafetyRule,https://docs.aws.amazon.com/recovery-cluster/latest/api/safetyrule-safetyrulearn.html,false,Write
 18185,415,route53-recovery-control-config:DescribeCluster,https://docs.aws.amazon.com/recovery-cluster/latest/api/cluster-clusterarn.html,false,Read
@@ -18195,7 +18195,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 18194,415,route53-recovery-control-config:ListRoutingControls,https://docs.aws.amazon.com/recovery-cluster/latest/api/controlpanel-controlpanelarn-routingcontrols.html,false,Read
 18195,415,route53-recovery-control-config:ListSafetyRules,https://docs.aws.amazon.com/recovery-cluster/latest/api/controlpanel-controlpanelarn-safetyrules.html,false,Read
 18196,415,route53-recovery-control-config:ListTagsForResource,https://docs.aws.amazon.com/recovery-cluster/latest/api/tags-resource-arn.html,false,Read
-18197,415,route53-recovery-control-config:PutResourcePolicy,https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.failover-different-accounts.html,true,Write
+18197,415,route53-recovery-control-config:PutResourcePolicy,https://docs.aws.amazon.com/r53recovery/latest/dg/routing-control.failover-different-accounts.html,true,Permissions management
 18198,415,route53-recovery-control-config:TagResource,https://docs.aws.amazon.com/recovery-cluster/latest/api/tags-resource-arn.html,false,Tagging
 18199,415,route53-recovery-control-config:UntagResource,https://docs.aws.amazon.com/recovery-cluster/latest/api/tags-resource-arn.html,false,Tagging
 18200,415,route53-recovery-control-config:UpdateCluster,https://docs.aws.amazon.com/recovery-cluster/latest/api/cluster.html,false,Write
