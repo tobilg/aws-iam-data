@@ -1,5 +1,37 @@
 [
   {
+    "dateOfChange": "2026-01-28",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Security Agent": [
+        "securityagent:BatchGetAgentSpaces",
+        "securityagent:BatchGetPentestJobTasks",
+        "securityagent:CreateAgentSpace",
+        "securityagent:CreateDesignReview",
+        "securityagent:CreateSecurityRequirement",
+        "securityagent:DeleteAgentSpace",
+        "securityagent:DeleteDesignReview",
+        "securityagent:DeleteDocumentReview",
+        "securityagent:DeleteSecurityRequirement",
+        "securityagent:GetDesignReview",
+        "securityagent:GetDesignReviewArtifact",
+        "securityagent:GetSecurityRequirement",
+        "securityagent:ListAgentSpaces",
+        "securityagent:ListDesignReviewComments",
+        "securityagent:ListDesignReviews",
+        "securityagent:ListPentestJobTasks",
+        "securityagent:ListSecurityRequirements",
+        "securityagent:StartPentestJob",
+        "securityagent:StopPentestJob",
+        "securityagent:ToggleManagedSecurityRequirement",
+        "securityagent:UpdateAgentSpace",
+        "securityagent:UpdateSecurityRequirement"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-01-23",
     "addedServices": [],
     "removedServices": [],
