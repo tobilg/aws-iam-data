@@ -9325,7 +9325,7 @@
       "name": "Amazon DynamoDB",
       "servicePrefix": "dynamodb",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondynamodb.html",
-      "actionsCount": 73,
+      "actionsCount": 74,
       "actions": [
         "BatchGetItem",
         "BatchWriteItem",
@@ -9366,6 +9366,7 @@
         "GetResourcePolicy",
         "GetShardIterator",
         "ImportTable",
+        "InjectError",
         "ListBackups",
         "ListContributorInsights",
         "ListExports",
