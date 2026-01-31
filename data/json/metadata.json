@@ -23769,7 +23769,7 @@
       "name": "Amazon Redshift",
       "servicePrefix": "redshift",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshift.html",
-      "actionsCount": 165,
+      "actionsCount": 166,
       "actions": [
         "AcceptReservedNodeExchange",
         "AddPartner",
@@ -23887,6 +23887,7 @@
         "FetchResults",
         "GetClusterCredentials",
         "GetClusterCredentialsWithIAM",
+        "GetIdentityCenterAuthToken",
         "GetReservedNodeExchangeConfigurationOptions",
         "GetReservedNodeExchangeOfferings",
         "GetResourcePolicy",
@@ -24013,7 +24014,7 @@
       "name": "Amazon Redshift Serverless",
       "servicePrefix": "redshift-serverless",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonredshiftserverless.html",
-      "actionsCount": 67,
+      "actionsCount": 68,
       "actions": [
         "ConvertRecoveryPointToSnapshot",
         "CreateCustomDomainAssociation",
@@ -24038,6 +24039,7 @@
         "GetCredentials",
         "GetCustomDomainAssociation",
         "GetEndpointAccess",
+        "GetIdentityCenterAuthToken",
         "GetManagedWorkgroup",
         "GetNamespace",
         "GetRecoveryPoint",
