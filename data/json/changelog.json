@@ -1,5 +1,34 @@
 [
   {
+    "dateOfChange": "2026-02-03",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon DynamoDB": [
+        "dynamodb:AssociateTableReplica",
+        "dynamodb:ReadDataForReplication",
+        "dynamodb:ReplicateSettings",
+        "dynamodb:WriteDataForReplication"
+      ],
+      "AWS IAM Identity Center": [
+        "sso:AddRegion",
+        "sso:DescribeRegion",
+        "sso:ListRegions",
+        "sso:RemoveRegion"
+      ],
+      "AWS Identity Store": [
+        "identitystore:AddRegion",
+        "identitystore:DescribeRegion",
+        "identitystore:ListRegions",
+        "identitystore:RemoveRegion"
+      ],
+      "AWS Security Agent": [
+        "securityagent:BatchGetPentestJobContentMetadata"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-01-31",
     "addedServices": [],
     "removedServices": [],
