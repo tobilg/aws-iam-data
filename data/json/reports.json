@@ -2,15 +2,15 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 11188
+      "value": 11193
     },
     {
       "key": "Read Actions",
-      "value": 5412
+      "value": 5413
     },
     {
       "key": "List Actions",
-      "value": 3395
+      "value": 3396
     },
     {
       "key": "Permissions Actions",
@@ -77,7 +77,15 @@
       "value": 68
     },
     {
+      "key": "token.actions.githubusercontent.com/${SubPath}:job_workflow_ref",
+      "value": 63
+    },
+    {
       "key": "codebuild:secondarySources/${sourceIdentifier}.auth.resource",
+      "value": 60
+    },
+    {
+      "key": "idcs-${OciUniqueIdentifier}.identity.oraclecloud.com:rpst_id",
       "value": 60
     },
     {
@@ -89,16 +97,8 @@
       "value": 60
     },
     {
-      "key": "codebuild:buildBatchConfig.restrictions.computeTypesAllowed",
-      "value": 59
-    },
-    {
-      "key": "codebuild:environment.registryCredential.credentialProvider",
-      "value": 59
-    },
-    {
-      "key": "codebuild:secondaryArtifacts/${artifactIdentifier}.location",
-      "value": 59
+      "key": "token.actions.githubusercontent.com/${SubPath}:enterprise_id",
+      "value": 60
     }
   ],
   "Longest service prefixes": [
@@ -246,7 +246,7 @@
     },
     {
       "key": "AWS Glue",
-      "value": 297
+      "value": 299
     },
     {
       "key": "AWS IoT",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 2056
+      "value": 2058
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 1363
+      "value": 1403
     }
   ]
 }

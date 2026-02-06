@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,11188
-Actions by type,Read Actions,5412
-Actions by type,List Actions,3395
+Actions by type,Write Actions,11193
+Actions by type,Read Actions,5413
+Actions by type,List Actions,3396
 Actions by type,Permissions Actions,393
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -17,12 +17,12 @@ Longest condition key names,codebuild:secondarySources/${sourceIdentifier}.build
 Longest condition key names,codebuild:secondarySources/${sourceIdentifier}.buildStatusConfig.context,72
 Longest condition key names,codebuild:secondaryArtifacts/${artifactIdentifier}.encryptionDisabled,69
 Longest condition key names,codebuild:secondaryArtifacts/${artifactIdentifier}.bucketOwnerAccess,68
-Longest condition key names,payment-cryptography:CertificateAuthorityPublicKeyIdentifier,60
+Longest condition key names,token.actions.githubusercontent.com/${SubPath}:job_workflow_ref,63
 Longest condition key names,iot:CommandExecutionParameterBoolean/${CommandParameterName},60
+Longest condition key names,idcs-${OciUniqueIdentifier}.identity.oraclecloud.com:rpst_id,60
+Longest condition key names,token.actions.githubusercontent.com/${SubPath}:enterprise_id,60
+Longest condition key names,payment-cryptography:CertificateAuthorityPublicKeyIdentifier,60
 Longest condition key names,codebuild:secondarySources/${sourceIdentifier}.auth.resource,60
-Longest condition key names,codebuild:buildBatchConfig.restrictions.computeTypesAllowed,59
-Longest condition key names,codebuild:secondaryArtifacts/${artifactIdentifier}.location,59
-Longest condition key names,codebuild:environment.registryCredential.credentialProvider,59
 Longest service prefixes,license-manager-linux-subscriptions,35
 Longest service prefixes,license-manager-user-subscriptions,34
 Longest service prefixes,partnercentral-account-management,33
@@ -57,7 +57,7 @@ Services with most actions,Amazon EC2,771
 Services with most actions,Amazon SageMaker,412
 Services with most actions,Amazon Connect,351
 Services with most actions,Amazon Chime,316
-Services with most actions,AWS Glue,297
+Services with most actions,AWS Glue,299
 Services with most actions,AWS IoT,290
 Services with most actions,Amazon QuickSight,271
 Services with most actions,Amazon Bedrock,232
@@ -93,8 +93,8 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,2056
-Summary,Total number of distinct condition keys,1363
+Summary,Total number of distinct resource ARNS,2058
+Summary,Total number of distinct condition keys,1403
 Summary,Total number of services,461
 Summary,Average number of actions per service,44
 Summary,Median number of actions per service,29

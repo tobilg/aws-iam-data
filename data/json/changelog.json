@@ -1,5 +1,24 @@
 [
   {
+    "dateOfChange": "2026-02-06",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:CreateBrowserProfile",
+        "bedrock-agentcore:DeleteBrowserProfile",
+        "bedrock-agentcore:GetBrowserProfile",
+        "bedrock-agentcore:ListBrowserProfiles",
+        "bedrock-agentcore:SaveBrowserSessionProfile"
+      ],
+      "AWS Glue": [
+        "glue:DeleteConnectionType",
+        "glue:RegisterConnectionType"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-02-04",
     "addedServices": [],
     "removedServices": [],
