@@ -77,15 +77,7 @@
       "value": 68
     },
     {
-      "key": "token.actions.githubusercontent.com/${SubPath}:job_workflow_ref",
-      "value": 63
-    },
-    {
       "key": "codebuild:secondarySources/${sourceIdentifier}.auth.resource",
-      "value": 60
-    },
-    {
-      "key": "idcs-${OciUniqueIdentifier}.identity.oraclecloud.com:rpst_id",
       "value": 60
     },
     {
@@ -97,8 +89,16 @@
       "value": 60
     },
     {
-      "key": "token.actions.githubusercontent.com/${SubPath}:enterprise_id",
-      "value": 60
+      "key": "codebuild:buildBatchConfig.restrictions.computeTypesAllowed",
+      "value": 59
+    },
+    {
+      "key": "codebuild:environment.registryCredential.credentialProvider",
+      "value": 59
+    },
+    {
+      "key": "codebuild:secondaryArtifacts/${artifactIdentifier}.location",
+      "value": 59
     }
   ],
   "Longest service prefixes": [
@@ -414,7 +414,7 @@
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 1403
+      "value": 1364
     }
   ]
 }
