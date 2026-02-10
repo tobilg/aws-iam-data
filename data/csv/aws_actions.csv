@@ -2590,12 +2590,12 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 2589,75,deadline:DisassociateMemberFromFleet,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_DisassociateMemberFromFleet.html,false,Permissions management
 2590,75,deadline:DisassociateMemberFromJob,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_DisassociateMemberFromJob.html,false,Permissions management
 2591,75,deadline:DisassociateMemberFromQueue,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_DisassociateMemberFromQueue.html,false,Permissions management
-2592,75,deadline:GetApplicationVersion,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_GetApplicationVersion.html,false,Read
+2592,75,deadline:GetApplicationVersion,https://docs.aws.amazon.com/deadline-cloud/latest/userguide/deadline-cloud-jobs.html,true,Read
 2593,75,deadline:GetBudget,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_GetBudget.html,false,Read
 2594,75,deadline:GetFarm,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_GetFarm.html,false,Read
 2595,75,deadline:GetFleet,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_GetFleet.html,false,Read
 2596,75,deadline:GetJob,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_GetJob.html,false,Read
-2597,75,deadline:GetJobTemplate,,true,Read
+2597,75,deadline:GetJobTemplate,https://docs.aws.amazon.com/deadline-cloud/latest/userguide/working-with-deadline-monitor.html,true,Read
 2598,75,deadline:GetLicenseEndpoint,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_GetLicenseEndpoint.html,false,Read
 2599,75,deadline:GetLimit,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_GetLimit.html,false,Read
 2600,75,deadline:GetMonitor,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_GetMonitor.html,false,Read
@@ -2637,14 +2637,14 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 2636,75,deadline:ListSteps,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_ListSteps.html,false,List
 2637,75,deadline:ListStorageProfiles,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_ListStorageProfiles.html,false,List
 2638,75,deadline:ListStorageProfilesForQueue,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_ListStorageProfilesForQueue.html,false,List
-2639,75,deadline:ListTagsForResource,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_ListTagsForResource.html,false,List
+2639,75,deadline:ListTagsForResource,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_ListTagsForResource.html,false,Read
 2640,75,deadline:ListTasks,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_ListTasks.html,false,List
 2641,75,deadline:ListWorkers,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_ListWorkers.html,false,List
 2642,75,deadline:PutMeteredProduct,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_PutMeteredProduct.html,false,Write
-2643,75,deadline:SearchJobs,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_SearchJobs.html,false,List
-2644,75,deadline:SearchSteps,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_SearchSteps.html,false,List
-2645,75,deadline:SearchTasks,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_SearchTasks.html,false,List
-2646,75,deadline:SearchWorkers,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_SearchWorkers.html,false,List
+2643,75,deadline:SearchJobs,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_SearchJobs.html,false,Read
+2644,75,deadline:SearchSteps,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_SearchSteps.html,false,Read
+2645,75,deadline:SearchTasks,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_SearchTasks.html,false,Read
+2646,75,deadline:SearchWorkers,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_SearchWorkers.html,false,Read
 2647,75,deadline:StartSessionsStatisticsAggregation,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_StartSessionsStatisticsAggregation.html,false,Read
 2648,75,deadline:TagResource,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_TagResource.html,false,Tagging
 2649,75,deadline:UntagResource,https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UntagResource.html,false,Tagging
