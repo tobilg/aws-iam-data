@@ -19392,7 +19392,7 @@
       "name": "Amazon Managed Streaming for Apache Kafka",
       "servicePrefix": "kafka",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmanagedstreamingforapachekafka.html",
-      "actionsCount": 56,
+      "actionsCount": 59,
       "actions": [
         "BatchAssociateScramSecret",
         "BatchDisassociateScramSecret",
@@ -19400,11 +19400,13 @@
         "CreateClusterV2",
         "CreateConfiguration",
         "CreateReplicator",
+        "CreateTopic",
         "CreateVpcConnection",
         "DeleteCluster",
         "DeleteClusterPolicy",
         "DeleteConfiguration",
         "DeleteReplicator",
+        "DeleteTopic",
         "DeleteVpcConnection",
         "DescribeCluster",
         "DescribeClusterOperation",
@@ -19449,7 +19451,8 @@
         "UpdateRebalancing",
         "UpdateReplicationInfo",
         "UpdateSecurity",
-        "UpdateStorage"
+        "UpdateStorage",
+        "UpdateTopic"
       ],
       "resourceTypesCount": 7,
       "resourceTypes": [
