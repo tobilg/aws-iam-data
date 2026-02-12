@@ -27623,8 +27623,11 @@
         "CreateTrustedIdentityPropagationApplicationForConsole",
         "ListTrustedIdentityPropagationApplicationsForConsole"
       ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "oauth2-public-client-localhost",
+        "oauth2-public-client-remote"
+      ],
       "conditionKeysCount": 0,
       "conditionKeys": []
     },
