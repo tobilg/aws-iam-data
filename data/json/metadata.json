@@ -1,5 +1,5 @@
 {
-  "serviceCount": 461,
+  "serviceCount": 462,
   "services": [
     {
       "name": "AWS Account Management",
@@ -11843,21 +11843,8 @@
         "TestFailover",
         "TestMigration"
       ],
-      "resourceTypesCount": 12,
-      "resourceTypes": [
-        "parametergroup",
-        "securitygroup",
-        "subnetgroup",
-        "replicationgroup",
-        "cluster",
-        "reserved-instance",
-        "snapshot",
-        "globalreplicationgroup",
-        "user",
-        "usergroup",
-        "serverlesscache",
-        "serverlesscachesnapshot"
-      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
       "conditionKeysCount": 0,
       "conditionKeys": []
     },
@@ -15653,6 +15640,22 @@
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
       ]
+    },
+    {
+      "name": "Amazon Inspector2 Telemetry Channel",
+      "servicePrefix": "inspector2-telemetry",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninspector2telemetrychannel.html",
+      "actionsCount": 4,
+      "actions": [
+        "NotifyHeartbeat",
+        "SendTelemetry",
+        "StartSession",
+        "StopSession"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
     },
     {
       "name": "Amazon InspectorScan",
@@ -19962,18 +19965,8 @@
         "UpdateSubnetGroup",
         "UpdateUser"
       ],
-      "resourceTypesCount": 9,
-      "resourceTypes": [
-        "multiregionparametergroup",
-        "parametergroup",
-        "subnetgroup",
-        "multiregioncluster",
-        "cluster",
-        "snapshot",
-        "user",
-        "acl",
-        "reservednode"
-      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
       "conditionKeysCount": 5,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",

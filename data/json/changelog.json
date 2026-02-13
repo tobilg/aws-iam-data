@@ -1,5 +1,21 @@
 [
   {
+    "dateOfChange": "2026-02-13",
+    "addedServices": [
+      "Amazon Inspector2 Telemetry Channel"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Inspector2 Telemetry Channel": [
+        "inspector2-telemetry:NotifyHeartbeat",
+        "inspector2-telemetry:SendTelemetry",
+        "inspector2-telemetry:StartSession",
+        "inspector2-telemetry:StopSession"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-02-11",
     "addedServices": [],
     "removedServices": [],
