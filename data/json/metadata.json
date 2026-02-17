@@ -21828,7 +21828,7 @@
       "name": "AWS Payment Cryptography",
       "servicePrefix": "payment-cryptography",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspaymentcryptography.html",
-      "actionsCount": 39,
+      "actionsCount": 40,
       "actions": [
         "AddKeyReplicationRegions",
         "CreateAlias",
@@ -21840,6 +21840,7 @@
         "EnableDefaultKeyReplicationRegions",
         "EncryptData",
         "ExportKey",
+        "GenerateAs2805KekValidation",
         "GenerateCardValidationData",
         "GenerateMac",
         "GenerateMacEmvPinChange",
