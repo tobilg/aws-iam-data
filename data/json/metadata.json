@@ -2935,23 +2935,33 @@
       "name": "Amazon Bedrock Powered by AWS Mantle",
       "servicePrefix": "bedrock-mantle",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockpoweredbyawsmantle.html",
-      "actionsCount": 7,
+      "actionsCount": 15,
       "actions": [
         "CallWithBearerToken",
+        "CancelFineTuningJob",
         "CancelInference",
+        "CreateFile",
+        "CreateFineTuningJob",
         "CreateInference",
+        "DeleteFile",
         "DeleteInference",
+        "GetFile",
+        "GetFineTuningJob",
         "GetInference",
         "GetModel",
+        "ListFiles",
+        "ListFineTuningJobs",
         "ListModels"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
         "project"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "bedrock-mantle:BearerTokenType",
+        "bedrock-mantle:Files",
+        "bedrock-mantle:FineTuningJob",
         "bedrock-mantle:Model",
         "bedrock-mantle:ServiceTier"
       ]
@@ -30721,11 +30731,12 @@
       "resourceTypes": [
         "organization"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 4,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "workmail:ImpersonationRoleId"
       ]
     },
     {
