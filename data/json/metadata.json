@@ -13879,7 +13879,7 @@
       "name": "AWS Glue",
       "servicePrefix": "glue",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsglue.html",
-      "actionsCount": 299,
+      "actionsCount": 301,
       "actions": [
         "AuthorizeInboundIntegration",
         "BatchCreatePartition",
@@ -13949,6 +13949,7 @@
         "DeleteDevEndpoint",
         "DeleteGlueIdentityCenterConfiguration",
         "DeleteIntegration",
+        "DeleteIntegrationResourceProperty",
         "DeleteIntegrationTableProperties",
         "DeleteJob",
         "DeleteMLTransform",
@@ -14084,6 +14085,7 @@
         "ListDataQualityRulesets",
         "ListDevEndpoints",
         "ListEntities",
+        "ListIntegrationResourceProperties",
         "ListJobUpgradeAnalyses",
         "ListJobs",
         "ListMLTransforms",
@@ -14181,7 +14183,7 @@
         "UseGlueStudio",
         "UseMLTransforms"
       ],
-      "resourceTypesCount": 23,
+      "resourceTypesCount": 24,
       "resourceTypes": [
         "rootcatalog",
         "catalog",
@@ -14205,7 +14207,8 @@
         "customEntityType",
         "completion",
         "integration",
-        "connectionType"
+        "connectionType",
+        "integrationResourceProperty"
       ],
       "conditionKeysCount": 11,
       "conditionKeys": [
