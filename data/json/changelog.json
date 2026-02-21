@@ -1,5 +1,31 @@
 [
   {
+    "dateOfChange": "2026-02-21",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:CopyBlueprintStage",
+        "bedrock:GetBlueprintOptimizationStatus",
+        "bedrock:InvokeBlueprintOptimizationAsync"
+      ],
+      "Amazon Connect": [
+        "connect:AssociateQueueEmailAddresses",
+        "connect:CreateNotification",
+        "connect:DeleteNotification",
+        "connect:DescribeNotification",
+        "connect:DisassociateQueueEmailAddresses",
+        "connect:ListNotifications",
+        "connect:ListQueueEmailAddresses",
+        "connect:ListUserNotifications",
+        "connect:SearchNotifications",
+        "connect:UpdateNotificationContent",
+        "connect:UpdateUserNotificationStatus"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-02-20",
     "addedServices": [],
     "removedServices": [],
