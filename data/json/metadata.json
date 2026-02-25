@@ -1,5 +1,5 @@
 {
-  "serviceCount": 462,
+  "serviceCount": 463,
   "services": [
     {
       "name": "AWS Account Management",
@@ -11930,6 +11930,36 @@
       "conditionKeys": []
     },
     {
+      "name": "AWS Elemental Inference",
+      "servicePrefix": "elemental-inference",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalinference.html",
+      "actionsCount": 12,
+      "actions": [
+        "AssociateFeed",
+        "CreateFeed",
+        "DeleteFeed",
+        "DisassociateFeed",
+        "GetFeed",
+        "GetMetadata",
+        "ListFeeds",
+        "ListTagsForResource",
+        "PutMedia",
+        "TagResource",
+        "UntagResource",
+        "UpdateFeed"
+      ],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "FeedResource"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
       "name": "AWS Elemental MediaConnect",
       "servicePrefix": "mediaconnect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awselementalmediaconnect.html",
@@ -14604,7 +14634,7 @@
       "name": "AWS HealthLake",
       "servicePrefix": "healthlake",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthlake.html",
-      "actionsCount": 44,
+      "actionsCount": 47,
       "actions": [
         "CancelFHIRExportJobWithDelete",
         "ConfirmAttributionList",
@@ -14624,6 +14654,7 @@
         "GetCapabilities",
         "GetExportedFile",
         "GetHistoryByResourceId",
+        "InquirePreAuthClaim",
         "ListFHIRDatastores",
         "ListFHIRExportJobs",
         "ListFHIRImportJobs",
@@ -14635,6 +14666,7 @@
         "MemberRemove",
         "PatchResource",
         "ProcessBundle",
+        "QuestionnairePackage",
         "ReadResource",
         "RetrieveAttributionStatus",
         "SearchEverything",
@@ -14645,6 +14677,7 @@
         "StartFHIRExportJobWithGet",
         "StartFHIRExportJobWithPost",
         "StartFHIRImportJob",
+        "SubmitPreAuthClaim",
         "TagResource",
         "UntagResource",
         "UpdateResource",
