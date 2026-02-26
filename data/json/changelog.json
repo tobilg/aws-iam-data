@@ -1,5 +1,29 @@
 [
   {
+    "dateOfChange": "2026-02-26",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudWatch": [
+        "cloudwatch:DeleteAlarmMuteRule",
+        "cloudwatch:GetAlarmMuteRule",
+        "cloudwatch:ListAlarmMuteRules",
+        "cloudwatch:PutAlarmMuteRule"
+      ],
+      "Amazon Lex V2": [
+        "lex:DeleteBotAnalyzerRecommendation",
+        "lex:DescribeBotAnalyzerRecommendation",
+        "lex:ListBotAnalyzerRecommendations",
+        "lex:StartBotAnalyzer",
+        "lex:StopBotAnalyzer"
+      ],
+      "AWS WAF V2": [
+        "wafv2:GetTopPathStatisticsByTraffic"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-02-25",
     "addedServices": [
       "AWS Elemental Inference"
