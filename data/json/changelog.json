@@ -1,5 +1,34 @@
 [
   {
+    "dateOfChange": "2026-02-27",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock Powered by AWS Mantle": [
+        "bedrock-mantle:ArchiveProject",
+        "bedrock-mantle:CreateProject",
+        "bedrock-mantle:GetProject",
+        "bedrock-mantle:ListProjects",
+        "bedrock-mantle:ListTagsForResource",
+        "bedrock-mantle:TagResource",
+        "bedrock-mantle:UntagResource",
+        "bedrock-mantle:UpdateProject"
+      ],
+      "Amazon EC2": [
+        "ec2:AttachResourcesToPlacementGroup",
+        "ec2:CreateSecondaryNetwork",
+        "ec2:CreateSecondarySubnet",
+        "ec2:DeleteSecondaryNetwork",
+        "ec2:DeleteSecondarySubnet",
+        "ec2:DescribeSecondaryInterfaces",
+        "ec2:DescribeSecondaryNetworks",
+        "ec2:DescribeSecondarySubnets",
+        "ec2:DetachResourcesFromPlacementGroup"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-02-26",
     "addedServices": [],
     "removedServices": [],
