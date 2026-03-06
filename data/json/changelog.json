@@ -1,5 +1,62 @@
 [
   {
+    "dateOfChange": "2026-03-06",
+    "addedServices": [
+      "Amazon Connect Health"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Multi-party approval": [
+        "mpa:StartApprovalTeamBaseline"
+      ],
+      "Amazon Connect Health": [
+        "health-agent:ActivateSubscription",
+        "health-agent:CancelAppointment",
+        "health-agent:CreateAgent",
+        "health-agent:CreateDomain",
+        "health-agent:CreateIntegration",
+        "health-agent:CreateSession",
+        "health-agent:CreateSubscription",
+        "health-agent:DeactivateSubscription",
+        "health-agent:DeleteAgent",
+        "health-agent:DeleteDomain",
+        "health-agent:DeleteIntegration",
+        "health-agent:GetAgent",
+        "health-agent:GetCareTeamProvider",
+        "health-agent:GetDomain",
+        "health-agent:GetIntegration",
+        "health-agent:GetMedicalScribeListeningSession",
+        "health-agent:GetPatient",
+        "health-agent:GetPatientInsightsJob",
+        "health-agent:GetPractitioner",
+        "health-agent:GetSessionContext",
+        "health-agent:GetSubscription",
+        "health-agent:InvokeAgent",
+        "health-agent:ListAgents",
+        "health-agent:ListAppointmentSlots",
+        "health-agent:ListDomains",
+        "health-agent:ListIntegrations",
+        "health-agent:ListPatientAppointments",
+        "health-agent:ListPatientInsuranceCoverages",
+        "health-agent:ListProviders",
+        "health-agent:ListSubscriptions",
+        "health-agent:ListTagsForResource",
+        "health-agent:MatchPatient",
+        "health-agent:PublishAgent",
+        "health-agent:RescheduleAppointment",
+        "health-agent:ScheduleAppointment",
+        "health-agent:StartMedicalScribeListeningSession",
+        "health-agent:StartPatientInsightsJob",
+        "health-agent:TagResource",
+        "health-agent:UntagResource",
+        "health-agent:UpdateAgent",
+        "health-agent:UpdateIntegration",
+        "health-agent:UpdateSession"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-03-01",
     "addedServices": [],
     "removedServices": [],
