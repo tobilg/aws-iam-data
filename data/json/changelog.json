@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2026-03-07",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Security Agent": [
+        "securityagent:BatchGetTargetDomains",
+        "securityagent:CreateTargetDomain",
+        "securityagent:DeleteTargetDomain",
+        "securityagent:GetDesignReviewFeedback",
+        "securityagent:ListTargetDomains",
+        "securityagent:PutDesignReviewFeedback",
+        "securityagent:UpdateTargetDomain"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-03-06",
     "addedServices": [
       "Amazon Connect Health"
