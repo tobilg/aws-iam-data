@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2026-03-10",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Cognito User Pools": [
+        "cognito-idp:AddUserPoolClientSecret",
+        "cognito-idp:DeleteUserPoolClientSecret",
+        "cognito-idp:ListUserPoolClientSecrets"
+      ],
+      "Amazon OpenSearch Service": [
+        "es:RollbackElasticsearchServiceSoftwareUpdate",
+        "es:RollbackServiceSoftwareUpdate"
+      ],
+      "AWS Resource Access Manager (RAM)": [
+        "ram:ListSourceAssociations"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-03-07",
     "addedServices": [],
     "removedServices": [],

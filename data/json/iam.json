@@ -50886,7 +50886,7 @@
       {
         "name": "meeting",
         "apiReferenceUrl": "https://docs.aws.amazon.com/chime/latest/APIReference/API_Meeting.html",
-        "arnPattern": "arn:${Partition}:chime::${AccountId}:meeting/${MeetingId}",
+        "arnPattern": "arn:${Partition}:chime:${Region}:${AccountId}:meeting/${MeetingId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -84170,6 +84170,21 @@
         ]
       },
       {
+        "name": "AddUserPoolClientSecret",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AddUserPoolClientSecret.html",
+        "permissionOnly": false,
+        "description": "Grants permission to add a new secret to a confidential client",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "AdminAddUserToGroup",
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminAddUserToGroup.html",
         "permissionOnly": false,
@@ -84930,6 +84945,21 @@
         ]
       },
       {
+        "name": "DeleteUserPoolClientSecret",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DeleteUserPoolClientSecret.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a secret from a list of secrets associated with a client",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteUserPoolDomain",
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DeleteUserPoolDomain.html",
         "permissionOnly": false,
@@ -85459,6 +85489,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ListUserImportJobs.html",
         "permissionOnly": false,
         "description": "Grants permission to list all user import jobs",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListUserPoolClientSecrets",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ListUserPoolClientSecrets.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all secrets associated with a client",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -303267,6 +303312,36 @@
         ]
       },
       {
+        "name": "RollbackElasticsearchServiceSoftwareUpdate",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_RollbackServiceSoftwareUpdate.html",
+        "permissionOnly": false,
+        "description": "Grants permission to rollback a service software update of an elasticsearch domain to its previous version",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "RollbackServiceSoftwareUpdate",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_RollbackServiceSoftwareUpdate.html",
+        "permissionOnly": false,
+        "description": "Grants permission to rollback a service software update of an opensearch domain to its previous version",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "StartDomainMaintenance",
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_StartDomainMaintenance.html",
         "permissionOnly": false,
@@ -346532,7 +346607,8 @@
               "ram:AllowsExternalPrincipals",
               "ram:Principal",
               "ram:RequestedResourceType",
-              "ram:ResourceArn"
+              "ram:ResourceArn",
+              "ram:RetainSharingOnAccountLeaveOrganization"
             ],
             "dependentActions": []
           }
@@ -346629,7 +346705,8 @@
               "ram:ResourceArn",
               "ram:RequestedAllowsExternalPrincipals",
               "ram:Principal",
-              "ram:AllowsExternalPrincipals"
+              "ram:AllowsExternalPrincipals",
+              "ram:RetainSharingOnAccountLeaveOrganization"
             ],
             "dependentActions": []
           }
@@ -346704,7 +346781,8 @@
               "aws:ResourceTag/${TagKey}",
               "ram:ResourceTag/${TagKey}",
               "ram:ResourceShareName",
-              "ram:AllowsExternalPrincipals"
+              "ram:AllowsExternalPrincipals",
+              "ram:RetainSharingOnAccountLeaveOrganization"
             ],
             "dependentActions": []
           }
@@ -346733,7 +346811,8 @@
               "ram:AllowsExternalPrincipals",
               "ram:Principal",
               "ram:RequestedResourceType",
-              "ram:ResourceArn"
+              "ram:ResourceArn",
+              "ram:RetainSharingOnAccountLeaveOrganization"
             ],
             "dependentActions": []
           }
@@ -347009,7 +347088,8 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ram:ResourceShareName",
-              "ram:AllowsExternalPrincipals"
+              "ram:AllowsExternalPrincipals",
+              "ram:RetainSharingOnAccountLeaveOrganization"
             ],
             "dependentActions": []
           }
@@ -347035,6 +347115,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/ram/latest/APIReference/API_ListResources.html",
         "permissionOnly": false,
         "description": "Grants permission to list the resources that you added to resource shares or the resources that are shared with you",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListSourceAssociations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ram/latest/APIReference/API_ListSourceAssociations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list source associations for resource shares",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -347242,7 +347337,8 @@
               "ram:ResourceTag/${TagKey}",
               "ram:ResourceShareName",
               "ram:AllowsExternalPrincipals",
-              "ram:RequestedAllowsExternalPrincipals"
+              "ram:RequestedAllowsExternalPrincipals",
+              "ram:RetainSharingOnAccountLeaveOrganization"
             ],
             "dependentActions": []
           }
@@ -347360,6 +347456,12 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
         "description": "Filters access by the tags associated with the resource",
         "type": "String"
+      },
+      {
+        "name": "ram:RetainSharingOnAccountLeaveOrganization",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ram/latest/userguide/iam-policies.html#iam-policies-condition",
+        "description": "Filters access by RetainSharingOnAccountLeaveOrganization value within ResourceShareConfiguration that is set on resource share",
+        "type": "Bool"
       },
       {
         "name": "ram:ShareOwnerAccountId",

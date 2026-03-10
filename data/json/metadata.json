@@ -6444,9 +6444,10 @@
       "name": "Amazon Cognito User Pools",
       "servicePrefix": "cognito-idp",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncognitouserpools.html",
-      "actionsCount": 118,
+      "actionsCount": 121,
       "actions": [
         "AddCustomAttributes",
+        "AddUserPoolClientSecret",
         "AdminAddUserToGroup",
         "AdminConfirmSignUp",
         "AdminCreateUser",
@@ -6497,6 +6498,7 @@
         "DeleteUserAttributes",
         "DeleteUserPool",
         "DeleteUserPoolClient",
+        "DeleteUserPoolClientSecret",
         "DeleteUserPoolDomain",
         "DescribeIdentityProvider",
         "DescribeManagedLoginBranding",
@@ -6533,6 +6535,7 @@
         "ListTagsForResource",
         "ListTerms",
         "ListUserImportJobs",
+        "ListUserPoolClientSecrets",
         "ListUserPoolClients",
         "ListUserPools",
         "ListUsers",
@@ -21323,7 +21326,7 @@
       "name": "Amazon OpenSearch Service",
       "servicePrefix": "es",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchservice.html",
-      "actionsCount": 114,
+      "actionsCount": 116,
       "actions": [
         "AcceptInboundConnection",
         "AcceptInboundCrossClusterSearchConnection",
@@ -21424,6 +21427,8 @@
         "RejectInboundCrossClusterSearchConnection",
         "RemoveTags",
         "RevokeVpcEndpointAccess",
+        "RollbackElasticsearchServiceSoftwareUpdate",
+        "RollbackServiceSoftwareUpdate",
         "StartDomainMaintenance",
         "StartElasticsearchServiceSoftwareUpdate",
         "StartServiceSoftwareUpdate",
@@ -24523,7 +24528,7 @@
       "name": "AWS Resource Access Manager (RAM)",
       "servicePrefix": "ram",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsresourceaccessmanagerram.html",
-      "actionsCount": 34,
+      "actionsCount": 35,
       "actions": [
         "AcceptResourceShareInvitation",
         "AssociateResourceShare",
@@ -24551,6 +24556,7 @@
         "ListResourceSharePermissions",
         "ListResourceTypes",
         "ListResources",
+        "ListSourceAssociations",
         "PromotePermissionCreatedFromPolicy",
         "PromoteResourceShareCreatedFromPolicy",
         "RejectResourceShareInvitation",
@@ -24567,7 +24573,7 @@
         "permission",
         "customer-managed-permission"
       ],
-      "conditionKeysCount": 13,
+      "conditionKeysCount": 14,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -24581,6 +24587,7 @@
         "ram:ResourceArn",
         "ram:ResourceShareName",
         "ram:ResourceTag/${TagKey}",
+        "ram:RetainSharingOnAccountLeaveOrganization",
         "ram:ShareOwnerAccountId"
       ]
     },
