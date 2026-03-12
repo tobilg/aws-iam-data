@@ -116988,6 +116988,21 @@
         ]
       },
       {
+        "name": "GetNotebookExport",
+        "apiReferenceUrl": "${APIReferenceDocPage}API_GetNotebookExport.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get notebook exports",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetProject",
         "apiReferenceUrl": "${APIReferenceDocPage}API_GetProject.html",
         "permissionOnly": false,
@@ -118177,6 +118192,36 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_StartNotebookCompute.html",
         "permissionOnly": false,
         "description": "Grants permission to start notebook compute",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StartNotebookExport",
+        "apiReferenceUrl": "${APIReferenceDocPage}API_StartNotebookExport.html",
+        "permissionOnly": false,
+        "description": "Grants permission to export notebooks",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StartNotebookImport",
+        "apiReferenceUrl": "${APIReferenceDocPage}API_StartNotebookImport.html",
+        "permissionOnly": false,
+        "description": "Grants permission to import notebooks",
         "accessLevel": "Write",
         "resourceTypes": [
           {
