@@ -104590,7 +104590,7 @@
     "actions": [
       {
         "name": "ActivateSubscription",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/API_ActivateSubscription.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_ActivateSubscription.html",
         "permissionOnly": false,
         "description": "Grants permission to activate a subscription to enable billing for a user",
         "accessLevel": "Write",
@@ -104611,7 +104611,7 @@
       },
       {
         "name": "CancelAppointment",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to cancel an appointment",
         "accessLevel": "Write",
@@ -104632,7 +104632,7 @@
       },
       {
         "name": "CreateAgent",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to create a new agent with an initial version in DRAFT state",
         "accessLevel": "Write",
@@ -104653,7 +104653,7 @@
       },
       {
         "name": "CreateDomain",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_CreateDomain.html",
         "permissionOnly": false,
         "description": "Grants permission to create a new domain for managing HealthAgent resources",
         "accessLevel": "Write",
@@ -104674,7 +104674,7 @@
       },
       {
         "name": "CreateIntegration",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to create a new integration for a domain",
         "accessLevel": "Write",
@@ -104695,7 +104695,7 @@
       },
       {
         "name": "CreateSession",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to create a new session with specified agent configurations",
         "accessLevel": "Write",
@@ -104722,7 +104722,7 @@
       },
       {
         "name": "CreateSubscription",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_CreateSubscription.html",
         "permissionOnly": false,
         "description": "Grants permission to create a new subscription within a domain for billing and user management",
         "accessLevel": "Write",
@@ -104743,7 +104743,7 @@
       },
       {
         "name": "DeactivateSubscription",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/API_DeactivateSubscription.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_DeactivateSubscription.html",
         "permissionOnly": false,
         "description": "Grants permission to deactivate a subscription to stop billing for a user",
         "accessLevel": "Write",
@@ -104764,8 +104764,8 @@
       },
       {
         "name": "DeleteAgent",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/API_DeleteAgent.html",
-        "permissionOnly": false,
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
+        "permissionOnly": true,
         "description": "Grants permission to delete an agent configuration and all its versions",
         "accessLevel": "Write",
         "resourceTypes": [
@@ -104785,7 +104785,7 @@
       },
       {
         "name": "DeleteDomain",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/API_DeleteDomain.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_DeleteDomain.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a domain and all associated resources",
         "accessLevel": "Write",
@@ -104800,7 +104800,7 @@
       },
       {
         "name": "DeleteIntegration",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to delete an integration",
         "accessLevel": "Write",
@@ -104821,7 +104821,7 @@
       },
       {
         "name": "GetAgent",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to retrieve an agent configuration, defaulting to the most recent version if not specified",
         "accessLevel": "Read",
@@ -104842,7 +104842,7 @@
       },
       {
         "name": "GetCareTeamProvider",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to retrieve the care team provider of a patient",
         "accessLevel": "Read",
@@ -104863,7 +104863,7 @@
       },
       {
         "name": "GetDomain",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_GetDomain.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve information about a domain",
         "accessLevel": "Read",
@@ -104878,7 +104878,7 @@
       },
       {
         "name": "GetIntegration",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to get an existing integration",
         "accessLevel": "Read",
@@ -104899,7 +104899,7 @@
       },
       {
         "name": "GetMedicalScribeListeningSession",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/API_GetMedicalScribeListeningSession.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_GetMedicalScribeListeningSession.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve details about an existing Medical Scribe listening session",
         "accessLevel": "Read",
@@ -104920,7 +104920,7 @@
       },
       {
         "name": "GetPatient",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to retrieve patient information",
         "accessLevel": "Read",
@@ -104941,7 +104941,7 @@
       },
       {
         "name": "GetPatientInsightsJob",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_GetPatientInsightsJob.html",
         "permissionOnly": false,
         "description": "Grants permission to get details of a started patient insights job",
         "accessLevel": "Read",
@@ -104962,7 +104962,7 @@
       },
       {
         "name": "GetPractitioner",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to retrieve practitioner information",
         "accessLevel": "Read",
@@ -104983,7 +104983,7 @@
       },
       {
         "name": "GetSessionContext",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to retrieve structured session context including attributes and collected data",
         "accessLevel": "Read",
@@ -105004,7 +105004,7 @@
       },
       {
         "name": "GetSubscription",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_GetSubscription.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve information about a subscription",
         "accessLevel": "Read",
@@ -105025,7 +105025,7 @@
       },
       {
         "name": "InvokeAgent",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to invoke an agent within a session with streaming response support",
         "accessLevel": "Write",
@@ -105046,7 +105046,7 @@
       },
       {
         "name": "ListAgents",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to list all agents in a domain",
         "accessLevel": "List",
@@ -105061,7 +105061,7 @@
       },
       {
         "name": "ListAppointmentSlots",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to list available appointment slots",
         "accessLevel": "Read",
@@ -105082,7 +105082,7 @@
       },
       {
         "name": "ListDomains",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_ListDomains.html",
         "permissionOnly": false,
         "description": "Grants permission to list domains for a given account",
         "accessLevel": "List",
@@ -105097,7 +105097,7 @@
       },
       {
         "name": "ListIntegrations",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to list integrations for a domain",
         "accessLevel": "List",
@@ -105112,7 +105112,7 @@
       },
       {
         "name": "ListPatientAppointments",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to list patient appointments",
         "accessLevel": "Read",
@@ -105133,7 +105133,7 @@
       },
       {
         "name": "ListPatientInsuranceCoverages",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to list patient insurance coverages",
         "accessLevel": "Read",
@@ -105154,7 +105154,7 @@
       },
       {
         "name": "ListProviders",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to retrieve active providers available for scheduling appointments with a patient",
         "accessLevel": "Read",
@@ -105175,7 +105175,7 @@
       },
       {
         "name": "ListSubscriptions",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_ListSubscriptions.html",
         "permissionOnly": false,
         "description": "Grants permission to list all subscriptions within a domain",
         "accessLevel": "List",
@@ -105190,7 +105190,7 @@
       },
       {
         "name": "ListTagsForResource",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/API_ListTagsForResource.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_ListTagsForResource.html",
         "permissionOnly": false,
         "description": "Grants permission to list the tags for the specified resource",
         "accessLevel": "List",
@@ -105205,7 +105205,7 @@
       },
       {
         "name": "MatchPatient",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to match a patient",
         "accessLevel": "Read",
@@ -105226,7 +105226,7 @@
       },
       {
         "name": "PublishAgent",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to publish an agent configuration version",
         "accessLevel": "Write",
@@ -105247,7 +105247,7 @@
       },
       {
         "name": "RescheduleAppointment",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to reschedule an appointment",
         "accessLevel": "Write",
@@ -105268,7 +105268,7 @@
       },
       {
         "name": "ScheduleAppointment",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to schedule an appointment for a patient",
         "accessLevel": "Write",
@@ -105289,7 +105289,7 @@
       },
       {
         "name": "StartMedicalScribeListeningSession",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/API_StartMedicalScribeListeningSession.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_StartMedicalScribeListeningSession.html",
         "permissionOnly": false,
         "description": "Grants permission to start a new Medical Scribe listening session for real-time audio transcription",
         "accessLevel": "Write",
@@ -105310,7 +105310,7 @@
       },
       {
         "name": "StartPatientInsightsJob",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_StartPatientInsightsJob.html",
         "permissionOnly": false,
         "description": "Grants permission to start a new patient insights job",
         "accessLevel": "Write",
@@ -105331,7 +105331,7 @@
       },
       {
         "name": "TagResource",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/API_TagResource.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_TagResource.html",
         "permissionOnly": false,
         "description": "Grants permission to add the specified tags to the specified resource",
         "accessLevel": "Tagging",
@@ -105357,7 +105357,7 @@
       },
       {
         "name": "UntagResource",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/API_UntagResource.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_UntagResource.html",
         "permissionOnly": false,
         "description": "Grants permission to remove the tags identified by the TagKeys list from a resource",
         "accessLevel": "Tagging",
@@ -105380,7 +105380,7 @@
       },
       {
         "name": "UpdateAgent",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to update a draft agent configuration, creating a new draft version if none exists",
         "accessLevel": "Write",
@@ -105401,7 +105401,7 @@
       },
       {
         "name": "UpdateIntegration",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to update an existing integration",
         "accessLevel": "Write",
@@ -105422,7 +105422,7 @@
       },
       {
         "name": "UpdateSession",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
         "description": "Grants permission to update session attributes such as departmentId and appointmentType",
         "accessLevel": "Write",
@@ -105445,7 +105445,7 @@
     "resourceTypes": [
       {
         "name": "Domain",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/Domain.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/setting-up.html#setting-up-create-domain",
         "arnPattern": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -105453,33 +105453,43 @@
       },
       {
         "name": "PatientInsightsJob",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/PatientInsightsJob.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-insights.html",
         "arnPattern": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/patient-insights-job/${JobId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "Subscription",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/Subscription.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/ambient-documentation.html#al-subscription-management",
         "arnPattern": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/subscription/${SubscriptionId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "Integration",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/Integration.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/configuring-testing-pe-agents.html",
         "arnPattern": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/integration/${IntegrationId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "Agent",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/Agent.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/agent-customization.html",
         "arnPattern": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/agent/${AgentId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "Session",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/api/Session.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "arnPattern": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/session/${SessionId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -310920,6 +310930,23 @@
             "dependentActions": []
           }
         ]
+      },
+      {
+        "name": "UseSession",
+        "apiReferenceUrl": "${UserGuideDocPage}controlling-access-in-aws-partner-central.html",
+        "permissionOnly": true,
+        "description": "Grants permission to use Partner Central Agents sessions in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
       }
     ],
     "resourceTypes": [
@@ -356878,6 +356905,7 @@
               "s3:x-amz-grant-read-acp",
               "s3:x-amz-grant-write",
               "s3:x-amz-grant-write-acp",
+              "s3:x-amz-bucket-namespace",
               "s3:x-amz-object-ownership",
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
@@ -362113,6 +362141,12 @@
         "name": "s3:x-amz-acl",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/acl-overview.html#permissions",
         "description": "Filters access by canned ACL in the request's x-amz-acl header",
+        "type": "String"
+      },
+      {
+        "name": "s3:x-amz-bucket-namespace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/gpbucketnamespaces.html",
+        "description": "Filters access by general purpose bucket namespace type",
         "type": "String"
       },
       {

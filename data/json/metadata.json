@@ -21833,7 +21833,7 @@
       "name": "AWS Partner Central",
       "servicePrefix": "partnercentral",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspartnercentral.html",
-      "actionsCount": 110,
+      "actionsCount": 111,
       "actions": [
         "AcceptChannelHandshake",
         "AcceptConnectionInvitation",
@@ -21944,7 +21944,8 @@
         "UpdateEngagementContext",
         "UpdateOpportunity",
         "UpdateProgramManagementAccount",
-        "UpdateRelationship"
+        "UpdateRelationship",
+        "UseSession"
       ],
       "resourceTypesCount": 20,
       "resourceTypes": [
@@ -25536,7 +25537,7 @@
         "accessgrantslocation",
         "accessgrant"
       ],
-      "conditionKeysCount": 54,
+      "conditionKeysCount": 55,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -25578,6 +25579,7 @@
         "s3:signatureversion",
         "s3:versionid",
         "s3:x-amz-acl",
+        "s3:x-amz-bucket-namespace",
         "s3:x-amz-content-sha256",
         "s3:x-amz-copy-source",
         "s3:x-amz-grant-full-control",
