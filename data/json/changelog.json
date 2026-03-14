@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2026-03-14",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon SimpleDB": [
+        "sdb:GetExport",
+        "sdb:ListExports",
+        "sdb:StartDomainExport"
+      ]
+    },
+    "removedActions": {
+      "Amazon Route 53 Recovery Controls": [
+        "route53-recovery-control-config:DescribeRoutingControlByName"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2026-03-13",
     "addedServices": [],
     "removedServices": [],

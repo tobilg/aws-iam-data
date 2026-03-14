@@ -25027,7 +25027,7 @@
       "name": "Amazon Route 53 Recovery Controls",
       "servicePrefix": "route53-recovery-control-config",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53recoverycontrols.html",
-      "actionsCount": 28,
+      "actionsCount": 27,
       "actions": [
         "CreateCluster",
         "CreateControlPanel",
@@ -25041,7 +25041,6 @@
         "DescribeCluster",
         "DescribeControlPanel",
         "DescribeRoutingControl",
-        "DescribeRoutingControlByName",
         "DescribeSafetyRule",
         "GetResourcePolicy",
         "ListAssociatedRoute53HealthChecks",
@@ -28144,7 +28143,7 @@
       "name": "Amazon SimpleDB",
       "servicePrefix": "sdb",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpledb.html",
-      "actionsCount": 10,
+      "actionsCount": 13,
       "actions": [
         "BatchDeleteAttributes",
         "BatchPutAttributes",
@@ -28153,13 +28152,17 @@
         "DeleteDomain",
         "DomainMetadata",
         "GetAttributes",
+        "GetExport",
         "ListDomains",
+        "ListExports",
         "PutAttributes",
-        "Select"
+        "Select",
+        "StartDomainExport"
       ],
-      "resourceTypesCount": 1,
+      "resourceTypesCount": 2,
       "resourceTypes": [
-        "domain"
+        "domain",
+        "export"
       ],
       "conditionKeysCount": 0,
       "conditionKeys": []
