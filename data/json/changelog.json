@@ -1,5 +1,54 @@
 [
   {
+    "dateOfChange": "2026-03-17",
+    "addedServices": [
+      "AWS Interconnect",
+      "AWS User Experience Customization"
+    ],
+    "removedServices": [
+      "AWS Service for managing AWS Management Console user experience capabilities."
+    ],
+    "addedActions": {
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:InvokeAgentRuntimeCommand"
+      ],
+      "Amazon OpenSearch Service": [
+        "es:GetDefaultApplicationSetting",
+        "es:PutDefaultApplicationSetting"
+      ],
+      "AWS Interconnect": [
+        "interconnect:AcceptConnectionProposal",
+        "interconnect:CreateConnection",
+        "interconnect:DeleteConnection",
+        "interconnect:DescribeConnectionProposal",
+        "interconnect:GetConnection",
+        "interconnect:GetEnvironment",
+        "interconnect:ListAttachPoints",
+        "interconnect:ListConnections",
+        "interconnect:ListEnvironments",
+        "interconnect:ListTagsForResource",
+        "interconnect:TagResource",
+        "interconnect:UntagResource",
+        "interconnect:UpdateConnection"
+      ],
+      "AWS User Experience Customization": [
+        "uxc:DeleteAccountColor",
+        "uxc:GetAccountColor",
+        "uxc:GetAccountCustomizations",
+        "uxc:ListServices",
+        "uxc:PutAccountColor",
+        "uxc:UpdateAccountCustomizations"
+      ]
+    },
+    "removedActions": {
+      "AWS Service for managing AWS Management Console user experience capabilities.": [
+        "uxc:DeleteAccountColor",
+        "uxc:GetAccountColor",
+        "uxc:PutAccountColor"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2026-03-14",
     "addedServices": [],
     "removedServices": [],

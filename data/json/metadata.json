@@ -1,5 +1,5 @@
 {
-  "serviceCount": 464,
+  "serviceCount": 465,
   "services": [
     {
       "name": "AWS Account Management",
@@ -2756,7 +2756,7 @@
       "name": "Amazon Bedrock Agentcore",
       "servicePrefix": "bedrock-agentcore",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockagentcore.html",
-      "actionsCount": 133,
+      "actionsCount": 134,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "AuthorizeAction",
@@ -2830,6 +2830,7 @@
         "GetWorkloadAccessTokenForUserId",
         "GetWorkloadIdentity",
         "InvokeAgentRuntime",
+        "InvokeAgentRuntimeCommand",
         "InvokeAgentRuntimeForUser",
         "InvokeAgentRuntimeWithWebSocketStream",
         "InvokeAgentRuntimeWithWebSocketStreamForUser",
@@ -11253,7 +11254,7 @@
         "capacity-provider",
         "task-set"
       ],
-      "conditionKeysCount": 27,
+      "conditionKeysCount": 28,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -11273,6 +11274,7 @@
         "ecs:enable-service-connect",
         "ecs:enable-vpc-lattice",
         "ecs:fargate-ephemeral-storage-kms-key",
+        "ecs:instance-metadata-tags-propagation",
         "ecs:namespace",
         "ecs:privileged",
         "ecs:propagate-tags",
@@ -15967,6 +15969,38 @@
       "resourceTypes": [
         "Room",
         "Logging-Configuration"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "AWS Interconnect",
+      "servicePrefix": "interconnect",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsinterconnect.html",
+      "actionsCount": 13,
+      "actions": [
+        "AcceptConnectionProposal",
+        "CreateConnection",
+        "DeleteConnection",
+        "DescribeConnectionProposal",
+        "GetConnection",
+        "GetEnvironment",
+        "ListAttachPoints",
+        "ListConnections",
+        "ListEnvironments",
+        "ListTagsForResource",
+        "TagResource",
+        "UntagResource",
+        "UpdateConnection"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "connection",
+        "environment"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -21329,7 +21363,7 @@
       "name": "Amazon OpenSearch Service",
       "servicePrefix": "es",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchservice.html",
-      "actionsCount": 116,
+      "actionsCount": 118,
       "actions": [
         "AcceptInboundConnection",
         "AcceptInboundCrossClusterSearchConnection",
@@ -21401,6 +21435,7 @@
         "GetCompatibleElasticsearchVersions",
         "GetCompatibleVersions",
         "GetDataSource",
+        "GetDefaultApplicationSetting",
         "GetDirectQueryDataSource",
         "GetDomainMaintenanceStatus",
         "GetIndex",
@@ -21426,6 +21461,7 @@
         "ListVpcEndpointsForDomain",
         "PurchaseReservedElasticsearchInstanceOffering",
         "PurchaseReservedInstanceOffering",
+        "PutDefaultApplicationSetting",
         "RejectInboundConnection",
         "RejectInboundCrossClusterSearchConnection",
         "RemoveTags",
@@ -27476,21 +27512,6 @@
       "conditionKeys": []
     },
     {
-      "name": "AWS Service for managing AWS Management Console user experience capabilities.",
-      "servicePrefix": "uxc",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceformanagingawsconsoleuserexperiencecapabilities..html",
-      "actionsCount": 3,
-      "actions": [
-        "DeleteAccountColor",
-        "GetAccountColor",
-        "PutAccountColor"
-      ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
-    },
-    {
       "name": "AWS service providing managed private networks",
       "servicePrefix": "private-networks",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceprovidingmanagedprivatenetworks.html",
@@ -29874,6 +29895,24 @@
       "conditionKeys": []
     },
     {
+      "name": "AWS User Experience Customization",
+      "servicePrefix": "uxc",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsuserexperiencecustomization.html",
+      "actionsCount": 6,
+      "actions": [
+        "DeleteAccountColor",
+        "GetAccountColor",
+        "GetAccountCustomizations",
+        "ListServices",
+        "PutAccountColor",
+        "UpdateAccountCustomizations"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
       "name": "AWS User Notifications",
       "servicePrefix": "notifications",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsusernotifications.html",
@@ -30141,12 +30180,13 @@
         "ServiceNetworkVpcAssociation",
         "TargetGroup"
       ],
-      "conditionKeysCount": 15,
+      "conditionKeysCount": 16,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "vpc-lattice:AuthType",
+        "vpc-lattice:CreateAction",
         "vpc-lattice:DomainName",
         "vpc-lattice:PrivateDnsPreference",
         "vpc-lattice:PrivateDnsSpecifiedDomains",

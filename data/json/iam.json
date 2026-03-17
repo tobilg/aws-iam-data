@@ -38243,6 +38243,27 @@
         ]
       },
       {
+        "name": "InvokeAgentRuntimeCommand",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_InvokeAgentRuntimeCommand.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke commands on an agent runtime endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runtime",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "runtime-endpoint",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "InvokeAgentRuntimeForUser",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_InvokeAgentRuntime.html",
         "permissionOnly": false,
@@ -165754,6 +165775,7 @@
             "required": false,
             "conditionKeys": [
               "ecs:propagate-tags",
+              "ecs:instance-metadata-tags-propagation",
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
@@ -167139,6 +167161,7 @@
             "required": false,
             "conditionKeys": [
               "ecs:propagate-tags",
+              "ecs:instance-metadata-tags-propagation",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -167570,6 +167593,12 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
         "description": "Filters access by the AWS KMS key id provided in the request",
         "type": "String"
+      },
+      {
+        "name": "ecs:instance-metadata-tags-propagation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "description": "Filters access by the instance metadata tags propagation setting of your Amazon ECS capacity provider",
+        "type": "Bool"
       },
       {
         "name": "ecs:namespace",
@@ -233875,6 +233904,273 @@
         "name": "aws:TagKeys",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
         "description": "Filters access by the tag keys that are passed in the request",
+        "type": "ArrayOfString"
+      }
+    ]
+  },
+  {
+    "name": "AWS Interconnect",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsinterconnect.html",
+    "servicePrefix": "interconnect",
+    "actions": [
+      {
+        "name": "AcceptConnectionProposal",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/API_AcceptConnectionProposal.html",
+        "permissionOnly": false,
+        "description": "Grants permission to accept a connection proposal generated elsewhere",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/API_CreateConnection.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "connection",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/API_DeleteConnection.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an existing connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "connection",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeConnectionProposal",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/API_DescribeConnectionProposal.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe a connection proposal",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/API_GetConnection.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe a connection",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "connection",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetEnvironment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/API_GetEnvironment.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe an environment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAttachPoints",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/API_ListAttachPoints.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list available attach points",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListConnections",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/API_ListConnections.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list connections",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListEnvironments",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/API_ListEnvironments.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list available environments",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListTagsForResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/API_ListTagsForResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list tags on a resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "TagResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/API_TagResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to apply tags to a resource",
+        "accessLevel": "Tagging",
+        "resourceTypes": [
+          {
+            "resourceType": "connection",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UntagResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/API_UntagResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to remove tags from a resource",
+        "accessLevel": "Tagging",
+        "resourceTypes": [
+          {
+            "resourceType": "connection",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/API_UpdateConnection.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an existing connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "connection",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "connection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/Connection.html",
+        "arnPattern": "arn:${Partition}:interconnect:${Region}:${Account}:connection/${Id}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "environment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/interconnect/latest/api/Environment.html",
+        "arnPattern": "arn:${Partition}:interconnect:${Region}:${Account}:environment/${Id}",
+        "conditionKeys": []
+      }
+    ],
+    "conditionKeys": [
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "description": "Filters access by a tag key and value pair that is allowed in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "description": "Filters access by a tag key and value pair of a resource",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "description": "Filters access by a list of tag keys that are allowed in the request",
         "type": "ArrayOfString"
       }
     ]
@@ -302900,6 +303196,21 @@
         ]
       },
       {
+        "name": "GetDefaultApplicationSetting",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_GetDefaultApplicationSetting.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get the default application setting for OpenSearch Service",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "application",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetDirectQueryDataSource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_GetDirectQueryDataSource.html",
         "permissionOnly": false,
@@ -303281,6 +303592,21 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PutDefaultApplicationSetting",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_PutDefaultApplicationSetting.html",
+        "permissionOnly": false,
+        "description": "Grants permission to set or remove the default application setting for OpenSearch Service",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "application",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -389247,60 +389573,6 @@
     "conditionKeys": []
   },
   {
-    "name": "AWS Service for managing AWS Management Console user experience capabilities.",
-    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceformanagingawsconsoleuserexperiencecapabilities..html",
-    "servicePrefix": "uxc",
-    "actions": [
-      {
-        "name": "DeleteAccountColor",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/DeleteAccountColor.html",
-        "permissionOnly": false,
-        "description": "Grants permission to delete the color associated with the account",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "GetAccountColor",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/GetAccountColor.html",
-        "permissionOnly": false,
-        "description": "Grants permission to get the color associated with the account",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "PutAccountColor",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/PutAccountColor.html",
-        "permissionOnly": false,
-        "description": "Grants permission to sets the color associated with an account",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      }
-    ],
-    "resourceTypes": [],
-    "conditionKeys": []
-  },
-  {
     "name": "AWS service providing managed private networks",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsserviceprovidingmanagedprivatenetworks.html",
     "servicePrefix": "private-networks",
@@ -419949,6 +420221,105 @@
     "conditionKeys": []
   },
   {
+    "name": "AWS User Experience Customization",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsuserexperiencecustomization.html",
+    "servicePrefix": "uxc",
+    "actions": [
+      {
+        "name": "DeleteAccountColor",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/DeleteAccountColor.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete account color setting",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetAccountColor",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/GetAccountColor.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve account color for given account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetAccountCustomizations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/API_GetAccountCustomizations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve account customizations",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListServices",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/API_ListServices.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list available services",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PutAccountColor",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/PutAccountColor.html",
+        "permissionOnly": false,
+        "description": "Grants permission to set account color",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateAccountCustomizations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/API_UpdateAccountCustomizations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update account customizations",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      }
+    ],
+    "resourceTypes": [],
+    "conditionKeys": []
+  },
+  {
     "name": "AWS User Notifications",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsusernotifications.html",
     "servicePrefix": "notifications",
@@ -421534,7 +421905,8 @@
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "vpc-lattice:CreateAction"
             ],
             "dependentActions": []
           }
@@ -421560,7 +421932,8 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
               "vpc-lattice:Protocol",
-              "vpc-lattice:TargetGroupArns"
+              "vpc-lattice:TargetGroupArns",
+              "vpc-lattice:CreateAction"
             ],
             "dependentActions": []
           }
@@ -421596,7 +421969,8 @@
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "vpc-lattice:CreateAction"
             ],
             "dependentActions": []
           }
@@ -421625,7 +421999,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
-              "vpc-lattice:VpcId"
+              "vpc-lattice:VpcId",
+              "vpc-lattice:CreateAction"
             ],
             "dependentActions": []
           }
@@ -421650,7 +422025,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
-              "vpc-lattice:TargetGroupArns"
+              "vpc-lattice:TargetGroupArns",
+              "vpc-lattice:CreateAction"
             ],
             "dependentActions": []
           }
@@ -421677,7 +422053,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
-              "vpc-lattice:AuthType"
+              "vpc-lattice:AuthType",
+              "vpc-lattice:CreateAction"
             ],
             "dependentActions": []
           }
@@ -421704,7 +422081,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
-              "vpc-lattice:AuthType"
+              "vpc-lattice:AuthType",
+              "vpc-lattice:CreateAction"
             ],
             "dependentActions": []
           }
@@ -421742,7 +422120,8 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
               "vpc-lattice:ResourceConfigurationArn",
-              "vpc-lattice:ServiceNetworkArn"
+              "vpc-lattice:ServiceNetworkArn",
+              "vpc-lattice:CreateAction"
             ],
             "dependentActions": []
           }
@@ -421780,7 +422159,8 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
               "vpc-lattice:ServiceArn",
-              "vpc-lattice:ServiceNetworkArn"
+              "vpc-lattice:ServiceNetworkArn",
+              "vpc-lattice:CreateAction"
             ],
             "dependentActions": []
           }
@@ -421817,7 +422197,8 @@
               "vpc-lattice:PrivateDnsSpecifiedDomains",
               "vpc-lattice:SecurityGroupIds",
               "vpc-lattice:ServiceNetworkArn",
-              "vpc-lattice:VpcId"
+              "vpc-lattice:VpcId",
+              "vpc-lattice:CreateAction"
             ],
             "dependentActions": []
           }
@@ -421859,7 +422240,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
-              "vpc-lattice:VpcId"
+              "vpc-lattice:VpcId",
+              "vpc-lattice:CreateAction"
             ],
             "dependentActions": []
           }
@@ -422895,7 +423277,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
-              "vpc-lattice:DomainName"
+              "vpc-lattice:DomainName",
+              "vpc-lattice:CreateAction"
             ],
             "dependentActions": []
           }
@@ -423324,7 +423707,8 @@
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
+          "aws:TagKeys",
+          "vpc-lattice:CreateAction"
         ]
       },
       {
@@ -423335,6 +423719,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys",
+          "vpc-lattice:CreateAction",
           "vpc-lattice:DomainName"
         ]
       },
@@ -423346,6 +423731,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys",
+          "vpc-lattice:CreateAction",
           "vpc-lattice:Protocol",
           "vpc-lattice:TargetGroupArns"
         ]
@@ -423357,7 +423743,8 @@
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
-          "aws:TagKeys"
+          "aws:TagKeys",
+          "vpc-lattice:CreateAction"
         ]
       },
       {
@@ -423380,6 +423767,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys",
+          "vpc-lattice:CreateAction",
           "vpc-lattice:VpcId"
         ]
       },
@@ -423391,6 +423779,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys",
+          "vpc-lattice:CreateAction",
           "vpc-lattice:TargetGroupArns"
         ]
       },
@@ -423402,7 +423791,8 @@
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys",
-          "vpc-lattice:AuthType"
+          "vpc-lattice:AuthType",
+          "vpc-lattice:CreateAction"
         ]
       },
       {
@@ -423413,7 +423803,8 @@
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys",
-          "vpc-lattice:AuthType"
+          "vpc-lattice:AuthType",
+          "vpc-lattice:CreateAction"
         ]
       },
       {
@@ -423424,6 +423815,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys",
+          "vpc-lattice:CreateAction",
           "vpc-lattice:ResourceConfigurationArn",
           "vpc-lattice:ServiceNetworkArn"
         ]
@@ -423436,6 +423828,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys",
+          "vpc-lattice:CreateAction",
           "vpc-lattice:ServiceArn",
           "vpc-lattice:ServiceNetworkArn"
         ]
@@ -423448,6 +423841,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys",
+          "vpc-lattice:CreateAction",
           "vpc-lattice:PrivateDnsPreference",
           "vpc-lattice:PrivateDnsSpecifiedDomains",
           "vpc-lattice:SecurityGroupIds",
@@ -423463,6 +423857,7 @@
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys",
+          "vpc-lattice:CreateAction",
           "vpc-lattice:VpcId"
         ]
       }
@@ -423490,6 +423885,12 @@
         "name": "vpc-lattice:AuthType",
         "apiReferenceUrl": "https://docs.aws.amazon.com/vpc-lattice/latest/ug/",
         "description": "Filters access by the auth type specified in the request",
+        "type": "String"
+      },
+      {
+        "name": "vpc-lattice:CreateAction",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/vpc-lattice/latest/ug/",
+        "description": "Filters access by the name of a resource-creating API action",
         "type": "String"
       },
       {
