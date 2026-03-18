@@ -284239,13 +284239,13 @@
       },
       {
         "name": "DescribeAssessment",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/userguide/detailed-management-portal-permissions.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_DescribeAssessment.html",
         "permissionOnly": false,
         "description": "Grants permission to return the details of an existing assessment",
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "Assessment",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -284299,7 +284299,7 @@
       },
       {
         "name": "ListAssessments",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/userguide/detailed-management-portal-permissions.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_ListAssessments.html",
         "permissionOnly": false,
         "description": "Grants permission to list existing assessments",
         "accessLevel": "List",
@@ -284482,6 +284482,12 @@
           "aws:ResourceTag/${TagKey}",
           "catalog:ChangeType"
         ]
+      },
+      {
+        "name": "Assessment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_DescribeAssessment.html#API_DescribeAssessment_ResponseSyntax",
+        "arnPattern": "arn:${Partition}:aws-marketplace:${Region}::${Catalog}/Assessment/${ResourceId}",
+        "conditionKeys": []
       }
     ],
     "conditionKeys": [
