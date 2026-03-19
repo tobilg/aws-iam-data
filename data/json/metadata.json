@@ -14729,11 +14729,13 @@
         "datastore",
         "imageset"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "medical-imaging:SeriesInstanceUID",
+        "medical-imaging:StudyInstanceUID"
       ]
     },
     {
@@ -26899,10 +26901,11 @@
       "name": "AWS Security Hub",
       "servicePrefix": "securityhub",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecurityhub.html",
-      "actionsCount": 114,
+      "actionsCount": 115,
       "actions": [
         "AcceptAdministratorInvitation",
         "AcceptInvitation",
+        "AllowVendedLogDeliveryForResource",
         "BatchDeleteAutomationRules",
         "BatchDisableStandards",
         "BatchEnableStandards",

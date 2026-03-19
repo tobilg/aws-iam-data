@@ -216693,6 +216693,15 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "medical-imaging:StudyInstanceUID",
+              "medical-imaging:SeriesInstanceUID"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -216723,6 +216732,15 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "medical-imaging:StudyInstanceUID",
+              "medical-imaging:SeriesInstanceUID"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -216737,6 +216755,15 @@
             "resourceType": "datastore",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "medical-imaging:StudyInstanceUID",
+              "medical-imaging:SeriesInstanceUID"
+            ],
             "dependentActions": []
           }
         ]
@@ -216753,6 +216780,15 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "medical-imaging:StudyInstanceUID",
+              "medical-imaging:SeriesInstanceUID"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -216767,6 +216803,15 @@
             "resourceType": "datastore",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "medical-imaging:StudyInstanceUID",
+              "medical-imaging:SeriesInstanceUID"
+            ],
             "dependentActions": []
           }
         ]
@@ -216933,6 +216978,15 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "medical-imaging:StudyInstanceUID",
+              "medical-imaging:SeriesInstanceUID"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -216947,6 +217001,14 @@
             "resourceType": "datastore",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "medical-imaging:StudyInstanceUID"
+            ],
             "dependentActions": []
           }
         ]
@@ -217022,6 +217084,14 @@
             "resourceType": "datastore",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "medical-imaging:StudyInstanceUID"
+            ],
             "dependentActions": []
           }
         ]
@@ -217144,6 +217214,18 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
         "description": "Filters access by a list of tag keys that are allowed in the request",
         "type": "ArrayOfString"
+      },
+      {
+        "name": "medical-imaging:SeriesInstanceUID",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthimaging.html#awshealthimaging-policy-keys",
+        "description": "Filters access by the SeriesInstanceUID parameter in the request",
+        "type": "String"
+      },
+      {
+        "name": "medical-imaging:StudyInstanceUID",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awshealthimaging.html#awshealthimaging-policy-keys",
+        "description": "Filters access by the StudyInstanceUID parameter in the request",
+        "type": "String"
       }
     ]
   },
@@ -381639,6 +381721,27 @@
         ]
       },
       {
+        "name": "AllowVendedLogDeliveryForResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_AllowVendedLogDeliveryForResource.html",
+        "permissionOnly": true,
+        "description": "Grants permission to log delivery for resources",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "hub",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "hubv2",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "BatchDeleteAutomationRules",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/latest/userguide/automation-rules",
         "permissionOnly": false,
@@ -383180,7 +383283,7 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "configuration-policy",
+            "resourceType": "hub",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -383195,7 +383298,7 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "configuration-policy",
+            "resourceType": "hub",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
