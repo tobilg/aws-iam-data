@@ -1,5 +1,46 @@
 [
   {
+    "dateOfChange": "2026-03-21",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Batch": [
+        "batch:CreateQuotaShare",
+        "batch:DeleteQuotaShare",
+        "batch:DescribeQuotaShare",
+        "batch:ListQuotaShares",
+        "batch:UpdateQuotaShare",
+        "batch:UpdateServiceJob"
+      ],
+      "AWS DevOps Agent Service": [
+        "aidevops:GetOperatorApp",
+        "aidevops:ListTagsForResource",
+        "aidevops:SendMessage",
+        "aidevops:TagResource",
+        "aidevops:UntagResource",
+        "aidevops:UpdateOperatorAppIdpConfig",
+        "aidevops:ValidateAwsAssociations"
+      ]
+    },
+    "removedActions": {
+      "AWS DevOps Agent Service": [
+        "aidevops:CreateKnowledgeItem",
+        "aidevops:CreateOneTimeLoginSession",
+        "aidevops:DeleteKnowledgeItem",
+        "aidevops:DiscoverTopology",
+        "aidevops:GetKnowledgeItem",
+        "aidevops:GetOperatorAppTeams",
+        "aidevops:HandleServiceRegistrationCallback",
+        "aidevops:InitiateServiceRegistration",
+        "aidevops:ListKnowledgeItems",
+        "aidevops:SendChatMessage",
+        "aidevops:StreamMessage",
+        "aidevops:UpdateKnowledgeItem",
+        "aidevops:UpdateOperatorAppTeams"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2026-03-19",
     "addedServices": [],
     "removedServices": [],

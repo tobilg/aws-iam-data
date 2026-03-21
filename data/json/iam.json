@@ -30789,6 +30789,36 @@
         ]
       },
       {
+        "name": "CreateQuotaShare",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/APIReference/API_CreateQuotaShare.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an AWS Batch quota share in your account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "job-queue",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "quota-share",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateSchedulingPolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/APIReference/API_CreateSchedulingPolicy.html",
         "permissionOnly": false,
@@ -30877,6 +30907,21 @@
         "resourceTypes": [
           {
             "resourceType": "job-queue",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteQuotaShare",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/APIReference/API_DeleteQuotaShare.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an AWS Batch quota share in your account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "quota-share",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -31004,6 +31049,21 @@
         ]
       },
       {
+        "name": "DescribeQuotaShare",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/APIReference/API_DescribeQuotaShare.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe an AWS Batch quota share in your account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "quota-share",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DescribeSchedulingPolicies",
         "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/APIReference/API_DescribeSchedulingPolicies.html",
         "permissionOnly": false,
@@ -31109,6 +31169,21 @@
         ]
       },
       {
+        "name": "ListQuotaShares",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/APIReference/API_ListQuotaShares.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list AWS Batch quota shares in your account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "job-queue",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListSchedulingPolicies",
         "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/APIReference/API_ListSchedulingPolicies.html",
         "permissionOnly": false,
@@ -31171,6 +31246,12 @@
           },
           {
             "resourceType": "job-queue",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "quota-share",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -31315,11 +31396,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "quota-share",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "batch:SchedulingPriority"
             ],
             "dependentActions": []
           }
@@ -31358,6 +31446,12 @@
           },
           {
             "resourceType": "job-queue",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "quota-share",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -31459,6 +31553,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "quota-share",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "scheduling-policy",
             "required": false,
             "conditionKeys": [],
@@ -31544,6 +31644,21 @@
         ]
       },
       {
+        "name": "UpdateQuotaShare",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateQuotaShare.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an AWS Batch quota share in your account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "quota-share",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateSchedulingPolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateSchedulingPolicy.html",
         "permissionOnly": false,
@@ -31569,6 +31684,29 @@
             "resourceType": "service-environment",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateServiceJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/APIReference/API_UpdateServiceJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a service job in an AWS Batch job queue in your account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "batch:SchedulingPriority"
+            ],
             "dependentActions": []
           }
         ]
@@ -31641,6 +31779,14 @@
         "name": "consumable-resource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/userguide/resource-aware-scheduling.html",
         "arnPattern": "arn:${Partition}:batch:${Region}:${Account}:consumable-resource/${ConsumableResourceName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "quota-share",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/userguide/quota-share.html",
+        "arnPattern": "arn:${Partition}:batch:${Region}:${Account}:job-queue/${JobQueueName}/quota-share/${QuotaShareName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -31742,6 +31888,12 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
         "description": "Filters access by the specified privileged parameter value that determines whether the container is given elevated privileges on the host container instance (similar to the root user)",
         "type": "Bool"
+      },
+      {
+        "name": "batch:SchedulingPriority",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbatch.html#awsbatch-policy-keys",
+        "description": "Filters access by the scheduling priority for jobs in the job queue",
+        "type": "Numeric"
       },
       {
         "name": "batch:ShareIdentifier",
@@ -123602,13 +123754,13 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
           },
           {
-            "resourceType": "AssociationResource",
+            "resourceType": "associations",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -123623,9 +123775,19 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -123638,8 +123800,8 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -123649,41 +123811,11 @@
         "name": "CreateChat",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
-        "description": "Grants permission to create a new chat session",
+        "description": "Grants permission to create a chat",
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "CreateKnowledgeItem",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
-        "permissionOnly": false,
-        "description": "Grants permission to create a new knowledge item",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "CreateOneTimeLoginSession",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
-        "permissionOnly": false,
-        "description": "Grants permission to generate secure one-time session for initiating off-console Application login",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -123698,24 +123830,17 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "DeleteKnowledgeItem",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
-        "permissionOnly": false,
-        "description": "Grants permission to delete a knowledge item",
-        "accessLevel": "Write",
-        "resourceTypes": [
+          },
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -123728,9 +123853,17 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "ServiceResource",
+            "resourceType": "service",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -123743,8 +123876,8 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -123758,7 +123891,7 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -123773,29 +123906,14 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
           },
           {
-            "resourceType": "AssociationResource",
+            "resourceType": "associations",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "DiscoverTopology",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
-        "permissionOnly": false,
-        "description": "Grants permission to discover topology information",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -123809,7 +123927,7 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -123824,8 +123942,8 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -123835,7 +123953,7 @@
         "name": "GetAccountUsage",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
-        "description": "Grants permission to get account usage",
+        "description": "Grants permission to retrieve account usage information",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -123854,9 +123972,17 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -123869,13 +123995,13 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
           },
           {
-            "resourceType": "AssociationResource",
+            "resourceType": "associations",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -123890,37 +124016,22 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
         ]
       },
       {
-        "name": "GetKnowledgeItem",
+        "name": "GetOperatorApp",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
-        "description": "Grants permission to get a knowledge item",
+        "description": "Grants permission to get operator auth config for any enabled auth flow",
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "GetOperatorAppTeams",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
-        "permissionOnly": false,
-        "description": "Grants permission to enable operator auth config for any enabled auth flow",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -123935,8 +124046,8 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -123950,24 +124061,17 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "ServiceResource",
+            "resourceType": "service",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "HandleServiceRegistrationCallback",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
-        "permissionOnly": false,
-        "description": "Grants permission to handle OAuth callback from external service",
-        "accessLevel": "Read",
-        "resourceTypes": [
+          },
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -123980,23 +124084,8 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "InitiateServiceRegistration",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
-        "permissionOnly": false,
-        "description": "Grants permission to initiate OAuth flow",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -124025,7 +124114,7 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -124040,8 +124129,8 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -124051,12 +124140,12 @@
         "name": "ListChats",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
-        "description": "Grants permission to list existing chat sessions",
+        "description": "Grants permission to list chats",
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -124070,8 +124159,8 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -124085,8 +124174,8 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -124100,23 +124189,8 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "ListKnowledgeItems",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
-        "permissionOnly": false,
-        "description": "Grants permission to list knowledge items",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -124130,8 +124204,8 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -124145,8 +124219,8 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -124168,6 +124242,43 @@
         ]
       },
       {
+        "name": "ListTagsForResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list tags for a resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListWebhooks",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
@@ -124175,13 +124286,13 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
           },
           {
-            "resourceType": "AssociationResource",
+            "resourceType": "associations",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -124196,9 +124307,19 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "ServiceResource",
+            "resourceType": "service",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -124219,31 +124340,91 @@
         ]
       },
       {
-        "name": "SendChatMessage",
+        "name": "SendMessage",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
-        "description": "Grants permission to invoke an agent",
+        "description": "Grants permission to send chat messages",
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
         ]
       },
       {
-        "name": "StreamMessage",
+        "name": "TagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
-        "description": "Grants permission to invoke an agent",
-        "accessLevel": "Write",
+        "description": "Grants permission to tag a resource",
+        "accessLevel": "Tagging",
         "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UntagResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to untag a resource",
+        "accessLevel": "Tagging",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -124256,9 +124437,17 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -124271,13 +124460,13 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
           },
           {
-            "resourceType": "AssociationResource",
+            "resourceType": "associations",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -124292,8 +124481,8 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -124307,37 +124496,22 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
         ]
       },
       {
-        "name": "UpdateKnowledgeItem",
+        "name": "UpdateOperatorAppIdpConfig",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
-        "description": "Grants permission to update a knowledge item",
+        "description": "Grants permission to update the external Identity Provider configuration for the Operator App",
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "UpdateOperatorAppTeams",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
-        "permissionOnly": false,
-        "description": "Grants permission to update the list of teams that the Operator App is enabled for",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpaceResource",
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -124352,8 +124526,23 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ValidateAwsAssociations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to validate aws association",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -124362,55 +124551,46 @@
     ],
     "resourceTypes": [
       {
-        "name": "AgentSpaceResource",
+        "name": "agentspace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/",
         "arnPattern": "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}",
         "conditionKeys": [
-          "aidevops:AgentSpaceResourceAgentSpaceId"
+          "aws:ResourceTag/${TagKey}"
         ]
       },
       {
-        "name": "AssociationResource",
+        "name": "associations",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/",
         "arnPattern": "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}/associations/${AssociationId}",
-        "conditionKeys": [
-          "aidevops:AssociationResourceAgentSpaceId",
-          "aidevops:AssociationResourceAssociationId"
-        ]
+        "conditionKeys": []
       },
       {
-        "name": "ServiceResource",
+        "name": "service",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/",
         "arnPattern": "arn:${Partition}:aidevops:${Region}:${Account}:service/${ServiceId}",
         "conditionKeys": [
-          "aidevops:ServiceResourceServiceId"
+          "aws:ResourceTag/${TagKey}"
         ]
       }
     ],
     "conditionKeys": [
       {
-        "name": "aidevops:AgentSpaceResourceAgentSpaceId",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/",
-        "description": "Filters access by unique identifier for an AgentSpace",
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "description": "Filters access by the tags that are passed in the request",
         "type": "String"
       },
       {
-        "name": "aidevops:AssociationResourceAgentSpaceId",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/",
-        "description": "Filters access by unique identifier for an AgentSpace",
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "description": "Filters access by the tags associated with the resource",
         "type": "String"
       },
       {
-        "name": "aidevops:AssociationResourceAssociationId",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/",
-        "description": "Filters access by unique identifier for a service association within an AgentSpace",
-        "type": "String"
-      },
-      {
-        "name": "aidevops:ServiceResourceServiceId",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/",
-        "description": "Filters access by unique identifier for a registered service",
-        "type": "String"
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "description": "Filters access by the tag keys that are passed in the request",
+        "type": "ArrayOfString"
       }
     ]
   },
