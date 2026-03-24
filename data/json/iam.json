@@ -21500,6 +21500,12 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
@@ -123823,6 +123829,21 @@
         ]
       },
       {
+        "name": "CreateKnowledgeItem",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new knowledge item",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteAgentSpace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
@@ -123841,6 +123862,21 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteKnowledgeItem",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a knowledge item",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -123913,6 +123949,21 @@
           },
           {
             "resourceType": "associations",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DiscoverTopology",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to discover topology information",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -124013,6 +124064,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
         "description": "Grants permission to get a backlog task",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetKnowledgeItem",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a knowledge item",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -124186,6 +124252,36 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
         "description": "Grants permission to list journal records",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListKnowledgeItemVersions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list knowledge item versions",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListKnowledgeItems",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list knowledge items",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -124493,6 +124589,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
         "description": "Grants permission to update a goal",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateKnowledgeItem",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a knowledge item",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -203588,6 +203699,21 @@
         ]
       },
       {
+        "name": "GetPlayerConnectionDetails",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/gameliftservers/latest/apireference/API_GetPlayerConnectionDetails.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve player connection endpoints and player gateway tokens for a game session",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListAliases",
         "apiReferenceUrl": "https://docs.aws.amazon.com/gameliftservers/latest/apireference/API_ListAliases.html",
         "permissionOnly": false,
@@ -204598,7 +204724,7 @@
       },
       {
         "name": "script",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/gameliftservers/latest/developerguide/gamelift-console-scripts.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/gameliftservers/latest/realtimeguide/realtime-intro.html",
         "arnPattern": "arn:${Partition}:gamelift:${Region}:${Account}:script/${ScriptId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -311776,6 +311902,23 @@
         ]
       },
       {
+        "name": "AccessProServeTools",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/getting-started/controlling-access-in-apc-account-management.html",
+        "permissionOnly": true,
+        "description": "Grants permission to Single Sign-On from AWS Partner Central into ProServe Tools",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral-account-management:ProServeRole"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "AssociatePartnerAccount",
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/getting-started/controlling-access-in-apc-account-management.html",
         "permissionOnly": true,
@@ -311833,6 +311976,12 @@
         "name": "partnercentral-account-management:MarketingCentralRole",
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/getting-started/controlling-access-in-apc-account-management.html",
         "description": "Filters access by Marketing Central role",
+        "type": "ArrayOfString"
+      },
+      {
+        "name": "partnercentral-account-management:ProServeRole",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/getting-started/controlling-access-in-apc-account-management.html",
+        "description": "Filters access by ProServe Tools role",
         "type": "ArrayOfString"
       }
     ]
@@ -318588,6 +318737,21 @@
           {
             "resourceType": "lexicon",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StartSpeechSynthesisStream",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/dg/API_StartSpeechSynthesisStream.html",
+        "permissionOnly": false,
+        "description": "Grants permission to perform synthesis with bidirectional streaming",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "lexicon",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }

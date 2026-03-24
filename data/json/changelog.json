@@ -1,5 +1,31 @@
 [
   {
+    "dateOfChange": "2026-03-24",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS DevOps Agent Service": [
+        "aidevops:CreateKnowledgeItem",
+        "aidevops:DeleteKnowledgeItem",
+        "aidevops:DiscoverTopology",
+        "aidevops:GetKnowledgeItem",
+        "aidevops:ListKnowledgeItemVersions",
+        "aidevops:ListKnowledgeItems",
+        "aidevops:UpdateKnowledgeItem"
+      ],
+      "Amazon GameLift Servers": [
+        "gamelift:GetPlayerConnectionDetails"
+      ],
+      "AWS Partner central account management": [
+        "partnercentral-account-management:AccessProServeTools"
+      ],
+      "Amazon Polly": [
+        "polly:StartSpeechSynthesisStream"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-03-21",
     "addedServices": [],
     "removedServices": [],
