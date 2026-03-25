@@ -25047,11 +25047,17 @@
         "profile",
         "profile-association"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 9,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "route53profiles:FirewallRuleGroupPriority",
+        "route53profiles:HostedZoneDomains",
+        "route53profiles:ResolverRuleDomains",
+        "route53profiles:ResourceArns",
+        "route53profiles:ResourceIds",
+        "route53profiles:ResourceTypes"
       ]
     },
     {

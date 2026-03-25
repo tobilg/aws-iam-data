@@ -352689,7 +352689,8 @@
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "route53profiles:ResourceIds"
             ],
             "dependentActions": [
               "ec2:DescribeVpcs"
@@ -352707,7 +352708,13 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "route53profiles:ResourceTypes",
+              "route53profiles:HostedZoneDomains",
+              "route53profiles:ResolverRuleDomains",
+              "route53profiles:FirewallRuleGroupPriority",
+              "route53profiles:ResourceArns"
+            ],
             "dependentActions": []
           }
         ]
@@ -352755,7 +352762,9 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "route53profiles:ResourceIds"
+            ],
             "dependentActions": []
           }
         ]
@@ -352770,7 +352779,13 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "route53profiles:ResourceTypes",
+              "route53profiles:HostedZoneDomains",
+              "route53profiles:ResolverRuleDomains",
+              "route53profiles:FirewallRuleGroupPriority",
+              "route53profiles:ResourceArns"
+            ],
             "dependentActions": []
           }
         ]
@@ -352979,7 +352994,12 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "route53profiles:ResourceTypes",
+              "route53profiles:HostedZoneDomains",
+              "route53profiles:ResolverRuleDomains",
+              "route53profiles:FirewallRuleGroupPriority"
+            ],
             "dependentActions": []
           }
         ]
@@ -353021,6 +353041,42 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
         "description": "Filters access by the presence of tag keys in the request",
         "type": "ArrayOfString"
+      },
+      {
+        "name": "route53profiles:FirewallRuleGroupPriority",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53profiles.html",
+        "description": "Filters access by priority range of a Firewall Rule Group",
+        "type": "Numeric"
+      },
+      {
+        "name": "route53profiles:HostedZoneDomains",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53profiles.html",
+        "description": "Filters access by Hosted Zone domains",
+        "type": "String"
+      },
+      {
+        "name": "route53profiles:ResolverRuleDomains",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53profiles.html",
+        "description": "Filters access by Resolver Rule domains",
+        "type": "String"
+      },
+      {
+        "name": "route53profiles:ResourceArns",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53profiles.html",
+        "description": "Filters access by specific resource ARNs",
+        "type": "ARN"
+      },
+      {
+        "name": "route53profiles:ResourceIds",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53profiles.html",
+        "description": "Filters access by given VPCs",
+        "type": "String"
+      },
+      {
+        "name": "route53profiles:ResourceTypes",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53profiles.html",
+        "description": "Filters access by specific resource type. Possible options include 'HostedZone', 'FirewallRuleGroup', 'ResolverQueryLoggingConfig', 'ResolverRule', and 'VpcEndpoint'",
+        "type": "String"
       }
     ]
   },
