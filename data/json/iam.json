@@ -270001,7 +270001,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -272164,6 +272167,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "ContactMethod",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "ContainerService",
             "required": false,
             "conditionKeys": [],
@@ -272291,6 +272300,12 @@
           },
           {
             "resourceType": "Certificate",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ContactMethod",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -272645,7 +272660,9 @@
         "name": "ContactMethod",
         "apiReferenceUrl": "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_ContactMethod.html",
         "arnPattern": "arn:${Partition}:lightsail:${Region}:${Account}:ContactMethod/${Id}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "ContainerService",
@@ -380627,26 +380644,11 @@
         "name": "AddArtifact",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_AddArtifact.html",
         "permissionOnly": false,
-        "description": "Grants permission to add an Artifact for the given Agent Instance",
+        "description": "Grants permission to add an Artifact for the given Agent Space",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "AddControl",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_AddControl.html",
-        "permissionOnly": false,
-        "description": "Grants permission to add a customer managed Control",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Application",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -380662,21 +380664,6 @@
         "resourceTypes": [
           {
             "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "BatchGetAgentInstances",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetAgentInstances.html",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve multiple agent instances in a single request",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentInstance",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -380702,7 +380689,7 @@
         "name": "BatchGetArtifactMetadata",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetArtifactMetadata.html",
         "permissionOnly": false,
-        "description": "Grants permission to retrieve one or more Artifact Metadata records for the given Agent Instance",
+        "description": "Grants permission to retrieve one or more Artifact Metadata records for the given Agent Space",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -380834,21 +380821,6 @@
         ]
       },
       {
-        "name": "CreateAgentInstance",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_CreateAgentInstance.html",
-        "permissionOnly": false,
-        "description": "Grants permission to create an agent instance record",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Application",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
         "name": "CreateAgentSpace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_CreateAgentSpace.html",
         "permissionOnly": false,
@@ -380858,7 +380830,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -380873,7 +380848,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": [
               "iam:PassRole",
               "sso:CreateApplication"
@@ -380897,21 +380875,6 @@
         ]
       },
       {
-        "name": "CreateDocumentReview",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_CreateDocumentReview.html",
-        "permissionOnly": false,
-        "description": "Grants permission to create a document review",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
         "name": "CreateIntegration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_CreateIntegration.html",
         "permissionOnly": false,
@@ -380923,6 +380886,15 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -380930,7 +380902,7 @@
         "name": "CreateMembership",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_CreateMembership.html",
         "permissionOnly": false,
-        "description": "Grants permission to add a single member to a agent instance with specified role",
+        "description": "Grants permission to add a single member to a agent space with specified role",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -380979,7 +380951,7 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "Application",
+            "resourceType": "SecurityRequirementPack",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -380996,21 +380968,6 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "DeleteAgentInstance",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_DeleteAgentInstance.html",
-        "permissionOnly": false,
-        "description": "Grants permission to delete an agent instance record",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentInstance",
-            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -381062,40 +381019,10 @@
         ]
       },
       {
-        "name": "DeleteControl",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_DeleteControl.html",
-        "permissionOnly": false,
-        "description": "Grants permission to delete a customer managed Control",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Control",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
         "name": "DeleteDesignReview",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_DeleteDesignReview.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a design review",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "DeleteDocumentReview",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_DeleteDocumentReview.html",
-        "permissionOnly": false,
-        "description": "Grants permission to delete a document review",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -381125,7 +381052,7 @@
         "name": "DeleteMembership",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_DeleteMembership.html",
         "permissionOnly": false,
-        "description": "Grants permission to remove a single member associated to an agent instance",
+        "description": "Grants permission to remove a single member associated to an agent space",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -381144,7 +381071,7 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "SecurityRequirement",
+            "resourceType": "SecurityRequirementPack",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -381200,7 +381127,7 @@
         "name": "GetArtifact",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetArtifact.html",
         "permissionOnly": false,
-        "description": "Grants permission to retrieve an Artifact for the given Agent Instance",
+        "description": "Grants permission to retrieve an Artifact for the given Agent Space",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -381220,21 +381147,6 @@
         "resourceTypes": [
           {
             "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "GetControl",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetControl.html",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve a Control",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "Control",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -381302,36 +381214,6 @@
         ]
       },
       {
-        "name": "GetDocumentReview",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetDocumentReview.html",
-        "permissionOnly": false,
-        "description": "Grants permission to get the status of the associated agent instance document review",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "GetDocumentReviewArtifact",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetDocumentReviewArtifact.html",
-        "permissionOnly": false,
-        "description": "Grants permission to get document review artifact for a specific document",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
         "name": "GetIntegration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetIntegration.html",
         "permissionOnly": false,
@@ -381347,21 +381229,6 @@
         ]
       },
       {
-        "name": "GetLoginSessionCredentials",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetLoginSessionCredentials.html",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve credentials for a one time login session",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
         "name": "GetSecurityRequirement",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetSecurityRequirement.html",
         "permissionOnly": false,
@@ -381369,23 +381236,8 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "SecurityRequirement",
+            "resourceType": "SecurityRequirementPack",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "HandleOneTimeLoginSession",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_HandleOneTimeLoginSession.html",
-        "permissionOnly": false,
-        "description": "Grants permission to process and invalidate a one time login session",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -381401,36 +381253,6 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "ListAgentInstanceTasks",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListAgentInstanceTasks.html",
-        "permissionOnly": false,
-        "description": "Grants permission to list tasks for a specific agent instance",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentInstance",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "ListAgentInstances",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListAgentInstances.html",
-        "permissionOnly": false,
-        "description": "Grants permission to list agent instances",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -381482,21 +381304,6 @@
         ]
       },
       {
-        "name": "ListControls",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListControls.html",
-        "permissionOnly": false,
-        "description": "Grants permission to list all Controls",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
         "name": "ListDesignReviewComments",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListDesignReviewComments.html",
         "permissionOnly": false,
@@ -381542,36 +381349,6 @@
         ]
       },
       {
-        "name": "ListDocumentReviewComments",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListDocumentReviewComments.html",
-        "permissionOnly": false,
-        "description": "Grants permission to list document review comments",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "ListDocumentReviews",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListDocumentReviews.html",
-        "permissionOnly": false,
-        "description": "Grants permission to list all document reviews for the given project",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
         "name": "ListFindings",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListFindings.html",
         "permissionOnly": false,
@@ -381590,7 +381367,7 @@
         "name": "ListIntegratedResources",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListIntegratedResources.html",
         "permissionOnly": false,
-        "description": "Grants permission to list integrated resources for an agent instance",
+        "description": "Grants permission to list integrated resources for an agent space",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -381620,7 +381397,7 @@
         "name": "ListMemberships",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListMemberships.html",
         "permissionOnly": false,
-        "description": "Grants permission to list all members associated to an agent instance with pagination support",
+        "description": "Grants permission to list all members associated to an agent space with pagination support",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -381699,7 +381476,46 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "SecurityRequirementPack",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListTagsForResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListTagsForResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list the tags for a resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Application",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Integration",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "SecurityRequirementPack",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "TargetDomain",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -381827,16 +381643,49 @@
         ]
       },
       {
-        "name": "ToggleManagedControl",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ToggleManagedControl.html",
+        "name": "TagResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_TagResource.html",
         "permissionOnly": false,
-        "description": "Grants permission to toggle the status",
-        "accessLevel": "Write",
+        "description": "Grants permission to add tags to a resource",
+        "accessLevel": "Tagging",
         "resourceTypes": [
           {
-            "resourceType": "Control",
-            "required": true,
+            "resourceType": "AgentSpace",
+            "required": false,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Application",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Integration",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "SecurityRequirementPack",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "TargetDomain",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -381849,7 +381698,7 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "SecurityRequirement",
+            "resourceType": "SecurityRequirementPack",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -381857,16 +381706,48 @@
         ]
       },
       {
-        "name": "UpdateAgentInstance",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateAgentInstance.html",
+        "name": "UntagResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UntagResource.html",
         "permissionOnly": false,
-        "description": "Grants permission to update an agent instance record",
-        "accessLevel": "Write",
+        "description": "Grants permission to remove tags from a resource",
+        "accessLevel": "Tagging",
         "resourceTypes": [
           {
-            "resourceType": "AgentInstance",
-            "required": true,
+            "resourceType": "AgentSpace",
+            "required": false,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Application",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Integration",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "SecurityRequirementPack",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "TargetDomain",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -381904,21 +381785,6 @@
         ]
       },
       {
-        "name": "UpdateControl",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateControl.html",
-        "permissionOnly": false,
-        "description": "Grants permission to update a customer managed Control",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Control",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
         "name": "UpdateFinding",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateFinding.html",
         "permissionOnly": false,
@@ -381937,7 +381803,7 @@
         "name": "UpdateIntegratedResources",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateIntegratedResources.html",
         "permissionOnly": false,
-        "description": "Grants permission to update integrated resources for an agent instance",
+        "description": "Grants permission to update integrated resources for an agent space",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -381971,7 +381837,7 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "SecurityRequirement",
+            "resourceType": "SecurityRequirementPack",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -382014,76 +381880,63 @@
         "name": "Application",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
         "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:application/${ApplicationId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
-        "name": "Control",
+        "name": "SecurityRequirementPack",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
-        "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:control/${ControlId}",
-        "conditionKeys": []
-      },
-      {
-        "name": "SecurityRequirement",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
-        "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:security-requirement/${SecurityRequirementId}",
-        "conditionKeys": []
+        "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:security-requirement-pack/${SecurityRequirementPackId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "Integration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
         "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:integration/${IntegrationId}",
-        "conditionKeys": []
-      },
-      {
-        "name": "AgentInstance",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
-        "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:agent-instance/${AgentId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "AgentSpace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
         "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "TargetDomain",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
         "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:target-domain/${TargetDomainId}",
-        "conditionKeys": []
-      },
-      {
-        "name": "Artifact",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
-        "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}/artifact/${ArtifactId}",
-        "conditionKeys": []
-      },
-      {
-        "name": "Pentest",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
-        "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}/pentest/${PentestId}",
-        "conditionKeys": []
-      },
-      {
-        "name": "PentestJob",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
-        "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}/pentest-job/${JobId}",
-        "conditionKeys": []
-      },
-      {
-        "name": "PentestTask",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
-        "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}/pentest-task/${TaskId}",
-        "conditionKeys": []
-      },
-      {
-        "name": "Finding",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
-        "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}/finding/${FindingId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
-    "conditionKeys": []
+    "conditionKeys": [
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "description": "Filters access by the tags that are passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "description": "Filters access by the tags associated with the resource",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "description": "Filters access by the tag keys that are passed in the request",
+        "type": "ArrayOfString"
+      }
+    ]
   },
   {
     "name": "AWS Security Hub",

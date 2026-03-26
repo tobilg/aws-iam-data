@@ -1,5 +1,41 @@
 [
   {
+    "dateOfChange": "2026-03-26",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Security Agent": [
+        "securityagent:ListTagsForResource",
+        "securityagent:TagResource",
+        "securityagent:UntagResource"
+      ]
+    },
+    "removedActions": {
+      "AWS Security Agent": [
+        "securityagent:AddControl",
+        "securityagent:BatchGetAgentInstances",
+        "securityagent:CreateAgentInstance",
+        "securityagent:CreateDocumentReview",
+        "securityagent:DeleteAgentInstance",
+        "securityagent:DeleteControl",
+        "securityagent:DeleteDocumentReview",
+        "securityagent:GetControl",
+        "securityagent:GetDocumentReview",
+        "securityagent:GetDocumentReviewArtifact",
+        "securityagent:GetLoginSessionCredentials",
+        "securityagent:HandleOneTimeLoginSession",
+        "securityagent:ListAgentInstanceTasks",
+        "securityagent:ListAgentInstances",
+        "securityagent:ListControls",
+        "securityagent:ListDocumentReviewComments",
+        "securityagent:ListDocumentReviews",
+        "securityagent:ToggleManagedControl",
+        "securityagent:UpdateAgentInstance",
+        "securityagent:UpdateControl"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2026-03-24",
     "addedServices": [],
     "removedServices": [],
