@@ -31791,7 +31791,7 @@
       },
       {
         "name": "quota-share",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/userguide/quota-share.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/batch/latest/userguide/quota-shares.html",
         "arnPattern": "arn:${Partition}:batch:${Region}:${Account}:job-queue/${JobQueueName}/quota-share/${QuotaShareName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -303277,6 +303277,21 @@
         ]
       },
       {
+        "name": "DescribeInsightDetails",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_DescribeInsightDetails.html",
+        "permissionOnly": false,
+        "description": "Grants permission to view detailed information about insights for an OpenSearch Service domain",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DescribeInstanceTypeLimits",
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_DescribeInstanceTypeLimits.html",
         "permissionOnly": false,
@@ -303840,6 +303855,21 @@
         "resourceTypes": [
           {
             "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListInsights",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_ListInsights.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list insights for OpenSearch Service domains in the account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -420589,7 +420619,7 @@
     "actions": [
       {
         "name": "DeleteAccountColor",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/DeleteAccountColor.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/APIReference/API_DeleteAccountColor.html",
         "permissionOnly": false,
         "description": "Grants permission to delete account color setting",
         "accessLevel": "Write",
@@ -420604,7 +420634,7 @@
       },
       {
         "name": "GetAccountColor",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/GetAccountColor.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/APIReference/API_GetAccountColor.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve account color for given account",
         "accessLevel": "Read",
@@ -420619,7 +420649,7 @@
       },
       {
         "name": "GetAccountCustomizations",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/API_GetAccountCustomizations.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/APIReference/API_GetAccountCustomizations.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve account customizations",
         "accessLevel": "Read",
@@ -420634,7 +420664,7 @@
       },
       {
         "name": "ListServices",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/API_ListServices.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/APIReference/API_ListServices.html",
         "permissionOnly": false,
         "description": "Grants permission to list available services",
         "accessLevel": "Read",
@@ -420649,7 +420679,7 @@
       },
       {
         "name": "PutAccountColor",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/PutAccountColor.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/APIReference/API_PutAccountColor.html",
         "permissionOnly": false,
         "description": "Grants permission to set account color",
         "accessLevel": "Write",
@@ -420664,7 +420694,7 @@
       },
       {
         "name": "UpdateAccountCustomizations",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/API_UpdateAccountCustomizations.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/APIReference/API_UpdateAccountCustomizations.html",
         "permissionOnly": false,
         "description": "Grants permission to update account customizations",
         "accessLevel": "Write",
