@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2026-03-28",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS HealthOmics": [
+        "omics:CreateConfiguration",
+        "omics:DeleteConfiguration",
+        "omics:GetConfiguration",
+        "omics:ListConfigurations"
+      ]
+    },
+    "removedActions": {
+      "AWS Security Agent": [
+        "securityagent:BatchGetSecurityTestContentMetadata",
+        "securityagent:BatchGetTasks",
+        "securityagent:DescribeFindings",
+        "securityagent:GetCodeReviewTask",
+        "securityagent:GetDocReviewTask",
+        "securityagent:ListTasks",
+        "securityagent:StartPentestExecution",
+        "securityagent:StopPentestExecution"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2026-03-27",
     "addedServices": [],
     "removedServices": [],

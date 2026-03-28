@@ -218452,6 +218452,28 @@
         ]
       },
       {
+        "name": "CreateConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_CreateConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "ec2:DescribeSecurityGroups",
+              "ec2:DescribeSubnets",
+              "iam:CreateServiceLinkedRole"
+            ]
+          }
+        ]
+      },
+      {
         "name": "CreateMultipartReadSetUpload",
         "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_CreateMultipartReadSetUpload.html",
         "permissionOnly": false,
@@ -218643,6 +218665,21 @@
           },
           {
             "resourceType": "AnnotationStoreVersion",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_DeleteConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "configuration",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -218865,6 +218902,21 @@
         "resourceTypes": [
           {
             "resourceType": "AnnotationStoreVersion",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_GetConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve configuration details",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "configuration",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -219242,6 +219294,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_ListAnnotationStores.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a list of information about Annotation Stores",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListConfigurations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_ListConfigurations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of configurations",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -219664,6 +219731,12 @@
             ]
           },
           {
+            "resourceType": "configuration",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "runCache",
             "required": false,
             "conditionKeys": [],
@@ -219734,6 +219807,12 @@
           },
           {
             "resourceType": "WorkflowVersion",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "configuration",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -219824,6 +219903,12 @@
           },
           {
             "resourceType": "WorkflowVersion",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "configuration",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -220041,6 +220126,14 @@
         "name": "AnnotationStoreVersion",
         "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_AnnotationStoreVersionItem.html",
         "arnPattern": "arn:${Partition}:omics:${Region}:${Account}:annotationStore/${AnnotationStoreName}/version/${AnnotationStoreVersionName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "configuration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_ConfigurationListItem.html",
+        "arnPattern": "arn:${Partition}:omics:${Region}:${Account}:configuration/${Name}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -342205,8 +342298,8 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "cluster",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -380696,7 +380789,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -380711,7 +380806,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -380741,7 +380838,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -380756,7 +380855,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -380771,7 +380872,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -380786,7 +380889,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -380801,22 +380906,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "BatchGetSecurityTestContentMetadata",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetSecurityTestContentMetadata.html",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve multiple security testing contents metadata in a single request",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -380829,21 +380921,6 @@
         "resourceTypes": [
           {
             "resourceType": "TargetDomain",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "BatchGetTasks",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetTasks.html",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve multiple security testing tasks in a single request",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -380864,7 +380941,11 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt",
+              "kms:DescribeKey",
+              "kms:GenerateDataKeyWithoutPlaintext"
+            ]
           }
         ]
       },
@@ -380884,6 +380965,7 @@
             ],
             "dependentActions": [
               "iam:PassRole",
+              "kms:DescribeKey",
               "sso:CreateApplication"
             ]
           }
@@ -380911,12 +380993,6 @@
         "description": "Grants permission to create a security testing integration",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "Application",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
           {
             "resourceType": "",
             "required": false,
@@ -380969,7 +381045,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -381014,7 +381092,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -381124,21 +381204,6 @@
         ]
       },
       {
-        "name": "DescribeFindings",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_DescribeFindings.html",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve security findings for a penetration test or security testing tasks in a penetration test",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
         "name": "GetApplication",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetApplication.html",
         "permissionOnly": false,
@@ -381158,21 +381223,6 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetArtifact.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve an Artifact for the given Agent Space",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "GetCodeReviewTask",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetCodeReviewTask.html",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve a Code Review Task",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -381229,21 +381279,6 @@
         ]
       },
       {
-        "name": "GetDocReviewTask",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetDocReviewTask.html",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve a document review task",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
         "name": "GetIntegration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetIntegration.html",
         "permissionOnly": false,
@@ -381281,8 +381316,8 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "Application",
-            "required": true,
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -381322,7 +381357,7 @@
         "name": "ListArtifacts",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListArtifacts.html",
         "permissionOnly": false,
-        "description": "Grants permission to list all artifacts for the given project",
+        "description": "Grants permission to list all artifacts for the given agent space",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -381352,7 +381387,7 @@
         "name": "ListDesignReviews",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListDesignReviews.html",
         "permissionOnly": false,
-        "description": "Grants permission to list all design reviews for the given project",
+        "description": "Grants permission to list all design reviews for the given agent space",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -381374,7 +381409,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -381389,7 +381426,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -381449,7 +381488,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -381464,7 +381505,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -381479,7 +381522,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -381568,21 +381613,6 @@
         ]
       },
       {
-        "name": "ListTasks",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListTasks.html",
-        "permissionOnly": false,
-        "description": "Grants permission to list security testing tasks associated with a pentest job",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
         "name": "PutDesignReviewFeedback",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_PutDesignReviewFeedback.html",
         "permissionOnly": false,
@@ -381608,22 +381638,10 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "StartPentestExecution",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_StartPentestExecution.html",
-        "permissionOnly": false,
-        "description": "Grants permission to initiate the execution of a penetration test",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt",
+              "kms:GenerateDataKey"
+            ]
           }
         ]
       },
@@ -381638,22 +381656,10 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "StopPentestExecution",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_StopPentestExecution.html",
-        "permissionOnly": false,
-        "description": "Grants permission to stop the execution of a running penetration test",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt",
+              "kms:GenerateDataKey"
+            ]
           }
         ]
       },
@@ -381668,7 +381674,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -381793,7 +381801,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -381809,7 +381819,8 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": [
-              "iam:PassRole"
+              "iam:PassRole",
+              "kms:DescribeKey"
             ]
           }
         ]
@@ -381825,7 +381836,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -381855,7 +381868,9 @@
             "resourceType": "AgentSpace",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
