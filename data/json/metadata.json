@@ -9048,7 +9048,7 @@
       "name": "AWS DevOps Agent Service",
       "servicePrefix": "aidevops",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdevopsagentservice.html",
-      "actionsCount": 51,
+      "actionsCount": 52,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "AssociateService",
@@ -9056,6 +9056,7 @@
         "CreateBacklogTask",
         "CreateChat",
         "CreateKnowledgeItem",
+        "CreateOneTimeLoginSession",
         "DeleteAgentSpace",
         "DeleteKnowledgeItem",
         "DeregisterService",
@@ -15186,14 +15187,15 @@
         "TrustedTokenIssuer",
         "ApplicationProvider"
       ],
-      "conditionKeysCount": 6,
+      "conditionKeysCount": 7,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "identitycenter:ApplicationArn",
         "identitycenter:InstanceArn",
-        "sso:ApplicationAccount"
+        "sso:ApplicationAccount",
+        "sso:PrimaryRegion"
       ]
     },
     {

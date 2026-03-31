@@ -123844,6 +123844,21 @@
         ]
       },
       {
+        "name": "CreateOneTimeLoginSession",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to generate secure one-time session for initiating off-console Application login",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteAgentSpace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
@@ -221361,7 +221376,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "identitystore:AddRegion",
               "kms:Decrypt"
@@ -221415,7 +221432,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -221423,7 +221442,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -221438,7 +221459,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -221446,7 +221469,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -221469,13 +221494,17 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -221490,7 +221519,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -221504,7 +221535,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           },
           {
@@ -221528,7 +221561,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -221615,7 +221650,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "iam:AttachRolePolicy",
               "iam:CreateRole",
@@ -221659,7 +221696,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -221667,7 +221706,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           },
           {
@@ -221725,7 +221766,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -221733,7 +221776,9 @@
           {
             "resourceType": "TrustedTokenIssuer",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           },
           {
@@ -221765,13 +221810,17 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -221786,7 +221835,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -221811,7 +221862,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -221836,7 +221889,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -221861,7 +221916,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -221886,7 +221943,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -221945,7 +222004,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -221953,7 +222014,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -221968,7 +222031,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "identitystore:DeleteIdentityStore"
             ]
@@ -221985,7 +222050,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222019,7 +222086,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222027,7 +222096,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -222042,7 +222113,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222050,7 +222123,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -222082,7 +222157,9 @@
           {
             "resourceType": "TrustedTokenIssuer",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222099,7 +222176,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222116,7 +222195,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222133,7 +222214,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222158,7 +222241,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222198,7 +222283,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -222213,7 +222300,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222230,7 +222319,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222238,7 +222329,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -222253,7 +222346,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222270,7 +222365,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222302,7 +222399,9 @@
           {
             "resourceType": "TrustedTokenIssuer",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222319,7 +222418,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222327,7 +222428,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -222342,7 +222445,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222350,7 +222455,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -222401,7 +222508,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222426,7 +222535,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222451,7 +222562,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222476,7 +222589,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222518,7 +222633,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222558,7 +222675,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222566,7 +222685,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -222632,7 +222753,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222640,7 +222763,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -222755,7 +222880,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222772,7 +222899,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222797,13 +222926,17 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -222818,7 +222951,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222835,7 +222970,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222843,7 +222980,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -222858,7 +222997,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222883,7 +223024,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222908,7 +223051,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222933,7 +223078,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -222958,7 +223105,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223067,7 +223216,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223075,7 +223226,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -223122,7 +223275,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223130,7 +223285,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -223145,7 +223302,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223162,7 +223321,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223187,7 +223348,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -223237,7 +223400,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223289,7 +223454,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223314,13 +223481,17 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -223335,7 +223506,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223360,7 +223533,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223385,7 +223560,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223410,7 +223587,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223435,7 +223614,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223460,7 +223641,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223468,7 +223651,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -223500,7 +223685,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223508,7 +223695,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -223540,7 +223729,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "identitystore:RemoveRegion",
               "kms:Decrypt"
@@ -223703,7 +223894,9 @@
           {
             "resourceType": "Application",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223847,7 +224040,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "identitystore:UpdateIdentityStore",
               "kms:Decrypt",
@@ -223868,7 +224063,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223902,7 +224099,9 @@
           {
             "resourceType": "Instance",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223910,7 +224109,9 @@
           {
             "resourceType": "PermissionSet",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": []
           }
         ]
@@ -223976,7 +224177,9 @@
           {
             "resourceType": "TrustedTokenIssuer",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "sso:PrimaryRegion"
+            ],
             "dependentActions": [
               "kms:Decrypt"
             ]
@@ -223990,7 +224193,8 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/singlesignon/latest/userguide/permissionsetsconcept.html",
         "arnPattern": "arn:${Partition}:sso:::permissionSet/${InstanceId}/${PermissionSetId}",
         "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
+          "aws:ResourceTag/${TagKey}",
+          "sso:PrimaryRegion"
         ]
       },
       {
@@ -224004,7 +224208,8 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_InstanceMetadata.html",
         "arnPattern": "arn:${Partition}:sso:::instance/${InstanceId}",
         "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
+          "aws:ResourceTag/${TagKey}",
+          "sso:PrimaryRegion"
         ]
       },
       {
@@ -224013,7 +224218,8 @@
         "arnPattern": "arn:${Partition}:sso::${AccountId}:application/${InstanceId}/${ApplicationId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
-          "sso:ApplicationAccount"
+          "sso:ApplicationAccount",
+          "sso:PrimaryRegion"
         ]
       },
       {
@@ -224021,7 +224227,8 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/singlesignon/latest/APIReference/API_TrustedTokenIssuerMetadata.html",
         "arnPattern": "arn:${Partition}:sso::${AccountId}:trustedTokenIssuer/${InstanceId}/${TrustedTokenIssuerId}",
         "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
+          "aws:ResourceTag/${TagKey}",
+          "sso:PrimaryRegion"
         ]
       },
       {
@@ -224066,6 +224273,12 @@
         "name": "sso:ApplicationAccount",
         "apiReferenceUrl": "https://docs.aws.amazon.com/singlesignon/latest/userguide/API_Application.html",
         "description": "Filters access by the account which creates the application. This condition key is not supported for customer managed SAML applications",
+        "type": "String"
+      },
+      {
+        "name": "sso:PrimaryRegion",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/singlesignon/latest/userguide/API_InstanceMetadata.html",
+        "description": "Filters access by the primary region of the IAM Identity Center instance",
         "type": "String"
       }
     ]
@@ -392665,7 +392878,7 @@
         "name": "DescribeAttack",
         "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/DDOSAPIReference/API_DescribeAttack.html",
         "permissionOnly": false,
-        "description": "Grants permission to get attack details",
+        "description": "Grants permission to get attack details. For getting attack details protected by AWS WAF anti-DDoS managed rule group, this action additionally calls wafv2:DescribeTopContributorsByEvent to retrieve application layer attack contributors, which requires to have wafv2:DescribeTopContributorsByEvent permission in IAM policy",
         "accessLevel": "Read",
         "resourceTypes": [
           {
