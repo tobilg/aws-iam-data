@@ -44425,7 +44425,7 @@
         "name": "ListCertificates",
         "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_ListCertificates.html",
         "permissionOnly": false,
-        "description": "Grants permission to retrieve a list of the certificate ARNs and the domain name for each ARN",
+        "description": "Grants permission to retrieve a list of certificates for specific certificate parameters",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -44563,6 +44563,21 @@
             "conditionKeys": [
               "acm:DomainNames"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "SearchCertificates",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_SearchCertificates.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of certificates matching search criteria",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -68058,6 +68073,30 @@
         ]
       },
       {
+        "name": "CreateLookupTable",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateLookupTable.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a lookup table",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "lookup-table",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:TagKeys",
+              "aws:RequestTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateScheduledQuery",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_CreateScheduledQuery.html",
         "permissionOnly": false,
@@ -68270,6 +68309,21 @@
         "resourceTypes": [
           {
             "resourceType": "log-stream",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteLookupTable",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DeleteLookupTable.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a lookup table",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "lookup-table",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -68592,6 +68646,21 @@
         ]
       },
       {
+        "name": "DescribeLookupTables",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeLookupTables.html",
+        "permissionOnly": false,
+        "description": "Grants permission to return all lookup tables",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DescribeMetricFilters",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeMetricFilters.html",
         "permissionOnly": false,
@@ -68892,6 +68961,21 @@
         ]
       },
       {
+        "name": "GetLookupTable",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_GetLookupTable.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a lookup table",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "lookup-table",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetQueryResults",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_GetQueryResults.html",
         "permissionOnly": false,
@@ -69185,6 +69269,12 @@
           },
           {
             "resourceType": "log-group",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "lookup-table",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -69673,6 +69763,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "lookup-table",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "scheduled-query",
             "required": false,
             "conditionKeys": [],
@@ -69801,6 +69897,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "lookup-table",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "scheduled-query",
             "required": false,
             "conditionKeys": [],
@@ -69898,6 +70000,21 @@
         ]
       },
       {
+        "name": "UpdateLookupTable",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_UpdateLookupTable.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a lookup table",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "lookup-table",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateScheduledQuery",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_UpdateScheduledQuery.html",
         "permissionOnly": false,
@@ -69974,6 +70091,14 @@
         "name": "scheduled-query",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_ScheduledQuery.html",
         "arnPattern": "arn:${Partition}:logs:${Region}:${Account}:scheduled-query:${ScheduledQueryId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "lookup-table",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_LookupTable.html",
+        "arnPattern": "arn:${Partition}:logs:${Region}:${Account}:lookup-table:${LookupTableName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -284501,6 +284626,21 @@
         ]
       },
       {
+        "name": "AcceptAgreementCancellationRequest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
+        "permissionOnly": false,
+        "description": "Grants permission to users to accept an agreement cancellation request",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "AcceptAgreementPaymentRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
@@ -284519,7 +284659,22 @@
         "name": "AcceptAgreementRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to accept their agreement requests. Note that this action is not applicable to Marketplace purchases",
+        "description": "Grants permission to users to accept their agreement requests",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "BatchCreateBillingAdjustmentRequest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
+        "permissionOnly": false,
+        "description": "Grants permission to users to create a billing adjustment request against an agreement",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -284534,7 +284689,22 @@
         "name": "CancelAgreement",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to cancel their agreements. Note that this action is not applicable to Marketplace purchases",
+        "description": "Grants permission to users to cancel their agreements",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CancelAgreementCancellationRequest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
+        "permissionOnly": false,
+        "description": "Grants permission to users to withdraw a pending agreement cancellation request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -284579,7 +284749,7 @@
         "name": "CreateAgreementRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to create an agreement request. Note that this action is not applicable to Marketplace purchases",
+        "description": "Grants permission to users to create an agreement request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -284610,6 +284780,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
         "description": "Grants permission to users to view the details of their incoming subscription requests (for providers who provide products that require subscription verification)",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetAgreementCancellationRequest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
+        "permissionOnly": false,
+        "description": "Grants permission to users to view the details of an agreement cancellation request",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -284681,6 +284866,21 @@
         ]
       },
       {
+        "name": "GetBillingAdjustmentRequest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
+        "permissionOnly": false,
+        "description": "Grants permission to users to view the details of a billing adjustment request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListAgreementApprovalRequests",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
@@ -284696,10 +284896,40 @@
         ]
       },
       {
+        "name": "ListAgreementCancellationRequests",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
+        "permissionOnly": false,
+        "description": "Grants permission to users to list agreement cancellation requests",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListAgreementCharges",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
         "description": "Grants permission to users to view charges associated with their agreements",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAgreementInvoiceLineItems",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
+        "permissionOnly": false,
+        "description": "Grants permission to users to list invoice line items for an agreement",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -284741,6 +284971,21 @@
         ]
       },
       {
+        "name": "ListBillingAdjustmentRequests",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
+        "permissionOnly": false,
+        "description": "Grants permission to users to list billing adjustment requests",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListEntitlementDetails",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
@@ -284760,6 +285005,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
         "description": "Grants permission to users to decline an incoming subscription requests (for providers who provide products that require subscription verification)",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "RejectAgreementCancellationRequest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
+        "permissionOnly": false,
+        "description": "Grants permission to users to reject an agreement cancellation request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -284791,6 +285051,21 @@
         "permissionOnly": false,
         "description": "Grants permission to users to search their agreements",
         "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "SendAgreementCancellationRequest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
+        "permissionOnly": false,
+        "description": "Grants permission to users to send an agreement cancellation request",
+        "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
@@ -331389,6 +331664,21 @@
         ]
       },
       {
+        "name": "DescribeAutomationJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeAutomationJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe an automation job",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "automationJob",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DescribeBrand",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeBrand.html",
         "permissionOnly": false,
@@ -333521,6 +333811,21 @@
         ]
       },
       {
+        "name": "StartAutomationJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_StartAutomationJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to start an automation job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "automation",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "StartDashboardSnapshotJob",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_StartDashboardSnapshotJob.html",
         "permissionOnly": false,
@@ -334945,6 +335250,24 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
+      },
+      {
+        "name": "automation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_Automation.html",
+        "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:automation-group/${AutomationGroupId}/automation/${ResourceId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "automationJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_AutomationJob.html",
+        "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:automation-group/${AutomationGroupId}/automation/${AutomationId}/job/${ResourceId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "automationGroup",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_AutomationGroup.html",
+        "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:automation-group/${ResourceId}",
+        "conditionKeys": []
       }
     ],
     "conditionKeys": [
@@ -372104,6 +372427,21 @@
         ]
       },
       {
+        "name": "DeleteProcessingJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteProcessingJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a processing job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "processing-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteProject",
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteProject.html",
         "permissionOnly": false,
@@ -372552,6 +372890,21 @@
             "conditionKeys": [
               "aws:TagKeys"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteTrainingJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteTrainingJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a training job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "training-job",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -376022,6 +376375,21 @@
         "resourceTypes": [
           {
             "resourceType": "shared-model-event",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StartClusterHealthCheck",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StartClusterHealthCheck.html",
+        "permissionOnly": false,
+        "description": "Grants permission to start deep health checks for a SageMaker Hyperpod cluster",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cluster",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -407578,6 +407946,36 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html",
         "permissionOnly": false,
         "description": "Grants permission to view the carbon footprint tool",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetEstimatedCarbonEmissions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sustainability/latest/APIReference/API_GetEstimatedCarbonEmissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to view estimated carbon emission values based on customer grouping and filtering parameters",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetEstimatedCarbonEmissionsDimensionValues",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sustainability/latest/APIReference/API_GetEstimatedCarbonEmissionsDimensionValues.html",
+        "permissionOnly": false,
+        "description": "Grants permission to view the possible dimension values available for the estimated carbon emission values",
         "accessLevel": "Read",
         "resourceTypes": [
           {

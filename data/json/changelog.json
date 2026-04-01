@@ -1,5 +1,48 @@
 [
   {
+    "dateOfChange": "2026-04-01",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Certificate Manager": [
+        "acm:SearchCertificates"
+      ],
+      "Amazon CloudWatch Logs": [
+        "logs:CreateLookupTable",
+        "logs:DeleteLookupTable",
+        "logs:DescribeLookupTables",
+        "logs:GetLookupTable",
+        "logs:UpdateLookupTable"
+      ],
+      "AWS Marketplace": [
+        "aws-marketplace:AcceptAgreementCancellationRequest",
+        "aws-marketplace:BatchCreateBillingAdjustmentRequest",
+        "aws-marketplace:CancelAgreementCancellationRequest",
+        "aws-marketplace:GetAgreementCancellationRequest",
+        "aws-marketplace:GetBillingAdjustmentRequest",
+        "aws-marketplace:ListAgreementCancellationRequests",
+        "aws-marketplace:ListAgreementInvoiceLineItems",
+        "aws-marketplace:ListBillingAdjustmentRequests",
+        "aws-marketplace:RejectAgreementCancellationRequest",
+        "aws-marketplace:SendAgreementCancellationRequest"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:DescribeAutomationJob",
+        "quicksight:StartAutomationJob"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:DeleteProcessingJob",
+        "sagemaker:DeleteTrainingJob",
+        "sagemaker:StartClusterHealthCheck"
+      ],
+      "AWS Sustainability": [
+        "sustainability:GetEstimatedCarbonEmissions",
+        "sustainability:GetEstimatedCarbonEmissionsDimensionValues"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-03-31",
     "addedServices": [],
     "removedServices": [],
