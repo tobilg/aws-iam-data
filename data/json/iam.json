@@ -51202,6 +51202,489 @@
     ]
   },
   {
+    "name": "Claude Platform on AWS",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_claudeplatformonaws.html",
+    "servicePrefix": "aws-external-anthropic",
+    "actions": [
+      {
+        "name": "ArchiveWorkspace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to archive a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "AssumeConsole",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to assume console access on Claude Platform",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-external-anthropic:Capability"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CallWithBearerToken",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/",
+        "permissionOnly": true,
+        "description": "Grants permission to make API calls using bearer token authentication",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-external-anthropic:BearerTokenType"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CancelBatchInference",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel an in-progress batch inference request",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CountTokens",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to count tokens for a message request",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateBatchInference",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to create a batch inference request",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateFile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to upload a file to a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateInference",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to create a chat completion inference request",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateSkill",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to create a skill in a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateUserProfile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to create a user profile in a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateWorkspace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to create a workspace in an organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteBatchInference",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a batch inference request",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteFile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a file from a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteSkill",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a skill from a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetAccountStatus",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the status of account setup and AWS Marketplace registration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetBatchInference",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a batch inference request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetFile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a file or its content from a workspace",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetModel",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve information about a specific model",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetSkill",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a skill or its versions",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetUserProfile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a user profile",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetWorkspace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a workspace",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListBatchInferences",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list batch inference requests in a workspace",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListFiles",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list files in a workspace",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListModels",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list available models in a workspace",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListSkills",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list skills in a workspace",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListUserProfiles",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list user profiles in a workspace",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListWorkspaces",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list workspaces in an organization",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateSkill",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to create or delete a skill version",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateUserProfile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to update a user profile in a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateWorkspace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to update a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "workspace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#Workspace",
+        "arnPattern": "arn:${Partition}:aws-external-anthropic:${Region}:${Account}:workspace/${ResourceId}",
+        "conditionKeys": []
+      }
+    ],
+    "conditionKeys": [
+      {
+        "name": "aws-external-anthropic:BearerTokenType",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/",
+        "description": "Filters access by the Short-term or Long-term bearer tokens",
+        "type": "String"
+      },
+      {
+        "name": "aws-external-anthropic:Capability",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/",
+        "description": "Filters access by the Claude Platform role used for the console session",
+        "type": "String"
+      }
+    ]
+  },
+  {
     "name": "AWS Clean Rooms",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awscleanrooms.html",
     "servicePrefix": "cleanrooms",
@@ -166243,6 +166726,40 @@
         ]
       },
       {
+        "name": "CreateDaemon",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateDaemon.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new daemon in a specified cluster",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "daemon",
+            "required": true,
+            "conditionKeys": [
+              "ecs:cluster",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "ecs:capacity-provider",
+              "ecs:daemon-task-definition",
+              "ecs:enable-ecs-managed-tags",
+              "ecs:enable-execute-command",
+              "ecs:propagate-tags",
+              "ecs:task-cpu",
+              "ecs:task-memory"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateExpressGatewayService",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateExpressGatewayService.html",
         "permissionOnly": false,
@@ -166419,6 +166936,41 @@
         "resourceTypes": [
           {
             "resourceType": "cluster",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteDaemon",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteDaemon.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a specified daemon within a cluster",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "daemon",
+            "required": true,
+            "conditionKeys": [
+              "ecs:cluster",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteDaemonTaskDefinition",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteDaemonTaskDefinition.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the specified daemon task definition",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "daemon-task-definition",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -166608,6 +167160,97 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ecs:cluster"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeDaemon",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeDaemon.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe the specified daemon running in your cluster",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "daemon",
+            "required": true,
+            "conditionKeys": [
+              "ecs:cluster",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeDaemonDeployments",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeDaemonDeployments.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe one or more of your daemon deployments",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "daemon",
+            "required": true,
+            "conditionKeys": [
+              "ecs:cluster",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "daemon-deployment",
+            "required": true,
+            "conditionKeys": [
+              "ecs:cluster",
+              "ecs:daemon",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeDaemonRevisions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeDaemonRevisions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe one or more of your daemon revisions",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "daemon",
+            "required": true,
+            "conditionKeys": [
+              "ecs:cluster",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "daemon-revision",
+            "required": true,
+            "conditionKeys": [
+              "ecs:cluster",
+              "ecs:daemon",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeDaemonTaskDefinition",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeDaemonTaskDefinition.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe a daemon task definition",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "daemon-task-definition",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -166905,6 +167548,56 @@
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListDaemonDeployments",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListDaemonDeployments.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a list of daemon deployments for a specified daemon",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "daemon",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListDaemonTaskDefinitions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListDaemonTaskDefinitions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a list of daemon task definitions that are registered to your account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListDaemons",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListDaemons.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a list of daemons that are running in a specified cluster",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ecs:cluster"
             ],
             "dependentActions": []
           }
@@ -167235,6 +167928,35 @@
         ]
       },
       {
+        "name": "RegisterDaemonTaskDefinition",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RegisterDaemonTaskDefinition.html",
+        "permissionOnly": false,
+        "description": "Grants permission to register a new daemon task definition from the supplied family and containerDefinitions",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "daemon-task-definition",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "ecs:privileged",
+              "ecs:task-cpu",
+              "ecs:task-memory"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "RegisterTaskDefinition",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_RegisterTaskDefinition.html",
         "permissionOnly": false,
@@ -167478,6 +168200,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "daemon",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "daemon-task-definition",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "service",
             "required": false,
             "conditionKeys": [],
@@ -167535,6 +168269,18 @@
           },
           {
             "resourceType": "container-instance",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "daemon",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "daemon-task-definition",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -167684,6 +168430,38 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ecs:cluster"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateDaemon",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_UpdateDaemon.html",
+        "permissionOnly": false,
+        "description": "Grants permission to modify the parameters of a daemon",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "daemon",
+            "required": true,
+            "conditionKeys": [
+              "ecs:cluster",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ecs:capacity-provider",
+              "ecs:daemon-task-definition",
+              "ecs:enable-ecs-managed-tags",
+              "ecs:enable-execute-command",
+              "ecs:propagate-tags",
+              "ecs:task-cpu",
+              "ecs:task-memory"
             ],
             "dependentActions": []
           }
@@ -167880,6 +168658,43 @@
         ]
       },
       {
+        "name": "daemon",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_daemons.html",
+        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:daemon/${ClusterName}/${DaemonName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:cluster"
+        ]
+      },
+      {
+        "name": "daemon-deployment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/daemon-deployment.html",
+        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:daemon-deployment/${ClusterName}/${DaemonName}/${DaemonDeploymentId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:cluster",
+          "ecs:daemon"
+        ]
+      },
+      {
+        "name": "daemon-revision",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/daemon-revision.html",
+        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:daemon-revision/${ClusterName}/${DaemonName}/${DaemonRevisionId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:cluster",
+          "ecs:daemon"
+        ]
+      },
+      {
+        "name": "daemon-task-definition",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/daemon-task-definitions.html",
+        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:daemon-task-definition/${DaemonTaskDefinitionFamilyName}:${DaemonTaskDefinitionRevisionNumber}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "task",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html",
         "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:task/${ClusterName}/${TaskId}",
@@ -167988,6 +168803,18 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
         "description": "Filters access by the name of an Amazon ECS container which is defined in the ECS task definition",
         "type": "String"
+      },
+      {
+        "name": "ecs:daemon",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "description": "Filters access by the ARN of an Amazon ECS daemon",
+        "type": "ARN"
+      },
+      {
+        "name": "ecs:daemon-task-definition",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "description": "Filters access by the ARN of an Amazon ECS daemon task definition",
+        "type": "ARN"
       },
       {
         "name": "ecs:enable-ebs-volumes",
@@ -217790,6 +218617,21 @@
         ]
       },
       {
+        "name": "DescribeFHIRBulkMemberMatchJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/healthlake/latest/devguide/reference-fhir-operations-bulk-member-match.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe a FHIR Bulk Member Match Job",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "datastore",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DescribeFHIRDatastore",
         "apiReferenceUrl": "https://docs.aws.amazon.com/healthlake/latest/APIReference/API_DescribeFHIRDatastore.html",
         "permissionOnly": false,
@@ -218229,6 +219071,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/healthlake/latest/devguide/reference-fhir-operations-bulk-delete.html",
         "permissionOnly": false,
         "description": "Grants permission to begin a FHIR Bulk Delete Job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "datastore",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StartFHIRBulkMemberMatchJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/healthlake/latest/devguide/reference-fhir-operations-bulk-member-match.html",
+        "permissionOnly": false,
+        "description": "Grants permission to begin a FHIR Bulk Member Match Job",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -364141,6 +364998,33 @@
         ]
       },
       {
+        "name": "GetMetricsConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketMetricsConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a metrics configuration of a directory bucket",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "bucket",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3express:authType",
+              "s3express:ResourceAccount",
+              "s3express:signatureversion",
+              "s3express:TlsVersion",
+              "s3express:x-amz-content-sha256"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListAccessPointsForDirectoryBuckets",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_ListAccessPointsForDirectoryBuckets.html",
         "permissionOnly": false,
@@ -364334,6 +365218,33 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html",
         "permissionOnly": false,
         "description": "Grants permission to create a new lifecycle configuration for the directory bucket or replace an existing lifecycle configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "bucket",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3express:authType",
+              "s3express:ResourceAccount",
+              "s3express:signatureversion",
+              "s3express:TlsVersion",
+              "s3express:x-amz-content-sha256"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PutMetricsConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketMetricsConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to set or update a metrics configuration for the CloudWatch request metrics of a directory bucket",
         "accessLevel": "Write",
         "resourceTypes": [
           {

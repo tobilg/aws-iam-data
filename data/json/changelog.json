@@ -1,5 +1,69 @@
 [
   {
+    "dateOfChange": "2026-04-02",
+    "addedServices": [
+      "Claude Platform on AWS"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Elastic Container Service": [
+        "ecs:CreateDaemon",
+        "ecs:DeleteDaemon",
+        "ecs:DeleteDaemonTaskDefinition",
+        "ecs:DescribeDaemon",
+        "ecs:DescribeDaemonDeployments",
+        "ecs:DescribeDaemonRevisions",
+        "ecs:DescribeDaemonTaskDefinition",
+        "ecs:ListDaemonDeployments",
+        "ecs:ListDaemonTaskDefinitions",
+        "ecs:ListDaemons",
+        "ecs:RegisterDaemonTaskDefinition",
+        "ecs:UpdateDaemon"
+      ],
+      "AWS HealthLake": [
+        "healthlake:DescribeFHIRBulkMemberMatchJob",
+        "healthlake:StartFHIRBulkMemberMatchJob"
+      ],
+      "Amazon S3 Express": [
+        "s3express:GetMetricsConfiguration",
+        "s3express:PutMetricsConfiguration"
+      ],
+      "Claude Platform on AWS": [
+        "aws-external-anthropic:ArchiveWorkspace",
+        "aws-external-anthropic:AssumeConsole",
+        "aws-external-anthropic:CallWithBearerToken",
+        "aws-external-anthropic:CancelBatchInference",
+        "aws-external-anthropic:CountTokens",
+        "aws-external-anthropic:CreateBatchInference",
+        "aws-external-anthropic:CreateFile",
+        "aws-external-anthropic:CreateInference",
+        "aws-external-anthropic:CreateSkill",
+        "aws-external-anthropic:CreateUserProfile",
+        "aws-external-anthropic:CreateWorkspace",
+        "aws-external-anthropic:DeleteBatchInference",
+        "aws-external-anthropic:DeleteFile",
+        "aws-external-anthropic:DeleteSkill",
+        "aws-external-anthropic:GetAccountStatus",
+        "aws-external-anthropic:GetBatchInference",
+        "aws-external-anthropic:GetFile",
+        "aws-external-anthropic:GetModel",
+        "aws-external-anthropic:GetSkill",
+        "aws-external-anthropic:GetUserProfile",
+        "aws-external-anthropic:GetWorkspace",
+        "aws-external-anthropic:ListBatchInferences",
+        "aws-external-anthropic:ListFiles",
+        "aws-external-anthropic:ListModels",
+        "aws-external-anthropic:ListSkills",
+        "aws-external-anthropic:ListUserProfiles",
+        "aws-external-anthropic:ListWorkspaces",
+        "aws-external-anthropic:UpdateSkill",
+        "aws-external-anthropic:UpdateUserProfile",
+        "aws-external-anthropic:UpdateWorkspace"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-04-01",
     "addedServices": [],
     "removedServices": [],
