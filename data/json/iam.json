@@ -40078,6 +40078,40 @@
         ]
       },
       {
+        "name": "AssociateCustomizedModel",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to associate a customized model with a project",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "customized-model",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "bedrock-mantle:ProjectArn",
+              "bedrock-mantle:CustomizedModelArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CallWithBearerToken",
         "apiReferenceUrl": "#welcome",
         "permissionOnly": true,
@@ -40131,6 +40165,32 @@
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateCustomizedModel",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to import a customized model with custom weights",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "customized-model",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
             ],
             "dependentActions": []
           }
@@ -40232,6 +40292,59 @@
         ]
       },
       {
+        "name": "CreateReservation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to create a capacity reservation for a model",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "reservation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "bedrock-mantle:ProjectArn",
+              "bedrock-mantle:ReservationArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteCustomizedModel",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a customized model",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "customized-model",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteFile",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
         "permissionOnly": false,
@@ -40265,6 +40378,91 @@
         "resourceTypes": [
           {
             "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteReservation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a capacity reservation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "reservation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "bedrock-mantle:ProjectArn",
+              "bedrock-mantle:ReservationArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DisassociateCustomizedModel",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate a customized model from a project",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "customized-model",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "bedrock-mantle:ProjectArn",
+              "bedrock-mantle:CustomizedModelArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetCustomizedModel",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to get customized model",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "customized-model",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -40375,6 +40573,53 @@
         ]
       },
       {
+        "name": "GetReservation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to get reservation",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "reservation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListCustomizedModelAssociations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list project associations for a customized model",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "customized-model",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListCustomizedModels",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list customized models",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "customized-model",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListFiles",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
         "permissionOnly": false,
@@ -40441,6 +40686,21 @@
         ]
       },
       {
+        "name": "ListReservations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list reservations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "reservation",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListTagsForResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
         "permissionOnly": false,
@@ -40448,7 +40708,23 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
+            "resourceType": "customized-model",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "project",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "reservation",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -40465,7 +40741,23 @@
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
+            "resourceType": "customized-model",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "project",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "reservation",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -40491,7 +40783,23 @@
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
+            "resourceType": "customized-model",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "project",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "reservation",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -40524,6 +40832,40 @@
             "dependentActions": []
           }
         ]
+      },
+      {
+        "name": "UpdateReservation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to update reservation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "reservation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "bedrock-mantle:ProjectArn",
+              "bedrock-mantle:ReservationArn"
+            ],
+            "dependentActions": []
+          }
+        ]
       }
     ],
     "resourceTypes": [
@@ -40531,6 +40873,22 @@
         "name": "project",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-mantle.html#Project",
         "arnPattern": "arn:${Partition}:bedrock-mantle:${Region}:${Account}:project/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "customized-model",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-mantle.html#CustomizedModel",
+        "arnPattern": "arn:${Partition}:bedrock-mantle:${Region}:${Account}:customized-model/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "reservation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/userguide/bedrock-mantle.html#Reservation",
+        "arnPattern": "arn:${Partition}:bedrock-mantle:${Region}:${Account}:reservation/${ResourceId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -40562,6 +40920,12 @@
         "type": "String"
       },
       {
+        "name": "bedrock-mantle:CustomizedModelArn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockmantle.html#amazonbedrockmantle-policy-keys",
+        "description": "Filters access by the ARN of the customized model being associated or referenced in cross-resource operations",
+        "type": "String"
+      },
+      {
         "name": "bedrock-mantle:Files",
         "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockmantle.html#amazonbedrockmantle-policy-keys",
         "description": "Filters access by the specified file identifiers",
@@ -40577,6 +40941,18 @@
         "name": "bedrock-mantle:Model",
         "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockmantle.html#amazonbedrockmantle-policy-keys",
         "description": "Filters access by the specified Model",
+        "type": "String"
+      },
+      {
+        "name": "bedrock-mantle:ProjectArn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockmantle.html#amazonbedrockmantle-policy-keys",
+        "description": "Filters access by the ARN of the project being associated or referenced in cross-resource operations",
+        "type": "String"
+      },
+      {
+        "name": "bedrock-mantle:ReservationArn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockmantle.html#amazonbedrockmantle-policy-keys",
+        "description": "Filters access by the ARN of the reservation being referenced in cross-resource operations",
         "type": "String"
       },
       {
@@ -110540,6 +110916,15 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -110993,6 +111378,12 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
+            "resourceType": "assets",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "data-grants",
             "required": false,
             "conditionKeys": [],
@@ -111139,6 +111530,12 @@
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
+            "resourceType": "assets",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "data-grants",
             "required": false,
             "conditionKeys": [],
@@ -111180,6 +111577,12 @@
         "description": "Grants permission to remove one or more tags from a specified resource",
         "accessLevel": "Tagging",
         "resourceTypes": [
+          {
+            "resourceType": "assets",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
           {
             "resourceType": "data-grants",
             "required": false,
@@ -111319,7 +111722,9 @@
         "name": "assets",
         "apiReferenceUrl": "https://docs.aws.amazon.com/data-exchange/latest/userguide/data-sets.html#assets",
         "arnPattern": "arn:${Partition}:dataexchange:${Region}:${Account}:data-sets/${DataSetId}/revisions/${RevisionId}/assets/${AssetId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "entitled-assets",
