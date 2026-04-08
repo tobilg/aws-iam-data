@@ -1,5 +1,59 @@
 [
   {
+    "dateOfChange": "2026-04-08",
+    "addedServices": [
+      "Amazon S3 Files"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:CreateDataAutomationLibrary",
+        "bedrock:DeleteDataAutomationLibrary",
+        "bedrock:GetDataAutomationLibrary",
+        "bedrock:GetDataAutomationLibraryEntity",
+        "bedrock:GetDataAutomationLibraryIngestionJob",
+        "bedrock:InvokeDataAutomationLibraryIngestionJob",
+        "bedrock:ListDataAutomationLibraries",
+        "bedrock:ListDataAutomationLibraryEntities",
+        "bedrock:ListDataAutomationLibraryIngestionJobs",
+        "bedrock:UpdateDataAutomationLibrary"
+      ],
+      "AWS Glue": [
+        "glue:ManagedConnector"
+      ],
+      "AWS Transform": [
+        "transform:GetWebAppUrl"
+      ],
+      "Amazon S3 Files": [
+        "s3files:ClientMount",
+        "s3files:ClientRootAccess",
+        "s3files:ClientWrite",
+        "s3files:CreateAccessPoint",
+        "s3files:CreateFileSystem",
+        "s3files:CreateMountTarget",
+        "s3files:DeleteAccessPoint",
+        "s3files:DeleteFileSystem",
+        "s3files:DeleteFileSystemPolicy",
+        "s3files:DeleteMountTarget",
+        "s3files:GetAccessPoint",
+        "s3files:GetFileSystem",
+        "s3files:GetFileSystemPolicy",
+        "s3files:GetMountTarget",
+        "s3files:GetSynchronizationConfiguration",
+        "s3files:ListAccessPoints",
+        "s3files:ListFileSystems",
+        "s3files:ListMountTargets",
+        "s3files:ListTagsForResource",
+        "s3files:PutFileSystemPolicy",
+        "s3files:PutSynchronizationConfiguration",
+        "s3files:TagResource",
+        "s3files:UntagResource",
+        "s3files:UpdateMountTarget"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-04-03",
     "addedServices": [],
     "removedServices": [],

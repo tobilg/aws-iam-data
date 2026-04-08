@@ -1,5 +1,5 @@
 {
-  "serviceCount": 466,
+  "serviceCount": 467,
   "services": [
     {
       "name": "AWS Account Management",
@@ -2469,7 +2469,7 @@
       "name": "Amazon Bedrock",
       "servicePrefix": "bedrock",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html",
-      "actionsCount": 235,
+      "actionsCount": 245,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "ApplyGuardrail",
@@ -2491,6 +2491,7 @@
         "CreateBlueprintVersion",
         "CreateCustomModel",
         "CreateCustomModelDeployment",
+        "CreateDataAutomationLibrary",
         "CreateDataAutomationProject",
         "CreateDataSource",
         "CreateEvaluationJob",
@@ -2525,6 +2526,7 @@
         "DeleteBlueprint",
         "DeleteCustomModel",
         "DeleteCustomModelDeployment",
+        "DeleteDataAutomationLibrary",
         "DeleteDataAutomationProject",
         "DeleteDataSource",
         "DeleteEnforcedGuardrailConfiguration",
@@ -2572,6 +2574,9 @@
         "GetBlueprintRecommendation",
         "GetCustomModel",
         "GetCustomModelDeployment",
+        "GetDataAutomationLibrary",
+        "GetDataAutomationLibraryEntity",
+        "GetDataAutomationLibraryIngestionJob",
         "GetDataAutomationProject",
         "GetDataAutomationStatus",
         "GetDataSource",
@@ -2611,6 +2616,7 @@
         "InvokeBuilder",
         "InvokeDataAutomation",
         "InvokeDataAutomationAsync",
+        "InvokeDataAutomationLibraryIngestionJob",
         "InvokeFlow",
         "InvokeInlineAgent",
         "InvokeModel",
@@ -2630,6 +2636,9 @@
         "ListBlueprints",
         "ListCustomModelDeployments",
         "ListCustomModels",
+        "ListDataAutomationLibraries",
+        "ListDataAutomationLibraryEntities",
+        "ListDataAutomationLibraryIngestionJobs",
         "ListDataAutomationProjects",
         "ListDataSources",
         "ListEnforcedGuardrailsConfiguration",
@@ -2695,6 +2704,7 @@
         "UpdateAutomatedReasoningPolicyTestCase",
         "UpdateBlueprint",
         "UpdateCustomModelDeployment",
+        "UpdateDataAutomationLibrary",
         "UpdateDataAutomationProject",
         "UpdateDataSource",
         "UpdateFlow",
@@ -2707,7 +2717,7 @@
         "UpdateSession",
         "ValidateFlowDefinition"
       ],
-      "resourceTypesCount": 36,
+      "resourceTypesCount": 38,
       "resourceTypes": [
         "foundation-model",
         "system-tool",
@@ -2743,6 +2753,8 @@
         "blueprint-optimization-invocation",
         "data-automation-invocation-job",
         "data-automation-profile",
+        "data-automation-library",
+        "data-automation-library-ingestion-job",
         "session",
         "custom-model-deployment"
       ],
@@ -14134,7 +14146,7 @@
       "name": "AWS Glue",
       "servicePrefix": "glue",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsglue.html",
-      "actionsCount": 301,
+      "actionsCount": 302,
       "actions": [
         "AuthorizeInboundIntegration",
         "BatchCreatePartition",
@@ -14353,6 +14365,7 @@
         "ListTriggers",
         "ListUsageProfiles",
         "ListWorkflows",
+        "ManagedConnector",
         "ModifyIntegration",
         "NotifyEvent",
         "PassConnection",
@@ -25830,6 +25843,51 @@
       ]
     },
     {
+      "name": "Amazon S3 Files",
+      "servicePrefix": "s3files",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3files.html",
+      "actionsCount": 24,
+      "actions": [
+        "ClientMount",
+        "ClientRootAccess",
+        "ClientWrite",
+        "CreateAccessPoint",
+        "CreateFileSystem",
+        "CreateMountTarget",
+        "DeleteAccessPoint",
+        "DeleteFileSystem",
+        "DeleteFileSystemPolicy",
+        "DeleteMountTarget",
+        "GetAccessPoint",
+        "GetFileSystem",
+        "GetFileSystemPolicy",
+        "GetMountTarget",
+        "GetSynchronizationConfiguration",
+        "ListAccessPoints",
+        "ListFileSystems",
+        "ListMountTargets",
+        "ListTagsForResource",
+        "PutFileSystemPolicy",
+        "PutSynchronizationConfiguration",
+        "TagResource",
+        "UntagResource",
+        "UpdateMountTarget"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "file-system",
+        "access-point"
+      ],
+      "conditionKeysCount": 5,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys",
+        "s3files:AccessPointArn",
+        "s3files:CreateAction"
+      ]
+    },
+    {
       "name": "Amazon S3 Glacier",
       "servicePrefix": "glacier",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3glacier.html",
@@ -29832,7 +29890,7 @@
       "name": "AWS Transform",
       "servicePrefix": "transform",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstransform.html",
-      "actionsCount": 20,
+      "actionsCount": 21,
       "actions": [
         "AssociateConnectorResource",
         "CreateProfile",
@@ -29843,6 +29901,7 @@
         "GetAgent",
         "GetAgentRuntimeConfiguration",
         "GetConnector",
+        "GetWebAppUrl",
         "ListAgents",
         "ListConnectors",
         "ListProfiles",

@@ -32285,6 +32285,24 @@
         ]
       },
       {
+        "name": "CreateDataAutomationLibrary",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_CreateDataAutomationLibrary.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a Data Automation Library",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateDataAutomationProject",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_CreateDataAutomationProject.html",
         "permissionOnly": false,
@@ -32293,6 +32311,12 @@
         "resourceTypes": [
           {
             "resourceType": "blueprint",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "data-automation-library",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -33001,6 +33025,21 @@
         "resourceTypes": [
           {
             "resourceType": "custom-model-deployment",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteDataAutomationLibrary",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_DeleteDataAutomationLibrary.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a Data Automation Library",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "data-automation-library",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -33755,6 +33794,57 @@
         ]
       },
       {
+        "name": "GetDataAutomationLibrary",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_GetDataAutomationLibrary.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an existing Data Automation Library",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "data-automation-library",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetDataAutomationLibraryEntity",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_GetDataAutomationLibraryEntity.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a Data Automation Library entity",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "data-automation-library",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetDataAutomationLibraryIngestionJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_GetDataAutomationLibraryIngestionJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get details about a Data Automation Library ingestion job",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "data-automation-library",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "data-automation-library-ingestion-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetDataAutomationProject",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_GetDataAutomationProject.html",
         "permissionOnly": false,
@@ -34448,6 +34538,30 @@
         ]
       },
       {
+        "name": "InvokeDataAutomationLibraryIngestionJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_InvokeDataAutomationLibraryIngestionJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke a Data Automation Library ingestion job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "data-automation-library",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "InvokeFlow",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeFlow.html",
         "permissionOnly": false,
@@ -34861,6 +34975,51 @@
         ]
       },
       {
+        "name": "ListDataAutomationLibraries",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_ListDataAutomationLibraries.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list Data Automation Libraries",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "data-automation-project",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListDataAutomationLibraryEntities",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_ListDataAutomationLibraryEntities.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list Data Automation Library entities",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "data-automation-library",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListDataAutomationLibraryIngestionJobs",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_ListDataAutomationLibraryIngestionJobs.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list Data Automation Library ingestion jobs",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "data-automation-library",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListDataAutomationProjects",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_ListDataAutomationProjects.html",
         "permissionOnly": false,
@@ -34869,6 +35028,12 @@
         "resourceTypes": [
           {
             "resourceType": "blueprint",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "data-automation-project",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -35382,6 +35547,18 @@
           },
           {
             "resourceType": "data-automation-invocation-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "data-automation-library",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "data-automation-library-ingestion-job",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -35954,6 +36131,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "data-automation-library",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "data-automation-library-ingestion-job",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "data-automation-project",
             "required": false,
             "conditionKeys": [],
@@ -36135,6 +36324,18 @@
           },
           {
             "resourceType": "data-automation-invocation-job",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "data-automation-library",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "data-automation-library-ingestion-job",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -36414,6 +36615,21 @@
         ]
       },
       {
+        "name": "UpdateDataAutomationLibrary",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_UpdateDataAutomationLibrary.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a Data Automation Library",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "data-automation-library",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateDataAutomationProject",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_data-automation_UpdateDataAutomationProject.html",
         "permissionOnly": false,
@@ -36428,6 +36644,12 @@
           },
           {
             "resourceType": "blueprint",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "data-automation-project",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -36871,6 +37093,22 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/welcome.html",
         "arnPattern": "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-profile/${ProfileId}",
         "conditionKeys": []
+      },
+      {
+        "name": "data-automation-library",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/welcome.html",
+        "arnPattern": "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-library/${DataAutomationLibraryId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "data-automation-library-ingestion-job",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/welcome.html",
+        "arnPattern": "arn:${Partition}:bedrock:${Region}:${Account}:data-automation-library-ingestion-job/${IngestionJobId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "session",
@@ -212306,6 +212544,21 @@
         ]
       },
       {
+        "name": "ManagedConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/glue-connections.html#connection-type-permissions-operations",
+        "permissionOnly": false,
+        "description": "Grants permission to use Glue managed connectors to query data",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ModifyIntegration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-integrations.html#aws-glue-api-integrations-ModifyIntegration",
         "permissionOnly": false,
@@ -273577,6 +273830,15 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -273848,6 +274110,12 @@
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
+            "resourceType": "Alarm",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Bucket",
             "required": false,
             "conditionKeys": [],
@@ -273985,6 +274253,12 @@
         "description": "Grants permission to untag a resource",
         "accessLevel": "Tagging",
         "resourceTypes": [
+          {
+            "resourceType": "Alarm",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
           {
             "resourceType": "Bucket",
             "required": false,
@@ -274339,7 +274613,9 @@
         "name": "Alarm",
         "apiReferenceUrl": "https://docs.aws.amazon.com/lightsail/2016-11-28/api-reference/API_Alarm.html",
         "arnPattern": "arn:${Partition}:lightsail:${Region}:${Account}:Alarm/${Id}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "Certificate",
@@ -365886,6 +366162,495 @@
     ]
   },
   {
+    "name": "Amazon S3 Files",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3files.html",
+    "servicePrefix": "s3files",
+    "actions": [
+      {
+        "name": "ClientMount",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/s3files-client-authorization.html",
+        "permissionOnly": true,
+        "description": "Grants permission to allow an NFS client read-access to a file system",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3files:AccessPointArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ClientRootAccess",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/s3files-client-authorization.html",
+        "permissionOnly": true,
+        "description": "Grants permission to allow an NFS client root-access to a file system",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3files:AccessPointArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ClientWrite",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/s3files-client-authorization.html",
+        "permissionOnly": true,
+        "description": "Grants permission to allow an NFS client write-access to a file system",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3files:AccessPointArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateAccessPoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_CreateAccessPoint.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an access point for the specified file system",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:TagKeys",
+              "aws:RequestTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateFileSystem",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_CreateFileSystem.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new file system",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateMountTarget",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_CreateMountTarget.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a mount target for a file system",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteAccessPoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_DeleteAccessPoint.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a specified access point",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "access-point",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteFileSystem",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_DeleteFileSystem.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a specified file system",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteFileSystemPolicy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_DeleteFileSystemPolicy.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the IAM resource policy for a specified file system",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteMountTarget",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_DeleteMountTarget.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a specified mount target",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetAccessPoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_GetAccessPoint.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get resource information for a specified access point",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "access-point",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetFileSystem",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_GetFileSystem.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get resource information for a specified file system",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetFileSystemPolicy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_GetFileSystemPolicy.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get the IAM resource policy for a specified file system",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetMountTarget",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_GetMountTarget.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get resource information for a specified mount target",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetSynchronizationConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_GetSynchronizationConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a synchronization configuration for a specified file system",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAccessPoints",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_ListAccessPoints.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a paginated list of all access points in the account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "access-point",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListFileSystems",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_ListFileSystems.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a paginated list of all file systems in the account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListMountTargets",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_ListMountTargets.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a paginated list of all mount targets in the account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListTagsForResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_ListTagsForResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list tags for a specified S3 Files resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "access-point",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "file-system",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PutFileSystemPolicy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_PutFileSystemPolicy.html",
+        "permissionOnly": false,
+        "description": "Grants permission to add an IAM resource policy to a specified file system",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PutSynchronizationConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_PutSynchronizationConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to add a synchronization configuration to a specified file system",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "TagResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_TagResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to tag a specified S3 Files resource",
+        "accessLevel": "Tagging",
+        "resourceTypes": [
+          {
+            "resourceType": "access-point",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "file-system",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "s3files:CreateAction"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UntagResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_UntagResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to untag a specified S3 Files resource",
+        "accessLevel": "Tagging",
+        "resourceTypes": [
+          {
+            "resourceType": "access-point",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "file-system",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateMountTarget",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3Files_UpdateMountTarget.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update resource information for a specified mount target",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "file-system",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "file-system",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/creating-using-create-fs.html",
+        "arnPattern": "arn:${Partition}:s3files:${Region}:${Account}:file-system/${FileSystemId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "access-point",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/s3files-access-points.html",
+        "arnPattern": "arn:${Partition}:s3files:${Region}:${Account}:file-system/${FileSystemId}/access-point/${AccessPointId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      }
+    ],
+    "conditionKeys": [
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "description": "Filters access by the tags that are passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "description": "Filters access by the tags associated with the resource",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "description": "Filters access by the tag keys that are passed in the request",
+        "type": "ArrayOfString"
+      },
+      {
+        "name": "s3files:AccessPointArn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/s3files-access-points.html",
+        "description": "Filters access by the ARN of the access point used to mount the file system",
+        "type": "ARN"
+      },
+      {
+        "name": "s3files:CreateAction",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/using-tags-s3files.html",
+        "description": "Filters access by the name of a resource-creating API action",
+        "type": "String"
+      }
+    ]
+  },
+  {
     "name": "Amazon S3 Glacier",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3glacier.html",
     "servicePrefix": "glacier",
@@ -395789,13 +396554,17 @@
           {
             "resourceType": "mailmanager-ingress-point",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "mailmanager-rule-set",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -395807,6 +396576,14 @@
         "description": "Grants permission to create an addon instance",
         "accessLevel": "Write",
         "resourceTypes": [
+          {
+            "resourceType": "addon-instance",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "",
             "required": false,
@@ -395827,6 +396604,14 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "addon-subscription",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
@@ -395844,6 +396629,14 @@
         "description": "Grants permission to create an address list",
         "accessLevel": "Write",
         "resourceTypes": [
+          {
+            "resourceType": "mailmanager-address-list",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "",
             "required": false,
@@ -395880,6 +396673,14 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "mailmanager-archive",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
@@ -395898,6 +396699,18 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "mailmanager-ingress-point",
+            "required": true,
+            "conditionKeys": [
+              "ses:MailManagerIngressPointType",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "ec2:DescribeVpcEndpoints",
+              "iam:CreateServiceLinkedRole"
+            ]
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
@@ -395906,10 +396719,7 @@
               "ses:MailManagerRuleSetArn",
               "ses:MailManagerTrafficPolicyArn"
             ],
-            "dependentActions": [
-              "ec2:DescribeVpcEndpoints",
-              "iam:CreateServiceLinkedRole"
-            ]
+            "dependentActions": []
           }
         ]
       },
@@ -395920,6 +396730,14 @@
         "description": "Grants permission to create a SMTP relay",
         "accessLevel": "Write",
         "resourceTypes": [
+          {
+            "resourceType": "mailmanager-smtp-relay",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "",
             "required": false,
@@ -395939,6 +396757,16 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "mailmanager-rule-set",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
@@ -395956,6 +396784,14 @@
         "description": "Grants permission to create a traffic policy",
         "accessLevel": "Write",
         "resourceTypes": [
+          {
+            "resourceType": "mailmanager-traffic-policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "",
             "required": false,
@@ -395977,14 +396813,8 @@
           {
             "resourceType": "addon-instance",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396000,14 +396830,8 @@
           {
             "resourceType": "addon-subscription",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396040,14 +396864,8 @@
           {
             "resourceType": "mailmanager-archive",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396063,14 +396881,8 @@
           {
             "resourceType": "mailmanager-ingress-point",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396086,14 +396898,8 @@
           {
             "resourceType": "mailmanager-smtp-relay",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396109,14 +396915,8 @@
           {
             "resourceType": "mailmanager-rule-set",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396132,14 +396932,8 @@
           {
             "resourceType": "mailmanager-traffic-policy",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396172,14 +396966,8 @@
           {
             "resourceType": "addon-instance",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396195,14 +396983,8 @@
           {
             "resourceType": "addon-subscription",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396252,14 +397034,8 @@
           {
             "resourceType": "mailmanager-archive",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396275,7 +397051,9 @@
           {
             "resourceType": "mailmanager-archive",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -396290,7 +397068,9 @@
           {
             "resourceType": "mailmanager-archive",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -396305,7 +397085,9 @@
           {
             "resourceType": "mailmanager-archive",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -396320,7 +397102,9 @@
           {
             "resourceType": "mailmanager-archive",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -396335,7 +397119,9 @@
           {
             "resourceType": "mailmanager-archive",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -396350,14 +397136,8 @@
           {
             "resourceType": "mailmanager-ingress-point",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396390,14 +397170,8 @@
           {
             "resourceType": "mailmanager-smtp-relay",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396413,14 +397187,8 @@
           {
             "resourceType": "mailmanager-rule-set",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396436,14 +397204,8 @@
           {
             "resourceType": "mailmanager-traffic-policy",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396728,7 +397490,9 @@
           {
             "resourceType": "mailmanager-archive",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -396743,7 +397507,9 @@
           {
             "resourceType": "mailmanager-archive",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -396775,7 +397541,9 @@
           {
             "resourceType": "mailmanager-archive",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -396790,7 +397558,9 @@
           {
             "resourceType": "mailmanager-archive",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -396936,14 +397706,8 @@
           {
             "resourceType": "mailmanager-archive",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -396959,14 +397723,15 @@
           {
             "resourceType": "mailmanager-ingress-point",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
               "ses:MailManagerTrafficPolicyArn",
               "ses:MailManagerRuleSetArn"
             ],
@@ -396984,14 +397749,8 @@
           {
             "resourceType": "mailmanager-smtp-relay",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -397007,16 +397766,12 @@
           {
             "resourceType": "mailmanager-rule-set",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           }
         ]
       },
@@ -397030,14 +397785,8 @@
           {
             "resourceType": "mailmanager-traffic-policy",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "",
-            "required": false,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -420604,6 +421353,21 @@
           {
             "resourceType": "connector",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetWebAppUrl",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/security_iam_permissions.html",
+        "permissionOnly": true,
+        "description": "Grants permission to invoke GetWebAppUrl on AWS Transform",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
