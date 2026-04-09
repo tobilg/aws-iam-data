@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,11345
-Actions by type,Read Actions,5489
-Actions by type,List Actions,3437
+Actions by type,Write Actions,11346
+Actions by type,Read Actions,5498
+Actions by type,List Actions,3441
 Actions by type,Permissions Actions,396
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -44,13 +44,13 @@ Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}
 Most referenced resource ARNs,rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog,76
 Most referenced resource ARNs,mlflow-tracking-server - arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-tracking-server/${MlflowTrackingServerName},70
 Services with least actions,AWS Billing And Cost Management Recommended Actions,1
-Services with least actions,AWS Marketplace Seller Reporting,1
 Services with least actions,AWS Microservice Extractor for .NET,1
 Services with least actions,AWS PrivateLink,1
+Services with least actions,AWS Verified Access,1
 Services with least actions,AWS Action Recommendations,1
+Services with least actions,AWS Marketplace Seller Reporting,1
 Services with least actions,AWS Marketplace Reporting,1
 Services with least actions,AWS Marketplace Entitlement Service,1
-Services with least actions,AWS Marketplace Discovery,1
 Services with least actions,AWS Elemental Support Content,1
 Services with least actions,AWS CloudTrail Data,1
 Services with most actions,Amazon EC2,780
@@ -93,7 +93,7 @@ Shortest service prefixes,pi,2
 Shortest service prefixes,mq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,q,1
-Summary,Total number of distinct resource ARNS,2069
+Summary,Total number of distinct resource ARNS,2074
 Summary,Total number of distinct condition keys,1387
 Summary,Total number of services,467
 Summary,Average number of actions per service,44

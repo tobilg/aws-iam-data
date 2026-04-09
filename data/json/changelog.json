@@ -1,5 +1,33 @@
 [
   {
+    "dateOfChange": "2026-04-09",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Deadline Cloud": [
+        "deadline:GetMonitorSettings",
+        "deadline:UpdateMonitorSettings"
+      ],
+      "AWS Marketplace Discovery": [
+        "aws-marketplace:GetListing",
+        "aws-marketplace:GetOffer",
+        "aws-marketplace:GetOfferSet",
+        "aws-marketplace:GetOfferTerms",
+        "aws-marketplace:GetProduct",
+        "aws-marketplace:ListFulfillmentOptions",
+        "aws-marketplace:ListPurchaseOptions",
+        "aws-marketplace:SearchFacets",
+        "aws-marketplace:SearchListings"
+      ],
+      "Amazon WorkSpaces": [
+        "workspaces:GetTroubleshootingRecommendation",
+        "workspaces:InvokeTroubleshootingInvestigation",
+        "workspaces:ListTroubleshootingRecommendations"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-04-08",
     "addedServices": [
       "Amazon S3 Files"

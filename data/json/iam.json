@@ -121244,6 +121244,21 @@
         ]
       },
       {
+        "name": "GetMonitorSettings",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_GetMonitorSettings.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get settings for a monitor",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "monitor",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetQueue",
         "apiReferenceUrl": "https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_GetQueue.html",
         "permissionOnly": false,
@@ -122421,6 +122436,21 @@
               "sso:PutApplicationGrant",
               "sso:UpdateApplication"
             ]
+          }
+        ]
+      },
+      {
+        "name": "UpdateMonitorSettings",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_UpdateMonitorSettings.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update settings for a monitor",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "monitor",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -287239,6 +287269,96 @@
     "servicePrefix": "aws-marketplace",
     "actions": [
       {
+        "name": "GetListing",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve information about a listing",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Listing",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetOffer",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve information about an offer",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Offer",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetOfferSet",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve information about an offer set",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "OfferSet",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetOfferTerms",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve terms for an offer",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Offer",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetProduct",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve information about a product",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Product",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListFulfillmentOptions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list fulfillment options for a product",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Product",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListPrivateListings",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-offers-page.html",
         "permissionOnly": false,
@@ -287252,9 +287372,85 @@
             "dependentActions": []
           }
         ]
+      },
+      {
+        "name": "ListPurchaseOptions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list purchase options available to the buyer",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "PurchaseOption",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "SearchFacets",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve facet values for filtering listings",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Listing",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "SearchListings",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to search for product listings",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Listing",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
       }
     ],
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "Product",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "arnPattern": "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/product/${ProductId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "Listing",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "arnPattern": "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/listing/${ListingId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "Offer",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "arnPattern": "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/offer/${OfferId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "OfferSet",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "arnPattern": "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/offerSet/${OfferSetId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "PurchaseOption",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "arnPattern": "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/purchaseOption/${PurchaseOptionId}",
+        "conditionKeys": []
+      }
+    ],
     "conditionKeys": []
   },
   {
@@ -387242,6 +387438,7 @@
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
             "dependentActions": []
@@ -438549,6 +438746,21 @@
         ]
       },
       {
+        "name": "GetTroubleshootingRecommendation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/adminguide/workspaces-advisor.html",
+        "permissionOnly": true,
+        "description": "Grants permission to get troubleshooting recommendations",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspaceid",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ImportClientBranding",
         "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_ImportClientBranding.html",
         "permissionOnly": false,
@@ -438597,6 +438809,21 @@
         ]
       },
       {
+        "name": "InvokeTroubleshootingInvestigation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/adminguide/workspaces-advisor.html",
+        "permissionOnly": true,
+        "description": "Grants permission to invoke troubleshooting investigation",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspaceid",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListAccountLinks",
         "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_ListAccountLinks.html",
         "permissionOnly": false,
@@ -438621,6 +438848,21 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListTroubleshootingRecommendations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/adminguide/workspaces-advisor.html",
+        "permissionOnly": true,
+        "description": "Grants permission to list troubleshooting recommendations",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspaceid",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
