@@ -1,5 +1,29 @@
 [
   {
+    "dateOfChange": "2026-04-10",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:CreateRegistry",
+        "bedrock-agentcore:CreateRegistryRecord",
+        "bedrock-agentcore:DeleteRegistry",
+        "bedrock-agentcore:DeleteRegistryRecord",
+        "bedrock-agentcore:GetRegistry",
+        "bedrock-agentcore:GetRegistryRecord",
+        "bedrock-agentcore:InvokeRegistryMcp",
+        "bedrock-agentcore:ListRegistries",
+        "bedrock-agentcore:ListRegistryRecords",
+        "bedrock-agentcore:SearchRegistryRecords",
+        "bedrock-agentcore:SubmitRegistryRecordForApproval",
+        "bedrock-agentcore:UpdateRegistry",
+        "bedrock-agentcore:UpdateRegistryRecord",
+        "bedrock-agentcore:UpdateRegistryRecordStatus"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-04-09",
     "addedServices": [],
     "removedServices": [],

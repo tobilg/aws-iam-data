@@ -37683,6 +37683,36 @@
         ]
       },
       {
+        "name": "CreateRegistry",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreateRegistry.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new registry",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateRegistryRecord",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreateRegistryRecord.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new registry record",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "registry",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateWorkloadIdentity",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreateWorkloadIdentity.html",
         "permissionOnly": false,
@@ -37979,6 +38009,36 @@
         "resourceTypes": [
           {
             "resourceType": "policy-engine",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteRegistry",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeleteRegistry.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an existing registry",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "registry",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteRegistryRecord",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeleteRegistryRecord.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an existing registry record",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "registry-record",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -38406,6 +38466,36 @@
         ]
       },
       {
+        "name": "GetRegistry",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetRegistry.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an existing registry",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "registry",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetRegistryRecord",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetRegistryRecord.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an existing registry record",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "registry-record",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetResourceApiKey",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_GetResourceApiKey.html",
         "permissionOnly": false,
@@ -38752,6 +38842,21 @@
         "resourceTypes": [
           {
             "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "InvokeRegistryMcp",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/welcome.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke an MCP operation against an existing registry",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "registry",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -39146,6 +39251,36 @@
         ]
       },
       {
+        "name": "ListRegistries",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListRegistries.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list existing registries",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListRegistryRecords",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListRegistryRecords.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list existing registry records in a registry",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "registry",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListSessions",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_ListSessions.html",
         "permissionOnly": false,
@@ -39412,6 +39547,21 @@
         ]
       },
       {
+        "name": "SearchRegistryRecords",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_SearchRegistryRecords.html",
+        "permissionOnly": false,
+        "description": "Grants permission to search for registry records",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "registry",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "SetTokenVaultCMK",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_SetTokenVaultCMK.html",
         "permissionOnly": false,
@@ -39571,6 +39721,21 @@
           },
           {
             "resourceType": "runtime-endpoint",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "SubmitRegistryRecordForApproval",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_SubmitRegistryRecordForApproval.html",
+        "permissionOnly": false,
+        "description": "Grants permission to submit a registry record for approval",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "registry-record",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -40023,6 +40188,51 @@
         ]
       },
       {
+        "name": "UpdateRegistry",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdateRegistry.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an existing registry",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "registry",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateRegistryRecord",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdateRegistryRecord.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an existing registry record",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "registry-record",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateRegistryRecordStatus",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdateRegistryRecordStatus.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update the status of a registry record",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "registry-record",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateWorkloadIdentity",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdateWorkloadIdentity.html",
         "permissionOnly": false,
@@ -40185,6 +40395,18 @@
         "name": "policy-generation",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/policyGeneration.html",
         "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:policy-engine/${PolicyEngineId}/policy-generation/${PolicyGenerationId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "registry",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/registry.html",
+        "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:registry/${RegistryId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "registry-record",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/registryRecord.html",
+        "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:registry/${RegistryId}/record/${RecordId}",
         "conditionKeys": []
       }
     ],
@@ -71904,7 +72126,10 @@
               "aws:RequestTag/${TagKey}",
               "observabilityadmin:CentralizationSourceRegions",
               "observabilityadmin:CentralizationDestinationRegion",
-              "observabilityadmin:CentralizationBackupRegion"
+              "observabilityadmin:CentralizationBackupRegion",
+              "observabilityadmin:CentralizationRuleName",
+              "observabilityadmin:CentralizationSourceId",
+              "observabilityadmin:CentralizationDestinationAccount"
             ],
             "dependentActions": []
           }
@@ -71977,7 +72202,8 @@
             "required": false,
             "conditionKeys": [
               "aws:TagKeys",
-              "aws:RequestTag/${TagKey}"
+              "aws:RequestTag/${TagKey}",
+              "observabilityadmin:TargetRegions"
             ],
             "dependentActions": []
           }
@@ -72001,7 +72227,8 @@
             "required": false,
             "conditionKeys": [
               "aws:TagKeys",
-              "aws:RequestTag/${TagKey}"
+              "aws:RequestTag/${TagKey}",
+              "observabilityadmin:TargetRegions"
             ],
             "dependentActions": []
           }
@@ -72018,6 +72245,14 @@
             "resourceType": "organization-centralization-rule",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "observabilityadmin:CentralizationRuleName"
+            ],
             "dependentActions": []
           }
         ]
@@ -72093,6 +72328,14 @@
             "resourceType": "organization-centralization-rule",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "observabilityadmin:CentralizationRuleName"
+            ],
             "dependentActions": []
           }
         ]
@@ -72227,7 +72470,9 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "observabilityadmin:TargetRegions"
+            ],
             "dependentActions": []
           }
         ]
@@ -72242,7 +72487,9 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "observabilityadmin:TargetRegions"
+            ],
             "dependentActions": []
           }
         ]
@@ -72371,7 +72618,9 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "observabilityadmin:TargetRegions"
+            ],
             "dependentActions": []
           }
         ]
@@ -72386,7 +72635,9 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "observabilityadmin:TargetRegions"
+            ],
             "dependentActions": []
           }
         ]
@@ -72565,7 +72816,10 @@
             "conditionKeys": [
               "observabilityadmin:CentralizationSourceRegions",
               "observabilityadmin:CentralizationDestinationRegion",
-              "observabilityadmin:CentralizationBackupRegion"
+              "observabilityadmin:CentralizationBackupRegion",
+              "observabilityadmin:CentralizationRuleName",
+              "observabilityadmin:CentralizationSourceId",
+              "observabilityadmin:CentralizationDestinationAccount"
             ],
             "dependentActions": []
           }
@@ -72598,6 +72852,14 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "observabilityadmin:TargetRegions"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -72612,6 +72874,14 @@
             "resourceType": "organization-telemetry-rule",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "observabilityadmin:TargetRegions"
+            ],
             "dependentActions": []
           }
         ]
@@ -72700,10 +72970,28 @@
         "type": "String"
       },
       {
+        "name": "observabilityadmin:CentralizationDestinationAccount",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/reference_policies_condition-keys.htmlcondition-keys-observabilityadmin.html#condition-keys-centralizationdestinationaccount",
+        "description": "Filters access by the destination account that is passed in the request",
+        "type": "String"
+      },
+      {
         "name": "observabilityadmin:CentralizationDestinationRegion",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/reference_policies_condition-keys.htmlcondition-keys-observabilityadmin.html#condition-keys-centralizationdestinationregion",
         "description": "Filters access by the destination region that is passed in the request",
         "type": "String"
+      },
+      {
+        "name": "observabilityadmin:CentralizationRuleName",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/reference_policies_condition-keys.htmlcondition-keys-observabilityadmin.html#condition-keys-centralizationrulename",
+        "description": "Filters access by the name of the centralization rule that is passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "observabilityadmin:CentralizationSourceId",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/reference_policies_condition-keys.htmlcondition-keys-observabilityadmin.html#condition-keys-centralizationsourceid",
+        "description": "Filters access by the source account, organizational unit, or organization IDs that is passed in the request",
+        "type": "ArrayOfString"
       },
       {
         "name": "observabilityadmin:CentralizationSourceRegions",
@@ -72715,6 +73003,12 @@
         "name": "observabilityadmin:SourceType",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/reference_policies_condition-keys.htmlcondition-keys-observabilityadmin.html#condition-keys-sourcetype",
         "description": "Filters access by the source type that is passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "observabilityadmin:TargetRegions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/reference_policies_condition-keys.htmlcondition-keys-observabilityadmin.html#condition-keys-targetregions",
+        "description": "Filters access by the regions that are targetted by the request",
         "type": "String"
       }
     ]
@@ -167361,10 +167655,10 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
-              "ecs:propagate-tags",
-              "ecs:instance-metadata-tags-propagation",
               "aws:RequestTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "ecs:instance-metadata-tags-propagation",
+              "ecs:propagate-tags"
             ],
             "dependentActions": []
           }
@@ -167409,8 +167703,8 @@
             "resourceType": "daemon",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           },
@@ -167443,8 +167737,8 @@
             "resourceType": "service",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": [
               "ecs:RegisterTaskDefinition",
@@ -167457,11 +167751,11 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
-              "ecs:task-definition",
-              "ecs:subnet",
               "ecs:enable-ecs-managed-tags",
               "ecs:propagate-tags",
+              "ecs:subnet",
               "ecs:task-cpu",
+              "ecs:task-definition",
               "ecs:task-memory"
             ],
             "dependentActions": []
@@ -167479,8 +167773,8 @@
             "resourceType": "service",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           },
@@ -167490,18 +167784,18 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
+              "ecs:auto-assign-public-ip",
               "ecs:capacity-provider",
-              "ecs:task-definition",
               "ecs:enable-ebs-volumes",
+              "ecs:enable-ecs-managed-tags",
               "ecs:enable-execute-command",
               "ecs:enable-service-connect",
-              "ecs:namespace",
               "ecs:enable-vpc-lattice",
-              "ecs:enable-ecs-managed-tags",
+              "ecs:namespace",
               "ecs:propagate-tags",
-              "ecs:auto-assign-public-ip",
               "ecs:subnet",
               "ecs:task-cpu",
+              "ecs:task-definition",
               "ecs:task-memory"
             ],
             "dependentActions": []
@@ -167527,8 +167821,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
-              "ecs:cluster",
               "ecs:capacity-provider",
+              "ecs:cluster",
               "ecs:service",
               "ecs:task-definition"
             ],
@@ -167628,8 +167922,8 @@
             "resourceType": "daemon",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           }
@@ -167663,8 +167957,8 @@
             "resourceType": "service",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           }
@@ -167849,8 +168143,8 @@
             "resourceType": "daemon",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           }
@@ -167867,8 +168161,8 @@
             "resourceType": "daemon",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           },
@@ -167876,9 +168170,9 @@
             "resourceType": "daemon-deployment",
             "required": true,
             "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
               "ecs:cluster",
-              "ecs:daemon",
-              "aws:ResourceTag/${TagKey}"
+              "ecs:daemon"
             ],
             "dependentActions": []
           }
@@ -167895,8 +168189,8 @@
             "resourceType": "daemon",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           },
@@ -167904,9 +168198,9 @@
             "resourceType": "daemon-revision",
             "required": true,
             "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
               "ecs:cluster",
-              "ecs:daemon",
-              "aws:ResourceTag/${TagKey}"
+              "ecs:daemon"
             ],
             "dependentActions": []
           }
@@ -167940,8 +168234,8 @@
             "resourceType": "service",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           }
@@ -167958,8 +168252,8 @@
             "resourceType": "service",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           },
@@ -167967,9 +168261,9 @@
             "resourceType": "service-deployment",
             "required": true,
             "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
               "ecs:cluster",
-              "ecs:service",
-              "aws:ResourceTag/${TagKey}"
+              "ecs:service"
             ],
             "dependentActions": []
           }
@@ -167986,8 +168280,8 @@
             "resourceType": "service",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           },
@@ -167995,9 +168289,9 @@
             "resourceType": "service-revision",
             "required": true,
             "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
               "ecs:cluster",
-              "ecs:service",
-              "aws:ResourceTag/${TagKey}"
+              "ecs:service"
             ],
             "dependentActions": []
           }
@@ -168550,7 +168844,7 @@
       {
         "name": "PutSystemLogEvents",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/logging-using-cloudtrail.html#cloudtrail-data-events",
-        "permissionOnly": false,
+        "permissionOnly": true,
         "description": "Grants permission to collect system logs from the container instances",
         "accessLevel": "Write",
         "resourceTypes": [
@@ -168567,8 +168861,8 @@
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
-              "ecs:cluster",
-              "ecs:capacity-provider"
+              "ecs:capacity-provider",
+              "ecs:cluster"
             ],
             "dependentActions": []
           }
@@ -168678,11 +168972,11 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
               "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
-              "ecs:cluster",
               "ecs:capacity-provider",
+              "ecs:cluster",
               "ecs:enable-ebs-volumes",
               "ecs:enable-execute-command"
             ],
@@ -168709,8 +169003,8 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
               "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
               "ecs:cluster",
               "ecs:container-instances",
@@ -168724,7 +169018,7 @@
       {
         "name": "StartTelemetrySession",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/cloudwatch-metrics.html#enable_cloudwatch",
-        "permissionOnly": false,
+        "permissionOnly": true,
         "description": "Grants permission to start a telemetry session",
         "accessLevel": "Write",
         "resourceTypes": [
@@ -168755,8 +169049,8 @@
             "resourceType": "service",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           },
@@ -168764,9 +169058,9 @@
             "resourceType": "service-deployment",
             "required": true,
             "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
               "ecs:cluster",
-              "ecs:service",
-              "aws:ResourceTag/${TagKey}"
+              "ecs:service"
             ],
             "dependentActions": []
           }
@@ -168912,9 +169206,9 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
-              "aws:TagKeys",
-              "aws:ResourceTag/${TagKey}",
               "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
               "ecs:CreateAction"
             ],
             "dependentActions": []
@@ -169010,9 +169304,9 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
-              "ecs:propagate-tags",
+              "aws:ResourceTag/${TagKey}",
               "ecs:instance-metadata-tags-propagation",
-              "aws:ResourceTag/${TagKey}"
+              "ecs:propagate-tags"
             ],
             "dependentActions": []
           }
@@ -169119,8 +169413,8 @@
             "resourceType": "daemon",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           },
@@ -169151,8 +169445,8 @@
             "resourceType": "service",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           },
@@ -169160,9 +169454,9 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
-              "ecs:subnet",
               "ecs:enable-ecs-managed-tags",
               "ecs:propagate-tags",
+              "ecs:subnet",
               "ecs:task-cpu",
               "ecs:task-memory"
             ],
@@ -169181,8 +169475,8 @@
             "resourceType": "service",
             "required": true,
             "conditionKeys": [
-              "ecs:cluster",
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
             ],
             "dependentActions": []
           },
@@ -169190,18 +169484,18 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "ecs:auto-assign-public-ip",
               "ecs:capacity-provider",
               "ecs:enable-ebs-volumes",
+              "ecs:enable-ecs-managed-tags",
               "ecs:enable-execute-command",
               "ecs:enable-service-connect",
-              "ecs:namespace",
-              "ecs:task-definition",
               "ecs:enable-vpc-lattice",
-              "ecs:enable-ecs-managed-tags",
+              "ecs:namespace",
               "ecs:propagate-tags",
-              "ecs:auto-assign-public-ip",
               "ecs:subnet",
               "ecs:task-cpu",
+              "ecs:task-definition",
               "ecs:task-memory"
             ],
             "dependentActions": []
@@ -169284,6 +169578,15 @@
     ],
     "resourceTypes": [
       {
+        "name": "capacity-provider",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-capacity-provider-console-v2.html",
+        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:capacity-provider/${CapacityProviderName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "cluster",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/clusters.html",
         "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:cluster/${ClusterName}",
@@ -169299,35 +169602,6 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
           "ecs:ResourceTag/${TagKey}"
-        ]
-      },
-      {
-        "name": "service",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html",
-        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:service/${ClusterName}/${ServiceName}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "ecs:ResourceTag/${TagKey}"
-        ]
-      },
-      {
-        "name": "service-deployment",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-deployment.html",
-        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:service-deployment/${ClusterName}/${ServiceName}/${ServiceDeploymentId}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "ecs:cluster",
-          "ecs:service"
-        ]
-      },
-      {
-        "name": "service-revision",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-revision.html",
-        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:service-revision/${ClusterName}/${ServiceName}/${ServiceRevisionId}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "ecs:cluster",
-          "ecs:service"
         ]
       },
       {
@@ -169368,6 +169642,35 @@
         ]
       },
       {
+        "name": "service",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs_services.html",
+        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:service/${ClusterName}/${ServiceName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "service-deployment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-deployment.html",
+        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:service-deployment/${ClusterName}/${ServiceName}/${ServiceDeploymentId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:cluster",
+          "ecs:service"
+        ]
+      },
+      {
+        "name": "service-revision",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/service-revision.html",
+        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:service-revision/${ClusterName}/${ServiceName}/${ServiceRevisionId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:cluster",
+          "ecs:service"
+        ]
+      },
+      {
         "name": "task",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/scheduling_tasks.html",
         "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:task/${ClusterName}/${TaskId}",
@@ -169380,15 +169683,6 @@
         "name": "task-definition",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/task_definitions.html",
         "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:task-definition/${TaskDefinitionFamilyName}:${TaskDefinitionRevisionNumber}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}",
-          "ecs:ResourceTag/${TagKey}"
-        ]
-      },
-      {
-        "name": "capacity-provider",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/create-capacity-provider-console-v2.html",
-        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:capacity-provider/${CapacityProviderName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
           "ecs:ResourceTag/${TagKey}"
