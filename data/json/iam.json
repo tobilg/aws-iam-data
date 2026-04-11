@@ -42031,10 +42031,60 @@
         ]
       },
       {
+        "name": "CreateScheduledReport",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_bcmDashboards_CreateScheduledReport.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a scheduled report",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          }
+        ]
+      },
+      {
         "name": "DeleteDashboard",
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_bcmDashboards_DeleteDashboard.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a dashboard",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteScheduledReport",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_bcmDashboards_DeleteScheduledReport.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a scheduled report",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ExecuteScheduledReport",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_bcmDashboards_ExecuteScheduledReport.html",
+        "permissionOnly": false,
+        "description": "Grants permission to execute a scheduled report",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -42076,11 +42126,41 @@
         ]
       },
       {
+        "name": "GetScheduledReport",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_bcmDashboards_GetScheduledReport.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get scheduled report information",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListDashboards",
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_bcmDashboards_ListDashboards.html",
         "permissionOnly": false,
         "description": "Grants permission to list information about all of the dashboards for a user",
         "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListScheduledReports",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_bcmDashboards_ListScheduledReports.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list information about all of the scheduled reports for a user",
+        "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "",
@@ -42154,14 +42234,54 @@
             "dependentActions": []
           }
         ]
+      },
+      {
+        "name": "UpdateScheduledReport",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_bcmDashboards_UpdateScheduledReport.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an existing scheduled report",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
       }
     ],
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "dashboard",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cost-management/latest/userguide/",
+        "arnPattern": "arn:${Partition}:bcm-dashboards::${Account}:dashboard/${DashboardName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ]
+      },
+      {
+        "name": "scheduled-report",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cost-management/latest/userguide/",
+        "arnPattern": "arn:${Partition}:bcm-dashboards::${Account}:scheduled-report/${ScheduledReportName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ]
+      }
+    ],
     "conditionKeys": [
       {
         "name": "aws:RequestTag/${TagKey}",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
         "description": "Filters access by the tags that are passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cost-management/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-tags",
+        "description": "Filters access by tag key-value pairs attached to the resource",
         "type": "String"
       },
       {
@@ -220359,6 +220479,21 @@
         ]
       },
       {
+        "name": "CancelRunBatch",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_CancelRunBatch.html",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel a batch of workflow runs",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runBatch",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CancelVariantImportJob",
         "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_CancelVariantImportJob.html",
         "permissionOnly": false,
@@ -220651,6 +220786,21 @@
         ]
       },
       {
+        "name": "DeleteBatch",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_DeleteBatch.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a batch",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runBatch",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteConfiguration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_DeleteConfiguration.html",
         "permissionOnly": false,
@@ -220710,6 +220860,27 @@
         "resourceTypes": [
           {
             "resourceType": "run",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteRunBatch",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_DeleteRunBatch.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a batch of workflow runs",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "run",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "runBatch",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -220881,6 +221052,21 @@
         "resourceTypes": [
           {
             "resourceType": "AnnotationStoreVersion",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetBatch",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_GetBatch.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve batch details and status",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "runBatch",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -221284,6 +221470,21 @@
         ]
       },
       {
+        "name": "ListBatch",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_ListBatch.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve list of batches",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListConfigurations",
         "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_ListConfigurations.html",
         "permissionOnly": false,
@@ -221488,6 +221689,21 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListRunsInBatch",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_ListRunsInBatch.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve list of workflow runs in batch",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "runBatch",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -221716,6 +221932,62 @@
             "dependentActions": []
           },
           {
+            "resourceType": "runBatch",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "runCache",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "runGroup",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "workflow",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StartRunBatch",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_StartRunBatch.html",
+        "permissionOnly": false,
+        "description": "Grants permission to start batch of workflow runs",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "run",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
+          {
+            "resourceType": "runBatch",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "runCache",
             "required": false,
             "conditionKeys": [],
@@ -221821,6 +222093,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "runBatch",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "runCache",
             "required": false,
             "conditionKeys": [],
@@ -221912,6 +222190,12 @@
           },
           {
             "resourceType": "run",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "runBatch",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -222145,6 +222429,14 @@
         "name": "run",
         "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_RunListItem.html",
         "arnPattern": "arn:${Partition}:omics:${Region}:${Account}:run/${Id}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "runBatch",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_BatchListItem.html",
+        "arnPattern": "arn:${Partition}:omics:${Region}:${Account}:runBatch/${BatchId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -305676,6 +305968,21 @@
         ]
       },
       {
+        "name": "DeregisterCapability",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_DeregisterCapability.html",
+        "permissionOnly": false,
+        "description": "Grants permission to deregister a capability from an OpenSearch Application",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "application",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DescribeDomain",
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_DescribeDomain.html",
         "permissionOnly": false,
@@ -306186,6 +306493,21 @@
         ]
       },
       {
+        "name": "GetCapability",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_GetCapability.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a registered capability for an OpenSearch Application",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "application",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetCompatibleElasticsearchVersions",
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_GetCompatibleVersions.html",
         "permissionOnly": false,
@@ -306652,6 +306974,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_PutDefaultApplicationSetting.html",
         "permissionOnly": false,
         "description": "Grants permission to set or remove the default application setting for OpenSearch Service",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "application",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "RegisterCapability",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_RegisterCapability.html",
+        "permissionOnly": false,
+        "description": "Grants permission to register a capability for an OpenSearch Application",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -425010,6 +425347,21 @@
         ]
       },
       {
+        "name": "CreatePolicyStoreAlias",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreatePolicyStoreAlias.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an alias against a policy store",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "policy-store",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreatePolicyTemplate",
         "apiReferenceUrl": "https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_CreatePolicyTemplate.html",
         "permissionOnly": false,
@@ -425063,6 +425415,21 @@
         "resourceTypes": [
           {
             "resourceType": "policy-store",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeletePolicyStoreAlias",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_DeletePolicyStoreAlias.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an alias for a policy store",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "policy-store-alias",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -425128,6 +425495,21 @@
             "dependentActions": [
               "verifiedpermissions:ListTagsForResource"
             ]
+          }
+        ]
+      },
+      {
+        "name": "GetPolicyStoreAlias",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_GetPolicyStoreAlias.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details about an alias for a policy store",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "policy-store-alias",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -425216,6 +425598,21 @@
           {
             "resourceType": "policy-store",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListPolicyStoreAliases",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/API_ListPolicyStoreAliases.html",
+        "permissionOnly": false,
+        "description": "Grants permission to return a paginated list of all policy store aliases",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -425392,7 +425789,7 @@
     "resourceTypes": [
       {
         "name": "policy-store",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/verifiedpermissions/latest/apireference/policy-stores.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/policy-stores.html",
         "arnPattern": "arn:${Partition}:verifiedpermissions::${Account}:policy-store/${PolicyStoreId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"

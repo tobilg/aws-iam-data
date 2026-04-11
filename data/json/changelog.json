@@ -1,5 +1,41 @@
 [
   {
+    "dateOfChange": "2026-04-11",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Billing and Cost Management Dashboards": [
+        "bcm-dashboards:CreateScheduledReport",
+        "bcm-dashboards:DeleteScheduledReport",
+        "bcm-dashboards:ExecuteScheduledReport",
+        "bcm-dashboards:GetScheduledReport",
+        "bcm-dashboards:ListScheduledReports",
+        "bcm-dashboards:UpdateScheduledReport"
+      ],
+      "AWS HealthOmics": [
+        "omics:CancelRunBatch",
+        "omics:DeleteBatch",
+        "omics:DeleteRunBatch",
+        "omics:GetBatch",
+        "omics:ListBatch",
+        "omics:ListRunsInBatch",
+        "omics:StartRunBatch"
+      ],
+      "Amazon OpenSearch Service": [
+        "es:DeregisterCapability",
+        "es:GetCapability",
+        "es:RegisterCapability"
+      ],
+      "Amazon Verified Permissions": [
+        "verifiedpermissions:CreatePolicyStoreAlias",
+        "verifiedpermissions:DeletePolicyStoreAlias",
+        "verifiedpermissions:GetPolicyStoreAlias",
+        "verifiedpermissions:ListPolicyStoreAliases"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-04-10",
     "addedServices": [],
     "removedServices": [],
