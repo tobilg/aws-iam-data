@@ -4877,7 +4877,7 @@
       "name": "Amazon CloudWatch",
       "servicePrefix": "cloudwatch",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatch.html",
-      "actionsCount": 59,
+      "actionsCount": 62,
       "actions": [
         "BatchGetServiceLevelIndicatorReport",
         "BatchGetServiceLevelObjectiveBudgetReport",
@@ -4908,6 +4908,7 @@
         "GetMetricStatistics",
         "GetMetricStream",
         "GetMetricWidgetImage",
+        "GetOTelEnrichment",
         "GetService",
         "GetServiceData",
         "GetServiceLevelObjective",
@@ -4934,7 +4935,9 @@
         "PutMetricStream",
         "SetAlarmState",
         "StartMetricStreams",
+        "StartOTelEnrichment",
         "StopMetricStreams",
+        "StopOTelEnrichment",
         "TagResource",
         "UntagResource",
         "UpdateServiceLevelObjective"
@@ -22487,8 +22490,12 @@
         "batchSegmentJob",
         "metricAttribution"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "Amazon Pinpoint",

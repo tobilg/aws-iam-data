@@ -66497,6 +66497,21 @@
         ]
       },
       {
+        "name": "GetOTelEnrichment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/permissions-reference-cw.html",
+        "permissionOnly": true,
+        "description": "Grants permission to retrieve the status of OTel Enrichment of vended metrics for PromQL querying",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetService",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html#ApplicationSignals-PreviewSDK",
         "permissionOnly": false,
@@ -66993,6 +67008,21 @@
         ]
       },
       {
+        "name": "StartOTelEnrichment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/permissions-reference-cw.html",
+        "permissionOnly": true,
+        "description": "Grants permission to enable OTel Enrichment of vended metrics for PromQL querying",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "StopMetricStreams",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_StopMetricStreams.html",
         "permissionOnly": false,
@@ -67002,6 +67032,21 @@
           {
             "resourceType": "metric-stream",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StopOTelEnrichment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/permissions-reference-cw.html",
+        "permissionOnly": true,
+        "description": "Grants permission to disable OTel Enrichment of vended metrics for PromQL querying",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -316782,6 +316827,23 @@
             "resourceType": "batchInferenceJob",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
+          {
+            "resourceType": "solution",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -316797,6 +316859,17 @@
             "resourceType": "batchSegmentJob",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -316813,6 +316886,21 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "solution",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -316827,6 +316915,23 @@
             "resourceType": "dataDeletionJob",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
+          {
+            "resourceType": "datasetGroup",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -316858,6 +316963,21 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "datasetGroup",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -316869,9 +316989,26 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
+          {
             "resourceType": "datasetExportJob",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -316888,6 +317025,15 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -316899,9 +317045,26 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
+          {
             "resourceType": "datasetImportJob",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -316914,9 +317077,24 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "datasetGroup",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "eventTracker",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -316929,9 +317107,24 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "datasetGroup",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "filter",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -316943,6 +317136,14 @@
         "description": "Grants permission to create a metric attribution",
         "accessLevel": "Write",
         "resourceTypes": [
+          {
+            "resourceType": "datasetGroup",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
           {
             "resourceType": "metricAttribution",
             "required": true,
@@ -316959,9 +317160,24 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "datasetGroup",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "recommender",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -316989,9 +317205,24 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "datasetGroup",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "solution",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -317007,6 +317238,15 @@
             "resourceType": "solution",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -317784,7 +318024,73 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "batchInferenceJob",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "batchSegmentJob",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "campaign",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dataDeletionJob",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dataset",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "datasetExportJob",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "datasetGroup",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "datasetImportJob",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "eventTracker",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "filter",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "solution",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -317919,9 +318225,84 @@
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "batchInferenceJob",
             "required": false,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "batchSegmentJob",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "campaign",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dataDeletionJob",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dataset",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "datasetExportJob",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "datasetGroup",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "datasetImportJob",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "eventTracker",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "filter",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "solution",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -317934,9 +318315,83 @@
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "batchInferenceJob",
             "required": false,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "batchSegmentJob",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "campaign",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dataDeletionJob",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dataset",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "datasetExportJob",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "datasetGroup",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "datasetImportJob",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "eventTracker",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "filter",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "solution",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -318034,19 +318489,25 @@
         "name": "dataset",
         "apiReferenceUrl": "https://docs.aws.amazon.com/personalize/latest/dg/API_Dataset.html",
         "arnPattern": "arn:${Partition}:personalize:${Region}:${Account}:dataset/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "datasetGroup",
         "apiReferenceUrl": "https://docs.aws.amazon.com/personalize/latest/dg/API_DatasetGroup.html",
         "arnPattern": "arn:${Partition}:personalize:${Region}:${Account}:dataset-group/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "datasetImportJob",
         "apiReferenceUrl": "https://docs.aws.amazon.com/personalize/latest/dg/API_DatasetImportJob.html",
         "arnPattern": "arn:${Partition}:personalize:${Region}:${Account}:dataset-import-job/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "dataInsightsJob",
@@ -318058,31 +318519,41 @@
         "name": "datasetExportJob",
         "apiReferenceUrl": "https://docs.aws.amazon.com/personalize/latest/dg/API_DatasetExportJob.html",
         "arnPattern": "arn:${Partition}:personalize:${Region}:${Account}:dataset-export-job/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "dataDeletionJob",
         "apiReferenceUrl": "https://docs.aws.amazon.com/personalize/latest/dg/API_DataDeletionJob.html",
         "arnPattern": "arn:${Partition}:personalize:${Region}:${Account}:data-deletion-job/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "solution",
         "apiReferenceUrl": "https://docs.aws.amazon.com/personalize/latest/dg/API_Solution.html",
         "arnPattern": "arn:${Partition}:personalize:${Region}:${Account}:solution/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "campaign",
         "apiReferenceUrl": "https://docs.aws.amazon.com/personalize/latest/dg/API_Campaign.html",
         "arnPattern": "arn:${Partition}:personalize:${Region}:${Account}:campaign/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "eventTracker",
         "apiReferenceUrl": "https://docs.aws.amazon.com/personalize/latest/dg/API_EventTracker.html",
         "arnPattern": "arn:${Partition}:personalize:${Region}:${Account}:event-tracker/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "recipe",
@@ -318100,25 +318571,33 @@
         "name": "batchInferenceJob",
         "apiReferenceUrl": "https://docs.aws.amazon.com/personalize/latest/dg/API_BatchInferenceJob.html",
         "arnPattern": "arn:${Partition}:personalize:${Region}:${Account}:batch-inference-job/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "filter",
         "apiReferenceUrl": "https://docs.aws.amazon.com/personalize/latest/dg/API_Filter.html",
         "arnPattern": "arn:${Partition}:personalize:${Region}:${Account}:filter/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "recommender",
         "apiReferenceUrl": "https://docs.aws.amazon.com/personalize/latest/dg/API_Recommender.html",
         "arnPattern": "arn:${Partition}:personalize:${Region}:${Account}:recommender/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "batchSegmentJob",
         "apiReferenceUrl": "https://docs.aws.amazon.com/personalize/latest/dg/API_BatchSegmentJob.html",
         "arnPattern": "arn:${Partition}:personalize:${Region}:${Account}:batch-segment-job/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "metricAttribution",
@@ -318127,7 +318606,26 @@
         "conditionKeys": []
       }
     ],
-    "conditionKeys": []
+    "conditionKeys": [
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "description": "Filters access by the tags that are passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "description": "Filters access by the tags associated with the resource",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "description": "Filters access by the tag keys that are passed in the request",
+        "type": "ArrayOfString"
+      }
+    ]
   },
   {
     "name": "Amazon Pinpoint",
