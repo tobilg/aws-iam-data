@@ -103934,6 +103934,21 @@
         ]
       },
       {
+        "name": "SearchAllRelatedItems",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cases/latest/APIReference/API_SearchAllRelatedItems.html",
+        "permissionOnly": false,
+        "description": "Grants permission to search for related items in the case domain",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Domain",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "SearchCases",
         "apiReferenceUrl": "https://docs.aws.amazon.com/cases/latest/APIReference/API_SearchCases.html",
         "permissionOnly": false,
@@ -107463,6 +107478,21 @@
         ]
       },
       {
+        "name": "DeleteCampaignEntryLimits",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/adminguide/enable-outbound-campaigns.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the entry limits configuration of a campaign",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "campaign",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteConnectInstanceConfig",
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/adminguide/enable-outbound-campaigns.html",
         "permissionOnly": false,
@@ -107923,6 +107953,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/adminguide/enable-outbound-campaigns.html",
         "permissionOnly": false,
         "description": "Grants permission to update the dialer configuration of a campaign",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "campaign",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateCampaignEntryLimits",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/adminguide/enable-outbound-campaigns.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update the entry limits configuration of a campaign",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -172711,6 +172756,14 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "eks:encryptionConfigProviderKeyArns"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -172842,7 +172895,14 @@
               "eks:computeConfigEnabled",
               "eks:elasticLoadBalancingEnabled",
               "eks:blockStorageEnabled",
-              "eks:loggingType/${type}"
+              "eks:loggingType/${type}",
+              "eks:kubernetesVersion",
+              "eks:endpointPublicAccess",
+              "eks:endpointPrivateAccess",
+              "eks:deletionProtection",
+              "eks:controlPlaneScalingTier",
+              "eks:encryptionConfigProviderKeyArns",
+              "eks:zonalShiftEnabled"
             ],
             "dependentActions": []
           }
@@ -173940,7 +174000,12 @@
               "eks:computeConfigEnabled",
               "eks:elasticLoadBalancingEnabled",
               "eks:blockStorageEnabled",
-              "eks:loggingType/${type}"
+              "eks:loggingType/${type}",
+              "eks:endpointPublicAccess",
+              "eks:endpointPrivateAccess",
+              "eks:deletionProtection",
+              "eks:controlPlaneScalingTier",
+              "eks:zonalShiftEnabled"
             ],
             "dependentActions": []
           }
@@ -173957,6 +174022,14 @@
             "resourceType": "cluster",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "eks:kubernetesVersion"
+            ],
             "dependentActions": []
           }
         ]
@@ -174189,9 +174262,39 @@
         "type": "Bool"
       },
       {
+        "name": "eks:controlPlaneScalingTier",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
+        "description": "Filters access by the control plane scaling tier in the create / update cluster request",
+        "type": "String"
+      },
+      {
+        "name": "eks:deletionProtection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
+        "description": "Filters access by the deletion protection setting in the create / update cluster request",
+        "type": "Bool"
+      },
+      {
         "name": "eks:elasticLoadBalancingEnabled",
         "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
         "description": "Filters access by the elastic load balancing enabled parameter in the create / update cluster request",
+        "type": "Bool"
+      },
+      {
+        "name": "eks:encryptionConfigProviderKeyArns",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
+        "description": "Filters access by the KMS key ARNs in the create cluster / Associate Encryption Config request",
+        "type": "ArrayOfARN"
+      },
+      {
+        "name": "eks:endpointPrivateAccess",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
+        "description": "Filters access by the endpoint private access setting in the create / update cluster request",
+        "type": "Bool"
+      },
+      {
+        "name": "eks:endpointPublicAccess",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
+        "description": "Filters access by the endpoint public access setting in the create / update cluster request",
         "type": "Bool"
       },
       {
@@ -174205,6 +174308,12 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
         "description": "Filters access by the kubernetesGroups present in the access entry requests the user makes to the EKS service",
         "type": "ArrayOfString"
+      },
+      {
+        "name": "eks:kubernetesVersion",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
+        "description": "Filters access by the Kubernetes version in the create cluster/ update cluster version request",
+        "type": "String"
       },
       {
         "name": "eks:loggingType/${type}",
@@ -174241,6 +174350,12 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
         "description": "Filters access by the Kubernetes username present in the access entry requests the user makes to the EKS service",
         "type": "String"
+      },
+      {
+        "name": "eks:zonalShiftEnabled",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
+        "description": "Filters access by the zonal shift enabled setting in the create / update cluster request",
+        "type": "Bool"
       }
     ]
   },
@@ -216289,6 +216404,21 @@
         ]
       },
       {
+        "name": "DescribeContactVersion",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ground-station/latest/APIReference/API_DescribeContactVersion.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe a specific version of a contact",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Contact",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DescribeEphemeris",
         "apiReferenceUrl": "https://docs.aws.amazon.com/ground-station/latest/APIReference/API_DescribeEphemeris.html",
         "permissionOnly": false,
@@ -216409,6 +216539,21 @@
         ]
       },
       {
+        "name": "ListAntennas",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ground-station/latest/APIReference/API_ListAntennas.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list antennas for a ground station",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "GroundStationResource",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListConfigs",
         "apiReferenceUrl": "https://docs.aws.amazon.com/ground-station/latest/APIReference/API_ListConfigs.html",
         "permissionOnly": false,
@@ -216418,6 +216563,21 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListContactVersions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ground-station/latest/APIReference/API_ListContactVersions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list versions of a contact",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Contact",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -216463,6 +216623,21 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListGroundStationReservations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ground-station/latest/APIReference/API_ListGroundStationReservations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list reservations for a ground station",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "GroundStationResource",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -216698,6 +216873,21 @@
         "resourceTypes": [
           {
             "resourceType": "Config",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateContact",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ground-station/latest/APIReference/API_UpdateContact.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a contact",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Contact",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []

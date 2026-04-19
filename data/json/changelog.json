@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2026-04-19",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect Cases": [
+        "cases:SearchAllRelatedItems"
+      ],
+      "Amazon Connect Outbound Campaigns": [
+        "connect-campaigns:DeleteCampaignEntryLimits",
+        "connect-campaigns:UpdateCampaignEntryLimits"
+      ],
+      "AWS Ground Station": [
+        "groundstation:DescribeContactVersion",
+        "groundstation:ListAntennas",
+        "groundstation:ListContactVersions",
+        "groundstation:ListGroundStationReservations",
+        "groundstation:UpdateContact"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-04-15",
     "addedServices": [],
     "removedServices": [],
