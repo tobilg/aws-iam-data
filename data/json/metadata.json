@@ -7517,7 +7517,7 @@
       "name": "Amazon Connect Cases",
       "servicePrefix": "cases",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcases.html",
-      "actionsCount": 42,
+      "actionsCount": 43,
       "actions": [
         "BatchGetCaseRule",
         "BatchGetField",
@@ -7560,6 +7560,7 @@
         "UpdateCaseRule",
         "UpdateField",
         "UpdateLayout",
+        "UpdateRelatedItem",
         "UpdateTemplate"
       ],
       "resourceTypesCount": 7,
@@ -7572,11 +7573,13 @@
         "Template",
         "CaseRule"
       ],
-      "conditionKeysCount": 4,
+      "conditionKeysCount": 6,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
+        "cases:CreatedBy",
+        "cases:RelatedItemType",
         "connect:UserArn"
       ]
     },
@@ -8603,7 +8606,7 @@
       "name": "Amazon DataZone",
       "servicePrefix": "datazone",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazondatazone.html",
-      "actionsCount": 229,
+      "actionsCount": 230,
       "actions": [
         "AcceptPredictions",
         "AcceptSubscriptionRequest",
@@ -8617,6 +8620,7 @@
         "BatchGetCellRun",
         "BatchPutAttributesMetadata",
         "BatchPutLinkedTypes",
+        "CancelMessage",
         "CancelMetadataGenerationRun",
         "CancelSubscription",
         "CreateAccountPool",
@@ -12020,22 +12024,29 @@
       "name": "Amazon Elastic VMware Service",
       "servicePrefix": "evs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticvmwareservice.html",
-      "actionsCount": 14,
+      "actionsCount": 21,
       "actions": [
         "AssociateEipToVlan",
+        "CreateEntitlement",
         "CreateEnvironment",
+        "CreateEnvironmentConnector",
         "CreateEnvironmentHost",
+        "DeleteEntitlement",
         "DeleteEnvironment",
+        "DeleteEnvironmentConnector",
         "DeleteEnvironmentHost",
         "DisassociateEipFromVlan",
         "GetEnvironment",
         "GetVersions",
+        "ListEnvironmentConnectors",
         "ListEnvironmentHosts",
         "ListEnvironmentVlans",
         "ListEnvironments",
         "ListTagsForResource",
+        "ListVmEntitlements",
         "TagResource",
-        "UntagResource"
+        "UntagResource",
+        "UpdateEnvironmentConnector"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
@@ -25864,7 +25875,7 @@
       "name": "Amazon S3 Express",
       "servicePrefix": "s3express",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazons3express.html",
-      "actionsCount": 26,
+      "actionsCount": 28,
       "actions": [
         "CreateAccessPoint",
         "CreateBucket",
@@ -25879,6 +25890,7 @@
         "GetAccessPointScope",
         "GetBucketPolicy",
         "GetEncryptionConfiguration",
+        "GetInventoryConfiguration",
         "GetLifecycleConfiguration",
         "GetMetricsConfiguration",
         "ListAccessPointsForDirectoryBuckets",
@@ -25888,6 +25900,7 @@
         "PutAccessPointScope",
         "PutBucketPolicy",
         "PutEncryptionConfiguration",
+        "PutInventoryConfiguration",
         "PutLifecycleConfiguration",
         "PutMetricsConfiguration",
         "TagResource",
@@ -25898,7 +25911,7 @@
         "bucket",
         "accesspoint"
       ],
-      "conditionKeysCount": 20,
+      "conditionKeysCount": 21,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -25909,6 +25922,7 @@
         "s3express:BucketTag/${TagKey}",
         "s3express:DataAccessPointAccount",
         "s3express:DataAccessPointArn",
+        "s3express:InventoryAccessibleOptionalFields",
         "s3express:LocationName",
         "s3express:Permissions",
         "s3express:ResourceAccount",

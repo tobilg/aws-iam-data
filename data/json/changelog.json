@@ -1,5 +1,32 @@
 [
   {
+    "dateOfChange": "2026-04-21",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect Cases": [
+        "cases:UpdateRelatedItem"
+      ],
+      "Amazon DataZone": [
+        "datazone:CancelMessage"
+      ],
+      "Amazon Elastic VMware Service": [
+        "evs:CreateEntitlement",
+        "evs:CreateEnvironmentConnector",
+        "evs:DeleteEntitlement",
+        "evs:DeleteEnvironmentConnector",
+        "evs:ListEnvironmentConnectors",
+        "evs:ListVmEntitlements",
+        "evs:UpdateEnvironmentConnector"
+      ],
+      "Amazon S3 Express": [
+        "s3express:GetInventoryConfiguration",
+        "s3express:PutInventoryConfiguration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-04-19",
     "addedServices": [],
     "removedServices": [],

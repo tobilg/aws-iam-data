@@ -104202,6 +104202,33 @@
         ]
       },
       {
+        "name": "UpdateRelatedItem",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cases/latest/APIReference/API_UpdateRelatedItem.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a related item associated to a case in the case domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Case",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Domain",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "RelatedItem",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateTemplate",
         "apiReferenceUrl": "https://docs.aws.amazon.com/cases/latest/APIReference/API_UpdateTemplate.html",
         "permissionOnly": false,
@@ -104261,7 +104288,9 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/adminguide/associatecontactandcase.html",
         "arnPattern": "arn:${Partition}:cases:${Region}:${Account}:domain/${DomainId}/case/${CaseId}/related-item/${RelatedItemId}",
         "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
+          "aws:ResourceTag/${TagKey}",
+          "cases:CreatedBy",
+          "cases:RelatedItemType"
         ]
       },
       {
@@ -104299,6 +104328,18 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
         "description": "Filters access by tag keys that are passed in the request",
         "type": "ArrayOfString"
+      },
+      {
+        "name": "cases:CreatedBy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/adminguide/security_iam_service-with-iam.html",
+        "description": "Filters access by who created the the resource (user ARN or custom entity)",
+        "type": "String"
+      },
+      {
+        "name": "cases:RelatedItemType",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/adminguide/security_iam_service-with-iam.html",
+        "description": "Filters access by the type of related item. Possible values: Contact, Comment, File, Sla, ConnectCase, Custom",
+        "type": "String"
       },
       {
         "name": "connect:UserArn",
@@ -117378,6 +117419,21 @@
           {
             "resourceType": "domain",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CancelMessage",
+        "apiReferenceUrl": "${APIReferenceDocPage}API_CancelMessage.html",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel an in-progress agent response",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -178501,6 +178557,21 @@
         ]
       },
       {
+        "name": "CreateEntitlement",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_CreateEntitlement.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an entitlement in an Amazon EVS environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateEnvironment",
         "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_CreateEnvironment.html",
         "permissionOnly": false,
@@ -178562,6 +178633,21 @@
         ]
       },
       {
+        "name": "CreateEnvironmentConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_CreateEnvironmentConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a connector in an Amazon EVS environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateEnvironmentHost",
         "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_CreateEnvironmentHost.html",
         "permissionOnly": false,
@@ -178602,6 +178688,21 @@
         ]
       },
       {
+        "name": "DeleteEntitlement",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_DeleteEntitlement.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an entitlement from an Amazon EVS environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteEnvironment",
         "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_DeleteEnvironment.html",
         "permissionOnly": false,
@@ -178625,6 +178726,21 @@
               "secretsmanager:DeleteSecret",
               "secretsmanager:GetSecretValue"
             ]
+          }
+        ]
+      },
+      {
+        "name": "DeleteEnvironmentConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_DeleteEnvironmentConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a connector from an Amazon EVS environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -178701,6 +178817,21 @@
         ]
       },
       {
+        "name": "ListEnvironmentConnectors",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_ListEnvironmentConnectors.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of connectors associated with an Amazon EVS environment",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListEnvironmentHosts",
         "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_ListEnvironmentHosts.html",
         "permissionOnly": false,
@@ -178761,6 +178892,21 @@
         ]
       },
       {
+        "name": "ListVmEntitlements",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_ListVmEntitlements.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of entitlements associated with an Amazon EVS environment",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "TagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_TagResource.html",
         "permissionOnly": false,
@@ -178805,6 +178951,21 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateEnvironmentConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_UpdateEnvironmentConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a connector in an Amazon EVS environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -367167,6 +367328,33 @@
         ]
       },
       {
+        "name": "GetInventoryConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketInventoryConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to return an inventory configuration identified by the inventory configuration ID for a S3 directory bucket",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "bucket",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3express:authType",
+              "s3express:ResourceAccount",
+              "s3express:signatureversion",
+              "s3express:TlsVersion",
+              "s3express:x-amz-content-sha256"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetLifecycleConfiguration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetBucketLifecycleConfiguration.html",
         "permissionOnly": false,
@@ -367410,6 +367598,34 @@
         ]
       },
       {
+        "name": "PutInventoryConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketInventoryConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to add an inventory configuration to the bucket, identified by the inventory ID",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "bucket",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3express:authType",
+              "s3express:ResourceAccount",
+              "s3express:signatureversion",
+              "s3express:TlsVersion",
+              "s3express:x-amz-content-sha256",
+              "s3express:InventoryAccessibleOptionalFields"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "PutLifecycleConfiguration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutBucketLifecycleConfiguration.html",
         "permissionOnly": false,
@@ -367607,6 +367823,12 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-access-points.html#access-points-policies",
         "description": "Filters access by an access point Amazon Resource Name (ARN)",
         "type": "ARN"
+      },
+      {
+        "name": "s3express:InventoryAccessibleOptionalFields",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/example-bucket-policies.html#example-bucket-policies-s3-inventory-3",
+        "description": "Filters access by restricting which optional metadata fields a user can add when configuring S3 Inventory reports",
+        "type": "ArrayOfString"
       },
       {
         "name": "s3express:LocationName",
@@ -398194,7 +398416,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:CreateServiceLinkedRole"
+            ]
           },
           {
             "resourceType": "",
