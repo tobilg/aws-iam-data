@@ -275698,7 +275698,7 @@
     "actions": [
       {
         "name": "AssociateTrackerConsumer",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_AssociateTrackerConsumer.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_AssociateTrackerConsumer.html",
         "permissionOnly": false,
         "description": "Grants permission to create an association between a geofence-collection and a tracker resource",
         "accessLevel": "Write",
@@ -275713,7 +275713,7 @@
       },
       {
         "name": "BatchDeleteDevicePositionHistory",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_BatchDeleteDevicePositionHistory.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_BatchDeleteDevicePositionHistory.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a batch of device position histories from a tracker resource",
         "accessLevel": "Write",
@@ -275736,7 +275736,7 @@
       },
       {
         "name": "BatchDeleteGeofence",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_BatchDeleteGeofence.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointGeofencing_BatchDeleteGeofence.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a batch of geofences from a geofence collection",
         "accessLevel": "Write",
@@ -275759,7 +275759,7 @@
       },
       {
         "name": "BatchEvaluateGeofences",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_BatchEvaluateGeofences.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointGeofencing_BatchEvaluateGeofences.html",
         "permissionOnly": false,
         "description": "Grants permission to evaluate device positions against the position of geofences in a given geofence collection",
         "accessLevel": "Write",
@@ -275774,7 +275774,7 @@
       },
       {
         "name": "BatchGetDevicePosition",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_BatchGetDevicePosition.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_BatchGetDevicePosition.html",
         "permissionOnly": false,
         "description": "Grants permission to send a batch request to retrieve device positions",
         "accessLevel": "Read",
@@ -275797,7 +275797,7 @@
       },
       {
         "name": "BatchPutGeofence",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_BatchPutGeofence.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointGeofencing_BatchPutGeofence.html",
         "permissionOnly": false,
         "description": "Grants permission to send a batch request for adding geofences into a given geofence collection",
         "accessLevel": "Write",
@@ -275820,7 +275820,7 @@
       },
       {
         "name": "BatchUpdateDevicePosition",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_BatchUpdateDevicePosition.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_BatchUpdateDevicePosition.html",
         "permissionOnly": false,
         "description": "Grants permission to upload a position update for one or more devices to a tracker resource",
         "accessLevel": "Write",
@@ -275843,7 +275843,7 @@
       },
       {
         "name": "CalculateRoute",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_CalculateRoute.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_CalculateRoute.html",
         "permissionOnly": false,
         "description": "Grants permission to calculate routes using a given route calculator resource",
         "accessLevel": "Read",
@@ -275858,7 +275858,7 @@
       },
       {
         "name": "CalculateRouteMatrix",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_CalculateRouteMatrix.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_CalculateRouteMatrix.html",
         "permissionOnly": false,
         "description": "Grants permission to calculate a route matrix using a given route calculator resource",
         "accessLevel": "Read",
@@ -275873,7 +275873,7 @@
       },
       {
         "name": "CreateGeofenceCollection",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_CreateGeofenceCollection.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointGeofencing_CreateGeofenceCollection.html",
         "permissionOnly": false,
         "description": "Grants permission to create a geofence-collection",
         "accessLevel": "Write",
@@ -275897,7 +275897,7 @@
       },
       {
         "name": "CreateKey",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_CreateKey.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_geotags_CreateKey.html",
         "permissionOnly": false,
         "description": "Grants permission to create an API key resource",
         "accessLevel": "Write",
@@ -275921,7 +275921,7 @@
       },
       {
         "name": "CreateMap",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_CreateMap.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_CreateMap.html",
         "permissionOnly": false,
         "description": "Grants permission to create a map resource",
         "accessLevel": "Write",
@@ -275945,7 +275945,7 @@
       },
       {
         "name": "CreatePlaceIndex",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_CreatePlaceIndex.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_CreatePlaceIndex.html",
         "permissionOnly": false,
         "description": "Grants permission to create a place index resource",
         "accessLevel": "Write",
@@ -275969,7 +275969,7 @@
       },
       {
         "name": "CreateRouteCalculator",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_CreateRouteCalculator.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_CreateRouteCalculator.html",
         "permissionOnly": false,
         "description": "Grants permission to create a route calculator resource",
         "accessLevel": "Write",
@@ -275993,7 +275993,7 @@
       },
       {
         "name": "CreateTracker",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_CreateTracker.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_CreateTracker.html",
         "permissionOnly": false,
         "description": "Grants permission to create a tracker resource",
         "accessLevel": "Write",
@@ -276017,7 +276017,7 @@
       },
       {
         "name": "DeleteGeofenceCollection",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_DeleteGeofenceCollection.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointGeofencing_DeleteGeofenceCollection.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a geofence-collection",
         "accessLevel": "Write",
@@ -276032,7 +276032,7 @@
       },
       {
         "name": "DeleteKey",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_DeleteKey.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_geotags_DeleteKey.html",
         "permissionOnly": false,
         "description": "Grants permission to delete an API key resource",
         "accessLevel": "Write",
@@ -276047,7 +276047,7 @@
       },
       {
         "name": "DeleteMap",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_DeleteMap.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_DeleteMap.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a map resource",
         "accessLevel": "Write",
@@ -276062,7 +276062,7 @@
       },
       {
         "name": "DeletePlaceIndex",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_DeletePlaceIndex.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_DeletePlaceIndex.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a place index resource",
         "accessLevel": "Write",
@@ -276077,7 +276077,7 @@
       },
       {
         "name": "DeleteRouteCalculator",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_DeleteRouteCalculator.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_DeleteRouteCalculator.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a route calculator resource",
         "accessLevel": "Write",
@@ -276092,7 +276092,7 @@
       },
       {
         "name": "DeleteTracker",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_DeleteTracker.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_DeleteTracker.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a tracker resource",
         "accessLevel": "Write",
@@ -276107,7 +276107,7 @@
       },
       {
         "name": "DescribeGeofenceCollection",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_DescribeGeofenceCollection.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointGeofencing_DescribeGeofenceCollection.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve geofence collection details",
         "accessLevel": "Read",
@@ -276122,7 +276122,7 @@
       },
       {
         "name": "DescribeKey",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_DescribeKey.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_geotags_DescribeKey.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve API key resource details and secret",
         "accessLevel": "Read",
@@ -276137,7 +276137,7 @@
       },
       {
         "name": "DescribeMap",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_DescribeMap.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_DescribeMap.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve map resource details",
         "accessLevel": "Read",
@@ -276152,7 +276152,7 @@
       },
       {
         "name": "DescribePlaceIndex",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_DescribePlaceIndex.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_DescribePlaceIndex.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve place-index resource details",
         "accessLevel": "Read",
@@ -276167,7 +276167,7 @@
       },
       {
         "name": "DescribeRouteCalculator",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_DescribeRouteCalculator.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_DescribeRouteCalculator.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve route calculator resource details",
         "accessLevel": "Read",
@@ -276182,7 +276182,7 @@
       },
       {
         "name": "DescribeTracker",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_DescribeTracker.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_DescribeTracker.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a tracker resource details",
         "accessLevel": "Read",
@@ -276197,7 +276197,7 @@
       },
       {
         "name": "DisassociateTrackerConsumer",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_DisassociateTrackerConsumer.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_DisassociateTrackerConsumer.html",
         "permissionOnly": false,
         "description": "Grants permission to remove the association between a tracker resource and a geofence-collection",
         "accessLevel": "Write",
@@ -276212,7 +276212,7 @@
       },
       {
         "name": "ForecastGeofenceEvents",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_ForecastGeofenceEvents.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointGeofencing_ForecastGeofenceEvents.html",
         "permissionOnly": false,
         "description": "Grants permission to forecast events for geofences stored in a given geofence collection",
         "accessLevel": "Read",
@@ -276227,7 +276227,7 @@
       },
       {
         "name": "GetDevicePosition",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_GetDevicePosition.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_GetDevicePosition.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve the latest device position",
         "accessLevel": "Read",
@@ -276250,7 +276250,7 @@
       },
       {
         "name": "GetDevicePositionHistory",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_GetDevicePositionHistory.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_GetDevicePositionHistory.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve the device position history",
         "accessLevel": "Read",
@@ -276273,7 +276273,7 @@
       },
       {
         "name": "GetGeofence",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_GetGeofence.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointGeofencing_GetGeofence.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve the geofence details from a geofence-collection",
         "accessLevel": "Read",
@@ -276296,7 +276296,7 @@
       },
       {
         "name": "GetMapGlyphs",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_GetMapGlyphs.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_GetMapGlyphs.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve the glyph file for a map resource",
         "accessLevel": "Read",
@@ -276311,7 +276311,7 @@
       },
       {
         "name": "GetMapSprites",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_GetMapSprites.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_GetMapSprites.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve the sprite file for a map resource",
         "accessLevel": "Read",
@@ -276326,7 +276326,7 @@
       },
       {
         "name": "GetMapStyleDescriptor",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_GetMapStyleDescriptor.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_GetMapStyleDescriptor.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve the map style descriptor from a map resource",
         "accessLevel": "Read",
@@ -276341,7 +276341,7 @@
       },
       {
         "name": "GetMapTile",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_GetMapTile.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_GetMapTile.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve the map tile from the map resource",
         "accessLevel": "Read",
@@ -276356,7 +276356,7 @@
       },
       {
         "name": "GetPlace",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_GetPlace.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_GetPlace.html",
         "permissionOnly": false,
         "description": "Grants permission to find a place by its unique ID",
         "accessLevel": "Read",
@@ -276371,7 +276371,7 @@
       },
       {
         "name": "ListDevicePositions",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_ListDevicePositions.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_ListDevicePositions.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a list of devices and their latest positions from the given tracker resource",
         "accessLevel": "Read",
@@ -276386,7 +276386,7 @@
       },
       {
         "name": "ListGeofenceCollections",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_ListGeofenceCollections.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointGeofencing_ListGeofenceCollections.html",
         "permissionOnly": false,
         "description": "Grants permission to lists geofence-collections",
         "accessLevel": "List",
@@ -276401,7 +276401,7 @@
       },
       {
         "name": "ListGeofences",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_ListGeofences.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointGeofencing_ListGeofences.html",
         "permissionOnly": false,
         "description": "Grants permission to list geofences stored in a given geofence collection",
         "accessLevel": "Read",
@@ -276416,7 +276416,7 @@
       },
       {
         "name": "ListKeys",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_ListKeys.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_geotags_ListKeys.html",
         "permissionOnly": false,
         "description": "Grants permission to list API key resources",
         "accessLevel": "List",
@@ -276431,7 +276431,7 @@
       },
       {
         "name": "ListMaps",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_ListMaps.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_ListMaps.html",
         "permissionOnly": false,
         "description": "Grants permission to list map resources",
         "accessLevel": "List",
@@ -276446,7 +276446,7 @@
       },
       {
         "name": "ListPlaceIndexes",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_ListPlaceIndexes.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_ListPlaceIndexes.html",
         "permissionOnly": false,
         "description": "Grants permission to return a list of place index resources",
         "accessLevel": "List",
@@ -276461,7 +276461,7 @@
       },
       {
         "name": "ListRouteCalculators",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_ListRouteCalculators.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_ListRouteCalculators.html",
         "permissionOnly": false,
         "description": "Grants permission to return a list of route calculator resources",
         "accessLevel": "List",
@@ -276476,7 +276476,7 @@
       },
       {
         "name": "ListTagsForResource",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_ListTagsForResource.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_geotags_ListTagsForResource.html",
         "permissionOnly": false,
         "description": "Grants permission to list the tags (metadata) which you have assigned to the resource",
         "accessLevel": "Read",
@@ -276489,6 +276489,12 @@
           },
           {
             "resourceType": "geofence-collection",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "job",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -276521,7 +276527,7 @@
       },
       {
         "name": "ListTrackerConsumers",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_ListTrackerConsumers.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_ListTrackerConsumers.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a list of geofence collections currently associated to the given tracker resource",
         "accessLevel": "Read",
@@ -276536,7 +276542,7 @@
       },
       {
         "name": "ListTrackers",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_ListTrackers.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_ListTrackers.html",
         "permissionOnly": false,
         "description": "Grants permission to return a list of tracker resources",
         "accessLevel": "List",
@@ -276551,7 +276557,7 @@
       },
       {
         "name": "PutGeofence",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_PutGeofence.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointGeofencing_PutGeofence.html",
         "permissionOnly": false,
         "description": "Grants permission to add a new geofence or update an existing geofence to a given geofence-collection",
         "accessLevel": "Write",
@@ -276574,7 +276580,7 @@
       },
       {
         "name": "SearchPlaceIndexForPosition",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_SearchPlaceIndexForPosition.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_SearchPlaceIndexForPosition.html",
         "permissionOnly": false,
         "description": "Grants permission to reverse geocodes a given coordinate",
         "accessLevel": "Read",
@@ -276589,7 +276595,7 @@
       },
       {
         "name": "SearchPlaceIndexForSuggestions",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_SearchPlaceIndexForSuggestions.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_SearchPlaceIndexForSuggestions.html",
         "permissionOnly": false,
         "description": "Grants permission to generate suggestions for addresses and points of interest based on partial or misspelled free-form text",
         "accessLevel": "Read",
@@ -276604,7 +276610,7 @@
       },
       {
         "name": "SearchPlaceIndexForText",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_SearchPlaceIndexForText.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_SearchPlaceIndexForText.html",
         "permissionOnly": false,
         "description": "Grants permission to geocode free-form text, such as an address, name, city or region",
         "accessLevel": "Read",
@@ -276619,7 +276625,7 @@
       },
       {
         "name": "TagResource",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_TagResource.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_geotags_TagResource.html",
         "permissionOnly": false,
         "description": "Grants permission to adds to or modifies the tags of the given resource. Tags are metadata which can be used to manage a resource",
         "accessLevel": "Tagging",
@@ -276632,6 +276638,12 @@
           },
           {
             "resourceType": "geofence-collection",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "job",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -276673,7 +276685,7 @@
       },
       {
         "name": "UntagResource",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_UntagResource.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_geotags_UntagResource.html",
         "permissionOnly": false,
         "description": "Grants permission to remove the given tags (metadata) from the resource",
         "accessLevel": "Tagging",
@@ -276686,6 +276698,12 @@
           },
           {
             "resourceType": "geofence-collection",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "job",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -276726,7 +276744,7 @@
       },
       {
         "name": "UpdateGeofenceCollection",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_UpdateGeofenceCollection.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointGeofencing_UpdateGeofenceCollection.html",
         "permissionOnly": false,
         "description": "Grants permission to update a geofence collection",
         "accessLevel": "Write",
@@ -276741,7 +276759,7 @@
       },
       {
         "name": "UpdateKey",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_UpdateKey.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_geotags_UpdateKey.html",
         "permissionOnly": false,
         "description": "Grants permission to update an API key resource",
         "accessLevel": "Write",
@@ -276756,7 +276774,7 @@
       },
       {
         "name": "UpdateMap",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_UpdateMap.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_UpdateMap.html",
         "permissionOnly": false,
         "description": "Grants permission to update a map resource",
         "accessLevel": "Write",
@@ -276771,7 +276789,7 @@
       },
       {
         "name": "UpdatePlaceIndex",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_UpdatePlaceIndex.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_UpdatePlaceIndex.html",
         "permissionOnly": false,
         "description": "Grants permission to update a place index resource",
         "accessLevel": "Write",
@@ -276786,7 +276804,7 @@
       },
       {
         "name": "UpdateRouteCalculator",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_UpdateRouteCalculator.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_UpdateRouteCalculator.html",
         "permissionOnly": false,
         "description": "Grants permission to update a route calculator resource",
         "accessLevel": "Write",
@@ -276801,7 +276819,7 @@
       },
       {
         "name": "UpdateTracker",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_UpdateTracker.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_UpdateTracker.html",
         "permissionOnly": false,
         "description": "Grants permission to update a tracker resource",
         "accessLevel": "Write",
@@ -276816,7 +276834,7 @@
       },
       {
         "name": "VerifyDevicePosition",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_VerifyDevicePosition.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointTracking_VerifyDevicePosition.html",
         "permissionOnly": false,
         "description": "Grants permission to verify a device position",
         "accessLevel": "Read",
@@ -276849,7 +276867,7 @@
       },
       {
         "name": "geofence-collection",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/developerguide/geofence-tracker-concepts.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/developerguide/geofence-components.html",
         "arnPattern": "arn:${Partition}:geo:${Region}:${Account}:geofence-collection/${GeofenceCollectionName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
@@ -276858,7 +276876,7 @@
       },
       {
         "name": "map",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/developerguide/map-concepts.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/developerguide/map-concepts.html",
         "arnPattern": "arn:${Partition}:geo:${Region}:${Account}:map/${MapName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -276866,7 +276884,7 @@
       },
       {
         "name": "place-index",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/developerguide/places-concepts.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/developerguide/places-concepts.html",
         "arnPattern": "arn:${Partition}:geo:${Region}:${Account}:place-index/${IndexName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -276874,7 +276892,7 @@
       },
       {
         "name": "route-calculator",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/developerguide/route-concepts.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/developerguide/route-concepts.html",
         "arnPattern": "arn:${Partition}:geo:${Region}:${Account}:route-calculator/${CalculatorName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -276882,11 +276900,19 @@
       },
       {
         "name": "tracker",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/developerguide/geofence-tracker-concepts.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/developerguide/tracking-components.html",
         "arnPattern": "arn:${Partition}:geo:${Region}:${Account}:tracker/${TrackerName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
           "geo:DeviceIds"
+        ]
+      },
+      {
+        "name": "job",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/developerguide/jobs-concepts.html",
+        "arnPattern": "arn:${Partition}:geo:${Region}:${Account}:job/${JobId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
         ]
       }
     ],
@@ -287819,6 +287845,21 @@
         ]
       },
       {
+        "name": "GetInvoiceSubmissionTask",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of an existing invoice submission task",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "InvoiceSubmissionTask",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetResourcePolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_GetResourcePolicy.html",
         "permissionOnly": false,
@@ -287879,10 +287920,40 @@
         ]
       },
       {
+        "name": "ListInvoiceSubmissionTasks",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list existing invoice submission tasks",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListPayables",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list payables of the specified payable provenance",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListTagsForResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_ListTagsForResource.html",
         "permissionOnly": false,
-        "description": "Grants permission to list tags on an existing entity or a change set",
+        "description": "Grants permission to list tags on an existing entity, change set, or invoice submission task",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -287893,6 +287964,12 @@
           },
           {
             "resourceType": "Entity",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "InvoiceSubmissionTask",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -287941,10 +288018,34 @@
         ]
       },
       {
+        "name": "StartInvoiceSubmissionTask",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to initiate tasks that submit invoices for processing in AWS Marketplace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "InvoiceSubmissionTask",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "TagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_TagResource.html",
         "permissionOnly": false,
-        "description": "Grants permission to tag an existing entity or a change set",
+        "description": "Grants permission to add new tags to a resource. Supported resource: Entity, ChangeSet, InvoiceSubmissionTask",
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
@@ -287955,6 +288056,12 @@
           },
           {
             "resourceType": "Entity",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "InvoiceSubmissionTask",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -287974,7 +288081,7 @@
         "name": "UntagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_UntagResource.html",
         "permissionOnly": false,
-        "description": "Grants permission to untag an existing entity or a change set",
+        "description": "Grants permission to remove tags from a resource. Supported resource: Entity, ChangeSet, InvoiceSubmissionTask",
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
@@ -287985,6 +288092,12 @@
           },
           {
             "resourceType": "Entity",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "InvoiceSubmissionTask",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -288024,6 +288137,14 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_DescribeAssessment.html#API_DescribeAssessment_ResponseSyntax",
         "arnPattern": "arn:${Partition}:aws-marketplace:${Region}::${Catalog}/Assessment/${ResourceId}",
         "conditionKeys": []
+      },
+      {
+        "name": "InvoiceSubmissionTask",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "arnPattern": "arn:${Partition}:aws-marketplace:${Region}:${Account}:catalog/${Catalog}/invoice-submission-task/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -314407,7 +314528,9 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
             "dependentActions": []
           }
         ]
@@ -372883,6 +373006,24 @@
             "dependentActions": []
           },
           {
+            "resourceType": "ai-benchmark-job",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ai-recommendation-job",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ai-workload-config",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "algorithm",
             "required": false,
             "conditionKeys": [],
@@ -373416,6 +373557,78 @@
             "resourceType": "partner-app",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateAIBenchmarkJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAIBenchmarkJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an AI benchmark job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ai-benchmark-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateAIRecommendationJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAIRecommendationJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an AI recommendation job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ai-recommendation-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateAIWorkloadConfig",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAIWorkloadConfig.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an AI workload configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ai-workload-config",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -374839,6 +375052,7 @@
               "sagemaker:DirectInternetAccess",
               "sagemaker:InstanceTypes",
               "sagemaker:MinimumInstanceMetadataServiceVersion",
+              "sagemaker:NotebookInstanceLifecycleConfigArns",
               "sagemaker:RootAccess",
               "sagemaker:VolumeKmsKey",
               "sagemaker:VpcSecurityGroupIds",
@@ -375443,6 +375657,51 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteAIBenchmarkJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteAIBenchmarkJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an AI benchmark job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ai-benchmark-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteAIRecommendationJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteAIRecommendationJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an AI recommendation job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ai-recommendation-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteAIWorkloadConfig",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteAIWorkloadConfig.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an AI workload configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ai-workload-config",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -376357,6 +376616,24 @@
             "dependentActions": []
           },
           {
+            "resourceType": "ai-benchmark-job",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ai-recommendation-job",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ai-workload-config",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "algorithm",
             "required": false,
             "conditionKeys": [],
@@ -376832,6 +377109,51 @@
         "resourceTypes": [
           {
             "resourceType": "device",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeAIBenchmarkJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAIBenchmarkJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe an AI benchmark job",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ai-benchmark-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeAIRecommendationJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAIRecommendationJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe an AI recommendation job",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ai-recommendation-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeAIWorkloadConfig",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeAIWorkloadConfig.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe an AI workload configuration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ai-workload-config",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -378278,6 +378600,51 @@
         ]
       },
       {
+        "name": "ListAIBenchmarkJobs",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListAIBenchmarkJobs.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list AI benchmark jobs",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAIRecommendationJobs",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListAIRecommendationJobs.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list AI recommendation jobs",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAIWorkloadConfigs",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListAIWorkloadConfigs.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list AI workload configurations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListActions",
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListActions.html",
         "permissionOnly": false,
@@ -379473,6 +379840,24 @@
             "dependentActions": []
           },
           {
+            "resourceType": "ai-benchmark-job",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ai-recommendation-job",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ai-workload-config",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "algorithm",
             "required": false,
             "conditionKeys": [],
@@ -380339,6 +380724,36 @@
         "resourceTypes": [
           {
             "resourceType": "space",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StopAIBenchmarkJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopAIBenchmarkJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to stop an AI benchmark job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ai-benchmark-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StopAIRecommendationJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopAIRecommendationJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to stop an AI recommendation job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ai-recommendation-job",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -381250,6 +381665,7 @@
               "sagemaker:AcceleratorTypes",
               "sagemaker:InstanceTypes",
               "sagemaker:MinimumInstanceMetadataServiceVersion",
+              "sagemaker:NotebookInstanceLifecycleConfigArns",
               "sagemaker:RootAccess"
             ],
             "dependentActions": []
@@ -382130,6 +382546,33 @@
           "aws:ResourceTag/${TagKey}",
           "sagemaker:ResourceTag/${TagKey}"
         ]
+      },
+      {
+        "name": "ai-workload-config",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/dg/API_AIWorkloadConfig.html",
+        "arnPattern": "arn:${Partition}:sagemaker:${Region}:${Account}:ai-workload-config/${AIWorkloadConfigName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "sagemaker:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "ai-benchmark-job",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/dg/API_AIBenchmarkJob.html",
+        "arnPattern": "arn:${Partition}:sagemaker:${Region}:${Account}:ai-benchmark-job/${AIBenchmarkJobName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "sagemaker:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "ai-recommendation-job",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/dg/API_AIRecommendationJob.html",
+        "arnPattern": "arn:${Partition}:sagemaker:${Region}:${Account}:ai-recommendation-job/${AIRecommendationJobName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "sagemaker:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -382360,6 +382803,12 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
         "description": "Filters access by the network isolation associated with the resource in the request",
         "type": "Bool"
+      },
+      {
+        "name": "sagemaker:NotebookInstanceLifecycleConfigArns",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
+        "description": "Filters access by the list of notebook instance lifecycle configuration ARNs associated with the resource in the request",
+        "type": "ArrayOfARN"
       },
       {
         "name": "sagemaker:OutputKmsKey",

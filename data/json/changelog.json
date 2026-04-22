@@ -1,5 +1,35 @@
 [
   {
+    "dateOfChange": "2026-04-22",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Marketplace Catalog": [
+        "aws-marketplace:GetInvoiceSubmissionTask",
+        "aws-marketplace:ListInvoiceSubmissionTasks",
+        "aws-marketplace:ListPayables",
+        "aws-marketplace:StartInvoiceSubmissionTask"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:CreateAIBenchmarkJob",
+        "sagemaker:CreateAIRecommendationJob",
+        "sagemaker:CreateAIWorkloadConfig",
+        "sagemaker:DeleteAIBenchmarkJob",
+        "sagemaker:DeleteAIRecommendationJob",
+        "sagemaker:DeleteAIWorkloadConfig",
+        "sagemaker:DescribeAIBenchmarkJob",
+        "sagemaker:DescribeAIRecommendationJob",
+        "sagemaker:DescribeAIWorkloadConfig",
+        "sagemaker:ListAIBenchmarkJobs",
+        "sagemaker:ListAIRecommendationJobs",
+        "sagemaker:ListAIWorkloadConfigs",
+        "sagemaker:StopAIBenchmarkJob",
+        "sagemaker:StopAIRecommendationJob"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-04-21",
     "addedServices": [],
     "removedServices": [],
