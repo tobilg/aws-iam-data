@@ -34661,6 +34661,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "system-tool",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
@@ -34732,6 +34738,12 @@
           },
           {
             "resourceType": "provisioned-model",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "system-tool",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -104588,6 +104600,66 @@
         ]
       },
       {
+        "name": "CreateRecommenderFilter",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_CreateRecommenderFilter.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a recommender filter in the domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender-filters",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateRecommenderSchema",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_CreateRecommenderSchema.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a recommender schema in the domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender-schemas",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateSegmentDefinition",
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_CreateSegmentDefinition.html",
         "permissionOnly": false,
@@ -104907,6 +104979,48 @@
           },
           {
             "resourceType": "recommenders",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteRecommenderFilter",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_DeleteRecommenderFilter.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a recommender filter in the domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender-filters",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteRecommenderSchema",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_DeleteRecommenderSchema.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a recommender schema in the domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender-schemas",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -105296,6 +105410,48 @@
           },
           {
             "resourceType": "recommenders",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetRecommenderFilter",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetRecommenderFilter.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get recommender filter details in the domain",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender-filters",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetRecommenderSchema",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetRecommenderSchema.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get recommender schema details in the domain",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender-schemas",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -105765,6 +105921,21 @@
         ]
       },
       {
+        "name": "ListRecommenderFilters",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_ListRecommenderFilters.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all recommender filters in the domain",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListRecommenderRecipes",
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_ListRecommenderRecipes.html",
         "permissionOnly": false,
@@ -105774,6 +105945,21 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListRecommenderSchemas",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_ListRecommenderSchemas.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all recommender schemas in the domain",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -105875,6 +106061,18 @@
           },
           {
             "resourceType": "object-types",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender-filters",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender-schemas",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -106180,6 +106378,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "recommender-filters",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender-schemas",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "recommenders",
             "required": false,
             "conditionKeys": [],
@@ -106253,6 +106463,18 @@
           },
           {
             "resourceType": "object-types",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender-filters",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommender-schemas",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -106473,6 +106695,22 @@
         "name": "domain-object-types",
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/",
         "arnPattern": "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/domain-object-types/${ObjectTypeName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "recommender-filters",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/",
+        "arnPattern": "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/recommender-filters/${RecommenderFilterName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "recommender-schemas",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/",
+        "arnPattern": "arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}/recommender-schemas/${RecommenderSchemaName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -190970,6 +191208,51 @@
         ]
       },
       {
+        "name": "GetResourceDashboard",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_GetResourceDashboard.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get the resource dashboard",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "session",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetSession",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_GetSession.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get details about a session",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "session",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetSessionEndpoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_GetSessionEndpoint.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get the endpoint URL and authentication token for connecting to a session",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "session",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListApplications",
         "apiReferenceUrl": "https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_ListApplications.html",
         "permissionOnly": false,
@@ -191015,6 +191298,21 @@
         ]
       },
       {
+        "name": "ListSessions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_ListSessions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list sessions associated with an application",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "application",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListTagsForResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_ListTagsForResource.html",
         "permissionOnly": false,
@@ -191029,6 +191327,12 @@
           },
           {
             "resourceType": "jobRun",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "session",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -191055,6 +191359,32 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_StartJobRun.html",
         "permissionOnly": false,
         "description": "Grants permission to start a job run",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "application",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StartSession",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_StartSession.html",
+        "permissionOnly": false,
+        "description": "Grants permission to start a session in an application",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -191111,12 +191441,33 @@
             "dependentActions": []
           },
           {
+            "resourceType": "session",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "TerminateSession",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_TerminateSession.html",
+        "permissionOnly": false,
+        "description": "Grants permission to terminate a session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "session",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -191136,6 +191487,12 @@
           },
           {
             "resourceType": "jobRun",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "session",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -191179,6 +191536,14 @@
         "name": "jobRun",
         "apiReferenceUrl": "https://docs.aws.amazon.com/emr/latest/EMR-Serverless-UserGuide/emr-serverless.html",
         "arnPattern": "arn:${Partition}:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}/jobruns/${JobRunId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "session",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/emr/latest/EMR-Serverless-UserGuide/emr-serverless.html",
+        "arnPattern": "arn:${Partition}:emr-serverless:${Region}:${Account}:/applications/${ApplicationId}/sessions/${SessionId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -235393,6 +235758,30 @@
         ]
       },
       {
+        "name": "CreateAdConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_CreateAdConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new ad configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Ad-Configuration",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:TagKeys",
+              "aws:RequestTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateChannel",
         "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_CreateChannel.html",
         "permissionOnly": false,
@@ -235615,6 +236004,21 @@
         ]
       },
       {
+        "name": "DeleteAdConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_DeleteAdConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an ad configuration for the specified ARN",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Ad-Configuration",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteChannel",
         "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_DeleteChannel.html",
         "permissionOnly": false,
@@ -235779,6 +236183,21 @@
         "resourceTypes": [
           {
             "resourceType": "Stage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetAdConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_GetAdConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get the ad configuration for the specified ARN",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Ad-Configuration",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -236059,6 +236478,36 @@
         ]
       },
       {
+        "name": "InsertAdBreak",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_InsertAdBreak.html",
+        "permissionOnly": false,
+        "description": "Grants permission to request an ad insertion on a channel using an associated ad configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Channel",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAdConfigurations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_ListAdConfigurations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get summary information about ad configurations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListChannels",
         "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_ListChannels.html",
         "permissionOnly": false,
@@ -236333,6 +236782,12 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
+            "resourceType": "Ad-Configuration",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Channel",
             "required": false,
             "conditionKeys": [],
@@ -236558,6 +237013,12 @@
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
+            "resourceType": "Ad-Configuration",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Channel",
             "required": false,
             "conditionKeys": [],
@@ -236641,6 +237102,12 @@
         "description": "Grants permission to remove tags for a resource with a specified ARN",
         "accessLevel": "Tagging",
         "resourceTypes": [
+          {
+            "resourceType": "Ad-Configuration",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
           {
             "resourceType": "Channel",
             "required": false,
@@ -236815,6 +237282,14 @@
         "name": "Recording-Configuration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_RecordingConfiguration.html",
         "arnPattern": "arn:${Partition}:ivs:${Region}:${Account}:recording-configuration/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "Ad-Configuration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_AdConfiguration.html",
+        "arnPattern": "arn:${Partition}:ivs:${Region}:${Account}:ad-configuration/${ResourceId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -426719,6 +427194,12 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "policy-store-alias",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -427155,6 +427636,12 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
+      },
+      {
+        "name": "policy-store-alias",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/verifiedpermissions/latest/userguide/policy-store-aliases.html",
+        "arnPattern": "arn:${Partition}:verifiedpermissions:${Region}:${Account}:policy-store-alias/${AliasName}",
+        "conditionKeys": []
       }
     ],
     "conditionKeys": [

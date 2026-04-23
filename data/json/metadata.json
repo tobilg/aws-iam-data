@@ -7587,7 +7587,7 @@
       "name": "Amazon Connect Customer Profiles",
       "servicePrefix": "profile",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnectcustomerprofiles.html",
-      "actionsCount": 102,
+      "actionsCount": 110,
       "actions": [
         "AddProfileKey",
         "BatchGetCalculatedAttributeForProfile",
@@ -7600,6 +7600,8 @@
         "CreateIntegrationWorkflow",
         "CreateProfile",
         "CreateRecommender",
+        "CreateRecommenderFilter",
+        "CreateRecommenderSchema",
         "CreateSegmentDefinition",
         "CreateSegmentEstimate",
         "CreateSegmentSnapshot",
@@ -7617,6 +7619,8 @@
         "DeleteProfileObject",
         "DeleteProfileObjectType",
         "DeleteRecommender",
+        "DeleteRecommenderFilter",
+        "DeleteRecommenderSchema",
         "DeleteSegmentDefinition",
         "DeleteWorkflow",
         "DetectProfileObjectType",
@@ -7638,6 +7642,8 @@
         "GetProfileObjectTypeTemplate",
         "GetProfileRecommendations",
         "GetRecommender",
+        "GetRecommenderFilter",
+        "GetRecommenderSchema",
         "GetSegmentDefinition",
         "GetSegmentEstimate",
         "GetSegmentMembership",
@@ -7666,7 +7672,9 @@
         "ListProfileObjectTypeTemplates",
         "ListProfileObjectTypes",
         "ListProfileObjects",
+        "ListRecommenderFilters",
         "ListRecommenderRecipes",
+        "ListRecommenderSchemas",
         "ListRecommenders",
         "ListRuleBasedMatches",
         "ListSegmentDefinitions",
@@ -7692,7 +7700,7 @@
         "UpdateProfile",
         "UpdateRecommender"
       ],
-      "resourceTypesCount": 10,
+      "resourceTypesCount": 12,
       "resourceTypes": [
         "domains",
         "object-types",
@@ -7703,7 +7711,9 @@
         "event-triggers",
         "layouts",
         "recommenders",
-        "domain-object-types"
+        "domain-object-types",
+        "recommender-filters",
+        "recommender-schemas"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -12906,7 +12916,7 @@
       "name": "Amazon EMR Serverless",
       "servicePrefix": "emr-serverless",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonemrserverless.html",
-      "actionsCount": 19,
+      "actionsCount": 25,
       "actions": [
         "AccessInteractiveEndpoints",
         "AccessLivyEndpoints",
@@ -12917,21 +12927,28 @@
         "GetApplication",
         "GetDashboardForJobRun",
         "GetJobRun",
+        "GetResourceDashboard",
+        "GetSession",
+        "GetSessionEndpoint",
         "ListApplications",
         "ListJobRunAttempts",
         "ListJobRuns",
+        "ListSessions",
         "ListTagsForResource",
         "StartApplication",
         "StartJobRun",
+        "StartSession",
         "StopApplication",
         "TagResource",
+        "TerminateSession",
         "UntagResource",
         "UpdateApplication"
       ],
-      "resourceTypesCount": 2,
+      "resourceTypesCount": 3,
       "resourceTypes": [
         "application",
-        "jobRun"
+        "jobRun",
+        "session"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -16037,11 +16054,12 @@
       "name": "Amazon Interactive Video Service",
       "servicePrefix": "ivs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninteractivevideoservice.html",
-      "actionsCount": 71,
+      "actionsCount": 76,
       "actions": [
         "BatchGetChannel",
         "BatchGetStreamKey",
         "BatchStartViewerSessionRevocation",
+        "CreateAdConfiguration",
         "CreateChannel",
         "CreateEncoderConfiguration",
         "CreateIngestConfiguration",
@@ -16051,6 +16069,7 @@
         "CreateStage",
         "CreateStorageConfiguration",
         "CreateStreamKey",
+        "DeleteAdConfiguration",
         "DeleteChannel",
         "DeleteEncoderConfiguration",
         "DeleteIngestConfiguration",
@@ -16062,6 +16081,7 @@
         "DeleteStorageConfiguration",
         "DeleteStreamKey",
         "DisconnectParticipant",
+        "GetAdConfiguration",
         "GetChannel",
         "GetComposition",
         "GetEncoderConfiguration",
@@ -16079,6 +16099,8 @@
         "GetStreamSession",
         "ImportPlaybackKeyPair",
         "ImportPublicKey",
+        "InsertAdBreak",
+        "ListAdConfigurations",
         "ListChannels",
         "ListCompositions",
         "ListEncoderConfigurations",
@@ -16111,13 +16133,14 @@
         "UpdatePlaybackRestrictionPolicy",
         "UpdateStage"
       ],
-      "resourceTypesCount": 11,
+      "resourceTypesCount": 12,
       "resourceTypes": [
         "Channel",
         "Stream-Key",
         "Playback-Key-Pair",
         "Playback-Restriction-Policy",
         "Recording-Configuration",
+        "Ad-Configuration",
         "Stage",
         "Composition",
         "Encoder-Configuration",
@@ -30368,9 +30391,10 @@
         "UpdatePolicyStore",
         "UpdatePolicyTemplate"
       ],
-      "resourceTypesCount": 1,
+      "resourceTypesCount": 2,
       "resourceTypes": [
-        "policy-store"
+        "policy-store",
+        "policy-store-alias"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [

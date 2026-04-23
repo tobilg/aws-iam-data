@@ -1,5 +1,38 @@
 [
   {
+    "dateOfChange": "2026-04-23",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Connect Customer Profiles": [
+        "profile:CreateRecommenderFilter",
+        "profile:CreateRecommenderSchema",
+        "profile:DeleteRecommenderFilter",
+        "profile:DeleteRecommenderSchema",
+        "profile:GetRecommenderFilter",
+        "profile:GetRecommenderSchema",
+        "profile:ListRecommenderFilters",
+        "profile:ListRecommenderSchemas"
+      ],
+      "Amazon EMR Serverless": [
+        "emr-serverless:GetResourceDashboard",
+        "emr-serverless:GetSession",
+        "emr-serverless:GetSessionEndpoint",
+        "emr-serverless:ListSessions",
+        "emr-serverless:StartSession",
+        "emr-serverless:TerminateSession"
+      ],
+      "Amazon Interactive Video Service": [
+        "ivs:CreateAdConfiguration",
+        "ivs:DeleteAdConfiguration",
+        "ivs:GetAdConfiguration",
+        "ivs:InsertAdBreak",
+        "ivs:ListAdConfigurations"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-04-22",
     "addedServices": [],
     "removedServices": [],
