@@ -37394,7 +37394,8 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
               "bedrock-agentcore:subnets",
-              "bedrock-agentcore:securityGroups"
+              "bedrock-agentcore:securityGroups",
+              "bedrock-agentcore:RuntimeAuthorizerType"
             ],
             "dependentActions": [
               "iam:PassRole"
@@ -37589,6 +37590,28 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateHarness",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreateHarness.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new harness",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "bedrock-agentcore:CreateAgentRuntime",
+              "bedrock-agentcore:GetAgentRuntime",
+              "iam:PassRole"
+            ]
           }
         ]
       },
@@ -37922,6 +37945,25 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteHarness",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeleteHarness.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a harness",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "harness",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "bedrock-agentcore:DeleteAgentRuntime",
+              "bedrock-agentcore:GetAgentRuntime",
+              "iam:PassRole"
+            ]
           }
         ]
       },
@@ -38348,6 +38390,21 @@
         "resourceTypes": [
           {
             "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetHarness",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetHarness.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get details of a harness",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "harness",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -38861,6 +38918,23 @@
         ]
       },
       {
+        "name": "InvokeHarness",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_InvokeHarness.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke a harness",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "harness",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "bedrock-agentcore:InvokeAgentRuntime"
+            ]
+          }
+        ]
+      },
+      {
         "name": "InvokeRegistryMcp",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/welcome.html",
         "permissionOnly": false,
@@ -39096,6 +39170,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListGateways.html",
         "permissionOnly": false,
         "description": "Grants permission to list existing gateways",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListHarnesses",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListHarnesses.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list harnesses",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -39354,6 +39443,12 @@
           },
           {
             "resourceType": "gateway",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "harness",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -39813,6 +39908,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "harness",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "memory",
             "required": false,
             "conditionKeys": [],
@@ -39915,6 +40016,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "harness",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "memory",
             "required": false,
             "conditionKeys": [],
@@ -39992,7 +40099,8 @@
             "required": false,
             "conditionKeys": [
               "bedrock-agentcore:subnets",
-              "bedrock-agentcore:securityGroups"
+              "bedrock-agentcore:securityGroups",
+              "bedrock-agentcore:RuntimeAuthorizerType"
             ],
             "dependentActions": []
           }
@@ -40105,6 +40213,25 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateHarness",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdateHarness.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a harness",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "harness",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "bedrock-agentcore:GetAgentRuntime",
+              "bedrock-agentcore:UpdateAgentRuntime",
+              "iam:PassRole"
+            ]
           }
         ]
       },
@@ -40420,6 +40547,14 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/registryRecord.html",
         "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:registry/${RegistryId}/record/${RecordId}",
         "conditionKeys": []
+      },
+      {
+        "name": "harness",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/harness.html",
+        "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:harness/${HarnessId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -40481,6 +40616,12 @@
         "name": "bedrock-agentcore:KmsKeyArn",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/#condition-keys-kmsKeyArn",
         "description": "Filters access by KMS Key arn provided",
+        "type": "String"
+      },
+      {
+        "name": "bedrock-agentcore:RuntimeAuthorizerType",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/devguide/runtime-authorizer-type-condition-key.html",
+        "description": "Filters access by the authorizer type configured for the AgentCore runtime",
         "type": "String"
       },
       {
@@ -264006,7 +264147,7 @@
     "resourceTypes": [
       {
         "name": "stream",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-streams.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#stream",
         "arnPattern": "arn:${Partition}:kinesis:${Region}:${Account}:stream/${StreamName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -264014,7 +264155,7 @@
       },
       {
         "name": "consumer",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/dev/amazon-kinesis-consumers.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/streams/latest/dev/key-concepts.html#enabled-application",
         "arnPattern": "arn:${Partition}:kinesis:${Region}:${Account}:${StreamType}/${StreamName}/consumer/${ConsumerName}:${ConsumerCreationTimpstamp}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -264022,9 +264163,11 @@
       },
       {
         "name": "kmsKey",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/dev/concepts.html#kms_keys",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/streams/latest/dev/server-side-encryption.html",
         "arnPattern": "arn:${Partition}:kms:${Region}:${Account}:key/${KeyId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -276347,6 +276490,21 @@
         ]
       },
       {
+        "name": "CancelJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_geojobs_CancelJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel a job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateGeofenceCollection",
         "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_WaypointGeofencing_CreateGeofenceCollection.html",
         "permissionOnly": false,
@@ -276770,6 +276928,21 @@
         ]
       },
       {
+        "name": "GetJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_geojobs_GetJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve job details",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetMapGlyphs",
         "apiReferenceUrl": "https://docs.aws.amazon.com/location/previous/APIReference/API_GetMapGlyphs.html",
         "permissionOnly": false,
@@ -276883,6 +277056,21 @@
         "resourceTypes": [
           {
             "resourceType": "geofence-collection",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListJobs",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_geojobs_ListJobs.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list jobs",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "job",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -277094,6 +277282,30 @@
             "resourceType": "place-index",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StartJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/location/latest/APIReference/API_geojobs_StartJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to start a job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -287665,7 +287877,7 @@
         "name": "AcceptAgreementApprovalRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to approve an incoming subscription request (for providers who provide products that require subscription verification)",
+        "description": "Grants permission to approve an incoming subscription request (for providers who provide products that require subscription verification)",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -287680,13 +287892,16 @@
         "name": "AcceptAgreementCancellationRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to accept an agreement cancellation request",
+        "description": "Grants permission to accept an agreement cancellation request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287695,13 +287910,16 @@
         "name": "AcceptAgreementPaymentRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to accept a payment request",
+        "description": "Grants permission to accept a payment request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287710,13 +287928,16 @@
         "name": "AcceptAgreementRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to accept their agreement requests",
+        "description": "Grants permission to accept an agreement request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:AgreementType",
+              "aws-marketplace:ProductId"
+            ],
             "dependentActions": []
           }
         ]
@@ -287725,13 +287946,16 @@
         "name": "BatchCreateBillingAdjustmentRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to create a billing adjustment request against an agreement",
+        "description": "Grants permission to create a billing adjustment request against an agreement",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287740,13 +287964,15 @@
         "name": "CancelAgreement",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to cancel their agreements",
+        "description": "Grants permission to cancel agreements",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287755,13 +287981,16 @@
         "name": "CancelAgreementCancellationRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to withdraw a pending agreement cancellation request",
+        "description": "Grants permission to cancel a pending agreement cancellation request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287770,13 +287999,16 @@
         "name": "CancelAgreementPaymentRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to cancel a payment request",
+        "description": "Grants permission to cancel a payment request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287785,7 +288017,7 @@
         "name": "CancelAgreementRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to cancel pending subscription requests for products that require subscription verification",
+        "description": "Grants permission to cancel pending subscription requests for products that require subscription verification",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -287800,13 +288032,16 @@
         "name": "CreateAgreementRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to create an agreement request",
+        "description": "Grants permission to create an agreement request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:AgreementType",
+              "aws-marketplace:ProductId"
+            ],
             "dependentActions": []
           }
         ]
@@ -287815,13 +288050,16 @@
         "name": "DescribeAgreement",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to describe the metadata about the agreement",
+        "description": "Grants permission to describe the metadata about the agreement",
         "accessLevel": "Read",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287830,7 +288068,7 @@
         "name": "GetAgreementApprovalRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to view the details of their incoming subscription requests (for providers who provide products that require subscription verification)",
+        "description": "Grants permission to view the details of incoming subscription requests (for providers who provide products that require subscription verification)",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -287845,13 +288083,16 @@
         "name": "GetAgreementCancellationRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to view the details of an agreement cancellation request",
+        "description": "Grants permission to view the details of an agreement cancellation request",
         "accessLevel": "Read",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287860,13 +288101,15 @@
         "name": "GetAgreementEntitlements",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to view the entitlements associated with an agreement",
+        "description": "Grants permission to get the entitlements associated with an agreement",
         "accessLevel": "Read",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287875,13 +288118,16 @@
         "name": "GetAgreementPaymentRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to view details for a payment request",
+        "description": "Grants permission to view details for a payment request",
         "accessLevel": "Read",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287890,7 +288136,7 @@
         "name": "GetAgreementRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to view the details of their subscription requests for data products that require subscription verification",
+        "description": "Grants permission to view the details of subscription requests for data products that require subscription verification",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -287905,13 +288151,16 @@
         "name": "GetAgreementTerms",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to get a list of terms for an agreement",
+        "description": "Grants permission to get a list of terms for an agreement",
         "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287920,13 +288169,16 @@
         "name": "GetBillingAdjustmentRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to view the details of a billing adjustment request",
+        "description": "Grants permission to view the details of a billing adjustment request",
         "accessLevel": "Read",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287935,7 +288187,7 @@
         "name": "ListAgreementApprovalRequests",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to list their incoming subscription requests (for providers who provide products that require subscription verification)",
+        "description": "Grants permission to list incoming subscription requests (for providers who provide products that require subscription verification)",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -287950,13 +288202,16 @@
         "name": "ListAgreementCancellationRequests",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to list agreement cancellation requests",
+        "description": "Grants permission to list agreement cancellation requests",
         "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287965,13 +288220,15 @@
         "name": "ListAgreementCharges",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to view charges associated with their agreements",
+        "description": "Grants permission to list charges associated with an agreement",
         "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287980,13 +288237,16 @@
         "name": "ListAgreementInvoiceLineItems",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to list invoice line items for an agreement",
+        "description": "Grants permission to list invoice line items for an agreement",
         "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -287995,13 +288255,16 @@
         "name": "ListAgreementPaymentRequests",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to list payment requests for an agreement",
+        "description": "Grants permission to list payment requests for an agreement",
         "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -288010,7 +288273,7 @@
         "name": "ListAgreementRequests",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to list their subscription requests for products that require subscription verification",
+        "description": "Grants permission to list subscription requests for products that require subscription verification",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -288025,13 +288288,16 @@
         "name": "ListBillingAdjustmentRequests",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to list billing adjustment requests",
+        "description": "Grants permission to list billing adjustment requests",
         "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -288040,7 +288306,7 @@
         "name": "ListEntitlementDetails",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to view details of the entitlements associated with an agreement. Note that this action is not applicable to Marketplace purchases",
+        "description": "Grants permission to list details of the entitlements associated with an agreement. Note that this action is not applicable to Marketplace purchases",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -288055,7 +288321,7 @@
         "name": "RejectAgreementApprovalRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to decline an incoming subscription requests (for providers who provide products that require subscription verification)",
+        "description": "Grants permission to decline an incoming subscription requests (for providers who provide products that require subscription verification)",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -288070,13 +288336,16 @@
         "name": "RejectAgreementCancellationRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to reject an agreement cancellation request",
+        "description": "Grants permission to reject an agreement cancellation request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -288085,13 +288354,16 @@
         "name": "RejectAgreementPaymentRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to reject a payment request",
+        "description": "Grants permission to reject a payment request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -288100,13 +288372,16 @@
         "name": "SearchAgreements",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to search their agreements",
+        "description": "Grants permission to search agreements",
         "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -288115,13 +288390,16 @@
         "name": "SendAgreementCancellationRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to send an agreement cancellation request",
+        "description": "Grants permission to send an agreement cancellation request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -288130,13 +288408,16 @@
         "name": "SendAgreementPaymentRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to send payment request",
+        "description": "Grants permission to send a payment request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:PartyType",
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -288145,7 +288426,7 @@
         "name": "Subscribe",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to subscribe to AWS Marketplace products. Includes the ability to send a subscription request for products that require subscription verification. Includes the ability to enable auto-renewal for an existing subscription",
+        "description": "Grants permission to subscribe to AWS Marketplace products. Includes the ability to send a subscription request for products that require subscription verification. Includes the ability to enable auto-renewal for an existing subscription",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -288160,7 +288441,7 @@
         "name": "Unsubscribe",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to remove subscriptions to AWS Marketplace products. Includes the ability to disable auto-renewal for an existing subscription",
+        "description": "Grants permission to unsubscribe from AWS Marketplace products. Includes the ability to disable auto-renewal for an existing subscription",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -288175,7 +288456,7 @@
         "name": "UpdateAgreementApprovalRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to make changes to an incoming subscription request, including the ability to delete the prospective subscriber's information (for providers who provide products that require subscription verification)",
+        "description": "Grants permission to make changes to an incoming subscription request, including the ability to delete the prospective subscriber's information (for providers who provide products that require subscription verification)",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -288190,13 +288471,15 @@
         "name": "UpdatePurchaseOrders",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to update purchase orders for charges associated with their agreements",
+        "description": "Grants permission to update purchase orders for charges associated with an agreement",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ]
@@ -288205,7 +288488,7 @@
         "name": "ViewSubscriptions",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to see their account's subscriptions",
+        "description": "Grants permission to view account's subscriptions",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -288234,7 +288517,7 @@
       {
         "name": "aws-marketplace:ProductId",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html",
-        "description": "Filters access by product id for AWS Marketplace RedHat OpenShift and Bedrock Products. Note: Using this condition key will not restrict access to products in AWS Marketplace",
+        "description": "Filters access by product id for AWS Marketplace purchases",
         "type": "ArrayOfString"
       }
     ]

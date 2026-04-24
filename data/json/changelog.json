@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2026-04-24",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:CreateHarness",
+        "bedrock-agentcore:DeleteHarness",
+        "bedrock-agentcore:GetHarness",
+        "bedrock-agentcore:InvokeHarness",
+        "bedrock-agentcore:ListHarnesses",
+        "bedrock-agentcore:UpdateHarness"
+      ],
+      "Amazon Location": [
+        "geo:CancelJob",
+        "geo:GetJob",
+        "geo:ListJobs",
+        "geo:StartJob"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-04-23",
     "addedServices": [],
     "removedServices": [],
