@@ -1,5 +1,26 @@
 [
   {
+    "dateOfChange": "2026-04-26",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Security Agent": [
+        "securityagent:BatchDeleteCodeReviews",
+        "securityagent:BatchGetCodeReviewJobTasks",
+        "securityagent:BatchGetCodeReviewJobs",
+        "securityagent:BatchGetCodeReviews",
+        "securityagent:CreateCodeReview",
+        "securityagent:ListCodeReviewJobTasks",
+        "securityagent:ListCodeReviewJobsForCodeReview",
+        "securityagent:ListCodeReviews",
+        "securityagent:StartCodeReviewJob",
+        "securityagent:StopCodeReviewJob",
+        "securityagent:UpdateCodeReview"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-04-24",
     "addedServices": [],
     "removedServices": [],

@@ -386385,6 +386385,23 @@
         ]
       },
       {
+        "name": "BatchDeleteCodeReviews",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchDeleteCodeReviews.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete multiple code reviews in a single request",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
         "name": "BatchDeletePentests",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchDeletePentests.html",
         "permissionOnly": false,
@@ -386430,6 +386447,57 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "BatchGetCodeReviewJobTasks",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetCodeReviewJobTasks.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve multiple code review job tasks in a single request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "BatchGetCodeReviewJobs",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetCodeReviewJobs.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve multiple code review jobs in a single request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "BatchGetCodeReviews",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetCodeReviews.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve multiple code reviews in a single request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -386573,6 +386641,23 @@
               "iam:PassRole",
               "kms:DescribeKey",
               "sso:CreateApplication"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CreateCodeReview",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_CreateCodeReview.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new code review configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
             ]
           }
         ]
@@ -386975,6 +387060,57 @@
         ]
       },
       {
+        "name": "ListCodeReviewJobTasks",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListCodeReviewJobTasks.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list tasks associated with a code review job",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ListCodeReviewJobsForCodeReview",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListCodeReviewJobsForCodeReview.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list code review jobs associated with a code review",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ListCodeReviews",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListCodeReviews.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list code reviews with optional filtering by status",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
         "name": "ListDesignReviewComments",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListDesignReviewComments.html",
         "permissionOnly": false,
@@ -387252,6 +387388,24 @@
         ]
       },
       {
+        "name": "StartCodeReviewJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_StartCodeReviewJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to initiate the execution of a code review",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt",
+              "kms:GenerateDataKey"
+            ]
+          }
+        ]
+      },
+      {
         "name": "StartPentestJob",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_StartPentestJob.html",
         "permissionOnly": false,
@@ -387265,6 +387419,23 @@
             "dependentActions": [
               "kms:Decrypt",
               "kms:GenerateDataKey"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "StopCodeReviewJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_StopCodeReviewJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to stop the execution of a running code review",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
             ]
           }
         ]
@@ -387427,6 +387598,23 @@
             "dependentActions": [
               "iam:PassRole",
               "kms:DescribeKey"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "UpdateCodeReview",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateCodeReview.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an existing code review with new configuration or settings",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
             ]
           }
         ]
