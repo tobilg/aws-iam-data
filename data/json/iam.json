@@ -126079,6 +126079,31 @@
         ]
       },
       {
+        "name": "CreatePrivateConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a private connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "private-connection",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteAgentSpace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
@@ -126117,6 +126142,29 @@
         ]
       },
       {
+        "name": "DeletePrivateConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a private connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "private-connection",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeregisterService",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
@@ -126125,6 +126173,29 @@
         "resourceTypes": [
           {
             "resourceType": "service",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribePrivateConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe a private connection",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "private-connection",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -126543,6 +126614,21 @@
         ]
       },
       {
+        "name": "ListPrivateConnections",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list private connections",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListRecommendations",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
@@ -126581,6 +126667,16 @@
         "resourceTypes": [
           {
             "resourceType": "agentspace",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "private-connection",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -126703,6 +126799,16 @@
             "dependentActions": []
           },
           {
+            "resourceType": "private-connection",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "service",
             "required": false,
             "conditionKeys": [
@@ -126733,6 +126839,15 @@
         "resourceTypes": [
           {
             "resourceType": "agentspace",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "private-connection",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -126865,6 +126980,29 @@
         ]
       },
       {
+        "name": "UpdatePrivateConnectionCertificate",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a private connection certificate",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "private-connection",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateRecommendation",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
         "permissionOnly": false,
@@ -126909,6 +127047,14 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/",
         "arnPattern": "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}/associations/${AssociationId}",
         "conditionKeys": []
+      },
+      {
+        "name": "private-connection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/",
+        "arnPattern": "arn:${Partition}:aidevops:${Region}:${Account}:private-connection/${Name}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "service",
@@ -260255,6 +260401,7 @@
             "required": false,
             "conditionKeys": [
               "kms:CallerAccount",
+              "kms:TrailingDaysWithoutKeyUsage",
               "kms:ViaService"
             ],
             "dependentActions": []
@@ -260701,6 +260848,30 @@
               "kms:RecipientAttestation:PCR29",
               "kms:RecipientAttestation:PCR30",
               "kms:RecipientAttestation:PCR31"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetKeyLastUsage",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kms/latest/APIReference/API_GetKeyLastUsage.html",
+        "permissionOnly": false,
+        "description": "Controls permission to view the last usage of an AWS KMS key",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "key",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "kms:CallerAccount",
+              "kms:ViaService"
             ],
             "dependentActions": []
           }
@@ -261181,6 +261352,7 @@
             "conditionKeys": [
               "kms:CallerAccount",
               "kms:ScheduleKeyDeletionPendingWindowInDays",
+              "kms:TrailingDaysWithoutKeyUsage",
               "kms:ViaService"
             ],
             "dependentActions": []
@@ -261994,6 +262166,12 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-signing-algorithm",
         "description": "Filters access to the Sign and Verify operations based on the signing algorithm in the request",
         "type": "String"
+      },
+      {
+        "name": "kms:TrailingDaysWithoutKeyUsage",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-trailing-days-without-key-usage",
+        "description": "Filters access to the ScheduleKeyDeletion and DisableKey operations based on the number of days since the AWS KMS key was last used",
+        "type": "Numeric"
       },
       {
         "name": "kms:ValidTo",
@@ -289131,7 +289309,7 @@
     "actions": [
       {
         "name": "GetListing",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-discovery_GetListing.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve information about a listing",
         "accessLevel": "Read",
@@ -289146,7 +289324,7 @@
       },
       {
         "name": "GetOffer",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-discovery_GetOffer.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve information about an offer",
         "accessLevel": "Read",
@@ -289161,7 +289339,7 @@
       },
       {
         "name": "GetOfferSet",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-discovery_GetOfferSet.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve information about an offer set",
         "accessLevel": "Read",
@@ -289176,7 +289354,7 @@
       },
       {
         "name": "GetOfferTerms",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-discovery_GetOfferTerms.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve terms for an offer",
         "accessLevel": "Read",
@@ -289191,7 +289369,7 @@
       },
       {
         "name": "GetProduct",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-discovery_GetProduct.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve information about a product",
         "accessLevel": "Read",
@@ -289206,7 +289384,7 @@
       },
       {
         "name": "ListFulfillmentOptions",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-discovery_ListFulfillmentOptions.html",
         "permissionOnly": false,
         "description": "Grants permission to list fulfillment options for a product",
         "accessLevel": "List",
@@ -289223,7 +289401,7 @@
         "name": "ListPrivateListings",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/private-offers-page.html",
         "permissionOnly": false,
-        "description": "Grants permission to users to list their private offers",
+        "description": "Grants permission to list private offers",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -289236,13 +289414,13 @@
       },
       {
         "name": "ListPurchaseOptions",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-discovery_ListPurchaseOptions.html",
         "permissionOnly": false,
         "description": "Grants permission to list purchase options available to the buyer",
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "PurchaseOption",
+            "resourceType": "AllPurchaseOptions",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -289251,13 +289429,13 @@
       },
       {
         "name": "SearchFacets",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-discovery_SearchFacets.html",
         "permissionOnly": false,
-        "description": "Grants permission to retrieve facet values for filtering listings",
+        "description": "Grants permission to search for facet values to filter listings",
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "Listing",
+            "resourceType": "AllListings",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -289266,13 +289444,13 @@
       },
       {
         "name": "SearchListings",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-discovery_SearchListings.html",
         "permissionOnly": false,
         "description": "Grants permission to search for product listings",
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "Listing",
+            "resourceType": "AllListings",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -289283,32 +289461,44 @@
     "resourceTypes": [
       {
         "name": "Product",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-apis.html#discovery-data-model",
         "arnPattern": "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/product/${ProductId}",
         "conditionKeys": []
       },
       {
         "name": "Listing",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-apis.html#discovery-data-model",
         "arnPattern": "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/listing/${ListingId}",
         "conditionKeys": []
       },
       {
+        "name": "AllListings",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-apis.html#discovery-data-model",
+        "arnPattern": "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/listing/*",
+        "conditionKeys": []
+      },
+      {
         "name": "Offer",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-apis.html#discovery-data-model",
         "arnPattern": "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/offer/${OfferId}",
         "conditionKeys": []
       },
       {
         "name": "OfferSet",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-apis.html#discovery-data-model",
         "arnPattern": "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/offerSet/${OfferSetId}",
         "conditionKeys": []
       },
       {
         "name": "PurchaseOption",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-api-access-control.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-apis.html#discovery-data-model",
         "arnPattern": "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/purchaseOption/${PurchaseOptionId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "AllPurchaseOptions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/discovery-apis.html#discovery-data-model",
+        "arnPattern": "arn:${Partition}:aws-marketplace:::catalog/${CatalogName}/purchaseOption/*",
         "conditionKeys": []
       }
     ],
@@ -425685,51 +425875,6 @@
         ]
       },
       {
-        "name": "CreateEngagement",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
-        "permissionOnly": false,
-        "description": "Grants permission to create an engagement",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "CreateEngagementAttachment",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
-        "permissionOnly": false,
-        "description": "Grants permission to create an engagement attachment",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "CreateEngagementCommunication",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
-        "permissionOnly": false,
-        "description": "Grants permission to create an engagement communication",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
         "name": "DeleteNotificationConfigurationForDelegatedAdmin",
         "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
         "permissionOnly": false,
@@ -426030,51 +426175,6 @@
         ]
       },
       {
-        "name": "GetEngagement",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
-        "permissionOnly": false,
-        "description": "Grants permission to view an engagment",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "GetEngagementAttachment",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
-        "permissionOnly": false,
-        "description": "Grants permission to view an engagment attachment",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "GetEngagementType",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
-        "permissionOnly": false,
-        "description": "Grants permission to view a specific engagement type",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
         "name": "GetOrganizationRecommendation",
         "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/get-started-with-aws-trusted-advisor-api.html",
         "permissionOnly": false,
@@ -426140,51 +426240,6 @@
         "permissionOnly": false,
         "description": "Grants permission to list a filterable set of Checks",
         "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "ListEngagementCommunications",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
-        "permissionOnly": false,
-        "description": "Grants permission to view all communications for an engagement",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "ListEngagementTypes",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
-        "permissionOnly": false,
-        "description": "Grants permission to view all engagement types",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "ListEngagements",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
-        "permissionOnly": false,
-        "description": "Grants permission to view all engagements",
-        "accessLevel": "Read",
         "resourceTypes": [
           {
             "resourceType": "",
@@ -426334,36 +426389,6 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
         "permissionOnly": true,
         "description": "Grants permission to enable the organizational view feature for AWS Trusted Advisor",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "UpdateEngagement",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
-        "permissionOnly": false,
-        "description": "Grants permission to update the details of an engagement",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "UpdateEngagementStatus",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/security-trusted-advisor.html#trusted-advisor-operations",
-        "permissionOnly": false,
-        "description": "Grants permission to update the status of an engagement",
         "accessLevel": "Write",
         "resourceTypes": [
           {
