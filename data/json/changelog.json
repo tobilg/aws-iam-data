@@ -1,5 +1,42 @@
 [
   {
+    "dateOfChange": "2026-04-30",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon EventBridge Scheduler": [
+        "scheduler:ListSchedulesByTarget"
+      ],
+      "Amazon GameLift Servers": [
+        "gamelift:DescribeContainerGroupPortMappings"
+      ],
+      "Amazon Q": [
+        "q:AssociateLoginDomain",
+        "q:BatchDescribeGroups",
+        "q:BatchDescribeUsers",
+        "q:BatchGetGroups",
+        "q:BatchGetUsers",
+        "q:CreateArtifact",
+        "q:CreateScimAccessToken",
+        "q:DeleteScimAccessToken",
+        "q:DisassociateLoginDomain",
+        "q:GetArtifact",
+        "q:GetArtifactActionResult",
+        "q:ListGroups",
+        "q:ListLoginDomains",
+        "q:ListScimAccessTokens",
+        "q:ListUsers",
+        "q:PerformArtifactAction",
+        "q:UpdateAssignment"
+      ],
+      "AWS Wickr": [
+        "wickr:GetOpentdfConfig",
+        "wickr:RegisterOpentdfConfig"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-04-28",
     "addedServices": [],
     "removedServices": [],

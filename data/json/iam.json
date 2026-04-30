@@ -196657,6 +196657,21 @@
         ]
       },
       {
+        "name": "ListSchedulesByTarget",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/scheduler/latest/UserGuide/",
+        "permissionOnly": false,
+        "description": "Grants permission to list the Amazon EventBridge Scheduler schedules in your account associated with a target",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListTagsForResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/scheduler/latest/APIReference/API_ListTagsForResource.html",
         "permissionOnly": false,
@@ -206212,6 +206227,21 @@
         "resourceTypes": [
           {
             "resourceType": "containerGroupDefinition",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeContainerGroupPortMappings",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/gameliftservers/latest/apireference/API_DescribeContainerGroupPortMappings.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve container port mappings for a container fleet",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "containerFleet",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -327872,6 +327902,96 @@
         ]
       },
       {
+        "name": "AssociateLoginDomain",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to associate a login domain with an Amazon Q Developer Profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "BatchDescribeGroups",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to describe multiple groups for an Amazon Q Developer Profile",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "BatchDescribeUsers",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to describe multiple users for an Amazon Q Developer Profile",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "BatchGetGroups",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to get multiple groups for an Amazon Q Developer Profile",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "BatchGetUsers",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to get multiple users for an Amazon Q Developer Profile",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateArtifact",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to create an artifact with Amazon Q",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateAssignment",
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
         "permissionOnly": true,
@@ -327960,6 +328080,21 @@
         ]
       },
       {
+        "name": "CreateScimAccessToken",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to create a SCIM access token for an Amazon Q Developer Profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteAssignment",
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
         "permissionOnly": true,
@@ -328042,6 +328177,36 @@
         ]
       },
       {
+        "name": "DeleteScimAccessToken",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to delete a SCIM access token for an Amazon Q Developer Profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DisassociateLoginDomain",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to disassociate a login domain from an Amazon Q Developer Profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GenerateCodeFromCommands",
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
         "permissionOnly": true,
@@ -328068,6 +328233,40 @@
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetArtifact",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to view an Amazon Q artifact",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetArtifactActionResult",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to view results of an action in an Amazon Q artifact",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "cloudformation:GetResource",
+              "cloudformation:GetResourceRequestStatus",
+              "cloudformation:ListResourceRequests"
+            ]
           }
         ]
       },
@@ -328185,6 +328384,36 @@
         ]
       },
       {
+        "name": "ListGroups",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to list groups for an Amazon Q Developer Profile",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListLoginDomains",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to list login domains for an Amazon Q Developer Profile",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListPluginProviders",
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
         "permissionOnly": true,
@@ -328215,6 +328444,21 @@
         ]
       },
       {
+        "name": "ListScimAccessTokens",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to list SCIM access tokens for an Amazon Q Developer Profile",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListTagsForResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
         "permissionOnly": true,
@@ -328238,6 +328482,21 @@
         ]
       },
       {
+        "name": "ListUsers",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to list users for an Amazon Q Developer Profile",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "PassRequest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
         "permissionOnly": true,
@@ -328249,6 +328508,32 @@
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PerformArtifactAction",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to perform an action in an Amazon Q artifact",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "cloudformation:CancelResourceRequest",
+              "cloudformation:CreateResource",
+              "cloudformation:GetResource",
+              "cloudformation:GetResourceRequestStatus",
+              "cloudformation:ListResourceRequests",
+              "cloudformation:UpdateResource",
+              "iam:AttachRolePolicy",
+              "iam:CreatePolicy",
+              "iam:CreateRole",
+              "iam:PutRolePolicy"
+            ]
           }
         ]
       },
@@ -328361,6 +328646,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "profile",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
@@ -328386,11 +328677,41 @@
             "dependentActions": []
           },
           {
+            "resourceType": "profile",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateAssignment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_manage-access-with-policies.html",
+        "permissionOnly": true,
+        "description": "Grants permission to update a user or group assignment for an Amazon Q Developer Profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "identitystore:UserId",
+              "identitystore:GroupId"
             ],
             "dependentActions": []
           }
@@ -328531,7 +328852,9 @@
         "name": "profile",
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/as-whisper-admin.html#about-profiles",
         "arnPattern": "arn:${Partition}:codewhisperer:${Region}:${Account}:profile/${Identifier}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "plugin",
@@ -436757,6 +437080,21 @@
         ]
       },
       {
+        "name": "GetOpentdfConfig",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wickr/latest/APIReference/API_GetOpentdfConfig.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the OpenTDF integration configuration for a Wickr network",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "network",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetSecurityGroup",
         "apiReferenceUrl": "https://docs.aws.amazon.com/wickr/latest/adminguide/security-iam.html",
         "permissionOnly": false,
@@ -436956,6 +437294,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/wickr/latest/adminguide/security-iam.html",
         "permissionOnly": false,
         "description": "Grants permission to test OIDC configuration for a Wickr network",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "network",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "RegisterOpentdfConfig",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wickr/latest/APIReference/API_RegisterOpentdfConfig.html",
+        "permissionOnly": false,
+        "description": "Grants permission to register and save OpenTDF integration configuration for a Wickr network",
         "accessLevel": "Write",
         "resourceTypes": [
           {
