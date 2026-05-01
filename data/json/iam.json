@@ -37381,6 +37381,23 @@
         ]
       },
       {
+        "name": "CreateABTest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_CreateABTest.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an A/B test",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          }
+        ]
+      },
+      {
         "name": "CreateAgentRuntime",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreateAgentRuntime.html",
         "permissionOnly": false,
@@ -37516,6 +37533,21 @@
         ]
       },
       {
+        "name": "CreateConfigurationBundle",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreateConfigurationBundle.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new configuration bundle",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateEvaluator",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreateEvaluator.html",
         "permissionOnly": false,
@@ -37575,6 +37607,21 @@
             "dependentActions": [
               "iam:PassRole"
             ]
+          }
+        ]
+      },
+      {
+        "name": "CreateGatewayRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreateGatewayRule.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new rule in an existing gateway",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -37778,6 +37825,21 @@
         ]
       },
       {
+        "name": "DeleteABTest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_DeleteABTest.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an A/B test",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ab-test",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteAgentRuntime",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeleteAgentRuntime.html",
         "permissionOnly": false,
@@ -37835,6 +37897,21 @@
         ]
       },
       {
+        "name": "DeleteBatchEvaluation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_DeleteBatchEvaluation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a batch evaluation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "batch-evaluate",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteBrowser",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeleteBrowser.html",
         "permissionOnly": false,
@@ -37873,6 +37950,21 @@
         "resourceTypes": [
           {
             "resourceType": "code-interpreter-custom",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteConfigurationBundle",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeleteConfigurationBundle.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a configuration bundle",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "configuration-bundle",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -37923,6 +38015,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeleteGateway.html",
         "permissionOnly": false,
         "description": "Grants permission to delete an existing gateway",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteGatewayRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeleteGatewayRule.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an existing gateway rule",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -38070,6 +38177,21 @@
         ]
       },
       {
+        "name": "DeleteRecommendation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_DeleteRecommendation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a recommendation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "recommendation",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteRegistry",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeleteRegistry.html",
         "permissionOnly": false,
@@ -38163,6 +38285,21 @@
         ]
       },
       {
+        "name": "GetABTest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_GetABTest.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get details of an A/B test",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ab-test",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetAgentCard",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_GetAgentCard.html",
         "permissionOnly": false,
@@ -38234,6 +38371,21 @@
           },
           {
             "resourceType": "token-vault",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetBatchEvaluation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_GetBatchEvaluation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get details of a batch evaluation",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "batch-evaluate",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -38328,6 +38480,36 @@
         ]
       },
       {
+        "name": "GetConfigurationBundle",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetConfigurationBundle.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get details of a configuration bundle",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "configuration-bundle",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetConfigurationBundleVersion",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetConfigurationBundleVersion.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a specific version of a configuration bundle",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "configuration-bundle",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetEvaluator",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetEvaluator.html",
         "permissionOnly": false,
@@ -38371,6 +38553,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetGateway.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve an existing gateway",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetGatewayRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetGatewayRule.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an existing gateway rule",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -38528,6 +38725,21 @@
           },
           {
             "resourceType": "policy-generation",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetRecommendation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_GetRecommendation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get details of a recommendation",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "recommendation",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -38950,6 +39162,21 @@
         ]
       },
       {
+        "name": "ListABTests",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_ListABTests.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list A/B tests",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListActors",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_ListActors.html",
         "permissionOnly": false,
@@ -39025,6 +39252,21 @@
           {
             "resourceType": "token-vault",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListBatchEvaluations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_ListBatchEvaluations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list batch evaluations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -39112,6 +39354,36 @@
         ]
       },
       {
+        "name": "ListConfigurationBundleVersions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListConfigurationBundleVersions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list versions of a configuration bundle",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "configuration-bundle",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListConfigurationBundles",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListConfigurationBundles.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list configuration bundles",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListEvaluators",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListEvaluators.html",
         "permissionOnly": false,
@@ -39146,6 +39418,21 @@
               "bedrock-agentcore:sessionId",
               "bedrock-agentcore:actorId"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListGatewayRules",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListGatewayRules.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list existing gateway rules",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -39346,6 +39633,21 @@
           {
             "resourceType": "policy-engine",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListRecommendations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_ListRecommendations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list recommendations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -39684,6 +39986,21 @@
         ]
       },
       {
+        "name": "StartBatchEvaluation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_StartBatchEvaluation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to start a batch evaluation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "StartBrowserSession",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_StartBrowserSession.html",
         "permissionOnly": false,
@@ -39765,6 +40082,36 @@
         "resourceTypes": [
           {
             "resourceType": "policy-engine",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StartRecommendation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_StartRecommendation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to start a recommendation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StopBatchEvaluation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_StopBatchEvaluation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to stop a batch evaluation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "batch-evaluate",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -40080,6 +40427,23 @@
         ]
       },
       {
+        "name": "UpdateABTest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_UpdateABTest.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an A/B test",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ab-test",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          }
+        ]
+      },
+      {
         "name": "UpdateAgentRuntime",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdateAgentRuntime.html",
         "permissionOnly": false,
@@ -40170,6 +40534,21 @@
         ]
       },
       {
+        "name": "UpdateConfigurationBundle",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdateConfigurationBundle.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a configuration bundle",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "configuration-bundle",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateEvaluator",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdateEvaluator.html",
         "permissionOnly": false,
@@ -40198,6 +40577,21 @@
             "dependentActions": [
               "iam:PassRole"
             ]
+          }
+        ]
+      },
+      {
+        "name": "UpdateGatewayRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdateGatewayRule.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an existing gateway rule",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -40555,6 +40949,30 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
+      },
+      {
+        "name": "batch-evaluate",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/batchEvaluation.html",
+        "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:batch-evaluate/${BatchEvaluationId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "ab-test",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/abTest.html",
+        "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:ab-test/${ABTestId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "recommendation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/recommendation.html",
+        "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:recommendation/${RecommendationId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "configuration-bundle",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/configurationBundle.html",
+        "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:configuration-bundle/${ConfigurationBundleId}",
+        "conditionKeys": []
       }
     ],
     "conditionKeys": [
@@ -254820,7 +255238,7 @@
         "name": "iottwinmaker:destinationType",
         "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiottwinmaker.html#awsiottwinmaker-policy-keys",
         "description": "Filters access by destination type of metadata transfer job",
-        "type": "ArrayOfString"
+        "type": "String"
       },
       {
         "name": "iottwinmaker:linkedServices",
@@ -254832,7 +255250,7 @@
         "name": "iottwinmaker:sourceType",
         "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiottwinmaker.html#awsiottwinmaker-policy-keys",
         "description": "Filters access by source type of metadata transfer job",
-        "type": "ArrayOfString"
+        "type": "String"
       }
     ]
   },
@@ -316511,6 +316929,25 @@
         ]
       },
       {
+        "name": "AssociateMpaTeam",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_AssociateMpaTeam.html",
+        "permissionOnly": false,
+        "description": "Grants permission to associate an MPA approval team with a payment cryptography action",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "approval-team",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "mpa:CancelSession",
+              "mpa:GetApprovalTeam",
+              "mpa:StartSession"
+            ]
+          }
+        ]
+      },
+      {
         "name": "CreateAlias",
         "apiReferenceUrl": "https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_CreateAlias.html",
         "permissionOnly": false,
@@ -316618,7 +317055,9 @@
             "resourceType": "key",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "mpa:CancelSession"
+            ]
           },
           {
             "resourceType": "",
@@ -316626,6 +317065,21 @@
             "conditionKeys": [
               "payment-cryptography:RequestAlias"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteResourcePolicy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_DeleteResourcePolicy.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the resource-based policy attached to a key",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "key",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -316642,6 +317096,24 @@
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DisassociateMpaTeam",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_DisassociateMpaTeam.html",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate an MPA approval team from a payment cryptography action",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "approval-team",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "mpa:CancelSession",
+              "mpa:StartSession"
+            ]
           }
         ]
       },
@@ -316957,6 +317429,21 @@
         ]
       },
       {
+        "name": "GetMpaTeamAssociation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_GetMpaTeamAssociation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve information about an MPA approval team association for a payment cryptography action",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "approval-team",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetParametersForExport",
         "apiReferenceUrl": "https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_GetParametersForExport.html",
         "permissionOnly": false,
@@ -317010,6 +317497,21 @@
         ]
       },
       {
+        "name": "GetResourcePolicy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_GetResourcePolicy.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the resource-based policy attached to a key",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "key",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ImportKey",
         "apiReferenceUrl": "https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_ImportKey.html",
         "permissionOnly": false,
@@ -317027,6 +317529,7 @@
               "payment-cryptography:WrappingKeyIdentifier"
             ],
             "dependentActions": [
+              "mpa:StartSession",
               "payment-cryptography:TagResource"
             ]
           }
@@ -317072,6 +317575,21 @@
           {
             "resourceType": "key",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PutResourcePolicy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/payment-cryptography/latest/APIReference/API_PutResourcePolicy.html",
+        "permissionOnly": false,
+        "description": "Grants permission to attach or replace a resource-based policy on a key",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "key",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -317473,6 +317991,14 @@
         "conditionKeys": [
           "payment-cryptography:ResourceAliases"
         ]
+      },
+      {
+        "name": "approval-team",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mpa/latest/userguide/mpa-concepts.html",
+        "arnPattern": "arn:${Partition}:mpa:${Region}:${Account}:approval-team/${ApprovalTeamId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -317503,7 +318029,7 @@
       {
         "name": "payment-cryptography:ImportKeyMaterial",
         "apiReferenceUrl": "{ActionsDocRoot}security-iam.html",
-        "description": "Filters access by the type of key material being imported [RootCertificatePublicKey, TrustedCertificatePublicKey, Tr34KeyBlock, Tr31KeyBlock, DiffieHellmanTr31KeyBlock, As2805KeyCryptogram] for the ImportKey operation",
+        "description": "Filters access by the type of key material being imported [RootCertificatePublicKey, TrustedCertificatePublicKey, Tr34KeyBlock, Tr31KeyBlock, DiffieHellmanTr31KeyBlock, As2805KeyCryptogram, KeyCryptogram] for the ImportKey operation",
         "type": "String"
       },
       {
@@ -442897,6 +443423,277 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/adminguide/external-identity-providers-setting-up-saml.html#external-identity-providers-embed-inline-policy-for-IAM-role",
         "description": "Filters access by the ID of the Workspaces user",
         "type": "String"
+      }
+    ]
+  },
+  {
+    "name": "Amazon WorkSpaces AgentAccess MCP Server",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesagentaccessmcpserver.html",
+    "servicePrefix": "agentaccess-mcp",
+    "actions": [
+      {
+        "name": "DoubleClick",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to perform double click at coordinates",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetScreenshot",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to capture screen state",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "HoldKey",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to hold key down",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "InvokeMcp",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to initialize sessions and discover tools",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "KeyPress",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to press key or key combination",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "LeftClick",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to perform left mouse click at coordinates",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "LeftClickDrag",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to click and drag between coordinates",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "LeftMouseDown",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to press and hold left mouse button",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "LeftMouseUp",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to release left mouse button",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "MiddleClick",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to perform middle mouse click at coordinates",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "MovePointer",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to move cursor to coordinates",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "RightClick",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to perform right mouse click at coordinates",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "Scroll",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to scroll in any direction",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "TripleClick",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to perform triple click at coordinates",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "TypeText",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to type text string",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      }
+    ],
+    "resourceTypes": [],
+    "conditionKeys": [
+      {
+        "name": "agentaccess-mcp:StackArn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "description": "Filters access by the ARN of the WorkSpaces Applications stack",
+        "type": "ARN"
       }
     ]
   },

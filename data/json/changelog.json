@@ -1,5 +1,68 @@
 [
   {
+    "dateOfChange": "2026-05-01",
+    "addedServices": [
+      "Amazon WorkSpaces AgentAccess MCP Server"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:CreateABTest",
+        "bedrock-agentcore:CreateConfigurationBundle",
+        "bedrock-agentcore:CreateGatewayRule",
+        "bedrock-agentcore:DeleteABTest",
+        "bedrock-agentcore:DeleteBatchEvaluation",
+        "bedrock-agentcore:DeleteConfigurationBundle",
+        "bedrock-agentcore:DeleteGatewayRule",
+        "bedrock-agentcore:DeleteRecommendation",
+        "bedrock-agentcore:GetABTest",
+        "bedrock-agentcore:GetBatchEvaluation",
+        "bedrock-agentcore:GetConfigurationBundle",
+        "bedrock-agentcore:GetConfigurationBundleVersion",
+        "bedrock-agentcore:GetGatewayRule",
+        "bedrock-agentcore:GetRecommendation",
+        "bedrock-agentcore:ListABTests",
+        "bedrock-agentcore:ListBatchEvaluations",
+        "bedrock-agentcore:ListConfigurationBundleVersions",
+        "bedrock-agentcore:ListConfigurationBundles",
+        "bedrock-agentcore:ListGatewayRules",
+        "bedrock-agentcore:ListRecommendations",
+        "bedrock-agentcore:StartBatchEvaluation",
+        "bedrock-agentcore:StartRecommendation",
+        "bedrock-agentcore:StopBatchEvaluation",
+        "bedrock-agentcore:UpdateABTest",
+        "bedrock-agentcore:UpdateConfigurationBundle",
+        "bedrock-agentcore:UpdateGatewayRule"
+      ],
+      "AWS Payment Cryptography": [
+        "payment-cryptography:AssociateMpaTeam",
+        "payment-cryptography:DeleteResourcePolicy",
+        "payment-cryptography:DisassociateMpaTeam",
+        "payment-cryptography:GetMpaTeamAssociation",
+        "payment-cryptography:GetResourcePolicy",
+        "payment-cryptography:PutResourcePolicy"
+      ],
+      "Amazon WorkSpaces AgentAccess MCP Server": [
+        "agentaccess-mcp:DoubleClick",
+        "agentaccess-mcp:GetScreenshot",
+        "agentaccess-mcp:HoldKey",
+        "agentaccess-mcp:InvokeMcp",
+        "agentaccess-mcp:KeyPress",
+        "agentaccess-mcp:LeftClick",
+        "agentaccess-mcp:LeftClickDrag",
+        "agentaccess-mcp:LeftMouseDown",
+        "agentaccess-mcp:LeftMouseUp",
+        "agentaccess-mcp:MiddleClick",
+        "agentaccess-mcp:MovePointer",
+        "agentaccess-mcp:RightClick",
+        "agentaccess-mcp:Scroll",
+        "agentaccess-mcp:TripleClick",
+        "agentaccess-mcp:TypeText"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-04-30",
     "addedServices": [],
     "removedServices": [],
