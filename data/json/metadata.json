@@ -1,5 +1,5 @@
 {
-  "serviceCount": 468,
+  "serviceCount": 469,
   "services": [
     {
       "name": "AWS Account Management",
@@ -4915,10 +4915,11 @@
       "name": "Amazon CloudWatch",
       "servicePrefix": "cloudwatch",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatch.html",
-      "actionsCount": 62,
+      "actionsCount": 63,
       "actions": [
         "BatchGetServiceLevelIndicatorReport",
         "BatchGetServiceLevelObjectiveBudgetReport",
+        "CallWithBearerToken",
         "CreateServiceLevelObjective",
         "DeleteAlarmMuteRule",
         "DeleteAlarms",
@@ -5092,6 +5093,24 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
+      ]
+    },
+    {
+      "name": "Amazon CloudWatch Application Signals MCP Server",
+      "servicePrefix": "application-signals-mcp",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchapplicationsignalsmcpserver.html",
+      "actionsCount": 2,
+      "actions": [
+        "CallReadOnlyTool",
+        "InvokeMcp"
+      ],
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "mcp-server"
+      ],
+      "conditionKeysCount": 1,
+      "conditionKeys": [
+        "aws:ResourceTag/${TagKey}"
       ]
     },
     {

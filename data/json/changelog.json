@@ -1,5 +1,22 @@
 [
   {
+    "dateOfChange": "2026-05-02",
+    "addedServices": [
+      "Amazon CloudWatch Application Signals MCP Server"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudWatch": [
+        "cloudwatch:CallWithBearerToken"
+      ],
+      "Amazon CloudWatch Application Signals MCP Server": [
+        "application-signals-mcp:CallReadOnlyTool",
+        "application-signals-mcp:InvokeMcp"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-05-01",
     "addedServices": [
       "Amazon WorkSpaces AgentAccess MCP Server"

@@ -66660,6 +66660,21 @@
         ]
       },
       {
+        "name": "CallWithBearerToken",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/permissions-reference-cw.html",
+        "permissionOnly": true,
+        "description": "Grants permission to make API calls to CloudWatch using bearer token authentication",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateServiceLevelObjective",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html#ApplicationSignals-PreviewSDK",
         "permissionOnly": false,
@@ -67316,6 +67331,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "dashboard",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "insight-rule",
             "required": false,
             "conditionKeys": [],
@@ -67335,6 +67356,12 @@
           },
           {
             "resourceType": "alarm-mute-rule",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dashboard",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -67434,6 +67461,15 @@
             "resourceType": "dashboard",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -67643,6 +67679,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "dashboard",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "insight-rule",
             "required": false,
             "conditionKeys": [],
@@ -67671,6 +67713,12 @@
           },
           {
             "resourceType": "alarm-mute-rule",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dashboard",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -67709,6 +67757,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "dashboard",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "insight-rule",
             "required": false,
             "conditionKeys": [],
@@ -67736,6 +67790,12 @@
           },
           {
             "resourceType": "alarm-mute-rule",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dashboard",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -67791,7 +67851,9 @@
         "name": "dashboard",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html",
         "arnPattern": "arn:${Partition}:cloudwatch::${Account}:dashboard/${DashboardName}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "insight-rule",
@@ -68843,6 +68905,61 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
         "description": "Filters access by the presence of mandatory tags in the request",
         "type": "ArrayOfString"
+      }
+    ]
+  },
+  {
+    "name": "Amazon CloudWatch Application Signals MCP Server",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoncloudwatchapplicationsignalsmcpserver.html",
+    "servicePrefix": "application-signals-mcp",
+    "actions": [
+      {
+        "name": "CallReadOnlyTool",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Signals.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke read-only Application Signals MCP tools (list_monitored_services, get_service_detail, query_service_metrics, list_service_operations, get_slo, list_slos, search_transaction_spans, query_sampled_traces, list_slis, get_enablement_guide, list_change_events, list_group_services, audit_group_health, get_group_dependencies, get_group_changes, list_grouping_attribute_definitions, audit_services, audit_slos, audit_service_operations, analyze_canary_failures)",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "mcp-server",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "InvokeMcp",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Signals.html",
+        "permissionOnly": false,
+        "description": "Grants permission to connect to and interact with the Application Signals MCP server (initialize, list tools, list resources, list prompts)",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "mcp-server",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "mcp-server",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Signals.html",
+        "arnPattern": "arn:${Partition}:application-signals-mcp:${Region}:${Account}:mcp-server/*",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      }
+    ],
+    "conditionKeys": [
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "description": "Filters access by tag key-value pairs attached to the resource",
+        "type": "String"
       }
     ]
   },
@@ -127463,7 +127580,7 @@
       {
         "name": "associations",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/",
-        "arnPattern": "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}/associations/${AssociationId}",
+        "arnPattern": "arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}/association/${AssociationId}",
         "conditionKeys": []
       },
       {
