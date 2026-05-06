@@ -3329,6 +3329,24 @@
       "conditionKeys": []
     },
     {
+      "name": "Amazon Bio Discovery",
+      "servicePrefix": "researchstudio",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbiodiscovery.html",
+      "actionsCount": 6,
+      "actions": [
+        "AssignPrincipal",
+        "CreateApplication",
+        "DeleteApplication",
+        "DeletePrincipal",
+        "GetApplication",
+        "ListApplications"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
       "name": "Amazon Braket",
       "servicePrefix": "braket",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbraket.html",
@@ -9240,7 +9258,7 @@
       "name": "AWS DevOps Agent Service",
       "servicePrefix": "aidevops",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdevopsagentservice.html",
-      "actionsCount": 57,
+      "actionsCount": 58,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "AssociateService",
@@ -9255,6 +9273,7 @@
         "DeletePrivateConnection",
         "DeregisterService",
         "DescribePrivateConnection",
+        "DescribeServices",
         "DescribeSupportLevel",
         "DisableOperatorApp",
         "DisassociateService",
@@ -15250,7 +15269,7 @@
       "name": "AWS IAM Access Analyzer",
       "servicePrefix": "access-analyzer",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiamaccessanalyzer.html",
-      "actionsCount": 35,
+      "actionsCount": 37,
       "actions": [
         "ApplyArchiveRule",
         "CancelPolicyGeneration",
@@ -15260,8 +15279,10 @@
         "CreateAccessPreview",
         "CreateAnalyzer",
         "CreateArchiveRule",
+        "CreateServiceLinkedAnalyzer",
         "DeleteAnalyzer",
         "DeleteArchiveRule",
+        "DeleteServiceLinkedAnalyzer",
         "GenerateFindingRecommendation",
         "GetAccessPreview",
         "GetAnalyzedResource",
@@ -20374,21 +20395,6 @@
       ]
     },
     {
-      "name": "AWS MCP Server",
-      "servicePrefix": "aws-mcp",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmcpserver.html",
-      "actionsCount": 3,
-      "actions": [
-        "CallReadOnlyTool",
-        "CallReadWriteTool",
-        "InvokeMcp"
-      ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
-    },
-    {
       "name": "Amazon Mechanical Turk",
       "servicePrefix": "mechanicalturk",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmechanicalturk.html",
@@ -23552,7 +23558,7 @@
       "name": "Amazon Q in Connect",
       "servicePrefix": "wisdom",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonqinconnect.html",
-      "actionsCount": 93,
+      "actionsCount": 95,
       "actions": [
         "ActivateMessageTemplate",
         "AllowVendedLogDeliveryForResource",
@@ -23618,7 +23624,9 @@
         "ListMessageTemplateVersions",
         "ListMessageTemplates",
         "ListMessages",
+        "ListModels",
         "ListQuickResponses",
+        "ListSpans",
         "ListTagsForResource",
         "NotifyRecommendationsReceived",
         "PutFeedback",
@@ -27318,7 +27326,7 @@
       "name": "AWS Security Hub",
       "servicePrefix": "securityhub",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awssecurityhub.html",
-      "actionsCount": 115,
+      "actionsCount": 119,
       "actions": [
         "AcceptAdministratorInvitation",
         "AcceptInvitation",
@@ -27375,6 +27383,7 @@
         "EnableOrganizationAdminAccount",
         "EnableSecurityHub",
         "EnableSecurityHubV2",
+        "GenerateRecommendedPolicyV2",
         "GetAdhocInsightResults",
         "GetAdministratorAccount",
         "GetAggregatorV2",
@@ -27396,12 +27405,15 @@
         "GetInvitationsCount",
         "GetMasterAccount",
         "GetMembers",
+        "GetRecommendedPolicyV2",
         "GetResourcesStatisticsV2",
         "GetResourcesTrendsV2",
         "GetResourcesV2",
         "GetSecurityControlDefinition",
         "GetUsage",
+        "GetUsageV2",
         "InviteMembers",
+        "ListAccountUsageV2",
         "ListAggregatorsV2",
         "ListAutomationRules",
         "ListAutomationRulesV2",

@@ -1,5 +1,48 @@
 [
   {
+    "dateOfChange": "2026-05-06",
+    "addedServices": [
+      "Amazon Bio Discovery"
+    ],
+    "removedServices": [
+      "AWS MCP Server"
+    ],
+    "addedActions": {
+      "AWS DevOps Agent Service": [
+        "aidevops:DescribeServices"
+      ],
+      "AWS IAM Access Analyzer": [
+        "access-analyzer:CreateServiceLinkedAnalyzer",
+        "access-analyzer:DeleteServiceLinkedAnalyzer"
+      ],
+      "Amazon Q in Connect": [
+        "wisdom:ListModels",
+        "wisdom:ListSpans"
+      ],
+      "AWS Security Hub": [
+        "securityhub:GenerateRecommendedPolicyV2",
+        "securityhub:GetRecommendedPolicyV2",
+        "securityhub:GetUsageV2",
+        "securityhub:ListAccountUsageV2"
+      ],
+      "Amazon Bio Discovery": [
+        "researchstudio:AssignPrincipal",
+        "researchstudio:CreateApplication",
+        "researchstudio:DeleteApplication",
+        "researchstudio:DeletePrincipal",
+        "researchstudio:GetApplication",
+        "researchstudio:ListApplications"
+      ]
+    },
+    "removedActions": {
+      "AWS MCP Server": [
+        "aws-mcp:CallReadOnlyTool",
+        "aws-mcp:CallReadWriteTool",
+        "aws-mcp:InvokeMcp"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2026-05-02",
     "addedServices": [
       "Amazon CloudWatch Application Signals MCP Server"

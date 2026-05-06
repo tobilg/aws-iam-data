@@ -44654,6 +44654,105 @@
     "conditionKeys": []
   },
   {
+    "name": "Amazon Bio Discovery",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbiodiscovery.html",
+    "servicePrefix": "researchstudio",
+    "actions": [
+      {
+        "name": "AssignPrincipal",
+        "apiReferenceUrl": "xxx<link>.html",
+        "permissionOnly": false,
+        "description": "Grants permission to assign princiapl",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateApplication",
+        "apiReferenceUrl": "xxx<link>.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create application",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteApplication",
+        "apiReferenceUrl": "xxx<link>.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete application",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeletePrincipal",
+        "apiReferenceUrl": "xxx<link>.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete principal",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetApplication",
+        "apiReferenceUrl": "xxx<link>.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get application",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListApplications",
+        "apiReferenceUrl": "xxx<link>.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list applications",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      }
+    ],
+    "resourceTypes": [],
+    "conditionKeys": []
+  },
+  {
     "name": "Amazon Braket",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbraket.html",
     "servicePrefix": "braket",
@@ -126494,7 +126593,7 @@
     "actions": [
       {
         "name": "AllowVendedLogDeliveryForResource",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/configuring-capabilities-for-aws-devops-agent-vended-logs-and-metrics.html",
         "permissionOnly": true,
         "description": "Grants permission to authorize vended logs",
         "accessLevel": "Permissions management",
@@ -126509,7 +126608,7 @@
       },
       {
         "name": "AssociateService",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_AssociateService.html",
         "permissionOnly": false,
         "description": "Grants permission to associate service",
         "accessLevel": "Write",
@@ -126530,7 +126629,7 @@
       },
       {
         "name": "CreateAgentSpace",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_CreateAgentSpace.html",
         "permissionOnly": false,
         "description": "Grants permission to create agentspace",
         "accessLevel": "Write",
@@ -126555,7 +126654,7 @@
       },
       {
         "name": "CreateBacklogTask",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_CreateBacklogTask.html",
         "permissionOnly": false,
         "description": "Grants permission to create a new backlog task",
         "accessLevel": "Write",
@@ -126570,7 +126669,7 @@
       },
       {
         "name": "CreateChat",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_CreateChat.html",
         "permissionOnly": false,
         "description": "Grants permission to create a chat",
         "accessLevel": "Write",
@@ -126585,7 +126684,7 @@
       },
       {
         "name": "CreateKnowledgeItem",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_CreateKnowledgeItem.html",
         "permissionOnly": false,
         "description": "Grants permission to create a new knowledge item",
         "accessLevel": "Write",
@@ -126600,7 +126699,7 @@
       },
       {
         "name": "CreateOneTimeLoginSession",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html",
         "permissionOnly": false,
         "description": "Grants permission to generate secure one-time session for initiating off-console Application login",
         "accessLevel": "Write",
@@ -126615,7 +126714,7 @@
       },
       {
         "name": "CreatePrivateConnection",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_CreatePrivateConnection.html",
         "permissionOnly": false,
         "description": "Grants permission to create a private connection",
         "accessLevel": "Write",
@@ -126640,7 +126739,7 @@
       },
       {
         "name": "DeleteAgentSpace",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_DeleteAgentSpace.html",
         "permissionOnly": false,
         "description": "Grants permission to delete agentspace",
         "accessLevel": "Write",
@@ -126663,7 +126762,7 @@
       },
       {
         "name": "DeleteKnowledgeItem",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a knowledge item",
         "accessLevel": "Write",
@@ -126678,7 +126777,7 @@
       },
       {
         "name": "DeletePrivateConnection",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_DeletePrivateConnection.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a private connection",
         "accessLevel": "Write",
@@ -126701,7 +126800,7 @@
       },
       {
         "name": "DeregisterService",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_DeregisterService.html",
         "permissionOnly": false,
         "description": "Grants permission to deregister a service",
         "accessLevel": "Write",
@@ -126724,7 +126823,7 @@
       },
       {
         "name": "DescribePrivateConnection",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_DescribePrivateConnection.html",
         "permissionOnly": false,
         "description": "Grants permission to describe a private connection",
         "accessLevel": "Read",
@@ -126746,10 +126845,25 @@
         ]
       },
       {
-        "name": "DescribeSupportLevel",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "name": "DescribeServices",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html",
         "permissionOnly": false,
-        "description": "Grants permission to describe a chat for a case",
+        "description": "Grants permission to describe support services",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeSupportLevel",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe customer support level",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -126762,7 +126876,7 @@
       },
       {
         "name": "DisableOperatorApp",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_DisableOperatorApp.html",
         "permissionOnly": false,
         "description": "Grants permission to disable the Operator App access to the given AgentSpace",
         "accessLevel": "Write",
@@ -126777,7 +126891,7 @@
       },
       {
         "name": "DisassociateService",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_DisassociateService.html",
         "permissionOnly": false,
         "description": "Grants permission to disassociate service",
         "accessLevel": "Write",
@@ -126798,7 +126912,7 @@
       },
       {
         "name": "DiscoverTopology",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html",
         "permissionOnly": false,
         "description": "Grants permission to discover topology information",
         "accessLevel": "Write",
@@ -126813,7 +126927,7 @@
       },
       {
         "name": "EnableOperatorApp",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_EnableOperatorApp.html",
         "permissionOnly": false,
         "description": "Grants permission to enable the Operator App to access the given AgentSpace",
         "accessLevel": "Write",
@@ -126828,7 +126942,7 @@
       },
       {
         "name": "EndChatForCase",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html",
         "permissionOnly": false,
         "description": "Grants permission to end a chat for a case",
         "accessLevel": "Write",
@@ -126843,7 +126957,7 @@
       },
       {
         "name": "GetAccountUsage",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetAccountUsage.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve account usage information",
         "accessLevel": "Read",
@@ -126858,7 +126972,7 @@
       },
       {
         "name": "GetAgentSpace",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetAgentSpace.html",
         "permissionOnly": false,
         "description": "Grants permission to get agentspace",
         "accessLevel": "Read",
@@ -126881,7 +126995,7 @@
       },
       {
         "name": "GetAssociation",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetAssociation.html",
         "permissionOnly": false,
         "description": "Grants permission to get association",
         "accessLevel": "Read",
@@ -126902,7 +127016,7 @@
       },
       {
         "name": "GetBacklogTask",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetBacklogTask.html",
         "permissionOnly": false,
         "description": "Grants permission to get a backlog task",
         "accessLevel": "Read",
@@ -126917,7 +127031,7 @@
       },
       {
         "name": "GetKnowledgeItem",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html",
         "permissionOnly": false,
         "description": "Grants permission to get a knowledge item",
         "accessLevel": "Read",
@@ -126932,7 +127046,7 @@
       },
       {
         "name": "GetOperatorApp",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetOperatorApp.html",
         "permissionOnly": false,
         "description": "Grants permission to get operator auth config for any enabled auth flow",
         "accessLevel": "Read",
@@ -126947,7 +127061,7 @@
       },
       {
         "name": "GetRecommendation",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetRecommendation.html",
         "permissionOnly": false,
         "description": "Grants permission to get a recommendation",
         "accessLevel": "Read",
@@ -126962,7 +127076,7 @@
       },
       {
         "name": "GetService",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetService.html",
         "permissionOnly": false,
         "description": "Grants permission to get services",
         "accessLevel": "Read",
@@ -126985,7 +127099,7 @@
       },
       {
         "name": "InitiateChatForCase",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html",
         "permissionOnly": false,
         "description": "Grants permission to initiate a chat for a case",
         "accessLevel": "Write",
@@ -127000,7 +127114,7 @@
       },
       {
         "name": "ListAgentSpaces",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListAgentSpaces.html",
         "permissionOnly": false,
         "description": "Grants permission to list agentspace",
         "accessLevel": "List",
@@ -127015,7 +127129,7 @@
       },
       {
         "name": "ListAssociations",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListAssociations.html",
         "permissionOnly": false,
         "description": "Grants permission to list associations",
         "accessLevel": "List",
@@ -127030,7 +127144,7 @@
       },
       {
         "name": "ListBacklogTasks",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListBacklogTasks.html",
         "permissionOnly": false,
         "description": "Grants permission to list backlog tasks",
         "accessLevel": "List",
@@ -127045,7 +127159,7 @@
       },
       {
         "name": "ListChats",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListChats.html",
         "permissionOnly": false,
         "description": "Grants permission to list chats",
         "accessLevel": "List",
@@ -127060,7 +127174,7 @@
       },
       {
         "name": "ListExecutions",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListExecutions.html",
         "permissionOnly": false,
         "description": "Grants permission to list executions",
         "accessLevel": "List",
@@ -127075,7 +127189,7 @@
       },
       {
         "name": "ListGoals",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListGoals.html",
         "permissionOnly": false,
         "description": "Grants permission to list goals",
         "accessLevel": "List",
@@ -127090,7 +127204,7 @@
       },
       {
         "name": "ListJournalRecords",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListJournalRecords.html",
         "permissionOnly": false,
         "description": "Grants permission to list journal records",
         "accessLevel": "List",
@@ -127105,7 +127219,7 @@
       },
       {
         "name": "ListKnowledgeItemVersions",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html",
         "permissionOnly": false,
         "description": "Grants permission to list knowledge item versions",
         "accessLevel": "List",
@@ -127120,7 +127234,7 @@
       },
       {
         "name": "ListKnowledgeItems",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html",
         "permissionOnly": false,
         "description": "Grants permission to list knowledge items",
         "accessLevel": "List",
@@ -127135,7 +127249,7 @@
       },
       {
         "name": "ListPendingMessages",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListPendingMessages.html",
         "permissionOnly": false,
         "description": "Grants permission to list pending messages",
         "accessLevel": "List",
@@ -127150,7 +127264,7 @@
       },
       {
         "name": "ListPrivateConnections",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListPrivateConnections.html",
         "permissionOnly": false,
         "description": "Grants permission to list private connections",
         "accessLevel": "List",
@@ -127165,7 +127279,7 @@
       },
       {
         "name": "ListRecommendations",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListRecommendations.html",
         "permissionOnly": false,
         "description": "Grants permission to list recommendations",
         "accessLevel": "List",
@@ -127180,7 +127294,7 @@
       },
       {
         "name": "ListServices",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListServices.html",
         "permissionOnly": false,
         "description": "Grants permission to list services",
         "accessLevel": "List",
@@ -127195,7 +127309,7 @@
       },
       {
         "name": "ListTagsForResource",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListTagsForResource.html",
         "permissionOnly": false,
         "description": "Grants permission to list tags for a resource",
         "accessLevel": "Read",
@@ -127242,7 +127356,7 @@
       },
       {
         "name": "ListWebhooks",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListWebhooks.html",
         "permissionOnly": false,
         "description": "Grants permission to list webhooks for association",
         "accessLevel": "List",
@@ -127263,7 +127377,7 @@
       },
       {
         "name": "RegisterService",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_RegisterService.html",
         "permissionOnly": false,
         "description": "Grants permission to register specific service",
         "accessLevel": "Write",
@@ -127288,7 +127402,7 @@
       },
       {
         "name": "SearchServiceAccessibleResource",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html",
         "permissionOnly": false,
         "description": "Grants permission to look up a registered service accessible resources",
         "accessLevel": "Read",
@@ -127303,7 +127417,7 @@
       },
       {
         "name": "SendMessage",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_SendMessage.html",
         "permissionOnly": false,
         "description": "Grants permission to send chat messages",
         "accessLevel": "Write",
@@ -127318,7 +127432,7 @@
       },
       {
         "name": "TagResource",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_TagResource.html",
         "permissionOnly": false,
         "description": "Grants permission to tag a resource",
         "accessLevel": "Tagging",
@@ -127367,7 +127481,7 @@
       },
       {
         "name": "UntagResource",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_UntagResource.html",
         "permissionOnly": false,
         "description": "Grants permission to untag a resource",
         "accessLevel": "Tagging",
@@ -127412,7 +127526,7 @@
       },
       {
         "name": "UpdateAgentSpace",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_UpdateAgentSpace.html",
         "permissionOnly": false,
         "description": "Grants permission to update agentspace",
         "accessLevel": "Write",
@@ -127435,7 +127549,7 @@
       },
       {
         "name": "UpdateAssociation",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_UpdateAssociation.html",
         "permissionOnly": false,
         "description": "Grants permission to update association",
         "accessLevel": "Write",
@@ -127456,7 +127570,7 @@
       },
       {
         "name": "UpdateBacklogTask",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_UpdateBacklogTask.html",
         "permissionOnly": false,
         "description": "Grants permission to update a task",
         "accessLevel": "Write",
@@ -127471,7 +127585,7 @@
       },
       {
         "name": "UpdateGoal",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_UpdateGoal.html",
         "permissionOnly": false,
         "description": "Grants permission to update a goal",
         "accessLevel": "Write",
@@ -127486,7 +127600,7 @@
       },
       {
         "name": "UpdateKnowledgeItem",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html",
         "permissionOnly": false,
         "description": "Grants permission to update a knowledge item",
         "accessLevel": "Write",
@@ -127501,7 +127615,7 @@
       },
       {
         "name": "UpdateOperatorAppIdpConfig",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_UpdateOperatorAppIdpConfig.html",
         "permissionOnly": false,
         "description": "Grants permission to update the external Identity Provider configuration for the Operator App",
         "accessLevel": "Write",
@@ -127516,7 +127630,7 @@
       },
       {
         "name": "UpdatePrivateConnectionCertificate",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_UpdatePrivateConnectionCertificate.html",
         "permissionOnly": false,
         "description": "Grants permission to update a private connection certificate",
         "accessLevel": "Write",
@@ -127539,7 +127653,7 @@
       },
       {
         "name": "UpdateRecommendation",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_UpdateRecommendation.html",
         "permissionOnly": false,
         "description": "Grants permission to update a recommendation",
         "accessLevel": "Write",
@@ -127554,7 +127668,7 @@
       },
       {
         "name": "ValidateAwsAssociations",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/what-is.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ValidateAwsAssociations.html",
         "permissionOnly": false,
         "description": "Grants permission to validate aws association",
         "accessLevel": "Write",
@@ -224751,6 +224865,32 @@
         ]
       },
       {
+        "name": "CreateServiceLinkedAnalyzer",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/access-analyzer/latest/APIReference/API_CreateServiceLinkedAnalyzer.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a service-linked analyzer",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Analyzer",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:CreateServiceLinkedRole"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteAnalyzer",
         "apiReferenceUrl": "https://docs.aws.amazon.com/access-analyzer/latest/APIReference/API_DeleteAnalyzer.html",
         "permissionOnly": false,
@@ -224785,6 +224925,30 @@
             "resourceType": "ArchiveRule",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteServiceLinkedAnalyzer",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/access-analyzer/latest/APIReference/API_DeleteServiceLinkedAnalyzer.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the specified service-linked analyzer",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Analyzer",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -291180,60 +291344,6 @@
     ]
   },
   {
-    "name": "AWS MCP Server",
-    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmcpserver.html",
-    "servicePrefix": "aws-mcp",
-    "actions": [
-      {
-        "name": "CallReadOnlyTool",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/aws-mcp/latest/userguide/security-iam.html",
-        "permissionOnly": false,
-        "description": "Grants permission to call read-only tools in MCP service",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "CallReadWriteTool",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/aws-mcp/latest/userguide/security-iam.html",
-        "permissionOnly": false,
-        "description": "Grants permission to call AWS Read and Write apis in MCP Service",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      },
-      {
-        "name": "InvokeMcp",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/aws-mcp/latest/userguide/security-iam.html",
-        "permissionOnly": false,
-        "description": "Grants permission to use MCP service",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      }
-    ],
-    "resourceTypes": [],
-    "conditionKeys": []
-  },
-  {
     "name": "Amazon Mechanical Turk",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonmechanicalturk.html",
     "servicePrefix": "mechanicalturk",
@@ -333934,6 +334044,21 @@
         ]
       },
       {
+        "name": "ListModels",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wisdom/latest/APIReference/API_ListModels.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list models available for an assistant",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Assistant",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListQuickResponses",
         "apiReferenceUrl": "https://docs.aws.amazon.com/wisdom/latest/APIReference/API_ListQuickResponses.html",
         "permissionOnly": false,
@@ -333942,6 +334067,21 @@
         "resourceTypes": [
           {
             "resourceType": "KnowledgeBase",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListSpans",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wisdom/latest/APIReference/API_ListSpans.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list AI agent traces for a session",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Session",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -345705,11 +345845,11 @@
         "name": "AuthorizeInboundIntegration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/redshift/latest/mgmt/zero-etl-using.setting-up.html",
         "permissionOnly": true,
-        "description": "Grants permission to Amazon Redshift to continuously validate that the target data warehouse can receive data replicated from the source ARN",
+        "description": "Grants permission to Amazon Redshift to continuously validate that the target namespace can receive data replicated from the source ARN",
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "integration",
+            "resourceType": "namespace",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -346109,12 +346249,12 @@
         "name": "CreateInboundIntegration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/redshift/latest/mgmt/zero-etl-using.setting-up.html",
         "permissionOnly": true,
-        "description": "Grants permission to the source principal to create an inbound integration for data to be replicated from the source into the target data warehouse",
+        "description": "Grants permission to the source principal to create an integration into the namespace of target data warehouse",
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "namespace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -389833,6 +389973,21 @@
         ]
       },
       {
+        "name": "GenerateRecommendedPolicyV2",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GenerateRecommendedPolicyV2.html",
+        "permissionOnly": false,
+        "description": "Grants permission to generate policy recommendations for an OCSF finding",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "hubv2",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetAdhocInsightResults",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetFindingStatisticsV2.html",
         "permissionOnly": true,
@@ -390160,6 +390315,21 @@
         ]
       },
       {
+        "name": "GetRecommendedPolicyV2",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetRecommendedPolicyV2.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve policy recommendations for an OCSF finding",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "hubv2",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetResourcesStatisticsV2",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetResourcesStatisticsV2.html",
         "permissionOnly": false,
@@ -390237,6 +390407,21 @@
         ]
       },
       {
+        "name": "GetUsageV2",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetUsageV2.html",
+        "permissionOnly": true,
+        "description": "Grants permission to retrieve information about Security Hub usage for an account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "hubv2",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "InviteMembers",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_InviteMembers.html",
         "permissionOnly": false,
@@ -390246,6 +390431,21 @@
           {
             "resourceType": "hub",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAccountUsageV2",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_ListAccountUsageV2.html",
+        "permissionOnly": true,
+        "description": "Grants permission to retrieve a list of Security Hub usage for accounts in an organization",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "hubv2",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
