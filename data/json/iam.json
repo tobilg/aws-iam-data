@@ -37219,6 +37219,12 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "payment-manager",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -37735,6 +37741,101 @@
         ]
       },
       {
+        "name": "CreatePaymentConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreatePaymentConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new payment connector under a payment manager",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreatePaymentCredentialProvider",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreatePaymentCredentialProvider.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new Payment Credential Provider",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "paymentcredentialprovider",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "token-vault",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreatePaymentInstrument",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreatePaymentInstrument.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new payment instrument",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreatePaymentManager",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreatePaymentManager.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new payment manager",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CreatePaymentSession",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreatePaymentSession.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new payment session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreatePolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreatePolicy.html",
         "permissionOnly": false,
@@ -38134,6 +38235,87 @@
         "resourceTypes": [
           {
             "resourceType": "online-evaluation-config",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeletePaymentConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeletePaymentConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a payment connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeletePaymentCredentialProvider",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeletePaymentCredentialProvider.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a registered Payment Credential Provider",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "paymentcredentialprovider",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "token-vault",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeletePaymentInstrument",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeletePaymentInstrument.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a payment instrument",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeletePaymentManager",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeletePaymentManager.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a payment manager",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeletePaymentSession",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeletePaymentSession.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a payment session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -38675,6 +38857,102 @@
         ]
       },
       {
+        "name": "GetPaymentConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetPaymentConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a payment connector",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetPaymentCredentialProvider",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetPaymentCredentialProvider.html",
+        "permissionOnly": false,
+        "description": "Grants permission to fetch a registered Payment Credential Provider by its name",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "paymentcredentialprovider",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "token-vault",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetPaymentInstrument",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetPaymentInstrument.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a payment instrument",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetPaymentInstrumentBalance",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetPaymentInstrumentBalance.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the balance of a payment instrument",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetPaymentManager",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetPaymentManager.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a payment manager",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetPaymentSession",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetPaymentSession.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a payment session",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetPolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetPolicy.html",
         "permissionOnly": false,
@@ -38818,6 +39096,39 @@
         "resourceTypes": [
           {
             "resourceType": "oauth2credentialprovider",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "token-vault",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "workload-identity",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "workload-identity-directory",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetResourcePaymentToken",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetResourcePaymentToken.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a payment authentication token associated with a Payment Credential Provider",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "paymentcredentialprovider",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -39573,6 +39884,87 @@
         ]
       },
       {
+        "name": "ListPaymentConnectors",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListPaymentConnectors.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list payment connectors under a payment manager",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListPaymentCredentialProviders",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListPaymentCredentialProviders.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all Payment Credential Providers in the Token Vault",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "paymentcredentialprovider",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "token-vault",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListPaymentInstruments",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListPaymentInstruments.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list payment instruments",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListPaymentManagers",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListPaymentManagers.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list payment managers",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListPaymentSessions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListPaymentSessions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list payment sessions",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListPolicies",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListPolicies.html",
         "permissionOnly": false,
@@ -39774,6 +40166,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "payment-manager",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "paymentcredentialprovider",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "runtime",
             "required": false,
             "conditionKeys": [],
@@ -39878,6 +40282,21 @@
         ]
       },
       {
+        "name": "ProcessPayment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ProcessPayment.html",
+        "permissionOnly": false,
+        "description": "Grants permission to process a payment transaction",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "PutResourcePolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_PutResourcePolicy.html",
         "permissionOnly": false,
@@ -39975,7 +40394,7 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_SetTokenVaultCMK.html",
         "permissionOnly": false,
         "description": "Grants permission to associate a Customer Managed Key (CMK) or a Service Managed Key with a specific TokenVault",
-        "accessLevel": "Read",
+        "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "token-vault",
@@ -40279,6 +40698,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "payment-manager",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "paymentcredentialprovider",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "runtime",
             "required": false,
             "conditionKeys": [],
@@ -40382,6 +40813,18 @@
           },
           {
             "resourceType": "online-evaluation-config",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "payment-manager",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "paymentcredentialprovider",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -40685,6 +41128,59 @@
         ]
       },
       {
+        "name": "UpdatePaymentConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdatePaymentConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an existing payment connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdatePaymentCredentialProvider",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdatePaymentCredentialProvider.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an existing Payment Credential Provider",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "paymentcredentialprovider",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "token-vault",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdatePaymentManager",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdatePaymentManager.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an existing payment manager",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "payment-manager",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          }
+        ]
+      },
+      {
         "name": "UpdatePolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdatePolicy.html",
         "permissionOnly": false,
@@ -40973,6 +41469,22 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/configurationBundle.html",
         "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:configuration-bundle/${ConfigurationBundleId}",
         "conditionKeys": []
+      },
+      {
+        "name": "payment-manager",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/paymentManager.html",
+        "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:payment-manager/${PaymentManagerId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "paymentcredentialprovider",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/paymentcredentialprovider.html",
+        "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:token-vault/${TokenVaultId}/paymentcredentialprovider/${Name}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -44810,11 +45322,22 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "device",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
             "dependentActions": []
@@ -44829,11 +45352,22 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "device",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "quantum-task",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
             "dependentActions": []
@@ -44848,11 +45382,22 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "device",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "spending-limit",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
             "dependentActions": []
@@ -44867,13 +45412,9 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
+            "resourceType": "spending-limit",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -44886,8 +45427,8 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "device",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -44985,7 +45526,7 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/braket/latest/APIReference/API_SearchDevices.html",
         "permissionOnly": false,
         "description": "Grants permission to search for devices available in Amazon Braket",
-        "accessLevel": "Read",
+        "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "",
@@ -45000,7 +45541,7 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/braket/latest/APIReference/API_SearchJobs.html",
         "permissionOnly": false,
         "description": "Grants permission to search for jobs",
-        "accessLevel": "Read",
+        "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "",
@@ -45015,7 +45556,7 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/braket/latest/APIReference/API_SearchQuantumTasks.html",
         "permissionOnly": false,
         "description": "Grants permission to search for quantum tasks",
-        "accessLevel": "Read",
+        "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "",
@@ -45119,13 +45660,9 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
+            "resourceType": "spending-limit",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -45155,6 +45692,12 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
+      },
+      {
+        "name": "device",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/braket/latest/developerguide/restrict-access.html",
+        "arnPattern": "arn:${Partition}:braket:*:${Account}:device/${DeviceType}/${Provider}/${DeviceId}",
+        "conditionKeys": []
       }
     ],
     "conditionKeys": [
@@ -289546,6 +290089,21 @@
         ]
       },
       {
+        "name": "GetIssuedTaxInvoice",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a specific tax invoice issued by AWS on behalf of a seller",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "IssuedTaxInvoice",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetResourcePolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_GetResourcePolicy.html",
         "permissionOnly": false,
@@ -289621,6 +290179,21 @@
         ]
       },
       {
+        "name": "ListIssuedTaxInvoices",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list tax invoices issued by AWS on behalf of a seller",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListPayables",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
         "permissionOnly": false,
@@ -289639,7 +290212,7 @@
         "name": "ListTagsForResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_ListTagsForResource.html",
         "permissionOnly": false,
-        "description": "Grants permission to list tags on an existing entity, change set, or invoice submission task",
+        "description": "Grants permission to list tags on an existing entity, change set, invoice submission task, or issued tax invoice",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -289656,6 +290229,12 @@
           },
           {
             "resourceType": "InvoiceSubmissionTask",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IssuedTaxInvoice",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -289731,7 +290310,7 @@
         "name": "TagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_TagResource.html",
         "permissionOnly": false,
-        "description": "Grants permission to add new tags to a resource. Supported resource: Entity, ChangeSet, InvoiceSubmissionTask",
+        "description": "Grants permission to add new tags to a resource. Supported resource: Entity, ChangeSet, InvoiceSubmissionTask, IssuedTaxInvoice",
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
@@ -289748,6 +290327,12 @@
           },
           {
             "resourceType": "InvoiceSubmissionTask",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IssuedTaxInvoice",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -289767,7 +290352,7 @@
         "name": "UntagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_UntagResource.html",
         "permissionOnly": false,
-        "description": "Grants permission to remove tags from a resource. Supported resource: Entity, ChangeSet, InvoiceSubmissionTask",
+        "description": "Grants permission to remove tags from a resource. Supported resource: Entity, ChangeSet, InvoiceSubmissionTask, IssuedTaxInvoice",
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
@@ -289784,6 +290369,12 @@
           },
           {
             "resourceType": "InvoiceSubmissionTask",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IssuedTaxInvoice",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -289828,6 +290419,14 @@
         "name": "InvoiceSubmissionTask",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
         "arnPattern": "arn:${Partition}:aws-marketplace:${Region}:${Account}:catalog/${Catalog}/invoice-submission-task/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "IssuedTaxInvoice",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "arnPattern": "arn:${Partition}:aws-marketplace:${Region}:${Account}:catalog/${Catalog}/issued-tax-invoice/${ResourceId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -394845,6 +395444,12 @@
         "resourceTypes": [
           {
             "resourceType": "cloud-vm-cluster",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "db-node",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []

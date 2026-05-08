@@ -2776,7 +2776,7 @@
       "name": "Amazon Bedrock Agentcore",
       "servicePrefix": "bedrock-agentcore",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockagentcore.html",
-      "actionsCount": 180,
+      "actionsCount": 206,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "AuthorizeAction",
@@ -2803,6 +2803,11 @@
         "CreateMemory",
         "CreateOauth2CredentialProvider",
         "CreateOnlineEvaluationConfig",
+        "CreatePaymentConnector",
+        "CreatePaymentCredentialProvider",
+        "CreatePaymentInstrument",
+        "CreatePaymentManager",
+        "CreatePaymentSession",
         "CreatePolicy",
         "CreatePolicyEngine",
         "CreateRegistry",
@@ -2827,6 +2832,11 @@
         "DeleteMemoryRecord",
         "DeleteOauth2CredentialProvider",
         "DeleteOnlineEvaluationConfig",
+        "DeletePaymentConnector",
+        "DeletePaymentCredentialProvider",
+        "DeletePaymentInstrument",
+        "DeletePaymentManager",
+        "DeletePaymentSession",
         "DeletePolicy",
         "DeletePolicyEngine",
         "DeleteRecommendation",
@@ -2858,6 +2868,12 @@
         "GetMemoryRecord",
         "GetOauth2CredentialProvider",
         "GetOnlineEvaluationConfig",
+        "GetPaymentConnector",
+        "GetPaymentCredentialProvider",
+        "GetPaymentInstrument",
+        "GetPaymentInstrumentBalance",
+        "GetPaymentManager",
+        "GetPaymentSession",
         "GetPolicy",
         "GetPolicyEngine",
         "GetPolicyGeneration",
@@ -2866,6 +2882,7 @@
         "GetRegistryRecord",
         "GetResourceApiKey",
         "GetResourceOauth2Token",
+        "GetResourcePaymentToken",
         "GetResourcePolicy",
         "GetTokenVault",
         "GetWorkloadAccessToken",
@@ -2906,6 +2923,11 @@
         "ListMemoryRecords",
         "ListOauth2CredentialProviders",
         "ListOnlineEvaluationConfigs",
+        "ListPaymentConnectors",
+        "ListPaymentCredentialProviders",
+        "ListPaymentInstruments",
+        "ListPaymentManagers",
+        "ListPaymentSessions",
         "ListPolicies",
         "ListPolicyEngines",
         "ListPolicyGenerationAssets",
@@ -2919,6 +2941,7 @@
         "ManageAdminPolicy",
         "ManageResourceScopedPolicy",
         "PartiallyAuthorizeActions",
+        "ProcessPayment",
         "PutResourcePolicy",
         "RetrieveMemoryRecords",
         "SaveBrowserSessionProfile",
@@ -2952,6 +2975,9 @@
         "UpdateMemory",
         "UpdateOauth2CredentialProvider",
         "UpdateOnlineEvaluationConfig",
+        "UpdatePaymentConnector",
+        "UpdatePaymentCredentialProvider",
+        "UpdatePaymentManager",
         "UpdatePolicy",
         "UpdatePolicyEngine",
         "UpdateRegistry",
@@ -2959,7 +2985,7 @@
         "UpdateRegistryRecordStatus",
         "UpdateWorkloadIdentity"
       ],
-      "resourceTypesCount": 26,
+      "resourceTypesCount": 28,
       "resourceTypes": [
         "evaluator",
         "online-evaluation-config",
@@ -2986,7 +3012,9 @@
         "batch-evaluate",
         "ab-test",
         "recommendation",
-        "configuration-bundle"
+        "configuration-bundle",
+        "payment-manager",
+        "paymentcredentialprovider"
       ],
       "conditionKeysCount": 18,
       "conditionKeys": [
@@ -3373,11 +3401,12 @@
         "UntagResource",
         "UpdateSpendingLimit"
       ],
-      "resourceTypesCount": 3,
+      "resourceTypesCount": 4,
       "resourceTypes": [
         "quantum-task",
         "job",
-        "spending-limit"
+        "spending-limit",
+        "device"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [
@@ -20118,7 +20147,7 @@
       "name": "AWS Marketplace Catalog",
       "servicePrefix": "aws-marketplace",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsmarketplacecatalog.html",
-      "actionsCount": 18,
+      "actionsCount": 20,
       "actions": [
         "CancelChangeSet",
         "DeleteResourcePolicy",
@@ -20126,11 +20155,13 @@
         "DescribeChangeSet",
         "DescribeEntity",
         "GetInvoiceSubmissionTask",
+        "GetIssuedTaxInvoice",
         "GetResourcePolicy",
         "ListAssessments",
         "ListChangeSets",
         "ListEntities",
         "ListInvoiceSubmissionTasks",
+        "ListIssuedTaxInvoices",
         "ListPayables",
         "ListTagsForResource",
         "PutResourcePolicy",
@@ -20139,12 +20170,13 @@
         "TagResource",
         "UntagResource"
       ],
-      "resourceTypesCount": 4,
+      "resourceTypesCount": 5,
       "resourceTypes": [
         "Entity",
         "ChangeSet",
         "Assessment",
-        "InvoiceSubmissionTask"
+        "InvoiceSubmissionTask",
+        "IssuedTaxInvoice"
       ],
       "conditionKeysCount": 5,
       "conditionKeys": [

@@ -1,5 +1,45 @@
 [
   {
+    "dateOfChange": "2026-05-08",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:CreatePaymentConnector",
+        "bedrock-agentcore:CreatePaymentCredentialProvider",
+        "bedrock-agentcore:CreatePaymentInstrument",
+        "bedrock-agentcore:CreatePaymentManager",
+        "bedrock-agentcore:CreatePaymentSession",
+        "bedrock-agentcore:DeletePaymentConnector",
+        "bedrock-agentcore:DeletePaymentCredentialProvider",
+        "bedrock-agentcore:DeletePaymentInstrument",
+        "bedrock-agentcore:DeletePaymentManager",
+        "bedrock-agentcore:DeletePaymentSession",
+        "bedrock-agentcore:GetPaymentConnector",
+        "bedrock-agentcore:GetPaymentCredentialProvider",
+        "bedrock-agentcore:GetPaymentInstrument",
+        "bedrock-agentcore:GetPaymentInstrumentBalance",
+        "bedrock-agentcore:GetPaymentManager",
+        "bedrock-agentcore:GetPaymentSession",
+        "bedrock-agentcore:GetResourcePaymentToken",
+        "bedrock-agentcore:ListPaymentConnectors",
+        "bedrock-agentcore:ListPaymentCredentialProviders",
+        "bedrock-agentcore:ListPaymentInstruments",
+        "bedrock-agentcore:ListPaymentManagers",
+        "bedrock-agentcore:ListPaymentSessions",
+        "bedrock-agentcore:ProcessPayment",
+        "bedrock-agentcore:UpdatePaymentConnector",
+        "bedrock-agentcore:UpdatePaymentCredentialProvider",
+        "bedrock-agentcore:UpdatePaymentManager"
+      ],
+      "AWS Marketplace Catalog": [
+        "aws-marketplace:GetIssuedTaxInvoice",
+        "aws-marketplace:ListIssuedTaxInvoices"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-05-06",
     "addedServices": [
       "Amazon Bio Discovery"
