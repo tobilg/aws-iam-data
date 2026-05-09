@@ -53376,6 +53376,91 @@
     "servicePrefix": "aws-external-anthropic",
     "actions": [
       {
+        "name": "ArchiveAgent",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to archive a managed agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ArchiveEnvironment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to archive a managed agent environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ArchiveMemoryStore",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to archive a memory store",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ArchiveSession",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to archive a managed agent session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ArchiveVault",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to archive a credential vault",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ArchiveWorkspace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
         "permissionOnly": false,
@@ -53385,7 +53470,9 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53434,7 +53521,9 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53449,7 +53538,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateAgent",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to create a managed agent in a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53464,7 +53572,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateEnvironment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to create a managed agent environment in a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53479,7 +53606,9 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53494,7 +53623,43 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateMemoryStore",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to create a managed agent memory store in a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateSession",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to create a managed agent session in a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53509,7 +53674,9 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53524,7 +53691,43 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateUserProfileEnrollmentUrl",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to create an enrollment URL for a user profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateVault",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to create a managed agent credential vault in a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53539,7 +53742,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -53554,7 +53760,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteEnvironment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a managed agent environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53569,7 +53794,43 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteMemoryStore",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a memory store",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteSession",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a managed agent session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53584,7 +53845,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteVault",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a credential vault",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53605,6 +53885,23 @@
         ]
       },
       {
+        "name": "GetAgent",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details or versions of a managed agent",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetBatchInference",
         "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
         "permissionOnly": false,
@@ -53614,7 +53911,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetEnvironment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a managed agent environment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53629,7 +53945,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetMemoryStore",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a memory store, its memories, or its memory versions",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53644,7 +53979,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetSession",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details, events, or resources of a managed agent session",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53659,7 +54013,9 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53674,7 +54030,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetVault",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a credential vault or its credentials",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53689,7 +54064,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAgents",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list managed agents in a workspace",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53704,7 +54098,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListEnvironments",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list managed agent environments in a workspace",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53719,7 +54132,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListMemoryStores",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list managed agent memory stores in a workspace",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53734,7 +54166,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListSessions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list managed agent sessions in a workspace",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53749,7 +54200,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListTagsForResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list tags for a resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53764,7 +54234,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListVaults",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to list managed agent credential vaults in a workspace",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53785,6 +54274,125 @@
         ]
       },
       {
+        "name": "TagResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to tag a resource",
+        "accessLevel": "Tagging",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:TagKeys",
+              "aws:RequestTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UntagResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to untag a resource",
+        "accessLevel": "Tagging",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateAgent",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to update a managed agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateEnvironment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to update a managed agent environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateMemoryStore",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to update a memory store, mutate its memories, or redact a memory version",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateSession",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to update a managed agent session, append session events, or manage its resources",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateSkill",
         "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
         "permissionOnly": false,
@@ -53794,7 +54402,9 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53809,7 +54419,26 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateVault",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to update a credential vault or manage its stored credentials",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53824,7 +54453,9 @@
           {
             "resourceType": "workspace",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -53835,7 +54466,9 @@
         "name": "workspace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/#Workspace",
         "arnPattern": "arn:${Partition}:aws-external-anthropic:${Region}:${Account}:workspace/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -53850,6 +54483,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/",
         "description": "Filters access by the Claude Platform role used for the console session",
         "type": "String"
+      },
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "description": "Filters access by the tags that are passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "description": "Filters access by the tags associated with the resource",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "description": "Filters access by the tag keys that are passed in the request",
+        "type": "ArrayOfString"
       }
     ]
   },
