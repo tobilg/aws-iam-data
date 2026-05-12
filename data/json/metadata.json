@@ -4001,9 +4001,10 @@
       "resourceTypes": [
         "workspace"
       ],
-      "conditionKeysCount": 5,
+      "conditionKeysCount": 6,
       "conditionKeys": [
         "aws-external-anthropic:BearerTokenType",
+        "aws-external-anthropic:CalledViaConsole",
         "aws-external-anthropic:Capability",
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -5439,13 +5440,15 @@
         "scheduled-query",
         "lookup-table"
       ],
-      "conditionKeysCount": 5,
+      "conditionKeysCount": 7,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "logs:DeliveryDestinationResourceArn",
-        "logs:LogGeneratingResourceArns"
+        "logs:LogGeneratingResourceArns",
+        "logs:data_source_name",
+        "logs:data_source_type"
       ]
     },
     {
