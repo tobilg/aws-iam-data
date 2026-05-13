@@ -3105,7 +3105,7 @@
       "name": "AWS Billing",
       "servicePrefix": "billing",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbilling.html",
-      "actionsCount": 28,
+      "actionsCount": 29,
       "actions": [
         "AssociateSourceViews",
         "CreateBillingView",
@@ -3119,6 +3119,7 @@
         "GetBillingView",
         "GetBillingViewData",
         "GetContractInformation",
+        "GetCreditAllocationHistory",
         "GetCredits",
         "GetIAMAccessPreference",
         "GetResourcePolicy",
@@ -16179,10 +16180,11 @@
       "name": "Amazon Inspector2 Telemetry Channel",
       "servicePrefix": "inspector2-telemetry",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazoninspector2telemetrychannel.html",
-      "actionsCount": 4,
+      "actionsCount": 5,
       "actions": [
         "NotifyHeartbeat",
         "SendTelemetry",
+        "SendTelemetryEvent",
         "StartSession",
         "StopSession"
       ],
@@ -27657,10 +27659,9 @@
         "TagGetWebIdentityToken",
         "TagSession"
       ],
-      "resourceTypesCount": 6,
+      "resourceTypesCount": 5,
       "resourceTypes": [
         "role",
-        "user",
         "root-user",
         "self-session",
         "context-provider",
@@ -27811,9 +27812,10 @@
       "name": "AWS Service - Oracle Database@AWS",
       "servicePrefix": "odb",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsservice-oracledatabase_aws.html",
-      "actionsCount": 51,
+      "actionsCount": 53,
       "actions": [
         "AcceptMarketplaceRegistration",
+        "AssociateIamRoleToResource",
         "CreateCloudAutonomousVmCluster",
         "CreateCloudExadataInfrastructure",
         "CreateCloudVmCluster",
@@ -27830,6 +27832,7 @@
         "DeleteOdbNetwork",
         "DeleteOdbPeeringConnection",
         "DeleteResourcePolicy",
+        "DisassociateIamRoleFromResource",
         "GetCloudAutonomousVmCluster",
         "GetCloudExadataInfrastructure",
         "GetCloudExadataInfrastructureUnallocatedResources",

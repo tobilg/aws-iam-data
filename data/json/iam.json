@@ -42763,6 +42763,21 @@
         ]
       },
       {
+        "name": "GetCreditAllocationHistory",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions",
+        "permissionOnly": true,
+        "description": "Grants permission to view a credit allocation history",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetCredits",
         "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions",
         "permissionOnly": true,
@@ -237917,6 +237932,21 @@
         ]
       },
       {
+        "name": "SendTelemetryEvent",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_SendTelemetryEvent.html",
+        "permissionOnly": false,
+        "description": "Grants permission to send telemetry event for a telemetry session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "StartSession",
         "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_StartSession.html",
         "permissionOnly": false,
@@ -393929,12 +393959,6 @@
             "dependentActions": []
           },
           {
-            "resourceType": "user",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
@@ -394043,12 +394067,6 @@
             "dependentActions": []
           },
           {
-            "resourceType": "user",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
@@ -394090,12 +394108,6 @@
             "dependentActions": []
           },
           {
-            "resourceType": "user",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          },
-          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
@@ -394118,12 +394130,6 @@
           "aws:ResourceTag/${TagKey}",
           "iam:ResourceTag/${TagKey}"
         ]
-      },
-      {
-        "name": "user",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/id_users.html",
-        "arnPattern": "arn:${Partition}:iam::${Account}:user/${UserNameWithPath}",
-        "conditionKeys": []
       },
       {
         "name": "root-user",
@@ -394473,7 +394479,7 @@
         "name": "sts:TaskPolicyArn",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_iam-condition-keys.html#condition-keys-sts",
         "description": "Filters access by TaskPolicyARN",
-        "type": "String"
+        "type": "ARN"
       },
       {
         "name": "sts:TransitiveTagKeys",
@@ -395368,6 +395374,27 @@
         ]
       },
       {
+        "name": "AssociateIamRoleToResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_AssociateIamRoleToResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to associate an AWS Identity and Access Management (IAM) service role with a specified resource to enable AWS service integration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cloud-autonomous-vm-cluster",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "cloud-vm-cluster",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateCloudAutonomousVmCluster",
         "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_CreateCloudAutonomousVmCluster.html",
         "permissionOnly": false,
@@ -395659,6 +395686,27 @@
           {
             "resourceType": "odb-network",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DisassociateIamRoleFromResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_DisassociateIamRoleFromResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate an AWS Identity and Access Management (IAM) service role from a specified resource to disable AWS service integration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cloud-autonomous-vm-cluster",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "cloud-vm-cluster",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
