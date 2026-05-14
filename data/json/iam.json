@@ -26281,6 +26281,32 @@
         ]
       },
       {
+        "name": "CreateStream",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aurora-dsql/latest/userguide/cdc-streams.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a Change Stream for a cluster",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Cluster",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DbConnect",
         "apiReferenceUrl": "https://docs.aws.amazon.com/aurora-dsql/latest/userguide/accessing-sql-clients.html",
         "permissionOnly": false,
@@ -26334,6 +26360,21 @@
         "resourceTypes": [
           {
             "resourceType": "Cluster",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteStream",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aurora-dsql/latest/userguide/cdc-streams.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a Change Stream",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Stream",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -26401,6 +26442,21 @@
         ]
       },
       {
+        "name": "GetStream",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aurora-dsql/latest/userguide/cdc-streams.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get information about a Change Stream",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Stream",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetVpcEndpointServiceName",
         "apiReferenceUrl": "https://docs.aws.amazon.com/aurora-dsql/latest/APIReference/API_GetVpcEndpointServiceName.html",
         "permissionOnly": false,
@@ -26449,6 +26505,21 @@
         ]
       },
       {
+        "name": "ListStreams",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aurora-dsql/latest/userguide/cdc-streams.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of Change Streams for a cluster",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Cluster",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListTagsForResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/aurora-dsql/latest/APIReference/API_ListTagsForResource.html",
         "permissionOnly": false,
@@ -26457,7 +26528,13 @@
         "resourceTypes": [
           {
             "resourceType": "Cluster",
-            "required": true,
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Stream",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -26607,7 +26684,13 @@
         "resourceTypes": [
           {
             "resourceType": "Cluster",
-            "required": true,
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Stream",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           },
@@ -26631,7 +26714,13 @@
         "resourceTypes": [
           {
             "resourceType": "Cluster",
-            "required": true,
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Stream",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           },
@@ -26667,6 +26756,21 @@
             "dependentActions": []
           }
         ]
+      },
+      {
+        "name": "UpdateStream",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aurora-dsql/latest/userguide/cdc-streams.html",
+        "permissionOnly": false,
+        "description": "Grants permission to modify Change Stream attributes",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Stream",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
       }
     ],
     "resourceTypes": [
@@ -26674,6 +26778,14 @@
         "name": "Cluster",
         "apiReferenceUrl": "https://docs.aws.amazon.com/aurora-dsql/latest/userguide/what-is-aurora-dsql.html",
         "arnPattern": "arn:${Partition}:dsql:${Region}:${Account}:cluster/${Identifier}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "Stream",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aurora-dsql/latest/userguide/cdc-streams.html",
+        "arnPattern": "arn:${Partition}:dsql:${Region}:${Account}:cluster/${ClusterId}/stream/${StreamId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -37860,7 +37972,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -38989,6 +39104,21 @@
         ]
       },
       {
+        "name": "GetPolicyEngineSummary",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetPolicyEngineSummary.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a summary of a policy engine",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "policy-engine",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetPolicyGeneration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetPolicyGeneration.html",
         "permissionOnly": false,
@@ -39003,6 +39133,48 @@
           },
           {
             "resourceType": "policy-generation",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetPolicyGenerationSummary",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetPolicyGenerationSummary.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a summary of a policy generation request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "policy-engine",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy-generation",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetPolicySummary",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetPolicySummary.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a summary of a policy",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy-engine",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -39980,6 +40152,21 @@
         ]
       },
       {
+        "name": "ListPolicyEngineSummaries",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListPolicyEngineSummaries.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list policy engine summaries",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListPolicyEngines",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListPolicyEngines.html",
         "permissionOnly": false,
@@ -40016,10 +40203,40 @@
         ]
       },
       {
+        "name": "ListPolicyGenerationSummaries",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListPolicyGenerationSummaries.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list policy generation summaries",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "policy-engine",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListPolicyGenerations",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListPolicyGenerations.html",
         "permissionOnly": false,
         "description": "Grants permission to list policy generation requests",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "policy-engine",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListPolicySummaries",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListPolicySummaries.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list policy summaries within a policy engine",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -40173,6 +40390,12 @@
           },
           {
             "resourceType": "paymentcredentialprovider",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy-engine",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -40710,6 +40933,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "policy-engine",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "runtime",
             "required": false,
             "conditionKeys": [],
@@ -40825,6 +41054,12 @@
           },
           {
             "resourceType": "paymentcredentialprovider",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy-engine",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -41412,7 +41647,9 @@
         "name": "policy-engine",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/policyEngine.html",
         "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:policy-engine/${PolicyEngineId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "policy",
@@ -364165,6 +364402,21 @@
         ]
       },
       {
+        "name": "AssociateCertificate",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/api/API_AssociateCertificate.html",
+        "permissionOnly": false,
+        "description": "Grants permission to associate an ACM certificate with a responder gateway",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ResponderGateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateInboundExternalLink",
         "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/api/API_CreateInboundExternalLink.html",
         "permissionOnly": false,
@@ -364195,6 +364447,30 @@
         "description": "Grants permission to create a new link between RTB applications",
         "accessLevel": "Write",
         "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateLinkRoutingRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/api/API_CreateLinkRoutingRule.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a routing rule for a link",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Link",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
           {
             "resourceType": "",
             "required": false,
@@ -364303,6 +364579,27 @@
         ]
       },
       {
+        "name": "DeleteLinkRoutingRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/api/API_DeleteLinkRoutingRule.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a routing rule from a link",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Link",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "LinkRoutingRule",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteOutboundExternalLink",
         "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/api/API_DeleteOutboundExternalLink.html",
         "permissionOnly": false,
@@ -364354,6 +364651,36 @@
         ]
       },
       {
+        "name": "DisassociateCertificate",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/api/API_DisassociateCertificate.html",
+        "permissionOnly": false,
+        "description": "Grants permission to remove a certificate association from a responder gateway",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ResponderGateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetCertificateAssociation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/api/API_GetCertificateAssociation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a certificate association with a responder gateway",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ResponderGateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetInboundExternalLink",
         "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/api/API_GetInboundExternalLink.html",
         "permissionOnly": false,
@@ -364383,6 +364710,27 @@
         "resourceTypes": [
           {
             "resourceType": "Link",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetLinkRoutingRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/api/API_GetLinkRoutingRule.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve information about a routing rule for a link",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Link",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "LinkRoutingRule",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -364434,6 +364782,36 @@
         "resourceTypes": [
           {
             "resourceType": "ResponderGateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListCertificateAssociations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/api/API_ListCertificateAssociations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list certificate associations for a responder gateway",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "ResponderGateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListLinkRoutingRules",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/api/API_ListLinkRoutingRules.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list routing rules for a link",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Link",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -364505,6 +364883,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "LinkRoutingRule",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "OutboundExternalLink",
             "required": false,
             "conditionKeys": [],
@@ -364559,6 +364943,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "LinkRoutingRule",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "OutboundExternalLink",
             "required": false,
             "conditionKeys": [],
@@ -364602,6 +364992,12 @@
           },
           {
             "resourceType": "Link",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "LinkRoutingRule",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -364665,6 +365061,27 @@
         ]
       },
       {
+        "name": "UpdateLinkRoutingRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/api/API_UpdateLinkRoutingRule.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a routing rule for a link",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Link",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "LinkRoutingRule",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateRequesterGateway",
         "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/api/API_UpdateRequesterGateway.html",
         "permissionOnly": false,
@@ -364715,6 +365132,16 @@
           "rtbfabric:LinkLinkId",
           "rtbfabric:RequesterGatewayGatewayId",
           "rtbfabric:ResponderGatewayGatewayId"
+        ]
+      },
+      {
+        "name": "LinkRoutingRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/userguide/links.html",
+        "arnPattern": "arn:${Partition}:rtbfabric:${Region}:${Account}:gateway/${GatewayId}/link/${LinkId}/routing-rule/${RuleId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "rtbfabric:LinkLinkId",
+          "rtbfabric:LinkRoutingRuleRuleId"
         ]
       },
       {
@@ -364781,6 +365208,12 @@
         "name": "rtbfabric:LinkLinkId",
         "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/userguide/security_iam_service-with-iam.html",
         "description": "Filters access by Link resource linkId identifier",
+        "type": "String"
+      },
+      {
+        "name": "rtbfabric:LinkRoutingRuleRuleId",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/rtb-fabric/latest/userguide/security_iam_service-with-iam.html",
+        "description": "Filters access by routing rule identifier supporting rule-* formats",
         "type": "String"
       },
       {
@@ -376344,6 +376777,21 @@
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsagemaker.html",
     "servicePrefix": "sagemaker",
     "actions": [
+      {
+        "name": "AccessModelPackage",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/",
+        "permissionOnly": true,
+        "description": "Grants permission to access model package that can be used in Amazon SageMaker training or hosting services",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "model-package",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
       {
         "name": "AddAssociation",
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AddAssociation.html",

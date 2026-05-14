@@ -1,5 +1,42 @@
 [
   {
+    "dateOfChange": "2026-05-14",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Aurora DSQL": [
+        "dsql:CreateStream",
+        "dsql:DeleteStream",
+        "dsql:GetStream",
+        "dsql:ListStreams",
+        "dsql:UpdateStream"
+      ],
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:GetPolicyEngineSummary",
+        "bedrock-agentcore:GetPolicyGenerationSummary",
+        "bedrock-agentcore:GetPolicySummary",
+        "bedrock-agentcore:ListPolicyEngineSummaries",
+        "bedrock-agentcore:ListPolicyGenerationSummaries",
+        "bedrock-agentcore:ListPolicySummaries"
+      ],
+      "AWS RTB Fabric": [
+        "rtbfabric:AssociateCertificate",
+        "rtbfabric:CreateLinkRoutingRule",
+        "rtbfabric:DeleteLinkRoutingRule",
+        "rtbfabric:DisassociateCertificate",
+        "rtbfabric:GetCertificateAssociation",
+        "rtbfabric:GetLinkRoutingRule",
+        "rtbfabric:ListCertificateAssociations",
+        "rtbfabric:ListLinkRoutingRules",
+        "rtbfabric:UpdateLinkRoutingRule"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:AccessModelPackage"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-05-13",
     "addedServices": [],
     "removedServices": [],
