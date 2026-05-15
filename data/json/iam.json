@@ -63002,7 +63002,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -63062,7 +63065,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -64875,6 +64881,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "function",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "key-value-store",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "trust-store",
             "required": false,
             "conditionKeys": [],
@@ -65016,6 +65034,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "function",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "key-value-store",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "streaming-distribution",
             "required": false,
             "conditionKeys": [],
@@ -65107,6 +65137,18 @@
           },
           {
             "resourceType": "distribution-tenant",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "function",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "key-value-store",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -65578,13 +65620,17 @@
         "name": "function",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-functions.html",
         "arnPattern": "arn:${Partition}:cloudfront::${Account}:function/${Name}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "key-value-store",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/kvs-with-functions.html",
         "arnPattern": "arn:${Partition}:cloudfront::${Account}:key-value-store/${Name}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "response-headers-policy",
@@ -65638,7 +65684,7 @@
       },
       {
         "name": "trust-store",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/viewer-mtls-trust-stores.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/trust-stores-certificate-management.html",
         "arnPattern": "arn:${Partition}:cloudfront::${Account}:trust-store/${Id}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
@@ -65646,7 +65692,7 @@
       },
       {
         "name": "connection-function",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/cloudfront-connection-functions.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/connection-functions.html",
         "arnPattern": "arn:${Partition}:cloudfront::${Account}:connection-function/${Id}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
