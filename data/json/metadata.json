@@ -11479,8 +11479,9 @@
       "name": "Amazon Elastic Container Service",
       "servicePrefix": "ecs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticcontainerservice.html",
-      "actionsCount": 79,
+      "actionsCount": 80,
       "actions": [
+        "ContinueServiceDeployment",
         "CreateCapacityProvider",
         "CreateCluster",
         "CreateDaemon",
@@ -11577,7 +11578,7 @@
         "task-definition",
         "task-set"
       ],
-      "conditionKeysCount": 30,
+      "conditionKeysCount": 31,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -11599,6 +11600,7 @@
         "ecs:enable-service-connect",
         "ecs:enable-vpc-lattice",
         "ecs:fargate-ephemeral-storage-kms-key",
+        "ecs:gateway",
         "ecs:instance-metadata-tags-propagation",
         "ecs:namespace",
         "ecs:privileged",

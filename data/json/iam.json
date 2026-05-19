@@ -94716,6 +94716,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "Connector",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "OrganizationConfigRule",
             "required": false,
             "conditionKeys": [],
@@ -95199,6 +95205,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "Connector",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "OrganizationConfigRule",
             "required": false,
             "conditionKeys": [],
@@ -95260,6 +95272,12 @@
           },
           {
             "resourceType": "ConformancePack",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Connector",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -170626,6 +170644,34 @@
     "servicePrefix": "ecs",
     "actions": [
       {
+        "name": "ContinueServiceDeployment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContinueServiceDeployment.html",
+        "permissionOnly": false,
+        "description": "Grants permission to continue a paused service deployment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service-deployment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster",
+              "ecs:service"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateCapacityProvider",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateCapacityProvider.html",
         "permissionOnly": false,
@@ -172807,6 +172853,12 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
         "description": "Filters access by the AWS KMS key id provided in the request",
         "type": "String"
+      },
+      {
+        "name": "ecs:gateway",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies-conditionkeys",
+        "description": "Filters access by the ARN of an Amazon ECS gateway",
+        "type": "ARN"
       },
       {
         "name": "ecs:instance-metadata-tags-propagation",
