@@ -45932,7 +45932,7 @@
       {
         "name": "job",
         "apiReferenceUrl": "https://docs.aws.amazon.com/braket/latest/developerguide/braket-manage-access.html#resources",
-        "arnPattern": "arn:${Partition}:braket:${Region}:${Account}:job/${JobName}",
+        "arnPattern": "arn:${Partition}:braket:${Region}:${Account}:job/${RandomId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -45948,7 +45948,7 @@
       {
         "name": "device",
         "apiReferenceUrl": "https://docs.aws.amazon.com/braket/latest/developerguide/restrict-access.html",
-        "arnPattern": "arn:${Partition}:braket:*:${Account}:device/${DeviceType}/${Provider}/${DeviceId}",
+        "arnPattern": "arn:${Partition}:braket:*:*:device/${DeviceType}/${Provider}/${DeviceId}",
         "conditionKeys": []
       }
     ],
@@ -262405,11 +262405,14 @@
               "kms:CallerAccount",
               "kms:EncryptionContext:${EncryptionContextKey}",
               "kms:EncryptionContextKeys",
+              "kms:GrantConstraintSourceArn",
               "kms:GrantConstraintType",
               "kms:GranteePrincipal",
+              "kms:GranteeServicePrincipal",
               "kms:GrantIsForAWSResource",
               "kms:GrantOperations",
               "kms:RetiringPrincipal",
+              "kms:RetiringServicePrincipal",
               "kms:ViaService"
             ],
             "dependentActions": []
@@ -264045,6 +264048,12 @@
         "type": "String"
       },
       {
+        "name": "kms:GrantConstraintSourceArn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-grant-constraint-source-arn",
+        "description": "Filters access to the CreateGrant operation based on the value of SourceArn constraint in the request",
+        "type": "ARN"
+      },
+      {
         "name": "kms:GrantConstraintType",
         "apiReferenceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-grant-constraint-type",
         "description": "Filters access to the CreateGrant operation based on the grant constraint in the request",
@@ -264066,6 +264075,12 @@
         "name": "kms:GranteePrincipal",
         "apiReferenceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-grantee-principal",
         "description": "Filters access to the CreateGrant operation based on the grantee principal in the grant",
+        "type": "String"
+      },
+      {
+        "name": "kms:GranteeServicePrincipal",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-grantee-service-principal",
+        "description": "Filters access to the CreateGrant operation based on the value of GranteeServicePrincipal in the request",
         "type": "String"
       },
       {
@@ -264492,6 +264507,12 @@
         "name": "kms:RetiringPrincipal",
         "apiReferenceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-retiring-principal",
         "description": "Filters access to the CreateGrant operation based on the retiring principal in the grant",
+        "type": "String"
+      },
+      {
+        "name": "kms:RetiringServicePrincipal",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kms/latest/developerguide/conditions-kms.html#conditions-kms-retiring-service-principal",
+        "description": "Filters access to the CreateGrant operation based on the value of RetiringServicePrincipal in the request",
         "type": "String"
       },
       {
