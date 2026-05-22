@@ -12199,7 +12199,7 @@
       "name": "Amazon Elastic VMware Service",
       "servicePrefix": "evs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonelasticvmwareservice.html",
-      "actionsCount": 21,
+      "actionsCount": 22,
       "actions": [
         "AssociateEipToVlan",
         "CreateEntitlement",
@@ -12211,6 +12211,7 @@
         "DeleteEnvironmentConnector",
         "DeleteEnvironmentHost",
         "DisassociateEipFromVlan",
+        "GetDepotUrl",
         "GetEnvironment",
         "GetVersions",
         "ListEnvironmentConnectors",
@@ -30239,12 +30240,13 @@
         "host-key",
         "webapp"
       ],
-      "conditionKeysCount": 7,
+      "conditionKeysCount": 8,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "transfer:RequestConnectorProtocol",
+        "transfer:RequestSecurityPolicyName",
         "transfer:RequestServerDomain",
         "transfer:RequestServerEndpointType",
         "transfer:RequestServerProtocols"

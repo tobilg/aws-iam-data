@@ -181562,6 +181562,21 @@
         ]
       },
       {
+        "name": "GetDepotUrl",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_GetDepotUrl.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get an Amazon EVS environment depot url",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetEnvironment",
         "apiReferenceUrl": "https://docs.aws.amazon.com/evs/latest/APIReference/API_GetEnvironment.html",
         "permissionOnly": false,
@@ -426252,7 +426267,8 @@
               "aws:TagKeys",
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
-              "transfer:RequestConnectorProtocol"
+              "transfer:RequestConnectorProtocol",
+              "transfer:RequestSecurityPolicyName"
             ],
             "dependentActions": []
           }
@@ -426293,7 +426309,8 @@
               "aws:ResourceTag/${TagKey}",
               "transfer:RequestServerEndpointType",
               "transfer:RequestServerDomain",
-              "transfer:RequestServerProtocols"
+              "transfer:RequestServerProtocols",
+              "transfer:RequestSecurityPolicyName"
             ],
             "dependentActions": [
               "iam:PassRole"
@@ -427401,6 +427418,14 @@
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "transfer:RequestSecurityPolicyName"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -427454,7 +427479,8 @@
             "required": false,
             "conditionKeys": [
               "transfer:RequestServerEndpointType",
-              "transfer:RequestServerProtocols"
+              "transfer:RequestServerProtocols",
+              "transfer:RequestSecurityPolicyName"
             ],
             "dependentActions": []
           }
@@ -427609,6 +427635,12 @@
         "name": "transfer:RequestConnectorProtocol",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transfer/latest/userguide/transfer-condition-keys.html",
         "description": "Filters access by the connector protocol that is passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "transfer:RequestSecurityPolicyName",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transfer/latest/userguide/transfer-condition-keys.html",
+        "description": "Filters access by the security policy name that is passed in the request",
         "type": "String"
       },
       {
