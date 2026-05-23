@@ -370514,6 +370514,7 @@
             "required": false,
             "conditionKeys": [
               "s3:authType",
+              "s3:ExistingObjectTag/<key>",
               "s3:ResourceAccount",
               "s3:signatureAge",
               "s3:signatureversion",
