@@ -320596,6 +320596,21 @@
         ]
       },
       {
+        "name": "ListPerformanceAnalysisReportRecommendations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/performance-insights/latest/APIReference/API_ListPerformanceAnalysisReportRecommendations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to call ListPerformanceAnalysisReportRecommendations API to retrieve a Performance Analysis Report Recommendations for a specified DB instance",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "perf-reports-resource",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListPerformanceAnalysisReports",
         "apiReferenceUrl": "https://docs.aws.amazon.com/performance-insights/latest/APIReference/API_ListPerformanceAnalysisReports.html",
         "permissionOnly": false,
