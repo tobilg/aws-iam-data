@@ -28499,6 +28499,21 @@
         ]
       },
       {
+        "name": "GetPITRMalwareScanResults",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aws-backup/latest/devguide/API_GetPITRMalwareScanResults.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get point-in-time recovery (PITR) malware scan results",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "recoveryPoint",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetRecoveryPointIndexDetails",
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-backup/latest/devguide/API_GetRecoveryPointIndexDetails.html",
         "permissionOnly": false,
@@ -102595,6 +102610,35 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "SendOutboundWebNotification",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_SendOutboundWebNotification.html",
+        "permissionOnly": true,
+        "description": "Grants permission to send outbound web notifications using the Amazon Connect API",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "instance",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "connect:DescribeView",
+              "kms:Decrypt",
+              "profile:BatchGetProfile",
+              "profile:GetProfileRecommendations",
+              "profile:SearchProfiles"
+            ]
           },
           {
             "resourceType": "",

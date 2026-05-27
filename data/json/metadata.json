@@ -2131,7 +2131,7 @@
       "name": "AWS Backup",
       "servicePrefix": "backup",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbackup.html",
-      "actionsCount": 118,
+      "actionsCount": 119,
       "actions": [
         "AssociateBackupVaultMpaApprovalTeam",
         "CancelLegalHold",
@@ -2188,6 +2188,7 @@
         "GetBackupVaultNotifications",
         "GetBackupVaultSharingPolicy",
         "GetLegalHold",
+        "GetPITRMalwareScanResults",
         "GetRecoveryPointIndexDetails",
         "GetRecoveryPointRestoreMetadata",
         "GetRestoreJobMetadata",
@@ -7235,7 +7236,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonconnect.html",
-      "actionsCount": 362,
+      "actionsCount": 363,
       "actions": [
         "ActivateEvaluationForm",
         "AdminGetEmergencyAccessToken",
@@ -7512,6 +7513,7 @@
         "SendIntegrationEvent",
         "SendOutboundChatMessage",
         "SendOutboundEmail",
+        "SendOutboundWebNotification",
         "StartAttachedFileUpload",
         "StartChatContact",
         "StartContactEvaluation",
