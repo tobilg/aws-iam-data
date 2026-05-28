@@ -184606,6 +184606,24 @@
         ]
       },
       {
+        "name": "CreateDictionary",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_CreateDictionary.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new dictionary",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateFeed",
         "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_CreateFeed.html",
         "permissionOnly": false,
@@ -184619,6 +184637,21 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteDictionary",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_DeleteDictionary.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a dictionary",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dictionary",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -184654,6 +184687,36 @@
         ]
       },
       {
+        "name": "ExportDictionaryEntries",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_ExportDictionaryEntries.html",
+        "permissionOnly": false,
+        "description": "Grants permission to export dictionary entries",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "dictionary",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetDictionary",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_GetDictionary.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get dictionary details",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "dictionary",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetFeed",
         "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_GetFeed.html",
         "permissionOnly": false,
@@ -184678,6 +184741,21 @@
           {
             "resourceType": "feed",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListDictionaries",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_ListDictionaries.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list dictionaries in the account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -184736,6 +184814,12 @@
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
+            "resourceType": "dictionary",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "feed",
             "required": false,
             "conditionKeys": [],
@@ -184760,6 +184844,12 @@
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
+            "resourceType": "dictionary",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "feed",
             "required": false,
             "conditionKeys": [],
@@ -184771,6 +184861,21 @@
             "conditionKeys": [
               "aws:TagKeys"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateDictionary",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_UpdateDictionary.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update dictionary configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dictionary",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -184792,6 +184897,14 @@
       }
     ],
     "resourceTypes": [
+      {
+        "name": "dictionary",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/userguide/elemental-inference-configuration.html",
+        "arnPattern": "arn:${Partition}:elemental-inference:${Region}:${Account}:dictionary/${Id}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
       {
         "name": "feed",
         "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/userguide/elemental-inference-configuration.html",
