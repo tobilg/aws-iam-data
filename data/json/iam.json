@@ -243755,6 +243755,29 @@
         ]
       },
       {
+        "name": "GetConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/iot/latest/developerguide/policy-actions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the specified connection information",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "client",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "iot:IncludeSocketInformation"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetEffectivePolicies",
         "apiReferenceUrl": "https://docs.aws.amazon.com/iot/latest/apireference/API_GetEffectivePolicies.html",
         "permissionOnly": false,
@@ -244820,6 +244843,21 @@
         ]
       },
       {
+        "name": "ListSubscriptions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/iot/latest/developerguide/policy-actions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the specified connection's subscriptions",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "client",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListTagsForResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/iot/latest/apireference/API_ListTagsForResource.html",
         "permissionOnly": false,
@@ -245481,6 +245519,29 @@
             "resourceType": "index",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "SendDirectMessage",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/iot/latest/developerguide/policy-actions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to send a direct message to an IoT client",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "client",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "iot:Topic"
+            ],
             "dependentActions": []
           }
         ]
@@ -246914,10 +246975,22 @@
         "type": "String"
       },
       {
+        "name": "iot:IncludeSocketInformation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html",
+        "description": "Filters access by GetConnection includeSocketInformation request parameter",
+        "type": "String"
+      },
+      {
         "name": "iot:ThingGroupArn",
         "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html",
         "description": "Filters access by a list of IoT Thing Group ARNs that the destination IoT Thing belongs to for an IoT Tunnel",
         "type": "ArrayOfARN"
+      },
+      {
+        "name": "iot:Topic",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html",
+        "description": "Filters access by based on the topic",
+        "type": "String"
       },
       {
         "name": "iot:TunnelDestinationService",
@@ -354306,6 +354379,58 @@
         ]
       },
       {
+        "name": "CreateAssertion",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_CreateAssertion.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an assertion for a service",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateInputSource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_CreateInputSource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an input source for a service",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreatePolicy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_CreatePolicy.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a resilience policy that defines availability and disaster recovery requirements",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateRecommendationTemplate",
         "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_CreateRecommendationTemplate.html",
         "permissionOnly": false,
@@ -354334,6 +354459,23 @@
         ]
       },
       {
+        "name": "CreateReport",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_CreateReport.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a report for a service",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateResiliencyPolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_CreateResiliencyPolicy.html",
         "permissionOnly": false,
@@ -354352,6 +354494,117 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateService",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_CreateService.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a service",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "system",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateServiceFunction",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_CreateServiceFunction.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a service function",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateServiceFunctionResources",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_CreateServiceFunctionResources.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create service function resources",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateSystem",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_CreateSystem.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a system that represents a logical grouping of services",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "system",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateUserJourney",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_CreateUserJourney.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a user journey within a system",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "system",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -354433,6 +354686,57 @@
         ]
       },
       {
+        "name": "DeleteAssertion",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_DeleteAssertion.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an assertion",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteInputSource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_DeleteInputSource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an input source",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeletePolicy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_DeletePolicy.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a resilience policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteRecommendationTemplate",
         "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_DeleteRecommendationTemplate.html",
         "permissionOnly": false,
@@ -354458,6 +354762,91 @@
             "resourceType": "resiliency-policy",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteService",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_DeleteService.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a service",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteServiceFunction",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_DeleteServiceFunction.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a service function",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteServiceFunctionResources",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_DeleteServiceFunctionResources.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete service function resources",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteSystem",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_DeleteSystem.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a system",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "system",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteUserJourney",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_DeleteUserJourney.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a user journey",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "system",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -354623,6 +355012,143 @@
             "resourceType": "application",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetFailureModeFinding",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_GetFailureModeFinding.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a failure mode finding",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetPolicy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_GetPolicy.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a resilience policy",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetService",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_GetService.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a service",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetSystem",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_GetSystem.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a system",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "system",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetUserJourney",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_GetUserJourney.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a user journey",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "system",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ImportApp",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ImportApp.html",
+        "permissionOnly": false,
+        "description": "Grants permission to import a V1 app into the V2 resource model",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "application",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ImportPolicy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ImportPolicy.html",
+        "permissionOnly": false,
+        "description": "Grants permission to import a V1 policy into V2",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "resiliency-policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -354830,11 +355356,109 @@
         ]
       },
       {
+        "name": "ListAssertions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListAssertions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list assertions for a service",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListDependencies",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListDependencies.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list dependencies discovered for services",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListFailureModeAssessments",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListFailureModeAssessments.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list failure mode assessments",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListFailureModeFindings",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListFailureModeFindings.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list failure mode findings",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListInputSources",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListInputSources.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list input sources for a service",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListMetrics",
         "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListMetrics.html",
         "permissionOnly": false,
         "description": "Grants permission to list metrics",
         "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListPolicies",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListPolicies.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list resilience policies",
+        "accessLevel": "Read",
         "resourceTypes": [
           {
             "resourceType": "",
@@ -354855,6 +355479,23 @@
             "resourceType": "application",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListReports",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListReports.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list reports",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -354884,6 +355525,89 @@
           {
             "resourceType": "application",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListResources",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListResources.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list resources for a service",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListServiceEvents",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListServiceEvents.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list events for a service",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListServiceFunctions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListServiceFunctions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list service functions",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListServiceTopologyEdges",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListServiceTopologyEdges.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list service topology edges",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListServices",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListServices.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list services",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -354920,6 +355644,38 @@
         ]
       },
       {
+        "name": "ListSystemEvents",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListSystemEvents.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list events for a system",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "system",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListSystems",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListSystems.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list systems",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListTagsForResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListTagsForResource.html",
         "permissionOnly": false,
@@ -354927,7 +355683,43 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "app-assessment",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "application",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "recommendation-template",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "resiliency-policy",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "system",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -354960,6 +355752,23 @@
             "resourceType": "application",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListUserJourneys",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListUserJourneys.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list user journeys for a system",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "system",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -355087,6 +355896,23 @@
         ]
       },
       {
+        "name": "StartFailureModeAssessment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_StartFailureModeAssessment.html",
+        "permissionOnly": false,
+        "description": "Grants permission to start a failure mode assessment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "StartMetricsExport",
         "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_StartMetricsExport.html",
         "permissionOnly": false,
@@ -355136,6 +355962,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "policy",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "recommendation-template",
             "required": false,
             "conditionKeys": [],
@@ -355143,6 +355975,18 @@
           },
           {
             "resourceType": "resiliency-policy",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "system",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -355178,6 +356022,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "policy",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "recommendation-template",
             "required": false,
             "conditionKeys": [],
@@ -355185,6 +356035,18 @@
           },
           {
             "resourceType": "resiliency-policy",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "system",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -355262,6 +356124,74 @@
         ]
       },
       {
+        "name": "UpdateAssertion",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_UpdateAssertion.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an assertion",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateDependency",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_UpdateDependency.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a dependency classification",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateFailureModeFinding",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_UpdateFailureModeFinding.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a failure mode finding",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdatePolicy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_UpdatePolicy.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a resilience policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateResiliencyPolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_UpdateResiliencyPolicy.html",
         "permissionOnly": false,
@@ -355272,6 +356202,98 @@
             "resourceType": "resiliency-policy",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateService",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_UpdateService.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a service",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "system",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateServiceFunction",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_UpdateServiceFunction.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a service function",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateSystem",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_UpdateSystem.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a system",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "system",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateUserJourney",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_UpdateUserJourney.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a user journey",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "system",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -355306,6 +356328,30 @@
         "name": "recommendation-template",
         "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_RecommendationTemplate.html",
         "arnPattern": "arn:${Partition}:resiliencehub:${Region}:${Account}:recommendation-template/${RecommendationTemplateId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "policy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_Policy.html",
+        "arnPattern": "arn:${Partition}:resiliencehub:${Region}:${Account}:policy/${PolicyId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "service",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_Service.html",
+        "arnPattern": "arn:${Partition}:resiliencehub:${Region}:${Account}:service/${ServiceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "system",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_System.html",
+        "arnPattern": "arn:${Partition}:resiliencehub:${Region}:${Account}:system/${SystemId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
