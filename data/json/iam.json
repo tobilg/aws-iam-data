@@ -124168,6 +124168,23 @@
         ]
       },
       {
+        "name": "DeleteVolume",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_DeleteVolume.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a volume",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "volume",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "identitystore:ListGroupMembershipsForMember"
+            ]
+          }
+        ]
+      },
+      {
         "name": "DeleteWorker",
         "apiReferenceUrl": "https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_DeleteWorker.html",
         "permissionOnly": false,
@@ -124645,6 +124662,23 @@
         "resourceTypes": [
           {
             "resourceType": "job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "identitystore:ListGroupMembershipsForMember"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "GetVolume",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_GetVolume.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a volume",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "volume",
             "required": true,
             "conditionKeys": [],
             "dependentActions": [
@@ -125216,6 +125250,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "volume",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "worker",
             "required": false,
             "conditionKeys": [],
@@ -125240,6 +125280,23 @@
         "resourceTypes": [
           {
             "resourceType": "job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "identitystore:ListGroupMembershipsForMember"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ListVolumes",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_ListVolumes.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list volumes",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "volume",
             "required": true,
             "conditionKeys": [],
             "dependentActions": [
@@ -125433,6 +125490,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "volume",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "worker",
             "required": false,
             "conditionKeys": [],
@@ -125495,6 +125558,12 @@
           },
           {
             "resourceType": "queue",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "volume",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -125886,6 +125955,16 @@
           "aws:ResourceTag/${TagKey}",
           "deadline:FarmMembershipLevels",
           "deadline:QueueMembershipLevels"
+        ]
+      },
+      {
+        "name": "volume",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/deadline-cloud/latest/userguide/volumes.html",
+        "arnPattern": "arn:${Partition}:deadline:${Region}:${Account}:farm/${FarmId}/fleet/${FleetId}/volume/${VolumeId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "deadline:FarmMembershipLevels",
+          "deadline:FleetMembershipLevels"
         ]
       },
       {
@@ -364143,6 +364222,21 @@
         ]
       },
       {
+        "name": "ListFirewallRuleTypes",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallRuleTypes.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list the types of Firewall rules that are available for use, including firewall advanced content category",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListFirewallRules",
         "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallRules.html",
         "permissionOnly": false,
@@ -406238,14 +406332,21 @@
         "name": "DeleteSuppressedDestination",
         "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_DeleteSuppressedDestination.html",
         "permissionOnly": false,
-        "description": "Grants permission to remove an email address from the suppression list for your account",
+        "description": "Grants permission to remove an email address from the suppression list for your account or tenant",
         "accessLevel": "Write",
         "resourceTypes": [
+          {
+            "resourceType": "tenant",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
           {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
-              "ses:ApiVersion"
+              "ses:ApiVersion",
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -406824,14 +406925,21 @@
         "name": "GetSuppressedDestination",
         "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_GetSuppressedDestination.html",
         "permissionOnly": false,
-        "description": "Grants permission to retrieve information about a specific email address that's on the suppression list for your account",
+        "description": "Grants permission to retrieve information about a specific email address that's on the suppression list for your account or tenant",
         "accessLevel": "Read",
         "resourceTypes": [
+          {
+            "resourceType": "tenant",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
           {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
-              "ses:ApiVersion"
+              "ses:ApiVersion",
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -407160,14 +407268,21 @@
         "name": "ListSuppressedDestinations",
         "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ListSuppressedDestinations.html",
         "permissionOnly": false,
-        "description": "Grants permission to list email addresses that are on the suppression list for your account",
+        "description": "Grants permission to list email addresses that are on the suppression list for your account or tenant",
         "accessLevel": "Read",
         "resourceTypes": [
+          {
+            "resourceType": "tenant",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
           {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
-              "ses:ApiVersion"
+              "ses:ApiVersion",
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -407756,14 +407871,45 @@
         "name": "PutSuppressedDestination",
         "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_PutSuppressedDestination.html",
         "permissionOnly": false,
-        "description": "Grants permission to add an email address to the suppression list",
+        "description": "Grants permission to add an email address to the suppression list for your account or tenant",
         "accessLevel": "Write",
         "resourceTypes": [
+          {
+            "resourceType": "tenant",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
           {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
-              "ses:ApiVersion"
+              "ses:ApiVersion",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PutTenantSuppressionAttributes",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_PutTenantSuppressionAttributes.html",
+        "permissionOnly": false,
+        "description": "Grants permission to change the settings for the tenant-level suppression list",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "tenant",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ses:ApiVersion",
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }

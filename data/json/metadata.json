@@ -9025,7 +9025,7 @@
       "name": "AWS Deadline Cloud",
       "servicePrefix": "deadline",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsdeadlinecloud.html",
-      "actionsCount": 117,
+      "actionsCount": 120,
       "actions": [
         "AssociateMemberToFarm",
         "AssociateMemberToFleet",
@@ -9063,6 +9063,7 @@
         "DeleteQueueFleetAssociation",
         "DeleteQueueLimitAssociation",
         "DeleteStorageProfile",
+        "DeleteVolume",
         "DeleteWorker",
         "DisassociateMemberFromFarm",
         "DisassociateMemberFromFleet",
@@ -9089,6 +9090,7 @@
         "GetStorageProfile",
         "GetStorageProfileForQueue",
         "GetTask",
+        "GetVolume",
         "GetWorker",
         "ListAvailableMeteredProducts",
         "ListBudgets",
@@ -9118,6 +9120,7 @@
         "ListStorageProfilesForQueue",
         "ListTagsForResource",
         "ListTasks",
+        "ListVolumes",
         "ListWorkers",
         "PutMeteredProduct",
         "SearchJobs",
@@ -9145,7 +9148,7 @@
         "UpdateWorker",
         "UpdateWorkerSchedule"
       ],
-      "resourceTypesCount": 8,
+      "resourceTypesCount": 9,
       "resourceTypes": [
         "budget",
         "farm",
@@ -9154,6 +9157,7 @@
         "license-endpoint",
         "monitor",
         "queue",
+        "volume",
         "worker"
       ],
       "conditionKeysCount": 12,
@@ -25695,7 +25699,7 @@
       "name": "Amazon Route 53 Resolver",
       "servicePrefix": "route53resolver",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonroute53resolver.html",
-      "actionsCount": 68,
+      "actionsCount": 69,
       "actions": [
         "AssociateFirewallRuleGroup",
         "AssociateResolverEndpointIpAddress",
@@ -25740,6 +25744,7 @@
         "ListFirewallDomains",
         "ListFirewallRuleGroupAssociations",
         "ListFirewallRuleGroups",
+        "ListFirewallRuleTypes",
         "ListFirewallRules",
         "ListOutpostResolvers",
         "ListResolverConfigs",
@@ -28532,7 +28537,7 @@
       "name": "Amazon Simple Email Service v2",
       "servicePrefix": "ses",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonsimpleemailservicev2.html",
-      "actionsCount": 111,
+      "actionsCount": 112,
       "actions": [
         "BatchGetMetricData",
         "CancelExportJob",
@@ -28630,6 +28635,7 @@
         "PutEmailIdentityFeedbackAttributes",
         "PutEmailIdentityMailFromAttributes",
         "PutSuppressedDestination",
+        "PutTenantSuppressionAttributes",
         "ReplicateEmailIdentityDkimSigningKey",
         "SendBulkEmail",
         "SendCustomVerificationEmail",

@@ -1,5 +1,24 @@
 [
   {
+    "dateOfChange": "2026-05-30",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Deadline Cloud": [
+        "deadline:DeleteVolume",
+        "deadline:GetVolume",
+        "deadline:ListVolumes"
+      ],
+      "Amazon Route 53 Resolver": [
+        "route53resolver:ListFirewallRuleTypes"
+      ],
+      "Amazon Simple Email Service v2": [
+        "ses:PutTenantSuppressionAttributes"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-05-29",
     "addedServices": [],
     "removedServices": [],
