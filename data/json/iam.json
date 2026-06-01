@@ -18049,6 +18049,21 @@
         ]
       },
       {
+        "name": "StartSnapshotGroupForMgn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/ug/mgn-apis.html",
+        "permissionOnly": true,
+        "description": "Grants permission to start snapshot group requests",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "StartTest",
         "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_StartTest.html",
         "permissionOnly": false,
