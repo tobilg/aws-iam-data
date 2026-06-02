@@ -337783,6 +337783,21 @@
         ]
       },
       {
+        "name": "CreateAgent",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateAgent.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agent",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateAnalysis",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateAnalysis.html",
         "permissionOnly": false,
@@ -337957,6 +337972,21 @@
         "resourceTypes": [
           {
             "resourceType": "extensionaccess",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateFlow",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateFlow.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a flow",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "flow",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -338160,6 +338190,21 @@
             "conditionKeys": [
               "quicksight:Group"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateSpace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateSpace.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -338397,6 +338442,21 @@
         ]
       },
       {
+        "name": "DeleteAgent",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteAgent.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agent",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteAnalysis",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteAnalysis.html",
         "permissionOnly": false,
@@ -338580,6 +338640,21 @@
         ]
       },
       {
+        "name": "DeleteFlow",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteFlow.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a flow",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "flow",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteFolder",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteFolder.html",
         "permissionOnly": false,
@@ -338749,6 +338824,21 @@
             "conditionKeys": [
               "quicksight:Group"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteSpace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteSpace.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -339013,8 +339103,8 @@
       },
       {
         "name": "DescribeAgent",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/user/iam-actions.html",
-        "permissionOnly": true,
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeAgent.html",
+        "permissionOnly": false,
         "description": "Grants permission to describe an agent",
         "accessLevel": "Read",
         "resourceTypes": [
@@ -339028,8 +339118,8 @@
       },
       {
         "name": "DescribeAgentPermissions",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/user/iam-actions.html",
-        "permissionOnly": true,
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeAgentPermissions.html",
+        "permissionOnly": false,
         "description": "Grants permission to describe agent's permissions",
         "accessLevel": "Read",
         "resourceTypes": [
@@ -339423,6 +339513,21 @@
         ]
       },
       {
+        "name": "DescribeFlow",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeFlow.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe a flow",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "flow",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DescribeFolder",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeFolder.html",
         "permissionOnly": false,
@@ -339668,6 +339773,36 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeSpace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeSpace.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe a space",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeSpacePermissions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeSpacePermissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe permissions for a space",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -340122,8 +340257,8 @@
       },
       {
         "name": "ListAgents",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/user/iam-actions.html",
-        "permissionOnly": true,
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListAgents.html",
+        "permissionOnly": false,
         "description": "Grants permission to list agents",
         "accessLevel": "List",
         "resourceTypes": [
@@ -340553,6 +340688,36 @@
           {
             "resourceType": "user",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListSpaceResources",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListSpaceResources.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list resources in a space",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListSpaces",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListSpaces.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list spaces",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -341040,8 +341205,8 @@
       },
       {
         "name": "SearchAgents",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/user/iam-actions.html",
-        "permissionOnly": true,
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_SearchAgents.html",
+        "permissionOnly": false,
         "description": "Grants permission to search agents",
         "accessLevel": "List",
         "resourceTypes": [
@@ -341168,6 +341333,21 @@
           {
             "resourceType": "group",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "SearchSpaces",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_SearchSpaces.html",
+        "permissionOnly": false,
+        "description": "Grants permission to search spaces",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -341644,9 +341824,24 @@
         ]
       },
       {
+        "name": "UpdateAgent",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateAgent.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agent",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateAgentPermissions",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/user/iam-actions.html",
-        "permissionOnly": true,
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateAgentPermissions.html",
+        "permissionOnly": false,
         "description": "Grants permission to update agent permissions",
         "accessLevel": "Permissions management",
         "resourceTypes": [
@@ -342005,6 +342200,21 @@
         ]
       },
       {
+        "name": "UpdateFlow",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateFlow.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a flow",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "flow",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateFlowPermissions",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateFlowPermissions.html",
         "permissionOnly": false,
@@ -342269,6 +342479,51 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateSpace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateSpace.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateSpacePermissions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateSpacePermissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update permissions for a space",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateSpaceResources",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateSpaceResources.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update resources in a space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -342671,7 +342926,7 @@
       },
       {
         "name": "agent",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/user/iam-actions.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_Agent.html",
         "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:agent/${ResourceId}",
         "conditionKeys": []
       },
@@ -342705,6 +342960,12 @@
         "name": "automationGroup",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_AutomationGroup.html",
         "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:automation-group/${ResourceId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "space",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_Space.html",
+        "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:space/${ResourceId}",
         "conditionKeys": []
       }
     ],
