@@ -182491,7 +182491,8 @@
               "elasticache:AuthTokenEnabled",
               "elasticache:SnapshotRetentionLimit",
               "elasticache:KmsKeyId",
-              "elasticache:CacheParameterGroupName"
+              "elasticache:CacheParameterGroupName",
+              "elasticache:Durability"
             ],
             "dependentActions": []
           },
@@ -183818,7 +183819,8 @@
               "elasticache:SnapshotRetentionLimit",
               "elasticache:CacheParameterGroupName",
               "elasticache:TransitEncryptionEnabled",
-              "elasticache:ClusterModeEnabled"
+              "elasticache:ClusterModeEnabled",
+              "elasticache:Durability"
             ],
             "dependentActions": [
               "ec2:CreateNetworkInterface",
@@ -378772,6 +378774,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "job",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "labeling-job",
             "required": false,
             "conditionKeys": [],
@@ -379124,6 +379132,38 @@
         ]
       },
       {
+        "name": "CallWithBearerToken",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CallWithBearerToken.html",
+        "permissionOnly": true,
+        "description": "Grants permission to use bearer token in SageMaker Job and Inference runtime endpoints APIs",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "sagemaker:BearerTokenType"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CompleteRollout",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CompleteRollout.html",
+        "permissionOnly": false,
+        "description": "Grants permission to mark a rollout as complete for a job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateAIBenchmarkJob",
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateAIBenchmarkJob.html",
         "permissionOnly": false,
@@ -379354,8 +379394,8 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
               "sagemaker:InterContainerTrafficEncryption",
-              "sagemaker:OutputKmsKey",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:VpcSubnets"
             ],
@@ -379386,8 +379426,8 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
               "sagemaker:InterContainerTrafficEncryption",
-              "sagemaker:OutputKmsKey",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:VpcSubnets"
             ],
@@ -379624,8 +379664,8 @@
               "sagemaker:InterContainerTrafficEncryption",
               "sagemaker:MaxRuntimeInSeconds",
               "sagemaker:NetworkIsolation",
-              "sagemaker:OutputKmsKey",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:VpcSubnets"
             ],
@@ -379687,8 +379727,8 @@
               "sagemaker:InstanceTypes",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:VpcSubnets",
-              "sagemaker:DomainSharingOutputKmsKey",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:DomainSharingOutputKmsKeyArn",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:ImageArns",
               "sagemaker:ImageVersionArns",
               "sagemaker:StudioLifecycleConfigArns"
@@ -379835,7 +379875,7 @@
               "sagemaker:AcceleratorTypes",
               "sagemaker:InstanceTypes",
               "sagemaker:ModelArn",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:ServerlessMaxConcurrency",
               "sagemaker:ServerlessMemorySize",
               "sagemaker:NetworkIsolation",
@@ -379894,8 +379934,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
-              "sagemaker:FeatureGroupOnlineStoreKmsKey",
-              "sagemaker:FeatureGroupOfflineStoreKmsKey",
+              "sagemaker:FeatureGroupOnlineStoreKmsKeyArn",
+              "sagemaker:FeatureGroupOfflineStoreKmsKeyArn",
               "sagemaker:FeatureGroupOfflineStoreS3Uri",
               "sagemaker:FeatureGroupEnableOnlineStore",
               "sagemaker:FeatureGroupOfflineStoreConfig",
@@ -380069,8 +380109,8 @@
               "sagemaker:InterContainerTrafficEncryption",
               "sagemaker:MaxRuntimeInSeconds",
               "sagemaker:NetworkIsolation",
-              "sagemaker:OutputKmsKey",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:VpcSubnets"
             ],
@@ -380208,6 +380248,36 @@
         ]
       },
       {
+        "name": "CreateJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a SageMaker model customization job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole",
+              "sagemaker:AddTags"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:VpcSecurityGroupIds",
+              "sagemaker:VpcSubnets"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateLabelingJob",
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateLabelingJob.html",
         "permissionOnly": false,
@@ -380229,8 +380299,8 @@
             "conditionKeys": [
               "sagemaker:WorkteamArn",
               "sagemaker:WorkteamType",
-              "sagemaker:VolumeKmsKey",
-              "sagemaker:OutputKmsKey",
+              "sagemaker:VolumeKmsKeyArn",
+              "sagemaker:OutputKmsKeyArn",
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
@@ -380367,8 +380437,8 @@
               "sagemaker:InterContainerTrafficEncryption",
               "sagemaker:MaxRuntimeInSeconds",
               "sagemaker:NetworkIsolation",
-              "sagemaker:OutputKmsKey",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:VpcSubnets"
             ],
@@ -380443,8 +380513,8 @@
               "sagemaker:InterContainerTrafficEncryption",
               "sagemaker:MaxRuntimeInSeconds",
               "sagemaker:NetworkIsolation",
-              "sagemaker:OutputKmsKey",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:VpcSubnets"
             ],
@@ -380538,8 +380608,8 @@
               "sagemaker:InterContainerTrafficEncryption",
               "sagemaker:MaxRuntimeInSeconds",
               "sagemaker:NetworkIsolation",
-              "sagemaker:OutputKmsKey",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:VpcSubnets"
             ],
@@ -380573,8 +380643,8 @@
               "sagemaker:InterContainerTrafficEncryption",
               "sagemaker:MaxRuntimeInSeconds",
               "sagemaker:NetworkIsolation",
-              "sagemaker:OutputKmsKey",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:VpcSubnets"
             ],
@@ -380610,7 +380680,7 @@
               "sagemaker:MinimumInstanceMetadataServiceVersion",
               "sagemaker:NotebookInstanceLifecycleConfigArns",
               "sagemaker:RootAccess",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:VpcSubnets"
             ],
@@ -380827,8 +380897,8 @@
               "sagemaker:InstanceTypes",
               "sagemaker:MaxRuntimeInSeconds",
               "sagemaker:NetworkIsolation",
-              "sagemaker:OutputKmsKey",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:VpcSubnets",
               "sagemaker:InterContainerTrafficEncryption"
@@ -381005,8 +381075,8 @@
               "sagemaker:InterContainerTrafficEncryption",
               "sagemaker:MaxRuntimeInSeconds",
               "sagemaker:NetworkIsolation",
-              "sagemaker:OutputKmsKey",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:VpcSubnets",
               "sagemaker:KeepAlivePeriod",
@@ -381067,8 +381137,8 @@
               "aws:TagKeys",
               "sagemaker:InstanceTypes",
               "sagemaker:ModelArn",
-              "sagemaker:OutputKmsKey",
-              "sagemaker:VolumeKmsKey"
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:VolumeKmsKeyArn"
             ],
             "dependentActions": []
           }
@@ -381156,7 +381226,7 @@
               "aws:TagKeys",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:InstanceTypes",
-              "sagemaker:DomainSharingOutputKmsKey",
+              "sagemaker:DomainSharingOutputKmsKeyArn",
               "sagemaker:ImageArns",
               "sagemaker:ImageVersionArns",
               "sagemaker:StudioLifecycleConfigArns"
@@ -381798,6 +381868,21 @@
         ]
       },
       {
+        "name": "DeleteJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a SageMaker model customization job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteLineageGroupPolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/Welcome.html",
         "permissionOnly": false,
@@ -382371,6 +382456,12 @@
           },
           {
             "resourceType": "inference-recommendations-job",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "job",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -383287,6 +383378,36 @@
           {
             "resourceType": "inference-recommendations-job",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to return information about a SageMaker model customization job",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeJobSchemaVersion",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeJobSchemaVersion.html",
+        "permissionOnly": false,
+        "description": "Grants permission to return information about a job schema version for a particular JobCategory for the CreateJob API",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -384813,6 +384934,36 @@
         ]
       },
       {
+        "name": "ListJobSchemaVersions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListJobSchemaVersions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list job schema versions for a particular JobCategory for the CreateJob API",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListJobs",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListJobs.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list SageMaker model customization jobs",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListLabelingJobs",
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListLabelingJobs.html",
         "permissionOnly": false,
@@ -385600,6 +385751,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "job",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "labeling-job",
             "required": false,
             "conditionKeys": [],
@@ -386049,6 +386206,36 @@
         ]
       },
       {
+        "name": "Sample",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Sample.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke a sample request against a job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "SampleWithResponseStream",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SampleWithResponseStream.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke a streaming sample request against a job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "Search",
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Search.html",
         "permissionOnly": false,
@@ -386430,6 +386617,21 @@
         "resourceTypes": [
           {
             "resourceType": "inference-recommendations-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StopJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to stop a SageMaker model customization job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "job",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -386841,7 +387043,7 @@
             "conditionKeys": [
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:InstanceTypes",
-              "sagemaker:DomainSharingOutputKmsKey",
+              "sagemaker:DomainSharingOutputKmsKeyArn",
               "sagemaker:ImageArns",
               "sagemaker:ImageVersionArns",
               "sagemaker:AppNetworkAccessType",
@@ -387191,8 +387393,8 @@
               "sagemaker:InstanceTypes",
               "sagemaker:MaxRuntimeInSeconds",
               "sagemaker:NetworkIsolation",
-              "sagemaker:OutputKmsKey",
-              "sagemaker:VolumeKmsKey",
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:VolumeKmsKeyArn",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:VpcSubnets",
               "sagemaker:InterContainerTrafficEncryption"
@@ -387338,6 +387540,21 @@
         ]
       },
       {
+        "name": "UpdateReward",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateReward.html",
+        "permissionOnly": false,
+        "description": "Grants permission to submit reward scores for a trajectory in a job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateSharedModel",
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/dg/canvas-collaborate-permissions.html",
         "permissionOnly": true,
@@ -387456,7 +387673,7 @@
               "sagemaker:InstanceTypes",
               "sagemaker:VpcSecurityGroupIds",
               "sagemaker:InstanceTypes",
-              "sagemaker:DomainSharingOutputKmsKey",
+              "sagemaker:DomainSharingOutputKmsKeyArn",
               "sagemaker:ImageArns",
               "sagemaker:ImageVersionArns",
               "sagemaker:StudioLifecycleConfigArns"
@@ -387750,6 +387967,15 @@
         "name": "processing-job",
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/dg/processing-job.html",
         "arnPattern": "arn:${Partition}:sagemaker:${Region}:${Account}:processing-job/${ProcessingJobName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "sagemaker:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "job",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/dg/how-it-works-training.html",
+        "arnPattern": "arn:${Partition}:sagemaker:${Region}:${Account}:job/${JobCategory}/${JobName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
           "sagemaker:ResourceTag/${TagKey}"
@@ -388163,6 +388389,12 @@
         "type": "String"
       },
       {
+        "name": "sagemaker:BearerTokenType",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
+        "description": "Filters access by the type of bearer token used in the request",
+        "type": "String"
+      },
+      {
         "name": "sagemaker:CurrentCustomerMetadataProperties/${MetadataKey}",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
         "description": "Filters access by a current metadata key and value pair associated with the model-package resource",
@@ -388213,7 +388445,13 @@
       {
         "name": "sagemaker:DomainSharingOutputKmsKey",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
-        "description": "Filters access by the Domain sharing output KMS key associated with the resource in the request",
+        "description": "Filters access by the Domain sharing output KMS key associated with the resource in the request. This key has been deprecated. It has been replaced by sagemaker:DomainSharingOutputKmsKeyArn",
+        "type": "ARN"
+      },
+      {
+        "name": "sagemaker:DomainSharingOutputKmsKeyArn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
+        "description": "Filters access by the Domain sharing output KMS key associated with the resource in the request. The ARN of the key-id must be used",
         "type": "ARN"
       },
       {
@@ -388243,7 +388481,13 @@
       {
         "name": "sagemaker:FeatureGroupOfflineStoreKmsKey",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
-        "description": "Filters access by the offline store kms key associated with the feature group resource in the request",
+        "description": "Filters access by the offline store kms key associated with the feature group resource in the request. This key has been deprecated. It has been replaced by sagemaker:FeatureGroupOfflineStoreKmsKeyArn",
+        "type": "ARN"
+      },
+      {
+        "name": "sagemaker:FeatureGroupOfflineStoreKmsKeyArn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
+        "description": "Filters access by the offline store kms key associated with the feature group resource in the request. The ARN of the key-id must be used",
         "type": "ARN"
       },
       {
@@ -388255,7 +388499,13 @@
       {
         "name": "sagemaker:FeatureGroupOnlineStoreKmsKey",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
-        "description": "Filters access by the online store kms key associated with the feature group resource in the request",
+        "description": "Filters access by the online store kms key associated with the feature group resource in the request. This key has been deprecated. It has been replaced by sagemaker:FeatureGroupOnlineStoreKmsKeyArn",
+        "type": "ARN"
+      },
+      {
+        "name": "sagemaker:FeatureGroupOnlineStoreKmsKeyArn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
+        "description": "Filters access by the online store kms key associated with the feature group resource in the request. The ARN of the key-id must be used",
         "type": "ARN"
       },
       {
@@ -388285,7 +388535,7 @@
       {
         "name": "sagemaker:HomeEfsFileSystemKmsKey",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
-        "description": "Filters access by a key that is present in the request the user makes to the SageMaker service. This key is deprecated. It has been replaced by sagemaker:VolumeKmsKey",
+        "description": "Filters access by a key that is present in the request the user makes to the SageMaker service. This key has been deprecated. It has been replaced by sagemaker:VolumeKmsKeyArn",
         "type": "ARN"
       },
       {
@@ -388369,7 +388619,13 @@
       {
         "name": "sagemaker:OutputKmsKey",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
-        "description": "Filters access by the output kms key associated with the resource in the request",
+        "description": "Filters access by the output kms key associated with the resource in the request. This key has been deprecated. It has been replaced by sagemaker:OutputKmsKeyArn",
+        "type": "ARN"
+      },
+      {
+        "name": "sagemaker:OutputKmsKeyArn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
+        "description": "Filters access by the output kms key associated with the resource in the request. The ARN of the key-id must be used",
         "type": "ARN"
       },
       {
@@ -388459,7 +388715,13 @@
       {
         "name": "sagemaker:VolumeKmsKey",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
-        "description": "Filters access by the volume kms key associated with the resource in the request",
+        "description": "Filters access by the volume kms key associated with the resource in the request. This key has been deprecated. It has been replaced by sagemaker:VolumeKmsKeyArn",
+        "type": "ARN"
+      },
+      {
+        "name": "sagemaker:VolumeKmsKeyArn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/list_amazonsagemaker.html#amazonsagemaker-policy-keys",
+        "description": "Filters access by the volume kms key associated with the resource in the request. The ARN of the key-id must be used",
         "type": "ARN"
       },
       {
@@ -429310,6 +429572,21 @@
     "servicePrefix": "transform",
     "actions": [
       {
+        "name": "AccessTransformProfile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/security_iam_permissions.html",
+        "permissionOnly": true,
+        "description": "Grants permission to invoke AccessTransformProfile on AWS Transform",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "profile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "AssociateConnectorResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/security_iam_permissions.html",
         "permissionOnly": true,
@@ -429320,6 +429597,14 @@
             "resourceType": "connector",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -429365,6 +429650,14 @@
             "resourceType": "connector",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -429441,6 +429734,14 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -429484,7 +429785,9 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -429545,6 +429848,14 @@
             "resourceType": "connector",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -429653,7 +429964,9 @@
         "name": "connector",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/security_iam_permissions.html",
         "arnPattern": "arn:${Partition}:transform:${Region}:${Account}:connector/${WorkspaceId}/${ConnectorId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -429661,6 +429974,12 @@
         "name": "aws:RequestTag/${TagKey}",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
         "description": "Filters access by the tags that are passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "description": "Filters access by the tags associated with the resource",
         "type": "String"
       },
       {

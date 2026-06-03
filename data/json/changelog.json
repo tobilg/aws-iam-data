@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2026-06-03",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon SageMaker": [
+        "sagemaker:CallWithBearerToken",
+        "sagemaker:CompleteRollout",
+        "sagemaker:CreateJob",
+        "sagemaker:DeleteJob",
+        "sagemaker:DescribeJob",
+        "sagemaker:DescribeJobSchemaVersion",
+        "sagemaker:ListJobSchemaVersions",
+        "sagemaker:ListJobs",
+        "sagemaker:Sample",
+        "sagemaker:SampleWithResponseStream",
+        "sagemaker:StopJob",
+        "sagemaker:UpdateReward"
+      ],
+      "AWS Transform": [
+        "transform:AccessTransformProfile"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-06-02",
     "addedServices": [],
     "removedServices": [],
