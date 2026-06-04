@@ -109432,6 +109432,21 @@
         ]
       },
       {
+        "name": "GetDomainAnalytics",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_GetDomainAnalytics.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve aggregated analytics for a domain",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Domain",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetIntegration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/userguide/patient-engagement-overview.html",
         "permissionOnly": true,
@@ -109722,6 +109737,21 @@
           },
           {
             "resourceType": "Integration",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListSessionRecords",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_ListSessionRecords.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list session records for a domain",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Domain",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -128358,6 +128388,36 @@
         ]
       },
       {
+        "name": "CreateAsset",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_CreateAsset.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an asset",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateAssetFile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_CreateAssetFile.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an asset file",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateBacklogTask",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_CreateBacklogTask.html",
         "permissionOnly": false,
@@ -128461,6 +128521,36 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteAsset",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_DeleteAsset.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an asset",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteAssetFile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_DeleteAssetFile.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an asset file",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -128699,6 +128789,51 @@
         ]
       },
       {
+        "name": "GetAsset",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetAsset.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get an asset",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetAssetContent",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetAssetContent.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get asset content",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetAssetFile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetAssetFile.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get an asset file",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetAssociation",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetAssociation.html",
         "permissionOnly": false,
@@ -128827,6 +128962,66 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAssetFiles",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListAssetFiles.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list asset files",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAssetTypes",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListAssetTypes.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list asset types",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAssetVersions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListAssetVersions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list asset versions",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAssets",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListAssets.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list assets",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -129248,6 +129443,36 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateAsset",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_UpdateAsset.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an asset",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateAssetFile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_UpdateAssetFile.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an asset file",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -200598,6 +200823,705 @@
     ]
   },
   {
+    "name": "AWS FinOps Agent",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsfinopsagent.html",
+    "servicePrefix": "finops-agent",
+    "actions": [
+      {
+        "name": "AcceptAgentRequest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to accept a pending approval request from the agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CancelTask",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to cancel a task",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CancelTurn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to cancel an in-progress conversation turn",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateAgentSpace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to create a new FinOps Agent workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateAutomation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to create a reusable automation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to create a connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateConversation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to create a new conversation with the FinOps Agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateDocument",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to create a document",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateIntegration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to create a third-party integration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateOneTimeLoginSession",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to create a one-time login session for the FinOps Agent web application",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateTask",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to create a task",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateTurn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to create a new turn in a conversation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteAgentSpace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to delete a FinOps Agent workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteArtifact",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to delete an artifact and its content",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteAutomation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to delete an automation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to delete a connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteDocument",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to delete a document",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteIntegration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to delete a third-party integration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetAgentRequest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to view details of a pending approval request from the agent",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetAgentSpace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to view details of a FinOps Agent workspace",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetArtifactContent",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to download artifact content",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetArtifactMetadata",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to view artifact metadata",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetAutomation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to view details of an automation",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to view details of a connection",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetDocumentContent",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to download document content",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetDocumentMetadata",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to view document metadata",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetIntegration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to view details of a third-party integration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetTask",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to view details of a task",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetTurn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to view details of a conversation turn",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAgentSpaces",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to list all FinOps Agent workspaces in the account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListArtifacts",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to list artifacts",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAutomations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to list automations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListConnections",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to list connections",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListConversations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to list conversations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListDocuments",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to list documents",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListIntegrations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to list third-party integrations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListRecords",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to list records for real-time agent activity display",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListTasks",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to list tasks",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListTurns",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to list turns in a conversation",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "RejectAgentRequest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to reject a pending approval request from the agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "RestoreDocument",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to restore an archived document",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "SendFeedback",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to submit feedback on agent responses",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateAgentSpace",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to update a FinOps Agent workspace configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateAutomation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to update an automation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to update a connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateDocument",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/finops-agent/",
+        "permissionOnly": true,
+        "description": "Grants permission to update a document's content and metadata",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      }
+    ],
+    "resourceTypes": [],
+    "conditionKeys": []
+  },
+  {
     "name": "Amazon FinSpace",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonfinspace.html",
     "servicePrefix": "finspace",
@@ -244101,6 +245025,14 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "iot:IncludeSocketInformation"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -247073,8 +248005,8 @@
       {
         "name": "iot:IncludeSocketInformation",
         "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsiot.html",
-        "description": "Filters access by GetConnection includeSocketInformation request parameter",
-        "type": "String"
+        "description": "Filters access by GetConnection and GetThingConnectivityData includeSocketInformation request parameter",
+        "type": "Bool"
       },
       {
         "name": "iot:ThingGroupArn",
@@ -337632,6 +338564,21 @@
         ]
       },
       {
+        "name": "BatchDeleteKnowledgeBase",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_BatchDeleteKnowledgeBase.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete one or more knowledge bases",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "knowledgeBase",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "BatchDeleteTopicReviewedAnswer",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_BatchDeleteTopicReviewedAnswer.html",
         "permissionOnly": false,
@@ -338146,6 +339093,33 @@
             "dependentActions": [
               "ds:CreateIdentityPoolDirectory"
             ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateOAuthClientApplication",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateOAuthClientApplication.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an OAuth client application",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -338767,6 +339741,21 @@
         ]
       },
       {
+        "name": "DeleteKnowledgeBase",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteKnowledgeBase.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a knowledge base",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "knowledgeBase",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteNamespace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteNamespace.html",
         "permissionOnly": false,
@@ -338780,6 +339769,30 @@
             "dependentActions": [
               "ds:DeleteDirectory"
             ]
+          }
+        ]
+      },
+      {
+        "name": "DeleteOAuthClientApplication",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteOAuthClientApplication.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an OAuth client application",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "oauthClientApplication",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -339676,6 +340689,36 @@
         ]
       },
       {
+        "name": "DescribeKnowledgeBase",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeKnowledgeBase.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe a knowledge base",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "knowledgeBase",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeKnowledgeBasePermissions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeKnowledgeBasePermissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe the resource policy of a knowledge base",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "knowledgeBase",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DescribeNamespace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeNamespace.html",
         "permissionOnly": false,
@@ -339686,6 +340729,30 @@
             "resourceType": "namespace",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeOAuthClientApplication",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeOAuthClientApplication.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe an OAuth client application",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "oauthClientApplication",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -340636,6 +341703,21 @@
         ]
       },
       {
+        "name": "ListKnowledgeBases",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListKnowledgeBases.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all knowledge bases in an account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListNamespaces",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListNamespaces.html",
         "permissionOnly": false,
@@ -340646,6 +341728,24 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListOAuthClientApplications",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListOAuthClientApplications.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list OAuth client applications in an account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -340799,6 +341899,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "namespace",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "oauthClientApplication",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "template",
             "required": false,
             "conditionKeys": [],
@@ -340812,6 +341924,12 @@
           },
           {
             "resourceType": "topic",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "user",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -340996,6 +342114,21 @@
         ]
       },
       {
+        "name": "ListUsersIndexCapacity",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/user/iam-actions.html",
+        "permissionOnly": true,
+        "description": "Grants permission to list users index capacity",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListVPCConnections",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListVPCConnections.html",
         "permissionOnly": false,
@@ -341140,6 +342273,15 @@
             "conditionKeys": [
               "quicksight:IamArn",
               "quicksight:SessionName"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
             ],
             "dependentActions": []
           }
@@ -341334,6 +342476,21 @@
         "resourceTypes": [
           {
             "resourceType": "group",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "SearchKnowledgeBases",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_SearchKnowledgeBases.html",
+        "permissionOnly": false,
+        "description": "Grants permission to search for a sub-set of knowledge bases",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "knowledgeBase",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -341573,6 +342730,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "namespace",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "oauthClientApplication",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "template",
             "required": false,
             "conditionKeys": [],
@@ -341586,6 +342755,12 @@
           },
           {
             "resourceType": "topic",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "user",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -341717,6 +342892,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "namespace",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "oauthClientApplication",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "template",
             "required": false,
             "conditionKeys": [],
@@ -341730,6 +342917,12 @@
           },
           {
             "resourceType": "topic",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "user",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -342337,6 +343530,45 @@
         ]
       },
       {
+        "name": "UpdateKnowledgeBasePermissions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateKnowledgeBasePermissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update the resource policy of a knowledge base",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "knowledgeBase",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateOAuthClientApplication",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateOAuthClientApplication.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an OAuth client application",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "oauthClientApplication",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdatePublicSharingSettings",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdatePublicSharingSettings.html",
         "permissionOnly": false,
@@ -342760,7 +343992,9 @@
         "name": "user",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_User.html",
         "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:user/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "group",
@@ -342796,6 +344030,14 @@
         "name": "vpcconnection",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_VPCConnection.html",
         "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:vpcConnection/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "oauthClientApplication",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_OAuthClientApplication.html",
+        "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:oauthClientApplication/${ResourceId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -342868,7 +344110,9 @@
         "name": "namespace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_NamespaceInfoV2.html",
         "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:namespace/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "folder",
@@ -342928,7 +344172,7 @@
       },
       {
         "name": "agent",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_Agent.html",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/user/iam-actions.html",
         "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:agent/${ResourceId}",
         "conditionKeys": []
       },
@@ -342965,9 +344209,23 @@
         "conditionKeys": []
       },
       {
+        "name": "knowledgeBase",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_KnowledgeBase.html",
+        "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:knowledge-base/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "space",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_Space.html",
         "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:space/${ResourceId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "approvalPolicy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ApprovalPolicy.html",
+        "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:approval-policy/${ResourceId}",
         "conditionKeys": []
       }
     ],
@@ -391479,6 +392737,40 @@
         ]
       },
       {
+        "name": "BatchDeleteThreatModels",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchDeleteThreatModels.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete multiple threat models in a single request",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "BatchDeleteThreats",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchDeleteThreats.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete multiple threats",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
         "name": "BatchGetAgentSpaces",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetAgentSpaces.html",
         "permissionOnly": false,
@@ -391662,6 +392954,74 @@
         ]
       },
       {
+        "name": "BatchGetThreatModelJobTasks",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetThreatModelJobTasks.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve multiple tasks for a threat model job in a single request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "BatchGetThreatModelJobs",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetThreatModelJobs.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details for one or more threat model jobs",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "BatchGetThreatModels",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetThreatModels.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve multiple threat models in a single request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "BatchGetThreats",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetThreats.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details for one or more threats",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
         "name": "CreateAgentSpace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_CreateAgentSpace.html",
         "permissionOnly": false,
@@ -391829,6 +393189,40 @@
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateThreat",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_CreateThreat.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a threat in a threat model",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CreateThreatModel",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_CreateThreatModel.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new threat model configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
@@ -392415,6 +393809,74 @@
         ]
       },
       {
+        "name": "ListThreatModelJobTasks",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListThreatModelJobTasks.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list tasks associated with a specific threat model job",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ListThreatModelJobs",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListThreatModelJobs.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list threat model jobs for a threat model",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ListThreatModels",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListThreatModels.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list threat models for an agent space",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "ListThreats",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListThreats.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list threats for a threat model job with filtering and pagination support",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
         "name": "PutDesignReviewFeedback",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_PutDesignReviewFeedback.html",
         "permissionOnly": false,
@@ -392484,6 +393946,24 @@
         ]
       },
       {
+        "name": "StartThreatModelJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_StartThreatModelJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to initiate the execution of a threat model job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt",
+              "kms:GenerateDataKey"
+            ]
+          }
+        ]
+      },
+      {
         "name": "StopCodeReviewJob",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_StopCodeReviewJob.html",
         "permissionOnly": false,
@@ -392505,6 +393985,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_StopPentestJob.html",
         "permissionOnly": false,
         "description": "Grants permission to stop the execution of a running penetration test",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "StopThreatModelJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_StopThreatModelJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to stop a running threat model job",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -392755,6 +394252,40 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateThreat",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateThreat.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a threat",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "UpdateThreatModel",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateThreatModel.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an existing threat model with new configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt"
+            ]
           }
         ]
       },
