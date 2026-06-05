@@ -1,5 +1,25 @@
 [
   {
+    "dateOfChange": "2026-06-05",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Cognito User Pools": [
+        "cognito-idp:CreateUserPoolReplica",
+        "cognito-idp:DeleteUserPoolReplica",
+        "cognito-idp:ListUserPoolReplicas",
+        "cognito-idp:UpdateUserPoolReplica"
+      ],
+      "AWS Glue": [
+        "glue:GetSessionEndpoint"
+      ],
+      "Amazon Interactive Video Service": [
+        "ivs:UpdateAdConfiguration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-06-04",
     "addedServices": [
       "AWS FinOps Agent"

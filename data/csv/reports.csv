@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,11600
-Actions by type,Read Actions,5612
-Actions by type,List Actions,3533
+Actions by type,Write Actions,11604
+Actions by type,Read Actions,5613
+Actions by type,List Actions,3534
 Actions by type,Permissions Actions,402
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication,69
@@ -37,7 +37,7 @@ Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Ac
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},122
 Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},115
 Most referenced resource ARNs,domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName},105
-Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},95
+Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},99
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},93
 Most referenced resource ARNs,bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId},88
 Most referenced resource ARNs,repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName},81
@@ -57,8 +57,8 @@ Services with most actions,Amazon EC2,780
 Services with most actions,Amazon SageMaker,442
 Services with most actions,Amazon Connect,363
 Services with most actions,Amazon Chime,316
+Services with most actions,AWS Glue,303
 Services with most actions,Amazon QuickSight,303
-Services with most actions,AWS Glue,302
 Services with most actions,AWS IoT,293
 Services with most actions,Amazon Bedrock,245
 Services with most actions,Amazon DataZone,230

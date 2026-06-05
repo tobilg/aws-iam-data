@@ -89036,6 +89036,21 @@
         ]
       },
       {
+        "name": "CreateUserPoolReplica",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_CreateUserPoolReplica.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a replica of a user pool",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteGroup",
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DeleteGroup.html",
         "permissionOnly": false,
@@ -89190,6 +89205,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DeleteUserPoolDomain.html",
         "permissionOnly": false,
         "description": "Grants permission to delete any user pool domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteUserPoolReplica",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DeleteUserPoolReplica.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a replica of a user pool",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -89756,6 +89786,21 @@
         ]
       },
       {
+        "name": "ListUserPoolReplicas",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ListUserPoolReplicas.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list replicas of a user pool",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListUserPools",
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ListUserPools.html",
         "permissionOnly": false,
@@ -90191,6 +90236,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPoolDomain.html",
         "permissionOnly": false,
         "description": "Grants permission to replace the certificate for any custom domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateUserPoolReplica",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_UpdateUserPoolReplica.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a replica of a user pool",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -216356,6 +216416,21 @@
         ]
       },
       {
+        "name": "GetSessionEndpoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-interactive-sessions.html#aws-glue-interactive-sessions-GetSessionEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an interactive session endpoint",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "session",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetStage",
         "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/monitor-spark-ui.html",
         "permissionOnly": false,
@@ -219405,13 +219480,17 @@
         "name": "table",
         "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/glue-specifying-resource-arns.html",
         "arnPattern": "arn:${Partition}:glue:${Region}:${Account}:table/${DatabaseName}/${TableName}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "tableversion",
         "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/glue-specifying-resource-arns.html",
         "arnPattern": "arn:${Partition}:glue:${Region}:${Account}:tableVersion/${DatabaseName}/${TableName}/${TableVersionName}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "connection",
@@ -219425,7 +219504,9 @@
         "name": "userdefinedfunction",
         "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/glue-specifying-resource-arns.html",
         "arnPattern": "arn:${Partition}:glue:${Region}:${Account}:userDefinedFunction/${DatabaseName}/${UserDefinedFunctionName}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "devendpoint",
@@ -241004,6 +241085,21 @@
             "conditionKeys": [
               "aws:TagKeys"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateAdConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_UpdateAdConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an ad configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
