@@ -39544,6 +39544,27 @@
         ]
       },
       {
+        "name": "InvokeAgentRuntimeCommandShell",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_InvokeAgentRuntimeCommandShell.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke a command shell on an agent runtime endpoint over a web socket stream",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runtime",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "runtime-endpoint",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "InvokeAgentRuntimeForUser",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_InvokeAgentRuntime.html",
         "permissionOnly": false,
@@ -292456,6 +292477,30 @@
         ]
       },
       {
+        "name": "CreateVerificationEvidence",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new verification evidence resource for BusinessVerification",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "VerificationEvidence",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteResourcePolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_DeleteResourcePolicy.html",
         "permissionOnly": false,
@@ -292554,6 +292599,38 @@
         "resourceTypes": [
           {
             "resourceType": "Entity",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetVerification",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the detailed status of a specific verification process, including PSP validation results",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-marketplace:VerificationType"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetVerificationEvidence",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the complete content of a specific verification evidence resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "VerificationEvidence",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -292680,6 +292757,44 @@
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "VerificationEvidence",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListVerificationEvidence",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list verification evidence resources with summary metadata",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListVerifications",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all verification statuses across jurisdictions and verification types",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-marketplace:VerificationType"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -292749,6 +292864,29 @@
         ]
       },
       {
+        "name": "StartVerification",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to submit verification evidence to a Payment Service Provider and enable data sharing for a specified jurisdiction",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "VerificationEvidence",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-marketplace:VerificationType"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "TagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_TagResource.html",
         "permissionOnly": false,
@@ -292775,6 +292913,12 @@
           },
           {
             "resourceType": "IssuedTaxInvoice",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "VerificationEvidence",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -292822,11 +292966,32 @@
             "dependentActions": []
           },
           {
+            "resourceType": "VerificationEvidence",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
               "aws:TagKeys"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateVerificationEvidence",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an existing verification evidence resource using full replacement semantics",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "VerificationEvidence",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -292872,6 +293037,14 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
+      },
+      {
+        "name": "VerificationEvidence",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "arnPattern": "arn:${Partition}:aws-marketplace:${Region}:${Account}:verification-type/${VerificationType}/verification-evidence/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -292879,6 +293052,12 @@
         "name": "aws-marketplace:Intent",
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/api-access-control.html",
         "description": "Filters access by the Intent parameter in the StartChangeSet request",
+        "type": "String"
+      },
+      {
+        "name": "aws-marketplace:VerificationType",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/compliance-api-access-control.html",
+        "description": "Filters access by the verification type for verification process operations (StartVerification, GetVerification, ListVerifications). Valid values: BusinessVerification",
         "type": "String"
       },
       {
@@ -431623,6 +431802,36 @@
     "servicePrefix": "transform-custom",
     "actions": [
       {
+        "name": "BatchCreateFindings",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke BatchCreateFindings on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "BatchUpdateFindings",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke BatchUpdateFindings on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CompleteTransformationPackageUpload",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
         "permissionOnly": false,
@@ -431661,6 +431870,31 @@
         ]
       },
       {
+        "name": "CreateAnalysis",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke CreateAnalysis on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "analysis",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateCampaign",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
         "permissionOnly": false,
@@ -431669,6 +431903,81 @@
         "resourceTypes": [
           {
             "resourceType": "campaign",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateRemediation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke CreateRemediation on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "remediation",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateRepository",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke CreateRepository on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "repository",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateSource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke CreateSource on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "source",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -431711,6 +432020,29 @@
         ]
       },
       {
+        "name": "DeleteAnalysis",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke DeleteAnalysis on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "analysis",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteCampaign",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
         "permissionOnly": false,
@@ -431734,6 +432066,29 @@
         ]
       },
       {
+        "name": "DeleteFinding",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke DeleteFinding on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "finding",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteKnowledgeItem",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
         "permissionOnly": false,
@@ -431742,6 +432097,75 @@
         "resourceTypes": [
           {
             "resourceType": "knowledge-item",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteRemediation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke DeleteRemediation on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "remediation",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteRepository",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke DeleteRepository on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "repository",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteSource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke DeleteSource on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "source",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -431803,6 +432227,29 @@
         ]
       },
       {
+        "name": "GetAnalysis",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke GetAnalysis on AWS Transform custom",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "analysis",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetCampaign",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
         "permissionOnly": false,
@@ -431826,6 +432273,44 @@
         ]
       },
       {
+        "name": "GetFinding",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke GetFinding on AWS Transform custom",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "finding",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetFindingGroups",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke GetFindingGroups on AWS Transform custom",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetKnowledgeItem",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
         "permissionOnly": false,
@@ -431834,6 +432319,75 @@
         "resourceTypes": [
           {
             "resourceType": "knowledge-item",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetRemediation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke GetRemediation on AWS Transform custom",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "remediation",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetRepository",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke GetRepository on AWS Transform custom",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "repository",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetSource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke GetSource on AWS Transform custom",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "source",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -431867,6 +432421,21 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAnalyses",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke ListAnalyses on AWS Transform custom",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -431910,10 +432479,70 @@
         ]
       },
       {
+        "name": "ListFindings",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke ListFindings on AWS Transform custom",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListKnowledgeItems",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
         "permissionOnly": false,
         "description": "Grants permission to invoke ListKnowledgeItems on AWS Transform custom",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListRemediations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke ListRemediations on AWS Transform custom",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListRepositories",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke ListRepositories on AWS Transform custom",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListSources",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke ListSources on AWS Transform custom",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -431955,6 +432584,52 @@
         ]
       },
       {
+        "name": "ListTransformationPackageShares",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list active shares of a Transformation Package",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "package",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ShareTransformationPackage",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to share a Transformation Package with another AWS account or AWS Organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "package",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "TagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
         "permissionOnly": false,
@@ -431962,7 +432637,19 @@
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
+            "resourceType": "analysis",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "campaign",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "finding",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -431975,6 +432662,24 @@
           },
           {
             "resourceType": "package",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "remediation",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "repository",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "source",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -431992,6 +432697,29 @@
         ]
       },
       {
+        "name": "UnshareTransformationPackage",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to revoke an existing share of a Transformation Package",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "package",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UntagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
         "permissionOnly": false,
@@ -431999,7 +432727,19 @@
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
+            "resourceType": "analysis",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "campaign",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "finding",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -432017,10 +432757,51 @@
             "dependentActions": []
           },
           {
+            "resourceType": "remediation",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "repository",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "source",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
               "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateAnalysis",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke UpdateAnalysis on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "analysis",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -432117,13 +432898,98 @@
             "dependentActions": []
           }
         ]
+      },
+      {
+        "name": "UpdateRemediation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke UpdateRemediation on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "remediation",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateRepository",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke UpdateRepository on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "repository",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateSource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke UpdateSource on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "source",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
       }
     ],
     "resourceTypes": [
       {
+        "name": "analysis",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "arnPattern": "arn:${Partition}:transform-custom:${Region}:${Account}:analysis/${AnalysisId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "campaign",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
         "arnPattern": "arn:${Partition}:transform-custom:${Region}:${Account}:campaign/${Name}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "finding",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "arnPattern": "arn:${Partition}:transform-custom:${Region}:${Account}:finding/${FindingId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -432140,6 +433006,30 @@
         "name": "package",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
         "arnPattern": "arn:${Partition}:transform-custom:${Region}:${Account}:package/${Name}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "remediation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "arnPattern": "arn:${Partition}:transform-custom:${Region}:${Account}:remediation/${RemediationId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "repository",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "arnPattern": "arn:${Partition}:transform-custom:${Region}:${Account}:repository/${RepositoryId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "source",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "arnPattern": "arn:${Partition}:transform-custom:${Region}:${Account}:source/${Name}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
