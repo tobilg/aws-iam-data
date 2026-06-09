@@ -136509,6 +136509,33 @@
         ]
       },
       {
+        "name": "AcceptTransitGatewayClientVpnAttachment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AcceptTransitGatewayClientVpnAttachment.html",
+        "permissionOnly": false,
+        "description": "Grants permission to accept a transit gateway attachment request for a Client VPN endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "transit-gateway-attachment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:ResourceTag/${TagKey}",
+              "ec2:transitGatewayAttachmentId"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "AcceptTransitGatewayMulticastDomainAssociations",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AcceptTransitGatewayMulticastDomainAssociations.html",
         "permissionOnly": false,
@@ -136776,6 +136803,17 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "ec2:CreateTags"
+            ]
+          },
+          {
+            "resourceType": "ipam-pool-allocation",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
             ],
             "dependentActions": []
           },
@@ -137067,7 +137105,7 @@
           },
           {
             "resourceType": "subnet",
-            "required": true,
+            "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ec2:AvailabilityZoneId",
@@ -138248,6 +138286,15 @@
             "dependentActions": []
           },
           {
+            "resourceType": "capacity-reservation-cancellation-quote",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
@@ -138769,6 +138816,34 @@
         ]
       },
       {
+        "name": "CreateCapacityReservationCancellationQuote",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateCapacityReservationCancellationQuote.html",
+        "permissionOnly": false,
+        "description": "Grants permission to generate a cancellation quote for a future-dated Capacity Reservation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "capacity-reservation-cancellation-quote",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "ec2:CreateTags"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateCapacityReservationFleet",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateCapacityReservationFleet.html",
         "permissionOnly": false,
@@ -138873,6 +138948,16 @@
             "dependentActions": []
           },
           {
+            "resourceType": "transit-gateway",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:ResourceTag/${TagKey}",
+              "ec2:transitGatewayId"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "vpc",
             "required": false,
             "conditionKeys": [
@@ -138916,7 +139001,7 @@
           },
           {
             "resourceType": "subnet",
-            "required": true,
+            "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ec2:AvailabilityZoneId",
@@ -141722,6 +141807,17 @@
             "dependentActions": []
           },
           {
+            "resourceType": "capacity-reservation-cancellation-quote",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "capacity-reservation-fleet",
             "required": false,
             "conditionKeys": [
@@ -142066,6 +142162,17 @@
           },
           {
             "resourceType": "ipam-pool",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ipam-pool-allocation",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -146139,6 +146246,17 @@
             "dependentActions": []
           },
           {
+            "resourceType": "capacity-reservation-cancellation-quote",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "capacity-reservation-fleet",
             "required": false,
             "conditionKeys": [
@@ -146437,6 +146555,17 @@
           },
           {
             "resourceType": "ipam-pool",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ipam-pool-allocation",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -147365,6 +147494,33 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ResourceTag/${TagKey}",
               "ec2:transitGatewayId"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteTransitGatewayClientVpnAttachment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteTransitGatewayClientVpnAttachment.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a transit gateway attachment for a Client VPN endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "transit-gateway-attachment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:ResourceTag/${TagKey}",
+              "ec2:transitGatewayAttachmentId"
             ],
             "dependentActions": []
           },
@@ -148682,6 +148838,23 @@
         ]
       },
       {
+        "name": "DescribeCapacityReservationCancellationQuotes",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeCapacityReservationCancellationQuotes.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe one or more Capacity Reservation cancellation quotes",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DescribeCapacityReservationFleets",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeCapacityReservationFleets.html",
         "permissionOnly": false,
@@ -149762,6 +149935,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeIpamPolicies.html",
         "permissionOnly": false,
         "description": "Grants permission to describe Amazon VPC IP Address Manager (IPAM) policies",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeIpamPoolAllocations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeIpamPoolAllocations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe IPAM pool allocations",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -154371,6 +154561,23 @@
         ]
       },
       {
+        "name": "GetCapacityManagerMonitoredTagKeys",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetCapacityManagerMonitoredTagKeys.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the tag keys that are currently being monitored by EC2 Capacity Manager",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetCapacityReservationUsage",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetCapacityReservationUsage.html",
         "permissionOnly": false,
@@ -155257,6 +155464,23 @@
             ],
             "dependentActions": []
           },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetManagedResourceVisibility",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetManagedResourceVisibility.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the managed resource visibility configuration for the account",
+        "accessLevel": "List",
+        "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
@@ -156581,6 +156805,16 @@
             "dependentActions": []
           },
           {
+            "resourceType": "transit-gateway",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:ResourceTag/${TagKey}",
+              "ec2:transitGatewayId"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "vpc",
             "required": false,
             "conditionKeys": [
@@ -157483,6 +157717,34 @@
         ]
       },
       {
+        "name": "ModifyIpamPoolAllocation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyIpamPoolAllocation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to modify the description of an IPAM pool allocation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam-pool-allocation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Attribute",
+              "ec2:Attribute/${AttributeName}",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ModifyIpamPrefixListResolver",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyIpamPrefixListResolver.html",
         "permissionOnly": false,
@@ -157738,6 +158000,23 @@
             ],
             "dependentActions": []
           },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ModifyManagedResourceVisibility",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyManagedResourceVisibility.html",
+        "permissionOnly": false,
+        "description": "Grants permission to modify the managed resource visibility configuration for the account",
+        "accessLevel": "Write",
+        "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
@@ -159985,6 +160264,33 @@
         ]
       },
       {
+        "name": "RejectTransitGatewayClientVpnAttachment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RejectTransitGatewayClientVpnAttachment.html",
+        "permissionOnly": false,
+        "description": "Grants permission to reject a transit gateway attachment request for a Client VPN endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "transit-gateway-attachment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:ResourceTag/${TagKey}",
+              "ec2:transitGatewayAttachmentId"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "RejectTransitGatewayMulticastDomainAssociations",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_RejectTransitGatewayMulticastDomainAssociations.html",
         "permissionOnly": false,
@@ -162137,6 +162443,23 @@
         ]
       },
       {
+        "name": "UpdateCapacityManagerMonitoredTagKeys",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_UpdateCapacityManagerMonitoredTagKeys.html",
+        "permissionOnly": false,
+        "description": "Grants permission to activate or deactivate tag keys for monitoring by EC2 Capacity Manager",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateCapacityManagerOrganizationsAccess",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_UpdateCapacityManagerOrganizationsAccess.html",
         "permissionOnly": false,
@@ -162305,6 +162628,20 @@
         "name": "capacity-manager-data-export",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policies-for-amazon-ec2.html#EC2_ARN_Format",
         "arnPattern": "arn:${Partition}:ec2:${Region}:${Account}:capacity-manager-data-export/${CapacityManagerDataExportId}",
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys",
+          "ec2:Attribute",
+          "ec2:Attribute/${AttributeName}",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "capacity-reservation-cancellation-quote",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policies-for-amazon-ec2.html#EC2_ARN_Format",
+        "arnPattern": "arn:${Partition}:ec2:${Region}:${Account}:capacity-reservation-cancellation-quote/${CapacityReservationCancellationQuoteId}",
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -162731,6 +163068,20 @@
         "name": "ipam-policy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policies-for-amazon-ec2.html#EC2_ARN_Format",
         "arnPattern": "arn:${Partition}:ec2::${Account}:ipam-policy/${IpamPolicyId}",
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys",
+          "ec2:Attribute",
+          "ec2:Attribute/${AttributeName}",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "ipam-pool-allocation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-policies-for-amazon-ec2.html#EC2_ARN_Format",
+        "arnPattern": "arn:${Partition}:ec2:${Region}:${Account}:ipam-pool-allocation/${IpamPoolAllocationId}",
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -214640,6 +214991,24 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "catalog",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "database",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "table",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -216304,6 +216673,24 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "catalog",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "database",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "table",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -217678,6 +218065,24 @@
           {
             "resourceType": "rootcatalog",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "catalog",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "database",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "table",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
