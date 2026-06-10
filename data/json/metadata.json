@@ -2477,7 +2477,7 @@
       "name": "Amazon Bedrock",
       "servicePrefix": "bedrock",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html",
-      "actionsCount": 245,
+      "actionsCount": 247,
       "actions": [
         "AllowVendedLogDeliveryForResource",
         "ApplyGuardrail",
@@ -2562,6 +2562,7 @@
         "EndSession",
         "ExportAutomatedReasoningPolicyVersion",
         "GenerateQuery",
+        "GetAccountDataRetention",
         "GetAgent",
         "GetAgentActionGroup",
         "GetAgentAlias",
@@ -2680,6 +2681,7 @@
         "OptimizePrompt",
         "PrepareAgent",
         "PrepareFlow",
+        "PutAccountDataRetention",
         "PutEnforcedGuardrailConfiguration",
         "PutFoundationModelEntitlement",
         "PutInvocationStep",
@@ -2766,12 +2768,13 @@
         "session",
         "custom-model-deployment"
       ],
-      "conditionKeysCount": 10,
+      "conditionKeysCount": 11,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "bedrock:BearerTokenType",
+        "bedrock:DataRetentionMode",
         "bedrock:GuardrailIdentifier",
         "bedrock:InferenceProfileArn",
         "bedrock:InlineAgentName",
@@ -3057,7 +3060,7 @@
       "name": "Amazon Bedrock Powered by AWS Mantle",
       "servicePrefix": "bedrock-mantle",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockpoweredbyawsmantle.html",
-      "actionsCount": 35,
+      "actionsCount": 37,
       "actions": [
         "ArchiveProject",
         "AssociateCustomizedModel",
@@ -3075,6 +3078,7 @@
         "DeleteInference",
         "DeleteReservation",
         "DisassociateCustomizedModel",
+        "GetAccountDataRetention",
         "GetCustomizedModel",
         "GetFile",
         "GetFineTuningJob",
@@ -3090,6 +3094,7 @@
         "ListProjects",
         "ListReservations",
         "ListTagsForResource",
+        "PutAccountDataRetention",
         "TagResource",
         "UntagResource",
         "UpdateProject",
@@ -3101,13 +3106,14 @@
         "customized-model",
         "reservation"
       ],
-      "conditionKeysCount": 11,
+      "conditionKeysCount": 12,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "bedrock-mantle:BearerTokenType",
         "bedrock-mantle:CustomizedModelArn",
+        "bedrock-mantle:DataRetentionMode",
         "bedrock-mantle:Files",
         "bedrock-mantle:FineTuningJob",
         "bedrock-mantle:Model",
@@ -16282,13 +16288,14 @@
         "UpdateOrgEc2DeepInspectionConfiguration",
         "UpdateOrganizationConfiguration"
       ],
-      "resourceTypesCount": 5,
+      "resourceTypesCount": 6,
       "resourceTypes": [
         "Filter",
         "Finding",
         "CIS Scan Configuration",
         "Code Security Scan Configuration",
-        "Code Security Integration"
+        "Code Security Integration",
+        "Connector"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [

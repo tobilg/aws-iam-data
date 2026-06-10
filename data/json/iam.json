@@ -33624,6 +33624,21 @@
         ]
       },
       {
+        "name": "GetAccountDataRetention",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetAccountDataRetention.html",
+        "permissionOnly": false,
+        "description": "Returns the account-wide data retention mode for Amazon Bedrock",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetAgent",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_GetAgent.html",
         "permissionOnly": false,
@@ -35867,6 +35882,23 @@
         ]
       },
       {
+        "name": "PutAccountDataRetention",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_PutAccountDataRetention.html",
+        "permissionOnly": false,
+        "description": "Sets the account-wide data retention mode for Amazon Bedrock",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "bedrock:DataRetentionMode"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "PutEnforcedGuardrailConfiguration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_PutEnforcedGuardrailConfiguration.html",
         "permissionOnly": false,
@@ -37304,6 +37336,12 @@
         "name": "bedrock:BearerTokenType",
         "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html#amazonbedrock-policy-keys",
         "description": "Filters access by the Short-term or Long-term bearer tokens",
+        "type": "String"
+      },
+      {
+        "name": "bedrock:DataRetentionMode",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrock.html#amazonbedrock-policy-keys",
+        "description": "Filters access by the specified Data Retention Mode",
         "type": "String"
       },
       {
@@ -42116,7 +42154,8 @@
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "bedrock-mantle:DataRetentionMode"
             ],
             "dependentActions": []
           }
@@ -42281,6 +42320,21 @@
               "bedrock-mantle:ProjectArn",
               "bedrock-mantle:CustomizedModelArn"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetAccountDataRetention",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the account-wide data retention setting",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -42565,6 +42619,23 @@
         ]
       },
       {
+        "name": "PutAccountDataRetention",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
+        "permissionOnly": false,
+        "description": "Grants permission to set the account-wide data retention setting",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "bedrock-mantle:DataRetentionMode"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "TagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome",
         "permissionOnly": false,
@@ -42661,6 +42732,14 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "bedrock-mantle:DataRetentionMode"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -42754,6 +42833,12 @@
         "name": "bedrock-mantle:CustomizedModelArn",
         "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockmantle.html#amazonbedrockmantle-policy-keys",
         "description": "Filters access by the ARN of the customized model being associated or referenced in cross-resource operations",
+        "type": "String"
+      },
+      {
+        "name": "bedrock-mantle:DataRetentionMode",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonbedrockmantle.html#amazonbedrockmantle-policy-keys",
+        "description": "Filters access by the data retention mode being set on a project or account",
         "type": "String"
       },
       {
@@ -198821,7 +198906,13 @@
         "resourceTypes": [
           {
             "resourceType": "event-bus",
-            "required": true,
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "event-busv2",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           },
@@ -198831,7 +198922,9 @@
             "conditionKeys": [
               "events:detail-type",
               "events:source",
-              "events:eventBusInvocation"
+              "events:eventBusInvocation",
+              "events:SystemMetadata/EventGroupId",
+              "events:ResourceArn"
             ],
             "dependentActions": []
           }
@@ -239641,6 +239734,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "Connector",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Filter",
             "required": false,
             "conditionKeys": [],
@@ -239679,6 +239778,12 @@
           },
           {
             "resourceType": "Code Security Scan Configuration",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Connector",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -239904,6 +240009,14 @@
         "name": "Code Security Integration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/latest/user/what-is-inspector.html",
         "arnPattern": "arn:${Partition}:inspector2:${Region}:${Account}:codesecurity-integration/${CodeSecurityIntegrationId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "Connector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/latest/user/what-is-inspector.html",
+        "arnPattern": "arn:${Partition}:inspector2:${Region}:${Account}:connector/${ConnectorId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -392575,7 +392688,7 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_BatchGetSecretValue.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve and decrypt a list of secrets",
-        "accessLevel": "List",
+        "accessLevel": "Read",
         "resourceTypes": [
           {
             "resourceType": "",

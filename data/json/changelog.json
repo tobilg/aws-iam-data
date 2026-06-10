@@ -1,5 +1,21 @@
 [
   {
+    "dateOfChange": "2026-06-10",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:GetAccountDataRetention",
+        "bedrock:PutAccountDataRetention"
+      ],
+      "Amazon Bedrock Powered by AWS Mantle": [
+        "bedrock-mantle:GetAccountDataRetention",
+        "bedrock-mantle:PutAccountDataRetention"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-06-09",
     "addedServices": [],
     "removedServices": [],
