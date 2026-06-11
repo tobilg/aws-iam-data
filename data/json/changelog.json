@@ -1,5 +1,61 @@
 [
   {
+    "dateOfChange": "2026-06-11",
+    "addedServices": [
+      "AWS reInvent event pass amount charge to customer AWS account"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS DevOps Agent Service": [
+        "aidevops:CreateTrigger",
+        "aidevops:DeleteTrigger",
+        "aidevops:GetTrigger",
+        "aidevops:ListTriggers",
+        "aidevops:UpdateTrigger"
+      ],
+      "AWS Outposts": [
+        "outposts:CreateQuote",
+        "outposts:CreateRenewal",
+        "outposts:DeleteQuote",
+        "outposts:GetQuote",
+        "outposts:GetRenewalPricing",
+        "outposts:ListOrderableInstanceTypes",
+        "outposts:ListQuotes",
+        "outposts:UpdateQuote"
+      ],
+      "AWS Service - Oracle Database@AWS": [
+        "odb:CreateAutonomousDatabase",
+        "odb:CreateAutonomousDatabaseBackup",
+        "odb:CreateAutonomousDatabaseWallet",
+        "odb:DeleteAutonomousDatabase",
+        "odb:DeleteAutonomousDatabaseBackup",
+        "odb:FailoverAutonomousDatabase",
+        "odb:GetAutonomousDatabase",
+        "odb:GetAutonomousDatabaseBackup",
+        "odb:GetAutonomousDatabaseWalletDetails",
+        "odb:ListAutonomousDatabaseBackups",
+        "odb:ListAutonomousDatabaseCharacterSets",
+        "odb:ListAutonomousDatabaseClones",
+        "odb:ListAutonomousDatabasePeers",
+        "odb:ListAutonomousDatabaseVersions",
+        "odb:ListAutonomousDatabases",
+        "odb:RebootAutonomousDatabase",
+        "odb:RestoreAutonomousDatabase",
+        "odb:ShrinkAutonomousDatabase",
+        "odb:StartAutonomousDatabase",
+        "odb:StopAutonomousDatabase",
+        "odb:SwitchoverAutonomousDatabase",
+        "odb:UpdateAutonomousDatabase",
+        "odb:UpdateAutonomousDatabaseBackup"
+      ],
+      "AWS reInvent event pass amount charge to customer AWS account": [
+        "eventsbilltoaws:approve",
+        "eventsbilltoaws:info"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-06-10",
     "addedServices": [],
     "removedServices": [],
