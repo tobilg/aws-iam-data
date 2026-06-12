@@ -225517,6 +225517,21 @@
         ]
       },
       {
+        "name": "UpdateFHIRDatastore",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/healthlake/latest/APIReference/API_UpdateFHIRDatastore.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update the configuration of a datastore",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "datastore",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/healthlake/latest/devguide/crud-healthlake.html",
         "permissionOnly": false,
