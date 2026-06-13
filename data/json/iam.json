@@ -54121,6 +54121,23 @@
         ]
       },
       {
+        "name": "CreateWebhook",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions",
+        "permissionOnly": false,
+        "description": "Grants permission to create a webhook in a workspace",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateWorkspace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions",
         "permissionOnly": false,
@@ -54245,6 +54262,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions",
         "permissionOnly": false,
         "description": "Grants permission to delete a credential vault",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteWebhook",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a webhook",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -54430,6 +54464,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions",
         "permissionOnly": false,
         "description": "Grants permission to retrieve details of a credential vault or its credentials",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetWebhook",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a webhook",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -54647,6 +54698,23 @@
         ]
       },
       {
+        "name": "ListWebhooks",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions",
+        "permissionOnly": false,
+        "description": "Grants permission to list webhooks in a workspace",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListWorkspaces",
         "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions",
         "permissionOnly": false,
@@ -54657,6 +54725,40 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ProcessEnvironmentWork",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions",
+        "permissionOnly": false,
+        "description": "Grants permission to process work items in a self-hosted managed agent environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "RotateWebhookSecret",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions",
+        "permissionOnly": false,
+        "description": "Grants permission to rotate the signing secret of a webhook",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -54819,6 +54921,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions",
         "permissionOnly": false,
         "description": "Grants permission to update a credential vault or manage its stored credentials",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateWebhook",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions",
+        "permissionOnly": false,
+        "description": "Grants permission to update a webhook",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -128529,6 +128648,21 @@
         ]
       },
       {
+        "name": "CreateAccessToken",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_CreateAccessToken.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an access token",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateAgentSpace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_CreateAgentSpace.html",
         "permissionOnly": false,
@@ -128947,6 +129081,21 @@
         ]
       },
       {
+        "name": "GetAccessToken",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetAccessToken.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get access token details",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetAccountUsage",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetAccountUsage.html",
         "permissionOnly": false,
@@ -129154,6 +129303,21 @@
         "permissionOnly": false,
         "description": "Grants permission to initiate a chat for a case",
         "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAccessTokens",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListAccessTokens.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list access tokens",
+        "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "agentspace",
@@ -129522,6 +129686,36 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "RevokeAccessToken",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_RevokeAccessToken.html",
+        "permissionOnly": false,
+        "description": "Grants permission to revoke an access token",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "RotateAccessToken",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_RotateAccessToken.html",
+        "permissionOnly": false,
+        "description": "Grants permission to rotate an access token",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -369345,6 +369539,31 @@
         ]
       },
       {
+        "name": "AllowVendedLogDeliveryForResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html",
+        "permissionOnly": false,
+        "description": "Grants permission to configure server access logs delivery to CloudWatch",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "bucket",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3:resourceArnBeingAuthorized",
+              "s3:deliverySourceArn",
+              "s3:logType"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "AssociateAccessGrantsIdentityCenter",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_control_AssociateAccessGrantsIdentityCenter.html",
         "permissionOnly": false,
@@ -374765,6 +374984,12 @@
         "type": "String"
       },
       {
+        "name": "s3:deliverySourceArn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html",
+        "description": "Filters access by specific delivery source Amazon Resource Name (ARN)",
+        "type": "ARN"
+      },
+      {
         "name": "s3:destinationRegion",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/replication.html",
         "description": "Filters access by a specific replication destination region for targeted buckets of the AWS FIS action aws:s3:bucket-pause-replication",
@@ -374792,6 +375017,12 @@
         "name": "s3:locationconstraint",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/amazon-s3-policy-keys.html#condition-key-bucket-ops-1",
         "description": "Filters access by a specific Region",
+        "type": "String"
+      },
+      {
+        "name": "s3:logType",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html",
+        "description": "Filters access by specific log type, currently supports S3_SERVER_ACCESS_LOGS",
         "type": "String"
       },
       {
@@ -374829,6 +375060,12 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/amazon-s3-policy-keys.html#condition-key-bucket-ops-2",
         "description": "Filters access by key name prefix",
         "type": "String"
+      },
+      {
+        "name": "s3:resourceArnBeingAuthorized",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html",
+        "description": "Filters access by source bucket Amazon Resource Name (ARN)",
+        "type": "ARN"
       },
       {
         "name": "s3:signatureAge",
@@ -393789,6 +394026,26 @@
         ]
       },
       {
+        "name": "BatchCreateSecurityRequirements",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchCreateSecurityRequirements.html",
+        "permissionOnly": false,
+        "description": "Grants permission to batch create security requirements in a customer managed pack",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "SecurityRequirementPack",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt",
+              "kms:GenerateDataKeyWithoutPlaintext",
+              "kms:ReEncryptFrom",
+              "kms:ReEncryptTo"
+            ]
+          }
+        ]
+      },
+      {
         "name": "BatchDeleteCodeReviews",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchDeleteCodeReviews.html",
         "permissionOnly": false,
@@ -393819,6 +394076,21 @@
             "dependentActions": [
               "kms:Decrypt"
             ]
+          }
+        ]
+      },
+      {
+        "name": "BatchDeleteSecurityRequirements",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchDeleteSecurityRequirements.html",
+        "permissionOnly": false,
+        "description": "Grants permission to batch delete security requirements from a customer managed pack",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "SecurityRequirementPack",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -394025,6 +394297,26 @@
         ]
       },
       {
+        "name": "BatchGetSecurityRequirements",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetSecurityRequirements.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve multiple security requirements in a single request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "SecurityRequirementPack",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt",
+              "kms:GenerateDataKeyWithoutPlaintext",
+              "kms:ReEncryptFrom",
+              "kms:ReEncryptTo"
+            ]
+          }
+        ]
+      },
+      {
         "name": "BatchGetTargetDomains",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetTargetDomains.html",
         "permissionOnly": false,
@@ -394103,6 +394395,26 @@
             "conditionKeys": [],
             "dependentActions": [
               "kms:Decrypt"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "BatchUpdateSecurityRequirements",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchUpdateSecurityRequirements.html",
+        "permissionOnly": false,
+        "description": "Grants permission to batch update security requirements within a customer managed pack",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "SecurityRequirementPack",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt",
+              "kms:GenerateDataKeyWithoutPlaintext",
+              "kms:ReEncryptFrom",
+              "kms:ReEncryptTo"
             ]
           }
         ]
@@ -394249,6 +394561,24 @@
         ]
       },
       {
+        "name": "CreatePrivateConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_CreatePrivateConnection.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a private connection for VPC Lattice integration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateSecurityRequirement",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_CreateSecurityRequirement.html",
         "permissionOnly": false,
@@ -394260,6 +394590,30 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateSecurityRequirementPack",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_CreateSecurityRequirementPack.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a customer managed security requirement pack",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "kms:Decrypt",
+              "kms:DescribeKey",
+              "kms:GenerateDataKeyWithoutPlaintext",
+              "kms:ReEncryptFrom",
+              "kms:ReEncryptTo"
+            ]
           }
         ]
       },
@@ -394405,10 +394759,40 @@
         ]
       },
       {
+        "name": "DeletePrivateConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_DeletePrivateConnection.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a private connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "PrivateConnection",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteSecurityRequirement",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_DeleteSecurityRequirement.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a customer managed Security Requirement",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "SecurityRequirementPack",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteSecurityRequirementPack",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_DeleteSecurityRequirementPack.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a customer managed security requirement pack and all its associated security requirements",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -394428,6 +394812,21 @@
         "resourceTypes": [
           {
             "resourceType": "TargetDomain",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribePrivateConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_DescribePrivateConnection.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe a private connection",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "PrivateConnection",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -394525,6 +394924,21 @@
         ]
       },
       {
+        "name": "GetProviderRegistrationManifest",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetProviderRegistrationManifest.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the provider registration manifest used for browser-based integration registration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetSecurityRequirement",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetSecurityRequirement.html",
         "permissionOnly": false,
@@ -394536,6 +394950,56 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetSecurityRequirementPack",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetSecurityRequirementPack.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a security requirement pack",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "SecurityRequirementPack",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "HandleProviderRegistrationCallback",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_HandleProviderRegistrationCallback.html",
+        "permissionOnly": false,
+        "description": "Grants permission to handle the provider OAuth registration callback that completes integration setup",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ImportSecurityRequirements",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ImportSecurityRequirements.html",
+        "permissionOnly": false,
+        "description": "Grants permission to import security requirements from uploaded documents for a customer managed security requirement pack",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "SecurityRequirementPack",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "kms:Decrypt",
+              "kms:GenerateDataKeyWithoutPlaintext",
+              "kms:ReEncryptFrom",
+              "kms:ReEncryptTo"
+            ]
           }
         ]
       },
@@ -394811,6 +395275,21 @@
         ]
       },
       {
+        "name": "ListPrivateConnections",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListPrivateConnections.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list private connections in the account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListResourcesFromIntegration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListResourcesFromIntegration.html",
         "permissionOnly": false,
@@ -394820,6 +395299,21 @@
           {
             "resourceType": "Integration",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListSecurityRequirementPacks",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListSecurityRequirementPacks.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all security requirement packs in the account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -394836,7 +395330,12 @@
             "resourceType": "SecurityRequirementPack",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "kms:Decrypt",
+              "kms:GenerateDataKeyWithoutPlaintext",
+              "kms:ReEncryptFrom",
+              "kms:ReEncryptTo"
+            ]
           }
         ]
       },
@@ -394861,6 +395360,12 @@
           },
           {
             "resourceType": "Integration",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "PrivateConnection",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -395126,6 +395631,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "PrivateConnection",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "SecurityRequirementPack",
             "required": false,
             "conditionKeys": [],
@@ -395184,6 +395695,12 @@
           },
           {
             "resourceType": "Integration",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "PrivateConnection",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -395312,10 +395829,40 @@
         ]
       },
       {
+        "name": "UpdatePrivateConnectionCertificate",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdatePrivateConnectionCertificate.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update the certificate associated with a private connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "PrivateConnection",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateSecurityRequirement",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateSecurityRequirement.html",
         "permissionOnly": false,
         "description": "Grants permission to update a customer managed Security Requirement",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "SecurityRequirementPack",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateSecurityRequirementPack",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateSecurityRequirementPack.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a security requirement pack",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -395428,6 +395975,14 @@
         "name": "TargetDomain",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
         "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:target-domain/${TargetDomainId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "PrivateConnection",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/latest/userguide/auth-and-access-control-iam-access-control-identity-based.html#arn-formats",
+        "arnPattern": "arn:${Partition}:securityagent:${Region}:${Account}:private-connection/${PrivateConnectionName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -407749,12 +408304,41 @@
     "servicePrefix": "signin",
     "actions": [
       {
+        "name": "Authenticate",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_Authenticate.html",
+        "permissionOnly": false,
+        "description": "Grants permission to authenticate to the AWS Management Console",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "console",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "signin:PrincipalArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "AuthorizeOAuth2Access",
         "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_AuthorizeOAuth2Access.html",
         "permissionOnly": false,
         "description": "Grants permission to authenticate through a browser and obtain an OAuth 2.0 authorization code for credential exchange",
         "accessLevel": "Read",
         "resourceTypes": [
+          {
+            "resourceType": "console",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
           {
             "resourceType": "oauth2-public-client-localhost",
             "required": true,
@@ -407770,12 +408354,33 @@
         ]
       },
       {
+        "name": "CreateAccount",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsconsolehelpdocs/latest/gsg/console-private-access.html",
+        "permissionOnly": true,
+        "description": "Grants permission to create an AWS account through the AWS Management Console sign-up flow",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "console",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateOAuth2Token",
         "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_CreateOAuth2Token.html",
         "permissionOnly": false,
         "description": "Grants permission to exchange an authorization code for OAuth 2.0 access token and refresh token that can be used to access AWS services from developer tools and applications",
         "accessLevel": "Read",
         "resourceTypes": [
+          {
+            "resourceType": "console",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
           {
             "resourceType": "oauth2-public-client-localhost",
             "required": true,
@@ -407814,6 +408419,81 @@
         ]
       },
       {
+        "name": "DeleteConsoleAuthorizationConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_DeleteConsoleAuthorizationConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to disable console authorization configuration for an AWS account or organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteResourcePermissionStatement",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_DeleteResourcePermissionStatement.html",
+        "permissionOnly": false,
+        "description": "Grants permission to remove a permission statement from the account's SignIn Resource Based Policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetConsoleAuthorizationConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_GetConsoleAuthorizationConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve console authorization configuration for an AWS account or organization",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetResourcePolicy",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_GetResourcePolicy.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve SignIn Resource Based Policy document that is attached with your account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListResourcePermissionStatements",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_ListResourcePermissionStatements.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list the SignIn Resource Based Policy statements in your account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListTrustedIdentityPropagationApplicationsForConsole",
         "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_ListTrustedIdentityPropagationApplicationsForConsole.html",
         "permissionOnly": false,
@@ -407830,6 +408510,36 @@
             ]
           }
         ]
+      },
+      {
+        "name": "PutConsoleAuthorizationConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_PutConsoleAuthorizationConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to enable console authorization configuration for an AWS account or organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PutResourcePermissionStatement",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_PutResourcePermissionStatement.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a permission statement in the account's SignIn resource-based policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
       }
     ],
     "resourceTypes": [
@@ -407844,9 +408554,22 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference",
         "arnPattern": "arn:${Partition}:signin:${Region}:${Account}:oauth2/public-client/remote",
         "conditionKeys": []
+      },
+      {
+        "name": "console",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference",
+        "arnPattern": "arn:${Partition}:signin:::console/${ConsoleName}",
+        "conditionKeys": []
       }
     ],
-    "conditionKeys": []
+    "conditionKeys": [
+      {
+        "name": "signin:PrincipalArn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/userguide/reference-signin-condition-keys.html",
+        "description": "Filters access by the principal ARN during pre-authentication console sign-in",
+        "type": "ARN"
+      }
+    ]
   },
   {
     "name": "Amazon Simple Email Service - Mail Manager",
