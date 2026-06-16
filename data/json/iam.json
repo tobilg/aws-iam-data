@@ -443457,6 +443457,51 @@
         ]
       },
       {
+        "name": "GetRevenueStatistics",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_GetRevenueStatistics.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve monetization revenue statistics ranked by source or path within a specified time window",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetRevenueStatisticsSummary",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_GetRevenueStatisticsSummary.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a summary of monetization revenue statistics within a specified time window",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetRevenueStatisticsTimeSeries",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_GetRevenueStatisticsTimeSeries.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve monetization revenue statistics as a time series within a specified time window",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetRuleGroup",
         "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_GetRuleGroup.html",
         "permissionOnly": false,
@@ -443770,6 +443815,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_ListRuleGroups.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve an array of RuleGroupSummary objects for the rule groups that you manage",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListSettlementRecords",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_ListSettlementRecords.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of monetization settlement records within a specified time window",
         "accessLevel": "List",
         "resourceTypes": [
           {
