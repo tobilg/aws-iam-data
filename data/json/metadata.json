@@ -22444,7 +22444,7 @@
       "name": "AWS Partner Central",
       "servicePrefix": "partnercentral",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awspartnercentral.html",
-      "actionsCount": 111,
+      "actionsCount": 114,
       "actions": [
         "AcceptChannelHandshake",
         "AcceptConnectionInvitation",
@@ -22500,6 +22500,7 @@
         "GetProfileUpdateTask",
         "GetProfileVisibility",
         "GetProgramManagementAccount",
+        "GetProspectingFromEngagementTask",
         "GetRelationship",
         "GetResourceSnapshot",
         "GetResourceSnapshotJob",
@@ -22524,6 +22525,7 @@
         "ListPartnerPaths",
         "ListPartners",
         "ListProgramManagementAccounts",
+        "ListProspectingFromEngagementTasks",
         "ListRelationships",
         "ListResourceSnapshotJobs",
         "ListResourceSnapshots",
@@ -22543,6 +22545,7 @@
         "StartEngagementFromOpportunityTask",
         "StartOpportunityFromEngagementTask",
         "StartProfileUpdateTask",
+        "StartProspectingFromEngagementTask",
         "StartResourceSnapshotJob",
         "StartVerification",
         "StopResourceSnapshotJob",
@@ -22558,7 +22561,7 @@
         "UpdateRelationship",
         "UseSession"
       ],
-      "resourceTypesCount": 20,
+      "resourceTypesCount": 21,
       "resourceTypes": [
         "Engagement",
         "engagement-by-accepting-invitation-task",
@@ -22579,7 +22582,8 @@
         "ProgramManagementAccount",
         "Relationship",
         "ChannelHandshake",
-        "Dashboard"
+        "Dashboard",
+        "ProspectingFromEngagementTask"
       ],
       "conditionKeysCount": 9,
       "conditionKeys": [

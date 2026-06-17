@@ -319671,6 +319671,29 @@
         ]
       },
       {
+        "name": "GetProspectingFromEngagementTask",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_GetProspectingFromEngagementTask.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve prospecting from engagement task details in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ProspectingFromEngagementTask",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetRelationship",
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_channel_GetRelationship.html",
         "permissionOnly": false,
@@ -320141,6 +320164,23 @@
         ]
       },
       {
+        "name": "ListProspectingFromEngagementTasks",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_ListProspectingFromEngagementTasks.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list prospecting from engagement tasks in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListRelationships",
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_channel_ListRelationships.html",
         "permissionOnly": false,
@@ -320224,7 +320264,7 @@
         "name": "ListTagsForResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_ListTagsForResource.html",
         "permissionOnly": false,
-        "description": "Grants permission to add lists tags to a resource. Supported resource: ResourceSnapshotJob",
+        "description": "Grants permission to list tags for a resource in AWS Partner Central",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -320566,6 +320606,29 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StartProspectingFromEngagementTask",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_StartProspectingFromEngagementTask.html",
+        "permissionOnly": false,
+        "description": "Grants permission to initiate tasks that start prospecting from an engagement in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Engagement",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
               "partnercentral:Catalog"
             ],
             "dependentActions": []
@@ -321100,6 +321163,12 @@
         "name": "Dashboard",
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/getting-started/partner-analytics.html",
         "arnPattern": "arn:${Partition}:partnercentral::${Account}:catalog/${Catalog}/ReportingData/${TableId}/Dashboard/${DashboardId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "ProspectingFromEngagementTask",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/working-with-your-leads.html",
+        "arnPattern": "arn:${Partition}:partnercentral:${Region}::catalog/${Catalog}/prospecting-from-engagement-task/${TaskIdentifier}",
         "conditionKeys": []
       }
     ],
