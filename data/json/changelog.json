@@ -1,5 +1,57 @@
 [
   {
+    "dateOfChange": "2026-06-18",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:AgenticRetrieveStream",
+        "bedrock:BatchDeleteAdvancedPromptOptimizationJob",
+        "bedrock:CreateAdvancedPromptOptimizationJob",
+        "bedrock:GetAdvancedPromptOptimizationJob",
+        "bedrock:GetDocumentContent",
+        "bedrock:InvokeGuardrailChecks",
+        "bedrock:ListAdvancedPromptOptimizationJobs",
+        "bedrock:StopAdvancedPromptOptimizationJob"
+      ],
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:CreateHarnessEndpoint",
+        "bedrock-agentcore:DeleteHarnessEndpoint",
+        "bedrock-agentcore:GatewayAssociateWebACL",
+        "bedrock-agentcore:GatewayDisassociateWebACL",
+        "bedrock-agentcore:GatewayGetWebACLForResource",
+        "bedrock-agentcore:GatewayListResourcesForWebACL",
+        "bedrock-agentcore:GetHarnessEndpoint",
+        "bedrock-agentcore:InvokeWebSearch",
+        "bedrock-agentcore:ListHarnessEndpoints",
+        "bedrock-agentcore:UpdateHarnessEndpoint"
+      ],
+      "Amazon DataZone": [
+        "datazone:DeleteLineageEvent"
+      ],
+      "Amazon OpenSearch Service": [
+        "es:AttachDataSource",
+        "es:DescribeDataSourceAttachment",
+        "es:DetachDataSource",
+        "es:ListDataSourceAttachments"
+      ],
+      "Amazon S3": [
+        "s3:DeleteObjectAnnotation",
+        "s3:DeleteObjectVersionAnnotation",
+        "s3:GetObjectAnnotation",
+        "s3:GetObjectVersionAnnotation",
+        "s3:GetObjectVersionAnnotationForReplication",
+        "s3:ListObjectAnnotations",
+        "s3:ListObjectVersionAnnotations",
+        "s3:PutObjectAnnotation",
+        "s3:PutObjectVersionAnnotation",
+        "s3:ReplicateObjectAnnotation",
+        "s3:UpdateBucketMetadataAnnotationTableConfiguration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-06-17",
     "addedServices": [],
     "removedServices": [],

@@ -32063,6 +32063,21 @@
     "servicePrefix": "bedrock",
     "actions": [
       {
+        "name": "AgenticRetrieveStream",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/welcome.html",
+        "permissionOnly": false,
+        "description": "Grants permission to perform agentic retrieve with streaming from retrievers",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "AllowVendedLogDeliveryForResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/welcome.html",
         "permissionOnly": true,
@@ -32152,6 +32167,21 @@
         ]
       },
       {
+        "name": "BatchDeleteAdvancedPromptOptimizationJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_BatchDeleteAdvancedPromptOptimizationJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete one or more advanced prompt optimization jobs",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "advanced-prompt-optimization-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "BatchDeleteEvaluationJob",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_BatchDeleteEvaluationJob.html",
         "permissionOnly": false,
@@ -32224,6 +32254,24 @@
             "resourceType": "foundation-model",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateAdvancedPromptOptimizationJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_CreateAdvancedPromptOptimizationJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an advanced prompt optimization job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -33488,6 +33536,12 @@
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "knowledge-base",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -33633,6 +33687,21 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetAdvancedPromptOptimizationJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetAdvancedPromptOptimizationJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get information about an advanced prompt optimization job",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "advanced-prompt-optimization-job",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -34041,6 +34110,21 @@
           {
             "resourceType": "knowledge-base",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetDocumentContent",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/welcome.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a document",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -34487,6 +34571,12 @@
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "knowledge-base",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -34734,6 +34824,21 @@
         ]
       },
       {
+        "name": "InvokeGuardrailChecks",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/welcome.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke guardrail checks",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "InvokeInlineAgent",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_InvokeInlineAgent.html",
         "permissionOnly": false,
@@ -34928,6 +35033,21 @@
           {
             "resourceType": "system-tool",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAdvancedPromptOptimizationJobs",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_ListAdvancedPromptOptimizationJobs.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list the advanced prompt optimization jobs in your account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -35655,6 +35775,12 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
+            "resourceType": "advanced-prompt-optimization-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "agent",
             "required": true,
             "conditionKeys": [],
@@ -35984,6 +36110,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "knowledge-base",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
@@ -36157,6 +36289,21 @@
         ]
       },
       {
+        "name": "StopAdvancedPromptOptimizationJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_StopAdvancedPromptOptimizationJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to stop an advanced prompt optimization job while in progress",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "advanced-prompt-optimization-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "StopEvaluationJob",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_StopEvaluationJob.html",
         "permissionOnly": false,
@@ -36250,6 +36397,12 @@
         "description": "Grants permission to Tag a Bedrock resource",
         "accessLevel": "Tagging",
         "resourceTypes": [
+          {
+            "resourceType": "advanced-prompt-optimization-job",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
           {
             "resourceType": "agent",
             "required": false,
@@ -36448,6 +36601,12 @@
         "description": "Grants permission to Untag a Bedrock resource",
         "accessLevel": "Tagging",
         "resourceTypes": [
+          {
+            "resourceType": "advanced-prompt-optimization-job",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
           {
             "resourceType": "agent",
             "required": false,
@@ -37311,6 +37470,14 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
+      },
+      {
+        "name": "advanced-prompt-optimization-job",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/welcome.html",
+        "arnPattern": "arn:${Partition}:bedrock:${Region}:${Account}:advanced-prompt-optimization-job/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -37842,9 +38009,37 @@
             ],
             "dependentActions": [
               "bedrock-agentcore:CreateAgentRuntime",
+              "bedrock-agentcore:CreateMemory",
               "bedrock-agentcore:GetAgentRuntime",
+              "bedrock-agentcore:GetMemory",
               "iam:PassRole"
             ]
+          }
+        ]
+      },
+      {
+        "name": "CreateHarnessEndpoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_CreateHarnessEndpoint.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new harness endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "harness",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "bedrock-agentcore:CreateAgentRuntimeEndpoint"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
           }
         ]
       },
@@ -38352,9 +38547,34 @@
             "conditionKeys": [],
             "dependentActions": [
               "bedrock-agentcore:DeleteAgentRuntime",
+              "bedrock-agentcore:DeleteMemory",
               "bedrock-agentcore:GetAgentRuntime",
+              "bedrock-agentcore:GetMemory",
               "iam:PassRole"
             ]
+          }
+        ]
+      },
+      {
+        "name": "DeleteHarnessEndpoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_DeleteHarnessEndpoint.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a harness endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "harness",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "bedrock-agentcore:DeleteAgentRuntimeEndpoint"
+            ]
+          },
+          {
+            "resourceType": "harness-endpoint",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -38644,6 +38864,66 @@
           {
             "resourceType": "evaluator",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GatewayAssociateWebACL",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/",
+        "permissionOnly": true,
+        "description": "Grants permission to associate an AWS WAF Web ACL with an AgentCore Gateway",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GatewayDisassociateWebACL",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/",
+        "permissionOnly": true,
+        "description": "Grants permission to remove the AWS WAF Web ACL association from an AgentCore Gateway",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GatewayGetWebACLForResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/",
+        "permissionOnly": true,
+        "description": "Grants permission to retrieve the AWS WAF Web ACL ARN currently associated with an AgentCore Gateway",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GatewayListResourcesForWebACL",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/",
+        "permissionOnly": true,
+        "description": "Grants permission to list AgentCore Gateways associated with an AWS WAF Web ACL",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -38967,6 +39247,27 @@
         "resourceTypes": [
           {
             "resourceType": "harness",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetHarnessEndpoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetHarnessEndpoint.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get details of a harness endpoint",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "harness",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "harness-endpoint",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -39715,6 +40016,12 @@
             "dependentActions": [
               "bedrock-agentcore:InvokeAgentRuntime"
             ]
+          },
+          {
+            "resourceType": "harness-endpoint",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -39727,6 +40034,21 @@
         "resourceTypes": [
           {
             "resourceType": "registry",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "InvokeWebSearch",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/welcome.html",
+        "permissionOnly": true,
+        "description": "Grants permission to invoke a web search target",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "web-search",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -40029,6 +40351,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListGateways.html",
         "permissionOnly": false,
         "description": "Grants permission to list existing gateways",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListHarnessEndpoints",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListHarnessEndpoints.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list harness endpoints",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -41389,10 +41726,36 @@
             "required": true,
             "conditionKeys": [],
             "dependentActions": [
+              "bedrock-agentcore:CreateMemory",
               "bedrock-agentcore:GetAgentRuntime",
+              "bedrock-agentcore:GetMemory",
               "bedrock-agentcore:UpdateAgentRuntime",
+              "bedrock-agentcore:UpdateMemory",
               "iam:PassRole"
             ]
+          }
+        ]
+      },
+      {
+        "name": "UpdateHarnessEndpoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdateHarnessEndpoint.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update harness endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "harness",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "bedrock-agentcore:UpdateAgentRuntimeEndpoint"
+            ]
+          },
+          {
+            "resourceType": "harness-endpoint",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -41773,28 +42136,44 @@
         ]
       },
       {
+        "name": "harness-endpoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/harness-endpoint.html",
+        "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:harness/${HarnessId}/harness-endpoint/${Name}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "batch-evaluate",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/batchEvaluation.html",
         "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:batch-evaluate/${BatchEvaluationId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "ab-test",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/abTest.html",
         "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:ab-test/${ABTestId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "recommendation",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/recommendation.html",
         "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:recommendation/${RecommendationId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "configuration-bundle",
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/configurationBundle.html",
         "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:configuration-bundle/${ConfigurationBundleId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "payment-manager",
@@ -41811,6 +42190,12 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
+      },
+      {
+        "name": "web-search",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/webSearch.html",
+        "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:tool/web-search.v1",
+        "conditionKeys": []
       }
     ],
     "conditionKeys": [
@@ -103246,8 +103631,8 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "contact",
-            "required": true,
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -121196,6 +121581,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteGlossaryTerm.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a glossary term",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteLineageEvent",
+        "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteLineageEvent.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete lineage events",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -240296,14 +240696,6 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
-      },
-      {
-        "name": "Connector",
-        "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/latest/user/what-is-inspector.html",
-        "arnPattern": "arn:${Partition}:inspector2:${Region}:${Account}:connector/${ConnectorId}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ]
       }
     ],
     "conditionKeys": [
@@ -311725,6 +312117,21 @@
         ]
       },
       {
+        "name": "AttachDataSource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_AttachDataSource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to attach a data source to an OpenSearch Application",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "application",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "AuthorizeVpcEndpointAccess",
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_AuthorizeVpcEndpointAccess.html",
         "permissionOnly": false,
@@ -312166,6 +312573,21 @@
         ]
       },
       {
+        "name": "DescribeDataSourceAttachment",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_DescribeDataSourceAttachment.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe the status of a data source attachment for an OpenSearch Application",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "application",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DescribeDomain",
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_DescribeDomain.html",
         "permissionOnly": false,
@@ -312526,6 +312948,21 @@
         ]
       },
       {
+        "name": "DetachDataSource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_DetachDataSource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to detach a data source from an OpenSearch Application",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "application",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DissociatePackage",
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_DissociatePackage.html",
         "permissionOnly": false,
@@ -312845,6 +313282,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_ListApplications.html",
         "permissionOnly": false,
         "description": "Grants permission to list OpenSearch Applications",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "application",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListDataSourceAttachments",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_ListDataSourceAttachments.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list data source attachments for an OpenSearch Application",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -370486,6 +370938,42 @@
         ]
       },
       {
+        "name": "DeleteObjectAnnotation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObjectAnnotation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an annotation from an object",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "accesspointobject",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "object",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3:authType",
+              "s3:signatureAge",
+              "s3:signatureversion",
+              "s3:TlsVersion",
+              "s3:x-amz-content-sha256",
+              "s3:ResourceAccount",
+              "s3:x-amz-object-if-match",
+              "s3:ExistingObjectTag/<key>"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteObjectTagging",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObjectTagging.html",
         "permissionOnly": false,
@@ -370551,6 +371039,43 @@
               "s3:TlsVersion",
               "s3:versionid",
               "s3:x-amz-content-sha256"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteObjectVersionAnnotation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_DeleteObjectAnnotation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an annotation from a specific version of an object",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "accesspointobject",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "object",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3:authType",
+              "s3:signatureAge",
+              "s3:signatureversion",
+              "s3:TlsVersion",
+              "s3:x-amz-content-sha256",
+              "s3:ResourceAccount",
+              "s3:versionid",
+              "s3:x-amz-object-if-match",
+              "s3:ExistingObjectTag/<key>"
             ],
             "dependentActions": []
           }
@@ -372070,6 +372595,41 @@
         ]
       },
       {
+        "name": "GetObjectAnnotation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObjectAnnotation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an annotation from an object",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "accesspointobject",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "object",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3:authType",
+              "s3:signatureAge",
+              "s3:signatureversion",
+              "s3:TlsVersion",
+              "s3:x-amz-content-sha256",
+              "s3:ResourceAccount",
+              "s3:ExistingObjectTag/<key>"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetObjectAttributes",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObjectAttributes.html",
         "permissionOnly": false,
@@ -372303,6 +372863,70 @@
               "s3:signatureversion",
               "s3:TlsVersion",
               "s3:versionid",
+              "s3:x-amz-content-sha256"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetObjectVersionAnnotation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_GetObjectAnnotation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an annotation from a specific version of an object",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "accesspointobject",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "object",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3:authType",
+              "s3:signatureAge",
+              "s3:signatureversion",
+              "s3:TlsVersion",
+              "s3:x-amz-content-sha256",
+              "s3:ResourceAccount",
+              "s3:versionid",
+              "s3:ExistingObjectTag/<key>"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetObjectVersionAnnotationForReplication",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/setting-repl-config-perm-overview.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get an object version annotation for replication",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "object",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3:authType",
+              "s3:ResourceAccount",
+              "s3:signatureAge",
+              "s3:signatureversion",
+              "s3:TlsVersion",
               "s3:x-amz-content-sha256"
             ],
             "dependentActions": []
@@ -372959,6 +373583,81 @@
               "s3:signatureversion",
               "s3:TlsVersion",
               "s3:x-amz-content-sha256"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListObjectAnnotations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectAnnotations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list annotations on an object",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "accesspointobject",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "object",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3:authType",
+              "s3:signatureAge",
+              "s3:signatureversion",
+              "s3:TlsVersion",
+              "s3:x-amz-content-sha256",
+              "s3:ResourceAccount",
+              "s3:annotation-prefix",
+              "s3:max-annotation-results",
+              "s3:ExistingObjectTag/<key>"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListObjectVersionAnnotations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_ListObjectAnnotations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list annotations on a specific version of an object",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "accesspointobject",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "object",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3:authType",
+              "s3:signatureAge",
+              "s3:signatureversion",
+              "s3:TlsVersion",
+              "s3:x-amz-content-sha256",
+              "s3:ResourceAccount",
+              "s3:versionid",
+              "s3:annotation-prefix",
+              "s3:max-annotation-results",
+              "s3:ExistingObjectTag/<key>"
             ],
             "dependentActions": []
           }
@@ -373950,6 +374649,7 @@
               "s3:x-amz-grant-write",
               "s3:x-amz-grant-write-acp",
               "s3:x-amz-metadata-directive",
+              "s3:x-amz-object-annotation-directive",
               "s3:x-amz-server-side-encryption",
               "s3:x-amz-server-side-encryption-aws-kms-key-id",
               "s3:x-amz-server-side-encryption-customer-algorithm",
@@ -374005,6 +374705,42 @@
               "s3:x-amz-grant-write",
               "s3:x-amz-grant-write-acp",
               "s3:x-amz-storage-class"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PutObjectAnnotation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObjectAnnotation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to add or replace an annotation on an object",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "accesspointobject",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "object",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3:authType",
+              "s3:signatureAge",
+              "s3:signatureversion",
+              "s3:TlsVersion",
+              "s3:x-amz-content-sha256",
+              "s3:ResourceAccount",
+              "s3:x-amz-object-if-match",
+              "s3:ExistingObjectTag/<key>"
             ],
             "dependentActions": []
           }
@@ -374158,6 +374894,43 @@
               "s3:x-amz-grant-write",
               "s3:x-amz-grant-write-acp",
               "s3:x-amz-storage-class"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PutObjectVersionAnnotation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_PutObjectAnnotation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to add or replace an annotation on a specific version of an object",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "accesspointobject",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "object",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3:authType",
+              "s3:signatureAge",
+              "s3:signatureversion",
+              "s3:TlsVersion",
+              "s3:x-amz-content-sha256",
+              "s3:ResourceAccount",
+              "s3:versionid",
+              "s3:x-amz-object-if-match",
+              "s3:ExistingObjectTag/<key>"
             ],
             "dependentActions": []
           }
@@ -374340,6 +375113,34 @@
               "s3:x-amz-server-side-encryption",
               "s3:x-amz-server-side-encryption-aws-kms-key-id",
               "s3:x-amz-server-side-encryption-customer-algorithm"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ReplicateObjectAnnotation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/setting-repl-config-perm-overview.html",
+        "permissionOnly": false,
+        "description": "Grants permission to replicate annotations to the destination bucket",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "object",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3:authType",
+              "s3:ResourceAccount",
+              "s3:signatureAge",
+              "s3:signatureversion",
+              "s3:TlsVersion",
+              "s3:x-amz-content-sha256"
             ],
             "dependentActions": []
           }
@@ -374581,6 +375382,34 @@
               "s3:TlsVersion",
               "s3:x-amz-content-sha256",
               "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateBucketMetadataAnnotationTableConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_UpdateBucketMetadataAnnotationTableConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update the annotation table configuration for a bucket",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "bucket",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "s3:authType",
+              "s3:ResourceAccount",
+              "s3:signatureAge",
+              "s3:signatureversion",
+              "s3:TlsVersion",
+              "s3:x-amz-content-sha256"
             ],
             "dependentActions": []
           }
@@ -375041,6 +375870,12 @@
         "type": "Numeric"
       },
       {
+        "name": "s3:annotation-prefix",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/amazon-s3-policy-keys.html#example-annotation-prefix-condition",
+        "description": "Filters access by the annotation name prefix specified in the request",
+        "type": "String"
+      },
+      {
         "name": "s3:authType",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/bucket-policy-s3-sigv4-conditions.html",
         "description": "Filters access by authentication method",
@@ -375093,6 +375928,12 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/ServerLogs.html",
         "description": "Filters access by specific log type, currently supports S3_SERVER_ACCESS_LOGS",
         "type": "String"
+      },
+      {
+        "name": "s3:max-annotation-results",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/amazon-s3-policy-keys.html#example-annotation-max-results",
+        "description": "Filters access by the maximum number of annotation results requested",
+        "type": "Numeric"
       },
       {
         "name": "s3:max-keys",
@@ -375212,6 +376053,18 @@
         "name": "s3:x-amz-metadata-directive",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_CopyObject.html",
         "description": "Filters access by object metadata behavior (COPY or REPLACE) when objects are copied",
+        "type": "String"
+      },
+      {
+        "name": "s3:x-amz-object-annotation-directive",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_CopyObject.html",
+        "description": "Filters access by the annotation copy directive specified in the request",
+        "type": "String"
+      },
+      {
+        "name": "s3:x-amz-object-if-match",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/userguide/amazon-s3-policy-keys.html#example-annotation-conditional-writes",
+        "description": "Filters access by the ETag of the object version specified in the request",
         "type": "String"
       },
       {
