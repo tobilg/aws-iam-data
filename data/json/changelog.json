@@ -1,5 +1,46 @@
 [
   {
+    "dateOfChange": "2026-06-20",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudWatch": [
+        "cloudwatch:GetDataset",
+        "cloudwatch:PutLogAlarm"
+      ],
+      "Amazon DataZone": [
+        "datazone:GetCompute",
+        "datazone:StartCompute",
+        "datazone:StartNotebookSync",
+        "datazone:StopCompute"
+      ],
+      "Amazon MQ": [
+        "mq:DescribeSharedResources"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:BatchAssignLimitsProfile",
+        "quicksight:BatchUnassignLimitsProfile",
+        "quicksight:CreateLimitsProfile",
+        "quicksight:DeleteLimitsProfile",
+        "quicksight:DescribeAutomationGroup",
+        "quicksight:DescribeAutomationGroupPermissions",
+        "quicksight:DescribeLimitsProfile",
+        "quicksight:ListAssignmentsForPrincipal",
+        "quicksight:ListAutomationGroups",
+        "quicksight:ListLimitsProfiles",
+        "quicksight:ListProfileAssignments",
+        "quicksight:SearchAutomationGroups",
+        "quicksight:UpdateAutomationGroupPermissions",
+        "quicksight:UpdateLimitsProfile"
+      ],
+      "Amazon WorkSpaces AgentAccess MCP Server": [
+        "agentaccess-mcp:CallForwardedTool",
+        "agentaccess-mcp:CheckConnectionStatus"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-06-18",
     "addedServices": [],
     "removedServices": [],

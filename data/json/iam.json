@@ -68955,7 +68955,11 @@
             "resourceType": "alarm",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "logs:CreateScheduledQuery",
+              "logs:DeleteScheduledQuery",
+              "logs:GetScheduledQuery"
+            ]
           }
         ]
       },
@@ -69245,6 +69249,29 @@
         ]
       },
       {
+        "name": "GetDataset",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetDataset.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a dataset",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetInsightRuleReport",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetInsightRuleReport.html",
         "permissionOnly": false,
@@ -69263,13 +69290,15 @@
         "name": "GetMetricData",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html",
         "permissionOnly": false,
-        "description": "Grants permission to retrieve batch amounts of CloudWatch metric data and perform metric math on retrieved data",
+        "description": "Grants permission to retrieve batch amounts of CloudWatch classic metric data and perform metric math on retrieved data; and grants permission to retrieve OTLP metric data using PromQL",
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "dataset",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -69511,9 +69540,11 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "dataset",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -69558,31 +69589,65 @@
           {
             "resourceType": "alarm",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "alarm-mute-rule",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "dashboard",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dataset",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "insight-rule",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "metric-stream",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "slo",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
@@ -69604,7 +69669,25 @@
             "dependentActions": []
           },
           {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "insight-rule",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "metric-stream",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -69737,6 +69820,37 @@
         ]
       },
       {
+        "name": "PutLogAlarm",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutLogAlarm.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create or update a log-based alarm and associate it with a CloudWatch Logs Insights scheduled query",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "alarm",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole",
+              "logs:CreateScheduledQuery",
+              "logs:DeleteScheduledQuery",
+              "logs:GetScheduledQuery",
+              "logs:UpdateScheduledQuery"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "cloudwatch:AlarmActions"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "PutManagedInsightRules",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutManagedInsightRules.html",
         "permissionOnly": false,
@@ -69769,6 +69883,14 @@
             "dependentActions": []
           },
           {
+            "resourceType": "dataset",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "",
             "required": false,
             "conditionKeys": [
@@ -69784,9 +69906,17 @@
         "name": "PutMetricData",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricData.html",
         "permissionOnly": false,
-        "description": "Grants permission to publish metric data points to Amazon CloudWatch",
+        "description": "Grants permission to publish metric data points to Amazon CloudWatch using CloudWatch and OTLP formats",
         "accessLevel": "Write",
         "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "",
             "required": false,
@@ -69906,31 +70036,65 @@
           {
             "resourceType": "alarm",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "alarm-mute-rule",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "dashboard",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dataset",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "insight-rule",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "metric-stream",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "slo",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
@@ -69961,7 +70125,25 @@
             "dependentActions": []
           },
           {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "insight-rule",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "metric-stream",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -69984,31 +70166,65 @@
           {
             "resourceType": "alarm",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "alarm-mute-rule",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "dashboard",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dataset",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "insight-rule",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "metric-stream",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
             "resourceType": "slo",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           },
           {
@@ -70038,7 +70254,25 @@
             "dependentActions": []
           },
           {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "insight-rule",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "metric-stream",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -70093,6 +70327,14 @@
         ]
       },
       {
+        "name": "dataset",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:dataset/${DatasetId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "insight-rule",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/auth-and-access-control-cw.html",
         "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:insight-rule/${InsightRuleName}",
@@ -70129,37 +70371,37 @@
       {
         "name": "aws:RequestTag/${TagKey}",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
-        "description": "Filters actions based on the allowed set of values for each of the tags",
+        "description": "Filters access by the presence of tags in the request",
         "type": "String"
       },
       {
         "name": "aws:ResourceTag/${TagKey}",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
-        "description": "Filters actions based on tag-value associated with the resource",
+        "description": "Filters access by tags associated with the resource",
         "type": "String"
       },
       {
         "name": "aws:TagKeys",
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
-        "description": "Filters actions based on the presence of mandatory tags in the request",
+        "description": "Filters access by the presence of tags in the request",
         "type": "ArrayOfString"
       },
       {
         "name": "cloudwatch:AlarmActions",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/iam-cw-condition-keys-alarm-actions.html",
-        "description": "Filters actions based on defined alarm actions",
+        "description": "Filters access by defined alarm actions",
         "type": "ArrayOfString"
       },
       {
         "name": "cloudwatch:namespace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/iam-cw-condition-keys-namespace.html",
-        "description": "Filters actions based on the presence of optional namespace values",
+        "description": "Filters access by the presence of optional namespace values",
         "type": "String"
       },
       {
         "name": "cloudwatch:requestInsightRuleLogGroups",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/iam-cw-condition-keys-contributor.html",
-        "description": "Filters actions based on the Log Groups specified in an Insight Rule",
+        "description": "Filters access by the Log Groups specified in an Insight Rule",
         "type": "ArrayOfString"
       },
       {
@@ -121907,6 +122149,21 @@
         ]
       },
       {
+        "name": "GetCompute",
+        "apiReferenceUrl": "${APIReferenceDocPage}API_GetCompute.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get compute",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetConnection",
         "apiReferenceUrl": "${APIReferenceDocPage}API_GetConnection.html",
         "permissionOnly": false,
@@ -123497,6 +123754,21 @@
         ]
       },
       {
+        "name": "StartCompute",
+        "apiReferenceUrl": "${APIReferenceDocPage}API_StartCompute.html",
+        "permissionOnly": false,
+        "description": "Grants permission to start compute",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "StartConversation",
         "apiReferenceUrl": "${APIReferenceDocPage}API_StartConversation.html",
         "permissionOnly": false,
@@ -123576,6 +123848,36 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_StartNotebookImport.html",
         "permissionOnly": false,
         "description": "Grants permission to import notebooks",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StartNotebookSync",
+        "apiReferenceUrl": "${APIReferenceDocPage}API_StartNotebookSync.html",
+        "permissionOnly": false,
+        "description": "Grants permission to start notebook sync",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StopCompute",
+        "apiReferenceUrl": "${APIReferenceDocPage}API_StopCompute.html",
+        "permissionOnly": false,
+        "description": "Grants permission to stop compute",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -174042,6 +174344,7 @@
               "ecs:propagate-tags",
               "ecs:subnet",
               "ecs:task-cpu",
+              "ecs:task-definition",
               "ecs:task-memory"
             ],
             "dependentActions": []
@@ -177282,7 +177585,8 @@
               "eks:deletionProtection",
               "eks:controlPlaneScalingTier",
               "eks:encryptionConfigProviderKeyArns",
-              "eks:zonalShiftEnabled"
+              "eks:zonalShiftEnabled",
+              "eks:controlPlaneEgressMode"
             ],
             "dependentActions": []
           }
@@ -178385,7 +178689,8 @@
               "eks:endpointPrivateAccess",
               "eks:deletionProtection",
               "eks:controlPlaneScalingTier",
-              "eks:zonalShiftEnabled"
+              "eks:zonalShiftEnabled",
+              "eks:controlPlaneEgressMode"
             ],
             "dependentActions": []
           }
@@ -178640,6 +178945,12 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
         "description": "Filters access by the compute config enabled parameter in the create / update cluster request",
         "type": "Bool"
+      },
+      {
+        "name": "eks:controlPlaneEgressMode",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/userguide/security_iam_service-with-iam.html#security_iam_service-with-iam-id-based-policies",
+        "description": "Filters access by the control plane egress mode specified in the create / update cluster request",
+        "type": "String"
       },
       {
         "name": "eks:controlPlaneScalingTier",
@@ -301199,6 +301510,21 @@
         ]
       },
       {
+        "name": "DescribeSharedResources",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazon-mq/latest/api-reference/brokers-broker-id-shared-resources.html",
+        "permissionOnly": false,
+        "description": "Grants permission to return the resources shared to a broker",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "brokers",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DescribeUser",
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazon-mq/latest/api-reference/rest-api-username.html#rest-api-username-methods-get",
         "permissionOnly": false,
@@ -340258,6 +340584,21 @@
         ]
       },
       {
+        "name": "BatchAssignLimitsProfile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_BatchAssignLimitsProfile.html",
+        "permissionOnly": false,
+        "description": "Grants permission to assign a limits profile to targets",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "limitsProfile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "BatchCreateTopicReviewedAnswer",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_BatchCreateTopicReviewedAnswer.html",
         "permissionOnly": false,
@@ -340330,6 +340671,21 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "BatchUnassignLimitsProfile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_BatchUnassignLimitsProfile.html",
+        "permissionOnly": false,
+        "description": "Grants permission to unassign a limits profile from targets",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "limitsProfile",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -340782,6 +341138,30 @@
         "resourceTypes": [
           {
             "resourceType": "ingestion",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateLimitsProfile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_CreateLimitsProfile.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a limits profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "limitsProfile",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -341474,6 +341854,21 @@
         ]
       },
       {
+        "name": "DeleteLimitsProfile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteLimitsProfile.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a limits profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "limitsProfile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteNamespace",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteNamespace.html",
         "permissionOnly": false,
@@ -341918,6 +342313,36 @@
         "resourceTypes": [
           {
             "resourceType": "assetBundleImportJob",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeAutomationGroup",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeAutomationGroup.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe an automation group",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "automationGroup",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeAutomationGroupPermissions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeAutomationGroupPermissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe permissions for an automation group",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "automationGroup",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -342430,6 +342855,21 @@
         "resourceTypes": [
           {
             "resourceType": "knowledgeBase",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeLimitsProfile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeLimitsProfile.html",
+        "permissionOnly": false,
+        "description": "Grants permission to describe a limits profile",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "limitsProfile",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -343103,6 +343543,36 @@
         ]
       },
       {
+        "name": "ListAssignmentsForPrincipal",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListAssignmentsForPrincipal.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list limits profile assignments for a principal",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "limitsProfile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAutomationGroups",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListAutomationGroups.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all automation groups in an account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListBrands",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListBrands.html",
         "permissionOnly": false,
@@ -343436,6 +343906,21 @@
         ]
       },
       {
+        "name": "ListLimitsProfiles",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListLimitsProfiles.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list limits profiles",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "limitsProfile",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListNamespaces",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListNamespaces.html",
         "permissionOnly": false,
@@ -343464,6 +343949,21 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListProfileAssignments",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListProfileAssignments.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list assignments for a limits profile",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "limitsProfile",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -344090,6 +344590,21 @@
           {
             "resourceType": "analysis",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "SearchAutomationGroups",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_SearchAutomationGroups.html",
+        "permissionOnly": false,
+        "description": "Grants permission to search for automation groups in an account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -344812,6 +345327,21 @@
         ]
       },
       {
+        "name": "UpdateAutomationGroupPermissions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateAutomationGroupPermissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update permissions for an automation group",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "automationGroup",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateBrand",
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateBrand.html",
         "permissionOnly": false,
@@ -345256,6 +345786,21 @@
         "resourceTypes": [
           {
             "resourceType": "knowledgeBase",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateLimitsProfile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateLimitsProfile.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a limits profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "limitsProfile",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -345945,6 +346490,14 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ApprovalPolicy.html",
         "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:approval-policy/${ResourceId}",
         "conditionKeys": []
+      },
+      {
+        "name": "limitsProfile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_LimitsProfile.html",
+        "arnPattern": "arn:${Partition}:quicksight:${Region}:${Account}:limits-profile/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -453110,6 +453663,40 @@
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonworkspacesagentaccessmcpserver.html",
     "servicePrefix": "agentaccess-mcp",
     "actions": [
+      {
+        "name": "CallForwardedTool",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke a forwarded tool on a remote instance",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CheckConnectionStatus",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
+        "permissionOnly": false,
+        "description": "Grants permission to check the connection status of a streaming session",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
       {
         "name": "DoubleClick",
         "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/",
