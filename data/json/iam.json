@@ -70961,6 +70961,21 @@
     "servicePrefix": "application-signals",
     "actions": [
       {
+        "name": "BatchDeleteInstrumentationConfigurations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/applicationsignals/latest/APIReference/API_BatchDeleteInstrumentationConfigurations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to batch delete instrumentation configurations",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "instrumentationConfig",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "BatchGetServiceLevelObjectiveBudgetReport",
         "apiReferenceUrl": "https://docs.aws.amazon.com/applicationsignals/latest/APIReference/API_BatchGetServiceLevelObjectiveBudgetReport.html",
         "permissionOnly": false,
@@ -70986,6 +71001,24 @@
             "resourceType": "slo",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateInstrumentationConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/applicationsignals/latest/APIReference/API_CreateInstrumentationConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an instrumentation configuration for dynamic instrumentation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -71024,6 +71057,21 @@
         ]
       },
       {
+        "name": "DeleteInstrumentationConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/applicationsignals/latest/APIReference/API_DeleteInstrumentationConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an instrumentation configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "instrumentationConfig",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteServiceLevelObjective",
         "apiReferenceUrl": "https://docs.aws.amazon.com/applicationsignals/latest/APIReference/API_DeleteServiceLevelObjective.html",
         "permissionOnly": false,
@@ -71032,6 +71080,36 @@
         "resourceTypes": [
           {
             "resourceType": "slo",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetInstrumentationConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/applicationsignals/latest/APIReference/API_GetInstrumentationConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an instrumentation configuration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "instrumentationConfig",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetInstrumentationConfigurationStatus",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/applicationsignals/latest/APIReference/API_GetInstrumentationConfigurationStatus.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the status history of an instrumentation configuration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "instrumentationConfig",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -71118,6 +71196,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/applicationsignals/latest/APIReference/API_ListGroupingAttributeDefinitions.html",
         "permissionOnly": false,
         "description": "Grants permission to list grouping attribute configurations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListInstrumentationConfigurations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/applicationsignals/latest/APIReference/API_ListInstrumentationConfigurations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list instrumentation configurations",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -71252,12 +71345,18 @@
         "name": "ListTagsForResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/applicationsignals/latest/APIReference/API_ListTagsForResource.html",
         "permissionOnly": false,
-        "description": "Grants permission to list tags for an Amazon CloudWatch SLO",
+        "description": "Grants permission to list tags for an Amazon CloudWatch Application Signals resource",
         "accessLevel": "Read",
         "resourceTypes": [
           {
+            "resourceType": "instrumentationConfig",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "slo",
-            "required": true,
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -71273,6 +71372,21 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ReportInstrumentationConfigurationStatus",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/applicationsignals/latest/APIReference/API_ReportInstrumentationConfigurationStatus.html",
+        "permissionOnly": false,
+        "description": "Grants permission to report the status of instrumentation configurations",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "instrumentationConfig",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -71297,12 +71411,18 @@
         "name": "TagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/applicationsignals/latest/APIReference/API_TagResource.html",
         "permissionOnly": false,
-        "description": "Grants permission to add tags to an Amazon CloudWatch SLO",
+        "description": "Grants permission to add tags to an Amazon CloudWatch Application Signals resource",
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
+            "resourceType": "instrumentationConfig",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "slo",
-            "required": true,
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           },
@@ -71321,12 +71441,18 @@
         "name": "UntagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/applicationsignals/latest/APIReference/API_UntagResource.html",
         "permissionOnly": false,
-        "description": "Grants permission to untag to an Amazon CloudWatch SLO",
+        "description": "Grants permission to remove tags from an Amazon CloudWatch Application Signals resource",
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
+            "resourceType": "instrumentationConfig",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "slo",
-            "required": true,
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           },
@@ -71361,6 +71487,14 @@
         "name": "slo",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-ServiceLevelObjectives.html",
         "arnPattern": "arn:${Partition}:application-signals:${Region}:${Account}:slo/${SloName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "instrumentationConfig",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/API_CreateInstrumentationConfiguration.html",
+        "arnPattern": "arn:${Partition}:application-signals:${Region}:${Account}:instrumentationConfig/${Service}/${Environment}/${SignalType}/${LocationHash}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -73087,6 +73221,21 @@
         ]
       },
       {
+        "name": "DeleteSyslogConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DeleteSyslogConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete syslog configuration for the specified log group",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "log-group",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteTransformer",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DeleteTransformer.html",
         "permissionOnly": false,
@@ -73891,6 +74040,21 @@
         ]
       },
       {
+        "name": "ListSyslogConfigurations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_ListSyslogConfigurations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to return all syslog configurations associated with the AWS account making the request",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListTagsForResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_ListTagsForResource.html",
         "permissionOnly": false,
@@ -74284,6 +74448,21 @@
           {
             "resourceType": "destination",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PutSyslogConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutSyslogConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to add syslog configuration for the specified log group",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "log-group",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -223302,6 +223481,21 @@
         ]
       },
       {
+        "name": "CreateInvestigation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_CreateInvestigation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a GuardDuty investigation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateMalwareProtectionPlan",
         "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_CreateMalwareProtectionPlan.html",
         "permissionOnly": false,
@@ -223822,6 +224016,21 @@
         ]
       },
       {
+        "name": "GetInvestigation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_GetInvestigation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a GuardDuty investigation",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetInvitationsCount",
         "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_GetInvitationsCount.html",
         "permissionOnly": false,
@@ -224096,6 +224305,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListIPSets.html",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a list of GuardDuty IPSets",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListInvestigations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListInvestigations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of GuardDuty investigations",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -271698,6 +271922,21 @@
         ]
       },
       {
+        "name": "ConnectMicrovm",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-permissions.html",
+        "permissionOnly": true,
+        "description": "Grants permission to connect to a Lambda MicroVM via HTTP (VPC Endpoint only)",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateAlias",
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_CreateAlias.html",
         "permissionOnly": false,
@@ -271830,6 +272069,86 @@
             "conditionKeys": [
               "lambda:FunctionUrlAuthType",
               "lambda:FunctionArn"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateMicrovmAuthToken",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_CreateMicrovmAuthToken.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an auth token for an AWS Lambda MicroVM",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateMicrovmImage",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_CreateMicrovmImage.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an AWS Lambda MicroVM image",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "iam:PassRole",
+              "lambda:PassNetworkConnector"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "CreateMicrovmShellAuthToken",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_CreateMicrovmShellAuthToken.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a shell auth token for an AWS Lambda MicroVM",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateNetworkConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_CreateNetworkConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an AWS Lambda network connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "networkConnector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:CreateServiceLinkedRole",
+              "iam:PassRole"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "lambda:SecurityGroupIds",
+              "lambda:SubnetIds"
             ],
             "dependentActions": []
           }
@@ -271996,6 +272315,51 @@
         "resourceTypes": [
           {
             "resourceType": "layerVersion",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteMicrovmImage",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_DeleteMicrovmImage.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an AWS Lambda MicroVM image",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteMicrovmImageVersion",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_DeleteMicrovmImageVersion.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a version of an AWS Lambda MicroVM image",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteNetworkConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_DeleteNetworkConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an AWS Lambda network connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "networkConnector",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -272341,6 +272705,81 @@
         ]
       },
       {
+        "name": "GetMicrovm",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_GetMicrovm.html",
+        "permissionOnly": false,
+        "description": "Grants permission to view information about an AWS Lambda MicroVM",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetMicrovmImage",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_GetMicrovmImage.html",
+        "permissionOnly": false,
+        "description": "Grants permission to view information about an AWS Lambda MicroVM image",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetMicrovmImageBuild",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_GetMicrovmImageBuild.html",
+        "permissionOnly": false,
+        "description": "Grants permission to view information about a build of an AWS Lambda MicroVM image version",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetMicrovmImageVersion",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_GetMicrovmImageVersion.html",
+        "permissionOnly": false,
+        "description": "Grants permission to view information about a version of an AWS Lambda MicroVM image",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetNetworkConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_GetNetworkConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to view details about an AWS Lambda network connector",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "networkConnector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetPolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_GetPolicy.html",
         "permissionOnly": false,
@@ -272644,6 +273083,111 @@
         ]
       },
       {
+        "name": "ListManagedMicrovmImageVersions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_ListManagedMicrovmImageVersions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of versions for a managed AWS Lambda MicroVM image",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListManagedMicrovmImages",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_ListManagedMicrovmImages.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of managed AWS Lambda MicroVM images",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListMicrovmImageBuilds",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_ListMicrovmImageBuilds.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of builds for an AWS Lambda MicroVM image version",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListMicrovmImageVersions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_ListMicrovmImageVersions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of versions for an AWS Lambda MicroVM image",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListMicrovmImages",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_ListMicrovmImages.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of AWS Lambda MicroVM images",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListMicrovms",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_ListMicrovms.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of AWS Lambda MicroVMs",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListNetworkConnectors",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_ListNetworkConnectors.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of AWS Lambda network connectors",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListProvisionedConcurrencyConfigs",
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_ListProvisionedConcurrencyConfigs.html",
         "permissionOnly": false,
@@ -272662,7 +273206,7 @@
         "name": "ListTags",
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_ListTags.html",
         "permissionOnly": false,
-        "description": "Grants permission to retrieve a list of tags for an AWS Lambda function, event source mapping, capacity provider, or code signing configuration resource",
+        "description": "Grants permission to retrieve a list of tags for an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector or MicroVM image resource",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -272685,6 +273229,18 @@
           },
           {
             "resourceType": "function",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "microvmImage",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "networkConnector",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -272716,6 +273272,21 @@
           {
             "resourceType": "capacityProvider",
             "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PassNetworkConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-permissions.html",
+        "permissionOnly": true,
+        "description": "Grants permission to pass an AWS Lambda network connector to a service",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -272916,6 +273487,39 @@
         ]
       },
       {
+        "name": "ResumeMicrovm",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_ResumeMicrovm.html",
+        "permissionOnly": false,
+        "description": "Grants permission to resume a suspended AWS Lambda MicroVM",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "RunMicrovm",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_RunMicrovm.html",
+        "permissionOnly": false,
+        "description": "Grants permission to run an AWS Lambda MicroVM from a MicroVM image",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole",
+              "lambda:PassNetworkConnector"
+            ]
+          }
+        ]
+      },
+      {
         "name": "SendDurableExecutionCallbackFailure",
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_SendDurableExecutionCallbackFailure.html",
         "permissionOnly": false,
@@ -272976,10 +273580,25 @@
         ]
       },
       {
+        "name": "SuspendMicrovm",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_SuspendMicrovm.html",
+        "permissionOnly": false,
+        "description": "Grants permission to suspend an AWS Lambda MicroVM",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "TagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_TagResources.html",
         "permissionOnly": false,
-        "description": "Grants permission to add tags to an AWS Lambda function, event source mapping, capacity provider, or code signing configuration resource",
+        "description": "Grants permission to add tags to an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector or MicroVM image resource",
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
@@ -273002,6 +273621,18 @@
           },
           {
             "resourceType": "function",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "microvmImage",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "networkConnector",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -273018,10 +273649,25 @@
         ]
       },
       {
+        "name": "TerminateMicrovm",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_TerminateMicrovm.html",
+        "permissionOnly": false,
+        "description": "Grants permission to terminate an AWS Lambda MicroVM",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UntagResource",
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_UntagResource.html",
         "permissionOnly": false,
-        "description": "Grants permission to remove tags from an AWS Lambda function, event source mapping, capacity provider, or code signing configuration resource",
+        "description": "Grants permission to remove tags from an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector or MicroVM image resource",
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
@@ -273044,6 +273690,18 @@
           },
           {
             "resourceType": "function",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "microvmImage",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "networkConnector",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -273226,6 +273884,54 @@
             "dependentActions": []
           }
         ]
+      },
+      {
+        "name": "UpdateMicrovmImage",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_UpdateMicrovmImage.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an AWS Lambda MicroVM image",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole",
+              "lambda:PassNetworkConnector"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "UpdateMicrovmImageVersion",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_UpdateMicrovmImageVersion.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a version of an AWS Lambda MicroVM image",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "microvmImage",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateNetworkConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_UpdateNetworkConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an AWS Lambda network connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "networkConnector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
       }
     ],
     "resourceTypes": [
@@ -273294,6 +274000,22 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
         "arnPattern": "arn:${Partition}:lambda:${Region}:${Account}:layer:${LayerName}:${LayerVersion}",
         "conditionKeys": []
+      },
+      {
+        "name": "networkConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "arnPattern": "arn:${Partition}:lambda:${Region}:${Account}:network-connector:${NetworkConnectorId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "microvmImage",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/lambda-api-permissions-ref.html",
+        "arnPattern": "arn:${Partition}:lambda:${Region}:${Account}:microvm-image:${MicrovmImageName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
