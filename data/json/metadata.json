@@ -3147,7 +3147,7 @@
       "name": "AWS Billing",
       "servicePrefix": "billing",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsbilling.html",
-      "actionsCount": 29,
+      "actionsCount": 31,
       "actions": [
         "AssociateSourceViews",
         "CreateBillingView",
@@ -3163,7 +3163,9 @@
         "GetContractInformation",
         "GetCreditAllocationHistory",
         "GetCredits",
+        "GetCumulativeTracking",
         "GetIAMAccessPreference",
+        "GetMonthlyTracking",
         "GetResourcePolicy",
         "GetSellerOfRecord",
         "ListBillingViews",
@@ -3179,9 +3181,10 @@
         "UpdateIAMAccessPreference",
         "UseSourceView"
       ],
-      "resourceTypesCount": 1,
+      "resourceTypesCount": 2,
       "resourceTypes": [
-        "billingview"
+        "billingview",
+        "contract"
       ],
       "conditionKeysCount": 3,
       "conditionKeys": [

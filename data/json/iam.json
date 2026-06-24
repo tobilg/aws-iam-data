@@ -43455,7 +43455,7 @@
       {
         "name": "GetBillingPreferences",
         "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions",
-        "permissionOnly": true,
+        "permissionOnly": false,
         "description": "Grants permission to view billing preferences such as reserved instance, savings plans and credits sharing",
         "accessLevel": "Read",
         "resourceTypes": [
@@ -43523,7 +43523,7 @@
       {
         "name": "GetCreditAllocationHistory",
         "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions",
-        "permissionOnly": true,
+        "permissionOnly": false,
         "description": "Grants permission to view a credit allocation history",
         "accessLevel": "Read",
         "resourceTypes": [
@@ -43538,13 +43538,28 @@
       {
         "name": "GetCredits",
         "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions",
-        "permissionOnly": true,
+        "permissionOnly": false,
         "description": "Grants permission to view credits that have been redeemed",
         "accessLevel": "Read",
         "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetCumulativeTracking",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions",
+        "permissionOnly": true,
+        "description": "Grants permission to retrieve cumulative spend and usage tracking data for a contract",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "contract",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -43560,6 +43575,21 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetMonthlyTracking",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions",
+        "permissionOnly": true,
+        "description": "Grants permission to retrieve monthly spend and usage tracking data for a contract",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "contract",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -43705,7 +43735,7 @@
       {
         "name": "RedeemCredits",
         "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions",
-        "permissionOnly": true,
+        "permissionOnly": false,
         "description": "Grants permission to redeem an AWS credit",
         "accessLevel": "Write",
         "resourceTypes": [
@@ -43769,7 +43799,7 @@
       {
         "name": "UpdateBillingPreferences",
         "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions",
-        "permissionOnly": true,
+        "permissionOnly": false,
         "description": "Grants permission to update billing preferences such as reserved instance, savings plans and credits sharing",
         "accessLevel": "Write",
         "resourceTypes": [
@@ -43843,6 +43873,12 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
+      },
+      {
+        "name": "contract",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/",
+        "arnPattern": "arn:${Partition}:billing::${Account}:contract/${ContractId}",
+        "conditionKeys": []
       }
     ],
     "conditionKeys": [
