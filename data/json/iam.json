@@ -94867,6 +94867,21 @@
         ]
       },
       {
+        "name": "DeleteConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/config/latest/APIReference/API_DeleteConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a connector configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Connector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteDeliveryChannel",
         "apiReferenceUrl": "https://docs.aws.amazon.com/config/latest/APIReference/API_DeleteDeliveryChannel.html",
         "permissionOnly": false,
@@ -95626,6 +95641,21 @@
         ]
       },
       {
+        "name": "GetConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/config/latest/APIReference/API_GetConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to return the details of a specific connector configuration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Connector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetCustomRulePolicy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/config/latest/APIReference/API_GetCustomRulePolicy.html",
         "permissionOnly": false,
@@ -95780,6 +95810,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/config/latest/APIReference/API_ListConformancePackComplianceScores.html",
         "permissionOnly": false,
         "description": "Grants permission to return the percentage of compliant rule-resource combinations in a conformance pack compared to the number of total possible rule-resource combinations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListConnectors",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/config/latest/APIReference/API_ListConnectors.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all connectors in the AWS account and region",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -96022,6 +96067,32 @@
         ]
       },
       {
+        "name": "PutConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/config/latest/APIReference/API_PutConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a connector configuration that contains provider identity information, as well as other optional provider-specific information required for third-party recording",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Connector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:CreateServiceLinkedRole"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "PutDeliveryChannel",
         "apiReferenceUrl": "https://docs.aws.amazon.com/config/latest/APIReference/API_PutDeliveryChannel.html",
         "permissionOnly": false,
@@ -96210,6 +96281,33 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PutThirdPartyServiceLinkedConfigurationRecorder",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/config/latest/APIReference/API_PutThirdPartyServiceLinkedConfigurationRecorder.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create or update a service-linked configuration recorder for a third-party provider linked to a specific AWS partner service",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Connector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "config:GetConnector"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "config:ConfigurationRecorderServicePrincipal"
             ],
             "dependentActions": []
           }
@@ -96535,6 +96633,14 @@
         "name": "ConfigurationRecorder",
         "apiReferenceUrl": "https://docs.aws.amazon.com/config/latest/APIReference/API_ConfigurationRecorder.html",
         "arnPattern": "arn:${Partition}:config:${Region}:${Account}:configuration-recorder/${RecorderName}/${RecorderId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "Connector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/config/latest/APIReference/API_Connector.html",
+        "arnPattern": "arn:${Partition}:config:${Region}:${Account}:connector/${Provider}/${ProviderId}/${ConnectorId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -240197,6 +240303,30 @@
         ]
       },
       {
+        "name": "CreateConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_CreateConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a connector to scan resources from a third-party cloud provider",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Connector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateFilter",
         "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_CreateFilter.html",
         "permissionOnly": false,
@@ -240297,6 +240427,21 @@
         "resourceTypes": [
           {
             "resourceType": "Code Security Scan Configuration",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_DeleteConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a connector configured for scanning resources from a third-party cloud provider",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Connector",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -240713,6 +240858,36 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_ListCodeSecurityScanConfigurations.html",
         "permissionOnly": false,
         "description": "Grants permission to list all code security scan configurations in your account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListConnectorScanConfigurations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_ListConnectorScanConfigurations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list scan configurations for connectors",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListConnectors",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_ListConnectors.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list connectors configured for scanning resources from third-party cloud providers",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -241145,6 +241320,46 @@
         ]
       },
       {
+        "name": "UpdateConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_UpdateConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a connector configured for scanning resources from a third-party cloud provider",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Connector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateConnectorScanConfiguration",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_UpdateConnectorScanConfiguration.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update scan configuration settings for resources associated with a connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateEc2DeepInspectionConfiguration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_UpdateEc2DeepInspectionConfiguration.html",
         "permissionOnly": false,
@@ -241264,6 +241479,14 @@
         "name": "Code Security Integration",
         "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/latest/user/what-is-inspector.html",
         "arnPattern": "arn:${Partition}:inspector2:${Region}:${Account}:codesecurity-integration/${CodeSecurityIntegrationId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "Connector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/latest/user/what-is-inspector.html",
+        "arnPattern": "arn:${Partition}:inspector2:${Region}:${Account}:connector/${ConnectorId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
