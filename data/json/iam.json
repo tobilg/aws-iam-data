@@ -398830,6 +398830,24 @@
         ]
       },
       {
+        "name": "CreateConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_CreateConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a connector based on input parameters",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateConnectorV2",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_CreateConnectorV2.html",
         "permissionOnly": false,
@@ -398976,6 +398994,21 @@
         "resourceTypes": [
           {
             "resourceType": "configuration-policy",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DeleteConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a connector in Security Hub CSPM",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "connector",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -399227,6 +399260,21 @@
         ]
       },
       {
+        "name": "DisableSecurityHubFeatureV2",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DisableSecurityHubFeatureV2.html",
+        "permissionOnly": false,
+        "description": "Grants permission to disable a Security Hub V2 feature",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "hubv2",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DisableSecurityHubV2",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_DisableSecurityHubV2.html",
         "permissionOnly": false,
@@ -399342,6 +399390,21 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "EnableSecurityHubFeatureV2",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_EnableSecurityHubFeatureV2.html",
+        "permissionOnly": false,
+        "description": "Grants permission to enable a Security Hub V2 feature",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "hubv2",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -399470,6 +399533,21 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details for a connector from Security Hub CSPM based on connector id",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "connector",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -399919,6 +399997,21 @@
         ]
       },
       {
+        "name": "ListConnectors",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_ListConnectors.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of connectors and their metadata for the calling account from Security Hub CSPM",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListConnectorsV2",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_ListConnectorsV2.html",
         "permissionOnly": false,
@@ -400177,6 +400270,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "connector",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "connectorv2",
             "required": false,
             "conditionKeys": [],
@@ -400223,6 +400322,12 @@
           },
           {
             "resourceType": "configuration-policy",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "connector",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -400301,6 +400406,21 @@
         "resourceTypes": [
           {
             "resourceType": "configuration-policy",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_UpdateConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a connector in Security Hub CSPM based on connector id and input parameters",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "connector",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -400487,6 +400607,14 @@
         "name": "configuration-policy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/latest/userguide/central-configuration-intro.html",
         "arnPattern": "arn:${Partition}:securityhub:${Region}:${Account}:configuration-policy/${ConfigurationPolicyId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "connector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/latest/userguide/securityhub-access.html#resources",
+        "arnPattern": "arn:${Partition}:securityhub:${Region}:${Account}:connector/${ConnectorId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -424622,6 +424750,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "cloud-connector",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "document",
             "required": false,
             "conditionKeys": [],
@@ -424831,6 +424965,34 @@
         ]
       },
       {
+        "name": "CreateCloudConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateCloudConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a cloud connector for managing instances in other cloud environments",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cloud-connector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "config:GetConnector",
+              "config:PutThirdPartyServiceLinkedConfigurationRecorder",
+              "iam:PassRole"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateDocument",
         "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_CreateDocument.html",
         "permissionOnly": false,
@@ -424997,6 +425159,34 @@
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteCloudConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DeleteCloudConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a specified cloud connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cloud-connector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "config:DeleteServiceLinkedConfigurationRecorder",
+              "config:GetConnector",
+              "config:PutThirdPartyServiceLinkedConfigurationRecorder",
+              "ssm:ListAssociations"
+            ]
           },
           {
             "resourceType": "",
@@ -426007,6 +426197,29 @@
         ]
       },
       {
+        "name": "GetCloudConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetCloudConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to view details about a specified cloud connector",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "cloud-connector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetCommandInvocation",
         "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_GetCommandInvocation.html",
         "permissionOnly": false,
@@ -426517,6 +426730,21 @@
         ]
       },
       {
+        "name": "ListCloudConnectors",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_ListCloudConnectors.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list cloud connectors in your account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListCommandInvocations",
         "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_ListCommandInvocations.html",
         "permissionOnly": false,
@@ -426803,6 +427031,12 @@
           },
           {
             "resourceType": "automation-execution",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "cloud-connector",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -427105,6 +427339,12 @@
           },
           {
             "resourceType": "automation-execution",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "cloud-connector",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -427616,6 +427856,32 @@
         ]
       },
       {
+        "name": "UpdateCloudConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_UpdateCloudConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a specified cloud connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cloud-connector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "config:GetConnector",
+              "config:PutThirdPartyServiceLinkedConfigurationRecorder"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateDocument",
         "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_UpdateDocument.html",
         "permissionOnly": false,
@@ -427916,6 +428182,29 @@
             "resourceType": "servicesetting",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ValidateCloudConnector",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_ValidateCloudConnector.html",
+        "permissionOnly": false,
+        "description": "Grants permission to verify that a specified cloud connector is functioning properly and to retrieve any validation findings or issues detected",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "cloud-connector",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
