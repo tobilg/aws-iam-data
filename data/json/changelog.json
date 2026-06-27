@@ -1,5 +1,28 @@
 [
   {
+    "dateOfChange": "2026-06-27",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS DevOps Agent Service": [
+        "aidevops:UpdateApprovalAction"
+      ],
+      "AWS User Subscriptions": [
+        "user-subscriptions:CreateClaimAddOn",
+        "user-subscriptions:DeleteAutoTopUpRule",
+        "user-subscriptions:GetAutoTopUpRule",
+        "user-subscriptions:GetEffectiveUsageLimit",
+        "user-subscriptions:GetUsageLimitHistory",
+        "user-subscriptions:ListClaimAddOns",
+        "user-subscriptions:ListEntitlements",
+        "user-subscriptions:ListUsageLimits",
+        "user-subscriptions:SetAutoTopUpRule",
+        "user-subscriptions:SetUsageLimit"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-06-26",
     "addedServices": [],
     "removedServices": [],

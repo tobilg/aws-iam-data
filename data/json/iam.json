@@ -130891,6 +130891,21 @@
         ]
       },
       {
+        "name": "UpdateApprovalAction",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_UpdateApprovalAction.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an approval action (approve or reject) for an agent tool invocation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateAsset",
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_UpdateAsset.html",
         "permissionOnly": false,
@@ -439791,6 +439806,36 @@
         ]
       },
       {
+        "name": "CreateClaimAddOn",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a User subscription Claim add-on",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteAutoTopUpRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a User subscription auto-top-up rule",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteClaim",
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
         "permissionOnly": false,
@@ -439806,10 +439851,70 @@
         ]
       },
       {
+        "name": "GetAutoTopUpRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a User subscription auto-top-up rule",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetEffectiveUsageLimit",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get a User subscription effective usage limit",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetUsageLimitHistory",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get User subscription usage limit history",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListApplicationClaims",
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
         "permissionOnly": false,
         "description": "Grants permission to list all User subscription Claims for Application",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListClaimAddOns",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all User subscription Claim add-ons",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -439836,6 +439941,36 @@
         ]
       },
       {
+        "name": "ListEntitlements",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all User subscription entitlements",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListUsageLimits",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all User subscription usage limits",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListUserSubscriptions",
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
         "permissionOnly": false,
@@ -439851,10 +439986,40 @@
         ]
       },
       {
+        "name": "SetAutoTopUpRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to set a User subscription auto-top-up rule",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "SetOverageConfig",
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
         "permissionOnly": false,
         "description": "Grants permission to set a User subscription overage configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "SetUsageLimit",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to set a User subscription usage limit",
         "accessLevel": "Write",
         "resourceTypes": [
           {
