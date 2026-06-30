@@ -1792,34 +1792,46 @@
       "name": "AWS Artifact",
       "servicePrefix": "artifact",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awsartifact.html",
-      "actionsCount": 15,
+      "actionsCount": 23,
       "actions": [
         "AcceptAgreement",
         "AcceptNdaForAgreement",
+        "CreateComplianceInquiry",
+        "ExportComplianceInquiry",
         "GetAccountSettings",
         "GetAgreement",
+        "GetComplianceInquiryMetadata",
         "GetCustomerAgreement",
         "GetNdaForAgreement",
         "GetReport",
         "GetReportMetadata",
         "GetTermForReport",
         "ListAgreements",
+        "ListComplianceInquiries",
+        "ListComplianceInquiryQueries",
         "ListCustomerAgreements",
         "ListReportVersions",
         "ListReports",
+        "ListTagsForResource",
         "PutAccountSettings",
-        "TerminateAgreement"
+        "TagResource",
+        "TerminateAgreement",
+        "UntagResource"
       ],
-      "resourceTypesCount": 3,
+      "resourceTypesCount": 4,
       "resourceTypes": [
         "customer-agreement",
         "agreement",
-        "report"
+        "report",
+        "compliance-inquiry"
       ],
-      "conditionKeysCount": 2,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "artifact:ReportCategory",
-        "artifact:ReportSeries"
+        "artifact:ReportSeries",
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
       ]
     },
     {
@@ -10006,7 +10018,7 @@
       "name": "Amazon EC2",
       "servicePrefix": "ec2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonec2.html",
-      "actionsCount": 791,
+      "actionsCount": 793,
       "actions": [
         "AcceptAddressTransfer",
         "AcceptCapacityReservationBillingOwnership",
@@ -10047,6 +10059,7 @@
         "AssociateVpcCidrBlock",
         "AttachApplianceToNatGateway",
         "AttachClassicLinkVpc",
+        "AttachImageWatermark",
         "AttachInternetGateway",
         "AttachNetworkInterface",
         "AttachResourcesToPlacementGroup",
@@ -10477,6 +10490,7 @@
         "DescribeVpnGateways",
         "DetachApplianceFromNatGateway",
         "DetachClassicLinkVpc",
+        "DetachImageWatermark",
         "DetachInternetGateway",
         "DetachNetworkInterface",
         "DetachResourcesFromPlacementGroup",
@@ -22016,7 +22030,7 @@
       "name": "Amazon OpenSearch Service",
       "servicePrefix": "es",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amazonopensearchservice.html",
-      "actionsCount": 127,
+      "actionsCount": 128,
       "actions": [
         "AcceptInboundConnection",
         "AcceptInboundCrossClusterSearchConnection",
@@ -22101,6 +22115,7 @@
         "GetPackageVersionHistory",
         "GetUpgradeHistory",
         "GetUpgradeStatus",
+        "InsightFeedback",
         "ListApplications",
         "ListDataSourceAttachments",
         "ListDataSources",
@@ -30797,7 +30812,7 @@
       "name": "AWS Transform custom",
       "servicePrefix": "transform-custom",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_awstransformcustom.html",
-      "actionsCount": 51,
+      "actionsCount": 52,
       "actions": [
         "BatchCreateFindings",
         "BatchUpdateFindings",
@@ -30838,6 +30853,7 @@
         "ListTagsForResource",
         "ListTransformationPackageMetadata",
         "ListTransformationPackageShares",
+        "SendTelemetryEvent",
         "ShareTransformationPackage",
         "TagResource",
         "UnshareTransformationPackage",
@@ -31593,7 +31609,7 @@
         "UpdateRuleGroup",
         "UpdateWebACL"
       ],
-      "resourceTypesCount": 12,
+      "resourceTypesCount": 13,
       "resourceTypes": [
         "webacl",
         "ipset",
@@ -31606,7 +31622,8 @@
         "userpool",
         "apprunner",
         "verified-access-instance",
-        "amplify-app"
+        "amplify-app",
+        "agentcore-gateway"
       ],
       "conditionKeysCount": 5,
       "conditionKeys": [

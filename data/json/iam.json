@@ -23477,6 +23477,45 @@
         ]
       },
       {
+        "name": "CreateComplianceInquiry",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/APIReference/API_CreateComplianceInquiry.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a compliance inquiry",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "compliance-inquiry",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ExportComplianceInquiry",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/APIReference/API_ExportComplianceInquiry.html",
+        "permissionOnly": false,
+        "description": "Grants permission to export a compliance inquiry",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "compliance-inquiry",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetAccountSettings",
         "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/APIReference/API_GetAccountSettings.html",
         "permissionOnly": false,
@@ -23500,6 +23539,21 @@
         "resourceTypes": [
           {
             "resourceType": "agreement",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetComplianceInquiryMetadata",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/APIReference/API_GetComplianceInquiryMetadata.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get metadata associated with a compliance inquiry",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "compliance-inquiry",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -23597,6 +23651,36 @@
         ]
       },
       {
+        "name": "ListComplianceInquiries",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/APIReference/API_ListComplianceInquiries.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list compliance inquiries submitted by the customer account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListComplianceInquiryQueries",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/APIReference/API_ListComplianceInquiryQueries.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list queries for a compliance inquiry",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "compliance-inquiry",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListCustomerAgreements",
         "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/APIReference/API_ListCustomerAgreements.html",
         "permissionOnly": false,
@@ -23642,6 +23726,21 @@
         ]
       },
       {
+        "name": "ListTagsForResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/APIReference/API_ListTagsForResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all tags on an AWS Artifact resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "compliance-inquiry",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "PutAccountSettings",
         "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/APIReference/API_PutAccountSettings.html",
         "permissionOnly": false,
@@ -23657,6 +23756,30 @@
         ]
       },
       {
+        "name": "TagResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/APIReference/API_TagResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to associate a set of tags with an AWS Artifact resource",
+        "accessLevel": "Tagging",
+        "resourceTypes": [
+          {
+            "resourceType": "compliance-inquiry",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "TerminateAgreement",
         "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/APIReference/API_TerminateAgreement.html",
         "permissionOnly": false,
@@ -23667,6 +23790,29 @@
             "resourceType": "customer-agreement",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UntagResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/APIReference/API_UntagResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to remove the association of tags from an AWS Artifact resource",
+        "accessLevel": "Tagging",
+        "resourceTypes": [
+          {
+            "resourceType": "compliance-inquiry",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ]
@@ -23693,6 +23839,14 @@
           "artifact:ReportCategory",
           "artifact:ReportSeries"
         ]
+      },
+      {
+        "name": "compliance-inquiry",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/ug/managing-compliance-inquiries.html",
+        "arnPattern": "arn:${Partition}:artifact:${Region}:${Account}:compliance-inquiry/*",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -23707,6 +23861,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/artifact/latest/ug/using-condition-keys.html",
         "description": "Filters access by which series reports are associated with",
         "type": "String"
+      },
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-requesttag",
+        "description": "Filters access by the tags that are passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-resourcetag",
+        "description": "Filters access by the tags associated with the resource",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/UserGuide/reference_policies_condition-keys.html#condition-keys-tagkeys",
+        "description": "Filters access by the tag keys that are passed in the request",
+        "type": "ArrayOfString"
       }
     ]
   },
@@ -139255,6 +139427,37 @@
         ]
       },
       {
+        "name": "AttachImageWatermark",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AttachImageWatermark.html",
+        "permissionOnly": false,
+        "description": "Grants permission to attach a watermark to an Amazon Machine Image (AMI)",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "image",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:ImageID",
+              "ec2:ImageType",
+              "ec2:Owner",
+              "ec2:Public",
+              "ec2:ResourceTag/${TagKey}",
+              "ec2:RootDeviceType"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "AttachInternetGateway",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AttachInternetGateway.html",
         "permissionOnly": false,
@@ -140215,15 +140418,24 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "capacity-reservation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "ec2:CreateTags"
+            ]
+          },
+          {
             "resourceType": "capacity-reservation-cancellation-quote",
             "required": true,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "ec2:CreateTags"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "",
@@ -140811,12 +141023,15 @@
               "aws:TagKeys"
             ],
             "dependentActions": [
+              "autoscaling:DescribeTags",
               "ec2:CreateTags",
+              "ec2:DescribeTags",
               "ecs:ListClusters",
               "ecs:ListContainerInstances",
               "ecs:ListServices",
               "ecs:ListTaskDefinitions",
               "ecs:ListTasks",
+              "iam:CreateServiceLinkedRole",
               "iam:PassRole"
             ]
           },
@@ -153464,6 +153679,37 @@
         ]
       },
       {
+        "name": "DetachImageWatermark",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DetachImageWatermark.html",
+        "permissionOnly": false,
+        "description": "Grants permission to detach a watermark from an Amazon Machine Image (AMI)",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "image",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:ImageID",
+              "ec2:ImageType",
+              "ec2:Owner",
+              "ec2:Public",
+              "ec2:ResourceTag/${TagKey}",
+              "ec2:RootDeviceType"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DetachInternetGateway",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DetachInternetGateway.html",
         "permissionOnly": false,
@@ -163140,6 +163386,15 @@
             "dependentActions": []
           },
           {
+            "resourceType": "secondary-interface",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "secondary-subnet",
             "required": false,
             "conditionKeys": [
@@ -163161,6 +163416,15 @@
               "ec2:SnapshotID",
               "ec2:SnapshotTime",
               "ec2:VolumeSize"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "spot-instances-request",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
             ],
             "dependentActions": []
           },
@@ -314600,6 +314864,21 @@
         ]
       },
       {
+        "name": "InsightFeedback",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_InsightFeedback.html",
+        "permissionOnly": false,
+        "description": "Grants permission to submit feedback for OpenSearch domain insight",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListApplications",
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_ListApplications.html",
         "permissionOnly": false,
@@ -437316,6 +437595,21 @@
         ]
       },
       {
+        "name": "SendTelemetryEvent",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
+        "permissionOnly": false,
+        "description": "Grants permission to send a CLI telemetry event",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ShareTransformationPackage",
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html",
         "permissionOnly": false,
@@ -445726,6 +446020,7 @@
               "apprunner:AssociateWebAcl",
               "appsync:AssociateWebACL",
               "appsync:SetWebACL",
+              "bedrock-agentcore:GatewayAssociateWebACL",
               "cognito-idp:AssociateWebACL",
               "ec2:AssociateVerifiedAccessInstanceWebAcl",
               "elasticloadbalancing:CreateWebACLAssociation",
@@ -445733,6 +446028,12 @@
               "wafv2:GetPermissionPolicy",
               "wafv2:PutPermissionPolicy"
             ]
+          },
+          {
+            "resourceType": "agentcore-gateway",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
           },
           {
             "resourceType": "amplify-app",
@@ -446144,7 +446445,7 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "amplify-app",
+            "resourceType": "agentcore-gateway",
             "required": false,
             "conditionKeys": [],
             "dependentActions": [
@@ -446153,12 +446454,19 @@
               "apprunner:DisassociateWebAcl",
               "appsync:DisassociateWebACL",
               "appsync:SetWebACL",
+              "bedrock-agentcore:GatewayDisassociateWebACL",
               "cognito-idp:DisassociateWebACL",
               "ec2:DisassociateVerifiedAccessInstanceWebAcl",
               "elasticloadbalancing:DeleteWebACLAssociation",
               "elasticloadbalancing:SetWebAcl",
               "wafv2:PutPermissionPolicy"
             ]
+          },
+          {
+            "resourceType": "amplify-app",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
           },
           {
             "resourceType": "apigateway",
@@ -446502,11 +446810,18 @@
               "amplify:GetWebACLForResource",
               "apprunner:DescribeWebAclForService",
               "appsync:GetWebACLForResource",
+              "bedrock-agentcore:GatewayGetWebACLForResource",
               "cognito-idp:GetWebACLForResource",
               "ec2:GetVerifiedAccessInstanceWebAcl",
               "elasticloadbalancing:GetLoadBalancerWebACL",
               "wafv2:GetWebACL"
             ]
+          },
+          {
+            "resourceType": "agentcore-gateway",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
           },
           {
             "resourceType": "amplify-app",
@@ -446689,10 +447004,17 @@
               "amplify:ListResourcesForWebACL",
               "apprunner:ListAssociatedServicesForWebAcl",
               "appsync:ListResourcesForWebACL",
+              "bedrock-agentcore:GatewayListResourcesForWebACL",
               "cognito-idp:ListResourcesForWebACL",
               "ec2:DescribeVerifiedAccessInstanceWebAclAssociations",
               "elasticloadbalancing:DescribeWebACLAssociation"
             ]
+          },
+          {
+            "resourceType": "agentcore-gateway",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
           },
           {
             "resourceType": "amplify-app",
@@ -447190,6 +447512,12 @@
         "name": "amplify-app",
         "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html",
         "arnPattern": "arn:${Partition}:amplify:${Region}:${Account}:apps/${AppId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "agentcore-gateway",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_WebACL.html",
+        "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:gateway/${GatewayId}",
         "conditionKeys": []
       }
     ],

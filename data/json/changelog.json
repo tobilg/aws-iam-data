@@ -1,5 +1,33 @@
 [
   {
+    "dateOfChange": "2026-06-30",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Artifact": [
+        "artifact:CreateComplianceInquiry",
+        "artifact:ExportComplianceInquiry",
+        "artifact:GetComplianceInquiryMetadata",
+        "artifact:ListComplianceInquiries",
+        "artifact:ListComplianceInquiryQueries",
+        "artifact:ListTagsForResource",
+        "artifact:TagResource",
+        "artifact:UntagResource"
+      ],
+      "Amazon EC2": [
+        "ec2:AttachImageWatermark",
+        "ec2:DetachImageWatermark"
+      ],
+      "Amazon OpenSearch Service": [
+        "es:InsightFeedback"
+      ],
+      "AWS Transform custom": [
+        "transform-custom:SendTelemetryEvent"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-06-27",
     "addedServices": [],
     "removedServices": [],
