@@ -47458,7 +47458,137 @@
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "acm:CertificateKeyPairOrigin"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateAcmeDomainValidation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_CreateAcmeDomainValidation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an ACME domain validation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "route53:ChangeResourceRecordSets",
+              "route53:GetHostedZone"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateAcmeEndpoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_CreateAcmeEndpoint.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an ACME endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateAcmeExternalAccountBinding",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_CreateAcmeExternalAccountBinding.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an ACME external account binding",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteAcmeDomainValidation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_DeleteAcmeDomainValidation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an ACME domain validation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-domain-validation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "route53:ChangeResourceRecordSets",
+              "route53:GetChange"
+            ]
+          }
+        ]
+      },
+      {
+        "name": "DeleteAcmeEndpoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_DeleteAcmeEndpoint.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an ACME endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteAcmeExternalAccountBinding",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_DeleteAcmeExternalAccountBinding.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an ACME external account binding",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-external-account-binding",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -47475,6 +47605,82 @@
             "resourceType": "certificate",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "acm:CertificateKeyPairOrigin"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeAcmeAccount",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeAcmeAccount.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of an ACME account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeAcmeDomainValidation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeAcmeDomainValidation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of an ACME domain validation",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-domain-validation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeAcmeEndpoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeAcmeEndpoint.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of an ACME endpoint",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeAcmeExternalAccountBinding",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_DescribeAcmeExternalAccountBinding.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of an ACME external account binding",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-external-account-binding",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -47533,6 +47739,23 @@
         ]
       },
       {
+        "name": "GetAcmeExternalAccountBindingCredentials",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_GetAcmeExternalAccountBindingCredentials.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve credentials for an ACME external account binding",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-external-account-binding",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetCertificate",
         "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_GetCertificate.html",
         "permissionOnly": false,
@@ -47572,6 +47795,72 @@
         ]
       },
       {
+        "name": "ListAcmeAccounts",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_ListAcmeAccounts.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list ACME accounts",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAcmeDomainValidations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_ListAcmeDomainValidations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list ACME domain validations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAcmeEndpoints",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_ListAcmeEndpoints.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list ACME endpoints",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListAcmeExternalAccountBindings",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_ListAcmeExternalAccountBindings.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list ACME external account bindings",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListCertificates",
         "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_ListCertificates.html",
         "permissionOnly": false,
@@ -47597,6 +47886,39 @@
             "resourceType": "certificate",
             "required": true,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListTagsForResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_ListTagsForResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list tags for a resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-domain-validation",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "acme-endpoint",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "acme-external-account-binding",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ]
@@ -47673,7 +47995,8 @@
               "acm:ValidationMethod",
               "acm:KeyAlgorithm",
               "acm:CertificateAuthority",
-              "acm:Export"
+              "acm:Export",
+              "acm:CertificateKeyPairOrigin"
             ],
             "dependentActions": []
           }
@@ -47695,6 +48018,40 @@
         ]
       },
       {
+        "name": "RevokeAcmeAccount",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_RevokeAcmeAccount.html",
+        "permissionOnly": false,
+        "description": "Grants permission to revoke an ACME account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "RevokeAcmeExternalAccountBinding",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_RevokeAcmeExternalAccountBinding.html",
+        "permissionOnly": false,
+        "description": "Grants permission to revoke an ACME external account binding",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-external-account-binding",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "RevokeCertificate",
         "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_RevokeCertificate.html",
         "permissionOnly": false,
@@ -47711,7 +48068,8 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
-              "acm:DomainNames"
+              "acm:DomainNames",
+              "acm:CertificateKeyPairOrigin"
             ],
             "dependentActions": []
           }
@@ -47728,6 +48086,146 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "TagResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_TagResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to add tags to a resource",
+        "accessLevel": "Tagging",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-domain-validation",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "acme-endpoint",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "acme-external-account-binding",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UntagResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_UntagResource.html",
+        "permissionOnly": false,
+        "description": "Grants permission to remove tags from a resource",
+        "accessLevel": "Tagging",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-domain-validation",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "acme-endpoint",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "acme-external-account-binding",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateAcmeDomainValidation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_UpdateAcmeDomainValidation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an ACME domain validation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-domain-validation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateAcmeEndpoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_UpdateAcmeEndpoint.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an ACME endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "acme-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateCertificate",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_UpdateCertificate.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update a certificate",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "certificate",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "acm:CertificateKeyPairOrigin"
+            ],
             "dependentActions": []
           }
         ]
@@ -47756,6 +48254,30 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
+      },
+      {
+        "name": "acme-endpoint",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/userguide/acm-acme-endpoints.html",
+        "arnPattern": "arn:${Partition}:acm:${Region}:${Account}:acme-endpoint/${AcmeEndpointId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "acme-domain-validation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/userguide/acm-acme-domain-validation.html",
+        "arnPattern": "arn:${Partition}:acm:${Region}:${Account}:acme-endpoint/${AcmeEndpointId}/acme-domain-validation/${AcmeDomainValidationId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "acme-external-account-binding",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/userguide/acm-acme-eab.html",
+        "arnPattern": "arn:${Partition}:acm:${Region}:${Account}:acme-endpoint/${AcmeEndpointId}/acme-external-account-binding/${ExternalAccountBindingId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -47763,6 +48285,12 @@
         "name": "acm:CertificateAuthority",
         "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/userguide/security-iam.html",
         "description": "Filters access by certificateAuthority in the request. Can be used to restrict which Certificate Authorites certificates can be issued from",
+        "type": "String"
+      },
+      {
+        "name": "acm:CertificateKeyPairOrigin",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/userguide/security-iam.html",
+        "description": "Filters access by certificateKeyPairOrigin in the request. Can be used to restrict which certificate provisioning paths are permitted",
         "type": "String"
       },
       {
@@ -55664,6 +56192,12 @@
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "intermediatetable",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -55690,6 +56224,12 @@
           },
           {
             "resourceType": "idmappingtable",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "intermediatetable",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -55965,6 +56505,58 @@
         ]
       },
       {
+        "name": "CreateIntermediateTable",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_CreateIntermediateTable.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new intermediate table in a membership",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "intermediatetable",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "cleanrooms:GetCollaborationAnalysisTemplate"
+            ]
+          },
+          {
+            "resourceType": "membership",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "analysistemplate",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateIntermediateTableAnalysisRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_CreateIntermediateTableAnalysisRule.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an analysis rule for an intermediate table",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "intermediatetable",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateMembership",
         "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_CreateMembership.html",
         "permissionOnly": false,
@@ -56194,6 +56786,42 @@
         ]
       },
       {
+        "name": "DeleteIntermediateTable",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_DeleteIntermediateTable.html",
+        "permissionOnly": false,
+        "description": "Grants permission to remove an intermediate table from a collaboration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "intermediatetable",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "membership",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeleteIntermediateTableAnalysisRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_DeleteIntermediateTableAnalysisRule.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an existing analysis rule for an intermediate table",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "intermediatetable",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteMember",
         "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_DeleteMember.html",
         "permissionOnly": false,
@@ -56236,6 +56864,21 @@
         "resourceTypes": [
           {
             "resourceType": "privacybudgettemplate",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DisallowIntermediateTable",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_DisallowIntermediateTable.html",
+        "permissionOnly": false,
+        "description": "Grants permission to invalidate an intermediate table",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "membership",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -56484,6 +57127,42 @@
           },
           {
             "resourceType": "membership",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetIntermediateTable",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_GetIntermediateTable.html",
+        "permissionOnly": false,
+        "description": "Grants permission to view details of an intermediate table",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "intermediatetable",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "membership",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetIntermediateTableAnalysisRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_GetIntermediateTableAnalysisRule.html",
+        "permissionOnly": false,
+        "description": "Grants permission to view analysis rules for an intermediate table",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "intermediatetable",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -56820,6 +57499,48 @@
         ]
       },
       {
+        "name": "ListIntermediateTableVersions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_ListIntermediateTableVersions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list versions of an intermediate table",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "intermediatetable",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "membership",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListIntermediateTables",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_ListIntermediateTables.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list intermediate tables for a membership",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "intermediatetable",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "membership",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListMembers",
         "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_ListMembers.html",
         "permissionOnly": false,
@@ -56968,6 +57689,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "intermediatetable",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "membership",
             "required": false,
             "conditionKeys": [],
@@ -57035,6 +57762,41 @@
         ]
       },
       {
+        "name": "PopulateIntermediateTable",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_PopulateIntermediateTable.html",
+        "permissionOnly": false,
+        "description": "Grants permission to populate an intermediate table by executing its stored analysis",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "intermediatetable",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "cleanrooms:GetSchema"
+            ]
+          },
+          {
+            "resourceType": "membership",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "configuredtableassociation",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "idmappingtable",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "PreviewPrivacyImpact",
         "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_PreviewPrivacyImpact.html",
         "permissionOnly": false,
@@ -57076,6 +57838,12 @@
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
+          },
+          {
+            "resourceType": "intermediatetable",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -57112,6 +57880,12 @@
           },
           {
             "resourceType": "idmappingtable",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "intermediatetable",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -57163,6 +57937,12 @@
           },
           {
             "resourceType": "idnamespaceassociation",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "intermediatetable",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -57235,6 +58015,12 @@
           },
           {
             "resourceType": "idnamespaceassociation",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "intermediatetable",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -57470,6 +58256,42 @@
         ]
       },
       {
+        "name": "UpdateIntermediateTable",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_UpdateIntermediateTable.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an intermediate table",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "intermediatetable",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "membership",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateIntermediateTableAnalysisRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_UpdateIntermediateTableAnalysisRule.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an analysis rule for an intermediate table",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "intermediatetable",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateMembership",
         "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_UpdateMembership.html",
         "permissionOnly": false,
@@ -57603,6 +58425,14 @@
         "name": "membership",
         "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/userguide/security-iam.html",
         "arnPattern": "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "intermediatetable",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/userguide/security-iam.html",
+        "arnPattern": "arn:${Partition}:cleanrooms:${Region}:${Account}:membership/${MembershipId}/intermediatetable/${IntermediateTableId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -97785,6 +98615,32 @@
         ]
       },
       {
+        "name": "CreateAttachedFile",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateAttachedFile.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an attached file upload in an Amazon Connect instance",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "attached-file",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateAuthenticationProfile",
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateAuthenticationProfile.html",
         "permissionOnly": false,
@@ -101243,6 +102099,30 @@
         ]
       },
       {
+        "name": "GetEvaluationFormValidation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_GetEvaluationFormValidation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to get an evaluation form validation in the specified Amazon Connect instance. If the version property is not provided, the validation of the latest version of the evaluation form is provided",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "evaluation-form",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetFederationToken",
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_GetFederationToken.html",
         "permissionOnly": false,
@@ -104129,6 +105009,32 @@
         ]
       },
       {
+        "name": "StartContactConversationalAnalyticsJob",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_StartContactConversationalAnalyticsJob.html",
+        "permissionOnly": false,
+        "description": "Grants permission to start analysis for a contact in Amazon Connect instance",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "contact",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "StartContactEvaluation",
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_StartContactEvaluation.html",
         "permissionOnly": false,
@@ -104260,6 +105166,29 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "StartEvaluationFormValidation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_StartEvaluationFormValidation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to start an evaluation form validation in the specified Amazon Connect instance",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "evaluation-form",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
               "connect:InstanceId"
             ],
             "dependentActions": []
@@ -106946,7 +107875,9 @@
         "name": "ai-agent",
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/adminguide/create-ai-agents.html",
         "arnPattern": "arn:${Partition}:wisdom:${Region}:${Account}:ai-agent/${AssistantId}/${AIAgentId}:${Version}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "workspace",
@@ -178077,6 +179008,21 @@
         ]
       },
       {
+        "name": "CancelUpdate",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/APIReference/API_CancelUpdate.html",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel an in-progress Kubernetes version update for an Amazon EKS cluster",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cluster",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateAccessEntry",
         "apiReferenceUrl": "https://docs.aws.amazon.com/eks/latest/APIReference/API_CreateAccessEntry.html",
         "permissionOnly": false,
@@ -199838,7 +200784,13 @@
         "resourceTypes": [
           {
             "resourceType": "event-bus",
-            "required": true,
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "event-busv2",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           },
@@ -199967,7 +200919,13 @@
         "resourceTypes": [
           {
             "resourceType": "event-bus",
-            "required": true,
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "event-busv2",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -200093,6 +201051,12 @@
         "resourceTypes": [
           {
             "resourceType": "event-bus",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "event-busv2",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -200427,6 +201391,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "event-busv2",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "publisher",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "rule-on-custom-event-bus",
             "required": false,
             "conditionKeys": [],
@@ -200434,6 +201410,12 @@
           },
           {
             "resourceType": "rule-on-default-event-bus",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "subscriber",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -200709,6 +201691,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "event-busv2",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "publisher",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "rule-on-custom-event-bus",
             "required": false,
             "conditionKeys": [],
@@ -200716,6 +201710,12 @@
           },
           {
             "resourceType": "rule-on-default-event-bus",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "subscriber",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -200761,6 +201761,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "event-busv2",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "publisher",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "rule-on-custom-event-bus",
             "required": false,
             "conditionKeys": [],
@@ -200768,6 +201780,12 @@
           },
           {
             "resourceType": "rule-on-default-event-bus",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "subscriber",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -200872,7 +201890,13 @@
         "resourceTypes": [
           {
             "resourceType": "event-bus",
-            "required": true,
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "event-busv2",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -321000,6 +322024,48 @@
         ]
       },
       {
+        "name": "CreateMarketplaceRevenueShare",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_CreateMarketplaceRevenueShare.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create marketplace revenue shares in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateMarketplaceRevenueShareAllocation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_CreateMarketplaceRevenueShareAllocation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create marketplace revenue share allocations in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "MarketplaceRevenueShare",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateOpportunity",
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_CreateOpportunity.html",
         "permissionOnly": false,
@@ -321126,6 +322192,25 @@
             "conditionKeys": [],
             "dependentActions": []
           },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "CreateRevenueAttribution",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_CreateRevenueAttribution.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create revenue attributions in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
@@ -321574,6 +322659,52 @@
         ]
       },
       {
+        "name": "GetMarketplaceRevenueShare",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_GetMarketplaceRevenueShare.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve marketplace revenue share details in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "MarketplaceRevenueShare",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetMarketplaceRevenueShareAllocation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_GetMarketplaceRevenueShareAllocation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve marketplace revenue share allocation details in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "MarketplaceRevenueShare",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "GetOpportunity",
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_GetOpportunity.html",
         "permissionOnly": false,
@@ -321802,6 +322933,75 @@
         "resourceTypes": [
           {
             "resourceType": "resource-snapshot-job",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetRevenueAttribution",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_GetRevenueAttribution.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve revenue attribution details in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "RevenueAttribution",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetRevenueAttributionAllocation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_GetRevenueAttributionAllocation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve revenue attribution allocation details in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "RevenueAttribution",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetRevenueAttributionAllocationsTask",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_GetRevenueAttributionAllocationsTask.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve revenue attribution allocations task details in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "RevenueAttribution",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -322128,6 +323328,46 @@
         ]
       },
       {
+        "name": "ListMarketplaceRevenueShareAllocations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_ListMarketplaceRevenueShareAllocations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list marketplace revenue share allocations in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "MarketplaceRevenueShare",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListMarketplaceRevenueShares",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_ListMarketplaceRevenueShares.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list marketplace revenue shares in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListOpportunities",
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_ListOpportunities.html",
         "permissionOnly": false,
@@ -322286,6 +323526,46 @@
             "conditionKeys": [],
             "dependentActions": []
           },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListRevenueAttributionAllocations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_ListRevenueAttributionAllocations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list revenue attribution allocations in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "RevenueAttribution",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListRevenueAttributions",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_ListRevenueAttributions.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list revenue attributions in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
           {
             "resourceType": "",
             "required": false,
@@ -322712,6 +323992,29 @@
         ]
       },
       {
+        "name": "StartRevenueAttributionAllocationsTask",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_StartRevenueAttributionAllocationsTask.html",
+        "permissionOnly": false,
+        "description": "Grants permission to initiate tasks that manage revenue attribution allocations in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "RevenueAttribution",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "StartVerification",
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_StartVerification.html",
         "permissionOnly": false,
@@ -322821,6 +324124,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "MarketplaceRevenueShare",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Opportunity",
             "required": false,
             "conditionKeys": [],
@@ -322840,6 +324149,12 @@
           },
           {
             "resourceType": "Relationship",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "RevenueAttribution",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -322885,6 +324200,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "MarketplaceRevenueShare",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Opportunity",
             "required": false,
             "conditionKeys": [],
@@ -322904,6 +324225,12 @@
           },
           {
             "resourceType": "Relationship",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "RevenueAttribution",
             "required": false,
             "conditionKeys": [],
             "dependentActions": []
@@ -322995,6 +324322,29 @@
         ]
       },
       {
+        "name": "UpdateMarketplaceRevenueShareAllocation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_UpdateMarketplaceRevenueShareAllocation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update marketplace revenue share allocations in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "MarketplaceRevenueShare",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "UpdateOpportunity",
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_UpdateOpportunity.html",
         "permissionOnly": false,
@@ -323059,6 +324409,29 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateRevenueAttribution",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_UpdateRevenueAttribution.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update revenue attributions in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "RevenueAttribution",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
               "partnercentral:Catalog"
             ],
             "dependentActions": []
@@ -323217,6 +324590,22 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/getting-started/partner-analytics.html",
         "arnPattern": "arn:${Partition}:partnercentral::${Account}:catalog/${Catalog}/ReportingData/${TableId}/Dashboard/${DashboardId}",
         "conditionKeys": []
+      },
+      {
+        "name": "RevenueAttribution",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/working-with-revenue-attribution.html",
+        "arnPattern": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/revenue-attribution/${RevenueAttributionId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "MarketplaceRevenueShare",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/working-with-marketplace-revenue-share.html",
+        "arnPattern": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/marketplace-revenue-share/${MarketplaceProductId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "ProspectingFromEngagementTask",
@@ -384433,6 +385822,21 @@
         ]
       },
       {
+        "name": "BatchWriteRecord",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_BatchWriteRecord.html",
+        "permissionOnly": false,
+        "description": "Grants permission to put a batch of records to one or more feature groups",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "feature-group",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CallMlflowAppApi",
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/dg/mlflow.html",
         "permissionOnly": false,
@@ -390739,6 +392143,21 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListRecords",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_feature_store_ListRecords.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list record identifiers from a feature group",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "feature-group",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }

@@ -1,5 +1,82 @@
 [
   {
+    "dateOfChange": "2026-07-01",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Certificate Manager": [
+        "acm:CreateAcmeDomainValidation",
+        "acm:CreateAcmeEndpoint",
+        "acm:CreateAcmeExternalAccountBinding",
+        "acm:DeleteAcmeDomainValidation",
+        "acm:DeleteAcmeEndpoint",
+        "acm:DeleteAcmeExternalAccountBinding",
+        "acm:DescribeAcmeAccount",
+        "acm:DescribeAcmeDomainValidation",
+        "acm:DescribeAcmeEndpoint",
+        "acm:DescribeAcmeExternalAccountBinding",
+        "acm:GetAcmeExternalAccountBindingCredentials",
+        "acm:ListAcmeAccounts",
+        "acm:ListAcmeDomainValidations",
+        "acm:ListAcmeEndpoints",
+        "acm:ListAcmeExternalAccountBindings",
+        "acm:ListTagsForResource",
+        "acm:RevokeAcmeAccount",
+        "acm:RevokeAcmeExternalAccountBinding",
+        "acm:TagResource",
+        "acm:UntagResource",
+        "acm:UpdateAcmeDomainValidation",
+        "acm:UpdateAcmeEndpoint",
+        "acm:UpdateCertificate"
+      ],
+      "AWS Clean Rooms": [
+        "cleanrooms:CreateIntermediateTable",
+        "cleanrooms:CreateIntermediateTableAnalysisRule",
+        "cleanrooms:DeleteIntermediateTable",
+        "cleanrooms:DeleteIntermediateTableAnalysisRule",
+        "cleanrooms:DisallowIntermediateTable",
+        "cleanrooms:GetIntermediateTable",
+        "cleanrooms:GetIntermediateTableAnalysisRule",
+        "cleanrooms:ListIntermediateTableVersions",
+        "cleanrooms:ListIntermediateTables",
+        "cleanrooms:PopulateIntermediateTable",
+        "cleanrooms:UpdateIntermediateTable",
+        "cleanrooms:UpdateIntermediateTableAnalysisRule"
+      ],
+      "Amazon Connect": [
+        "connect:CreateAttachedFile",
+        "connect:GetEvaluationFormValidation",
+        "connect:StartContactConversationalAnalyticsJob",
+        "connect:StartEvaluationFormValidation"
+      ],
+      "Amazon Elastic Kubernetes Service": [
+        "eks:CancelUpdate"
+      ],
+      "AWS Partner Central": [
+        "partnercentral:CreateMarketplaceRevenueShare",
+        "partnercentral:CreateMarketplaceRevenueShareAllocation",
+        "partnercentral:CreateRevenueAttribution",
+        "partnercentral:GetMarketplaceRevenueShare",
+        "partnercentral:GetMarketplaceRevenueShareAllocation",
+        "partnercentral:GetRevenueAttribution",
+        "partnercentral:GetRevenueAttributionAllocation",
+        "partnercentral:GetRevenueAttributionAllocationsTask",
+        "partnercentral:ListMarketplaceRevenueShareAllocations",
+        "partnercentral:ListMarketplaceRevenueShares",
+        "partnercentral:ListRevenueAttributionAllocations",
+        "partnercentral:ListRevenueAttributions",
+        "partnercentral:StartRevenueAttributionAllocationsTask",
+        "partnercentral:UpdateMarketplaceRevenueShareAllocation",
+        "partnercentral:UpdateRevenueAttribution"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:BatchWriteRecord",
+        "sagemaker:ListRecords"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-06-30",
     "addedServices": [],
     "removedServices": [],
