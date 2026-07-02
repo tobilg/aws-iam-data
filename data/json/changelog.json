@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2026-07-02",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudWatch": [
+        "cloudwatch:DeletePipelineRule",
+        "cloudwatch:PutPipelineRule"
+      ],
+      "Amazon Elastic Container Service": [
+        "ecs:AllowVendedLogDeliveryForResource"
+      ],
+      "Amazon GameLift Streams": [
+        "gameliftstreams:CreateStreamSessionAdminShell"
+      ],
+      "AWS Network Firewall": [
+        "network-firewall:CreateContainerAssociation",
+        "network-firewall:DeleteContainerAssociation",
+        "network-firewall:DescribeContainerAssociation",
+        "network-firewall:ListContainerAssociations",
+        "network-firewall:UpdateContainerAssociation"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-07-01",
     "addedServices": [],
     "removedServices": [],

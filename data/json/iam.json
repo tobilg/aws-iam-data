@@ -70062,6 +70062,21 @@
         ]
       },
       {
+        "name": "DeletePipelineRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/permissions-reference-cw.html",
+        "permissionOnly": true,
+        "description": "Grants permission to delete a pipeline rule for CloudWatch pipelines for OTel metric processing",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteServiceLevelObjective",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html#ApplicationSignals-PreviewSDK",
         "permissionOnly": false,
@@ -70985,6 +71000,21 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PutPipelineRule",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/permissions-reference-cw.html",
+        "permissionOnly": true,
+        "description": "Grants permission to create or update a pipeline rule for CloudWatch pipelines for OTel metric processing",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
@@ -174026,6 +174056,21 @@
     "servicePrefix": "ecs",
     "actions": [
       {
+        "name": "AllowVendedLogDeliveryForResource",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/developerguide/action-logs-getting-started.html",
+        "permissionOnly": true,
+        "description": "Grants permission to allow vended log delivery for a specified resource",
+        "accessLevel": "Permissions management",
+        "resourceTypes": [
+          {
+            "resourceType": "cluster",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ContinueServiceDeployment",
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ContinueServiceDeployment.html",
         "permissionOnly": false,
@@ -214462,6 +214507,21 @@
             "dependentActions": [
               "gameliftstreams:TagResource"
             ]
+          }
+        ]
+      },
+      {
+        "name": "CreateStreamSessionAdminShell",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/gameliftstreams/latest/apireference/API_CreateStreamSessionAdminShell.html",
+        "permissionOnly": false,
+        "description": "Grants permission to establish an administrative terminal connection to a stream session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "stream group",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
           }
         ]
       },
@@ -306525,6 +306585,32 @@
         ]
       },
       {
+        "name": "CreateContainerAssociation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_CreateContainerAssociation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create an AWS Network Firewall container association",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ContainerAssociation",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:CreateServiceLinkedRole"
+            ]
+          },
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateFirewall",
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_CreateFirewall.html",
         "permissionOnly": false,
@@ -306788,6 +306874,21 @@
         ]
       },
       {
+        "name": "DeleteContainerAssociation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_DeleteContainerAssociation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an AWS Network Firewall container association",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ContainerAssociation",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteFirewall",
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_DeleteFirewall.html",
         "permissionOnly": false,
@@ -306972,6 +307073,21 @@
         "resourceTypes": [
           {
             "resourceType": "VpcEndpointAssociation",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DescribeContainerAssociation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_DescribeContainerAssociation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the data objects that define a container association",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ContainerAssociation",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -307342,6 +307458,21 @@
         ]
       },
       {
+        "name": "ListContainerAssociations",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_ListContainerAssociations.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the metadata for container associations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListFirewallPolicies",
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_ListFirewallPolicies.html",
         "permissionOnly": false,
@@ -307496,6 +307627,12 @@
             "dependentActions": []
           },
           {
+            "resourceType": "ContainerAssociation",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "StatefulRuleGroup",
             "required": false,
             "conditionKeys": [],
@@ -307637,6 +307774,12 @@
         "accessLevel": "Tagging",
         "resourceTypes": [
           {
+            "resourceType": "ContainerAssociation",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Firewall",
             "required": false,
             "conditionKeys": [],
@@ -307708,6 +307851,12 @@
         "description": "Grants permission to remove tags from a resource",
         "accessLevel": "Tagging",
         "resourceTypes": [
+          {
+            "resourceType": "ContainerAssociation",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          },
           {
             "resourceType": "Firewall",
             "required": false,
@@ -307781,6 +307930,21 @@
         "resourceTypes": [
           {
             "resourceType": "Firewall",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateContainerAssociation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_UpdateContainerAssociation.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update an AWS Network Firewall container association",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ContainerAssociation",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -308106,6 +308270,14 @@
         "name": "Proxy",
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_Proxy.html",
         "arnPattern": "arn:${Partition}:network-firewall:${Region}:${Account}:proxy/${Name}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "ContainerAssociation",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_ContainerAssociation.html",
+        "arnPattern": "arn:${Partition}:network-firewall:${Region}:${Account}:container-association/${Name}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
