@@ -199556,6 +199556,21 @@
         ]
       },
       {
+        "name": "CreateWhatsAppFlow",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_CreateWhatsAppFlow.html",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new WhatsApp Flow",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "waba",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "CreateWhatsAppMessageTemplate",
         "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_CreateWhatsAppMessageTemplate.html",
         "permissionOnly": false,
@@ -199601,6 +199616,21 @@
         ]
       },
       {
+        "name": "DeleteWhatsAppFlow",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_DeleteWhatsAppFlow.html",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a WhatsApp Flow",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "waba",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "DeleteWhatsAppMessageMedia",
         "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_DeleteWhatsAppMessageMedia.html",
         "permissionOnly": false,
@@ -199620,6 +199650,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_DeleteWhatsAppMessageTemplate.html",
         "permissionOnly": false,
         "description": "Grants permission to delete a WhatsApp message template",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "waba",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "DeprecateWhatsAppFlow",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_DeprecateWhatsAppFlow.html",
+        "permissionOnly": false,
+        "description": "Grants permission to deprecate a published WhatsApp Flow",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -199669,6 +199714,36 @@
         "resourceTypes": [
           {
             "resourceType": "phone-number-id",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetWhatsAppFlow",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_GetWhatsAppFlow.html",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the metadata and status of a WhatsApp Flow",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "waba",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "GetWhatsAppFlowPreview",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_GetWhatsAppFlowPreview.html",
+        "permissionOnly": false,
+        "description": "Grants permission to generate a web preview URL for testing a WhatsApp Flow",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "waba",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -199742,6 +199817,36 @@
         ]
       },
       {
+        "name": "ListWhatsAppFlowAssets",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_ListWhatsAppFlowAssets.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list the assets of a WhatsApp Flow",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "waba",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "ListWhatsAppFlows",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_ListWhatsAppFlows.html",
+        "permissionOnly": false,
+        "description": "Grants permission to list all WhatsApp Flows for a WhatsApp Business Account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "waba",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
         "name": "ListWhatsAppMessageTemplates",
         "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_ListWhatsAppMessageTemplates.html",
         "permissionOnly": false,
@@ -199780,6 +199885,21 @@
         "resourceTypes": [
           {
             "resourceType": "phone-number-id",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "PublishWhatsAppFlow",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_PublishWhatsAppFlow.html",
+        "permissionOnly": false,
+        "description": "Grants permission to publish a WhatsApp Flow",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "waba",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -199873,6 +199993,36 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateWhatsAppFlow",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_UpdateWhatsAppFlow.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update the metadata of a WhatsApp Flow",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "waba",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ]
+      },
+      {
+        "name": "UpdateWhatsAppFlowAssets",
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_UpdateWhatsAppFlowAssets.html",
+        "permissionOnly": false,
+        "description": "Grants permission to update the Flow JSON definition of a WhatsApp Flow",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "waba",
+            "required": true,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ]
