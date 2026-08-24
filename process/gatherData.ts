@@ -9,7 +9,7 @@ const getTopics = (root: HTMLElement): Topic[] => {
 
   // Extract topic data
   const topics: Topic[] = Array.from(topicNodes).map(topicNode => ({
-      name: topicNode.textContent?.trim() || '',
+      name: topicNode.textContent?.trim().replace(/\s+\([^)]+\)$/, '') || '',
       authReferenceUrl: `https://docs.aws.amazon.com/service-authorization/latest/reference/${topicNode.attributes['href'].replace(/\.\//g, '')}`,
     })
   );
@@ -24,127 +24,100 @@ const getServicePrefix = (html: HTMLElement): string => {
   return servicePrefix[0].textContent || '';
 }
 
-const getActions = (html: HTMLElement): Action[] => {
-  // Get actions table
-  const actionTableRows = html.querySelectorAll(':contains("Actions defined by") ~ div[class*="table-container"] table > tr');
-  
-  // Store actions
-  let actions: Action[] = [];
-  // Action placeholder
-  let action: Action | undefined;
-  // Store next action row
-  let nextActionRow: number | undefined = 1;
+const getDependentActionsByActionName = (html: HTMLElement): Map<string, string[]> => {
+  const operationTableRows = html.querySelectorAll('h2[id$="-operations"] + p + div[class*="table-container"] table > tr');
+  const dependentActionsByActionName = new Map<string, string[]>();
+  let operationName = '';
+  let authorizedActions: string[] = [];
 
-  // Iterate over table rows
-  for (let rowNum = 0; rowNum < actionTableRows.length; rowNum++) {
-    // Get row
-    const rowNode = actionTableRows[rowNum];
-    // Get cells
+  const storeDependentActions = () => {
+    if (!operationName) {
+      return;
+    }
+
+    const primaryAction = authorizedActions.find(actionName => actionName.endsWith(`:${operationName}`));
+    if (primaryAction) {
+      dependentActionsByActionName.set(operationName, authorizedActions.filter(actionName => actionName !== primaryAction));
+    }
+  };
+
+  for (const rowNode of operationTableRows) {
+    const rowCellNodes = rowNode.querySelectorAll('td');
+    let authorizedActionCell: Element | undefined;
+
+    if (rowCellNodes.length === 5) {
+      storeDependentActions();
+      operationName = rowCellNodes[0].textContent?.trim() || '';
+      authorizedActions = [];
+      authorizedActionCell = rowCellNodes[1];
+    } else if (operationName && rowCellNodes.length === 4) {
+      authorizedActionCell = rowCellNodes[0];
+    }
+
+    const authorizedAction = authorizedActionCell?.textContent?.trim();
+    if (authorizedAction) {
+      authorizedActions.push(authorizedAction);
+    }
+  }
+
+  storeDependentActions();
+  return dependentActionsByActionName;
+};
+
+const getActionResourceType = (resourceTypeCell: Element, conditionKeysCell: Element, dependentActions: string[]): ActionResourceType => {
+  const resourceTypeField = resourceTypeCell.textContent?.trim() || '';
+  const conditionKeyNodes = conditionKeysCell.querySelectorAll('p');
+
+  return {
+    resourceType: resourceTypeField.replace('*', ''),
+    required: resourceTypeField.indexOf('*') > -1,
+    conditionKeys: Array.from(conditionKeyNodes).map(conditionKeyNode => conditionKeyNode.textContent?.trim() || '').filter(conditionKey => conditionKey.length > 0),
+    dependentActions: [...dependentActions],
+  };
+};
+
+const getActions = (html: HTMLElement): Action[] => {
+  const actionTableRows = html.querySelectorAll('h2[id$="-actions-as-permissions"] + p + div[class*="table-container"] table > tr');
+  const dependentActionsByActionName = getDependentActionsByActionName(html);
+  const actions: Action[] = [];
+  let action: Action | undefined;
+
+  for (const rowNode of actionTableRows) {
     const rowCellNodes = rowNode.querySelectorAll('td');
 
-    // Check if new action or next action according to rowspan
-    if (!action || (rowNum === nextActionRow)) {
-      // Init action
+    if (rowCellNodes.length === 5) {
+      if (action) {
+        actions.push(action);
+      }
+
+      const actionNameRaw = rowCellNodes[0].textContent?.trim() || '';
+      const actionNameNode: Element | null = rowCellNodes[0].querySelector('a[href]');
+      const actionName = actionNameNode?.textContent?.trim() || actionNameRaw.split(' ')[0] || '';
+      const dependentActions = dependentActionsByActionName.get(actionName) || [];
+
       action = {
-        name: ''
+        name: actionName,
+        permissionOnly: actionNameRaw.indexOf('[permission only]') > -1,
+        description: rowCellNodes[1].textContent || '',
+        accessLevel: rowCellNodes[4].textContent || '',
+        resourceTypes: [getActionResourceType(rowCellNodes[2], rowCellNodes[3], dependentActions)],
       };
 
-      // Check row cell count / rowspan
-      if (rowCellNodes.length !== 6) {
-        // Go to next row
-        continue;
-      }
-
-      // Set default action rowspan
-      let actionRowSpan = 1;
-      
-      // Get rowspan
-      const rowSpanValue: number | undefined = rowCellNodes[0]?.attributes['rowspan'] ? parseInt(rowCellNodes[0].attributes['rowspan']) : undefined;
-
-      if (rowSpanValue) {
-        actionRowSpan = rowSpanValue;
-      }
-
-      // Set next action row
-      nextActionRow = rowNum + actionRowSpan;
-
-      // Get raw action name from first cell
-			const actionNameRaw = rowCellNodes[0].textContent;
-      // Split action name to determine if permission only (later)
-			const actionNameSubstrings = actionNameRaw?.trim()?.split(' ');
-      // Get action name
-      const actionNameNode: Element | null = rowCellNodes[0].querySelector('a[href]');
-
-      // Check if action name exists with URL included
       if (actionNameNode) {
-        action.name = actionNameNode.textContent || '';
         action.apiReferenceUrl = actionNameNode.attributes['href'].toString();
-      } else { // Otherwise just use the raw action name
-        action.name = actionNameSubstrings && actionNameSubstrings[0] || '';
       }
+    } else if (action && rowCellNodes.length === 2) {
+      const dependentActions = dependentActionsByActionName.get(action.name) || [];
+      const resourceType = getActionResourceType(rowCellNodes[0], rowCellNodes[1], dependentActions);
 
-      // Permission only check
-      if (actionNameRaw && actionNameRaw.indexOf('[permission only]') > -1) {
-        action.permissionOnly = true;
-      } else {
-        action.permissionOnly = false;
-      }
-
-      const descriptionCellNode = rowCellNodes[rowCellNodes.length-5];
-      action.description = descriptionCellNode?.textContent || '';
-
-      const accessLevelNode = rowCellNodes[rowCellNodes.length-4];
-      action.accessLevel = accessLevelNode?.textContent || '';
-
-      // Create resource types array
-      action.resourceTypes = [];
-
-      // Setup resource type
-      let resourceType: ActionResourceType = {};
-
-      const resourceTypeField = rowCellNodes[rowCellNodes.length-3]?.textContent?.trim();
-      resourceType.resourceType = resourceTypeField?.replace('*', '');
-      resourceType.required = resourceTypeField && resourceTypeField?.indexOf('*') > -1 || false;
-
-      const conditionKeyNodes = rowCellNodes[rowCellNodes.length-2].querySelectorAll('p');
-      resourceType.conditionKeys = Array.from(conditionKeyNodes).map(conditionKeyNode => conditionKeyNode.textContent?.trim() || '').filter(conditionKeyNode => conditionKeyNode.length > 0);
-
-      const dependentActionNodes = rowCellNodes[rowCellNodes.length-1].querySelectorAll('p');
-      resourceType.dependentActions = Array.from(dependentActionNodes).map(dependentActionNode => dependentActionNode.textContent?.trim() || '').filter(dependentActionNode => dependentActionNode.length > 0);
-
-      action.resourceTypes.push(resourceType);
-
-    } else {
-      // Setup resource type
-      let resourceType: ActionResourceType = {};
-
-      // Get resource type
-      const resourceTypeField = rowCellNodes[rowCellNodes.length-3]?.textContent?.trim() || '';
-      resourceType.resourceType = resourceTypeField.replace('*', '');
-      resourceType.required = resourceTypeField.indexOf('*') > -1;
-
-      // get condition keys
-      const conditionKeyNodes = rowCellNodes[rowCellNodes.length-2].querySelectorAll('p');
-      resourceType.conditionKeys = Array.from(conditionKeyNodes).map(conditionKeyNode => conditionKeyNode.textContent?.trim() || '').filter(conditionKeyNode => conditionKeyNode.length > 0);
-
-      // Get dependant actions
-      const dependentActionNodes = rowCellNodes[rowCellNodes.length-1].querySelectorAll('p');
-      resourceType.dependentActions = Array.from(dependentActionNodes).map(dependentActionNode => dependentActionNode.textContent?.trim() || '').filter(dependentActionNode => dependentActionNode.length > 0);
-
-      // Add only valid resource types
-      if (action.resourceTypes && resourceType.resourceType?.indexOf('\n') === -1/*&& resourceType.resourceType !== ''*/) {
-        action.resourceTypes.push(resourceType);
+      if (resourceType.resourceType?.indexOf('\n') === -1) {
+        action.resourceTypes?.push(resourceType);
       }
     }
+  }
 
-    // Check if next row is a new action, if so flush action
-    if (rowNum === nextActionRow -1) {
-      // Add to finalized actions
-      actions.push({ ...action });
-
-      // Reset action
-      action = undefined;
-    }
+  if (action) {
+    actions.push(action);
   }
 
   return actions;
@@ -152,7 +125,7 @@ const getActions = (html: HTMLElement): Action[] => {
 
 const getResourceTypes = (html: HTMLElement): ResourceType[] => {
   // Get resource types table rows
-  const resourceTypeTableRows = html.querySelectorAll(':contains("Resource types defined by") + p + div[class*="table-container"] table > tr');
+  const resourceTypeTableRows = html.querySelectorAll('h2[id$="-resources-for-iam-policies"] + p + div[class*="table-container"] table > tr');
 
   // Parse resource types
   const resourceTypes: ResourceType[] = Array.from(resourceTypeTableRows).map(tr => ({
@@ -167,7 +140,7 @@ const getResourceTypes = (html: HTMLElement): ResourceType[] => {
 
 const getConditionKeys = (html: HTMLElement): ConditionKey[] => {
   // Get condition table rows
-  const conditionKeyTableRows = html.querySelectorAll(':contains("Condition keys for") + p + p + div[class*="table-container"] table > tr');
+  const conditionKeyTableRows = html.querySelectorAll('h2[id$="-policy-keys"] + p + div[class*="table-container"] table > tr');
   
   // Parse condition keys
   const conditionKeys: ConditionKey[] = Array.from(conditionKeyTableRows).map(tr => ({
@@ -215,6 +188,17 @@ const run = async () => {
       const topicPageResult = await getTopicPage(topic);
       return topicPageResult;
     }));
+
+    const gatheredDataCounts = {
+      services: serviceAuthReferenceData.length,
+      actions: serviceAuthReferenceData.reduce((count, service) => count + service.actions.length, 0),
+      resourceTypes: serviceAuthReferenceData.reduce((count, service) => count + service.resourceTypes.length, 0),
+      conditionKeys: serviceAuthReferenceData.reduce((count, service) => count + service.conditionKeys.length, 0),
+    };
+
+    if (!gatheredDataCounts.services || !gatheredDataCounts.actions || !gatheredDataCounts.resourceTypes || !gatheredDataCounts.conditionKeys) {
+      throw new Error(`AWS IAM data gather returned an empty required collection: ${JSON.stringify(gatheredDataCounts)}`);
+    }
 
     // Write IAM data
     writeFileSync(join(__dirname, '../data/json', 'iam.json'), JSON.stringify(serviceAuthReferenceData, null, 2), { encoding: 'utf-8' });

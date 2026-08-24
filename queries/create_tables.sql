@@ -31,8 +31,19 @@ FROM
     actions AS actions_struct,
     resourceTypes AS resource_types_struct,
     conditionKeys AS condition_keys_struct,
-  FROM 
-    read_json_auto('./data/json/iam.json', maximum_object_size=20000000) order by name
+  FROM
+    read_json(
+      './data/json/iam.json',
+      maximum_object_size=20000000,
+      columns={
+        name: 'VARCHAR',
+        authReferenceUrl: 'VARCHAR',
+        servicePrefix: 'VARCHAR',
+        actions: 'STRUCT(name VARCHAR, apiReferenceUrl VARCHAR, permissionOnly BOOLEAN, description VARCHAR, accessLevel VARCHAR, resourceTypes STRUCT(resourceType VARCHAR, required BOOLEAN, conditionKeys VARCHAR[], dependentActions VARCHAR[])[])[]',
+        resourceTypes: 'STRUCT(name VARCHAR, apiReferenceUrl VARCHAR, arnPattern VARCHAR, conditionKeys VARCHAR[])[]',
+        conditionKeys: 'STRUCT(name VARCHAR, apiReferenceUrl VARCHAR, description VARCHAR, type VARCHAR)[]'
+      }
+    ) order by name
 ) s;
 
 -- Create services table
