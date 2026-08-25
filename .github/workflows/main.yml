@@ -7,6 +7,9 @@ on:
     # Run everyday at 4AM UTC
     - cron:  '0 4 * * *'
 
+permissions:
+  contents: write
+
 jobs:
 
   gather_and_update_iam_data:
@@ -15,20 +18,19 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@v7
         with:
-          node-version: '20.x'
+          node-version: '22.x'
           registry-url: 'https://registry.npmjs.org'
+          cache: 'npm'
 
       - name: Gather data and check for changes
-        id: gatherData
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        id: gather_data
         run: |
           # Install dependencies
-          npm i
+          npm ci
 
           # Copy old IAM data for changelog comparison
           cp data/json/iam.json data/json/iam.old.json
@@ -37,42 +39,43 @@ jobs:
           npm run gather-data
 
           # Setup git repo
-          git config --global user.name 'TobiLG'
-          git config --global user.email 'tobilg@users.noreply.github.com'
-          git remote set-url --push origin https://tobilg:$GITHUB_TOKEN@github.com/tobilg/aws-iam-data
+          git config user.name 'TobiLG'
+          git config user.email 'tobilg@users.noreply.github.com'
 
           # Add new files if there are any
           git add .
 
-          # Check for changes and commit if there are any
-          git diff-index --cached --quiet HEAD || echo '::set-output name=changed::true'
+          # Publish when data changed
+          if ! git diff --cached --quiet; then
+            echo 'should_publish=true' >> "$GITHUB_OUTPUT"
+          fi
 
       - name: Eventually publish new package version
-        if: ${{ steps.gatherData.outputs.changed == 'true' }}
+        if: ${{ steps.gather_data.outputs.should_publish == 'true' }}
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          # Increase package patch version \
-          npm --no-git-tag-version version patch && \
-          # Update changelog \
-          npm run update-changelog && \
-          # Install DuckDB \
-          npm run install-duckdb && \
-          # Create tables \
-          npm run create-tables && \
-          # Export data \
-          npm run export-data && \
-          # Create reports \
-          npm run copy-database && \
-          # Create reports \
-          npm run create-reports && \
-          # Add new files \
-          git add . && \
-          # Commit changes \
-          git commit -am "[no ci] Data update on $(date '+%FT%H:%M:%S')" && \
-          # Push to repo \
-          git push && \
-          # Build package sources \
-          npm run build && \
-          # Publish new version to npm registry \
+          # Increase package patch version
+          npm --no-git-tag-version version patch
+          # Update changelog
+          npm run update-changelog
+          # Install DuckDB
+          npm run install-duckdb
+          # Create tables
+          npm run create-tables
+          # Export data
+          npm run export-data
+          # Create database
+          npm run copy-database
+          # Create reports
+          npm run create-reports
+          # Add new files
+          git add .
+          # Commit changes
+          git commit -m "[no ci] Data update on $(date '+%FT%H:%M:%S')"
+          # Push to repo
+          git push
+          # Build package sources
+          npm run build
+          # Publish new version to npm registry
           npm publish

@@ -9,8 +9,8 @@
   },
   "scripts": {
     "install-duckdb": "scripts/install_duckdb.sh",
-    "gather-data": "ts-node --transpile-only --log-error process/gatherData.ts",
-    "update-changelog": "ts-node --transpile-only --log-error process/createChangelog.ts",
+    "gather-data": "tsx process/gatherData.ts",
+    "update-changelog": "tsx process/createChangelog.ts",
     "create-erd": "node_modules/.bin/mmdc -i erd.mmd -o docs/erd.png -w 1600",
     "create-tables": "scripts/create_tables.sh",
     "create-reports": "scripts/create_reports.sh",
@@ -39,7 +39,7 @@
     "@types/node": "^22",
     "axios": "^1.19.0",
     "node-html-parser": "^9.0.1",
-    "ts-node": "^10.9.2",
+    "tsx": "^4.23.12",
     "typescript": "^7.0.2"
   },
   "dependencies": {}

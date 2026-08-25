@@ -1,30 +1,26 @@
 {
   "Actions by type": [
     {
-      "key": "Write Actions",
-      "value": 11803
+      "key": null,
+      "value": 1043
     },
     {
-      "key": "Read Actions",
-      "value": 5703
+      "key": "Write Actions",
+      "value": 10512
     },
     {
       "key": "List Actions",
-      "value": 3601
+      "value": 3515
     },
     {
-      "key": "Permissions Actions",
-      "value": 406
+      "key": "Read Actions",
+      "value": 5374
     }
   ],
   "Longest action names": [
     {
       "key": "license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders",
       "value": 71
-    },
-    {
-      "key": "codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication",
-      "value": 69
     },
     {
       "key": "license-manager-linux-subscriptions:GetRegisteredSubscriptionProvider",
@@ -39,14 +35,6 @@
       "value": 69
     },
     {
-      "key": "aws-marketplace-management:GetAdditionalSellerNotificationRecipients",
-      "value": 68
-    },
-    {
-      "key": "aws-marketplace-management:PutAdditionalSellerNotificationRecipients",
-      "value": 68
-    },
-    {
       "key": "networkflowmonitor:GetQueryStatusWorkloadInsightsTopContributorsData",
       "value": 68
     },
@@ -57,6 +45,18 @@
     {
       "key": "bcm-pricing-calculator:ListBillEstimateInputCommitmentModifications",
       "value": 67
+    },
+    {
+      "key": "cleanrooms-ml:ListCollaborationConfiguredModelAlgorithmAssociations",
+      "value": 67
+    },
+    {
+      "key": "ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations",
+      "value": 67
+    },
+    {
+      "key": "license-manager-linux-subscriptions:DeregisterSubscriptionProvider",
+      "value": 66
     }
   ],
   "Longest condition key names": [
@@ -77,28 +77,28 @@
       "value": 68
     },
     {
+      "key": "token.actions.githubusercontent.com/${SubPath}:repository_owner_id",
+      "value": 66
+    },
+    {
+      "key": "token.actions.githubusercontent.com/${SubPath}:job_workflow_ref",
+      "value": 63
+    },
+    {
       "key": "codebuild:secondarySources/${sourceIdentifier}.auth.resource",
+      "value": 60
+    },
+    {
+      "key": "github.com/enterprises/${EnterpriseName}:repository_owner_id",
+      "value": 60
+    },
+    {
+      "key": "idcs-${OciUniqueIdentifier}.identity.oraclecloud.com:rpst_id",
       "value": 60
     },
     {
       "key": "iot:CommandExecutionParameterBoolean/${CommandParameterName}",
       "value": 60
-    },
-    {
-      "key": "payment-cryptography:CertificateAuthorityPublicKeyIdentifier",
-      "value": 60
-    },
-    {
-      "key": "codebuild:buildBatchConfig.restrictions.computeTypesAllowed",
-      "value": 59
-    },
-    {
-      "key": "codebuild:environment.registryCredential.credentialProvider",
-      "value": 59
-    },
-    {
-      "key": "codebuild:secondaryArtifacts/${artifactIdentifier}.location",
-      "value": 59
     }
   ],
   "Longest service prefixes": [
@@ -115,23 +115,11 @@
       "value": 33
     },
     {
-      "key": "sagemaker-data-science-assistant",
-      "value": 32
-    },
-    {
       "key": "route53-recovery-control-config",
       "value": 31
     },
     {
-      "key": "elemental-appliances-software",
-      "value": 29
-    },
-    {
       "key": "marketplacecommerceanalytics",
-      "value": 28
-    },
-    {
-      "key": "sagemaker-unified-studio-mcp",
       "value": 28
     },
     {
@@ -139,42 +127,54 @@
       "value": 26
     },
     {
-      "key": "aws-marketplace-management",
+      "key": "codedeploy-commands-secure",
       "value": 26
+    },
+    {
+      "key": "route53-recovery-readiness",
+      "value": 26
+    },
+    {
+      "key": "migrationhub-orchestrator",
+      "value": 25
+    },
+    {
+      "key": "network-security-director",
+      "value": 25
     }
   ],
   "Most referenced resource ARNs": [
     {
       "key": "instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}",
-      "value": 141
-    },
-    {
-      "key": "organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId}",
-      "value": 122
+      "value": 140
     },
     {
       "key": "application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId}",
-      "value": 115
+      "value": 106
     },
     {
       "key": "domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}",
-      "value": 105
+      "value": 103
     },
     {
       "key": "userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId}",
-      "value": 99
+      "value": 97
     },
     {
-      "key": "directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId}",
-      "value": 93
+      "key": "bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}, arn:${Partition}:lex:${Region}:${Account}:bot:${BotName}",
+      "value": 91
     },
     {
-      "key": "bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}",
+      "key": "organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId}",
       "value": 88
     },
     {
-      "key": "repository - arn:${Partition}:codecommit:${Region}:${Account}:${RepositoryName}",
-      "value": 81
+      "key": "directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId}",
+      "value": 84
+    },
+    {
+      "key": "instance - arn:${Partition}:ec2:${Region}:${Account}:instance/${InstanceId}",
+      "value": 76
     },
     {
       "key": "rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog",
@@ -199,7 +199,7 @@
       "value": 1
     },
     {
-      "key": "AWS Elemental Support Content",
+      "key": "AWS IAM Identity Center OIDC service",
       "value": 1
     },
     {
@@ -215,58 +215,58 @@
       "value": 1
     },
     {
-      "key": "AWS Microservice Extractor for .NET",
+      "key": "Amazon EKS Auth",
       "value": 1
     },
     {
-      "key": "AWS PrivateLink",
+      "key": "Amazon FinSpace API",
       "value": 1
     },
     {
-      "key": "AWS Verified Access",
+      "key": "Amazon InspectorScan",
       "value": 1
     }
   ],
   "Services with most actions": [
     {
       "key": "Amazon EC2",
-      "value": 793
+      "value": 783
     },
     {
       "key": "Amazon SageMaker",
-      "value": 444
+      "value": 429
     },
     {
       "key": "Amazon Connect",
-      "value": 367
-    },
-    {
-      "key": "Amazon QuickSight",
-      "value": 317
+      "value": 370
     },
     {
       "key": "Amazon Chime",
-      "value": 316
+      "value": 312
     },
     {
       "key": "AWS Glue",
-      "value": 303
+      "value": 298
     },
     {
       "key": "AWS IoT",
       "value": 293
     },
     {
-      "key": "Amazon Bedrock",
-      "value": 255
+      "key": "Amazon QuickSight",
+      "value": 292
     },
     {
-      "key": "Amazon DataZone",
-      "value": 235
+      "key": "Amazon Bedrock",
+      "value": 252
     },
     {
       "key": "Amazon Bedrock Agentcore",
-      "value": 223
+      "value": 236
+    },
+    {
+      "key": "Amazon DataZone",
+      "value": 225
     }
   ],
   "Shortest action names": [
@@ -275,23 +275,11 @@
       "value": 8
     },
     {
-      "key": "ecs:Poll",
-      "value": 8
-    },
-    {
       "key": "kms:Sign",
       "value": 8
     },
     {
       "key": "dax:Query",
-      "value": 9
-    },
-    {
-      "key": "logs:Link",
-      "value": 9
-    },
-    {
-      "key": "xray:Link",
       "value": 9
     },
     {
@@ -308,6 +296,18 @@
     },
     {
       "key": "iq:EndCall",
+      "value": 10
+    },
+    {
+      "key": "iq:GetCall",
+      "value": 10
+    },
+    {
+      "key": "kms:Verify",
+      "value": 10
+    },
+    {
+      "key": "lex:GetBot",
       "value": 10
     }
   ],
@@ -355,10 +355,6 @@
   ],
   "Shortest service prefixes": [
     {
-      "key": "q",
-      "value": 1
-    },
-    {
       "key": "ce",
       "value": 2
     },
@@ -393,28 +389,32 @@
     {
       "key": "ts",
       "value": 2
+    },
+    {
+      "key": "a2c",
+      "value": 3
     }
   ],
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 471
+      "value": 475
     },
     {
       "key": "Average number of actions per service",
-      "value": 46
+      "value": 47
     },
     {
       "key": "Median number of actions per service",
-      "value": 30
+      "value": 31
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 2148
+      "value": 2235
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 1438
+      "value": 1553
     }
   ]
 }

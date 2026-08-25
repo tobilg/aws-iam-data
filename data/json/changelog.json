@@ -1,5 +1,2302 @@
 [
   {
+    "dateOfChange": "2026-08-24",
+    "addedServices": [
+      "AWS Agent Registry",
+      "AWS Support Authorization",
+      "Account access manager",
+      "Amazon Bedrock Web Search"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Account Management": [
+        "account:GetPrimaryEmailUpdateStatus"
+      ],
+      "AWS AppConfig": [
+        "appconfig:CreateExperimentDefinition",
+        "appconfig:DeleteExperimentDefinition",
+        "appconfig:GetExperimentDefinition",
+        "appconfig:GetExperimentRun",
+        "appconfig:ListExperimentDefinitions",
+        "appconfig:ListExperimentRunEvents",
+        "appconfig:ListExperimentRuns",
+        "appconfig:StartExperimentRun",
+        "appconfig:StopExperimentRun",
+        "appconfig:UpdateExperimentDefinition",
+        "appconfig:UpdateExperimentRun"
+      ],
+      "AWS Artifact": [
+        "artifact:PutComplianceInquiryFeedback"
+      ],
+      "AWS Backup": [
+        "backup:ListBackupAccessPoints",
+        "backup:ListBackupAccessPointsByRecoveryPoint",
+        "backup:ListBackupAccessPointsByResource"
+      ],
+      "AWS Certificate Manager": [
+        "acm:ListCertificateDomainValidations"
+      ],
+      "AWS Clean Rooms": [
+        "cleanrooms:GetAnalysisLogExport",
+        "cleanrooms:ListAnalysisLogExports",
+        "cleanrooms:StartAnalysisLogExport"
+      ],
+      "AWS Direct Connect": [
+        "directconnect:ListVirtualInterfaceRoutes"
+      ],
+      "AWS Elastic Disaster Recovery": [
+        "drs:CancelRecoveryPlanExecution",
+        "drs:CreateRecoveryPlan",
+        "drs:CreateRecoveryPlanStep",
+        "drs:DeleteRecoveryPlan",
+        "drs:DeleteRecoveryPlanExecution",
+        "drs:DeleteRecoveryPlanStep",
+        "drs:GetRecoveryPlan",
+        "drs:GetRecoveryPlanExecution",
+        "drs:GetRecoveryPlanExecutionStep",
+        "drs:GetRecoveryPlanStep",
+        "drs:ListRecoveryPlanExecutionSteps",
+        "drs:ListRecoveryPlanExecutions",
+        "drs:ListRecoveryPlanSteps",
+        "drs:ListRecoveryPlans",
+        "drs:ReorderRecoveryPlanSteps",
+        "drs:RetryRecoveryPlanExecutionStep",
+        "drs:StartRecoveryPlanExecution",
+        "drs:UpdateRecoveryPlan",
+        "drs:UpdateRecoveryPlanExecutionStep",
+        "drs:UpdateRecoveryPlanStep"
+      ],
+      "AWS End User Messaging SMS and Voice V2": [
+        "sms-voice:CarrierLookup",
+        "sms-voice:CreateNotifyConfiguration",
+        "sms-voice:CreateRcsAgent",
+        "sms-voice:DeleteNotifyConfiguration",
+        "sms-voice:DeleteNotifyMessageSpendLimitOverride",
+        "sms-voice:DeleteRcsAgent",
+        "sms-voice:DeleteRcsMessageSpendLimitOverride",
+        "sms-voice:DescribeNotifyConfigurations",
+        "sms-voice:DescribeNotifyTemplates",
+        "sms-voice:DescribeRcsAgentCountryLaunchStatus",
+        "sms-voice:DescribeRcsAgents",
+        "sms-voice:ListNotifyCountries",
+        "sms-voice:SendNotifyTextMessage",
+        "sms-voice:SendNotifyVoiceMessage",
+        "sms-voice:SendRcsMessage",
+        "sms-voice:SetNotifyMessageSpendLimitOverride",
+        "sms-voice:SetRcsMessageSpendLimitOverride",
+        "sms-voice:UpdateNotifyConfiguration",
+        "sms-voice:UpdateRcsAgent"
+      ],
+      "AWS HealthLake": [
+        "healthlake:CreateDataTransformationProfile",
+        "healthlake:DeleteDataTransformationProfile",
+        "healthlake:DescribeDataTransformationJob",
+        "healthlake:GetDataTransformationProfile",
+        "healthlake:ListDataTransformationJobs",
+        "healthlake:ListDataTransformationProfileVersions",
+        "healthlake:ListDataTransformationProfiles",
+        "healthlake:PublishDataTransformationProfile",
+        "healthlake:StartDataTransformationJob",
+        "healthlake:TransformData",
+        "healthlake:TranslateConceptMapWithGet",
+        "healthlake:TranslateConceptMapWithPost",
+        "healthlake:UpdateDataTransformationProfile",
+        "healthlake:UpdateProfileWithAgent",
+        "healthlake:ValidateSource"
+      ],
+      "AWS Identity and Access Management (IAM)": [
+        "iam:GetAccountProperties",
+        "iam:GetRoleTemplateVersion",
+        "iam:PutAccountProperties"
+      ],
+      "AWS Invoicing Service": [
+        "invoicing:ListProcurementPortalSuppliers",
+        "invoicing:ListProcurementPortals",
+        "invoicing:SendProcurementPortalValidation",
+        "invoicing:VerifyProcurementPortalValidation"
+      ],
+      "AWS IoT SiteWise": [
+        "iotsitewise:BatchAssociateDataSegmentsToDataset",
+        "iotsitewise:BatchDeleteDatasetDataSegments",
+        "iotsitewise:BatchDisassociateDataSegmentsFromDataset",
+        "iotsitewise:CancelEnrichmentJob",
+        "iotsitewise:CancelPipelineExecution",
+        "iotsitewise:CancelQuery",
+        "iotsitewise:CreateApplication",
+        "iotsitewise:CreateDatasetExportJob",
+        "iotsitewise:CreateEnrichmentJob",
+        "iotsitewise:CreatePipeline",
+        "iotsitewise:CreateTask",
+        "iotsitewise:CreateWorkspace",
+        "iotsitewise:DeleteApplication",
+        "iotsitewise:DeletePipeline",
+        "iotsitewise:DeleteTask",
+        "iotsitewise:DeleteWorkspace",
+        "iotsitewise:DescribeApplication",
+        "iotsitewise:DescribeDatasetExportJob",
+        "iotsitewise:DescribeEnrichmentJob",
+        "iotsitewise:DescribePipeline",
+        "iotsitewise:DescribePipelineExecution",
+        "iotsitewise:DescribeQuery",
+        "iotsitewise:DescribeSearch",
+        "iotsitewise:DescribeTask",
+        "iotsitewise:DescribeWorkspace",
+        "iotsitewise:GetCaptureData",
+        "iotsitewise:GetQueryResults",
+        "iotsitewise:GetSearchResults",
+        "iotsitewise:ListApplications",
+        "iotsitewise:ListDatasetDataSegmentRelationships",
+        "iotsitewise:ListDatasetDataSegments",
+        "iotsitewise:ListDatasetExportJobs",
+        "iotsitewise:ListEnrichmentJobs",
+        "iotsitewise:ListPipelineExecutions",
+        "iotsitewise:ListPipelines",
+        "iotsitewise:ListQueries",
+        "iotsitewise:ListSearches",
+        "iotsitewise:ListTasks",
+        "iotsitewise:ListWorkspaces",
+        "iotsitewise:StartPipelineExecution",
+        "iotsitewise:StartQuery",
+        "iotsitewise:StartSearch",
+        "iotsitewise:UpdatePipeline",
+        "iotsitewise:UpdateTask",
+        "iotsitewise:UpdateWorkspace"
+      ],
+      "AWS Lambda": [
+        "lambda:DeleteResourcePolicy",
+        "lambda:GetResourcePolicy",
+        "lambda:PutResourcePolicy"
+      ],
+      "AWS Partner Central": [
+        "partnercentral:GetQualificationsAssociationDetails",
+        "partnercentral:GetQualificationsAssociationTask",
+        "partnercentral:GetQualificationsDisassociationTask",
+        "partnercentral:StartQualificationsAssociationTask",
+        "partnercentral:StartQualificationsDisassociationTask"
+      ],
+      "AWS PricingPlanManager Service": [
+        "pricingplanmanager:ApprovePaidSubscription"
+      ],
+      "AWS Resilience Hub": [
+        "resiliencehub:CreateTest",
+        "resiliencehub:DeleteTest",
+        "resiliencehub:DeleteTestSources",
+        "resiliencehub:GetTest",
+        "resiliencehub:GetTestRun",
+        "resiliencehub:GetTestTemplate",
+        "resiliencehub:ListResolvedTestRunTargetResources",
+        "resiliencehub:ListTestRunEvents",
+        "resiliencehub:ListTestRunSources",
+        "resiliencehub:ListTestRuns",
+        "resiliencehub:ListTestSources",
+        "resiliencehub:ListTestTemplates",
+        "resiliencehub:ListTests",
+        "resiliencehub:PutTestSources",
+        "resiliencehub:StartTestRun",
+        "resiliencehub:StopTestRun",
+        "resiliencehub:UpdateTest"
+      ],
+      "AWS Security Hub": [
+        "securityhub:ListFreeTrialStatusesV2"
+      ],
+      "AWS Service - Oracle Database@AWS": [
+        "odb:AssociateVirtualMachinesToExadbVmCluster",
+        "odb:CreateExadbVmCluster",
+        "odb:CreateExascaleDbStorageVault",
+        "odb:DeleteExadbVmCluster",
+        "odb:DeleteExascaleDbStorageVault",
+        "odb:DisassociateVirtualMachinesFromExadbVmCluster",
+        "odb:GetExadbVmCluster",
+        "odb:GetExascaleDbStorageVault",
+        "odb:ListExadbVmClusters",
+        "odb:ListExascaleDbStorageVaults",
+        "odb:ListFlexComponents",
+        "odb:ListGiMinorVersions",
+        "odb:UpdateExadbVmCluster",
+        "odb:UpdateExascaleDbStorageVault"
+      ],
+      "AWS Signin": [
+        "signin:CreateOAuth2PublicClient",
+        "signin:IntrospectOAuth2Token",
+        "signin:RevokeOAuth2Token"
+      ],
+      "AWS Sustainability": [
+        "sustainability:GetEstimatedWaterAllocation",
+        "sustainability:GetEstimatedWaterAllocationDimensionValues"
+      ],
+      "AWS Transform custom": [
+        "transform-custom:GetAnalysisArtifactDownloadUrl",
+        "transform-custom:ListAnalysisArtifacts"
+      ],
+      "AWS Trusted Advisor": [
+        "trustedadvisor:ListRecommendationsForResource"
+      ],
+      "AWS Well-Architected Tool": [
+        "wellarchitected:CreateAgentContext",
+        "wellarchitected:CreateAgentGoal",
+        "wellarchitected:CreateAgentProfile",
+        "wellarchitected:DeleteAgentContext",
+        "wellarchitected:DeleteAgentGoal",
+        "wellarchitected:DeleteAgentProfile",
+        "wellarchitected:GetAgentContext",
+        "wellarchitected:GetAgentGoal",
+        "wellarchitected:GetAgentProfile",
+        "wellarchitected:GetAgentRecommendation",
+        "wellarchitected:GetAgentRecommendationGeneration",
+        "wellarchitected:ListAgentContexts",
+        "wellarchitected:ListAgentGoals",
+        "wellarchitected:ListAgentProfiles",
+        "wellarchitected:ListAgentRecommendationGenerations",
+        "wellarchitected:ListAgentRecommendationItems",
+        "wellarchitected:ListAgentRecommendations",
+        "wellarchitected:PutAgentRecommendationFeedback",
+        "wellarchitected:StartAgentRecommendationGeneration",
+        "wellarchitected:UpdateAgentContext",
+        "wellarchitected:UpdateAgentGoal",
+        "wellarchitected:UpdateAgentProfile",
+        "wellarchitected:UpdateAgentRecommendationStatus"
+      ],
+      "AWS Billing": [
+        "billing:GetEnterpriseSupportChargeSummary",
+        "billing:GetEnterpriseSupportContractDetails",
+        "billing:ListEnterpriseSupportLinkedAccountCharges"
+      ],
+      "AWS Marketplace Catalog": [
+        "aws-marketplace:GetTaxComplianceProfile",
+        "aws-marketplace:ListTaxComplianceProfileChangeTasks",
+        "aws-marketplace:ListTaxComplianceProfiles",
+        "aws-marketplace:StartTaxComplianceProfileChangeTask"
+      ],
+      "Amazon Bedrock": [
+        "bedrock:CancelInvoke",
+        "bedrock:CheckIngestedDocumentAcl",
+        "bedrock:CreateDataSourceToken",
+        "bedrock:DeleteInvoke",
+        "bedrock:GetDataSourceAuthorizationUrl",
+        "bedrock:GetIngestedDocumentAcl",
+        "bedrock:GetInvoke"
+      ],
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:AddDatasetExamples",
+        "bedrock-agentcore:BatchPutGatewayRateLimits",
+        "bedrock-agentcore:CreateCapacityProvider",
+        "bedrock-agentcore:CreateDataset",
+        "bedrock-agentcore:CreateDatasetVersion",
+        "bedrock-agentcore:CreateGatewayRateLimit",
+        "bedrock-agentcore:DeleteCapacityProvider",
+        "bedrock-agentcore:DeleteCapacityProviderSession",
+        "bedrock-agentcore:DeleteDataset",
+        "bedrock-agentcore:DeleteDatasetExamples",
+        "bedrock-agentcore:DeleteGatewayRateLimit",
+        "bedrock-agentcore:GetCapacityProvider",
+        "bedrock-agentcore:GetDataset",
+        "bedrock-agentcore:GetGatewayRateLimit",
+        "bedrock-agentcore:ListAgentRuntimeVersionsByCapacityProvider",
+        "bedrock-agentcore:ListCapacityProviders",
+        "bedrock-agentcore:ListDatasetExamples",
+        "bedrock-agentcore:ListDatasetVersions",
+        "bedrock-agentcore:ListDatasets",
+        "bedrock-agentcore:ListGatewayRateLimits",
+        "bedrock-agentcore:ListHarnessVersions",
+        "bedrock-agentcore:UpdateCapacityProvider",
+        "bedrock-agentcore:UpdateDataset",
+        "bedrock-agentcore:UpdateDatasetExamples",
+        "bedrock-agentcore:UpdateGatewayRateLimit"
+      ],
+      "Amazon CloudWatch Logs": [
+        "logs:GetStorageTierPolicy",
+        "logs:PutStorageTierPolicy"
+      ],
+      "Amazon Cognito User Pools": [
+        "cognito-idp:AdminGetUserAuthFactors",
+        "cognito-idp:GetProvisionedLimit",
+        "cognito-idp:UpdateProvisionedLimit"
+      ],
+      "Amazon Connect": [
+        "connect:CreateMetric",
+        "connect:DeleteMetric",
+        "connect:DescribeAttachedFilesConfiguration",
+        "connect:DescribeMetric",
+        "connect:ListAttachedFilesConfigurations",
+        "connect:ListMetrics",
+        "connect:SearchMetrics",
+        "connect:SearchRules",
+        "connect:UpdateAttachedFilesConfiguration",
+        "connect:UpdateMetricContent",
+        "connect:UpdateMetricMetadata"
+      ],
+      "Amazon DataZone": [
+        "datazone:CreateDesignation",
+        "datazone:DeleteDesignation",
+        "datazone:GetCurrentEffectivePolicy",
+        "datazone:GetDesignation",
+        "datazone:GetNotebookRun",
+        "datazone:ListDesignations",
+        "datazone:ListNotebookRuns",
+        "datazone:StartNotebookRun",
+        "datazone:StopNotebookRun",
+        "datazone:UpdateDesignation",
+        "datazone:ValidatePolicy"
+      ],
+      "Amazon DynamoDB": [
+        "dynamodb:SearchVectors"
+      ],
+      "Amazon EC2": [
+        "ec2:AssociateApplicationStatusCheck",
+        "ec2:CreateApplicationStatusCheck",
+        "ec2:CreateTransitGatewayPolicyTableEntry",
+        "ec2:DeleteApplicationStatusCheck",
+        "ec2:DeleteTransitGatewayPolicyTableEntry",
+        "ec2:DescribeApplicationStatus",
+        "ec2:DescribeApplicationStatusCheckAssociations",
+        "ec2:DescribeApplicationStatusChecks",
+        "ec2:DisableApplicationStatusCheckSuppression",
+        "ec2:DisassociateApplicationStatusCheck",
+        "ec2:EnableApplicationStatusCheckSuppression",
+        "ec2:ModifyApplicationStatusCheck",
+        "ec2:ModifyTransitGatewayPolicyTableEntry",
+        "ec2:ModifyVpcEndpointPayerResponsibility"
+      ],
+      "Amazon Elastic Kubernetes Service": [
+        "eks:ActivateCertificateAuthority",
+        "eks:CreateCertificateAuthority",
+        "eks:DeleteCertificateAuthority",
+        "eks:DescribeCertificateAuthority",
+        "eks:ListCertificateAuthorities"
+      ],
+      "Amazon Elastic MapReduce": [
+        "elasticmapreduce:GetSession",
+        "elasticmapreduce:GetSessionEndpoint",
+        "elasticmapreduce:ListSessions",
+        "elasticmapreduce:StartSession",
+        "elasticmapreduce:TerminateSession"
+      ],
+      "Amazon GameLift Streams": [
+        "gameliftstreams:CreateStreamUrl",
+        "gameliftstreams:GetStreamUrl",
+        "gameliftstreams:ListApplicationShaderCaches",
+        "gameliftstreams:ListStreamUrls",
+        "gameliftstreams:RevokeStreamUrl"
+      ],
+      "Amazon Managed Streaming for Apache Kafka": [
+        "kafka:CreateChannel",
+        "kafka:DeleteChannel",
+        "kafka:DescribeChannel",
+        "kafka:ListChannels",
+        "kafka:UpdateChannel"
+      ],
+      "Amazon OpenSearch Service": [
+        "es:GetMigration",
+        "es:ListMigrations",
+        "es:StartMigration"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:BatchDescribeUserLimits",
+        "quicksight:CreateApprovalPolicy",
+        "quicksight:CreateDlpSetting",
+        "quicksight:CreateKnowledgeBase",
+        "quicksight:DeleteApp",
+        "quicksight:DeleteApprovalPolicy",
+        "quicksight:DeleteDlpSetting",
+        "quicksight:DescribeApp",
+        "quicksight:DescribeAppPermissions",
+        "quicksight:DescribeApprovalPolicy",
+        "quicksight:DescribeDlpSetting",
+        "quicksight:ListApprovalPolicies",
+        "quicksight:ListApps",
+        "quicksight:ListDlpSettings",
+        "quicksight:SearchApps",
+        "quicksight:UpdateAppPermissions",
+        "quicksight:UpdateApprovalPolicy",
+        "quicksight:UpdateDlpSetting",
+        "quicksight:UpdateKnowledgeBase"
+      ],
+      "Amazon Redshift Data API": [
+        "redshift-data:ListSessions"
+      ],
+      "Amazon Simple Email Service v2": [
+        "ses:PutAccountPricingAttributes"
+      ],
+      "Amazon Timestream InfluxDB": [
+        "timestream-influxdb:CreateDbBackup",
+        "timestream-influxdb:DeleteDbBackup",
+        "timestream-influxdb:GetDbBackup",
+        "timestream-influxdb:ListDbBackups",
+        "timestream-influxdb:RestoreFromDbBackup"
+      ],
+      "AWS Agent Registry": [
+        "agent-registry:CreateRegistry",
+        "agent-registry:CreateRegistryRecord",
+        "agent-registry:DeleteRegistry",
+        "agent-registry:DeleteRegistryRecord",
+        "agent-registry:GetDiscoverableRegistryRecord",
+        "agent-registry:GetRegistry",
+        "agent-registry:GetRegistryRecord",
+        "agent-registry:InvokeRegistryMcp",
+        "agent-registry:ListDiscoverableRegistryRecords",
+        "agent-registry:ListRegistries",
+        "agent-registry:ListRegistryRecords",
+        "agent-registry:ListTagsForResource",
+        "agent-registry:SearchDiscoverableRegistryRecords",
+        "agent-registry:SubmitRegistryRecordForApproval",
+        "agent-registry:TagResource",
+        "agent-registry:UntagResource",
+        "agent-registry:UpdateRegistry",
+        "agent-registry:UpdateRegistryRecord",
+        "agent-registry:UpdateRegistryRecordStatus"
+      ],
+      "AWS Support Authorization": [
+        "supportauthz:CreateSupportPermit",
+        "supportauthz:DeleteSupportPermit",
+        "supportauthz:GetAction",
+        "supportauthz:GetSupportPermit",
+        "supportauthz:ListActions",
+        "supportauthz:ListSupportPermitRequests",
+        "supportauthz:ListSupportPermits",
+        "supportauthz:ListTagsForResource",
+        "supportauthz:RejectSupportPermitRequest",
+        "supportauthz:TagResource",
+        "supportauthz:UntagResource"
+      ],
+      "Account access manager": [
+        "account-access:CreateApplication",
+        "account-access:CreateEntitlement",
+        "account-access:DeleteApplication",
+        "account-access:DeleteEntitlement",
+        "account-access:GetApplication",
+        "account-access:GetEntitlement",
+        "account-access:ListApplications",
+        "account-access:ListEntitlements",
+        "account-access:ListTagsForResource",
+        "account-access:TagResource",
+        "account-access:UntagResource"
+      ],
+      "Amazon Bedrock Web Search": [
+        "bedrock-websearch:InvokeFetch",
+        "bedrock-websearch:InvokeSearch"
+      ]
+    },
+    "removedActions": {
+      "AWS Cloud Map": [
+        "servicediscovery:DeleteResourcePolicy",
+        "servicediscovery:GetResourcePolicy",
+        "servicediscovery:PutResourcePolicy"
+      ],
+      "AWS Account Management": [
+        "account:CloseAccount"
+      ],
+      "AWS App Mesh": [
+        "appmesh:DeleteMeshPolicy",
+        "appmesh:GetMeshPolicy",
+        "appmesh:PutMeshPolicy"
+      ],
+      "AWS App Mesh Preview": [
+        "appmesh-preview:DeleteMeshPolicy",
+        "appmesh-preview:GetMeshPolicy",
+        "appmesh-preview:PutMeshPolicy"
+      ],
+      "AWS App Runner": [
+        "apprunner:AssociateWebAcl",
+        "apprunner:DescribeWebAclForService",
+        "apprunner:DisassociateWebAcl",
+        "apprunner:ListAssociatedServicesForWebAcl"
+      ],
+      "AWS App Studio": [
+        "appstudio:GetAccountStatus",
+        "appstudio:GetEnablementJobStatus",
+        "appstudio:StartEnablementJob",
+        "appstudio:StartRollbackEnablementJob",
+        "appstudio:StartTeamDeployment"
+      ],
+      "AWS Application Migration Service": [
+        "mgn:BatchCreateVolumeSnapshotGroupForMgn",
+        "mgn:BatchDeleteSnapshotRequestForMgn",
+        "mgn:CreateVcenterClientForMgn",
+        "mgn:DescribeReplicationServerAssociationsForMgn",
+        "mgn:DescribeSnapshotRequestsForMgn",
+        "mgn:GetAgentCommandForMgn",
+        "mgn:GetAgentConfirmedResumeInfoForMgn",
+        "mgn:GetAgentInstallationAssetsForMgn",
+        "mgn:GetAgentReplicationInfoForMgn",
+        "mgn:GetAgentRuntimeConfigurationForMgn",
+        "mgn:GetAgentSnapshotCreditsForMgn",
+        "mgn:GetChannelCommandsForMgn",
+        "mgn:GetVcenterClientCommandsForMgn",
+        "mgn:IssueClientCertificateForMgn",
+        "mgn:NotifyAgentAuthenticationForMgn",
+        "mgn:NotifyAgentConnectedForMgn",
+        "mgn:NotifyAgentDisconnectedForMgn",
+        "mgn:NotifyAgentReplicationProgressForMgn",
+        "mgn:NotifyVcenterClientStartedForMgn",
+        "mgn:RegisterAgentForMgn",
+        "mgn:SendAgentLogsForMgn",
+        "mgn:SendAgentMetricsForMgn",
+        "mgn:SendChannelCommandResultForMgn",
+        "mgn:SendClientLogsForMgn",
+        "mgn:SendClientMetricsForMgn",
+        "mgn:SendVcenterClientCommandResultForMgn",
+        "mgn:SendVcenterClientLogsForMgn",
+        "mgn:SendVcenterClientMetricsForMgn",
+        "mgn:StartSnapshotGroupForMgn",
+        "mgn:UpdateAgentBacklogForMgn",
+        "mgn:UpdateAgentConversionInfoForMgn",
+        "mgn:UpdateAgentReplicationInfoForMgn",
+        "mgn:UpdateAgentReplicationProcessStateForMgn",
+        "mgn:UpdateAgentSourcePropertiesForMgn",
+        "mgn:VerifyClientRoleForMgn"
+      ],
+      "AWS AppSync": [
+        "appsync:AssociateWebACL",
+        "appsync:DeleteResourcePolicy",
+        "appsync:DisassociateWebACL",
+        "appsync:GetResourcePolicy",
+        "appsync:GetWebACLForResource",
+        "appsync:GraphQL",
+        "appsync:ListResourcesForWebACL",
+        "appsync:PutResourcePolicy",
+        "appsync:SourceGraphQL"
+      ],
+      "AWS Backup": [
+        "backup:CopyFromBackupVault",
+        "backup:CopyIntoBackupVault",
+        "backup:DeleteBackupVaultSharingPolicy",
+        "backup:GetBackupVaultSharingPolicy",
+        "backup:ListIndexedRecoveryPointsForSearch",
+        "backup:PutBackupVaultSharingPolicy",
+        "backup:SearchRecoveryPoint"
+      ],
+      "AWS Backup storage": [
+        "backup-storage:CommitBackupJob",
+        "backup-storage:DeleteObjects",
+        "backup-storage:DescribeBackupJob",
+        "backup-storage:GetBaseBackup",
+        "backup-storage:GetChunk",
+        "backup-storage:GetIncrementalBaseBackup",
+        "backup-storage:GetObjectMetadata",
+        "backup-storage:ListChunks",
+        "backup-storage:ListObjects",
+        "backup-storage:MountCapsule",
+        "backup-storage:NotifyObjectComplete",
+        "backup-storage:PutChunk",
+        "backup-storage:PutObject",
+        "backup-storage:StartObject",
+        "backup-storage:UpdateObjectComplete"
+      ],
+      "AWS BugBust": [
+        "bugbust:CreateEvent",
+        "bugbust:EvaluateProfilingGroups",
+        "bugbust:GetEvent",
+        "bugbust:GetJoinEventStatus",
+        "bugbust:JoinEvent",
+        "bugbust:ListBugs",
+        "bugbust:ListEventParticipants",
+        "bugbust:ListEventScores",
+        "bugbust:ListEvents",
+        "bugbust:ListProfilingGroups",
+        "bugbust:ListPullRequests",
+        "bugbust:ListTagsForResource",
+        "bugbust:TagResource",
+        "bugbust:UntagResource",
+        "bugbust:UpdateEvent",
+        "bugbust:UpdateWorkItem",
+        "bugbust:UpdateWorkItemAdmin"
+      ],
+      "AWS Clean Rooms": [
+        "cleanrooms:PassCollaboration",
+        "cleanrooms:PassMembership",
+        "cleanrooms:UpdateConfiguredTableAllowedColumns",
+        "cleanrooms:UpdateConfiguredTableReference"
+      ],
+      "AWS Cloud9": [
+        "cloud9:ActivateEC2Remote",
+        "cloud9:CreateEnvironmentSSH",
+        "cloud9:CreateEnvironmentToken",
+        "cloud9:DescribeEC2Remote",
+        "cloud9:DescribeSSHRemote",
+        "cloud9:GetEnvironmentConfig",
+        "cloud9:GetEnvironmentSettings",
+        "cloud9:GetMembershipSettings",
+        "cloud9:GetMigrationExperiences",
+        "cloud9:GetUserPublicKey",
+        "cloud9:GetUserSettings",
+        "cloud9:ModifyTemporaryCredentialsOnEnvironmentEC2",
+        "cloud9:UpdateEnvironmentSettings",
+        "cloud9:UpdateMembershipSettings",
+        "cloud9:UpdateSSHRemote",
+        "cloud9:UpdateUserSettings"
+      ],
+      "AWS CloudFormation": [
+        "cloudformation:CreateUploadBucket"
+      ],
+      "AWS CloudShell": [
+        "cloudshell:ApproveCommand",
+        "cloudshell:CreateEnvironment",
+        "cloudshell:CreateSession",
+        "cloudshell:DeleteEnvironment",
+        "cloudshell:DescribeEnvironments",
+        "cloudshell:GetEnvironmentStatus",
+        "cloudshell:GetFileDownloadUrls",
+        "cloudshell:GetFileUploadUrls",
+        "cloudshell:PutCredentials",
+        "cloudshell:StartEnvironment",
+        "cloudshell:StopEnvironment"
+      ],
+      "AWS CloudTrail": [
+        "cloudtrail:CreateServiceLinkedChannel",
+        "cloudtrail:DeleteServiceLinkedChannel",
+        "cloudtrail:GenerateQueryResultsSummary",
+        "cloudtrail:GetServiceLinkedChannel",
+        "cloudtrail:ListServiceLinkedChannels",
+        "cloudtrail:UpdateServiceLinkedChannel"
+      ],
+      "AWS CodeBuild": [
+        "codebuild:BatchPutCodeCoverages",
+        "codebuild:BatchPutTestCases",
+        "codebuild:CreateReport",
+        "codebuild:DeleteOAuthToken",
+        "codebuild:ListConnectedOAuthAccounts",
+        "codebuild:ListRepositories",
+        "codebuild:PersistOAuthToken",
+        "codebuild:UpdateReport"
+      ],
+      "AWS CodeCommit": [
+        "codecommit:BatchGetPullRequests",
+        "codecommit:CancelUploadArchive",
+        "codecommit:GetCommitHistory",
+        "codecommit:GetCommitsFromMergeBase",
+        "codecommit:GetObjectIdentifier",
+        "codecommit:GetReferences",
+        "codecommit:GetTree",
+        "codecommit:GetUploadArchiveStatus",
+        "codecommit:GitPull",
+        "codecommit:GitPush",
+        "codecommit:UploadArchive"
+      ],
+      "AWS CodeConnections": [
+        "codeconnections:GetConnectionToken",
+        "codeconnections:GetIndividualAccessToken",
+        "codeconnections:GetInstallationUrl",
+        "codeconnections:ListInstallationTargets",
+        "codeconnections:PassConnection",
+        "codeconnections:PassRepository",
+        "codeconnections:RegisterAppCode",
+        "codeconnections:StartAppRegistrationHandshake",
+        "codeconnections:StartOAuthHandshake",
+        "codeconnections:UseConnection"
+      ],
+      "AWS CodeDeploy": [
+        "codedeploy:CreateCloudFormationDeployment"
+      ],
+      "AWS CodeStar": [
+        "codestar:DeleteExtendedAccess",
+        "codestar:GetExtendedAccess",
+        "codestar:PutExtendedAccess"
+      ],
+      "AWS CodeStar Connections": [
+        "codestar-connections:GetConnectionToken",
+        "codestar-connections:GetIndividualAccessToken",
+        "codestar-connections:GetInstallationUrl",
+        "codestar-connections:ListInstallationTargets",
+        "codestar-connections:PassConnection",
+        "codestar-connections:PassRepository",
+        "codestar-connections:RegisterAppCode",
+        "codestar-connections:StartAppRegistrationHandshake",
+        "codestar-connections:StartOAuthHandshake",
+        "codestar-connections:UseConnection"
+      ],
+      "AWS Connector Service": [
+        "awsconnector:GetConnectorHealth",
+        "awsconnector:RegisterConnector",
+        "awsconnector:ValidateConnectorId"
+      ],
+      "AWS Consolidated Billing": [
+        "consolidatedbilling:GetAccountBillingRole",
+        "consolidatedbilling:ListLinkedAccounts"
+      ],
+      "AWS Control Tower": [
+        "controltower:CreateManagedAccount",
+        "controltower:DeregisterManagedAccount",
+        "controltower:DeregisterOrganizationalUnit",
+        "controltower:DescribeAccountFactoryConfig",
+        "controltower:DescribeCoreService",
+        "controltower:DescribeGuardrail",
+        "controltower:DescribeGuardrailForTarget",
+        "controltower:DescribeLandingZoneConfiguration",
+        "controltower:DescribeManagedAccount",
+        "controltower:DescribeManagedOrganizationalUnit",
+        "controltower:DescribeRegisterOrganizationalUnitOperation",
+        "controltower:DescribeSingleSignOn",
+        "controltower:DisableGuardrail",
+        "controltower:EnableGuardrail",
+        "controltower:GetAccountInfo",
+        "controltower:GetAvailableUpdates",
+        "controltower:GetGuardrailComplianceStatus",
+        "controltower:GetHomeRegion",
+        "controltower:GetLandingZoneStatus",
+        "controltower:ListDirectoryGroups",
+        "controltower:ListEnabledGuardrails",
+        "controltower:ListExtendGovernancePrecheckDetails",
+        "controltower:ListGuardrailViolations",
+        "controltower:ListGuardrails",
+        "controltower:ListGuardrailsForTarget",
+        "controltower:ListManagedAccounts",
+        "controltower:ListManagedAccountsForGuardrail",
+        "controltower:ListManagedAccountsForParent",
+        "controltower:ListManagedOrganizationalUnits",
+        "controltower:ListManagedOrganizationalUnitsForGuardrail",
+        "controltower:ManageOrganizationalUnit",
+        "controltower:PerformPreLaunchChecks",
+        "controltower:SetupLandingZone",
+        "controltower:UpdateAccountFactoryConfig"
+      ],
+      "AWS Cost and Usage Report": [
+        "cur:GetClassicReport",
+        "cur:GetClassicReportPreferences",
+        "cur:GetUsageReport",
+        "cur:PutClassicReportPreferences",
+        "cur:ValidateReportDestination"
+      ],
+      "AWS Cost Explorer Service": [
+        "ce:CreateNotificationSubscription",
+        "ce:CreateReport",
+        "ce:DeleteNotificationSubscription",
+        "ce:DeleteReport",
+        "ce:DescribeNotificationSubscription",
+        "ce:DescribeReport",
+        "ce:GetConsoleActionSetEnforced",
+        "ce:GetPreferences",
+        "ce:UpdateConsoleActionSetEnforced",
+        "ce:UpdateNotificationSubscription",
+        "ce:UpdatePreferences",
+        "ce:UpdateReport"
+      ],
+      "AWS Customer Verification Service": [
+        "customer-verification:CreateCustomerVerificationDetails",
+        "customer-verification:CreateUploadUrls",
+        "customer-verification:GetCustomerVerificationDetails",
+        "customer-verification:GetCustomerVerificationEligibility",
+        "customer-verification:UpdateCustomerVerificationDetails"
+      ],
+      "AWS Data Exchange": [
+        "dataexchange:CreateAsset",
+        "dataexchange:PublishDataSet",
+        "dataexchange:PublishToDataGrant"
+      ],
+      "AWS Data Pipeline": [
+        "datapipeline:GetAccountLimits",
+        "datapipeline:PutAccountLimits"
+      ],
+      "AWS Database Migration Service": [
+        "dms:CreateOutboundIntegration",
+        "dms:ListMetadataModelAssessmentActionItems",
+        "dms:ModifyFleetAdvisorCollector",
+        "dms:ModifyFleetAdvisorCollectorStatuses",
+        "dms:ModifyOutboundIntegration",
+        "dms:UploadFileMetadataList"
+      ],
+      "AWS Deadline Cloud": [
+        "deadline:GetApplicationVersion",
+        "deadline:GetJobTemplate"
+      ],
+      "AWS DevOps Agent Service": [
+        "aidevops:AllowVendedLogDeliveryForResource"
+      ],
+      "AWS Directory Service": [
+        "ds:AccessDSData",
+        "ds:AuthorizeApplication",
+        "ds:CheckAlias",
+        "ds:CreateIdentityPoolDirectory",
+        "ds:DisableRoleAccess",
+        "ds:EnableRoleAccess",
+        "ds:GetAuthorizedApplicationDetails",
+        "ds:ListAuthorizedApplications",
+        "ds:UnauthorizeApplication",
+        "ds:UpdateAuthorizedApplication",
+        "ds:UpdateDirectory"
+      ],
+      "AWS Elastic Disaster Recovery": [
+        "drs:AssociateFailbackClientToRecoveryInstanceForDrs",
+        "drs:BatchCreateVolumeSnapshotGroupForDrs",
+        "drs:BatchDeleteSnapshotRequestForDrs",
+        "drs:CreateConvertedSnapshotForDrs",
+        "drs:CreateRecoveryInstanceForDrs",
+        "drs:CreateSourceServerForDrs",
+        "drs:DescribeReplicationServerAssociationsForDrs",
+        "drs:DescribeSnapshotRequestsForDrs",
+        "drs:GetAgentCommandForDrs",
+        "drs:GetAgentConfirmedResumeInfoForDrs",
+        "drs:GetAgentInstallationAssetsForDrs",
+        "drs:GetAgentReplicationInfoForDrs",
+        "drs:GetAgentRuntimeConfigurationForDrs",
+        "drs:GetAgentSnapshotCreditsForDrs",
+        "drs:GetChannelCommandsForDrs",
+        "drs:GetFailbackCommandForDrs",
+        "drs:GetFailbackLaunchRequestedForDrs",
+        "drs:GetSuggestedFailbackClientDeviceMappingForDrs",
+        "drs:IssueAgentCertificateForDrs",
+        "drs:NotifyAgentAuthenticationForDrs",
+        "drs:NotifyAgentConnectedForDrs",
+        "drs:NotifyAgentDisconnectedForDrs",
+        "drs:NotifyAgentReplicationProgressForDrs",
+        "drs:NotifyConsistencyAttainedForDrs",
+        "drs:NotifyReplicationServerAuthenticationForDrs",
+        "drs:NotifyVolumeEventForDrs",
+        "drs:SendAgentLogsForDrs",
+        "drs:SendAgentMetricsForDrs",
+        "drs:SendChannelCommandResultForDrs",
+        "drs:SendClientLogsForDrs",
+        "drs:SendClientMetricsForDrs",
+        "drs:SendVolumeStatsForDrs",
+        "drs:UpdateAgentBacklogForDrs",
+        "drs:UpdateAgentConversionInfoForDrs",
+        "drs:UpdateAgentReplicationInfoForDrs",
+        "drs:UpdateAgentReplicationProcessStateForDrs",
+        "drs:UpdateAgentSourcePropertiesForDrs",
+        "drs:UpdateFailbackClientDeviceMappingForDrs",
+        "drs:UpdateFailbackClientLastSeenForDrs",
+        "drs:UpdateReplicationCertificateForDrs"
+      ],
+      "AWS Elastic Load Balancing V2": [
+        "elasticloadbalancing:AllowVendedLogDeliveryForResource",
+        "elasticloadbalancing:CreateWebACLAssociation",
+        "elasticloadbalancing:DeleteWebACLAssociation",
+        "elasticloadbalancing:DescribeWebACLAssociation",
+        "elasticloadbalancing:GetLoadBalancerWebACL",
+        "elasticloadbalancing:SetWebAcl"
+      ],
+      "AWS Elemental Appliances and Software": [
+        "elemental-appliances-software:CompleteUpload",
+        "elemental-appliances-software:CreateOrderV1",
+        "elemental-appliances-software:CreateQuote",
+        "elemental-appliances-software:GetAvsCorrectAddress",
+        "elemental-appliances-software:GetBillingAddresses",
+        "elemental-appliances-software:GetDeliveryAddressesV2",
+        "elemental-appliances-software:GetOrder",
+        "elemental-appliances-software:GetOrdersV2",
+        "elemental-appliances-software:GetQuote",
+        "elemental-appliances-software:GetTaxes",
+        "elemental-appliances-software:ListQuotes",
+        "elemental-appliances-software:StartUpload",
+        "elemental-appliances-software:SubmitOrderV1",
+        "elemental-appliances-software:UpdateQuote"
+      ],
+      "AWS Elemental Appliances and Software Activation Service": [
+        "elemental-activations:CompleteAccountRegistration",
+        "elemental-activations:CompleteFileUpload",
+        "elemental-activations:ConfirmAccount",
+        "elemental-activations:DownloadKickstart",
+        "elemental-activations:DownloadSoftware",
+        "elemental-activations:GenerateLicense",
+        "elemental-activations:GenerateLicenses",
+        "elemental-activations:GetArtifactGroupSoftwareVersions",
+        "elemental-activations:GetAsset",
+        "elemental-activations:GetAssets",
+        "elemental-activations:GetProductAdvisories",
+        "elemental-activations:GetSoftwareVersions",
+        "elemental-activations:StartFileUpload"
+      ],
+      "AWS Elemental Support Cases": [
+        "elemental-support-cases:AddCaseComment",
+        "elemental-support-cases:CheckCasePermission",
+        "elemental-support-cases:CompleteMultipartUpload",
+        "elemental-support-cases:CreateCase",
+        "elemental-support-cases:CreateS3CLIUploadCommand",
+        "elemental-support-cases:CreateS3DownloadUrl",
+        "elemental-support-cases:GetCase",
+        "elemental-support-cases:GetCasePermission",
+        "elemental-support-cases:GetCases",
+        "elemental-support-cases:GetUICache",
+        "elemental-support-cases:ListTagsForCase",
+        "elemental-support-cases:StartMultipartUpload",
+        "elemental-support-cases:TagCase",
+        "elemental-support-cases:UntagCase",
+        "elemental-support-cases:UpdateCase",
+        "elemental-support-cases:UpdateCaseStatus",
+        "elemental-support-cases:UpdateMultipartUpload"
+      ],
+      "AWS Elemental Support Content": [
+        "elemental-support-content:Query"
+      ],
+      "AWS Fault Injection Service": [
+        "fis:InjectApiInternalError",
+        "fis:InjectApiThrottleError",
+        "fis:InjectApiUnavailableError"
+      ],
+      "AWS FinOps Agent": [
+        "finops-agent:AcceptAgentRequest",
+        "finops-agent:CancelTask",
+        "finops-agent:CancelTurn",
+        "finops-agent:CreateAgentSpace",
+        "finops-agent:CreateAutomation",
+        "finops-agent:CreateConnection",
+        "finops-agent:CreateConversation",
+        "finops-agent:CreateDocument",
+        "finops-agent:CreateIntegration",
+        "finops-agent:CreateOneTimeLoginSession",
+        "finops-agent:CreateTask",
+        "finops-agent:CreateTurn",
+        "finops-agent:DeleteAgentSpace",
+        "finops-agent:DeleteArtifact",
+        "finops-agent:DeleteAutomation",
+        "finops-agent:DeleteConnection",
+        "finops-agent:DeleteDocument",
+        "finops-agent:DeleteIntegration",
+        "finops-agent:GetAgentRequest",
+        "finops-agent:GetAgentSpace",
+        "finops-agent:GetArtifactContent",
+        "finops-agent:GetArtifactMetadata",
+        "finops-agent:GetAutomation",
+        "finops-agent:GetConnection",
+        "finops-agent:GetDocumentContent",
+        "finops-agent:GetDocumentMetadata",
+        "finops-agent:GetIntegration",
+        "finops-agent:GetTask",
+        "finops-agent:GetTurn",
+        "finops-agent:ListAgentSpaces",
+        "finops-agent:ListArtifacts",
+        "finops-agent:ListAutomations",
+        "finops-agent:ListConnections",
+        "finops-agent:ListConversations",
+        "finops-agent:ListDocuments",
+        "finops-agent:ListIntegrations",
+        "finops-agent:ListRecords",
+        "finops-agent:ListTasks",
+        "finops-agent:ListTurns",
+        "finops-agent:RejectAgentRequest",
+        "finops-agent:RestoreDocument",
+        "finops-agent:SendFeedback",
+        "finops-agent:UpdateAgentSpace",
+        "finops-agent:UpdateAutomation",
+        "finops-agent:UpdateConnection",
+        "finops-agent:UpdateDocument"
+      ],
+      "AWS Free Tier": [
+        "freetier:GetFreeTierAlertPreference",
+        "freetier:PutFreeTierAlertPreference"
+      ],
+      "AWS Glue": [
+        "glue:AuthorizeInboundIntegration",
+        "glue:CreateInboundIntegration",
+        "glue:PassConnection",
+        "glue:PublishDataQuality",
+        "glue:UseMLTransforms"
+      ],
+      "AWS IAM Identity Center OIDC service": [
+        "sso-oauth:IntrospectTokenWithIAM",
+        "sso-oauth:RevokeTokenWithIAM"
+      ],
+      "AWS Identity and Access Management (IAM)": [
+        "iam:PassRole"
+      ],
+      "AWS Identity Store Auth": [
+        "identitystore-auth:BatchDeleteSession",
+        "identitystore-auth:BatchGetSession",
+        "identitystore-auth:ListSessions"
+      ],
+      "AWS Identity Sync": [
+        "identity-sync:AllowVendedLogDeliveryForResource"
+      ],
+      "AWS Invoicing Service": [
+        "invoicing:GetInvoiceCorrection",
+        "invoicing:GetInvoiceEmailDeliveryPreferences",
+        "invoicing:ListInvoiceCorrections",
+        "invoicing:PutInvoiceEmailDeliveryPreferences",
+        "invoicing:StartInvoiceCorrection"
+      ],
+      "AWS IoT FleetWise": [
+        "iotfleetwise:GenerateCommandPayload"
+      ],
+      "AWS IoT SiteWise": [
+        "iotsitewise:EnableSiteWiseIntegration",
+        "iotsitewise:UpdateAssetModelPropertyRouting"
+      ],
+      "AWS Key Management Service": [
+        "kms:SynchronizeMultiRegionKey"
+      ],
+      "AWS Lambda": [
+        "lambda:ConnectMicrovm",
+        "lambda:DisableReplication",
+        "lambda:EnableReplication",
+        "lambda:InvokeFunctionUrl",
+        "lambda:PassCapacityProvider",
+        "lambda:PassNetworkConnector"
+      ],
+      "AWS Launch Wizard": [
+        "launchwizard:CreateAdditionalNode",
+        "launchwizard:CreateSettingsSet",
+        "launchwizard:DeleteAdditionalNode",
+        "launchwizard:DeleteApp",
+        "launchwizard:DeleteSettingsSet",
+        "launchwizard:DescribeAdditionalNode",
+        "launchwizard:DescribeProvisionedApp",
+        "launchwizard:DescribeProvisioningEvents",
+        "launchwizard:DescribeSettingsSet",
+        "launchwizard:GetInfrastructureSuggestion",
+        "launchwizard:GetIpAddress",
+        "launchwizard:GetResourceCostEstimate",
+        "launchwizard:GetResourceRecommendation",
+        "launchwizard:GetSettingsSet",
+        "launchwizard:GetWorkloadAsset",
+        "launchwizard:GetWorkloadAssets",
+        "launchwizard:ListAdditionalNodes",
+        "launchwizard:ListAllowedResources",
+        "launchwizard:ListProvisionedApps",
+        "launchwizard:ListResourceCostEstimates",
+        "launchwizard:ListSettingsSets",
+        "launchwizard:ListWorkloadDeploymentOptions",
+        "launchwizard:PutSettingsSet",
+        "launchwizard:StartProvisioning",
+        "launchwizard:UpdateSettingsSet"
+      ],
+      "AWS Microservice Extractor for .NET": [
+        "serviceextract:GetConfig"
+      ],
+      "AWS Migration Acceleration Program Credits": [
+        "mapcredits:ListAssociatedPrograms",
+        "mapcredits:ListQuarterCredits",
+        "mapcredits:ListQuarterSpend"
+      ],
+      "AWS Network Manager Chat": [
+        "networkmanager-chat:CancelMessageResponse",
+        "networkmanager-chat:CreateConversation",
+        "networkmanager-chat:DeleteConversation",
+        "networkmanager-chat:ListConversationMessages",
+        "networkmanager-chat:ListConversations",
+        "networkmanager-chat:NotifyConversationIsActive",
+        "networkmanager-chat:SendConversationMessage"
+      ],
+      "AWS Panorama": [
+        "panorama:DescribeSoftware",
+        "panorama:GetWebSocketURL"
+      ],
+      "AWS Parallel Computing Service": [
+        "pcs:AllowVendedLogDeliveryForResource"
+      ],
+      "AWS Partner Central": [
+        "partnercentral:CreateBusinessPlan",
+        "partnercentral:CreateCollaborationChannelMembers",
+        "partnercentral:CreateCollaborationChannelRequest",
+        "partnercentral:EnrollInPartnerPath",
+        "partnercentral:GetBusinessPlan",
+        "partnercentral:GetCollaborationChannel",
+        "partnercentral:GetPartnerProfile",
+        "partnercentral:GetProgramManagementAccount",
+        "partnercentral:ListBusinessPlans",
+        "partnercentral:ListCollaborationChannels",
+        "partnercentral:ListPartnerPaths",
+        "partnercentral:PutBusinessPlan",
+        "partnercentral:SearchPartnerProfiles",
+        "partnercentral:UseSession"
+      ],
+      "AWS Partner central account management": [
+        "partnercentral-account-management:AccessLegacyPartnerCentral",
+        "partnercentral-account-management:AccessMarketingCentral",
+        "partnercentral-account-management:AccessProServeTools",
+        "partnercentral-account-management:AssociatePartnerAccount"
+      ],
+      "AWS Payments": [
+        "payments:DeletePaymentInstrument",
+        "payments:GetPaymentStatus",
+        "payments:ListPaymentInstruments",
+        "payments:ListPaymentPreferences",
+        "payments:MakePayment",
+        "payments:UpdatePaymentInstrument",
+        "payments:UpdatePaymentPreferences"
+      ],
+      "AWS PrivateLink": [
+        "vpce:AllowMultiRegion"
+      ],
+      "AWS Purchase Orders Console": [
+        "purchase-orders:AddPurchaseOrder",
+        "purchase-orders:DeletePurchaseOrder",
+        "purchase-orders:GetConsoleActionSetEnforced",
+        "purchase-orders:GetPurchaseOrder",
+        "purchase-orders:ListPurchaseOrderInvoices",
+        "purchase-orders:ListPurchaseOrders",
+        "purchase-orders:ListTagsForResource",
+        "purchase-orders:ModifyPurchaseOrders",
+        "purchase-orders:TagResource",
+        "purchase-orders:UntagResource",
+        "purchase-orders:UpdateConsoleActionSetEnforced",
+        "purchase-orders:UpdatePurchaseOrder",
+        "purchase-orders:UpdatePurchaseOrderStatus",
+        "purchase-orders:ViewPurchaseOrders"
+      ],
+      "AWS Resource Explorer": [
+        "resource-explorer-2:CreateManagedView",
+        "resource-explorer-2:CreateStreamingAccessForService",
+        "resource-explorer-2:DeleteResourcePolicy",
+        "resource-explorer-2:DeleteStreamingAccessForService",
+        "resource-explorer-2:GetResourcePolicy",
+        "resource-explorer-2:PutResourcePolicy"
+      ],
+      "AWS Resource Groups": [
+        "resource-groups:AssociateResource",
+        "resource-groups:DeleteGroupPolicy",
+        "resource-groups:DisassociateResource",
+        "resource-groups:GetGroupPolicy",
+        "resource-groups:ListResourceTypes",
+        "resource-groups:PutGroupPolicy"
+      ],
+      "AWS RoboMaker": [
+        "robomaker:ListSupportedAvailabilityZones",
+        "robomaker:UpdateRobotDeployment"
+      ],
+      "AWS Route53 Global Resolver": [
+        "route53globalresolver:AllowVendedLogDeliveryForResource"
+      ],
+      "AWS Security Hub": [
+        "securityhub:AllowVendedLogDeliveryForResource",
+        "securityhub:BatchGetControlEvaluations",
+        "securityhub:GetAdhocInsightResults",
+        "securityhub:GetControlFindingSummary",
+        "securityhub:GetFreeTrialEndDate",
+        "securityhub:GetFreeTrialUsage",
+        "securityhub:GetInsightFindingTrend",
+        "securityhub:GetUsage",
+        "securityhub:GetUsageV2",
+        "securityhub:ListAccountUsageV2",
+        "securityhub:ListControlEvaluationSummaries",
+        "securityhub:SendFindingEvents",
+        "securityhub:SendInsightEvents"
+      ],
+      "AWS Security Token Service": [
+        "sts:GetServiceBearerToken",
+        "sts:SetContext",
+        "sts:SetSourceIdentity",
+        "sts:TagGetWebIdentityToken",
+        "sts:TagSession"
+      ],
+      "AWS Server Migration Service": [
+        "sms:GetMessages",
+        "sms:SendMessage"
+      ],
+      "AWS Service - Oracle Database@AWS": [
+        "odb:CreateDbNode",
+        "odb:CreateGrantShare",
+        "odb:CreateOutboundIntegration",
+        "odb:DeleteDbNode",
+        "odb:DeleteGrantShare",
+        "odb:DeleteResourcePolicy",
+        "odb:GetResourcePolicy",
+        "odb:PutResourcePolicy",
+        "odb:UpdateGrantShare",
+        "odb:UpdateOutboundIntegration"
+      ],
+      "AWS Service Catalog": [
+        "servicecatalog:DeleteResourcePolicy",
+        "servicecatalog:GetResourcePolicy",
+        "servicecatalog:PutResourcePolicy"
+      ],
+      "AWS Shield": [
+        "shield:DescribeAttackContributors",
+        "shield:GetGlobalThreatData",
+        "shield:ListMitigations"
+      ],
+      "AWS Signin": [
+        "signin:CreateAccount"
+      ],
+      "AWS SQL Workbench": [
+        "sqlworkbench:AssociateConnectionWithChart",
+        "sqlworkbench:AssociateConnectionWithTab",
+        "sqlworkbench:AssociateNotebookWithTab",
+        "sqlworkbench:AssociateQueryWithTab",
+        "sqlworkbench:BatchDeleteFolder",
+        "sqlworkbench:BatchGetNotebookCell",
+        "sqlworkbench:CreateAccount",
+        "sqlworkbench:CreateChart",
+        "sqlworkbench:CreateConnection",
+        "sqlworkbench:CreateFolder",
+        "sqlworkbench:CreateNotebook",
+        "sqlworkbench:CreateNotebookCell",
+        "sqlworkbench:CreateNotebookFromVersion",
+        "sqlworkbench:CreateNotebookVersion",
+        "sqlworkbench:CreateSavedQuery",
+        "sqlworkbench:DeleteChart",
+        "sqlworkbench:DeleteConnection",
+        "sqlworkbench:DeleteNotebook",
+        "sqlworkbench:DeleteNotebookCell",
+        "sqlworkbench:DeleteNotebookVersion",
+        "sqlworkbench:DeleteQCustomContext",
+        "sqlworkbench:DeleteSavedQuery",
+        "sqlworkbench:DeleteSqlGenerationContext",
+        "sqlworkbench:DeleteTab",
+        "sqlworkbench:DriverExecute",
+        "sqlworkbench:DuplicateNotebook",
+        "sqlworkbench:ExportNotebook",
+        "sqlworkbench:GenerateSession",
+        "sqlworkbench:GetAccountInfo",
+        "sqlworkbench:GetAccountSettings",
+        "sqlworkbench:GetAutocompletionMetadata",
+        "sqlworkbench:GetAutocompletionResource",
+        "sqlworkbench:GetChart",
+        "sqlworkbench:GetConnection",
+        "sqlworkbench:GetNotebook",
+        "sqlworkbench:GetNotebookVersion",
+        "sqlworkbench:GetQCustomContext",
+        "sqlworkbench:GetQSqlPromptQuotas",
+        "sqlworkbench:GetQSqlRecommendations",
+        "sqlworkbench:GetQueryExecutionHistory",
+        "sqlworkbench:GetSavedQuery",
+        "sqlworkbench:GetSchemaInference",
+        "sqlworkbench:GetSqlGenerationContext",
+        "sqlworkbench:GetSqlRecommendations",
+        "sqlworkbench:GetUserInfo",
+        "sqlworkbench:GetUserWorkspaceSettings",
+        "sqlworkbench:ImportNotebook",
+        "sqlworkbench:ListConnections",
+        "sqlworkbench:ListDatabases",
+        "sqlworkbench:ListFiles",
+        "sqlworkbench:ListNotebookVersions",
+        "sqlworkbench:ListNotebooks",
+        "sqlworkbench:ListQueryExecutionHistory",
+        "sqlworkbench:ListRedshiftClusters",
+        "sqlworkbench:ListSampleDatabases",
+        "sqlworkbench:ListSavedQueryVersions",
+        "sqlworkbench:ListTabs",
+        "sqlworkbench:ListTaggedResources",
+        "sqlworkbench:ListTagsForResource",
+        "sqlworkbench:PassAccountSettings",
+        "sqlworkbench:PutQCustomContext",
+        "sqlworkbench:PutSqlGenerationContext",
+        "sqlworkbench:PutTab",
+        "sqlworkbench:PutUserWorkspaceSettings",
+        "sqlworkbench:RestoreNotebookVersion",
+        "sqlworkbench:TagResource",
+        "sqlworkbench:UntagResource",
+        "sqlworkbench:UpdateAccountConnectionSettings",
+        "sqlworkbench:UpdateAccountExportSettings",
+        "sqlworkbench:UpdateAccountGeneralSettings",
+        "sqlworkbench:UpdateAccountQSqlSettings",
+        "sqlworkbench:UpdateChart",
+        "sqlworkbench:UpdateConnection",
+        "sqlworkbench:UpdateFileFolder",
+        "sqlworkbench:UpdateFolder",
+        "sqlworkbench:UpdateNotebook",
+        "sqlworkbench:UpdateNotebookCellContent",
+        "sqlworkbench:UpdateNotebookCellLayout",
+        "sqlworkbench:UpdateSavedQuery"
+      ],
+      "AWS Step Functions": [
+        "states:InvokeHTTPEndpoint",
+        "states:RevealSecrets"
+      ],
+      "AWS Systems Manager": [
+        "ssm:GetCalendar",
+        "ssm:GetManifest",
+        "ssm:PutCalendar",
+        "ssm:PutConfigurePackageResult",
+        "ssm:UpdateInstanceAssociationStatus"
+      ],
+      "AWS Systems Manager GUI Connect": [
+        "ssm-guiconnect:CancelConnection",
+        "ssm-guiconnect:GetConnection",
+        "ssm-guiconnect:ListConnections",
+        "ssm-guiconnect:StartConnection"
+      ],
+      "AWS Systems Manager Incident Manager Contacts": [
+        "ssm-contacts:AssociateContact"
+      ],
+      "AWS Tax Settings": [
+        "tax:GetTaxInfoReportingDocument",
+        "tax:GetTaxInterview",
+        "tax:PutTaxInterview"
+      ],
+      "AWS Tiros": [
+        "tiros:CreateQuery",
+        "tiros:ExtendQuery",
+        "tiros:GetQueryAnswer",
+        "tiros:GetQueryExplanation",
+        "tiros:GetQueryExtensionAccounts"
+      ],
+      "AWS Transform": [
+        "transform:AccessTransformProfile",
+        "transform:AssociateConnectorResource",
+        "transform:CreateProfile",
+        "transform:DeleteAgentRuntimeConfiguration",
+        "transform:DeleteConnector",
+        "transform:DeleteProfile",
+        "transform:GetAccountSettings",
+        "transform:GetAgent",
+        "transform:GetAgentRuntimeConfiguration",
+        "transform:GetConnector",
+        "transform:GetWebAppUrl",
+        "transform:ListAgents",
+        "transform:ListConnectors",
+        "transform:ListProfiles",
+        "transform:ListTagsForResource",
+        "transform:PutAgentRuntimeConfiguration",
+        "transform:RejectConnector",
+        "transform:TagResource",
+        "transform:UntagResource",
+        "transform:UpdateAccountSettings",
+        "transform:UpdateAgentAccess",
+        "transform:UpdateProfile"
+      ],
+      "AWS Trusted Advisor": [
+        "trustedadvisor:DescribeAccount",
+        "trustedadvisor:DescribeAccountAccess",
+        "trustedadvisor:DescribeCheckStatusHistoryChanges",
+        "trustedadvisor:DescribeNotificationPreferences",
+        "trustedadvisor:DescribeOrganization",
+        "trustedadvisor:DescribeOrganizationAccounts",
+        "trustedadvisor:DescribeReports",
+        "trustedadvisor:DescribeServiceMetadata",
+        "trustedadvisor:ExcludeCheckItems",
+        "trustedadvisor:GenerateReport",
+        "trustedadvisor:IncludeCheckItems",
+        "trustedadvisor:ListAccountsForParent",
+        "trustedadvisor:ListOrganizationalUnitsForParent",
+        "trustedadvisor:ListRoots",
+        "trustedadvisor:SetAccountAccess",
+        "trustedadvisor:SetOrganizationAccess",
+        "trustedadvisor:UpdateNotificationPreferences"
+      ],
+      "AWS User Notifications": [
+        "notifications:GetFeatureOptInStatus",
+        "notifications:PutFeatureOptInStatus"
+      ],
+      "AWS Verified Access": [
+        "verified-access:AllowVerifiedAccess"
+      ],
+      "AWS WAF V2": [
+        "wafv2:DisassociateFirewallManager",
+        "wafv2:PutFirewallManagerRuleGroups"
+      ],
+      "AWS Well-Architected Tool": [
+        "wellarchitected:ConfigureIntegration"
+      ],
+      "AWS X-Ray": [
+        "xray:BatchGetTraceSummaryById",
+        "xray:GetDistinctTraceGraphs",
+        "xray:Link",
+        "xray:PutSpansForIndexing"
+      ],
+      "AWS Billing": [
+        "billing:DeleteResourcePolicy",
+        "billing:GetBillingData",
+        "billing:GetBillingDetails",
+        "billing:GetBillingNotifications",
+        "billing:GetBillingViewData",
+        "billing:GetContractInformation",
+        "billing:GetCumulativeTracking",
+        "billing:GetIAMAccessPreference",
+        "billing:GetMonthlyTracking",
+        "billing:GetSellerOfRecord",
+        "billing:PutContractInformation",
+        "billing:PutResourcePolicy",
+        "billing:UpdateIAMAccessPreference",
+        "billing:UseSourceView"
+      ],
+      "AWS Billing Console": [
+        "aws-portal:GetConsoleActionSetEnforced",
+        "aws-portal:ModifyAccount",
+        "aws-portal:ModifyBilling",
+        "aws-portal:ModifyPaymentMethods",
+        "aws-portal:UpdateConsoleActionSetEnforced",
+        "aws-portal:ViewAccount",
+        "aws-portal:ViewBilling",
+        "aws-portal:ViewPaymentMethods",
+        "aws-portal:ViewUsage"
+      ],
+      "AWS Marketplace Image Building Service": [
+        "aws-marketplace:DescribeBuilds",
+        "aws-marketplace:ListBuilds",
+        "aws-marketplace:StartBuild"
+      ],
+      "AWS Marketplace Management Portal": [
+        "aws-marketplace-management:GetAdditionalSellerNotificationRecipients",
+        "aws-marketplace-management:GetBankAccountVerificationDetails",
+        "aws-marketplace-management:GetSecondaryUserVerificationDetails",
+        "aws-marketplace-management:GetSellerVerificationDetails",
+        "aws-marketplace-management:PutAdditionalSellerNotificationRecipients",
+        "aws-marketplace-management:PutBankAccountVerificationDetails",
+        "aws-marketplace-management:PutSecondaryUserVerificationDetails",
+        "aws-marketplace-management:PutSellerVerificationDetails",
+        "aws-marketplace-management:uploadFiles",
+        "aws-marketplace-management:viewMarketing",
+        "aws-marketplace-management:viewReports",
+        "aws-marketplace-management:viewSettings",
+        "aws-marketplace-management:viewSupport"
+      ],
+      "AWS Marketplace Private Marketplace": [
+        "aws-marketplace:AssociateProductsWithPrivateMarketplace",
+        "aws-marketplace:CreatePrivateMarketplaceRequests",
+        "aws-marketplace:DescribePrivateMarketplaceRequests",
+        "aws-marketplace:DisassociateProductsFromPrivateMarketplace",
+        "aws-marketplace:ListPrivateMarketplaceRequests"
+      ],
+      "AWS Marketplace Procurement Systems Integration": [
+        "aws-marketplace:DescribeProcurementSystemConfiguration",
+        "aws-marketplace:PutProcurementSystemConfiguration"
+      ],
+      "AWS Support App in Slack": [
+        "supportapp:DescribeSlackChannels",
+        "supportapp:GetSlackOauthParameters",
+        "supportapp:RedeemSlackOauthCode"
+      ],
+      "AWS Support Console": [
+        "support-console:CheckSubscription",
+        "support-console:CreateCaseDraft",
+        "support-console:CreateContact",
+        "support-console:DeleteCaseDraft",
+        "support-console:DescribeDynamicHelp",
+        "support-console:GetAccountGovCloudEnabled",
+        "support-console:GetAccountState",
+        "support-console:GetBanner",
+        "support-console:GetCaseDraft",
+        "support-console:GetIssueClassificationPredictions",
+        "support-console:GetIssueTextSummary",
+        "support-console:GetQuestionnaire",
+        "support-console:SaveFeedback"
+      ],
+      "AWS Support Plans": [
+        "supportplans:CreateSupportPlanSchedule",
+        "supportplans:GetSupportPlan",
+        "supportplans:GetSupportPlanUpdateStatus",
+        "supportplans:ListSupportPlanModifiers",
+        "supportplans:StartSupportPlanUpdate"
+      ],
+      "Alexa for Business": [
+        "a4b:CompleteRegistration",
+        "a4b:PutDeviceSetupEvents",
+        "a4b:RegisterDevice"
+      ],
+      "Amazon AppFlow": [
+        "appflow:DescribeConnectorFields",
+        "appflow:DescribeFlowExecution",
+        "appflow:DescribeFlows",
+        "appflow:ListConnectorFields",
+        "appflow:RunFlow",
+        "appflow:UseConnectorProfile"
+      ],
+      "Amazon AppIntegrations": [
+        "app-integrations:CreateApplicationAssociation",
+        "app-integrations:CreateEventIntegrationAssociation",
+        "app-integrations:DeleteApplicationAssociation",
+        "app-integrations:DeleteDataIntegrationAssociation",
+        "app-integrations:DeleteEventIntegrationAssociation"
+      ],
+      "Amazon ARC Region switch": [
+        "arc-region-switch:DeleteResourcePolicy",
+        "arc-region-switch:GetResourcePolicy",
+        "arc-region-switch:PutResourcePolicy"
+      ],
+      "Amazon Aurora DSQL": [
+        "dsql:AddPeerCluster",
+        "dsql:InjectError",
+        "dsql:PutMultiRegionProperties",
+        "dsql:PutWitnessRegion",
+        "dsql:RemovePeerCluster"
+      ],
+      "Amazon Bedrock": [
+        "bedrock:AllowVendedLogDeliveryForResource",
+        "bedrock:AssociateThirdPartyKnowledgeBase",
+        "bedrock:DeleteResourcePolicy",
+        "bedrock:GetBlueprintRecommendation",
+        "bedrock:GetResourcePolicy",
+        "bedrock:InvokeAutomatedReasoningPolicy",
+        "bedrock:InvokeBlueprintRecommendationAsync",
+        "bedrock:InvokeBuilder",
+        "bedrock:PutResourcePolicy",
+        "bedrock:RenderPrompt"
+      ],
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:AllowVendedLogDeliveryForResource",
+        "bedrock-agentcore:AuthorizeAction",
+        "bedrock-agentcore:GatewayAssociateWebACL",
+        "bedrock-agentcore:GatewayDisassociateWebACL",
+        "bedrock-agentcore:GatewayGetWebACLForResource",
+        "bedrock-agentcore:GatewayListResourcesForWebACL",
+        "bedrock-agentcore:InvokeGateway",
+        "bedrock-agentcore:InvokeWebSearch",
+        "bedrock-agentcore:ManageAdminPolicy",
+        "bedrock-agentcore:ManageResourceScopedPolicy",
+        "bedrock-agentcore:PartiallyAuthorizeActions",
+        "bedrock-agentcore:SynchronizeGatewayTargets"
+      ],
+      "Amazon Bedrock Powered by AWS Mantle": [
+        "bedrock-mantle:CallWithBearerToken"
+      ],
+      "Amazon Braket": [
+        "braket:AcceptUserAgreement",
+        "braket:GetServiceLinkedRoleStatus",
+        "braket:GetUserAgreementStatus"
+      ],
+      "Amazon Chime": [
+        "chime:AssociateVoiceConnectorConnect",
+        "chime:CreateConnectAnalyticsConnector",
+        "chime:CreateConnectCallTransferConnector",
+        "chime:DisassociateVoiceConnectorConnect"
+      ],
+      "Amazon CloudFront": [
+        "cloudfront:AllowVendedLogDeliveryForResource",
+        "cloudfront:CreateSavingsPlan",
+        "cloudfront:GetSavingsPlan",
+        "cloudfront:ListDistributionsByLambdaFunction",
+        "cloudfront:ListRateCards",
+        "cloudfront:ListSavingsPlans",
+        "cloudfront:ListUsages",
+        "cloudfront:UpdateSavingsPlan"
+      ],
+      "Amazon CloudSearch": [
+        "cloudsearch:document",
+        "cloudsearch:search",
+        "cloudsearch:suggest"
+      ],
+      "Amazon CloudWatch": [
+        "cloudwatch:CallWithBearerToken",
+        "cloudwatch:DeletePipelineRule",
+        "cloudwatch:GetOTelEnrichment",
+        "cloudwatch:GetServiceData",
+        "cloudwatch:GetTopologyDiscoveryStatus",
+        "cloudwatch:Link",
+        "cloudwatch:ListEntitiesForMetric",
+        "cloudwatch:PutPipelineRule",
+        "cloudwatch:StartOTelEnrichment",
+        "cloudwatch:StopOTelEnrichment"
+      ],
+      "Amazon CloudWatch Application Insights": [
+        "applicationinsights:Link"
+      ],
+      "Amazon CloudWatch Application Signals": [
+        "application-signals:Link"
+      ],
+      "Amazon CloudWatch Internet Monitor": [
+        "internetmonitor:Link"
+      ],
+      "Amazon CloudWatch Logs": [
+        "logs:CallWithBearerToken",
+        "logs:CreateLogDelivery",
+        "logs:DeleteLogDelivery",
+        "logs:DeletePipelineRule",
+        "logs:GetLogDelivery",
+        "logs:IntegrateWithS3Table",
+        "logs:Link",
+        "logs:ListEntitiesForLogGroup",
+        "logs:ListLogDeliveries",
+        "logs:ListLogGroupsForEntity",
+        "logs:ProcessWithPipeline",
+        "logs:PutPipelineRule",
+        "logs:StopLiveTail",
+        "logs:Unmask",
+        "logs:UpdateLogDelivery"
+      ],
+      "Amazon CodeCatalyst": [
+        "codecatalyst:AcceptConnection",
+        "codecatalyst:AssociateIamRoleToConnection",
+        "codecatalyst:AssociateIdentityCenterApplicationToSpace",
+        "codecatalyst:AssociateIdentityToIdentityCenterApplication",
+        "codecatalyst:BatchAssociateIdentitiesToIdentityCenterApplication",
+        "codecatalyst:BatchDisassociateIdentitiesFromIdentityCenterApplication",
+        "codecatalyst:CreateIdentityCenterApplication",
+        "codecatalyst:CreateSpace",
+        "codecatalyst:CreateSpaceAdminRoleAssignment",
+        "codecatalyst:DeleteConnection",
+        "codecatalyst:DeleteIdentityCenterApplication",
+        "codecatalyst:DisassociateIamRoleFromConnection",
+        "codecatalyst:DisassociateIdentityCenterApplicationFromSpace",
+        "codecatalyst:DisassociateIdentityFromIdentityCenterApplication",
+        "codecatalyst:GetBillingAuthorization",
+        "codecatalyst:GetConnection",
+        "codecatalyst:GetIdentityCenterApplication",
+        "codecatalyst:GetPendingConnection",
+        "codecatalyst:ListConnections",
+        "codecatalyst:ListIamRolesForConnection",
+        "codecatalyst:ListIdentityCenterApplications",
+        "codecatalyst:ListIdentityCenterApplicationsForSpace",
+        "codecatalyst:ListSpacesForIdentityCenterApplication",
+        "codecatalyst:ListTagsForResource",
+        "codecatalyst:PutBillingAuthorization",
+        "codecatalyst:RejectConnection",
+        "codecatalyst:SynchronizeIdentityCenterApplication",
+        "codecatalyst:TagResource",
+        "codecatalyst:UntagResource",
+        "codecatalyst:UpdateIdentityCenterApplication"
+      ],
+      "Amazon CodeGuru": [
+        "codeguru:GetCodeGuruFreeTrialSummary"
+      ],
+      "Amazon CodeGuru Reviewer": [
+        "codeguru-reviewer:CreateConnectionToken",
+        "codeguru-reviewer:GetMetricsData",
+        "codeguru-reviewer:ListThirdPartyRepositories"
+      ],
+      "Amazon CodeGuru Security": [
+        "codeguru-security:DeleteScansByCategory",
+        "codeguru-security:ListFindings"
+      ],
+      "Amazon CodeWhisperer": [
+        "codewhisperer:AllowVendedLogDeliveryForResource",
+        "codewhisperer:AssociateCustomizationPermission",
+        "codewhisperer:CreateCustomization",
+        "codewhisperer:CreateProfile",
+        "codewhisperer:DeleteCustomization",
+        "codewhisperer:DeleteProfile",
+        "codewhisperer:DisassociateCustomizationPermission",
+        "codewhisperer:GenerateRecommendations",
+        "codewhisperer:GetCustomization",
+        "codewhisperer:ListCustomizationPermissions",
+        "codewhisperer:ListCustomizationVersions",
+        "codewhisperer:ListCustomizations",
+        "codewhisperer:ListProfiles",
+        "codewhisperer:ListTagsForResource",
+        "codewhisperer:TagResource",
+        "codewhisperer:UntagResource",
+        "codewhisperer:UpdateCustomization",
+        "codewhisperer:UpdateProfile"
+      ],
+      "Amazon Cognito Sync": [
+        "cognito-sync:QueryRecords",
+        "cognito-sync:SetDatasetConfiguration"
+      ],
+      "Amazon Cognito User Pools": [
+        "cognito-idp:AssociateWebACL",
+        "cognito-idp:DisassociateWebACL",
+        "cognito-idp:GetWebACLForResource",
+        "cognito-idp:ListResourcesForWebACL"
+      ],
+      "Amazon Connect": [
+        "connect:AssociateCustomerProfilesDomain",
+        "connect:DescribeForecastingPlanningSchedulingIntegration",
+        "connect:DisassociateCustomerProfilesDomain",
+        "connect:SendIntegrationEvent",
+        "connect:SendOutboundChatMessage",
+        "connect:SendOutboundWebNotification",
+        "connect:StartForecastingPlanningSchedulingIntegration",
+        "connect:StopForecastingPlanningSchedulingIntegration"
+      ],
+      "Amazon Connect Customer Profiles": [
+        "profile:CreateSnapshot",
+        "profile:GetSnapshot"
+      ],
+      "Amazon Connect Health": [
+        "health-agent:CancelAppointment",
+        "health-agent:CreateAgent",
+        "health-agent:CreateIntegration",
+        "health-agent:CreateSession",
+        "health-agent:DeleteAgent",
+        "health-agent:DeleteIntegration",
+        "health-agent:GetAgent",
+        "health-agent:GetCareTeamProvider",
+        "health-agent:GetIntegration",
+        "health-agent:GetPatient",
+        "health-agent:GetPractitioner",
+        "health-agent:GetSessionContext",
+        "health-agent:InvokeAgent",
+        "health-agent:ListAgents",
+        "health-agent:ListAppointmentSlots",
+        "health-agent:ListIntegrations",
+        "health-agent:ListPatientAppointments",
+        "health-agent:ListPatientInsuranceCoverages",
+        "health-agent:ListProviders",
+        "health-agent:MatchPatient",
+        "health-agent:PublishAgent",
+        "health-agent:RescheduleAppointment",
+        "health-agent:ScheduleAppointment",
+        "health-agent:UpdateAgent",
+        "health-agent:UpdateIntegration",
+        "health-agent:UpdateSession"
+      ],
+      "Amazon Connect Voice ID": [
+        "voiceid:DescribeComplianceConsent",
+        "voiceid:RegisterComplianceConsent"
+      ],
+      "Amazon DataZone": [
+        "datazone:BatchDeleteLinkedTypes",
+        "datazone:BatchPutLinkedTypes",
+        "datazone:DeleteDomainSharingPolicy",
+        "datazone:GetDomainExecutionRoleCredentials",
+        "datazone:GetDomainSharingPolicy",
+        "datazone:GetEnvironmentActionLink",
+        "datazone:GetSubscriptionEligibility",
+        "datazone:ListEnvironmentBlueprintConfigurationSummaries",
+        "datazone:ListLinkedTypes",
+        "datazone:ListWarehouseMetadata",
+        "datazone:ProvisionDomain",
+        "datazone:PutDomainSharingPolicy",
+        "datazone:RefreshToken",
+        "datazone:SearchRules",
+        "datazone:SsoLogin",
+        "datazone:SsoLogout",
+        "datazone:StartAccountBootstrapAction",
+        "datazone:UpdateDataSourceRunActivities",
+        "datazone:UpdateEnvironmentConfiguration",
+        "datazone:UpdateEnvironmentDeploymentStatus",
+        "datazone:ValidatePassRole"
+      ],
+      "Amazon Detective": [
+        "detective:GetFreeTrialEligibility",
+        "detective:GetGraphIngestState",
+        "detective:GetPricingInformation",
+        "detective:GetUsageInformation",
+        "detective:InvokeAssistant",
+        "detective:ListHighDegreeEntities",
+        "detective:SearchGraph"
+      ],
+      "Amazon DynamoDB": [
+        "dynamodb:AssociateTableReplica",
+        "dynamodb:CreateGlobalTableWitness",
+        "dynamodb:CreateTableReplica",
+        "dynamodb:DeleteGlobalTableWitness",
+        "dynamodb:DeleteTableReplica",
+        "dynamodb:DescribeReservedCapacity",
+        "dynamodb:DescribeReservedCapacityOfferings",
+        "dynamodb:GetAbacStatus",
+        "dynamodb:InjectError",
+        "dynamodb:PurchaseReservedCapacityOfferings",
+        "dynamodb:ReadDataForReplication",
+        "dynamodb:ReplicateSettings",
+        "dynamodb:RestoreTableFromAwsBackup",
+        "dynamodb:StartAwsBackupJob",
+        "dynamodb:UpdateAbacStatus",
+        "dynamodb:UpdateGlobalTableVersion",
+        "dynamodb:WriteDataForReplication"
+      ],
+      "Amazon EC2": [
+        "ec2:AssociateVerifiedAccessInstanceWebAcl",
+        "ec2:AttachApplianceToNatGateway",
+        "ec2:AttachResourcesToPlacementGroup",
+        "ec2:CreateCoipPoolPermission",
+        "ec2:CreateLocalGatewayRouteTablePermission",
+        "ec2:CreateOdbNetworkPeering",
+        "ec2:DeleteCoipPoolPermission",
+        "ec2:DeleteLocalGatewayRouteTablePermission",
+        "ec2:DeleteOdbNetworkPeering",
+        "ec2:DeleteResourcePolicy",
+        "ec2:DescribeLocalGatewayRouteTablePermissions",
+        "ec2:DescribeVerifiedAccessInstanceWebAclAssociations",
+        "ec2:DetachApplianceFromNatGateway",
+        "ec2:DetachResourcesFromPlacementGroup",
+        "ec2:DisassociateVerifiedAccessInstanceWebAcl",
+        "ec2:GetResourcePolicy",
+        "ec2:GetVerifiedAccessInstanceWebAcl",
+        "ec2:ImportByoipCidrToIpam",
+        "ec2:InjectApiError",
+        "ec2:InjectVolumeIOLatency",
+        "ec2:ModifyOdbNetworkPeering",
+        "ec2:PauseVolumeIO",
+        "ec2:PutResourcePolicy",
+        "ec2:SendSpotInstanceInterruptions"
+      ],
+      "Amazon Elastic Container Registry": [
+        "ecr:BatchImportUpstreamImage",
+        "ecr:GetImageCopyStatus",
+        "ecr:ReplicateImage"
+      ],
+      "Amazon Elastic Container Service": [
+        "ecs:AllowVendedLogDeliveryForResource",
+        "ecs:Poll",
+        "ecs:PutSystemLogEvents",
+        "ecs:StartTelemetrySession"
+      ],
+      "Amazon Elastic File System": [
+        "elasticfilesystem:Backup",
+        "elasticfilesystem:ClientMount",
+        "elasticfilesystem:ClientRootAccess",
+        "elasticfilesystem:ClientWrite",
+        "elasticfilesystem:ReplicationRead",
+        "elasticfilesystem:ReplicationWrite",
+        "elasticfilesystem:Restore"
+      ],
+      "Amazon Elastic Kubernetes Service": [
+        "eks:AccessKubernetesApi",
+        "eks:MutateViaKubernetesApi"
+      ],
+      "Amazon Elastic MapReduce": [
+        "elasticmapreduce:AttachEditor",
+        "elasticmapreduce:CreateEditor",
+        "elasticmapreduce:CreateRepository",
+        "elasticmapreduce:DeleteEditor",
+        "elasticmapreduce:DeleteRepository",
+        "elasticmapreduce:DeleteWorkspaceAccess",
+        "elasticmapreduce:DescribeEditor",
+        "elasticmapreduce:DescribeRepository",
+        "elasticmapreduce:DetachEditor",
+        "elasticmapreduce:LinkRepository",
+        "elasticmapreduce:ListEditors",
+        "elasticmapreduce:ListRepositories",
+        "elasticmapreduce:ListWorkspaceAccessIdentities",
+        "elasticmapreduce:OpenEditorInConsole",
+        "elasticmapreduce:PutWorkspaceAccess",
+        "elasticmapreduce:StartEditor",
+        "elasticmapreduce:StopEditor",
+        "elasticmapreduce:UnlinkRepository",
+        "elasticmapreduce:UpdateEditor",
+        "elasticmapreduce:UpdateRepository",
+        "elasticmapreduce:ViewEventsFromAllClustersInConsole"
+      ],
+      "Amazon ElastiCache": [
+        "elasticache:InterruptClusterAzPower"
+      ],
+      "Amazon EMR Serverless": [
+        "emr-serverless:AccessInteractiveEndpoints",
+        "emr-serverless:AccessLivyEndpoints",
+        "emr-serverless:AccessSystemProfileLogs"
+      ],
+      "Amazon EventBridge": [
+        "events:AllowVendedLogDeliveryForResource",
+        "events:InvokeApiDestination",
+        "events:RetrieveConnectionCredentials"
+      ],
+      "Amazon FinSpace": [
+        "finspace:ConnectKxCluster",
+        "finspace:MountKxDatabase"
+      ],
+      "Amazon Forecast": [
+        "forecast:CreateForecastEndpoint",
+        "forecast:DeleteForecastEndpoint",
+        "forecast:DescribeForecastEndpoint",
+        "forecast:GetRecentForecastContext",
+        "forecast:InvokeForecastEndpoint"
+      ],
+      "Amazon Fraud Detector": [
+        "frauddetector:GetBatchImportJobValidationReport"
+      ],
+      "Amazon FSx": [
+        "fsx:AssociateFileGateway",
+        "fsx:BypassSnaplockEnterpriseRetention",
+        "fsx:DeleteResourcePolicy",
+        "fsx:DescribeAssociatedFileGateways",
+        "fsx:DisassociateFileGateway",
+        "fsx:GetResourcePolicy",
+        "fsx:ManageBackupPrincipalAssociations",
+        "fsx:PutResourcePolicy"
+      ],
+      "Amazon GroundTruth Labeling": [
+        "groundtruthlabeling:AssociatePatchToManifestJob",
+        "groundtruthlabeling:CreateBatch",
+        "groundtruthlabeling:CreateIntakeForm",
+        "groundtruthlabeling:CreateProject",
+        "groundtruthlabeling:CreateWorkflowDefinition",
+        "groundtruthlabeling:DescribeConsoleJob",
+        "groundtruthlabeling:GenerateLIDARPreviewTaskConfigJob",
+        "groundtruthlabeling:GetBatch",
+        "groundtruthlabeling:GetIntakeFormStatus",
+        "groundtruthlabeling:ListBatches",
+        "groundtruthlabeling:ListDatasetObjects",
+        "groundtruthlabeling:ListProjects",
+        "groundtruthlabeling:RunFilterOrSampleDatasetJob",
+        "groundtruthlabeling:RunGenerateManifestByCrawlingJob",
+        "groundtruthlabeling:RunGenerateManifestMetricsJob",
+        "groundtruthlabeling:UpdateBatch"
+      ],
+      "Amazon Honeycode": [
+        "honeycode:ApproveTeamAssociation",
+        "honeycode:CreateTeam",
+        "honeycode:CreateTenant",
+        "honeycode:DeleteDomains",
+        "honeycode:DeregisterGroups",
+        "honeycode:DescribeTeam",
+        "honeycode:ListDomains",
+        "honeycode:ListGroups",
+        "honeycode:ListTeamAssociations",
+        "honeycode:ListTenants",
+        "honeycode:RegisterDomainForVerification",
+        "honeycode:RegisterGroups",
+        "honeycode:RejectTeamAssociation",
+        "honeycode:RestartDomainVerification",
+        "honeycode:UpdateTeam"
+      ],
+      "Amazon Kinesis Analytics": [
+        "kinesisanalytics:GetApplicationState"
+      ],
+      "Amazon Kinesis Data Streams": [
+        "kinesis:InjectApiError"
+      ],
+      "Amazon Lex V2": [
+        "lex:CreateBotChannel",
+        "lex:CreateCustomVocabulary",
+        "lex:CreateTestSet",
+        "lex:DeleteBotChannel",
+        "lex:DescribeBotChannel",
+        "lex:DescribeCustomVocabulary",
+        "lex:ListBotChannels",
+        "lex:UpdateCustomVocabulary"
+      ],
+      "Amazon Lookout for Vision": [
+        "lookoutvision:DescribeTrialDetection",
+        "lookoutvision:ListTrialDetections",
+        "lookoutvision:StartTrialDetection"
+      ],
+      "Amazon Managed Blockchain": [
+        "managedblockchain:GET",
+        "managedblockchain:Invoke",
+        "managedblockchain:POST"
+      ],
+      "Amazon MemoryDB": [
+        "memorydb:PauseMultiRegionClusterReplication"
+      ],
+      "Amazon Monitron": [
+        "monitron:AssociateProjectAdminUser",
+        "monitron:CreateProject",
+        "monitron:CreateProjectUserAssociation",
+        "monitron:CreateUserAccessRoleAssociation",
+        "monitron:DeleteProject",
+        "monitron:DeleteProjectUserAssociation",
+        "monitron:DeleteUserAccessRoleAssociation",
+        "monitron:DisassociateProjectAdminUser",
+        "monitron:GetProject",
+        "monitron:GetProjectAdminUser",
+        "monitron:ListProjectAdminUsers",
+        "monitron:ListProjectUserAssociations",
+        "monitron:ListProjects",
+        "monitron:ListTagsForResource",
+        "monitron:ListUserAccessRoleAssociations",
+        "monitron:TagResource",
+        "monitron:UntagResource",
+        "monitron:UpdateProject"
+      ],
+      "Amazon MQ": [
+        "mq:CreateReplicaBroker",
+        "mq:UpdateBrokerAccessConfiguration"
+      ],
+      "Amazon Nimble Studio": [
+        "nimble:GetFeatureMap",
+        "nimble:PutStudioLogEvents"
+      ],
+      "Amazon OpenSearch": [
+        "opensearch:ApplicationAccessAll"
+      ],
+      "Amazon Pinpoint": [
+        "mobiletargeting:GetReports"
+      ],
+      "Amazon Q": [
+        "q:AssociateConnectorResource",
+        "q:AssociateLoginDomain",
+        "q:BatchDescribeGroups",
+        "q:BatchDescribeUsers",
+        "q:BatchGetGroups",
+        "q:BatchGetUsers",
+        "q:CreateArtifact",
+        "q:CreateAssignment",
+        "q:CreateAuthGrant",
+        "q:CreateOAuthAppConnection",
+        "q:CreatePlugin",
+        "q:CreateScimAccessToken",
+        "q:DeleteAssignment",
+        "q:DeleteConversation",
+        "q:DeleteOAuthAppConnection",
+        "q:DeletePlugin",
+        "q:DeleteScimAccessToken",
+        "q:DisassociateLoginDomain",
+        "q:GenerateCodeFromCommands",
+        "q:GenerateCodeRecommendations",
+        "q:GetArtifact",
+        "q:GetArtifactActionResult",
+        "q:GetConnector",
+        "q:GetConversation",
+        "q:GetIdentityMetadata",
+        "q:GetPlugin",
+        "q:GetTroubleshootingResults",
+        "q:ListConversations",
+        "q:ListDashboardMetrics",
+        "q:ListGroups",
+        "q:ListLoginDomains",
+        "q:ListPluginProviders",
+        "q:ListPlugins",
+        "q:ListScimAccessTokens",
+        "q:ListTagsForResource",
+        "q:ListUsers",
+        "q:PassRequest",
+        "q:PerformArtifactAction",
+        "q:RejectConnector",
+        "q:SendEvent",
+        "q:SendMessage",
+        "q:StartConversation",
+        "q:StartTroubleshootingAnalysis",
+        "q:StartTroubleshootingResolutionExplanation",
+        "q:TagResource",
+        "q:UntagResource",
+        "q:UpdateAssignment",
+        "q:UpdateAuthGrant",
+        "q:UpdateConversation",
+        "q:UpdateOAuthAppConnection",
+        "q:UpdatePlugin",
+        "q:UpdateTroubleshootingCommandResult",
+        "q:UsePlugin",
+        "q:VerifyOAuthAppConnection"
+      ],
+      "Amazon Q Business": [
+        "qbusiness:AllowVendedLogDeliveryForResource",
+        "qbusiness:CreateDataAccessorWithTti",
+        "qbusiness:DisableAclOnDataSource",
+        "qbusiness:PutResourcePolicy"
+      ],
+      "Amazon Q Business Q Apps": [
+        "qapps:CopyQApp",
+        "qapps:CreateLibraryItemReview",
+        "qapps:CreateSubscriptionToken",
+        "qapps:PredictProblemStatementFromConversation",
+        "qapps:PredictQAppFromProblemStatement"
+      ],
+      "Amazon Q Developer": [
+        "qdeveloper:ListTagsForResource",
+        "qdeveloper:TagResource",
+        "qdeveloper:UntagResource"
+      ],
+      "Amazon Q in Connect": [
+        "wisdom:AllowVendedLogDeliveryForResource"
+      ],
+      "Amazon QLDB": [
+        "qldb:ExecuteStatement",
+        "qldb:InsertSampleData",
+        "qldb:ShowCatalog"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:AccountConfigurations",
+        "quicksight:AllowVendedLogDeliveryForResource",
+        "quicksight:BatchAssignLimitsProfile",
+        "quicksight:BatchGetPreferences",
+        "quicksight:BatchUnassignLimitsProfile",
+        "quicksight:BatchUpdatePreferences",
+        "quicksight:CreateAdmin",
+        "quicksight:CreateEmailCustomizationTemplate",
+        "quicksight:CreateExtensionAccess",
+        "quicksight:CreateReader",
+        "quicksight:CreateUser",
+        "quicksight:DeleteEmailCustomizationTemplate",
+        "quicksight:DeleteExtensionAccess",
+        "quicksight:DescribeChatConfiguration",
+        "quicksight:DescribeEmailCustomizationTemplate",
+        "quicksight:DescribeExtensionAccess",
+        "quicksight:DescribeQuickIndexCapacity",
+        "quicksight:GetAnonymousUserEmbedUrl",
+        "quicksight:GetAuthCode",
+        "quicksight:GetCustomPermissionsSummary",
+        "quicksight:GetGroupMapping",
+        "quicksight:ListAssignmentsForPrincipal",
+        "quicksight:ListCustomerManagedKeys",
+        "quicksight:ListExtensionAccesses",
+        "quicksight:ListKMSKeysForUser",
+        "quicksight:ListProfileAssignments",
+        "quicksight:ListUsersIndexCapacity",
+        "quicksight:PassDataSet",
+        "quicksight:PassDataSource",
+        "quicksight:QuickSuiteUsageMetrics",
+        "quicksight:RegisterCustomerManagedKey",
+        "quicksight:RemoveCustomerManagedKey",
+        "quicksight:ScopeDownPolicy",
+        "quicksight:SearchDirectoryGroups",
+        "quicksight:SearchUsers",
+        "quicksight:SetGroupMapping",
+        "quicksight:Subscribe",
+        "quicksight:UnpublishFlow",
+        "quicksight:Unsubscribe",
+        "quicksight:UpdateChatConfiguration",
+        "quicksight:UpdateEmailCustomizationTemplate",
+        "quicksight:UpdateExtensionAccess",
+        "quicksight:UpdateQuickIndexCapacity",
+        "quicksight:UpdateResourcePermissions"
+      ],
+      "Amazon RDS": [
+        "rds:CopyCustomDBEngineVersion",
+        "rds:CrossRegionCommunication",
+        "rds:DescribeRecommendationGroups",
+        "rds:DescribeRecommendations",
+        "rds:ModifyRecommendation"
+      ],
+      "Amazon Redshift": [
+        "redshift:AuthorizeInboundIntegration",
+        "redshift:CancelQuery",
+        "redshift:CancelQuerySession",
+        "redshift:CreateInboundIntegration",
+        "redshift:CreateQev2IdcApplication",
+        "redshift:CreateSavedQuery",
+        "redshift:DeleteQev2IdcApplication",
+        "redshift:DeleteSavedQueries",
+        "redshift:DescribeAutonomicsDenylist",
+        "redshift:DescribeQev2IdcApplications",
+        "redshift:DescribeQuery",
+        "redshift:DescribeSavedQueries",
+        "redshift:DescribeTable",
+        "redshift:ExecuteQuery",
+        "redshift:FetchResults",
+        "redshift:ListDatabases",
+        "redshift:ListSavedQueries",
+        "redshift:ListSchemas",
+        "redshift:ListTables",
+        "redshift:ModifyAutonomicsDenylist",
+        "redshift:ModifyQev2IdcApplication",
+        "redshift:ModifySavedQuery",
+        "redshift:ViewQueriesFromConsole",
+        "redshift:ViewQueriesInConsole"
+      ],
+      "Amazon Redshift Serverless": [
+        "redshift-serverless:DescribeOneTimeCredit",
+        "redshift-serverless:ListAutonomicsDenylist",
+        "redshift-serverless:UpdateAutonomicsDenylist"
+      ],
+      "Amazon Route 53 Profiles": [
+        "route53profiles:GetProfilePolicy",
+        "route53profiles:PutProfilePolicy"
+      ],
+      "Amazon Route 53 Recovery Controls": [
+        "route53-recovery-control-config:DeleteResourcePolicy",
+        "route53-recovery-control-config:PutResourcePolicy"
+      ],
+      "Amazon S3": [
+        "s3:InitiateReplication",
+        "s3:PauseReplication"
+      ],
+      "Amazon S3 Files": [
+        "s3files:ClientMount",
+        "s3files:ClientRootAccess",
+        "s3files:ClientWrite"
+      ],
+      "Amazon S3 Tables": [
+        "s3tables:GetTableData",
+        "s3tables:PutTableData",
+        "s3tables:PutTableEncryption"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:AccessModelPackage",
+        "sagemaker:CallWithBearerToken",
+        "sagemaker:CreateReservedCapacity",
+        "sagemaker:CreateSharedModel",
+        "sagemaker:DeleteResourcePolicy",
+        "sagemaker:DescribeClusterInference",
+        "sagemaker:DescribeSharedModel",
+        "sagemaker:GetResourcePolicy",
+        "sagemaker:ListSharedModelEvents",
+        "sagemaker:ListSharedModelVersions",
+        "sagemaker:ListSharedModels",
+        "sagemaker:PutResourcePolicy",
+        "sagemaker:SendSharedModelEvent",
+        "sagemaker:UpdateClusterInference",
+        "sagemaker:UpdateSharedModel"
+      ],
+      "Amazon SageMaker data science assistant": [
+        "sagemaker-data-science-assistant:SendConversation"
+      ],
+      "Amazon SageMaker Unified Studio MCP": [
+        "sagemaker-unified-studio-mcp:CallPrivilegedTool",
+        "sagemaker-unified-studio-mcp:CallReadOnlyTool",
+        "sagemaker-unified-studio-mcp:InvokeMcp"
+      ],
+      "Amazon Simple Email Service - Mail Manager": [
+        "ses:AllowVendedLogDeliveryForResource"
+      ],
+      "Amazon Simple Email Service v2": [
+        "ses:ReplicateEmailIdentityDkimSigningKey"
+      ],
+      "Amazon Simple Workflow Service": [
+        "swf:CancelTimer",
+        "swf:CancelWorkflowExecution",
+        "swf:CompleteWorkflowExecution",
+        "swf:ContinueAsNewWorkflowExecution",
+        "swf:FailWorkflowExecution",
+        "swf:RecordMarker",
+        "swf:RequestCancelActivityTask",
+        "swf:RequestCancelExternalWorkflowExecution",
+        "swf:ScheduleActivityTask",
+        "swf:SignalExternalWorkflowExecution",
+        "swf:StartChildWorkflowExecution",
+        "swf:StartTimer"
+      ],
+      "Amazon VPC Lattice": [
+        "vpc-lattice:AssociateViaAWSService",
+        "vpc-lattice:AssociateViaAWSService-EventsAndStates",
+        "vpc-lattice:CreateServiceNetworkVpcEndpointAssociation"
+      ],
+      "Amazon WorkDocs": [
+        "workdocs:AddNotificationPermissions",
+        "workdocs:AddUserToGroup",
+        "workdocs:CheckAlias",
+        "workdocs:CreateInstance",
+        "workdocs:DeleteInstance",
+        "workdocs:DeleteNotificationPermissions",
+        "workdocs:DeregisterDirectory",
+        "workdocs:DescribeAvailableDirectories",
+        "workdocs:DescribeInstanceExports",
+        "workdocs:DescribeInstances",
+        "workdocs:DescribeNotificationPermissions",
+        "workdocs:DownloadDocumentVersion",
+        "workdocs:GetGroup",
+        "workdocs:RegisterDirectory",
+        "workdocs:StartInstanceExport",
+        "workdocs:UpdateInstanceAlias",
+        "workdocs:UpdateUserAdministrativeSettings"
+      ],
+      "Amazon WorkLink": [
+        "worklink:SearchEntity"
+      ],
+      "Amazon WorkMail": [
+        "workmail:AllowVendedLogDeliveryForResource",
+        "workmail:CreateInboundMailFlowRule",
+        "workmail:CreateMailDomain",
+        "workmail:CreateOutboundMailFlowRule",
+        "workmail:CreateSmtpGateway",
+        "workmail:DeleteInboundMailFlowRule",
+        "workmail:DeleteMailDomain",
+        "workmail:DeleteMobileDevice",
+        "workmail:DeleteOutboundMailFlowRule",
+        "workmail:DeleteSmtpGateway",
+        "workmail:DeliverToMailbox",
+        "workmail:DescribeInboundMailFlowRule",
+        "workmail:DescribeMailDomains",
+        "workmail:DescribeOutboundMailFlowRule",
+        "workmail:DescribeSmtpGateway",
+        "workmail:EnableMailDomain",
+        "workmail:GetJournalingRules",
+        "workmail:GetMailDomainDetails",
+        "workmail:GetMobileDeviceDetails",
+        "workmail:GetMobileDevicesForUser",
+        "workmail:GetMobilePolicyDetails",
+        "workmail:ListInboundMailFlowRules",
+        "workmail:ListOutboundMailFlowRules",
+        "workmail:ListSmtpGateways",
+        "workmail:SearchMembers",
+        "workmail:SetDefaultMailDomain",
+        "workmail:SetJournalingRules",
+        "workmail:SetMobilePolicyDetails",
+        "workmail:TestInboundMailFlowRules",
+        "workmail:TestOutboundMailFlowRules",
+        "workmail:UpdateInboundMailFlowRule",
+        "workmail:UpdateOutboundMailFlowRule",
+        "workmail:UpdateSmtpGateway",
+        "workmail:WipeMobileDevice"
+      ],
+      "Amazon WorkSpaces": [
+        "workspaces:CreateRootClientCertificate",
+        "workspaces:DeleteRootClientCertificate",
+        "workspaces:DescribeConsent",
+        "workspaces:DirectoryAccessManagement",
+        "workspaces:GetTroubleshootingRecommendation",
+        "workspaces:InvokeTroubleshootingInvestigation",
+        "workspaces:ListTroubleshootingRecommendations",
+        "workspaces:UpdateConsent",
+        "workspaces:UpdateRootClientCertificate"
+      ],
+      "Amazon WorkSpaces Application Manager": [
+        "wam:AuthenticatePackager"
+      ],
+      "Amazon WorkSpaces Thin Client": [
+        "thinclient:GetDeviceDetails",
+        "thinclient:ListDeviceSessions"
+      ],
+      "AmazonMediaImport": [
+        "mediaimport:CreateDatabaseBinarySnapshot"
+      ],
+      "Application Discovery Arsenal": [
+        "arsenal:RegisterOnPremisesAgent"
+      ],
+      "Claude Platform on AWS": [
+        "aws-external-anthropic:CallWithBearerToken"
+      ],
+      "Multi-party approval": [
+        "mpa:DeleteResourcePolicy",
+        "mpa:PutResourcePolicy",
+        "mpa:StartSession"
+      ],
+      "Tag Editor": [
+        "resource-explorer:ListResourceTypes",
+        "resource-explorer:ListResources",
+        "resource-explorer:ListTags"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2026-07-03",
     "addedServices": [],
     "removedServices": [],
