@@ -1,5 +1,20 @@
 [
   {
+    "dateOfChange": "2026-08-26",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {},
+    "removedActions": {
+      "Amazon QuickSight": [
+        "quicksight:DescribeAutomationGroup",
+        "quicksight:DescribeAutomationGroupPermissions",
+        "quicksight:ListAutomationGroups",
+        "quicksight:SearchAutomationGroups",
+        "quicksight:UpdateAutomationGroupPermissions"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2026-08-24",
     "addedServices": [
       "AWS Agent Registry",

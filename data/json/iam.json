@@ -99665,9 +99665,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_AddRoleToInstanceProfile.html"
@@ -99862,9 +99860,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "iam:TagInstanceProfile"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateInstanceProfile.html"
@@ -99901,9 +99897,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "iam:TagOpenIDConnectProvider"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateOpenIDConnectProvider.html"
@@ -99922,9 +99916,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "iam:TagPolicy"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreatePolicy.html"
@@ -99963,9 +99955,7 @@
               "iam:ResourceTag/${TagKey}",
               "iam:RoleTemplateARN"
             ],
-            "dependentActions": [
-              "iam:TagRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateRole.html"
@@ -99984,9 +99974,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "iam:TagSAMLProvider"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateSAMLProvider.html"
@@ -100005,9 +99993,7 @@
               "iam:AWSServiceName",
               "iam:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "iam:PutRolePolicy"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateServiceLinkedRole.html"
@@ -100048,9 +100034,7 @@
               "iam:PermissionsBoundary",
               "iam:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "iam:TagUser"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateUser.html"
@@ -100069,9 +100053,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "iam:TagMFADevice"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_CreateVirtualMFADevice.html"
@@ -101990,9 +101972,7 @@
             "conditionKeys": [
               "iam:AccountPropertyNamespaces"
             ],
-            "dependentActions": [
-              "iam:CreateServiceLinkedRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_PutAccountProperties.html"
@@ -102945,9 +102925,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "iam:TagServerCertificate"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_UploadServerCertificate.html"
@@ -309223,6 +309201,7 @@
               "autoscaling:MinSize",
               "autoscaling:OperatorPrincipal",
               "autoscaling:ResourceTag/${TagKey}",
+              "autoscaling:TargetCapacityTypes",
               "autoscaling:TargetGroupARNs",
               "autoscaling:TrafficSourceIdentifiers",
               "autoscaling:VPCZoneIdentifiers",
@@ -310183,6 +310162,7 @@
             "conditionKeys": [
               "autoscaling:ImageId",
               "autoscaling:ResourceTag/${TagKey}",
+              "autoscaling:TargetCapacityTypes",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -310245,6 +310225,7 @@
               "autoscaling:MaxSize",
               "autoscaling:MinSize",
               "autoscaling:ResourceTag/${TagKey}",
+              "autoscaling:TargetCapacityTypes",
               "autoscaling:VPCZoneIdentifiers",
               "aws:ResourceTag/${TagKey}"
             ],
@@ -310375,6 +310356,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access based on the price for Spot Instances for the launch configuration",
         "type": "Numeric"
+      },
+      {
+        "name": "autoscaling:TargetCapacityTypes",
+        "apiReferenceUrl": "",
+        "description": "Filters access based on the target capacity types present in the distribution segments of a mixed instances policy. Use it to qualify which capacity types can be explicitly defined in the policy",
+        "type": "ArrayOfString"
       },
       {
         "name": "autoscaling:TargetGroupARNs",
@@ -389841,36 +389828,6 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeAssetBundleImportJob.html"
       },
       {
-        "name": "DescribeAutomationGroup",
-        "permissionOnly": false,
-        "description": "Grants permission to describe an automation group",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "automationGroup",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeAutomationGroup.html"
-      },
-      {
-        "name": "DescribeAutomationGroupPermissions",
-        "permissionOnly": false,
-        "description": "Grants permission to describe permissions for an automation group",
-        "accessLevel": "Permissions management, Write",
-        "resourceTypes": [
-          {
-            "resourceType": "automationGroup",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeAutomationGroupPermissions.html"
-      },
-      {
         "name": "DescribeAutomationJob",
         "permissionOnly": false,
         "description": "Grants permission to describe an automation job",
@@ -391007,21 +390964,6 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListAssetBundleImportJobs.html"
       },
       {
-        "name": "ListAutomationGroups",
-        "permissionOnly": false,
-        "description": "Grants permission to list all automation groups in an account",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListAutomationGroups.html"
-      },
-      {
         "name": "ListBrands",
         "permissionOnly": false,
         "description": "Grants permission to lists all brands in an Amazon QuickSight account",
@@ -391999,21 +391941,6 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_SearchApps.html"
       },
       {
-        "name": "SearchAutomationGroups",
-        "permissionOnly": false,
-        "description": "Grants permission to search for automation groups in an account",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_SearchAutomationGroups.html"
-      },
-      {
         "name": "SearchDashboards",
         "permissionOnly": false,
         "description": "Grants permission to search for a sub-set of QuickSight Dashboards",
@@ -392851,21 +392778,6 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateApprovalPolicy.html"
-      },
-      {
-        "name": "UpdateAutomationGroupPermissions",
-        "permissionOnly": false,
-        "description": "Grants permission to update permissions for an automation group",
-        "accessLevel": "Permissions management, Write",
-        "resourceTypes": [
-          {
-            "resourceType": "automationGroup",
-            "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateAutomationGroupPermissions.html"
       },
       {
         "name": "UpdateBrand",
