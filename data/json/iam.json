@@ -11720,6 +11720,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_ListNetworkMigrationDeployments.html"
       },
       {
+        "name": "ListNetworkMigrationExecutionArtifacts",
+        "permissionOnly": false,
+        "description": "Grants permission to list network migration execution artifacts",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "NetworkMigrationDefinitionResource",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_ListNetworkMigrationExecutionArtifacts.html"
+      },
+      {
         "name": "ListNetworkMigrationExecutions",
         "permissionOnly": false,
         "description": "Grants permission to list network migration executions",
@@ -61777,7 +61794,9 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "drs:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/drs/latest/APIReference/API_CreateRecoveryPlan.html"
