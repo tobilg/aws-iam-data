@@ -234579,6 +234579,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome"
       },
       {
+        "name": "CountTokens",
+        "permissionOnly": false,
+        "description": "Grants permission to count the tokens in an inference request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "bedrock-mantle:Model"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/#welcome"
+      },
+      {
         "name": "CreateCustomizedModel",
         "permissionOnly": false,
         "description": "Grants permission to import a customized model with custom weights",
@@ -234636,7 +234654,7 @@
       {
         "name": "CreateInference",
         "permissionOnly": false,
-        "description": "Grants permission to create a chat completion inference request",
+        "description": "Grants permission to create an inference request",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -388239,6 +388257,7 @@
               "quicksight:DescribeTemplate",
               "quicksight:DescribeTheme",
               "quicksight:PassDataSet",
+              "quicksight:PassTopic",
               "quicksight:TagResource"
             ]
           }
@@ -392728,7 +392747,8 @@
             "dependentActions": [
               "quicksight:DescribeTemplate",
               "quicksight:DescribeTheme",
-              "quicksight:PassDataSet"
+              "quicksight:PassDataSet",
+              "quicksight:PassTopic"
             ]
           }
         ],
