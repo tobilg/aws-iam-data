@@ -92524,6 +92524,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/healthlake/latest/devguide/crud-healthlake.html"
       },
       {
+        "name": "RestoreFHIRDatastore",
+        "permissionOnly": false,
+        "description": "Grants permission to restore a backup-enabled datastore to a point in time, creating a new datastore from the backup",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "datastore",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/healthlake/latest/APIReference/API_RestoreFHIRDatastore.html"
+      },
+      {
         "name": "RetrieveAttributionStatus",
         "permissionOnly": false,
         "description": "Grants permission to retrieve member attribution status",
@@ -208963,6 +208982,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/APIReference/API_AddCommunicationToCase.html"
       },
       {
+        "name": "AddRelatedItemToCase",
+        "permissionOnly": false,
+        "description": "Grants permission to add a related item to an AWS Support case. This is an internally managed function",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/accessing-support.html"
+      },
+      {
         "name": "CreateCase",
         "permissionOnly": false,
         "description": "Grants permission to creates a new AWS Support case",
@@ -209086,6 +209120,21 @@
         "name": "DescribeIssueTypes",
         "permissionOnly": false,
         "description": "Grants permission to return issue types for AWS Support cases",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/accessing-support.html"
+      },
+      {
+        "name": "DescribeRelatedItems",
+        "permissionOnly": false,
+        "description": "Grants permission to list the related items for an AWS Support case. This is an internally managed function",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -209227,6 +209276,36 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/APIReference/API_DescribeTrustedAdvisorChecks.html"
+      },
+      {
+        "name": "DisconnectLiveContactForCase",
+        "permissionOnly": false,
+        "description": "Grants permission to disconnect a live contact on AWS Support Center. This is an internally managed function",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/accessing-support.html"
+      },
+      {
+        "name": "DownloadAttachment",
+        "permissionOnly": false,
+        "description": "Grants permission to get a presigned URL to download an attachment from an AWS Support case",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/APIReference/API_GetAttachmentDownloadLink.html"
       },
       {
         "name": "GetInteraction",
@@ -209452,6 +209531,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/APIReference/API_UpdateInteraction.html"
+      },
+      {
+        "name": "UploadAttachment",
+        "permissionOnly": false,
+        "description": "Grants permission to get a presigned URL to upload an attachment to an AWS Support case",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/APIReference/API_GetAttachmentUploadLinks.html"
       }
     ],
     "resourceTypes": [],
@@ -423477,6 +423571,42 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/"
       },
       {
+        "name": "BatchRebootClusterNodes",
+        "permissionOnly": false,
+        "description": "Grants permission to reboot nodes in a SageMaker HyperPod cluster",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cluster",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_BatchRebootClusterNodes.html"
+      },
+      {
+        "name": "BatchReplaceClusterNodes",
+        "permissionOnly": false,
+        "description": "Grants permission to replace nodes in a SageMaker HyperPod cluster",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cluster",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_BatchReplaceClusterNodes.html"
+      },
+      {
         "name": "BatchWriteRecord",
         "permissionOnly": false,
         "description": "Grants permission to put a batch of records to one or more feature groups",
@@ -423999,6 +424129,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
               "sagemaker:AppNetworkAccessType",
+              "sagemaker:AuthMode",
               "sagemaker:DomainSharingOutputKmsKeyArn",
               "sagemaker:ImageArns",
               "sagemaker:ImageVersionArns",
@@ -428456,6 +428587,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeTrainingPlan.html"
       },
       {
+        "name": "DescribeTrainingPlanExtensionHistory",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the extension history for a specified training plan",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "training-plan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeTrainingPlanExtensionHistory.html"
+      },
+      {
         "name": "DescribeTransformJob",
         "permissionOnly": false,
         "description": "Grants permission to return information about a transform job",
@@ -428646,6 +428795,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_EnableSagemakerServicecatalogPortfolio.html"
+      },
+      {
+        "name": "ExtendTrainingPlan",
+        "permissionOnly": false,
+        "description": "Grants permission to extend an existing training plan by purchasing an extension offering",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ExtendTrainingPlan.html"
       },
       {
         "name": "GetDeployments",
@@ -430962,7 +431126,9 @@
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
-              "sagemaker:ResourceTag/${TagKey}"
+              "sagemaker:IsUpdateRecord",
+              "sagemaker:ResourceTag/${TagKey}",
+              "sagemaker:UpdatableFeatures"
             ],
             "dependentActions": []
           }
@@ -433321,6 +433487,12 @@
         "type": "String"
       },
       {
+        "name": "sagemaker:AuthMode",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the authentication mode specified in the request",
+        "type": "String"
+      },
+      {
         "name": "sagemaker:BearerTokenType",
         "apiReferenceUrl": "",
         "description": "Filters access by the type of bearer token used in the request",
@@ -433495,6 +433667,12 @@
         "type": "Bool"
       },
       {
+        "name": "sagemaker:IsUpdateRecord",
+        "apiReferenceUrl": "",
+        "description": "Filters access by whether the PutRecord authorization was triggered by an UpdateRecord API call. Set to true on UpdateRecord and false on direct PutRecord calls",
+        "type": "Bool"
+      },
+      {
         "name": "sagemaker:KeepAlivePeriod",
         "apiReferenceUrl": "",
         "description": "Filters access by the keep-alive period associated with the resource in the request",
@@ -433637,6 +433815,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by the target model associated with the Multi-Model Endpoint in the request",
         "type": "String"
+      },
+      {
+        "name": "sagemaker:UpdatableFeatures",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the list of feature names being updated by an UpdateRecord API call. Absent on direct PutRecord calls",
+        "type": "ArrayOfString"
       },
       {
         "name": "sagemaker:UserProfileName",

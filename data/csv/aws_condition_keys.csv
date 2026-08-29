@@ -1276,280 +1276,283 @@ condition_key_id,name,reference_url,description,type
 1275,s3vectors:sseType,"",Filters access by server-side encryption type,String
 1276,sagemaker:AcceleratorTypes,"",Filters access by the list of all accelerator types associated with the resource in the request,ArrayOfString
 1277,sagemaker:AppNetworkAccessType,"",Filters access by the app network access type associated with the resource in the request,String
-1278,sagemaker:BearerTokenType,"",Filters access by the type of bearer token used in the request,String
-1279,sagemaker:CurrentCustomerMetadataProperties/${MetadataKey},"",Filters access by a current metadata key and value pair associated with the model-package resource,String
-1280,sagemaker:CurrentModelLifeCycleStage,"",Filters access by the current value of the Stage field in the model life cycle object associated with the model-package resource,String
-1281,sagemaker:CurrentModelLifeCycleStageStatus,"",Filters access by the current value of the StageStatus field in the model life cycle object associated with the model-package resource,String
-1282,sagemaker:CustomerMetadataProperties/${MetadataKey},"",Filters access by a metadata key and value pair,String
-1283,sagemaker:CustomerMetadataPropertiesToRemove,"",Filters access by the list of metadata properties associated with the model-package resource in the request,ArrayOfString
-1284,sagemaker:DirectGatedModelAccess,"",Used to deny direct access to SageMaker gated ModelReferences,String
-1285,sagemaker:DirectInternetAccess,"",Filters access by the direct internet access associated with the resource in the request,String
-1286,sagemaker:DomainId,"",You can use the domainId as a policy variable to filter requests from specific SageMaker Domains,String
-1287,sagemaker:DomainSharingOutputKmsKey,"",Filters access by the Domain sharing output KMS key associated with the resource in the request. This key has been deprecated. It has been replaced by sagemaker:DomainSharingOutputKmsKeyArn,ARN
-1288,sagemaker:DomainSharingOutputKmsKeyArn,"",Filters access by the Domain sharing output KMS key associated with the resource in the request. The ARN of the key-id must be used,ARN
-1289,sagemaker:EnableRemoteDebug,"",Filters access by the remote debug config in the request,Bool
-1290,sagemaker:FeatureGroupDisableGlueTableCreation,"",Filters access by the DisableGlueTableCreation flag associated with the feature group resource in the request,Bool
-1291,sagemaker:FeatureGroupEnableOnlineStore,"",Filters access by the EnableOnlineStore flag associated with feature group in the request,Bool
-1292,sagemaker:FeatureGroupOfflineStoreConfig,"",Filters access by the presence of an OfflineStoreConfig in the feature group resource in the request. This access filter only supports the null-conditional operator,Bool
-1293,sagemaker:FeatureGroupOfflineStoreKmsKey,"",Filters access by the offline store kms key associated with the feature group resource in the request. This key has been deprecated. It has been replaced by sagemaker:FeatureGroupOfflineStoreKmsKeyArn,ARN
-1294,sagemaker:FeatureGroupOfflineStoreKmsKeyArn,"",Filters access by the offline store kms key associated with the feature group resource in the request. The ARN of the key-id must be used,ARN
-1295,sagemaker:FeatureGroupOfflineStoreS3Uri,"",Filters access by the offline store s3 uri associated with the feature group resource in the request,String
-1296,sagemaker:FeatureGroupOnlineStoreKmsKey,"",Filters access by the online store kms key associated with the feature group resource in the request. This key has been deprecated. It has been replaced by sagemaker:FeatureGroupOnlineStoreKmsKeyArn,ARN
-1297,sagemaker:FeatureGroupOnlineStoreKmsKeyArn,"",Filters access by the online store kms key associated with the feature group resource in the request. The ARN of the key-id must be used,ARN
-1298,sagemaker:FileSystemAccessMode,"",Filters access by a file system access mode associated with the resource in the request,String
-1299,sagemaker:FileSystemDirectoryPath,"",Filters access by a file system directory path associated with the resource in the request,String
-1300,sagemaker:FileSystemId,"",Filters access by a file system ID associated with the resource in the request,String
-1301,sagemaker:FileSystemType,"",Filters access by a file system type associated with the resource in the request,String
-1302,sagemaker:HomeEfsFileSystemKmsKey,"",Filters access by a key that is present in the request the user makes to the SageMaker service. This key has been deprecated. It has been replaced by sagemaker:VolumeKmsKeyArn,ARN
-1303,sagemaker:ImageArns,"",Filters access by the list of all image arns associated with the resource in the request,ArrayOfARN
-1304,sagemaker:ImageVersionArns,"",Filters access by the list of all image version arns associated with the resource in the request,ArrayOfARN
-1305,sagemaker:InstanceTypes,"",Filters access by the list of all instance types associated with the resource in the request,ArrayOfString
-1306,sagemaker:InterContainerTrafficEncryption,"",Filters access by the inter container traffic encryption associated with the resource in the request,Bool
-1307,sagemaker:KeepAlivePeriod,"",Filters access by the keep-alive period associated with the resource in the request,Numeric
-1308,sagemaker:MaxRuntimeInSeconds,"",Filters access by the max runtime in seconds associated with the resource in the request,Numeric
-1309,sagemaker:MinimumInstanceMetadataServiceVersion,"",Filters access by the minimum instance metadata service version used by the resource in the request,String
-1310,sagemaker:ModelApprovalStatus,"",Filters access by the model approval status with the model-package in the request,String
-1311,sagemaker:ModelArn,"",Filters access by the model arn associated with the resource in the request,ARN
-1312,sagemaker:ModelLifeCycle:Stage,"",Filters access by stage field in the model life cycle object associated with the model-package resource in the request,String
-1313,sagemaker:ModelLifeCycle:StageStatus,"",Filters access by stageStatus field in the model life cycle object associated with the model-package resource in the request,String
-1314,sagemaker:NetworkIsolation,"",Filters access by the network isolation associated with the resource in the request,Bool
-1315,sagemaker:NotebookInstanceLifecycleConfigArns,"",Filters access by the list of notebook instance lifecycle configuration ARNs associated with the resource in the request,ArrayOfARN
-1316,sagemaker:OutputKmsKey,"",Filters access by the output kms key associated with the resource in the request. This key has been deprecated. It has been replaced by sagemaker:OutputKmsKeyArn,ARN
-1317,sagemaker:OutputKmsKeyArn,"",Filters access by the output kms key associated with the resource in the request. The ARN of the key-id must be used,ARN
-1318,sagemaker:OwnerUserProfileArn,"",Filters access by the OwnerUserProfile arn associated with the space in the request,ARN
-1319,sagemaker:PipelineVersionId,"",Filters access to specific version IDs of a Sagemaker pipeline,String
-1320,sagemaker:RemoteAccess,"",Filters access by the remote access flag associated with the space in the request,String
-1321,sagemaker:ResourceTag/,"",Filters access by the preface string for a tag key and value pair attached to a resource,String
-1322,sagemaker:ResourceTag/${TagKey},"",Filters access by a tag key and value pair,String
-1323,sagemaker:RootAccess,"",Filters access by the root access associated with the resource in the request,String
-1324,sagemaker:SearchVisibilityCondition/${FilterKey},"",Limits the results of your search request to the resources that you can access. ${FilterKey} is a key that the VisibilityConditions configuration presents in the Search request,String
-1325,sagemaker:ServerlessMaxConcurrency,"",Filters access by limiting maximum concurrency used for Serverless inference in the request,Numeric
-1326,sagemaker:ServerlessMemorySize,"",Filters access by limiting memory size used for Serverless inference in the request,Numeric
-1327,sagemaker:SpaceSharingType,"",Filters access by the sharing type associated with the space in the request,String
-1328,sagemaker:StudioLifecycleConfigArns,"",Filters access by the list of lifecycle configuration ARNs associated with the resource in the request,ArrayOfARN
-1329,sagemaker:TaggingAction,"",Filters access by the API actions to which a user can apply tags. Uses the name of the API operation that creates a taggable resource to filter access,String
-1330,sagemaker:TargetModel,"",Filters access by the target model associated with the Multi-Model Endpoint in the request,String
-1331,sagemaker:UserProfileName,"",You can use the UserProfileName as a policy variable to filter requests from specific user profiles within a SageMaker Domain. This context key is not applicable to user profiles within shared spaces,String
-1332,sagemaker:VolumeKmsKey,"",Filters access by the volume kms key associated with the resource in the request. This key has been deprecated. It has been replaced by sagemaker:VolumeKmsKeyArn,ARN
-1333,sagemaker:VolumeKmsKeyArn,"",Filters access by the volume kms key associated with the resource in the request. The ARN of the key-id must be used,ARN
-1334,sagemaker:VpcSecurityGroupIds,"",Filters access by the list of all VPC security group ids associated with the resource in the request,ArrayOfString
-1335,sagemaker:VpcSubnets,"",Filters access by the list of all VPC subnets associated with the resource in the request,ArrayOfString
-1336,sagemaker:WorkteamArn,"",Filters access by the workteam arn associated to the request,ARN
-1337,sagemaker:WorkteamType,"","Filters access by the workteam type associated to the request. This can be public-crowd, private-crowd or vendor-crowd",String
-1338,saml:aud,"",Filters access by the endpoint URL to which SAML assertions are presented,String
-1339,saml:cn,"",Filters access by the eduOrg attribute,ArrayOfString
-1340,saml:commonName,"",Filters access by the commonName attribute,String
-1341,saml:doc,"",Filters access by on the principal that was used to assume the role,String
-1342,saml:eduorghomepageuri,"",Filters access by the eduOrg attribute,ArrayOfString
-1343,saml:eduorgidentityauthnpolicyuri,"",Filters access by the eduOrg attribute,ArrayOfString
-1344,saml:eduorglegalname,"",Filters access by the eduOrg attribute,ArrayOfString
-1345,saml:eduorgsuperioruri,"",Filters access by the eduOrg attribute,ArrayOfString
-1346,saml:eduorgwhitepagesuri,"",Filters access by the eduOrg attribute,ArrayOfString
-1347,saml:edupersonaffiliation,"",Filters access by the eduPerson attribute,ArrayOfString
-1348,saml:edupersonassurance,"",Filters access by the eduPerson attribute,ArrayOfString
-1349,saml:edupersonentitlement,"",Filters access by the eduPerson attribute,ArrayOfString
-1350,saml:edupersonnickname,"",Filters access by the eduPerson attribute,ArrayOfString
-1351,saml:edupersonorgdn,"",Filters access by the eduPerson attribute,String
-1352,saml:edupersonorgunitdn,"",Filters access by the eduPerson attribute,ArrayOfString
-1353,saml:edupersonprimaryaffiliation,"",Filters access by the eduPerson attribute,String
-1354,saml:edupersonprimaryorgunitdn,"",Filters access by the eduPerson attribute,String
-1355,saml:edupersonprincipalname,"",Filters access by the eduPerson attribute,String
-1356,saml:edupersonscopedaffiliation,"",Filters access by the eduPerson attribute,ArrayOfString
-1357,saml:edupersontargetedid,"",Filters access by the eduPerson attribute,ArrayOfString
-1358,saml:givenName,"",Filters access by the givenName attribute,String
-1359,saml:iss,"","Filters access by on the issuer, which is represented by a URN",String
-1360,saml:mail,"",Filters access by the mail attribute,String
-1361,saml:name,"",Filters access by the name attribute,String
-1362,saml:namequalifier,"","Filters access by the hash value of the issuer, account ID, and friendly name",String
-1363,saml:organizationStatus,"",Filters access by the organizationStatus attribute,String
-1364,saml:primaryGroupSID,"",Filters access by the primaryGroupSID attribute,String
-1365,saml:sub,"",Filters access by the subject of the claim (the SAML user ID),String
-1366,saml:sub_type,"","Filters access by the value persistent, transient, or the full Format URI",String
-1367,saml:surname,"",Filters access by the surname attribute,String
-1368,saml:uid,"",Filters access by the uid attribute,String
-1369,saml:x500UniqueIdentifier,"",Filters access by the uid attribute,String
-1370,secretsmanager:AddReplicaRegions,"",Filters access by the list of Regions in which to replicate the secret,ArrayOfString
-1371,secretsmanager:BlockPublicPolicy,"",Filters access by whether the resource policy blocks broad AWS account access,Bool
-1372,secretsmanager:Description,"",Filters access by the description text in the request,String
-1373,secretsmanager:ExternalSecretRotationRoleArn,"",Filters access by the managed external secret rotation role ARN in the request,ARN
-1374,secretsmanager:ForceDeleteWithoutRecovery,"",Filters access by whether the secret is to be deleted immediately without any recovery window,Bool
-1375,secretsmanager:ForceOverwriteReplicaSecret,"",Filters access by whether to overwrite a secret with the same name in the destination Region,Bool
-1376,secretsmanager:KmsKeyArn,"",Filters access by the key ARN of the KMS key in the request,ARN
-1377,secretsmanager:KmsKeyId,"",Filters access by the key identifier of the KMS key in the request. Deprecated: Use secretsmanager:KmsKeyArn,String
-1378,secretsmanager:ModifyRotationRules,"",Filters access by whether the rotation rules of the secret are to be modified,Bool
-1379,secretsmanager:Name,"",Filters access by the friendly name of the secret in the request,String
-1380,secretsmanager:RecoveryWindowInDays,"",Filters access by the number of days that Secrets Manager waits before it can delete the secret,Numeric
-1381,secretsmanager:ResourceTag/tag-key,"",Filters access by a tag key and value pair,String
-1382,secretsmanager:RotateImmediately,"",Filters access by whether the secret is to be rotated immediately,Bool
-1383,secretsmanager:RotationLambdaARN,"",Filters access by the ARN of the rotation Lambda function in the request,ARN
-1384,secretsmanager:SecretId,"",Filters access by the SecretID value in the request,ARN
-1385,secretsmanager:SecretPrimaryRegion,"",Filters access by primary region in which the secret is created if the secret is a multi-Region secret,String
-1386,secretsmanager:Type,"",Filters access by the managed external secret type in the request,String
-1387,secretsmanager:VersionId,"",Filters access by the unique identifier of the version of the secret in the request,String
-1388,secretsmanager:VersionStage,"",Filters access by the list of version stages in the request,String
-1389,secretsmanager:resource/AllowRotationLambdaArn,"",Filters access by the ARN of the rotation Lambda function associated with the secret,ARN
-1390,secretsmanager:resource/Type,"",Filters access by the managed external secret type associated with the secret,String
-1391,securityhub:ASFFSyntaxPath/${ASFFSyntaxPath},"",Filters access by the specified fields and values in the request,String
-1392,securityhub:OCSFSyntaxPath/${OCSFSyntaxPath},"",Filters access by the specified fields and values in the request,String
-1393,securityhub:TargetAccount,"",Filters access by the AwsAccountId field that is specified in the request,String
-1394,serverlessrepo:applicationType,"",Filters access by application type,String
-1395,servicecatalog:Resource,"",Filters access by controlling what value can be specified as the Resource parameter in an AppRegistry associate resource API,String
-1396,servicecatalog:ResourceType,"",Filters access by controlling what value can be specified as the ResourceType parameter in an AppRegistry associate resource API,String
-1397,servicecatalog:accountLevel,"",Filters access by user to see and perform actions on resources created by anyone in the account,String
-1398,servicecatalog:roleLevel,"",Filters access by user to see and perform actions on resources created either by them or by anyone federating into the same role as them,String
-1399,servicecatalog:userLevel,"",Filters access by user to see and perform actions on only resources that they created,String
-1400,servicediscovery:NamespaceArn,"",Filters access by specifying the Amazon Resource Name (ARN) for the related namespace,ARN
-1401,servicediscovery:NamespaceName,"",Filters access by specifying the name of the related namespace,String
-1402,servicediscovery:ServiceArn,"",Filters access by specifying the Amazon Resource Name (ARN) for the related service,ARN
-1403,servicediscovery:ServiceCreatedByAccount,"",Filters access by specifying the account id of the related service creator,String
-1404,servicediscovery:ServiceName,"",Filters access by specifying the name of the related service,String
-1405,servicequotas:service,"",Filters access by the specified AWS service,String
-1406,ses:AddonSubscriptionArn,"",Filters access by SES Addon Subscription ARN,ARN
-1407,ses:ApiVersion,"",Filters access by the SES API version,String
-1408,ses:ExportSourceType,"",Filters access by the export source type,String
-1409,ses:FeedbackAddress,"","Filters access by the ""Return-Path"" address, which specifies where bounces and complaints are sent by email feedback forwarding",String
-1410,ses:FromAddress,"","Filters access by the ""From"" address of a message",String
-1411,ses:FromDisplayName,"","Filters access by the ""From"" address that is used as the display name of a message",String
-1412,ses:MailManagerIngressPointType,"","Filters access by SES Mail Manager ingress point type, for example OPEN or AUTH",String
-1413,ses:MailManagerRuleSetArn,"",Filters access by SES Mail Manager rule set ARN,ARN
-1414,ses:MailManagerTrafficPolicyArn,"",Filters access by SES Mail Manager traffic policy ARN,ARN
-1415,ses:MultiRegionEndpointId,"",Filters access by the multi-region endpoint ID that is used to send email,String
-1416,ses:Recipients,"","Filters access by the recipient addresses of a message, which include the ""To"", ""CC"", and ""BCC"" addresses",ArrayOfString
-1417,ses:ReplicaRegion,"",Filters access by the replica regions for Replicating domain DKIM signing key,ArrayOfString
-1418,ses:TenantName,"",Filters access by the tenant name that is used to send email,String
-1419,signer:ProfileVersion,"",Filters access by version of the Signing Profile,String
-1420,signin:OAuthClientAuthentication,"",Filters access by the client authentication method used in the OAuth token request,String
-1421,signin:OAuthClientId,"",Filters access by the OAuth client ID used in the authorization or token request,String
-1422,signin:OAuthGrantType,"",Filters access by the OAuth grant type used in the token request,String
-1423,signin:OAuthRedirectUri,"",Filters access by the redirect URI specified in the OAuth authorization request,String
-1424,signin:OAuthTokenType,"",Filters access by the type of OAuth token being operated on,String
-1425,signin:PrincipalArn,"",Filters access by the principal ARN during pre-authentication console sign-in,ARN
-1426,sns:Endpoint,"","Filters access by the URL, email address, or ARN from a Subscribe request or a previously confirmed subscription",String
-1427,sns:Protocol,"",Filters access by the protocol value from a Subscribe request or a previously confirmed subscription,String
-1428,ssm:AccessRequestId,"",Filters access by verifying that a user has access to the access request ID specified in the request,String
-1429,ssm:AutoApprove,"",Filters access by verifying that a user has permission to start Change Manager workflows without a review step (with the exception of change freeze events),Bool
-1430,ssm:DocumentCategories,"",Filters access by verifying that a user has permission to access a document belonging to a specific category enum,ArrayOfString
-1431,ssm:DocumentType,"","Filters access by verifying that a user has permission to access a document belonging to a specific document type. Only available in ""aws"", ""aws-cn"", and ""aws-us-gov"" partitions",String
-1432,ssm:DocumentVersion,"",Filters access by verifying that a user has permission to access a specific version of a document,ArrayOfString
-1433,ssm:InventoryTypeName,"",Filters access by verifying that a user also has access to the InventoryType specified in the request,ArrayOfString
-1434,ssm:NodeAccountId,"",Filters access by the AWS account ID associated with the managed node making the request. Available only in VPC endpoint policies and service control policies (SCPs),String
-1435,ssm:NodeOrgId,"",Filters access by the AWS Organizations ID associated with the managed node making the request. Available only in VPC endpoint policies and service control policies (SCPs),String
-1436,ssm:Overwrite,"",Filters access by controling whether Systems Manager parameters can be overwritten,String
-1437,ssm:Policies,"",Filters access by controlling whether an IAM Entity (user or role) can create or update a parameter that includes a parameter policy,String
-1438,ssm:Recursive,"",Filters access by Systems Manager parameters created in a hierarchical structure,String
-1439,ssm:SessionDocumentAccessCheck,"",Filters access by verifying that a user has permission to access either the default Session Manager configuration document or the custom configuration document specified in a request,Bool
-1440,ssm:SourceInstanceARN,"",Filters access by verifying the Amazon Resource Name (ARN) of the AWS Systems Manager's managed instance from which the request is made. This key is not present when the request comes from the managed instance authenticated with an IAM role associated with EC2 instance profile,ARN
-1441,ssm:SyncType,"",Filters access by verifying that a user also has access to the ResourceDataSync SyncType specified in the request,String
-1442,ssm:resourceTag/${TagKey},"",Filters access by a tag key-value pair assigned to the Systems Manager resource,String
-1443,ssm:resourceTag/aws:ssmmessages:session-id,"",Filters access by based on a tag key-value pair assigned to the Systems Manager session resource,String
-1444,ssm:resourceTag/aws:ssmmessages:target-id,"",Filters access by based on a tag key-value pair assigned to the Systems Manager session resource,String
-1445,ssm:resourceTag/tag-key,"",Filters access by based on a tag key-value pair assigned to the Systems Manager resource,String
-1446,sso:ApplicationAccount,"",Filters access by the account which creates the application. This condition key is not supported for customer managed SAML applications,String
-1447,sso:PrimaryRegion,"",Filters access by the primary region of the IAM Identity Center instance,String
-1448,states:HTTPEndpoint,"",Filters access by the endpoint that the HTTP Task state allows in the request,String
-1449,states:HTTPMethod,"",Filters access by the method that the HTTP Task state allows in the request,String
-1450,states:StateMachineQualifier,"",Filters access by the qualifier of a state machine ARN,ArrayOfString
-1451,sts:AWSServiceName,"",Filters access by the service that is obtaining a bearer token,String
-1452,sts:DurationSeconds,"",Filters access by the duration in seconds when getting a bearer token or a JSON Web Token (JWT) from the GetWebIdentityToken API,Numeric
-1453,sts:ExternalId,"",Filters access by the unique identifier required when you assume a role in another account,String
-1454,sts:IdentityTokenAudience,"",Filters access by the audience that is passed in the request,ArrayOfString
-1455,sts:RequestContext/${ContextKey},"",Filters access by the session context key-value pairs embedded in the signed context assertion retrieved from a trusted context provider,String
-1456,sts:RequestContextProviders,"",Filters access by the context provider ARNs,ArrayOfARN
-1457,sts:RoleAuthorizedByIdp,"",Filters access based on whether the identity provider authorized the role via the roles claim in the OIDC token,Bool
-1458,sts:RoleSessionName,"",Filters access by the role session name required when you assume a role,String
-1459,sts:SigningAlgorithm,"",Filters access by the signing algorithm that is passed in the request,String
-1460,sts:SourceIdentity,"",Filters access by the source identity that is passed in the request,String
-1461,sts:TaskPolicyArn,"",Filters access by TaskPolicyARN,ARN
-1462,sts:TransitiveTagKeys,"",Filters access by the transitive tag keys that are passed in the request,ArrayOfString
-1463,swf:activityType.name,"",Filters access by the name of the activity type,String
-1464,swf:activityType.version,"",Filters access by the version of the activity type,String
-1465,swf:defaultTaskList.name,"",Filters access by the name of the default task list,String
-1466,swf:name,"",Filters access by the name of activities or workflows,String
-1467,swf:tagFilter.tag,"",Filters access by the value of tagFilter.tag,String
-1468,swf:tagList.member.0,"",Filters access by the specified tag,String
-1469,swf:tagList.member.1,"",Filters access by the specified tag,String
-1470,swf:tagList.member.2,"",Filters access by the specified tag,String
-1471,swf:tagList.member.3,"",Filters access by the specified tag,String
-1472,swf:tagList.member.4,"",Filters access by the specified tag,String
-1473,swf:taskList.name,"",Filters access by the name of the tasklist,String
-1474,swf:typeFilter.name,"",Filters access by the name of the type filter,String
-1475,swf:typeFilter.version,"",Filters access by the version of the type filter,String
-1476,swf:version,"",Filters access by the version of activities or workflows,String
-1477,swf:workflowType.name,"",Filters access by the name of the workflow type,String
-1478,swf:workflowType.version,"",Filters access by the version of the workflow type,String
-1479,synthetics:Names,"",Filters access based on the name of the canary,ArrayOfString
-1480,timestream-influxdb:RestoreMode,"",Filters access by the restore mode specified in the request,String
-1481,token.actions.${Domain}.ghe.com:actor,"",Filters access by the personal account that initiated the workflow run,String
-1482,token.actions.${Domain}.ghe.com:actor_id,"",Filters access by the ID of the personal account that initiated the workflow run,String
-1483,token.actions.${Domain}.ghe.com:enterprise_id,"",Filters access by the ID of the enterprise that contains the repository from where the workflow is running,String
-1484,token.actions.${Domain}.ghe.com:environment,"",Filters access by the name of the environment used by the job,String
-1485,token.actions.${Domain}.ghe.com:job_workflow_ref,"",Filters access by the reference path to the reusable workflow for jobs using a reusable workflow,String
-1486,token.actions.${Domain}.ghe.com:ref,"",Filters access by the git ref (branch or tag) that triggered the workflow run,String
-1487,token.actions.${Domain}.ghe.com:repository,"",Filters access by the repository from where the workflow is running,String
-1488,token.actions.${Domain}.ghe.com:repository_id,"",Filters access by the ID of the repository from where the workflow is running,String
-1489,token.actions.${Domain}.ghe.com:repository_owner_id,"",Filters access by the ID of the repository owner from where the workflow is running,String
-1490,token.actions.${Domain}.ghe.com:workflow,"",Filters access by the name of the workflow,String
-1491,token.actions.githubusercontent.com/${SubPath}:actor,"",Filters access by the personal account that initiated the workflow run,String
-1492,token.actions.githubusercontent.com/${SubPath}:actor_id,"",Filters access by the ID of the personal account that initiated the workflow run,String
-1493,token.actions.githubusercontent.com/${SubPath}:enterprise_id,"",Filters access by the ID of the enterprise that contains the repository from where the workflow is running,String
-1494,token.actions.githubusercontent.com/${SubPath}:environment,"",Filters access by the name of the environment used by the job,String
-1495,token.actions.githubusercontent.com/${SubPath}:job_workflow_ref,"",Filters access by the reference path to the reusable workflow for jobs using a reusable workflow,String
-1496,token.actions.githubusercontent.com/${SubPath}:ref,"",Filters access by the git ref (branch or tag) that triggered the workflow run,String
-1497,token.actions.githubusercontent.com/${SubPath}:repository,"",Filters access by the repository from where the workflow is running,String
-1498,token.actions.githubusercontent.com/${SubPath}:repository_id,"",Filters access by the ID of the repository from where the workflow is running,String
-1499,token.actions.githubusercontent.com/${SubPath}:repository_owner_id,"",Filters access by the ID of the repository owner from where the workflow is running,String
-1500,token.actions.githubusercontent.com/${SubPath}:workflow,"",Filters access by the name of the workflow,String
-1501,token.actions.githubusercontent.com:actor,"",Filters access by the personal account that initiated the workflow run,String
-1502,token.actions.githubusercontent.com:actor_id,"",Filters access by the ID of the personal account that initiated the workflow run,String
-1503,token.actions.githubusercontent.com:enterprise_id,"",Filters access by the ID of the enterprise that contains the repository from where the workflow is running,String
-1504,token.actions.githubusercontent.com:environment,"",Filters access by the name of the environment used by the job,String
-1505,token.actions.githubusercontent.com:job_workflow_ref,"",Filters access by the reference path to the reusable workflow for jobs using a reusable workflow,String
-1506,token.actions.githubusercontent.com:ref,"",Filters access by the git ref (branch or tag) that triggered the workflow run,String
-1507,token.actions.githubusercontent.com:repository,"",Filters access by the repository from where the workflow is running,String
-1508,token.actions.githubusercontent.com:repository_id,"",Filters access by the ID of the repository from where the workflow is running,String
-1509,token.actions.githubusercontent.com:repository_owner_id,"",Filters access by the ID of the repository owner from where the workflow is running,String
-1510,token.actions.githubusercontent.com:workflow,"",Filters access by the name of the workflow,String
-1511,transcribe:OutputBucketName,"",Filters access based on the output bucket name included in the request,String
-1512,transcribe:OutputEncryptionKMSKeyId,"","Filters access based on the KMS key id included in the request, provided in the form of a KMS key ARN",String
-1513,transcribe:OutputKey,"",Filters access based on the output key included in the request,String
-1514,transcribe:OutputLocation,"",Filters access based on the output location included in the request,String
-1515,transfer:RequestConnectorProtocol,"",Filters access by the connector protocol that is passed in the request,String
-1516,transfer:RequestSecurityPolicyName,"",Filters access by the security policy name that is passed in the request,String
-1517,transfer:RequestServerDomain,"",Filters access by the storage domain that is passed in the request,String
-1518,transfer:RequestServerEndpointType,"",Filters access by the endpoint type that is passed in the request,String
-1519,transfer:RequestServerProtocols,"",Filters access by the server protocols that are passed in the request,ArrayOfString
-1520,user-subscriptions:CreateForSelf,"",Filters access by only allowing creation of User subscription Claims for the caller,Bool
-1521,vpc-lattice-svcs:Port,"",Filters access by the destination port the request is made to,Numeric
-1522,vpc-lattice-svcs:RequestHeader/${HeaderName},"",Filters access by a header name-value pair in the request headers,String
-1523,vpc-lattice-svcs:RequestMethod,"",Filters access by the method of the request,String
-1524,vpc-lattice-svcs:RequestPath,"",Filters access by the path portion of the request URL,String
-1525,vpc-lattice-svcs:RequestQueryString/${QueryStringKey},"",Filters access by the query string key-value pairs in the request URL,ArrayOfString
-1526,vpc-lattice-svcs:ServiceArn,"",Filters access by the ARN of the service receiving the request,ARN
-1527,vpc-lattice-svcs:ServiceNetworkArn,"",Filters access by the ARN of the service network receiving the request,ARN
-1528,vpc-lattice-svcs:SourceVpc,"",Filters access by the VPC the request is made from,String
-1529,vpc-lattice-svcs:SourceVpcOwnerAccount,"",Filters access by the owning account of the VPC the request is made from,String
-1530,vpc-lattice:AuthType,"",Filters access by the auth type specified in the request,String
-1531,vpc-lattice:CreateAction,"",Filters access by the name of a resource-creating API action and only available during tagging resources on creation,String
-1532,vpc-lattice:DomainName,"",Filters access by the domain name,String
-1533,vpc-lattice:PrivateDnsPreference,"",Filters access by the private dns preference,String
-1534,vpc-lattice:PrivateDnsSpecifiedDomains,"",Filters access by the private dns domains,ArrayOfString
-1535,vpc-lattice:Protocol,"",Filters access by the protocol specified in the request,String
-1536,vpc-lattice:ResourceConfigurationArn,"",Filters access by the ARN of a resource configuration,ARN
-1537,vpc-lattice:SecurityGroupIds,"",Filters access by the IDs of security groups,ArrayOfString
-1538,vpc-lattice:ServiceArn,"",Filters access by the ARN of a service,ARN
-1539,vpc-lattice:ServiceNetworkArn,"",Filters access by the ARN of a service network,ARN
-1540,vpc-lattice:TargetGroupArns,"",Filters access by the ARNs of target groups,ArrayOfARN
-1541,vpc-lattice:VpcEndpointId,"",Filters access by the ID of a VPC endpoint,String
-1542,vpc-lattice:VpcId,"",Filters access by the ID of a virtual private cloud (VPC),String
-1543,wafv2:LogDestinationResource,"",Filters access by log destination ARN for PutLoggingConfiguration API,ARN
-1544,wafv2:LogScope,"",Filters access by log scope for Logging Configuration API,String
-1545,wellarchitected:JiraProjectKey,"",Filters access by project key,String
-1546,wisdom:MessageTemplate/RoutingProfileArn,"",Filters access by the connect routing profile arns associated with the resource,ArrayOfARN
-1547,wisdom:SearchFilter/Qualifier,"",Filters access by the qualifiers that are passed in the request,ArrayOfString
-1548,wisdom:SearchFilter/RoutingProfileArn,"",Filters access by the connect routing profile arn that is passed in the request,ARN
-1549,workmail:ImpersonationRoleId,"",Filters access by the ImpersonationRoleId that is passed in the request,String
-1550,workspaces:userId,"",Filters access by the ID of the Workspaces user,String
-1551,www.amazon.com:app_id,"",Filters access by the Login with Amazon application ID,String
-1552,www.amazon.com:user_id,"",Filters access by the Login with Amazon user ID,String
-1553,xray:ResourcePolicyName,"",Filters access by PolicyName in the request,String
-1554,xray:TraceSegmentDestination,"",Filters access by TraceSegmentDestination type in the request,String
+1278,sagemaker:AuthMode,"",Filters access by the authentication mode specified in the request,String
+1279,sagemaker:BearerTokenType,"",Filters access by the type of bearer token used in the request,String
+1280,sagemaker:CurrentCustomerMetadataProperties/${MetadataKey},"",Filters access by a current metadata key and value pair associated with the model-package resource,String
+1281,sagemaker:CurrentModelLifeCycleStage,"",Filters access by the current value of the Stage field in the model life cycle object associated with the model-package resource,String
+1282,sagemaker:CurrentModelLifeCycleStageStatus,"",Filters access by the current value of the StageStatus field in the model life cycle object associated with the model-package resource,String
+1283,sagemaker:CustomerMetadataProperties/${MetadataKey},"",Filters access by a metadata key and value pair,String
+1284,sagemaker:CustomerMetadataPropertiesToRemove,"",Filters access by the list of metadata properties associated with the model-package resource in the request,ArrayOfString
+1285,sagemaker:DirectGatedModelAccess,"",Used to deny direct access to SageMaker gated ModelReferences,String
+1286,sagemaker:DirectInternetAccess,"",Filters access by the direct internet access associated with the resource in the request,String
+1287,sagemaker:DomainId,"",You can use the domainId as a policy variable to filter requests from specific SageMaker Domains,String
+1288,sagemaker:DomainSharingOutputKmsKey,"",Filters access by the Domain sharing output KMS key associated with the resource in the request. This key has been deprecated. It has been replaced by sagemaker:DomainSharingOutputKmsKeyArn,ARN
+1289,sagemaker:DomainSharingOutputKmsKeyArn,"",Filters access by the Domain sharing output KMS key associated with the resource in the request. The ARN of the key-id must be used,ARN
+1290,sagemaker:EnableRemoteDebug,"",Filters access by the remote debug config in the request,Bool
+1291,sagemaker:FeatureGroupDisableGlueTableCreation,"",Filters access by the DisableGlueTableCreation flag associated with the feature group resource in the request,Bool
+1292,sagemaker:FeatureGroupEnableOnlineStore,"",Filters access by the EnableOnlineStore flag associated with feature group in the request,Bool
+1293,sagemaker:FeatureGroupOfflineStoreConfig,"",Filters access by the presence of an OfflineStoreConfig in the feature group resource in the request. This access filter only supports the null-conditional operator,Bool
+1294,sagemaker:FeatureGroupOfflineStoreKmsKey,"",Filters access by the offline store kms key associated with the feature group resource in the request. This key has been deprecated. It has been replaced by sagemaker:FeatureGroupOfflineStoreKmsKeyArn,ARN
+1295,sagemaker:FeatureGroupOfflineStoreKmsKeyArn,"",Filters access by the offline store kms key associated with the feature group resource in the request. The ARN of the key-id must be used,ARN
+1296,sagemaker:FeatureGroupOfflineStoreS3Uri,"",Filters access by the offline store s3 uri associated with the feature group resource in the request,String
+1297,sagemaker:FeatureGroupOnlineStoreKmsKey,"",Filters access by the online store kms key associated with the feature group resource in the request. This key has been deprecated. It has been replaced by sagemaker:FeatureGroupOnlineStoreKmsKeyArn,ARN
+1298,sagemaker:FeatureGroupOnlineStoreKmsKeyArn,"",Filters access by the online store kms key associated with the feature group resource in the request. The ARN of the key-id must be used,ARN
+1299,sagemaker:FileSystemAccessMode,"",Filters access by a file system access mode associated with the resource in the request,String
+1300,sagemaker:FileSystemDirectoryPath,"",Filters access by a file system directory path associated with the resource in the request,String
+1301,sagemaker:FileSystemId,"",Filters access by a file system ID associated with the resource in the request,String
+1302,sagemaker:FileSystemType,"",Filters access by a file system type associated with the resource in the request,String
+1303,sagemaker:HomeEfsFileSystemKmsKey,"",Filters access by a key that is present in the request the user makes to the SageMaker service. This key has been deprecated. It has been replaced by sagemaker:VolumeKmsKeyArn,ARN
+1304,sagemaker:ImageArns,"",Filters access by the list of all image arns associated with the resource in the request,ArrayOfARN
+1305,sagemaker:ImageVersionArns,"",Filters access by the list of all image version arns associated with the resource in the request,ArrayOfARN
+1306,sagemaker:InstanceTypes,"",Filters access by the list of all instance types associated with the resource in the request,ArrayOfString
+1307,sagemaker:InterContainerTrafficEncryption,"",Filters access by the inter container traffic encryption associated with the resource in the request,Bool
+1308,sagemaker:IsUpdateRecord,"",Filters access by whether the PutRecord authorization was triggered by an UpdateRecord API call. Set to true on UpdateRecord and false on direct PutRecord calls,Bool
+1309,sagemaker:KeepAlivePeriod,"",Filters access by the keep-alive period associated with the resource in the request,Numeric
+1310,sagemaker:MaxRuntimeInSeconds,"",Filters access by the max runtime in seconds associated with the resource in the request,Numeric
+1311,sagemaker:MinimumInstanceMetadataServiceVersion,"",Filters access by the minimum instance metadata service version used by the resource in the request,String
+1312,sagemaker:ModelApprovalStatus,"",Filters access by the model approval status with the model-package in the request,String
+1313,sagemaker:ModelArn,"",Filters access by the model arn associated with the resource in the request,ARN
+1314,sagemaker:ModelLifeCycle:Stage,"",Filters access by stage field in the model life cycle object associated with the model-package resource in the request,String
+1315,sagemaker:ModelLifeCycle:StageStatus,"",Filters access by stageStatus field in the model life cycle object associated with the model-package resource in the request,String
+1316,sagemaker:NetworkIsolation,"",Filters access by the network isolation associated with the resource in the request,Bool
+1317,sagemaker:NotebookInstanceLifecycleConfigArns,"",Filters access by the list of notebook instance lifecycle configuration ARNs associated with the resource in the request,ArrayOfARN
+1318,sagemaker:OutputKmsKey,"",Filters access by the output kms key associated with the resource in the request. This key has been deprecated. It has been replaced by sagemaker:OutputKmsKeyArn,ARN
+1319,sagemaker:OutputKmsKeyArn,"",Filters access by the output kms key associated with the resource in the request. The ARN of the key-id must be used,ARN
+1320,sagemaker:OwnerUserProfileArn,"",Filters access by the OwnerUserProfile arn associated with the space in the request,ARN
+1321,sagemaker:PipelineVersionId,"",Filters access to specific version IDs of a Sagemaker pipeline,String
+1322,sagemaker:RemoteAccess,"",Filters access by the remote access flag associated with the space in the request,String
+1323,sagemaker:ResourceTag/,"",Filters access by the preface string for a tag key and value pair attached to a resource,String
+1324,sagemaker:ResourceTag/${TagKey},"",Filters access by a tag key and value pair,String
+1325,sagemaker:RootAccess,"",Filters access by the root access associated with the resource in the request,String
+1326,sagemaker:SearchVisibilityCondition/${FilterKey},"",Limits the results of your search request to the resources that you can access. ${FilterKey} is a key that the VisibilityConditions configuration presents in the Search request,String
+1327,sagemaker:ServerlessMaxConcurrency,"",Filters access by limiting maximum concurrency used for Serverless inference in the request,Numeric
+1328,sagemaker:ServerlessMemorySize,"",Filters access by limiting memory size used for Serverless inference in the request,Numeric
+1329,sagemaker:SpaceSharingType,"",Filters access by the sharing type associated with the space in the request,String
+1330,sagemaker:StudioLifecycleConfigArns,"",Filters access by the list of lifecycle configuration ARNs associated with the resource in the request,ArrayOfARN
+1331,sagemaker:TaggingAction,"",Filters access by the API actions to which a user can apply tags. Uses the name of the API operation that creates a taggable resource to filter access,String
+1332,sagemaker:TargetModel,"",Filters access by the target model associated with the Multi-Model Endpoint in the request,String
+1333,sagemaker:UpdatableFeatures,"",Filters access by the list of feature names being updated by an UpdateRecord API call. Absent on direct PutRecord calls,ArrayOfString
+1334,sagemaker:UserProfileName,"",You can use the UserProfileName as a policy variable to filter requests from specific user profiles within a SageMaker Domain. This context key is not applicable to user profiles within shared spaces,String
+1335,sagemaker:VolumeKmsKey,"",Filters access by the volume kms key associated with the resource in the request. This key has been deprecated. It has been replaced by sagemaker:VolumeKmsKeyArn,ARN
+1336,sagemaker:VolumeKmsKeyArn,"",Filters access by the volume kms key associated with the resource in the request. The ARN of the key-id must be used,ARN
+1337,sagemaker:VpcSecurityGroupIds,"",Filters access by the list of all VPC security group ids associated with the resource in the request,ArrayOfString
+1338,sagemaker:VpcSubnets,"",Filters access by the list of all VPC subnets associated with the resource in the request,ArrayOfString
+1339,sagemaker:WorkteamArn,"",Filters access by the workteam arn associated to the request,ARN
+1340,sagemaker:WorkteamType,"","Filters access by the workteam type associated to the request. This can be public-crowd, private-crowd or vendor-crowd",String
+1341,saml:aud,"",Filters access by the endpoint URL to which SAML assertions are presented,String
+1342,saml:cn,"",Filters access by the eduOrg attribute,ArrayOfString
+1343,saml:commonName,"",Filters access by the commonName attribute,String
+1344,saml:doc,"",Filters access by on the principal that was used to assume the role,String
+1345,saml:eduorghomepageuri,"",Filters access by the eduOrg attribute,ArrayOfString
+1346,saml:eduorgidentityauthnpolicyuri,"",Filters access by the eduOrg attribute,ArrayOfString
+1347,saml:eduorglegalname,"",Filters access by the eduOrg attribute,ArrayOfString
+1348,saml:eduorgsuperioruri,"",Filters access by the eduOrg attribute,ArrayOfString
+1349,saml:eduorgwhitepagesuri,"",Filters access by the eduOrg attribute,ArrayOfString
+1350,saml:edupersonaffiliation,"",Filters access by the eduPerson attribute,ArrayOfString
+1351,saml:edupersonassurance,"",Filters access by the eduPerson attribute,ArrayOfString
+1352,saml:edupersonentitlement,"",Filters access by the eduPerson attribute,ArrayOfString
+1353,saml:edupersonnickname,"",Filters access by the eduPerson attribute,ArrayOfString
+1354,saml:edupersonorgdn,"",Filters access by the eduPerson attribute,String
+1355,saml:edupersonorgunitdn,"",Filters access by the eduPerson attribute,ArrayOfString
+1356,saml:edupersonprimaryaffiliation,"",Filters access by the eduPerson attribute,String
+1357,saml:edupersonprimaryorgunitdn,"",Filters access by the eduPerson attribute,String
+1358,saml:edupersonprincipalname,"",Filters access by the eduPerson attribute,String
+1359,saml:edupersonscopedaffiliation,"",Filters access by the eduPerson attribute,ArrayOfString
+1360,saml:edupersontargetedid,"",Filters access by the eduPerson attribute,ArrayOfString
+1361,saml:givenName,"",Filters access by the givenName attribute,String
+1362,saml:iss,"","Filters access by on the issuer, which is represented by a URN",String
+1363,saml:mail,"",Filters access by the mail attribute,String
+1364,saml:name,"",Filters access by the name attribute,String
+1365,saml:namequalifier,"","Filters access by the hash value of the issuer, account ID, and friendly name",String
+1366,saml:organizationStatus,"",Filters access by the organizationStatus attribute,String
+1367,saml:primaryGroupSID,"",Filters access by the primaryGroupSID attribute,String
+1368,saml:sub,"",Filters access by the subject of the claim (the SAML user ID),String
+1369,saml:sub_type,"","Filters access by the value persistent, transient, or the full Format URI",String
+1370,saml:surname,"",Filters access by the surname attribute,String
+1371,saml:uid,"",Filters access by the uid attribute,String
+1372,saml:x500UniqueIdentifier,"",Filters access by the uid attribute,String
+1373,secretsmanager:AddReplicaRegions,"",Filters access by the list of Regions in which to replicate the secret,ArrayOfString
+1374,secretsmanager:BlockPublicPolicy,"",Filters access by whether the resource policy blocks broad AWS account access,Bool
+1375,secretsmanager:Description,"",Filters access by the description text in the request,String
+1376,secretsmanager:ExternalSecretRotationRoleArn,"",Filters access by the managed external secret rotation role ARN in the request,ARN
+1377,secretsmanager:ForceDeleteWithoutRecovery,"",Filters access by whether the secret is to be deleted immediately without any recovery window,Bool
+1378,secretsmanager:ForceOverwriteReplicaSecret,"",Filters access by whether to overwrite a secret with the same name in the destination Region,Bool
+1379,secretsmanager:KmsKeyArn,"",Filters access by the key ARN of the KMS key in the request,ARN
+1380,secretsmanager:KmsKeyId,"",Filters access by the key identifier of the KMS key in the request. Deprecated: Use secretsmanager:KmsKeyArn,String
+1381,secretsmanager:ModifyRotationRules,"",Filters access by whether the rotation rules of the secret are to be modified,Bool
+1382,secretsmanager:Name,"",Filters access by the friendly name of the secret in the request,String
+1383,secretsmanager:RecoveryWindowInDays,"",Filters access by the number of days that Secrets Manager waits before it can delete the secret,Numeric
+1384,secretsmanager:ResourceTag/tag-key,"",Filters access by a tag key and value pair,String
+1385,secretsmanager:RotateImmediately,"",Filters access by whether the secret is to be rotated immediately,Bool
+1386,secretsmanager:RotationLambdaARN,"",Filters access by the ARN of the rotation Lambda function in the request,ARN
+1387,secretsmanager:SecretId,"",Filters access by the SecretID value in the request,ARN
+1388,secretsmanager:SecretPrimaryRegion,"",Filters access by primary region in which the secret is created if the secret is a multi-Region secret,String
+1389,secretsmanager:Type,"",Filters access by the managed external secret type in the request,String
+1390,secretsmanager:VersionId,"",Filters access by the unique identifier of the version of the secret in the request,String
+1391,secretsmanager:VersionStage,"",Filters access by the list of version stages in the request,String
+1392,secretsmanager:resource/AllowRotationLambdaArn,"",Filters access by the ARN of the rotation Lambda function associated with the secret,ARN
+1393,secretsmanager:resource/Type,"",Filters access by the managed external secret type associated with the secret,String
+1394,securityhub:ASFFSyntaxPath/${ASFFSyntaxPath},"",Filters access by the specified fields and values in the request,String
+1395,securityhub:OCSFSyntaxPath/${OCSFSyntaxPath},"",Filters access by the specified fields and values in the request,String
+1396,securityhub:TargetAccount,"",Filters access by the AwsAccountId field that is specified in the request,String
+1397,serverlessrepo:applicationType,"",Filters access by application type,String
+1398,servicecatalog:Resource,"",Filters access by controlling what value can be specified as the Resource parameter in an AppRegistry associate resource API,String
+1399,servicecatalog:ResourceType,"",Filters access by controlling what value can be specified as the ResourceType parameter in an AppRegistry associate resource API,String
+1400,servicecatalog:accountLevel,"",Filters access by user to see and perform actions on resources created by anyone in the account,String
+1401,servicecatalog:roleLevel,"",Filters access by user to see and perform actions on resources created either by them or by anyone federating into the same role as them,String
+1402,servicecatalog:userLevel,"",Filters access by user to see and perform actions on only resources that they created,String
+1403,servicediscovery:NamespaceArn,"",Filters access by specifying the Amazon Resource Name (ARN) for the related namespace,ARN
+1404,servicediscovery:NamespaceName,"",Filters access by specifying the name of the related namespace,String
+1405,servicediscovery:ServiceArn,"",Filters access by specifying the Amazon Resource Name (ARN) for the related service,ARN
+1406,servicediscovery:ServiceCreatedByAccount,"",Filters access by specifying the account id of the related service creator,String
+1407,servicediscovery:ServiceName,"",Filters access by specifying the name of the related service,String
+1408,servicequotas:service,"",Filters access by the specified AWS service,String
+1409,ses:AddonSubscriptionArn,"",Filters access by SES Addon Subscription ARN,ARN
+1410,ses:ApiVersion,"",Filters access by the SES API version,String
+1411,ses:ExportSourceType,"",Filters access by the export source type,String
+1412,ses:FeedbackAddress,"","Filters access by the ""Return-Path"" address, which specifies where bounces and complaints are sent by email feedback forwarding",String
+1413,ses:FromAddress,"","Filters access by the ""From"" address of a message",String
+1414,ses:FromDisplayName,"","Filters access by the ""From"" address that is used as the display name of a message",String
+1415,ses:MailManagerIngressPointType,"","Filters access by SES Mail Manager ingress point type, for example OPEN or AUTH",String
+1416,ses:MailManagerRuleSetArn,"",Filters access by SES Mail Manager rule set ARN,ARN
+1417,ses:MailManagerTrafficPolicyArn,"",Filters access by SES Mail Manager traffic policy ARN,ARN
+1418,ses:MultiRegionEndpointId,"",Filters access by the multi-region endpoint ID that is used to send email,String
+1419,ses:Recipients,"","Filters access by the recipient addresses of a message, which include the ""To"", ""CC"", and ""BCC"" addresses",ArrayOfString
+1420,ses:ReplicaRegion,"",Filters access by the replica regions for Replicating domain DKIM signing key,ArrayOfString
+1421,ses:TenantName,"",Filters access by the tenant name that is used to send email,String
+1422,signer:ProfileVersion,"",Filters access by version of the Signing Profile,String
+1423,signin:OAuthClientAuthentication,"",Filters access by the client authentication method used in the OAuth token request,String
+1424,signin:OAuthClientId,"",Filters access by the OAuth client ID used in the authorization or token request,String
+1425,signin:OAuthGrantType,"",Filters access by the OAuth grant type used in the token request,String
+1426,signin:OAuthRedirectUri,"",Filters access by the redirect URI specified in the OAuth authorization request,String
+1427,signin:OAuthTokenType,"",Filters access by the type of OAuth token being operated on,String
+1428,signin:PrincipalArn,"",Filters access by the principal ARN during pre-authentication console sign-in,ARN
+1429,sns:Endpoint,"","Filters access by the URL, email address, or ARN from a Subscribe request or a previously confirmed subscription",String
+1430,sns:Protocol,"",Filters access by the protocol value from a Subscribe request or a previously confirmed subscription,String
+1431,ssm:AccessRequestId,"",Filters access by verifying that a user has access to the access request ID specified in the request,String
+1432,ssm:AutoApprove,"",Filters access by verifying that a user has permission to start Change Manager workflows without a review step (with the exception of change freeze events),Bool
+1433,ssm:DocumentCategories,"",Filters access by verifying that a user has permission to access a document belonging to a specific category enum,ArrayOfString
+1434,ssm:DocumentType,"","Filters access by verifying that a user has permission to access a document belonging to a specific document type. Only available in ""aws"", ""aws-cn"", and ""aws-us-gov"" partitions",String
+1435,ssm:DocumentVersion,"",Filters access by verifying that a user has permission to access a specific version of a document,ArrayOfString
+1436,ssm:InventoryTypeName,"",Filters access by verifying that a user also has access to the InventoryType specified in the request,ArrayOfString
+1437,ssm:NodeAccountId,"",Filters access by the AWS account ID associated with the managed node making the request. Available only in VPC endpoint policies and service control policies (SCPs),String
+1438,ssm:NodeOrgId,"",Filters access by the AWS Organizations ID associated with the managed node making the request. Available only in VPC endpoint policies and service control policies (SCPs),String
+1439,ssm:Overwrite,"",Filters access by controling whether Systems Manager parameters can be overwritten,String
+1440,ssm:Policies,"",Filters access by controlling whether an IAM Entity (user or role) can create or update a parameter that includes a parameter policy,String
+1441,ssm:Recursive,"",Filters access by Systems Manager parameters created in a hierarchical structure,String
+1442,ssm:SessionDocumentAccessCheck,"",Filters access by verifying that a user has permission to access either the default Session Manager configuration document or the custom configuration document specified in a request,Bool
+1443,ssm:SourceInstanceARN,"",Filters access by verifying the Amazon Resource Name (ARN) of the AWS Systems Manager's managed instance from which the request is made. This key is not present when the request comes from the managed instance authenticated with an IAM role associated with EC2 instance profile,ARN
+1444,ssm:SyncType,"",Filters access by verifying that a user also has access to the ResourceDataSync SyncType specified in the request,String
+1445,ssm:resourceTag/${TagKey},"",Filters access by a tag key-value pair assigned to the Systems Manager resource,String
+1446,ssm:resourceTag/aws:ssmmessages:session-id,"",Filters access by based on a tag key-value pair assigned to the Systems Manager session resource,String
+1447,ssm:resourceTag/aws:ssmmessages:target-id,"",Filters access by based on a tag key-value pair assigned to the Systems Manager session resource,String
+1448,ssm:resourceTag/tag-key,"",Filters access by based on a tag key-value pair assigned to the Systems Manager resource,String
+1449,sso:ApplicationAccount,"",Filters access by the account which creates the application. This condition key is not supported for customer managed SAML applications,String
+1450,sso:PrimaryRegion,"",Filters access by the primary region of the IAM Identity Center instance,String
+1451,states:HTTPEndpoint,"",Filters access by the endpoint that the HTTP Task state allows in the request,String
+1452,states:HTTPMethod,"",Filters access by the method that the HTTP Task state allows in the request,String
+1453,states:StateMachineQualifier,"",Filters access by the qualifier of a state machine ARN,ArrayOfString
+1454,sts:AWSServiceName,"",Filters access by the service that is obtaining a bearer token,String
+1455,sts:DurationSeconds,"",Filters access by the duration in seconds when getting a bearer token or a JSON Web Token (JWT) from the GetWebIdentityToken API,Numeric
+1456,sts:ExternalId,"",Filters access by the unique identifier required when you assume a role in another account,String
+1457,sts:IdentityTokenAudience,"",Filters access by the audience that is passed in the request,ArrayOfString
+1458,sts:RequestContext/${ContextKey},"",Filters access by the session context key-value pairs embedded in the signed context assertion retrieved from a trusted context provider,String
+1459,sts:RequestContextProviders,"",Filters access by the context provider ARNs,ArrayOfARN
+1460,sts:RoleAuthorizedByIdp,"",Filters access based on whether the identity provider authorized the role via the roles claim in the OIDC token,Bool
+1461,sts:RoleSessionName,"",Filters access by the role session name required when you assume a role,String
+1462,sts:SigningAlgorithm,"",Filters access by the signing algorithm that is passed in the request,String
+1463,sts:SourceIdentity,"",Filters access by the source identity that is passed in the request,String
+1464,sts:TaskPolicyArn,"",Filters access by TaskPolicyARN,ARN
+1465,sts:TransitiveTagKeys,"",Filters access by the transitive tag keys that are passed in the request,ArrayOfString
+1466,swf:activityType.name,"",Filters access by the name of the activity type,String
+1467,swf:activityType.version,"",Filters access by the version of the activity type,String
+1468,swf:defaultTaskList.name,"",Filters access by the name of the default task list,String
+1469,swf:name,"",Filters access by the name of activities or workflows,String
+1470,swf:tagFilter.tag,"",Filters access by the value of tagFilter.tag,String
+1471,swf:tagList.member.0,"",Filters access by the specified tag,String
+1472,swf:tagList.member.1,"",Filters access by the specified tag,String
+1473,swf:tagList.member.2,"",Filters access by the specified tag,String
+1474,swf:tagList.member.3,"",Filters access by the specified tag,String
+1475,swf:tagList.member.4,"",Filters access by the specified tag,String
+1476,swf:taskList.name,"",Filters access by the name of the tasklist,String
+1477,swf:typeFilter.name,"",Filters access by the name of the type filter,String
+1478,swf:typeFilter.version,"",Filters access by the version of the type filter,String
+1479,swf:version,"",Filters access by the version of activities or workflows,String
+1480,swf:workflowType.name,"",Filters access by the name of the workflow type,String
+1481,swf:workflowType.version,"",Filters access by the version of the workflow type,String
+1482,synthetics:Names,"",Filters access based on the name of the canary,ArrayOfString
+1483,timestream-influxdb:RestoreMode,"",Filters access by the restore mode specified in the request,String
+1484,token.actions.${Domain}.ghe.com:actor,"",Filters access by the personal account that initiated the workflow run,String
+1485,token.actions.${Domain}.ghe.com:actor_id,"",Filters access by the ID of the personal account that initiated the workflow run,String
+1486,token.actions.${Domain}.ghe.com:enterprise_id,"",Filters access by the ID of the enterprise that contains the repository from where the workflow is running,String
+1487,token.actions.${Domain}.ghe.com:environment,"",Filters access by the name of the environment used by the job,String
+1488,token.actions.${Domain}.ghe.com:job_workflow_ref,"",Filters access by the reference path to the reusable workflow for jobs using a reusable workflow,String
+1489,token.actions.${Domain}.ghe.com:ref,"",Filters access by the git ref (branch or tag) that triggered the workflow run,String
+1490,token.actions.${Domain}.ghe.com:repository,"",Filters access by the repository from where the workflow is running,String
+1491,token.actions.${Domain}.ghe.com:repository_id,"",Filters access by the ID of the repository from where the workflow is running,String
+1492,token.actions.${Domain}.ghe.com:repository_owner_id,"",Filters access by the ID of the repository owner from where the workflow is running,String
+1493,token.actions.${Domain}.ghe.com:workflow,"",Filters access by the name of the workflow,String
+1494,token.actions.githubusercontent.com/${SubPath}:actor,"",Filters access by the personal account that initiated the workflow run,String
+1495,token.actions.githubusercontent.com/${SubPath}:actor_id,"",Filters access by the ID of the personal account that initiated the workflow run,String
+1496,token.actions.githubusercontent.com/${SubPath}:enterprise_id,"",Filters access by the ID of the enterprise that contains the repository from where the workflow is running,String
+1497,token.actions.githubusercontent.com/${SubPath}:environment,"",Filters access by the name of the environment used by the job,String
+1498,token.actions.githubusercontent.com/${SubPath}:job_workflow_ref,"",Filters access by the reference path to the reusable workflow for jobs using a reusable workflow,String
+1499,token.actions.githubusercontent.com/${SubPath}:ref,"",Filters access by the git ref (branch or tag) that triggered the workflow run,String
+1500,token.actions.githubusercontent.com/${SubPath}:repository,"",Filters access by the repository from where the workflow is running,String
+1501,token.actions.githubusercontent.com/${SubPath}:repository_id,"",Filters access by the ID of the repository from where the workflow is running,String
+1502,token.actions.githubusercontent.com/${SubPath}:repository_owner_id,"",Filters access by the ID of the repository owner from where the workflow is running,String
+1503,token.actions.githubusercontent.com/${SubPath}:workflow,"",Filters access by the name of the workflow,String
+1504,token.actions.githubusercontent.com:actor,"",Filters access by the personal account that initiated the workflow run,String
+1505,token.actions.githubusercontent.com:actor_id,"",Filters access by the ID of the personal account that initiated the workflow run,String
+1506,token.actions.githubusercontent.com:enterprise_id,"",Filters access by the ID of the enterprise that contains the repository from where the workflow is running,String
+1507,token.actions.githubusercontent.com:environment,"",Filters access by the name of the environment used by the job,String
+1508,token.actions.githubusercontent.com:job_workflow_ref,"",Filters access by the reference path to the reusable workflow for jobs using a reusable workflow,String
+1509,token.actions.githubusercontent.com:ref,"",Filters access by the git ref (branch or tag) that triggered the workflow run,String
+1510,token.actions.githubusercontent.com:repository,"",Filters access by the repository from where the workflow is running,String
+1511,token.actions.githubusercontent.com:repository_id,"",Filters access by the ID of the repository from where the workflow is running,String
+1512,token.actions.githubusercontent.com:repository_owner_id,"",Filters access by the ID of the repository owner from where the workflow is running,String
+1513,token.actions.githubusercontent.com:workflow,"",Filters access by the name of the workflow,String
+1514,transcribe:OutputBucketName,"",Filters access based on the output bucket name included in the request,String
+1515,transcribe:OutputEncryptionKMSKeyId,"","Filters access based on the KMS key id included in the request, provided in the form of a KMS key ARN",String
+1516,transcribe:OutputKey,"",Filters access based on the output key included in the request,String
+1517,transcribe:OutputLocation,"",Filters access based on the output location included in the request,String
+1518,transfer:RequestConnectorProtocol,"",Filters access by the connector protocol that is passed in the request,String
+1519,transfer:RequestSecurityPolicyName,"",Filters access by the security policy name that is passed in the request,String
+1520,transfer:RequestServerDomain,"",Filters access by the storage domain that is passed in the request,String
+1521,transfer:RequestServerEndpointType,"",Filters access by the endpoint type that is passed in the request,String
+1522,transfer:RequestServerProtocols,"",Filters access by the server protocols that are passed in the request,ArrayOfString
+1523,user-subscriptions:CreateForSelf,"",Filters access by only allowing creation of User subscription Claims for the caller,Bool
+1524,vpc-lattice-svcs:Port,"",Filters access by the destination port the request is made to,Numeric
+1525,vpc-lattice-svcs:RequestHeader/${HeaderName},"",Filters access by a header name-value pair in the request headers,String
+1526,vpc-lattice-svcs:RequestMethod,"",Filters access by the method of the request,String
+1527,vpc-lattice-svcs:RequestPath,"",Filters access by the path portion of the request URL,String
+1528,vpc-lattice-svcs:RequestQueryString/${QueryStringKey},"",Filters access by the query string key-value pairs in the request URL,ArrayOfString
+1529,vpc-lattice-svcs:ServiceArn,"",Filters access by the ARN of the service receiving the request,ARN
+1530,vpc-lattice-svcs:ServiceNetworkArn,"",Filters access by the ARN of the service network receiving the request,ARN
+1531,vpc-lattice-svcs:SourceVpc,"",Filters access by the VPC the request is made from,String
+1532,vpc-lattice-svcs:SourceVpcOwnerAccount,"",Filters access by the owning account of the VPC the request is made from,String
+1533,vpc-lattice:AuthType,"",Filters access by the auth type specified in the request,String
+1534,vpc-lattice:CreateAction,"",Filters access by the name of a resource-creating API action and only available during tagging resources on creation,String
+1535,vpc-lattice:DomainName,"",Filters access by the domain name,String
+1536,vpc-lattice:PrivateDnsPreference,"",Filters access by the private dns preference,String
+1537,vpc-lattice:PrivateDnsSpecifiedDomains,"",Filters access by the private dns domains,ArrayOfString
+1538,vpc-lattice:Protocol,"",Filters access by the protocol specified in the request,String
+1539,vpc-lattice:ResourceConfigurationArn,"",Filters access by the ARN of a resource configuration,ARN
+1540,vpc-lattice:SecurityGroupIds,"",Filters access by the IDs of security groups,ArrayOfString
+1541,vpc-lattice:ServiceArn,"",Filters access by the ARN of a service,ARN
+1542,vpc-lattice:ServiceNetworkArn,"",Filters access by the ARN of a service network,ARN
+1543,vpc-lattice:TargetGroupArns,"",Filters access by the ARNs of target groups,ArrayOfARN
+1544,vpc-lattice:VpcEndpointId,"",Filters access by the ID of a VPC endpoint,String
+1545,vpc-lattice:VpcId,"",Filters access by the ID of a virtual private cloud (VPC),String
+1546,wafv2:LogDestinationResource,"",Filters access by log destination ARN for PutLoggingConfiguration API,ARN
+1547,wafv2:LogScope,"",Filters access by log scope for Logging Configuration API,String
+1548,wellarchitected:JiraProjectKey,"",Filters access by project key,String
+1549,wisdom:MessageTemplate/RoutingProfileArn,"",Filters access by the connect routing profile arns associated with the resource,ArrayOfARN
+1550,wisdom:SearchFilter/Qualifier,"",Filters access by the qualifiers that are passed in the request,ArrayOfString
+1551,wisdom:SearchFilter/RoutingProfileArn,"",Filters access by the connect routing profile arn that is passed in the request,ARN
+1552,workmail:ImpersonationRoleId,"",Filters access by the ImpersonationRoleId that is passed in the request,String
+1553,workspaces:userId,"",Filters access by the ID of the Workspaces user,String
+1554,www.amazon.com:app_id,"",Filters access by the Login with Amazon application ID,String
+1555,www.amazon.com:user_id,"",Filters access by the Login with Amazon user ID,String
+1556,xray:ResourcePolicyName,"",Filters access by PolicyName in the request,String
+1557,xray:TraceSegmentDestination,"",Filters access by TraceSegmentDestination type in the request,String

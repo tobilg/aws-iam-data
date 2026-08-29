@@ -1,5 +1,29 @@
 [
   {
+    "dateOfChange": "2026-08-29",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS HealthLake": [
+        "healthlake:RestoreFHIRDatastore"
+      ],
+      "AWS Support": [
+        "support:AddRelatedItemToCase",
+        "support:DescribeRelatedItems",
+        "support:DisconnectLiveContactForCase",
+        "support:DownloadAttachment",
+        "support:UploadAttachment"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:BatchRebootClusterNodes",
+        "sagemaker:BatchReplaceClusterNodes",
+        "sagemaker:DescribeTrainingPlanExtensionHistory",
+        "sagemaker:ExtendTrainingPlan"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-08-28",
     "addedServices": [],
     "removedServices": [],
