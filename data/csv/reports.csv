@@ -1,6 +1,6 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10520
-Actions by type,Read Actions,5376
+Actions by type,Write Actions,10524
+Actions by type,Read Actions,5379
 Actions by type,List Actions,3514
 Actions by type,,1041
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
@@ -34,8 +34,8 @@ Longest service prefixes,route53-recovery-readiness,26
 Longest service prefixes,migrationhub-orchestrator,25
 Longest service prefixes,network-security-director,25
 Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},140
+Most referenced resource ARNs,domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName},110
 Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},106
-Most referenced resource ARNs,domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName},103
 Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},97
 Most referenced resource ARNs,"bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}, arn:${Partition}:lex:${Region}:${Account}:bot:${BotName}",91
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},88

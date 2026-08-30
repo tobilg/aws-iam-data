@@ -271957,6 +271957,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_AddProfileKey.html"
       },
       {
+        "name": "AssociateStreamForSegments",
+        "permissionOnly": false,
+        "description": "Grants permission to associate an Amazon Kinesis data stream to receive segment membership events for a domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_AssociateStreamForSegments.html"
+      },
+      {
         "name": "BatchGetCalculatedAttributeForProfile",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a calculated attribute for the specific profiles in the domain",
@@ -272730,6 +272747,31 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_DeleteSegmentDefinition.html"
       },
       {
+        "name": "DeleteSegmentSubscription",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a segment subscription for membership events",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "segment-definitions",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_DeleteSegmentSubscription.html"
+      },
+      {
         "name": "DeleteWorkflow",
         "permissionOnly": false,
         "description": "Grants permission to delete a workflow in a domain",
@@ -272762,6 +272804,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_DetectProfileObjectType.html"
+      },
+      {
+        "name": "DisassociateStreamForSegments",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate the Amazon Kinesis data stream configured for segment membership events in a domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_DisassociateStreamForSegments.html"
       },
       {
         "name": "GetAutoMergingPreview",
@@ -273298,6 +273357,31 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetSegmentSnapshot.html"
       },
       {
+        "name": "GetSegmentSubscription",
+        "permissionOnly": false,
+        "description": "Grants permission to get the configuration, schedule, and status of a segment subscription for membership events",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "segment-definitions",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetSegmentSubscription.html"
+      },
+      {
         "name": "GetSimilarProfiles",
         "permissionOnly": false,
         "description": "Grants permission to get all the similar profiles in the domain",
@@ -273313,6 +273397,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetSimilarProfiles.html"
+      },
+      {
+        "name": "GetStreamForSegments",
+        "permissionOnly": false,
+        "description": "Grants permission to get information about the segment membership event stream configured for a domain",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetStreamForSegments.html"
       },
       {
         "name": "GetUploadJob",
@@ -273815,6 +273916,31 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_ListSegmentDefinitions.html"
       },
       {
+        "name": "ListSegmentSubscriptionEvents",
+        "permissionOnly": false,
+        "description": "Grants permission to list the most recent segment membership events for a segment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "segment-definitions",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_ListSegmentSubscriptionEvents.html"
+      },
+      {
         "name": "ListTagsForResource",
         "permissionOnly": false,
         "description": "Grants permission to list tags for a resource",
@@ -274087,6 +274213,31 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_PutProfileObjectType.html"
+      },
+      {
+        "name": "PutSegmentSubscription",
+        "permissionOnly": false,
+        "description": "Grants permission to create or update a segment subscription for membership events",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domains",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "segment-definitions",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_PutSegmentSubscription.html"
       },
       {
         "name": "SearchProfiles",
