@@ -229,9 +229,10 @@
         "registry",
         "registry-record"
       ],
-      "conditionKeysCount": 4,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "agent-registry:RecordCreatorAccount",
+        "agent-registry:RecordSourceAccount",
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"

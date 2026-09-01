@@ -2446,6 +2446,12 @@
         "type": "String"
       },
       {
+        "name": "agent-registry:RecordSourceAccount",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the AWS account ID of the source resource associated with a registry record",
+        "type": "String"
+      },
+      {
         "name": "aws:RequestTag/${TagKey}",
         "apiReferenceUrl": "",
         "description": "Filters access by creating requests based on the allowed set of values for each of the mandatory tags",
@@ -36859,7 +36865,9 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "codestar-connections:UpdateSyncBlocker"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/codeconnections/latest/APIReference/API_UpdateSyncBlocker.html"
@@ -209296,7 +209304,7 @@
         "name": "DownloadAttachment",
         "permissionOnly": false,
         "description": "Grants permission to get a presigned URL to download an attachment from an AWS Support case",
-        "accessLevel": "Write",
+        "accessLevel": "Read",
         "resourceTypes": [
           {
             "resourceType": "",
