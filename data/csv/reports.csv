@@ -1,8 +1,8 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10523
-Actions by type,Read Actions,5380
-Actions by type,List Actions,3514
-Actions by type,,1041
+Actions by type,Write Actions,10545
+Actions by type,Read Actions,5393
+Actions by type,List Actions,3521
+Actions by type,,1042
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,license-manager-linux-subscriptions:GetRegisteredSubscriptionProvider,69
 Longest action names,networkflowmonitor:GetQueryResultsWorkloadInsightsTopContributorsData,69
@@ -33,10 +33,10 @@ Longest service prefixes,codedeploy-commands-secure,26
 Longest service prefixes,route53-recovery-readiness,26
 Longest service prefixes,migrationhub-orchestrator,25
 Longest service prefixes,network-security-director,25
-Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},140
+Most referenced resource ARNs,instance - arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId},143
 Most referenced resource ARNs,domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName},110
 Most referenced resource ARNs,application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId},106
-Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},97
+Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:${Account}:userpool/${UserPoolId},98
 Most referenced resource ARNs,"bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}, arn:${Partition}:lex:${Region}:${Account}:bot:${BotName}",91
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},88
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},84
@@ -53,9 +53,9 @@ Services with least actions,Amazon EKS Auth,1
 Services with least actions,AWS Marketplace Seller Reporting,1
 Services with least actions,AWS Action Recommendations,1
 Services with least actions,AWS Marketplace Entitlement Service,1
-Services with most actions,Amazon EC2,783
+Services with most actions,Amazon EC2,800
 Services with most actions,Amazon SageMaker,433
-Services with most actions,Amazon Connect,370
+Services with most actions,Amazon Connect,377
 Services with most actions,Amazon Chime,312
 Services with most actions,AWS Glue,298
 Services with most actions,AWS IoT,293
@@ -93,7 +93,7 @@ Shortest service prefixes,iq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,ts,2
 Shortest service prefixes,pi,2
-Summary,Total number of distinct resource ARNS,2235
+Summary,Total number of distinct resource ARNS,2240
 Summary,Total number of distinct condition keys,1558
 Summary,Total number of services,475
 Summary,Average number of actions per service,47

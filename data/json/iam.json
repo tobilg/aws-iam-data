@@ -257050,6 +257050,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminCreateUser.html"
       },
       {
+        "name": "AdminDeleteSoftwareToken",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a user's software token",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminDeleteSoftwareToken.html"
+      },
+      {
         "name": "AdminDeleteUser",
         "permissionOnly": false,
         "description": "Grants permission to delete any user",
@@ -262783,6 +262800,26 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateEvaluationForm.html"
       },
       {
+        "name": "CreateExtractionDefinition",
+        "permissionOnly": false,
+        "description": "Grants permission to create an extraction definition in an Amazon Connect instance",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "extraction-definition",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateExtractionDefinition.html"
+      },
+      {
         "name": "CreateHoursOfOperation",
         "permissionOnly": false,
         "description": "Grants permission to create hours of operation in an Amazon Connect instance",
@@ -263723,6 +263760,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteEvaluationForm.html"
       },
       {
+        "name": "DeleteExtractionDefinition",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an extraction definition in an Amazon Connect instance",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "extraction-definition",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_DeleteExtractionDefinition.html"
+      },
+      {
         "name": "DeleteHoursOfOperation",
         "permissionOnly": false,
         "description": "Grants permission to delete hours of operation in an Amazon Connect instance",
@@ -264417,6 +264472,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeEvaluationForm.html"
+      },
+      {
+        "name": "DescribeExtractionDefinition",
+        "permissionOnly": false,
+        "description": "Grants permission to describe an extraction definition in an Amazon Connect instance",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "extraction-definition",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_DescribeExtractionDefinition.html"
       },
       {
         "name": "DescribeHoursOfOperation",
@@ -265326,6 +265399,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_GetContactMetrics.html"
       },
       {
+        "name": "GetCrossRegionRouting",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the cross-region routing configuration for an Amazon Connect Global Resiliency instance",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "instance",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_GetCrossRegionRouting.html"
+      },
+      {
         "name": "GetCurrentMetricData",
         "permissionOnly": false,
         "description": "Grants permission to retrieve current metric data for queues and routing profiles in an Amazon Connect instance",
@@ -266066,6 +266157,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_ListEvaluationForms.html"
       },
       {
+        "name": "ListExtractionDefinitions",
+        "permissionOnly": false,
+        "description": "Grants permission to list extraction definitions associated with an Amazon Connect instance",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "instance",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_ListExtractionDefinitions.html"
+      },
+      {
         "name": "ListFlowAssociations",
         "permissionOnly": false,
         "description": "Grants permission to list summary information about the flow associations for the specified Amazon Connect instance",
@@ -266650,6 +266759,14 @@
           },
           {
             "resourceType": "evaluation-form",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "extraction-definition",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -268405,6 +268522,16 @@
             "dependentActions": []
           },
           {
+            "resourceType": "extraction-definition",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "hierarchy-group",
             "required": false,
             "conditionKeys": [
@@ -268716,6 +268843,15 @@
           },
           {
             "resourceType": "evaluation-form",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "extraction-definition",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -269156,6 +269292,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateContactSchedule.html"
       },
       {
+        "name": "UpdateCrossRegionRouting",
+        "permissionOnly": false,
+        "description": "Grants permission to update the cross-region routing configuration for an Amazon Connect Global Resiliency instance",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "instance",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateCrossRegionRouting.html"
+      },
+      {
         "name": "UpdateDataTableAttribute",
         "permissionOnly": false,
         "description": "Grants permission to update an attribute of a data table in an Amazon Connect instance",
@@ -269245,6 +269399,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateEvaluationForm.html"
+      },
+      {
+        "name": "UpdateExtractionDefinition",
+        "permissionOnly": false,
+        "description": "Grants permission to update an extraction definition in an Amazon Connect instance",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "extraction-definition",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_UpdateExtractionDefinition.html"
       },
       {
         "name": "UpdateHoursOfOperation",
@@ -270335,6 +270507,14 @@
         "name": "evaluation-form",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/evaluation-form/${FormId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "extraction-definition",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:connect:${Region}:${Account}:instance/${InstanceId}/extraction-definition/${ExtractionDefinitionId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -285093,6 +285273,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_AuthorizeSecurityGroupIngress.html"
       },
       {
+        "name": "BatchModifyIpamRoutingPolicyRegistrations",
+        "permissionOnly": false,
+        "description": "Grants permission to modify multiple routing policy registrations in a single operation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam-internet-registry-association",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_BatchModifyIpamRoutingPolicyRegistrations.html"
+      },
+      {
         "name": "BundleInstance",
         "permissionOnly": false,
         "description": "Grants permission to bundle an instance store-backed Windows instance",
@@ -286631,6 +286830,39 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateIpamExternalResourceVerificationToken.html"
       },
       {
+        "name": "CreateIpamInternetRegistryAssociation",
+        "permissionOnly": false,
+        "description": "Grants permission to create an association between an IPAM and a Regional Internet Registry (RIR) for Resource Public Key Infrastructure (RPKI) management",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "ec2:CreateTags"
+            ]
+          },
+          {
+            "resourceType": "ipam-internet-registry-association",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "ec2:Region"
+            ],
+            "dependentActions": [
+              "ec2:CreateTags"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateIpamInternetRegistryAssociation.html"
+      },
+      {
         "name": "CreateIpamPolicy",
         "permissionOnly": false,
         "description": "Grants permission to create a policy in Amazon VPC IP Address Manager (IPAM) that defines rules for allocating public IPv4 addresses from IPAM pools to AWS resources",
@@ -286794,6 +287026,25 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateIpamResourceDiscovery.html"
+      },
+      {
+        "name": "CreateIpamRoutingPolicyRegistration",
+        "permissionOnly": false,
+        "description": "Grants permission to create a routing policy registration and publish Route Origin Authorizations (ROAs) to the RPKI",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam-internet-registry-association",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateIpamRoutingPolicyRegistration.html"
       },
       {
         "name": "CreateIpamScope",
@@ -288700,6 +288951,19 @@
           },
           {
             "resourceType": "ipam-external-resource-verification-token",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "ec2:CreateAction",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ipam-internet-registry-association",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -291513,6 +291777,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteIpamExternalResourceVerificationToken.html"
       },
       {
+        "name": "DeleteIpamInternetRegistryAssociation",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an IPAM internet registry association",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam-internet-registry-association",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteIpamInternetRegistryAssociation.html"
+      },
+      {
         "name": "DeleteIpamPolicy",
         "permissionOnly": false,
         "description": "Grants permission to delete an Amazon VPC IP Address Manager (IPAM) policy",
@@ -291606,6 +291889,25 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteIpamResourceDiscovery.html"
+      },
+      {
+        "name": "DeleteIpamRoutingPolicyRegistration",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a routing policy registration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam-internet-registry-association",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteIpamRoutingPolicyRegistration.html"
       },
       {
         "name": "DeleteIpamScope",
@@ -292689,6 +292991,18 @@
           },
           {
             "resourceType": "ipam-external-resource-verification-token",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ipam-internet-registry-association",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -294527,6 +294841,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAccountAttributes.html"
       },
       {
+        "name": "DescribeAccountVpcEncryptionControl",
+        "permissionOnly": false,
+        "description": "Grants permission to describe the account-level VPC Encryption Control configuration",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeAccountVpcEncryptionControl.html"
+      },
+      {
         "name": "DescribeAddressTransfers",
         "permissionOnly": false,
         "description": "Grants permission to describe an Elastic IP address transfer",
@@ -295878,6 +296209,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeIpamExternalResourceVerificationTokens.html"
+      },
+      {
+        "name": "DescribeIpamInternetRegistryAssociations",
+        "permissionOnly": false,
+        "description": "Grants permission to describe IPAM internet registry associations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeIpamInternetRegistryAssociations.html"
       },
       {
         "name": "DescribeIpamPolicies",
@@ -299566,6 +299914,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableInstanceSqlHaStandbyDetections.html"
       },
       {
+        "name": "EnableIpamInternetRegistryAssociation",
+        "permissionOnly": false,
+        "description": "Grants permission to enable Resource Public Key Infrastructure (RPKI) on an IPAM internet registry association",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam-internet-registry-association",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_EnableIpamInternetRegistryAssociation.html"
+      },
+      {
         "name": "EnableIpamOrganizationAdminAccount",
         "permissionOnly": false,
         "description": "Grants permission to enable an AWS Organizations member account as an Amazon VPC IP Address Manager (IPAM) admin account",
@@ -300591,6 +300958,63 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetIpamDiscoveredResourceCidrs.html"
       },
       {
+        "name": "GetIpamDiscoveredRoutes",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve Border Gateway Protocol (BGP) routes discovered by IPAM resource discovery",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam-resource-discovery",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetIpamDiscoveredRoutes.html"
+      },
+      {
+        "name": "GetIpamInternetRegistryAssociationAsns",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve Autonomous System Numbers (ASNs) registered with an internet registry for an IPAM internet registry association",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam-internet-registry-association",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetIpamInternetRegistryAssociationAsns.html"
+      },
+      {
+        "name": "GetIpamInternetRegistryAssociationCidrs",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve IP address CIDRs registered with an internet registry for an IPAM internet registry association",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam-internet-registry-association",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetIpamInternetRegistryAssociationCidrs.html"
+      },
+      {
         "name": "GetIpamPolicyAllocationRules",
         "permissionOnly": false,
         "description": "Grants permission to describe the rules that define how Amazon VPC IP Address Manager (IPAM) pools allocate IP addresses to AWS resource types within an IPAM policy",
@@ -300751,6 +301175,82 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetIpamResourceCidrs.html"
+      },
+      {
+        "name": "GetIpamRouteOriginAuthorizations",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the current Route Origin Authorizations (ROAs) published to the RPKI for an IPAM internet registry association",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam-internet-registry-association",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetIpamRouteOriginAuthorizations.html"
+      },
+      {
+        "name": "GetIpamRouteProtectionFindings",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve route protection findings for an IPAM",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetIpamRouteProtectionFindings.html"
+      },
+      {
+        "name": "GetIpamRoutingPolicyRegistrationDeltas",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the history of routing policy registration changes for an IPAM internet registry association",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam-internet-registry-association",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetIpamRoutingPolicyRegistrationDeltas.html"
+      },
+      {
+        "name": "GetIpamRoutingPolicyRegistrations",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve routing policy registrations for an IPAM internet registry association",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam-internet-registry-association",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetIpamRoutingPolicyRegistrations.html"
       },
       {
         "name": "GetLaunchTemplateData",
@@ -301706,6 +302206,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_LockSnapshot.html"
+      },
+      {
+        "name": "ModifyAccountVpcEncryptionControl",
+        "permissionOnly": false,
+        "description": "Grants permission to modify the account-level VPC Encryption Control configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyAccountVpcEncryptionControl.html"
       },
       {
         "name": "ModifyAddressAttribute",
@@ -302774,6 +303291,27 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyIpamResourceDiscovery.html"
+      },
+      {
+        "name": "ModifyIpamRoutingPolicyRegistration",
+        "permissionOnly": false,
+        "description": "Grants permission to modify an existing routing policy registration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ipam-internet-registry-association",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Attribute",
+              "ec2:Attribute/${AttributeName}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyIpamRoutingPolicyRegistration.html"
       },
       {
         "name": "ModifyIpamScope",
@@ -307297,6 +307835,20 @@
         "name": "ipam-external-resource-verification-token",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:ec2::${Account}:ipam-external-resource-verification-token/${IpamExternalResourceVerificationTokenId}",
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys",
+          "ec2:Attribute",
+          "ec2:Attribute/${AttributeName}",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "ipam-internet-registry-association",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:ec2::${Account}:ipam-internet-registry-association/${IpamInternetRegistryAssociationId}",
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -338244,6 +338796,41 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ArchiveFindings.html"
       },
       {
+        "name": "CreateCustomDetectionRuleAssociation",
+        "permissionOnly": false,
+        "description": "Grants permission to create a GuardDuty custom detection rule association",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "guardduty:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_CreateCustomDetectionRuleAssociation.html"
+      },
+      {
+        "name": "CreateCustomDetectionRuleOrgConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to create the organization configuration for a GuardDuty custom detection rule",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_CreateCustomDetectionRuleOrgConfiguration.html"
+      },
+      {
         "name": "CreateDetector",
         "permissionOnly": false,
         "description": "Grants permission to create a detector",
@@ -338469,6 +339056,38 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DeclineInvitations.html"
+      },
+      {
+        "name": "DeleteCustomDetectionRuleAssociation",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a GuardDuty custom detection rule association",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "customdetectionruleassociation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DeleteCustomDetectionRuleAssociation.html"
+      },
+      {
+        "name": "DeleteCustomDetectionRuleOrgConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the organization configuration for a GuardDuty custom detection rule",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_DeleteCustomDetectionRuleOrgConfiguration.html"
       },
       {
         "name": "DeleteDetector",
@@ -338789,6 +339408,53 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_GetCoverageStatistics.html"
+      },
+      {
+        "name": "GetCustomDetectionRule",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a GuardDuty custom detection rule",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "customdetectionrule",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_GetCustomDetectionRule.html"
+      },
+      {
+        "name": "GetCustomDetectionRuleAssociation",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a GuardDuty custom detection rule association",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "customdetectionruleassociation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_GetCustomDetectionRuleAssociation.html"
+      },
+      {
+        "name": "GetCustomDetectionRuleOrgConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the organization configuration for a GuardDuty custom detection rule",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_GetCustomDetectionRuleOrgConfiguration.html"
       },
       {
         "name": "GetDetector",
@@ -339122,6 +339788,51 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListCoverage.html"
       },
       {
+        "name": "ListCustomDetectionRuleAssociations",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of GuardDuty custom detection rule associations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListCustomDetectionRuleAssociations.html"
+      },
+      {
+        "name": "ListCustomDetectionRuleOrgConfigurations",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of organization configurations for GuardDuty custom detection rules",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListCustomDetectionRuleOrgConfigurations.html"
+      },
+      {
+        "name": "ListCustomDetectionRules",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of GuardDuty custom detection rules",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListCustomDetectionRules.html"
+      },
+      {
         "name": "ListDetectors",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a list of GuardDuty detectors",
@@ -339292,6 +340003,14 @@
         "description": "Grants permission to retrieve a list of tags associated with a GuardDuty resource",
         "accessLevel": "Read",
         "resourceTypes": [
+          {
+            "resourceType": "customdetectionruleassociation",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "detector",
             "required": false,
@@ -339488,6 +340207,16 @@
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
+            "resourceType": "customdetectionruleassociation",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "detector",
             "required": false,
             "conditionKeys": [
@@ -339592,6 +340321,15 @@
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
+            "resourceType": "customdetectionruleassociation",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "detector",
             "required": false,
             "conditionKeys": [
@@ -339665,6 +340403,38 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_UntagResource.html"
+      },
+      {
+        "name": "UpdateCustomDetectionRuleAssociation",
+        "permissionOnly": false,
+        "description": "Grants permission to update a GuardDuty custom detection rule association",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "customdetectionruleassociation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_UpdateCustomDetectionRuleAssociation.html"
+      },
+      {
+        "name": "UpdateCustomDetectionRuleOrgConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to update the organization configuration for a GuardDuty custom detection rule",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_UpdateCustomDetectionRuleOrgConfiguration.html"
       },
       {
         "name": "UpdateDetector",
@@ -339866,6 +340636,20 @@
       }
     ],
     "resourceTypes": [
+      {
+        "name": "customdetectionrule",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:guardduty::aws:detection-rule/custom/${RuleId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "customdetectionruleassociation",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:guardduty:${Region}:${Account}:detection-rule/custom/${RuleId}/association/${AssociationId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
       {
         "name": "detector",
         "apiReferenceUrl": "",
@@ -347838,6 +348622,54 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_AddTagsToStream.html"
       },
       {
+        "name": "AssociateStreamsWithChannel",
+        "permissionOnly": false,
+        "description": "Grants permission to associate a stream with a channel",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "channel",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "stream",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_AssociateStreamsWithChannel.html"
+      },
+      {
+        "name": "CreateChannel",
+        "permissionOnly": false,
+        "description": "Grants permission to create a channel that delivers data from a selected single stream to a destination",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "channel",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "kinesis:AssociateStreamsWithChannel",
+              "kinesis:TagResource",
+              "iam:PassRole"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_CreateChannel.html"
+      },
+      {
         "name": "CreateStream",
         "permissionOnly": false,
         "description": "Grants permission to create a Amazon Kinesis stream",
@@ -347874,6 +348706,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_DecreaseStreamRetentionPeriod.html"
+      },
+      {
+        "name": "DeleteChannel",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the specified channel",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "channel",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_DeleteChannel.html"
       },
       {
         "name": "DeleteResourcePolicy",
@@ -347948,6 +348797,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_DescribeAccountSettings.html"
+      },
+      {
+        "name": "DescribeChannel",
+        "permissionOnly": false,
+        "description": "Grants permission to describe the specified channel",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "channel",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_DescribeChannel.html"
       },
       {
         "name": "DescribeLimits",
@@ -348122,6 +348988,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_IncreaseStreamRetentionPeriod.html"
       },
       {
+        "name": "ListChannels",
+        "permissionOnly": false,
+        "description": "Grants permission to list the channels in the account, optionally filtered by stream",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_ListChannels.html"
+      },
+      {
         "name": "ListShards",
         "permissionOnly": false,
         "description": "Grants permission to list the shards in a stream and provides information about each shard",
@@ -348176,6 +349057,14 @@
         "description": "Grants permission to list the tags for the specified Amazon Kinesis resource",
         "accessLevel": "Read",
         "resourceTypes": [
+          {
+            "resourceType": "channel",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "consumer",
             "required": true,
@@ -348418,6 +349307,16 @@
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
+            "resourceType": "channel",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "consumer",
             "required": true,
             "conditionKeys": [
@@ -348446,6 +349345,15 @@
         "description": "Grants permission to remove tags from the specified Kinesis data resource. Removed tags are deleted and cannot be recovered after this operation successfully completes",
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
+          {
+            "resourceType": "channel",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "consumer",
             "required": true,
@@ -348481,6 +349389,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_UpdateAccountSettings.html"
+      },
+      {
+        "name": "UpdateChannel",
+        "permissionOnly": false,
+        "description": "Grants permission to update the logging configuration and destination data freshness for the specified channel",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "channel",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_UpdateChannel.html"
       },
       {
         "name": "UpdateMaxRecordSize",
@@ -348548,6 +349473,14 @@
       }
     ],
     "resourceTypes": [
+      {
+        "name": "channel",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:kinesis:${Region}:${Account}:channel/${ChannelId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
       {
         "name": "consumer",
         "apiReferenceUrl": "",
