@@ -311968,7 +311968,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "imagebuilder:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/imagebuilder/latest/APIReference/API_ImportComponent.html"
@@ -348644,7 +348646,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_AssociateStreamsWithChannel.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_CreateChannel.html"
       },
       {
         "name": "CreateChannel",
