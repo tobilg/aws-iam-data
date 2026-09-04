@@ -22306,7 +22306,7 @@
       "name": "Amazon Elastic VMware Service",
       "servicePrefix": "evs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_evs.html",
-      "actionsCount": 22,
+      "actionsCount": 24,
       "actions": [
         "AssociateEipToVlan",
         "CreateEntitlement",
@@ -22318,6 +22318,7 @@
         "DeleteEnvironmentConnector",
         "DeleteEnvironmentHost",
         "DisassociateEipFromVlan",
+        "GetAccountSettings",
         "GetDepotUrl",
         "GetEnvironment",
         "GetVersions",
@@ -22327,6 +22328,7 @@
         "ListEnvironments",
         "ListTagsForResource",
         "ListVmEntitlements",
+        "PutAccountSettings",
         "TagResource",
         "UntagResource",
         "UpdateEnvironmentConnector"
@@ -27406,7 +27408,7 @@
         "UpdateUserCustomPermission",
         "UpdateVPCConnection"
       ],
-      "resourceTypesCount": 37,
+      "resourceTypesCount": 38,
       "resourceTypes": [
         "account",
         "actionconnector",
@@ -27429,6 +27431,7 @@
         "datasource",
         "dlpSetting",
         "emailCustomizationTemplate",
+        "extension",
         "extensionaccess",
         "flow",
         "folder",
