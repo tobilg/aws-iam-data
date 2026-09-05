@@ -10723,7 +10723,7 @@
       "name": "AWS Payment Cryptography",
       "servicePrefix": "payment-cryptography",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_payment-cryptography.html",
-      "actionsCount": 46,
+      "actionsCount": 47,
       "actions": [
         "AddKeyReplicationRegions",
         "AssociateMpaTeam",
@@ -10739,6 +10739,7 @@
         "EncryptData",
         "ExportKey",
         "GenerateAs2805KekValidation",
+        "GenerateAuthRequestCryptogram",
         "GenerateCardValidationData",
         "GenerateMac",
         "GenerateMacEmvPinChange",
@@ -10778,18 +10779,23 @@
         "approval-team",
         "key"
       ],
-      "conditionKeysCount": 11,
+      "conditionKeysCount": 16,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys",
         "payment-cryptography:CertificateAuthorityPublicKeyIdentifier",
+        "payment-cryptography:DeriveKeyUsage",
+        "payment-cryptography:ExportDukptInitialKey",
+        "payment-cryptography:ExportKeyMaterial",
         "payment-cryptography:ImportKeyMaterial",
         "payment-cryptography:KeyAlgorithm",
         "payment-cryptography:KeyClass",
         "payment-cryptography:KeyUsage",
+        "payment-cryptography:PrivateKeyIdentifier",
         "payment-cryptography:RequestAlias",
         "payment-cryptography:ResourceAliases",
+        "payment-cryptography:SigningKeyIdentifier",
         "payment-cryptography:WrappingKeyIdentifier"
       ]
     },

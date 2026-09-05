@@ -92545,7 +92545,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "healthlake:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/healthlake/latest/APIReference/API_RestoreFHIRDatastore.html"
@@ -152150,6 +152152,7 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
+              "payment-cryptography:DeriveKeyUsage",
               "payment-cryptography:KeyAlgorithm",
               "payment-cryptography:KeyClass",
               "payment-cryptography:KeyUsage"
@@ -152330,8 +152333,12 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "payment-cryptography:CertificateAuthorityPublicKeyIdentifier",
+              "payment-cryptography:ExportDukptInitialKey",
+              "payment-cryptography:ExportKeyMaterial",
+              "payment-cryptography:PrivateKeyIdentifier",
               "payment-cryptography:RequestAlias",
               "payment-cryptography:ResourceAliases",
+              "payment-cryptography:SigningKeyIdentifier",
               "payment-cryptography:WrappingKeyIdentifier"
             ],
             "dependentActions": []
@@ -152366,6 +152373,34 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/payment-cryptography/latest/DataAPIReference/API_GenerateAs2805KekValidation.html"
+      },
+      {
+        "name": "GenerateAuthRequestCryptogram",
+        "permissionOnly": false,
+        "description": "Grants permission to generate an Authorization Request Cryptogram (ARQC) for an EMV chip payment card authorization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "alias",
+            "required": true,
+            "conditionKeys": [
+              "payment-cryptography:RequestAlias",
+              "payment-cryptography:ResourceAliases"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "key",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "payment-cryptography:RequestAlias",
+              "payment-cryptography:ResourceAliases"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/payment-cryptography/latest/DataAPIReference/API_GenerateAuthRequestCryptogram.html"
       },
       {
         "name": "GenerateCardValidationData",
@@ -152669,6 +152704,7 @@
               "aws:TagKeys",
               "payment-cryptography:CertificateAuthorityPublicKeyIdentifier",
               "payment-cryptography:ImportKeyMaterial",
+              "payment-cryptography:PrivateKeyIdentifier",
               "payment-cryptography:WrappingKeyIdentifier"
             ],
             "dependentActions": []
@@ -153146,6 +153182,24 @@
         "type": "String"
       },
       {
+        "name": "payment-cryptography:DeriveKeyUsage",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the DeriveKeyUsage specified in the request for the CreateKey operation",
+        "type": "String"
+      },
+      {
+        "name": "payment-cryptography:ExportDukptInitialKey",
+        "apiReferenceUrl": "",
+        "description": "Filters access by whether the request is to export a DUKPT initial key for the ExportKey operation",
+        "type": "Bool"
+      },
+      {
+        "name": "payment-cryptography:ExportKeyMaterial",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the type of key material being exported [Tr34KeyBlock, Tr31KeyBlock, DiffieHellmanTr31KeyBlock, As2805KeyCryptogram, KeyCryptogram] for the ExportKey operation",
+        "type": "String"
+      },
+      {
         "name": "payment-cryptography:ImportKeyMaterial",
         "apiReferenceUrl": "",
         "description": "Filters access by the type of key material being imported [RootCertificatePublicKey, TrustedCertificatePublicKey, Tr34KeyBlock, Tr31KeyBlock, DiffieHellmanTr31KeyBlock, As2805KeyCryptogram, KeyCryptogram] for the ImportKey operation",
@@ -153166,7 +153220,13 @@
       {
         "name": "payment-cryptography:KeyUsage",
         "apiReferenceUrl": "",
-        "description": "Filters access by KeyClass specified in the request or associated with a key for the CreateKey operation",
+        "description": "Filters access by KeyUsage specified in the request or associated with a key for the CreateKey operation",
+        "type": "String"
+      },
+      {
+        "name": "payment-cryptography:PrivateKeyIdentifier",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the PrivateKeyIdentifier specified in the request for the ImportKey and ExportKey operations",
         "type": "String"
       },
       {
@@ -153180,6 +153240,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by aliases associated with a key for the specified operation",
         "type": "ArrayOfString"
+      },
+      {
+        "name": "payment-cryptography:SigningKeyIdentifier",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the SigningKeyIdentifier specified in the request for the ExportKey operation",
+        "type": "String"
       },
       {
         "name": "payment-cryptography:WrappingKeyIdentifier",
