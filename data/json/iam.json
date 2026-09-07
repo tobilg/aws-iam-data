@@ -94905,9 +94905,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "AnnotationStoreVersion",
@@ -94917,9 +94915,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "VariantStore",
@@ -94929,9 +94925,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "WorkflowVersion",
@@ -94941,9 +94935,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "configuration",
@@ -94953,9 +94945,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "readSet",
@@ -94965,9 +94955,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "reference",
@@ -94977,9 +94965,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "referenceStore",
@@ -94989,9 +94975,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "run",
@@ -95001,9 +94985,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "runBatch",
@@ -95013,9 +94995,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "runCache",
@@ -95025,9 +95005,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "runGroup",
@@ -95037,9 +95015,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "sequenceStore",
@@ -95049,9 +95025,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "workflow",
@@ -95061,9 +95035,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "omics:CreateRunGroup"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/omics/latest/api/API_TagResource.html"
