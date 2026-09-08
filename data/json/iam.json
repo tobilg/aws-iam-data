@@ -259977,6 +259977,7 @@
               "comprehend:ModelKmsKey"
             ],
             "dependentActions": [
+              "comprehend:TagResource",
               "iam:PassRole"
             ]
           },
@@ -259990,6 +259991,7 @@
               "comprehend:ModelKmsKey"
             ],
             "dependentActions": [
+              "comprehend:TagResource",
               "iam:PassRole"
             ]
           }
