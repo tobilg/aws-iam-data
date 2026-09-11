@@ -1,5 +1,23 @@
 [
   {
+    "dateOfChange": "2026-09-11",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:CreateConsentPortal",
+        "bedrock-agentcore:DeleteConsentPortal",
+        "bedrock-agentcore:GetConsentPortal",
+        "bedrock-agentcore:ListConsentPortals",
+        "bedrock-agentcore:UpdateConsentPortal"
+      ],
+      "Amazon Connect": [
+        "connect:ListEvaluationFormAIVersions"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-09-05",
     "addedServices": [],
     "removedServices": [],
