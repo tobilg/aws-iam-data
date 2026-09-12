@@ -55546,6 +55546,8 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -55964,6 +55966,8 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -55981,6 +55985,8 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -55998,6 +56004,8 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -56038,6 +56046,8 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -56189,6 +56199,8 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -56238,6 +56250,8 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -56272,6 +56286,8 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -56306,6 +56322,8 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -56340,6 +56358,8 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -56964,6 +56984,18 @@
       }
     ],
     "conditionKeys": [
+      {
+        "name": "aidevops:SourceAgentSpaceArn",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the source AgentSpace ARN on the request. Set by the service from the request context, not supplied by the caller",
+        "type": "String"
+      },
+      {
+        "name": "aidevops:TargetAgentSpaceArn",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the target AgentSpace ARN on the request. Set by the service from the request context, not supplied by the caller",
+        "type": "String"
+      },
       {
         "name": "aws:RequestTag/${TagKey}",
         "apiReferenceUrl": "",

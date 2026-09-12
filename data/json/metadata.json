@@ -4239,8 +4239,10 @@
         "service",
         "trigger"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 5,
       "conditionKeys": [
+        "aidevops:SourceAgentSpaceArn",
+        "aidevops:TargetAgentSpaceArn",
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
