@@ -9,6 +9,7 @@ on:
 
 permissions:
   contents: write
+  id-token: write
 
 jobs:
 
@@ -22,9 +23,9 @@ jobs:
 
       - uses: actions/setup-node@v7
         with:
-          node-version: '22.x'
+          node-version: '24.x'
           registry-url: 'https://registry.npmjs.org'
-          cache: 'npm'
+          package-manager-cache: false
 
       - name: Gather data and check for changes
         id: gather_data
@@ -52,8 +53,6 @@ jobs:
 
       - name: Eventually publish new package version
         if: ${{ steps.gather_data.outputs.should_publish == 'true' }}
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
           # Increase package patch version
           npm --no-git-tag-version version patch
