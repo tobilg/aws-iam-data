@@ -11296,7 +11296,7 @@
       "name": "AWS Resilience Hub",
       "servicePrefix": "resiliencehub",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_resilience-hub.html",
-      "actionsCount": 128,
+      "actionsCount": 130,
       "actions": [
         "AcceptResourceGroupingRecommendations",
         "AddDraftAppVersionResourceMappings",
@@ -11390,7 +11390,9 @@
         "ListSystems",
         "ListTagsForResource",
         "ListTestRecommendations",
+        "ListTestRunDependencies",
         "ListTestRunEvents",
+        "ListTestRunSourceEvents",
         "ListTestRunSources",
         "ListTestRuns",
         "ListTestSources",

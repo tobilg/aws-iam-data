@@ -21161,6 +21161,7 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": [
+              "batch:SetCapacityTags",
               "iam:PassRole"
             ]
           }
@@ -160240,6 +160241,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_ListTestRecommendations.html"
       },
       {
+        "name": "ListTestRunDependencies",
+        "permissionOnly": false,
+        "description": "Grants permission to list snapshotted dependencies for a test run",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/v2/APIReference/API_ListTestRunDependencies.html"
+      },
+      {
         "name": "ListTestRunEvents",
         "permissionOnly": false,
         "description": "Grants permission to list events for a test run",
@@ -160255,6 +160273,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/v2/APIReference/API_ListTestRunEvents.html"
+      },
+      {
+        "name": "ListTestRunSourceEvents",
+        "permissionOnly": false,
+        "description": "Grants permission to list source events for a test run",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/v2/APIReference/API_ListTestRunSourceEvents.html"
       },
       {
         "name": "ListTestRunSources",
@@ -208240,9 +208275,7 @@
             "resourceType": "AllPurchaseOptions",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": [
-              "aws-marketplace:ListPrivateListings"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-discovery_ListPurchaseOptions.html"
