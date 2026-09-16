@@ -57410,6 +57410,31 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AssociateConnectionWithLag.html"
       },
       {
+        "name": "AssociateConnectionsToResiliencyGroup",
+        "permissionOnly": false,
+        "description": "Grants permission to associate one or more connections with a resiliency group",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dx-resiliency-group",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dxcon",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_AssociateConnectionsToResiliencyGroup.html"
+      },
+      {
         "name": "AssociateHostedConnection",
         "permissionOnly": false,
         "description": "Grants permission to associate a hosted connection and its virtual interfaces with a link aggregation group (LAG) or interconnect",
@@ -57784,6 +57809,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreatePublicVirtualInterface.html"
       },
       {
+        "name": "CreateResiliencyGroup",
+        "permissionOnly": false,
+        "description": "Grants permission to create a resiliency group",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateResiliencyGroup.html"
+      },
+      {
         "name": "CreateTransitVirtualInterface",
         "permissionOnly": false,
         "description": "Grants permission to create a new transit virtual interface",
@@ -57932,6 +57975,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DeleteLag.html"
+      },
+      {
+        "name": "DeleteResiliencyGroup",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a resiliency group",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dx-resiliency-group",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DeleteResiliencyGroup.html"
       },
       {
         "name": "DeleteVirtualInterface",
@@ -58232,6 +58292,14 @@
             "dependentActions": []
           },
           {
+            "resourceType": "dx-resiliency-group",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "dxcon",
             "required": false,
             "conditionKeys": [
@@ -58332,6 +58400,31 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DisassociateConnectionFromLag.html"
       },
       {
+        "name": "DisassociateConnectionsFromResiliencyGroup",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate one or more connections from a resiliency group",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dx-resiliency-group",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dxcon",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DisassociateConnectionsFromResiliencyGroup.html"
+      },
+      {
         "name": "DisassociateMacSecKey",
         "permissionOnly": false,
         "description": "Grants permission to remove the association between a MAC Security (MACsec) security key and an AWS Direct Connect dedicated connection",
@@ -58355,6 +58448,55 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_DisassociateMacSecKey.html"
+      },
+      {
+        "name": "GetResiliencyGroup",
+        "permissionOnly": false,
+        "description": "Grants permission to describe a resiliency group",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "dx-resiliency-group",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_GetResiliencyGroup.html"
+      },
+      {
+        "name": "ListResiliencyGroupAssociations",
+        "permissionOnly": false,
+        "description": "Grants permission to list the connection associations of a resiliency group",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "dx-resiliency-group",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_ListResiliencyGroupAssociations.html"
+      },
+      {
+        "name": "ListResiliencyGroups",
+        "permissionOnly": false,
+        "description": "Grants permission to list all resiliency groups owned by the AWS account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_ListResiliencyGroups.html"
       },
       {
         "name": "ListVirtualInterfaceRoutes",
@@ -58441,6 +58583,16 @@
             "dependentActions": []
           },
           {
+            "resourceType": "dx-resiliency-group",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "dxcon",
             "required": false,
             "conditionKeys": [
@@ -58481,6 +58633,15 @@
         "resourceTypes": [
           {
             "resourceType": "dx-gateway",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dx-resiliency-group",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -58536,6 +58697,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateConnection.html"
       },
       {
+        "name": "UpdateConnectionsBillingMode",
+        "permissionOnly": false,
+        "description": "Grants permission to update the billing mode for up to 200 AWS Direct Connect connections in a single request",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dxcon",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateConnectionsBillingMode.html"
+      },
+      {
         "name": "UpdateDirectConnectGateway",
         "permissionOnly": false,
         "description": "Grants permission to update the name of a Direct Connect gateway",
@@ -58585,6 +58763,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateLag.html"
       },
       {
+        "name": "UpdateResiliencyGroup",
+        "permissionOnly": false,
+        "description": "Grants permission to update the attributes of a resiliency group",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dx-resiliency-group",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_UpdateResiliencyGroup.html"
+      },
+      {
         "name": "UpdateVirtualInterfaceAttributes",
         "permissionOnly": false,
         "description": "Grants permission to update the specified attributes of the specified virtual private interface",
@@ -58607,6 +58802,14 @@
         "name": "dx-gateway",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:directconnect::${Account}:dx-gateway/${DirectConnectGatewayId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "dx-resiliency-group",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:directconnect::${Account}:dx-resiliency-group/${ResiliencyGroupId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -103896,8 +104099,8 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "Identitystore",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -104086,8 +104289,8 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "Identitystore",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -104218,8 +104421,8 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "Identitystore",
+            "required": true,
             "conditionKeys": [
               "identitystore:PrimaryRegion"
             ],
@@ -104231,7 +104434,7 @@
       {
         "name": "DescribeUser",
         "permissionOnly": false,
-        "description": "Grants permission to retrieve information about user in the specified IdentityStore",
+        "description": "Grants permission to retrieve information about a user in the specified IdentityStore",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -104264,7 +104467,7 @@
       {
         "name": "GetGroupId",
         "permissionOnly": false,
-        "description": "Grants permission to retrieve ID information about group in the specified IdentityStore",
+        "description": "Grants permission to retrieve ID information about a group in the specified IdentityStore",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -104346,7 +104549,7 @@
       {
         "name": "GetUserId",
         "permissionOnly": false,
-        "description": "Grants permission to retrieves ID information about user in the specified IdentityStore",
+        "description": "Grants permission to retrieve ID information about a user in the specified IdentityStore",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -104509,7 +104712,7 @@
       {
         "name": "ListGroups",
         "permissionOnly": false,
-        "description": "Grants permission to search for groups within the specified IdentityStore",
+        "description": "Grants permission to retrieve information about all groups in the specified IdentityStore",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -104546,8 +104749,8 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "Identitystore",
+            "required": true,
             "conditionKeys": [
               "identitystore:PrimaryRegion"
             ],
@@ -104559,7 +104762,7 @@
       {
         "name": "ListUsers",
         "permissionOnly": false,
-        "description": "Grants permission to search for users in the specified IdentityStore",
+        "description": "Grants permission to retrieve information about all users in the specified IdentityStore",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -104596,8 +104799,8 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "Identitystore",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -104661,8 +104864,8 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "Identitystore",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -440134,6 +440337,25 @@
     "servicePrefix": "ses",
     "actions": [
       {
+        "name": "AssociateEmailIdentityCertificate",
+        "permissionOnly": false,
+        "description": "Grants permission to associate a certificate with an email identity",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "identity",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ses:ApiVersion",
+              "ses:FromAddress"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_AssociateEmailIdentityCertificate.html"
+      },
+      {
         "name": "BatchGetMetricData",
         "permissionOnly": false,
         "description": "Grants permission to get metric data on your activity",
@@ -440807,6 +441029,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_DeleteTenantResourceAssociation.html"
       },
       {
+        "name": "DisassociateEmailIdentityCertificate",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate a certificate from an email identity",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "identity",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ses:ApiVersion",
+              "ses:FromAddress"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_DisassociateEmailIdentityCertificate.html"
+      },
+      {
         "name": "GetAccount",
         "permissionOnly": false,
         "description": "Grants permission to get information about the email-sending status and capabilities for your account",
@@ -441386,6 +441627,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ListEmailIdentities.html"
       },
       {
+        "name": "ListEmailIdentityCertificates",
+        "permissionOnly": false,
+        "description": "Grants permission to list the certificates associated with an email identity",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "identity",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ses:ApiVersion"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ListEmailIdentityCertificates.html"
+      },
+      {
         "name": "ListEmailTemplates",
         "permissionOnly": false,
         "description": "Grants permission to list all of the email templates for your account",
@@ -441524,7 +441783,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ListResourceTenants"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ListResourceTenants.html"
       },
       {
         "name": "ListSuppressedDestinations",
@@ -441650,7 +441909,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ListTenantResources"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ListTenantResources.html"
       },
       {
         "name": "ListTenants",
@@ -441667,7 +441926,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ListTenants"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_ListTenants.html"
       },
       {
         "name": "PutAccountDedicatedIpWarmupAttributes",
@@ -442477,6 +442736,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_UntagResource.html"
       },
       {
+        "name": "UpdateConfigurationSet",
+        "permissionOnly": false,
+        "description": "Grants permission to update a configuration set",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "configuration-set",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ses:ApiVersion",
+              "ses:ConfigurationSetOptions"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_UpdateConfigurationSet.html"
+      },
+      {
         "name": "UpdateConfigurationSetEventDestination",
         "permissionOnly": false,
         "description": "Grants permission to update the configuration of an event destination for a configuration set",
@@ -442756,6 +443034,18 @@
         "type": "String"
       },
       {
+        "name": "ses:ClickTrackingEnabled",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the click tracking override value specified in configuration overrides",
+        "type": "String"
+      },
+      {
+        "name": "ses:ConfigurationSetOptions",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the configuration set options included in the request",
+        "type": "ArrayOfString"
+      },
+      {
         "name": "ses:ExportSourceType",
         "apiReferenceUrl": "",
         "description": "Filters access by the export source type",
@@ -442783,6 +443073,12 @@
         "name": "ses:MultiRegionEndpointId",
         "apiReferenceUrl": "",
         "description": "Filters access by the multi-region endpoint ID that is used to send email",
+        "type": "String"
+      },
+      {
+        "name": "ses:OpenTrackingEnabled",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the open tracking override value specified in configuration overrides",
         "type": "String"
       },
       {

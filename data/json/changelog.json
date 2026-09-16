@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2026-09-16",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Direct Connect": [
+        "directconnect:AssociateConnectionsToResiliencyGroup",
+        "directconnect:CreateResiliencyGroup",
+        "directconnect:DeleteResiliencyGroup",
+        "directconnect:DisassociateConnectionsFromResiliencyGroup",
+        "directconnect:GetResiliencyGroup",
+        "directconnect:ListResiliencyGroupAssociations",
+        "directconnect:ListResiliencyGroups",
+        "directconnect:UpdateConnectionsBillingMode",
+        "directconnect:UpdateResiliencyGroup"
+      ],
+      "Amazon Simple Email Service v2": [
+        "ses:AssociateEmailIdentityCertificate",
+        "ses:DisassociateEmailIdentityCertificate",
+        "ses:ListEmailIdentityCertificates",
+        "ses:UpdateConfigurationSet"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-09-15",
     "addedServices": [],
     "removedServices": [],
