@@ -1,5 +1,20 @@
 [
   {
+    "dateOfChange": "2026-09-17",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS HealthLake": [
+        "healthlake:DescribeFHIRBulkPatchJob",
+        "healthlake:StartFHIRBulkPatchJob"
+      ],
+      "AWS User Notifications": [
+        "notifications:UpdateManagedNotificationChannelAssociation"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-09-16",
     "addedServices": [],
     "removedServices": [],

@@ -6527,7 +6527,7 @@
       "name": "AWS HealthLake",
       "servicePrefix": "healthlake",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_healthlake.html",
-      "actionsCount": 66,
+      "actionsCount": 68,
       "actions": [
         "CancelFHIRExportJobWithDelete",
         "ConfirmAttributionList",
@@ -6540,6 +6540,7 @@
         "DescribeDataTransformationJob",
         "DescribeFHIRBulkDeleteJob",
         "DescribeFHIRBulkMemberMatchJob",
+        "DescribeFHIRBulkPatchJob",
         "DescribeFHIRDatastore",
         "DescribeFHIRExportJob",
         "DescribeFHIRExportJobWithGet",
@@ -6578,6 +6579,7 @@
         "StartDataTransformationJob",
         "StartFHIRBulkDeleteJob",
         "StartFHIRBulkMemberMatchJob",
+        "StartFHIRBulkPatchJob",
         "StartFHIRExportJob",
         "StartFHIRExportJobWithGet",
         "StartFHIRExportJobWithPost",
@@ -14109,7 +14111,7 @@
       "name": "AWS User Notifications",
       "servicePrefix": "notifications",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_notifications.html",
-      "actionsCount": 39,
+      "actionsCount": 40,
       "actions": [
         "AssociateChannel",
         "AssociateManagedNotificationAccountContact",
@@ -14149,6 +14151,7 @@
         "TagResource",
         "UntagResource",
         "UpdateEventRule",
+        "UpdateManagedNotificationChannelAssociation",
         "UpdateNotificationConfiguration"
       ],
       "resourceTypesCount": 6,
