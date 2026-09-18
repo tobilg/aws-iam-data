@@ -1,7 +1,7 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10561
-Actions by type,Read Actions,5399
-Actions by type,List Actions,3526
+Actions by type,Write Actions,10567
+Actions by type,Read Actions,5403
+Actions by type,List Actions,3527
 Actions by type,,1042
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,license-manager-linux-subscriptions:GetRegisteredSubscriptionProvider,69
@@ -42,7 +42,7 @@ Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},84
 Most referenced resource ARNs,rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog,76
 Most referenced resource ARNs,instance - arn:${Partition}:ec2:${Region}:${Account}:instance/${InstanceId},76
-Most referenced resource ARNs,mlflow-tracking-server - arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-tracking-server/${MlflowTrackingServerName},70
+Most referenced resource ARNs,AgentSpace - arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId},73
 Services with least actions,AWS Billing And Cost Management Recommended Actions,1
 Services with least actions,AWS Marketplace Reporting,1
 Services with least actions,AWS CloudTrail Data,1

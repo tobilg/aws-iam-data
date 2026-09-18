@@ -42595,7 +42595,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "config:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/config/latest/APIReference/API_PutOrganizationConfigRule.html"
@@ -76018,6 +76020,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/API_GetResourcePolicy.html"
+      },
+      {
+        "name": "ListAvailablePhoneNumbers",
+        "permissionOnly": false,
+        "description": "Grants permission to list available phone numbers for purchase",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/pinpoint/latest/apireference_smsvoicev2/API_ListAvailablePhoneNumbers.html"
       },
       {
         "name": "ListNotifyCountries",
@@ -167946,6 +167963,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetThreats.html"
       },
       {
+        "name": "BatchGetValidationRuns",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve multiple validation runs in a single request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchGetValidationRuns.html"
+      },
+      {
         "name": "BatchUpdateSecurityRequirements",
         "permissionOnly": false,
         "description": "Grants permission to batch update security requirements within a customer managed pack",
@@ -168735,6 +168769,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListDesignReviews.html"
       },
       {
+        "name": "ListDiscoveredDomains",
+        "permissionOnly": false,
+        "description": "Grants permission to list discovered domains associated with a pentest",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListDiscoveredDomains.html"
+      },
+      {
         "name": "ListDiscoveredEndpoints",
         "permissionOnly": false,
         "description": "Grants permission to list discovered endpoints associated with a pentest job with optional URI prefix filtering",
@@ -169158,6 +169209,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_StartThreatModelJob.html"
       },
       {
+        "name": "StartValidationRun",
+        "permissionOnly": false,
+        "description": "Grants permission to initiate the execution of a validation run",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_StartValidationRun.html"
+      },
+      {
         "name": "StopCodeReviewJob",
         "permissionOnly": false,
         "description": "Grants permission to stop the execution of a running code review",
@@ -169411,6 +169479,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateCodeReview.html"
+      },
+      {
+        "name": "UpdateDiscoveredDomains",
+        "permissionOnly": false,
+        "description": "Grants permission to update classification of multiple discovered domain in a single request",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateDiscoveredDomains.html"
       },
       {
         "name": "UpdateFinding",
@@ -195695,7 +195780,9 @@
             "resourceType": "ManagedNotificationConfiguration",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "notifications:SubscribeSensitiveEvents"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/notifications/latest/APIReference/API_AssociateManagedNotificationAccountContact.html"
@@ -196567,6 +196654,36 @@
     "servicePrefix": "user-subscriptions",
     "actions": [
       {
+        "name": "CancelPurchaseSession",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel a User subscription purchase session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html"
+      },
+      {
+        "name": "ConfirmPurchaseSession",
+        "permissionOnly": false,
+        "description": "Grants permission to confirm a User subscription purchase session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html"
+      },
+      {
         "name": "CreateClaim",
         "permissionOnly": false,
         "description": "Grants permission to create a User subscription Claim",
@@ -196587,6 +196704,36 @@
         "name": "CreateClaimAddOn",
         "permissionOnly": false,
         "description": "Grants permission to create a User subscription Claim add-on",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html"
+      },
+      {
+        "name": "CreatePurchaseSession",
+        "permissionOnly": false,
+        "description": "Grants permission to create a User subscription purchase session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html"
+      },
+      {
+        "name": "CreateUpdatePlanPreview",
+        "permissionOnly": false,
+        "description": "Grants permission to create a preview of a User subscription plan update",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -196644,9 +196791,39 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html"
       },
       {
+        "name": "GetCurrentPlanDetails",
+        "permissionOnly": false,
+        "description": "Grants permission to get the current plan details for a User subscription",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html"
+      },
+      {
         "name": "GetEffectiveUsageLimit",
         "permissionOnly": false,
         "description": "Grants permission to get a User subscription effective usage limit",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html"
+      },
+      {
+        "name": "GetPurchaseSession",
+        "permissionOnly": false,
+        "description": "Grants permission to get a User subscription purchase session",
         "accessLevel": "Read",
         "resourceTypes": [
           {

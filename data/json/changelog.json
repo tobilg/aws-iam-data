@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2026-09-18",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS End User Messaging SMS and Voice V2": [
+        "sms-voice:ListAvailablePhoneNumbers"
+      ],
+      "AWS Security Agent": [
+        "securityagent:BatchGetValidationRuns",
+        "securityagent:ListDiscoveredDomains",
+        "securityagent:StartValidationRun",
+        "securityagent:UpdateDiscoveredDomains"
+      ],
+      "AWS User Subscriptions": [
+        "user-subscriptions:CancelPurchaseSession",
+        "user-subscriptions:ConfirmPurchaseSession",
+        "user-subscriptions:CreatePurchaseSession",
+        "user-subscriptions:CreateUpdatePlanPreview",
+        "user-subscriptions:GetCurrentPlanDetails",
+        "user-subscriptions:GetPurchaseSession"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-09-17",
     "addedServices": [],
     "removedServices": [],
