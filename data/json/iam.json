@@ -19965,7 +19965,10 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "backup-search:TagResource",
+              "iam:PassRole"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-backup/latest/devguide/API_BKS_StartSearchResultExportJob.html"
@@ -57823,7 +57826,9 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "directconnect:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/directconnect/latest/APIReference/API_CreateResiliencyGroup.html"
@@ -90782,7 +90787,9 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "groundstation:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/ground-station/latest/APIReference/API_RegisterAgent.html"
@@ -105644,9 +105651,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": [
-              "aws-portal:ViewBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_invoicing_BatchGetInvoiceProfile.html"
@@ -105665,8 +105670,7 @@
               "aws:TagKeys"
             ],
             "dependentActions": [
-              "invoicing:TagResource",
-              "aws-portal:ViewBilling"
+              "invoicing:TagResource"
             ]
           }
         ],
@@ -105685,8 +105689,7 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": [
-              "invoicing:TagResource",
-              "aws-portal:ModifyBilling"
+              "invoicing:TagResource"
             ]
           }
         ],
@@ -105704,9 +105707,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "aws-portal:ViewBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_invoicing_DeleteInvoiceUnit.html"
@@ -105723,9 +105724,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "aws-portal:ModifyBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_invoicing_DeleteProcurementPortalPreference.html"
@@ -105759,9 +105758,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "aws-portal:ViewBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_invoicing_GetInvoiceUnit.html"
@@ -105776,9 +105773,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": [
-              "aws-portal:ViewBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_invoicing_GetProcurementPortalPreference.html"
@@ -105810,9 +105805,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": [
-              "aws-portal:ViewBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_invoicing_ListInvoiceUnits.html"
@@ -105827,9 +105820,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": [
-              "aws-portal:ViewBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_invoicing_ListProcurementPortalPreferences.html"
@@ -105876,9 +105867,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "aws-portal:ViewBilling"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "procurement-portal-preference",
@@ -105886,9 +105875,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "aws-portal:ViewBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_invoicing_ListTagsForResource.html"
@@ -105905,9 +105892,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "aws-portal:ModifyBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_invoicing_PutProcurementPortalPreference.html"
@@ -105943,9 +105928,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "aws-portal:ModifyBilling"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "procurement-portal-preference",
@@ -105955,9 +105938,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "aws-portal:ModifyBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_invoicing_TagResource.html"
@@ -105975,9 +105956,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "aws-portal:ModifyBilling"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "procurement-portal-preference",
@@ -105986,9 +105965,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "aws-portal:ModifyBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_invoicing_UntagResource.html"
@@ -106005,9 +105982,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "aws-portal:ViewBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_invoicing_UpdateInvoiceUnit.html"
@@ -106024,9 +105999,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "aws-portal:ModifyBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_invoicing_UpdateProcurementPortalPreferenceStatus.html"
