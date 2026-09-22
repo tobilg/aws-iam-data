@@ -291,6 +291,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/billingconductor/latest/APIReference/API_GetBillingGroupCostReport.html"
       },
       {
+        "name": "GetBillingTransferPreference",
+        "permissionOnly": false,
+        "description": "Grants permission to get the billing transfer preference",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/billingconductor/latest/APIReference/API_GetBillingTransferPreference.html"
+      },
+      {
         "name": "ListAccountAssociations",
         "permissionOnly": false,
         "description": "Grants permission to list the linked accounts of the payer account for the given billing period while also providing the billing group the linked accounts belong to",
@@ -611,6 +626,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/billingconductor/latest/APIReference/API_UpdateBillingGroup.html"
       },
       {
+        "name": "UpdateBillingTransferPreference",
+        "permissionOnly": false,
+        "description": "Grants permission to update the billing transfer preference",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "billingconductor:PricingPlanArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/billingconductor/latest/APIReference/API_UpdateBillingTransferPreference.html"
+      },
+      {
         "name": "UpdateCustomLineItem",
         "permissionOnly": false,
         "description": "Grants permission to update a custom line item",
@@ -714,6 +746,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by the tag keys that are passed in the request",
         "type": "ArrayOfString"
+      },
+      {
+        "name": "billingconductor:PricingPlanArn",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the pricing plan ARN specified in the request",
+        "type": "ARN"
       }
     ]
   },
@@ -93533,7 +93571,9 @@
             "resourceType": "sequenceStore",
             "required": true,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
             ],
             "dependentActions": [
               "omics:TagResource"
@@ -94973,7 +95013,9 @@
             "resourceType": "sequenceStore",
             "required": true,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
             ],
             "dependentActions": [
               "omics:TagResource",
@@ -94993,7 +95035,9 @@
             "resourceType": "referenceStore",
             "required": true,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
             ],
             "dependentActions": [
               "omics:TagResource",
@@ -247687,6 +247731,23 @@
     "servicePrefix": "cloudwatch",
     "actions": [
       {
+        "name": "AssumeAccessProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to assume an access profile",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_AssumeAccessProfile.html"
+      },
+      {
         "name": "BatchGetServiceLevelIndicatorReport",
         "permissionOnly": false,
         "description": "Grants permission to batch get service level indicator report",
@@ -247719,6 +247780,185 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html#ApplicationSignals-PreviewSDK"
       },
       {
+        "name": "CreateAccessGrant",
+        "permissionOnly": false,
+        "description": "Grants permission to create an access grant",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateAccessGrant.html"
+      },
+      {
+        "name": "CreateAccessProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to create an access profile",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateAccessProfile.html"
+      },
+      {
+        "name": "CreateAlert",
+        "permissionOnly": false,
+        "description": "Grants permission to create an alert",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateAlert.html"
+      },
+      {
+        "name": "CreateDomain",
+        "permissionOnly": false,
+        "description": "Grants permission to create a domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateDomain.html"
+      },
+      {
+        "name": "CreateDomainAccessGrantForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to create a domain access grant for an organization",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateDomainAccessGrantForOrganization.html"
+      },
+      {
+        "name": "CreateDomainForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to create a domain for an organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateDomainForOrganization.html"
+      },
+      {
+        "name": "CreateIngestionEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to create an ingestion endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateIngestionEndpoint.html"
+      },
+      {
+        "name": "CreateIntegration",
+        "permissionOnly": false,
+        "description": "Grants permission to create an integration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateIntegration.html"
+      },
+      {
+        "name": "CreateOmniDashboard",
+        "permissionOnly": false,
+        "description": "Grants permission to create an omni dashboard",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateOmniDashboard.html"
+      },
+      {
+        "name": "CreateOmniThread",
+        "permissionOnly": false,
+        "description": "Grants permission to create an omni thread",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateOmniThread.html"
+      },
+      {
+        "name": "CreateOneTimeDeepLinkCode",
+        "permissionOnly": false,
+        "description": "Grants permission to create a one-time deep link code",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateOneTimeDeepLinkCode.html"
+      },
+      {
         "name": "CreateServiceLevelObjective",
         "permissionOnly": false,
         "description": "Grants permission to create a service level objective",
@@ -247735,6 +247975,74 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html#ApplicationSignals-PreviewSDK"
+      },
+      {
+        "name": "CreateSpace",
+        "permissionOnly": false,
+        "description": "Grants permission to create a space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateSpace.html"
+      },
+      {
+        "name": "CreateView",
+        "permissionOnly": false,
+        "description": "Grants permission to create a view",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateView.html"
+      },
+      {
+        "name": "DeleteAccessGrant",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an access grant",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "access-grant",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteAccessGrant.html"
+      },
+      {
+        "name": "DeleteAccessProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an access profile",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "access-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteAccessProfile.html"
       },
       {
         "name": "DeleteAlarmMuteRule",
@@ -247771,6 +248079,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DeleteAlarms.html"
       },
       {
+        "name": "DeleteAlert",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an alert",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "alert",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteAlert.html"
+      },
+      {
         "name": "DeleteAnomalyDetector",
         "permissionOnly": false,
         "description": "Grants permission to delete the specified anomaly detection model from your account",
@@ -247803,6 +248129,75 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DeleteDashboards.html"
       },
       {
+        "name": "DeleteDomain",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteDomain.html"
+      },
+      {
+        "name": "DeleteDomainAccessGrantForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a domain access grant for an organization",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "organization-access-grant",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteDomainAccessGrantForOrganization.html"
+      },
+      {
+        "name": "DeleteDomainForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a domain for an organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "organization-domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteDomainForOrganization.html"
+      },
+      {
+        "name": "DeleteIngestionEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an ingestion endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ingestion-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteIngestionEndpoint.html"
+      },
+      {
         "name": "DeleteInsightRules",
         "permissionOnly": false,
         "description": "Grants permission to delete a collection of insight rules",
@@ -247818,6 +248213,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DeleteInsightRules.html"
+      },
+      {
+        "name": "DeleteIntegration",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an integration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "integration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteIntegration.html"
       },
       {
         "name": "DeleteMetricStream",
@@ -247837,6 +248250,41 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DeleteMetricStream.html"
       },
       {
+        "name": "DeleteOmniDashboard",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an omni dashboard",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "omni-dashboard",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteOmniDashboard.html"
+      },
+      {
+        "name": "DeleteOmniThread",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an omni thread",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteOmniThread.html"
+      },
+      {
         "name": "DeleteServiceLevelObjective",
         "permissionOnly": false,
         "description": "Grants permission to delete a service level objective",
@@ -247852,6 +248300,41 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html#ApplicationSignals-PreviewSDK"
+      },
+      {
+        "name": "DeleteSpace",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteSpace.html"
+      },
+      {
+        "name": "DeleteView",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a view",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "view",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteView.html"
       },
       {
         "name": "DescribeAlarmHistory",
@@ -248046,6 +248529,57 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/logs/CloudWatchLogs-Insights-Query-Results-Summary.html"
       },
       {
+        "name": "GetAccessGrant",
+        "permissionOnly": false,
+        "description": "Grants permission to get an access grant",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "access-grant",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetAccessGrant.html"
+      },
+      {
+        "name": "GetAccessProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to get an access profile",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "access-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetAccessProfile.html"
+      },
+      {
+        "name": "GetAgentGraph",
+        "permissionOnly": false,
+        "description": "Grants permission to get an agent graph",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetAgentGraph.html"
+      },
+      {
         "name": "GetAlarmMuteRule",
         "permissionOnly": false,
         "description": "Grants permission to get an alarm mute rule",
@@ -248061,6 +248595,41 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetAlarmMuteRule.html"
+      },
+      {
+        "name": "GetAlert",
+        "permissionOnly": false,
+        "description": "Grants permission to get an alert",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "alert",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetAlert.html"
+      },
+      {
+        "name": "GetContextGraph",
+        "permissionOnly": false,
+        "description": "Grants permission to get a context graph",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetContextGraph.html"
       },
       {
         "name": "GetDashboard",
@@ -248097,6 +248666,76 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetDataset.html"
       },
       {
+        "name": "GetDomain",
+        "permissionOnly": false,
+        "description": "Grants permission to get a domain",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetDomain.html"
+      },
+      {
+        "name": "GetDomainAccessGrantForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to get a domain access grant for an organization",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "organization-access-grant",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetDomainAccessGrantForOrganization.html"
+      },
+      {
+        "name": "GetDomainForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to get a domain for an organization",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "organization-domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetDomainForOrganization.html"
+      },
+      {
+        "name": "GetIngestionEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to get an ingestion endpoint",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ingestion-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetIngestionEndpoint.html"
+      },
+      {
         "name": "GetInsightRuleReport",
         "permissionOnly": false,
         "description": "Grants permission to return the top-N report of unique contributors over a time range for a given insight rule",
@@ -248114,6 +248753,41 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetInsightRuleReport.html"
       },
       {
+        "name": "GetIntegration",
+        "permissionOnly": false,
+        "description": "Grants permission to get an integration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "integration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetIntegration.html"
+      },
+      {
+        "name": "GetIntelligenceConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to get an intelligence configuration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetIntelligenceConfiguration.html"
+      },
+      {
         "name": "GetMetricData",
         "permissionOnly": false,
         "description": "Grants permission to retrieve batch amounts of CloudWatch classic metric data and perform metric math on retrieved data; and grants permission to retrieve OTLP metric data using PromQL",
@@ -248123,7 +248797,8 @@
             "resourceType": "dataset",
             "required": false,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": []
           }
@@ -248178,6 +248853,75 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricWidgetImage.html"
       },
       {
+        "name": "GetOmniDashboard",
+        "permissionOnly": false,
+        "description": "Grants permission to get an omni dashboard",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "omni-dashboard",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetOmniDashboard.html"
+      },
+      {
+        "name": "GetOmniThread",
+        "permissionOnly": false,
+        "description": "Grants permission to get an omni thread",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetOmniThread.html"
+      },
+      {
+        "name": "GetPreferences",
+        "permissionOnly": false,
+        "description": "Grants permission to get preferences",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetPreferences.html"
+      },
+      {
+        "name": "GetRecords",
+        "permissionOnly": false,
+        "description": "Grants permission to fetch logs, metrics, and traces",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetRecords.html"
+      },
+      {
         "name": "GetService",
         "permissionOnly": false,
         "description": "Grants permission to retrieve information about a service",
@@ -248212,6 +248956,71 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html#ApplicationSignals-PreviewSDK"
       },
       {
+        "name": "GetSpace",
+        "permissionOnly": false,
+        "description": "Grants permission to get a space",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetSpace.html"
+      },
+      {
+        "name": "GetSpaceCredentials",
+        "permissionOnly": false,
+        "description": "Grants permission to get space credentials",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetSpaceCredentials.html"
+      },
+      {
+        "name": "GetSpaceCredentialsForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to get space credentials for an organization",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetSpaceCredentialsForOrganization.html"
+      },
+      {
+        "name": "GetTelemetryQueryResults",
+        "permissionOnly": false,
+        "description": "Grants permission to get telemetry query results",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetTelemetryQueryResults.html"
+      },
+      {
         "name": "GetTopologyMap",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a CloudWatch topology map",
@@ -248225,6 +249034,75 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html#ApplicationSignals-PreviewSDK"
+      },
+      {
+        "name": "GetView",
+        "permissionOnly": false,
+        "description": "Grants permission to get a view",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "view",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetView.html"
+      },
+      {
+        "name": "InvokeIntegration",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke an integration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_InvokeIntegration.html"
+      },
+      {
+        "name": "ListAccessGrants",
+        "permissionOnly": false,
+        "description": "Grants permission to list access grants",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListAccessGrants.html"
+      },
+      {
+        "name": "ListAccessProfiles",
+        "permissionOnly": false,
+        "description": "Grants permission to list access profiles",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListAccessProfiles.html"
       },
       {
         "name": "ListAlarmMuteRules",
@@ -248244,6 +249122,40 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListAlarmMuteRules.html"
       },
       {
+        "name": "ListAlertContributors",
+        "permissionOnly": false,
+        "description": "Grants permission to list alert contributors",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListAlertContributors.html"
+      },
+      {
+        "name": "ListAlerts",
+        "permissionOnly": false,
+        "description": "Grants permission to list alerts",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListAlerts.html"
+      },
+      {
         "name": "ListDashboards",
         "permissionOnly": false,
         "description": "Grants permission to return a list of all CloudWatch dashboards in your account",
@@ -248257,6 +249169,70 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListDashboards.html"
+      },
+      {
+        "name": "ListDomainAccessGrantsForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to list domain access grants for an organization",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListDomainAccessGrantsForOrganization.html"
+      },
+      {
+        "name": "ListDomains",
+        "permissionOnly": false,
+        "description": "Grants permission to list domains",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListDomains.html"
+      },
+      {
+        "name": "ListIngestionEndpoints",
+        "permissionOnly": false,
+        "description": "Grants permission to list ingestion endpoints",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListIngestionEndpoints.html"
+      },
+      {
+        "name": "ListIntegrations",
+        "permissionOnly": false,
+        "description": "Grants permission to list integrations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListIntegrations.html"
       },
       {
         "name": "ListManagedInsightRules",
@@ -248302,12 +249278,47 @@
             "resourceType": "dataset",
             "required": false,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetrics.html"
+      },
+      {
+        "name": "ListOmniDashboards",
+        "permissionOnly": false,
+        "description": "Grants permission to list omni dashboards",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListOmniDashboards.html"
+      },
+      {
+        "name": "ListOmniThreads",
+        "permissionOnly": false,
+        "description": "Grants permission to list omni threads",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListOmniThreads.html"
       },
       {
         "name": "ListServiceLevelObjectives",
@@ -248340,6 +249351,57 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html#ApplicationSignals-PreviewSDK"
       },
       {
+        "name": "ListSpaceAccess",
+        "permissionOnly": false,
+        "description": "Grants permission to list access to a space",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListSpaceAccess.html"
+      },
+      {
+        "name": "ListSpaces",
+        "permissionOnly": false,
+        "description": "Grants permission to list spaces",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListSpaces.html"
+      },
+      {
+        "name": "ListSpacesForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to list spaces for an organization",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListSpacesForOrganization.html"
+      },
+      {
         "name": "ListTagsForResource",
         "permissionOnly": false,
         "description": "Grants permission to list tags for an Amazon CloudWatch resource",
@@ -248349,7 +249411,8 @@
             "resourceType": "alarm",
             "required": false,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:ListTagsForResource"
@@ -248359,7 +249422,8 @@
             "resourceType": "alarm-mute-rule",
             "required": false,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:ListTagsForResource"
@@ -248369,7 +249433,8 @@
             "resourceType": "dashboard",
             "required": false,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:ListTagsForResource"
@@ -248379,7 +249444,8 @@
             "resourceType": "dataset",
             "required": false,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:ListTagsForResource"
@@ -248389,7 +249455,8 @@
             "resourceType": "insight-rule",
             "required": false,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:ListTagsForResource"
@@ -248399,7 +249466,8 @@
             "resourceType": "metric-stream",
             "required": false,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:ListTagsForResource"
@@ -248409,7 +249477,8 @@
             "resourceType": "service",
             "required": false,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:ListTagsForResource"
@@ -248419,7 +249488,8 @@
             "resourceType": "slo",
             "required": false,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:ListTagsForResource"
@@ -248427,6 +249497,57 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListTagsForResource.html"
+      },
+      {
+        "name": "ListTelemetryFields",
+        "permissionOnly": false,
+        "description": "Grants permission to list telemetry fields",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListTelemetryFields.html"
+      },
+      {
+        "name": "ListTelemetryQuerySessions",
+        "permissionOnly": false,
+        "description": "Grants permission to list telemetry query sessions",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListTelemetryQuerySessions.html"
+      },
+      {
+        "name": "ListViews",
+        "permissionOnly": false,
+        "description": "Grants permission to list views",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListViews.html"
       },
       {
         "name": "PutAlarmMuteRule",
@@ -248540,6 +249661,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutInsightRule.html"
+      },
+      {
+        "name": "PutIntelligenceConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to configure an intelligence configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_PutIntelligenceConfiguration.html"
       },
       {
         "name": "PutLogAlarm",
@@ -248659,6 +249797,38 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricStream.html"
       },
       {
+        "name": "QueryTraces",
+        "permissionOnly": false,
+        "description": "Grants permission to query traces",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_QueryTraces.html"
+      },
+      {
+        "name": "SearchPrincipals",
+        "permissionOnly": false,
+        "description": "Grants permission to search principals",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_SearchPrincipals.html"
+      },
+      {
         "name": "SetAlarmState",
         "permissionOnly": false,
         "description": "Grants permission to temporarily set the state of an alarm for testing purposes",
@@ -248693,6 +249863,57 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_StartMetricStreams.html"
       },
       {
+        "name": "StartOmniThreadSession",
+        "permissionOnly": false,
+        "description": "Grants permission to start an omni thread session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_StartOmniThreadSession.html"
+      },
+      {
+        "name": "StartTelemetryQuery",
+        "permissionOnly": false,
+        "description": "Grants permission to start a telemetry query",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_StartTelemetryQuery.html"
+      },
+      {
+        "name": "StartTelemetryQuerySession",
+        "permissionOnly": false,
+        "description": "Grants permission to start a telemetry query session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_StartTelemetryQuerySession.html"
+      },
+      {
         "name": "StopMetricStreams",
         "permissionOnly": false,
         "description": "Grants permission to stop all CloudWatch metric streams that you specify",
@@ -248710,6 +249931,57 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_StopMetricStreams.html"
       },
       {
+        "name": "StopTelemetryQuery",
+        "permissionOnly": false,
+        "description": "Grants permission to stop a telemetry query",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_StopTelemetryQuery.html"
+      },
+      {
+        "name": "StopTelemetryQuerySession",
+        "permissionOnly": false,
+        "description": "Grants permission to stop a telemetry query session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_StopTelemetryQuerySession.html"
+      },
+      {
+        "name": "SubmitFeedback",
+        "permissionOnly": false,
+        "description": "Grants permission to submit feedback",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_SubmitFeedback.html"
+      },
+      {
         "name": "TagResource",
         "permissionOnly": false,
         "description": "Grants permission to add tags to an Amazon CloudWatch resource",
@@ -248721,7 +249993,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:TagResource"
@@ -248733,7 +250006,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:TagResource"
@@ -248745,7 +250019,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:TagResource"
@@ -248757,7 +250032,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:TagResource"
@@ -248769,7 +250045,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:TagResource"
@@ -248781,7 +250058,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:TagResource"
@@ -248793,7 +250071,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:TagResource"
@@ -248805,7 +250084,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:TagResource"
@@ -248825,7 +250105,8 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:UntagResource"
@@ -248836,7 +250117,8 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:UntagResource"
@@ -248847,7 +250129,8 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:UntagResource"
@@ -248858,7 +250141,8 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:UntagResource"
@@ -248869,7 +250153,8 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:UntagResource"
@@ -248880,7 +250165,8 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:UntagResource"
@@ -248891,7 +250177,8 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:UntagResource"
@@ -248902,7 +250189,8 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
             ],
             "dependentActions": [
               "oam:UntagResource"
@@ -248910,6 +250198,163 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_UntagResource.html"
+      },
+      {
+        "name": "UpdateAccessProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to update an access profile",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "access-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateAccessProfile.html"
+      },
+      {
+        "name": "UpdateAlert",
+        "permissionOnly": false,
+        "description": "Grants permission to update an alert",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "alert",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateAlert.html"
+      },
+      {
+        "name": "UpdateDomain",
+        "permissionOnly": false,
+        "description": "Grants permission to update a domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateDomain.html"
+      },
+      {
+        "name": "UpdateDomainForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to update a domain for an organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "organization-domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateDomainForOrganization.html"
+      },
+      {
+        "name": "UpdateIngestionEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to update an ingestion endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ingestion-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateIngestionEndpoint.html"
+      },
+      {
+        "name": "UpdateIntegration",
+        "permissionOnly": false,
+        "description": "Grants permission to update an integration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "integration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateIntegration.html"
+      },
+      {
+        "name": "UpdateOmniDashboard",
+        "permissionOnly": false,
+        "description": "Grants permission to update an omni dashboard",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "omni-dashboard",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateOmniDashboard.html"
+      },
+      {
+        "name": "UpdateOmniThread",
+        "permissionOnly": false,
+        "description": "Grants permission to update an omni thread",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateOmniThread.html"
+      },
+      {
+        "name": "UpdatePreferences",
+        "permissionOnly": false,
+        "description": "Grants permission to update preferences",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdatePreferences.html"
       },
       {
         "name": "UpdateServiceLevelObjective",
@@ -248927,9 +250372,61 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html#ApplicationSignals-PreviewSDK"
+      },
+      {
+        "name": "UpdateSpace",
+        "permissionOnly": false,
+        "description": "Grants permission to update a space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateSpace.html"
+      },
+      {
+        "name": "UpdateView",
+        "permissionOnly": false,
+        "description": "Grants permission to update a view",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "view",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateView.html"
       }
     ],
     "resourceTypes": [
+      {
+        "name": "access-grant",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:access-grant/${GrantId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "access-profile",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:access-profile/${ProfileId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
       {
         "name": "alarm",
         "apiReferenceUrl": "",
@@ -248942,6 +250439,14 @@
         "name": "alarm-mute-rule",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:alarm-mute-rule:${AlarmMuteRuleName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "alert",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:alert/${AlertId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -248963,6 +250468,22 @@
         ]
       },
       {
+        "name": "domain",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:domain/${DomainId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "ingestion-endpoint",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:ingestion-endpoint/${IngestionEndpointName}/${IngestionEndpointId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "insight-rule",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:insight-rule/${InsightRuleName}",
@@ -248971,9 +250492,41 @@
         ]
       },
       {
+        "name": "integration",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:integration/${IntegrationId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "metric-stream",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:metric-stream/${MetricStreamName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "omni-dashboard",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:omni-dashboard/${DashboardId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "organization-access-grant",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:organization-access-grant/${GrantId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "organization-domain",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:organization-domain/${DomainId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -248990,6 +250543,22 @@
         "name": "slo",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:slo/${SloName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "space",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:space/${SpaceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "view",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:view/${ViewName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -249019,6 +250588,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by defined alarm actions",
         "type": "ArrayOfString"
+      },
+      {
+        "name": "cloudwatch:HasAccessGrant",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the presence of access grants associated with the request",
+        "type": "String"
       },
       {
         "name": "cloudwatch:namespace",
