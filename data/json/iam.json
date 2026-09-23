@@ -249414,9 +249414,7 @@
               "aws:ResourceTag/${TagKey}",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:ListTagsForResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "alarm-mute-rule",
@@ -249425,9 +249423,7 @@
               "aws:ResourceTag/${TagKey}",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:ListTagsForResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "dashboard",
@@ -249436,9 +249432,7 @@
               "aws:ResourceTag/${TagKey}",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:ListTagsForResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "dataset",
@@ -249447,9 +249441,7 @@
               "aws:ResourceTag/${TagKey}",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:ListTagsForResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "insight-rule",
@@ -249458,9 +249450,7 @@
               "aws:ResourceTag/${TagKey}",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:ListTagsForResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "metric-stream",
@@ -249469,9 +249459,7 @@
               "aws:ResourceTag/${TagKey}",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:ListTagsForResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "service",
@@ -249480,9 +249468,7 @@
               "aws:ResourceTag/${TagKey}",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:ListTagsForResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "slo",
@@ -249491,9 +249477,7 @@
               "aws:ResourceTag/${TagKey}",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:ListTagsForResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListTagsForResource.html"
@@ -249563,9 +249547,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "cloudwatch:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "alarm-mute-rule",
@@ -249575,9 +249557,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "cloudwatch:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutAlarmMuteRule.html"
@@ -249612,9 +249592,7 @@
               "aws:TagKeys",
               "cloudwatch:AlarmActions"
             ],
-            "dependentActions": [
-              "cloudwatch:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutCompositeAlarm.html"
@@ -249633,9 +249611,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "cloudwatch:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutDashboard.html"
@@ -249655,9 +249631,7 @@
               "aws:TagKeys",
               "cloudwatch:requestInsightRuleLogGroups"
             ],
-            "dependentActions": [
-              "cloudwatch:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutInsightRule.html"
@@ -249694,10 +249668,7 @@
               "aws:TagKeys",
               "cloudwatch:AlarmActions"
             ],
-            "dependentActions": [
-              "cloudwatch:TagResource",
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutLogAlarm.html"
@@ -249736,9 +249707,7 @@
               "aws:TagKeys",
               "cloudwatch:AlarmActions"
             ],
-            "dependentActions": [
-              "cloudwatch:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "dataset",
@@ -249749,9 +249718,7 @@
               "aws:TagKeys",
               "cloudwatch:AlarmActions"
             ],
-            "dependentActions": [
-              "cloudwatch:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricAlarm.html"
@@ -249788,10 +249755,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "cloudwatch:TagResource",
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricStream.html"
@@ -249996,9 +249960,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "alarm-mute-rule",
@@ -250009,9 +249971,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "dashboard",
@@ -250022,9 +249982,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "dataset",
@@ -250035,9 +249993,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "insight-rule",
@@ -250048,9 +250004,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "metric-stream",
@@ -250061,9 +250015,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "service",
@@ -250074,9 +250026,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "slo",
@@ -250087,9 +250037,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_TagResource.html"
@@ -250108,9 +250056,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:UntagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "alarm-mute-rule",
@@ -250120,9 +250066,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:UntagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "dashboard",
@@ -250132,9 +250076,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:UntagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "dataset",
@@ -250144,9 +250086,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:UntagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "insight-rule",
@@ -250156,9 +250096,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:UntagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "metric-stream",
@@ -250168,9 +250106,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:UntagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "service",
@@ -250180,9 +250116,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:UntagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "slo",
@@ -250192,9 +250126,7 @@
               "aws:TagKeys",
               "cloudwatch:HasAccessGrant"
             ],
-            "dependentActions": [
-              "oam:UntagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_UntagResource.html"
@@ -255893,6 +255825,28 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_CreateCentralizationRuleForOrganization.html"
       },
       {
+        "name": "CreateDatasetIntegration",
+        "permissionOnly": false,
+        "description": "Grants permission to create a dataset integration for the account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset-integration",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "observabilityadmin:TagResource",
+              "iam:PassRole"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_CreateDatasetIntegration.html"
+      },
+      {
         "name": "CreateS3TableIntegration",
         "permissionOnly": false,
         "description": "Grants permission to create a new s3 table integration with the specified configuration",
@@ -256001,6 +255955,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_DeleteCentralizationRuleForOrganization.html"
       },
       {
+        "name": "DeleteDatasetIntegration",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the specified dataset integration for the account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset-integration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_DeleteDatasetIntegration.html"
+      },
+      {
         "name": "DeleteS3TableIntegration",
         "permissionOnly": false,
         "description": "Grants permission to delete the s3 table integration with the specified arn",
@@ -256087,6 +256058,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_GetCentralizationRuleForOrganization.html"
+      },
+      {
+        "name": "GetDatasetIntegration",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the specified dataset integration for the account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset-integration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_GetDatasetIntegration.html"
       },
       {
         "name": "GetS3TableIntegration",
@@ -256217,6 +256205,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_ListCentralizationRulesForOrganization.html"
       },
       {
+        "name": "ListDatasetIntegrations",
+        "permissionOnly": false,
+        "description": "Grants permission to list dataset integrations for the account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_ListDatasetIntegrations.html"
+      },
+      {
         "name": "ListResourceTelemetry",
         "permissionOnly": false,
         "description": "Grants permission to retrieve telemetry configurations for resources associated with the account",
@@ -256271,6 +256274,14 @@
         "description": "Grants permission to list the tags for the specified resource",
         "accessLevel": "List",
         "resourceTypes": [
+          {
+            "resourceType": "dataset-integration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "organization-centralization-rule",
             "required": false,
@@ -256460,6 +256471,16 @@
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
+            "resourceType": "dataset-integration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "organization-centralization-rule",
             "required": false,
             "conditionKeys": [
@@ -256534,6 +256555,15 @@
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
+            "resourceType": "dataset-integration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "organization-centralization-rule",
             "required": false,
             "conditionKeys": [
@@ -256603,6 +256633,25 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_UpdateCentralizationRuleForOrganization.html"
+      },
+      {
+        "name": "UpdateDatasetIntegration",
+        "permissionOnly": false,
+        "description": "Grants permission to update the specified dataset integration for the account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset-integration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_UpdateDatasetIntegration.html"
       },
       {
         "name": "UpdateTelemetryPipeline",
@@ -256677,6 +256726,14 @@
       }
     ],
     "resourceTypes": [
+      {
+        "name": "dataset-integration",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:observabilityadmin:${Region}:${Account}:dataset-integration/${DatasetIntegrationIdentifier}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
       {
         "name": "organization-centralization-rule",
         "apiReferenceUrl": "",
@@ -265439,6 +265496,39 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "application",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "contact-flow-module",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "hierarchy-group",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "security-profile",
             "required": true,
             "conditionKeys": [
@@ -268847,6 +268937,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/console/connect/amazon-connect-console/grant-instance-permissions"
       },
       {
+        "name": "ListSecurityProfileAIAgents",
+        "permissionOnly": false,
+        "description": "Grants permission to list the AI agents associated with a specific security profile in an Amazon Connect instance",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "security-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_ListSecurityProfileAIAgents.html"
+      },
+      {
         "name": "ListSecurityProfileApplications",
         "permissionOnly": false,
         "description": "Grants permission to list applications associated with a specific security profile in an Amazon Connect instance",
@@ -272237,6 +272345,33 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "application",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "contact-flow-module",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "hierarchy-group",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "security-profile",
             "required": true,
             "conditionKeys": [
@@ -272621,6 +272756,14 @@
         "name": "ai-agent",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:wisdom:${Region}:${Account}:ai-agent/${AssistantId}/${AIAgentId}:${Version}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "application",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:app-integrations:${Region}:${Account}:application/${ApplicationId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
