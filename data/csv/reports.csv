@@ -1,10 +1,11 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10610
-Actions by type,Read Actions,5425
-Actions by type,List Actions,3545
-Actions by type,,1050
+Actions by type,Write Actions,10642
+Actions by type,Read Actions,5442
+Actions by type,List Actions,3554
+Actions by type,,1054
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,license-manager-linux-subscriptions:GetRegisteredSubscriptionProvider,69
+Longest action names,network-security-manager:ListAggregateResourceSynchronizationStatuses,69
 Longest action names,networkflowmonitor:GetQueryResultsWorkloadInsightsTopContributorsData,69
 Longest action names,servicecatalog:BatchDisassociateServiceActionFromProvisioningArtifact,69
 Longest action names,networkflowmonitor:GetQueryStatusWorkloadInsightsTopContributorsData,68
@@ -12,7 +13,6 @@ Longest action names,servicecatalog:NotifyTerminateProvisionedProductEngineWorkf
 Longest action names,bcm-pricing-calculator:ListBillEstimateInputCommitmentModifications,67
 Longest action names,cleanrooms-ml:ListCollaborationConfiguredModelAlgorithmAssociations,67
 Longest action names,ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations,67
-Longest action names,license-manager-linux-subscriptions:DeregisterSubscriptionProvider,66
 Longest condition key names,codebuild:secondarySources/${sourceIdentifier}.buildStatusConfig.targetUrl,74
 Longest condition key names,codebuild:secondarySources/${sourceIdentifier}.buildStatusConfig.context,72
 Longest condition key names,codebuild:secondaryArtifacts/${artifactIdentifier}.encryptionDisabled,69
@@ -93,8 +93,8 @@ Shortest service prefixes,iq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,ts,2
 Shortest service prefixes,pi,2
-Summary,Total number of distinct resource ARNS,2255
-Summary,Total number of distinct condition keys,1572
-Summary,Total number of services,475
+Summary,Total number of distinct resource ARNS,2268
+Summary,Total number of distinct condition keys,1579
+Summary,Total number of services,476
 Summary,Average number of actions per service,48
 Summary,Median number of actions per service,31

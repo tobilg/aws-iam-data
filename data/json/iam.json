@@ -36688,7 +36688,9 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "codestar-connections:ListRepositorySyncDefinitions"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/codeconnections/latest/APIReference/API_ListRepositorySyncDefinitions.html"
@@ -144759,6 +144761,1477 @@
     "conditionKeys": []
   },
   {
+    "name": "AWS Network Security Manager",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_network-security-manager.html",
+    "servicePrefix": "network-security-manager",
+    "actions": [
+      {
+        "name": "CreateDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to create a deployment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          },
+          {
+            "resourceType": "policy-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          },
+          {
+            "resourceType": "scope",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          },
+          {
+            "resourceType": "scope-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_CreateDeployment.html"
+      },
+      {
+        "name": "CreateDeploymentSnapshot",
+        "permissionOnly": false,
+        "description": "Grants permission to create a snapshot of a deployment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "deployment",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_CreateDeploymentSnapshot.html"
+      },
+      {
+        "name": "CreatePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to create a policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "rule",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          },
+          {
+            "resourceType": "rule-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          },
+          {
+            "resourceType": "template",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          },
+          {
+            "resourceType": "template-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_CreatePolicy.html"
+      },
+      {
+        "name": "CreatePolicySnapshot",
+        "permissionOnly": false,
+        "description": "Grants permission to create a snapshot of a policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_CreatePolicySnapshot.html"
+      },
+      {
+        "name": "CreateRule",
+        "permissionOnly": false,
+        "description": "Grants permission to create a rule",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_CreateRule.html"
+      },
+      {
+        "name": "CreateRuleSnapshot",
+        "permissionOnly": false,
+        "description": "Grants permission to create a snapshot of a rule",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "rule",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_CreateRuleSnapshot.html"
+      },
+      {
+        "name": "CreateScope",
+        "permissionOnly": false,
+        "description": "Grants permission to create a scope",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_CreateScope.html"
+      },
+      {
+        "name": "CreateScopeSnapshot",
+        "permissionOnly": false,
+        "description": "Grants permission to create a snapshot of a scope",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "scope",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_CreateScopeSnapshot.html"
+      },
+      {
+        "name": "CreateTemplate",
+        "permissionOnly": false,
+        "description": "Grants permission to create a template",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "rule",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          },
+          {
+            "resourceType": "rule-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_CreateTemplate.html"
+      },
+      {
+        "name": "CreateTemplateSnapshot",
+        "permissionOnly": false,
+        "description": "Grants permission to create a snapshot of a template",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "template",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_CreateTemplateSnapshot.html"
+      },
+      {
+        "name": "DeleteAdminAccount",
+        "permissionOnly": false,
+        "description": "Grants permission to remove a Network Security Manager administrator account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_DeleteAdminAccount.html"
+      },
+      {
+        "name": "DeleteDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a deployment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "deployment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "deployment-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_DeleteDeployment.html"
+      },
+      {
+        "name": "DeletePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_DeletePolicy.html"
+      },
+      {
+        "name": "DeleteRule",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a rule",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "rule",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "rule-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_DeleteRule.html"
+      },
+      {
+        "name": "DeleteScope",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a scope",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "scope",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "scope-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_DeleteScope.html"
+      },
+      {
+        "name": "DeleteTemplate",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a template",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "template",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "template-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_DeleteTemplate.html"
+      },
+      {
+        "name": "GenerateRuleConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to generate a rule configuration from a natural-language prompt",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_GenerateRuleConfiguration.html"
+      },
+      {
+        "name": "GetAdminAccount",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a Network Security Manager administrator account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_GetAdminAccount.html"
+      },
+      {
+        "name": "GetDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a deployment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "deployment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "deployment-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_GetDeployment.html"
+      },
+      {
+        "name": "GetPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a policy",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_GetPolicy.html"
+      },
+      {
+        "name": "GetRule",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a rule",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "rule",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "rule-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_GetRule.html"
+      },
+      {
+        "name": "GetScope",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a scope",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "scope",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "scope-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_GetScope.html"
+      },
+      {
+        "name": "GetTemplate",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a template",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "template",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "template-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_GetTemplate.html"
+      },
+      {
+        "name": "ListAdminAccounts",
+        "permissionOnly": false,
+        "description": "Grants permission to list Network Security Manager administrator accounts",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListAdminAccounts.html"
+      },
+      {
+        "name": "ListAggregateResourceSynchronizationStatuses",
+        "permissionOnly": false,
+        "description": "Grants permission to list aggregate resource synchronization statuses across the caller's deployments",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListAggregateResourceSynchronizationStatuses.html"
+      },
+      {
+        "name": "ListDeploymentSnapshots",
+        "permissionOnly": false,
+        "description": "Grants permission to list the snapshots of a deployment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "deployment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListDeploymentSnapshots.html"
+      },
+      {
+        "name": "ListDeployments",
+        "permissionOnly": false,
+        "description": "Grants permission to list deployments",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListDeployments.html"
+      },
+      {
+        "name": "ListPolicies",
+        "permissionOnly": false,
+        "description": "Grants permission to list policies",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListPolicies.html"
+      },
+      {
+        "name": "ListPolicySnapshots",
+        "permissionOnly": false,
+        "description": "Grants permission to list the snapshots of a policy",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListPolicySnapshots.html"
+      },
+      {
+        "name": "ListResourceAssociations",
+        "permissionOnly": false,
+        "description": "Grants permission to list the associations of a Network Security Manager resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "deployment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "deployment-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "rule",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "rule-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "scope",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "scope-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "template",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "template-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListResourceAssociations.html"
+      },
+      {
+        "name": "ListResourceSynchronizationStatuses",
+        "permissionOnly": false,
+        "description": "Grants permission to list resource synchronization statuses for a deployment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "deployment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "deployment-snapshot",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListResourceSynchronizationStatuses.html"
+      },
+      {
+        "name": "ListRuleSnapshots",
+        "permissionOnly": false,
+        "description": "Grants permission to list the snapshots of a rule",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "rule",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListRuleSnapshots.html"
+      },
+      {
+        "name": "ListRules",
+        "permissionOnly": false,
+        "description": "Grants permission to list rules",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListRules.html"
+      },
+      {
+        "name": "ListScopeSnapshots",
+        "permissionOnly": false,
+        "description": "Grants permission to list the snapshots of a scope",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "scope",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListScopeSnapshots.html"
+      },
+      {
+        "name": "ListScopes",
+        "permissionOnly": false,
+        "description": "Grants permission to list scopes",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListScopes.html"
+      },
+      {
+        "name": "ListTagsForResource",
+        "permissionOnly": false,
+        "description": "Grants permission to list the tags of a Network Security Manager resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "deployment",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "deployment-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "rule",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "rule-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "scope",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "scope-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "template",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "template-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListTagsForResource.html"
+      },
+      {
+        "name": "ListTemplateSnapshots",
+        "permissionOnly": false,
+        "description": "Grants permission to list the snapshots of a template",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "template",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListTemplateSnapshots.html"
+      },
+      {
+        "name": "ListTemplates",
+        "permissionOnly": false,
+        "description": "Grants permission to list templates",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_ListTemplates.html"
+      },
+      {
+        "name": "PutAdminAccount",
+        "permissionOnly": false,
+        "description": "Grants permission to set a Network Security Manager administrator account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_PutAdminAccount.html"
+      },
+      {
+        "name": "TagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to add or overwrite tags on a Network Security Manager resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "deployment",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "deployment-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "rule",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "rule-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "scope",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "scope-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "template",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "template-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_TagResource.html"
+      },
+      {
+        "name": "UntagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to remove tags from a Network Security Manager resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "deployment",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "deployment-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "rule",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "rule-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "scope",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "scope-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "template",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "template-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_UntagResource.html"
+      },
+      {
+        "name": "UpdateDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to update a deployment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "deployment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "policy-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "scope",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "scope-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_UpdateDeployment.html"
+      },
+      {
+        "name": "UpdatePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to update a policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "rule",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "rule-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "template",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "template-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_UpdatePolicy.html"
+      },
+      {
+        "name": "UpdateRule",
+        "permissionOnly": false,
+        "description": "Grants permission to update a rule",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "rule",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_UpdateRule.html"
+      },
+      {
+        "name": "UpdateScope",
+        "permissionOnly": false,
+        "description": "Grants permission to update a scope",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "scope",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_UpdateScope.html"
+      },
+      {
+        "name": "UpdateTemplate",
+        "permissionOnly": false,
+        "description": "Grants permission to update a template",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "rule",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "rule-snapshot",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "template",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_UpdateTemplate.html"
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "deployment",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:network-security-manager:${Region}:${Account}:deployment:${DeploymentId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "deployment-snapshot",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:network-security-manager:${Region}:${Account}:deployment:${DeploymentId}:${VersionNumber}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "policy",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:network-security-manager:${Region}:${Account}:policy:${PolicyId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "policy-snapshot",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:network-security-manager:${Region}:${Account}:policy:${PolicyId}:${VersionNumber}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "rule",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:network-security-manager:${Region}:${Account}:rule:${RuleId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "rule-snapshot",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:network-security-manager:${Region}:${Account}:rule:${RuleId}:${VersionNumber}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "scope",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:network-security-manager:${Region}:${Account}:scope:${ScopeId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "scope-snapshot",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:network-security-manager:${Region}:${Account}:scope:${ScopeId}:${VersionNumber}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "template",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:network-security-manager:${Region}:${Account}:template:${TemplateId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "template-snapshot",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:network-security-manager:${Region}:${Account}:template:${TemplateId}:${VersionNumber}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      }
+    ],
+    "conditionKeys": [
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tags that are passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tags associated with the resource",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tag keys that are passed in the request",
+        "type": "ArrayOfString"
+      }
+    ]
+  },
+  {
     "name": "AWS OpsWorks",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_opsworks.html",
     "servicePrefix": "opsworks",
@@ -205461,6 +206934,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_billing_GetResourcePolicy.html"
       },
       {
+        "name": "ListBillingViewSegments",
+        "permissionOnly": false,
+        "description": "Grants permission to get the list of billing view segments for a specified billing view",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_billing_ListBillingViewSegments.html"
+      },
+      {
         "name": "ListBillingViews",
         "permissionOnly": false,
         "description": "Grants permission to get a list of all your available billing views",
@@ -255475,7 +256963,15 @@
               "aws:TagKeys",
               "oam:ResourceTypes"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "oam:TagResource",
+              "application-signals:Link",
+              "applicationinsights:Link",
+              "cloudwatch:Link",
+              "internetmonitor:Link",
+              "logs:Link",
+              "xray:Link"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/OAM/latest/APIReference/API_CreateLink.html"
@@ -255493,7 +256989,9 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "oam:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/OAM/latest/APIReference/API_CreateSink.html"
@@ -255741,7 +257239,14 @@
               "aws:ResourceTag/${TagKey}",
               "oam:ResourceTypes"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "application-signals:Link",
+              "applicationinsights:Link",
+              "cloudwatch:Link",
+              "internetmonitor:Link",
+              "logs:Link",
+              "xray:Link"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/OAM/latest/APIReference/API_UpdateLink.html"
@@ -324881,7 +326386,9 @@
               "elasticache:SnapshotRetentionLimit",
               "elasticache:TransitEncryptionEnabled"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "elasticache:AddTagsToResource"
+            ]
           },
           {
             "resourceType": "replicationgroup",
@@ -324906,7 +326413,9 @@
               "elasticache:SnapshotRetentionLimit",
               "elasticache:TransitEncryptionEnabled"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "elasticache:AddTagsToResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonElastiCache/latest/APIReference/API_CreateGlobalReplicationGroup.html"
@@ -328719,9 +330228,52 @@
             "dependentActions": [
               "events:TagResource"
             ]
+          },
+          {
+            "resourceType": "event-busv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "events:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateEventBus.html"
+      },
+      {
+        "name": "CreateEventSource",
+        "permissionOnly": false,
+        "description": "Grants permission to create an event source that forwards events to an event bus",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "event-busv2",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "events:source"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "event-sourcev2",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "events:source"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateEventSource.html"
       },
       {
         "name": "CreatePartnerEventSource",
@@ -328737,6 +330289,41 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreatePartnerEventSource.html"
+      },
+      {
+        "name": "CreateSubscriber",
+        "permissionOnly": false,
+        "description": "Grants permission to create a subscriber",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "event-busv2",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "events:ContentFilterPresent",
+              "events:Metadata/${MetadataKey}",
+              "events:Metadata/${MetadataKey}/Matcher"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "subscriber",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "events:ContentFilterPresent",
+              "events:Metadata/${MetadataKey}",
+              "events:Metadata/${MetadataKey}/Matcher"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateSubscriber.html"
       },
       {
         "name": "DeactivateEventSource",
@@ -328841,9 +330428,34 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
+          },
+          {
+            "resourceType": "event-busv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeleteEventBus.html"
+      },
+      {
+        "name": "DeleteEventSource",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an event source",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "event-sourcev2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeleteEventSource.html"
       },
       {
         "name": "DeletePartnerEventSource",
@@ -328859,6 +330471,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeletePartnerEventSource.html"
+      },
+      {
+        "name": "DeleteResourcePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a resource policy attached to an event bus",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "event-busv2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "events:PolicyName"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeleteResourcePolicy.html"
       },
       {
         "name": "DeleteRule",
@@ -328888,6 +330518,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeleteRule.html"
+      },
+      {
+        "name": "DeleteSubscriber",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a subscriber",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "subscriber",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DeleteSubscriber.html"
       },
       {
         "name": "DescribeApiDestination",
@@ -328968,6 +330615,14 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
+          },
+          {
+            "resourceType": "event-busv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DescribeEventBus.html"
@@ -328980,8 +330635,16 @@
         "resourceTypes": [
           {
             "resourceType": "event-source",
-            "required": true,
+            "required": false,
             "conditionKeys": [],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "event-sourcev2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ],
@@ -329045,6 +330708,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DescribeRule.html"
       },
       {
+        "name": "DescribeSubscriber",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details about a subscriber",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "subscriber",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_DescribeSubscriber.html"
+      },
+      {
         "name": "DisableRule",
         "permissionOnly": false,
         "description": "Grants permission to disable rules",
@@ -329101,6 +330781,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_EnableRule.html"
+      },
+      {
+        "name": "GetResourcePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the resource policy attached to an event bus",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "event-busv2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "events:PolicyName"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_GetResourcePolicy.html"
       },
       {
         "name": "ListApiDestinations",
@@ -329238,6 +330936,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListReplays.html"
       },
       {
+        "name": "ListResourcePolicies",
+        "permissionOnly": false,
+        "description": "Grants permission to list the resource policies attached to an event bus",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "event-busv2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListResourcePolicies.html"
+      },
+      {
         "name": "ListRuleNamesByTarget",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a list of the names of the rules associated with a target",
@@ -329268,6 +330983,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListRules.html"
       },
       {
+        "name": "ListSubscribers",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of subscribers",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_ListSubscribers.html"
+      },
+      {
         "name": "ListTagsForResource",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a list of tags associated with an Amazon EventBridge resource",
@@ -329275,6 +331005,24 @@
         "resourceTypes": [
           {
             "resourceType": "event-bus",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "events:creatorAccount"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "event-busv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "events:creatorAccount"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "event-sourcev2",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -329293,6 +331041,15 @@
           },
           {
             "resourceType": "rule-on-default-event-bus",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "events:creatorAccount"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "subscriber",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -329343,7 +331100,24 @@
               "aws:ResourceTag/${TagKey}",
               "events:detail-type",
               "events:eventBusInvocation",
-              "events:source"
+              "events:source",
+              "events:SystemMetadata/AwsDetailType",
+              "events:SystemMetadata/AwsSource",
+              "events:SystemMetadata/ContentType"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "event-busv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "events:detail-type",
+              "events:eventBusInvocation",
+              "events:source",
+              "events:SystemMetadata/AwsDetailType",
+              "events:SystemMetadata/AwsSource",
+              "events:SystemMetadata/ContentType"
             ],
             "dependentActions": []
           }
@@ -329379,6 +331153,46 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutPermission.html"
+      },
+      {
+        "name": "PutRawEvents",
+        "permissionOnly": false,
+        "description": "Grants permission to publish raw-format events with custom content types, metadata, binary payloads, and FIFO ordering to Amazon EventBridge",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "event-busv2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "events:eventBusInvocation",
+              "events:Metadata/${MetadataKey}",
+              "events:SystemMetadata/AwsDetailType",
+              "events:SystemMetadata/AwsSource",
+              "events:SystemMetadata/ContentType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutRawEvents.html"
+      },
+      {
+        "name": "PutResourcePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to attach a resource policy to an event bus",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "event-busv2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "events:PolicyName"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutResourcePolicy.html"
       },
       {
         "name": "PutRule",
@@ -329509,6 +331323,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RemoveTargets.html"
       },
       {
+        "name": "RevokeResource",
+        "permissionOnly": false,
+        "description": "Grants permission to revoke a subscriber or an event source on an event bus",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "event-busv2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_RevokeResource.html"
+      },
+      {
         "name": "StartReplay",
         "permissionOnly": false,
         "description": "Grants permission to start a replay of an archive",
@@ -329555,6 +331386,28 @@
             "dependentActions": []
           },
           {
+            "resourceType": "event-busv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "events:creatorAccount"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "event-sourcev2",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "events:creatorAccount"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "rule-on-custom-event-bus",
             "required": false,
             "conditionKeys": [
@@ -329567,6 +331420,17 @@
           },
           {
             "resourceType": "rule-on-default-event-bus",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "events:creatorAccount"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "subscriber",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -329611,6 +331475,26 @@
             "dependentActions": []
           },
           {
+            "resourceType": "event-busv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "events:creatorAccount"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "event-sourcev2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "events:creatorAccount"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "rule-on-custom-event-bus",
             "required": false,
             "conditionKeys": [
@@ -329622,6 +331506,16 @@
           },
           {
             "resourceType": "rule-on-default-event-bus",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "events:creatorAccount"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "subscriber",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -329722,9 +331616,75 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
+          },
+          {
+            "resourceType": "event-busv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UpdateEventBus.html"
+      },
+      {
+        "name": "UpdateEventSource",
+        "permissionOnly": false,
+        "description": "Grants permission to update an event source",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "event-busv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "events:source"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "event-sourcev2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "events:source"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UpdateEventSource.html"
+      },
+      {
+        "name": "UpdateSubscriber",
+        "permissionOnly": false,
+        "description": "Grants permission to update a subscriber",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "event-busv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "events:ContentFilterPresent",
+              "events:Metadata/${MetadataKey}",
+              "events:Metadata/${MetadataKey}/Matcher"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "subscriber",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "events:ContentFilterPresent",
+              "events:Metadata/${MetadataKey}",
+              "events:Metadata/${MetadataKey}/Matcher"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UpdateSubscriber.html"
       }
     ],
     "resourceTypes": [
@@ -329773,10 +331733,26 @@
         ]
       },
       {
+        "name": "event-busv2",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:events:${Region}:${Account}:event-busv2/${EventBusName}/${OpaqueId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "event-source",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:events:${Region}::event-source/${EventSourceName}",
         "conditionKeys": []
+      },
+      {
+        "name": "event-sourcev2",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:events:${Region}:${Account}:event-sourcev2/${SourceType}/${EventSourceName}/${OpaqueId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "key",
@@ -329819,6 +331795,14 @@
         "conditionKeys": []
       },
       {
+        "name": "subscriber",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:events:${Region}:${Account}:subscriber/${SubscriberName}/${OpaqueId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "terminate-instance",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:events:${Region}:${Account}:target/terminate-instance",
@@ -329845,6 +331829,12 @@
         "type": "ArrayOfString"
       },
       {
+        "name": "events:ContentFilterPresent",
+        "apiReferenceUrl": "",
+        "description": "Filters access by whether a subscriber declares a payload-scope content filter to CreateSubscriber and UpdateSubscriber actions",
+        "type": "Bool"
+      },
+      {
         "name": "events:EventBusArn",
         "apiReferenceUrl": "",
         "description": "Filters access by the ARN of the event buses that can be associated with an endpoint to CreateEndpoint and UpdateEndpoint actions",
@@ -329854,6 +331844,42 @@
         "name": "events:ManagedBy",
         "apiReferenceUrl": "",
         "description": "Filters access by AWS services. If a rule is created by an AWS service on your behalf, the value is the principal name of the service that created the rule",
+        "type": "String"
+      },
+      {
+        "name": "events:Metadata/${MetadataKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by a metadata key-value pair on the published event to PutRawEvents actions, or by the exact-match values declared for that key in a subscriber's metadata filter to CreateSubscriber and UpdateSubscriber actions",
+        "type": "ArrayOfString"
+      },
+      {
+        "name": "events:Metadata/${MetadataKey}/Matcher",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the match type declared for a metadata key in a subscriber's filter to CreateSubscriber and UpdateSubscriber actions",
+        "type": "String"
+      },
+      {
+        "name": "events:PolicyName",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the name of the resource policy specified in the request to resource policy actions",
+        "type": "String"
+      },
+      {
+        "name": "events:SystemMetadata/AwsDetailType",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the detail type recorded in the system metadata of an event forwarded onto an event bus to PutEvents and PutRawEvents actions",
+        "type": "String"
+      },
+      {
+        "name": "events:SystemMetadata/AwsSource",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the source recorded in the system metadata of an event forwarded onto an event bus to PutEvents and PutRawEvents actions",
+        "type": "String"
+      },
+      {
+        "name": "events:SystemMetadata/ContentType",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the content type declared on an event for PutRawEvents and for forwarded events authorized as PutEvents",
         "type": "String"
       },
       {
@@ -329895,13 +331921,13 @@
       {
         "name": "events:eventBusInvocation",
         "apiReferenceUrl": "",
-        "description": "Filters access by whether the event was generated via API or cross-account bus invocation to PutEvents actions",
+        "description": "Filters access to PutEvents and PutRawEvents by whether an event was forwarded from an event bus rather than published through a direct API call",
         "type": "String"
       },
       {
         "name": "events:source",
         "apiReferenceUrl": "",
-        "description": "Filters access by the AWS service or AWS partner event source that generated the event to PutEvents and PutRule actions. Matches the literal string of the source field of the event",
+        "description": "Filters access by the AWS service or AWS partner event source that generated the event to PutEvents and PutRule actions, or by the configured source of an event source to the CreateEventSource and UpdateEventSource actions. Matches the literal string of the source field of the event",
         "type": "ArrayOfString"
       }
     ]
@@ -351844,6 +353870,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_UpdateStreamMode.html"
+      },
+      {
+        "name": "UpdateStreamRecordDistributionStrategy",
+        "permissionOnly": false,
+        "description": "Grants permission to update the record distribution strategy for a Kinesis data stream",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "stream",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_UpdateStreamRecordDistributionStrategy.html"
       },
       {
         "name": "UpdateStreamWarmThroughput",

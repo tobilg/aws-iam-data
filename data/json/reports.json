@@ -1,20 +1,20 @@
 {
   "Actions by type": [
     {
+      "key": "Write Actions",
+      "value": 10642
+    },
+    {
       "key": "Read Actions",
-      "value": 5425
+      "value": 5442
     },
     {
       "key": null,
-      "value": 1050
-    },
-    {
-      "key": "Write Actions",
-      "value": 10610
+      "value": 1054
     },
     {
       "key": "List Actions",
-      "value": 3545
+      "value": 3554
     }
   ],
   "Longest action names": [
@@ -24,6 +24,10 @@
     },
     {
       "key": "license-manager-linux-subscriptions:GetRegisteredSubscriptionProvider",
+      "value": 69
+    },
+    {
+      "key": "network-security-manager:ListAggregateResourceSynchronizationStatuses",
       "value": 69
     },
     {
@@ -53,10 +57,6 @@
     {
       "key": "ec2:DescribeLocalGatewayRouteTableVirtualInterfaceGroupAssociations",
       "value": 67
-    },
-    {
-      "key": "license-manager-linux-subscriptions:DeregisterSubscriptionProvider",
-      "value": 66
     }
   ],
   "Longest condition key names": [
@@ -398,7 +398,7 @@
   "Summary": [
     {
       "key": "Total number of services",
-      "value": 475
+      "value": 476
     },
     {
       "key": "Average number of actions per service",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 2255
+      "value": 2268
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 1572
+      "value": 1579
     }
   ]
 }
