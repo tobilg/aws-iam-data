@@ -1,5 +1,48 @@
 [
   {
+    "dateOfChange": "2026-09-25",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Elemental Inference": [
+        "elemental-inference:DeleteFeedPolicy",
+        "elemental-inference:GetFeedPolicy",
+        "elemental-inference:PutFeedPolicy"
+      ],
+      "AWS Identity Store": [
+        "identitystore:DescribeIdentityStore",
+        "identitystore:ListIdentityStores"
+      ],
+      "AWS Security Agent": [
+        "securityagent:ListActorMessages"
+      ],
+      "Amazon DataZone": [
+        "datazone:CreateDataApp",
+        "datazone:DeleteConversation",
+        "datazone:DeleteDataApp",
+        "datazone:DeregisterAgentArtifact",
+        "datazone:GetDataApp",
+        "datazone:InvokeAgent",
+        "datazone:ListAgentArtifacts",
+        "datazone:ListAgentSessionRecords",
+        "datazone:ListDataApps",
+        "datazone:ListSharedDataApps",
+        "datazone:RegisterAgentArtifact",
+        "datazone:StopAgent",
+        "datazone:UpdateConversation",
+        "datazone:UpdateDataApp"
+      ],
+      "Claude Platform on AWS": [
+        "aws-external-anthropic:DisableKey",
+        "aws-external-anthropic:GetKey",
+        "aws-external-anthropic:ListKeys",
+        "aws-external-anthropic:RegisterKey",
+        "aws-external-anthropic:UpdateKey"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-09-24",
     "addedServices": [
       "AWS Network Security Manager"

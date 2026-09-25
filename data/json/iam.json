@@ -65744,6 +65744,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_DeleteFeed.html"
       },
       {
+        "name": "DeleteFeedPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the resource-based policy of a feed",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "feed",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_DeleteFeedPolicy.html"
+      },
+      {
         "name": "DisassociateFeed",
         "permissionOnly": false,
         "description": "Grants permission to disassociate a feed from an AWS resource",
@@ -65812,6 +65829,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_GetFeed.html"
       },
       {
+        "name": "GetFeedPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to get the resource-based policy of a feed",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "feed",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_GetFeedPolicy.html"
+      },
+      {
         "name": "GetMetadata",
         "permissionOnly": false,
         "description": "Grants permission to retrieve metadata for a specific feed output",
@@ -65872,6 +65906,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_ListTagsForResource.html"
+      },
+      {
+        "name": "PutFeedPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to put a resource-based policy on a feed",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "feed",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_PutFeedPolicy.html"
       },
       {
         "name": "PutMedia",
@@ -104522,6 +104573,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_DescribeGroupMembership.html"
       },
       {
+        "name": "DescribeIdentityStore",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve information about an IdentityStore",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Identitystore",
+            "required": true,
+            "conditionKeys": [
+              "identitystore:PrimaryRegion"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "API_DescribeIdentityStore.html"
+      },
+      {
         "name": "DescribeRegion",
         "permissionOnly": false,
         "description": "Grants permission to retrieve configuration details for a specific IdentityStore region",
@@ -104848,6 +104916,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/singlesignon/latest/IdentityStoreAPIReference/API_ListGroups.html"
+      },
+      {
+        "name": "ListIdentityStores",
+        "permissionOnly": false,
+        "description": "Grants permission to list IdentityStores in an AWS account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "API_ListIdentityStores.html"
       },
       {
         "name": "ListRegions",
@@ -144836,7 +144919,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_CreateDeploymentSnapshot.html"
@@ -144912,7 +144997,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_CreatePolicySnapshot.html"
@@ -145046,7 +145133,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "network-security-manager:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-security-manager/latest/APIReference/API_CreateTemplateSnapshot.html"
@@ -170128,6 +170217,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_InitiateProviderRegistration.html"
+      },
+      {
+        "name": "ListActorMessages",
+        "permissionOnly": false,
+        "description": "Grants permission to list the MFA messages received for an actor at its server-generated address",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ListActorMessages.html"
       },
       {
         "name": "ListAgentSpaces",
@@ -257390,7 +257496,6 @@
             ],
             "dependentActions": [
               "observabilityadmin:TagResource",
-              "cloudwatch:PutPipelineRule",
               "iam:PassRole"
             ]
           }
@@ -257505,9 +257610,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "cloudwatch:DeletePipelineRule"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_DeleteTelemetryPipeline.html"
@@ -258171,7 +258274,6 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": [
-              "cloudwatch:PutPipelineRule",
               "iam:PassRole"
             ]
           }
@@ -281084,6 +281186,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_CreateConnection.html"
       },
       {
+        "name": "CreateDataApp",
+        "permissionOnly": false,
+        "description": "Grants permission to create data apps",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_CreateDataApp.html"
+      },
+      {
         "name": "CreateDataProduct",
         "permissionOnly": false,
         "description": "Grants permission to create data product",
@@ -281561,6 +281678,36 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteConnection.html"
       },
       {
+        "name": "DeleteConversation",
+        "permissionOnly": false,
+        "description": "Grants permission to delete conversations",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteConversation.html"
+      },
+      {
+        "name": "DeleteDataApp",
+        "permissionOnly": false,
+        "description": "Grants permission to delete data apps",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteDataApp.html"
+      },
+      {
         "name": "DeleteDataExportConfiguration",
         "permissionOnly": false,
         "description": "Grants permission to delete DataZone catalog data export configuration",
@@ -281938,6 +282085,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteTimeSeriesDataPoints.html"
       },
       {
+        "name": "DeregisterAgentArtifact",
+        "permissionOnly": false,
+        "description": "Grants permission to deregister agent artifacts",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_DeregisterAgentArtifact.html"
+      },
+      {
         "name": "DisassociateEnvironmentRole",
         "permissionOnly": false,
         "description": "Grants permission to disassociate a role in a default service blueprint environment",
@@ -282146,6 +282308,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_GetCurrentEffectivePolicy.html"
+      },
+      {
+        "name": "GetDataApp",
+        "permissionOnly": false,
+        "description": "Grants permission to get data apps",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_GetDataApp.html"
       },
       {
         "name": "GetDataExportConfiguration",
@@ -282705,6 +282882,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_GetUserProfile.html"
       },
       {
+        "name": "InvokeAgent",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_InvokeAgent.html"
+      },
+      {
         "name": "ListAccountEnvironments",
         "permissionOnly": false,
         "description": "Grants permission to list Environments across all domains in an AWS Account",
@@ -282748,6 +282940,36 @@
           }
         ],
         "apiReferenceUrl": "{APIReferenceDocPage}API_ListAccountsInAccountPool.html"
+      },
+      {
+        "name": "ListAgentArtifacts",
+        "permissionOnly": false,
+        "description": "Grants permission to list agent artifacts",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_ListAgentArtifacts.html"
+      },
+      {
+        "name": "ListAgentSessionRecords",
+        "permissionOnly": false,
+        "description": "Grants permission to list agent session records",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_ListAgentSessionRecords.html"
       },
       {
         "name": "ListAssetFilters",
@@ -282823,6 +283045,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_ListConversations.html"
+      },
+      {
+        "name": "ListDataApps",
+        "permissionOnly": false,
+        "description": "Grants permission to list data apps",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_ListDataApps.html"
       },
       {
         "name": "ListDataProductRevisions",
@@ -283215,6 +283452,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_ListRules.html"
       },
       {
+        "name": "ListSharedDataApps",
+        "permissionOnly": false,
+        "description": "Grants permission to list shared data apps",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_ListSharedDataApps.html"
+      },
+      {
         "name": "ListSubscriptionGrants",
         "permissionOnly": false,
         "description": "Grants permission to List subscription grants for a subscribed principal",
@@ -283397,6 +283649,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_QueryGraph.html"
+      },
+      {
+        "name": "RegisterAgentArtifact",
+        "permissionOnly": false,
+        "description": "Grants permission to register agent artifacts",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_RegisterAgentArtifact.html"
       },
       {
         "name": "RejectPredictions",
@@ -283699,6 +283966,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_StartNotebookSync.html"
       },
       {
+        "name": "StopAgent",
+        "permissionOnly": false,
+        "description": "Grants permission to stop agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_StopAgent.html"
+      },
+      {
         "name": "StopCompute",
         "permissionOnly": false,
         "description": "Grants permission to stop compute",
@@ -283871,6 +284153,36 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateConnection.html"
+      },
+      {
+        "name": "UpdateConversation",
+        "permissionOnly": false,
+        "description": "Grants permission to update conversations",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateConversation.html"
+      },
+      {
+        "name": "UpdateDataApp",
+        "permissionOnly": false,
+        "description": "Grants permission to update data apps",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateDataApp.html"
       },
       {
         "name": "UpdateDataSource",
@@ -325781,6 +326093,30 @@
             "dependentActions": []
           },
           {
+            "resourceType": "globalreplicationgroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "elasticache:AtRestEncryptionEnabled",
+              "elasticache:AuthTokenEnabled",
+              "elasticache:AutomaticFailoverEnabled",
+              "elasticache:CacheNodeType",
+              "elasticache:CacheParameterGroupName",
+              "elasticache:ClusterModeEnabled",
+              "elasticache:EngineType",
+              "elasticache:EngineVersion",
+              "elasticache:KmsKeyId",
+              "elasticache:MultiAZEnabled",
+              "elasticache:NumNodeGroups",
+              "elasticache:ReplicasPerNodeGroup",
+              "elasticache:SnapshotRetentionLimit",
+              "elasticache:TransitEncryptionEnabled"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "parametergroup",
             "required": false,
             "conditionKeys": [
@@ -326370,7 +326706,9 @@
             "resourceType": "globalreplicationgroup",
             "required": true,
             "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
               "elasticache:AtRestEncryptionEnabled",
               "elasticache:AuthTokenEnabled",
               "elasticache:AutomaticFailoverEnabled",
@@ -326449,7 +326787,9 @@
             "resourceType": "globalreplicationgroup",
             "required": false,
             "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
               "elasticache:AtRestEncryptionEnabled",
               "elasticache:AuthTokenEnabled",
               "elasticache:AutomaticFailoverEnabled",
@@ -326806,6 +327146,9 @@
             "resourceType": "globalreplicationgroup",
             "required": true,
             "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
               "elasticache:AtRestEncryptionEnabled",
               "elasticache:AuthTokenEnabled",
               "elasticache:AutomaticFailoverEnabled",
@@ -326969,6 +327312,9 @@
             "resourceType": "globalreplicationgroup",
             "required": true,
             "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
               "elasticache:AtRestEncryptionEnabled",
               "elasticache:AuthTokenEnabled",
               "elasticache:AutomaticFailoverEnabled",
@@ -327319,6 +327665,9 @@
             "resourceType": "globalreplicationgroup",
             "required": true,
             "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
               "elasticache:AtRestEncryptionEnabled",
               "elasticache:AuthTokenEnabled",
               "elasticache:AutomaticFailoverEnabled",
@@ -327609,6 +327958,9 @@
             "resourceType": "globalreplicationgroup",
             "required": true,
             "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
               "elasticache:AtRestEncryptionEnabled",
               "elasticache:AuthTokenEnabled",
               "elasticache:AutomaticFailoverEnabled",
@@ -327659,6 +328011,9 @@
             "resourceType": "globalreplicationgroup",
             "required": true,
             "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
               "elasticache:AtRestEncryptionEnabled",
               "elasticache:AuthTokenEnabled",
               "elasticache:AutomaticFailoverEnabled",
@@ -327689,6 +328044,9 @@
             "resourceType": "globalreplicationgroup",
             "required": true,
             "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
               "elasticache:AtRestEncryptionEnabled",
               "elasticache:AuthTokenEnabled",
               "elasticache:AutomaticFailoverEnabled",
@@ -328044,6 +328402,9 @@
             "resourceType": "globalreplicationgroup",
             "required": true,
             "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
               "elasticache:AtRestEncryptionEnabled",
               "elasticache:AuthTokenEnabled",
               "elasticache:AutomaticFailoverEnabled",
@@ -328282,6 +328643,9 @@
             "resourceType": "globalreplicationgroup",
             "required": true,
             "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
               "elasticache:AtRestEncryptionEnabled",
               "elasticache:AuthTokenEnabled",
               "elasticache:AutomaticFailoverEnabled",
@@ -328348,6 +328712,30 @@
               "elasticache:EngineVersion",
               "elasticache:MultiAZEnabled",
               "elasticache:SnapshotRetentionLimit"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "globalreplicationgroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "elasticache:AtRestEncryptionEnabled",
+              "elasticache:AuthTokenEnabled",
+              "elasticache:AutomaticFailoverEnabled",
+              "elasticache:CacheNodeType",
+              "elasticache:CacheParameterGroupName",
+              "elasticache:ClusterModeEnabled",
+              "elasticache:EngineType",
+              "elasticache:EngineVersion",
+              "elasticache:KmsKeyId",
+              "elasticache:MultiAZEnabled",
+              "elasticache:NumNodeGroups",
+              "elasticache:ReplicasPerNodeGroup",
+              "elasticache:SnapshotRetentionLimit",
+              "elasticache:TransitEncryptionEnabled"
             ],
             "dependentActions": []
           },
@@ -328647,6 +329035,9 @@
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:elasticache::${Account}:globalreplicationgroup:${GlobalReplicationGroupId}",
         "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys",
           "elasticache:AtRestEncryptionEnabled",
           "elasticache:AuthTokenEnabled",
           "elasticache:AutomaticFailoverEnabled",
@@ -330088,7 +330479,7 @@
   },
   {
     "name": "Amazon EventBridge",
-    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_events.html",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_eventbridge.html",
     "servicePrefix": "events",
     "actions": [
       {
@@ -330204,9 +330595,7 @@
             "conditionKeys": [
               "events:EventBusArn"
             ],
-            "dependentActions": [
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateEndpoint.html"
@@ -330225,9 +330614,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "events:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "event-busv2",
@@ -330237,9 +330624,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "events:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_CreateEventBus.html"
@@ -331215,10 +331600,7 @@
               "events:ManagedBy",
               "events:source"
             ],
-            "dependentActions": [
-              "events:TagResource",
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "rule-on-default-event-bus",
@@ -331235,10 +331617,7 @@
               "events:ManagedBy",
               "events:source"
             ],
-            "dependentActions": [
-              "events:TagResource",
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutRule.html"
@@ -331258,9 +331637,7 @@
               "events:ManagedBy",
               "events:TargetArn"
             ],
-            "dependentActions": [
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "rule-on-default-event-bus",
@@ -331271,9 +331648,7 @@
               "events:ManagedBy",
               "events:TargetArn"
             ],
-            "dependentActions": [
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_PutTargets.html"
@@ -331596,9 +331971,7 @@
             "conditionKeys": [
               "events:EventBusArn"
             ],
-            "dependentActions": [
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/eventbridge/latest/APIReference/API_UpdateEndpoint.html"
@@ -343833,8 +344206,8 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "customdetectionrule",
-            "required": true,
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -463265,6 +463638,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "aws-external-anthropic:KeyArn",
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
@@ -463410,6 +463784,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
       },
       {
+        "name": "DisableKey",
+        "permissionOnly": false,
+        "description": "Grants permission to disable an external encryption key",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-external-anthropic:KeyArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
+      },
+      {
         "name": "GetAccountStatus",
         "permissionOnly": false,
         "description": "Grants permission to retrieve the status of account setup and AWS Marketplace registration",
@@ -463486,6 +463877,23 @@
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
+      },
+      {
+        "name": "GetKey",
+        "permissionOnly": false,
+        "description": "Grants permission to get an external encryption key",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-external-anthropic:KeyArn"
             ],
             "dependentActions": []
           }
@@ -463697,6 +464105,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
       },
       {
+        "name": "ListKeys",
+        "permissionOnly": false,
+        "description": "Grants permission to list external encryption keys",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
+      },
+      {
         "name": "ListMemoryStores",
         "permissionOnly": false,
         "description": "Grants permission to list managed agent memory stores in a workspace",
@@ -463865,6 +464288,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
       },
       {
+        "name": "RegisterKey",
+        "permissionOnly": false,
+        "description": "Grants permission to register an external encryption key",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
+      },
+      {
         "name": "RotateWebhookSecret",
         "permissionOnly": false,
         "description": "Grants permission to rotate the signing secret of a webhook",
@@ -463946,6 +464384,23 @@
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
+      },
+      {
+        "name": "UpdateKey",
+        "permissionOnly": false,
+        "description": "Grants permission to update an external encryption key",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-external-anthropic:KeyArn"
             ],
             "dependentActions": []
           }
@@ -464064,6 +464519,7 @@
             "resourceType": "workspace",
             "required": true,
             "conditionKeys": [
+              "aws-external-anthropic:KeyArn",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -464100,6 +464556,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by the Claude Platform role used for the console session",
         "type": "String"
+      },
+      {
+        "name": "aws-external-anthropic:KeyArn",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the KMS key ARN associated with the external key",
+        "type": "ARN"
       },
       {
         "name": "aws:RequestTag/${TagKey}",
