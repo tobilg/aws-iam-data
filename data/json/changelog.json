@@ -1,5 +1,29 @@
 [
   {
+    "dateOfChange": "2026-09-26",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS End User Messaging Social": [
+        "social-messaging:GetWhatsAppCallPermission",
+        "social-messaging:SendWhatsAppCallEvent",
+        "social-messaging:UpdateLinkedWhatsAppBusinessAccountPhoneNumber"
+      ],
+      "AWS Security Agent": [
+        "securityagent:HandleProviderCallback",
+        "securityagent:UpdateIntegration"
+      ],
+      "Amazon EC2": [
+        "ec2:ReplaceImageInstanceTypeSpecification",
+        "ec2:ValidateSecurityGroupQuotasForInterface"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:AttachClusterNodeNetworkInterface"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-09-25",
     "addedServices": [],
     "removedServices": [],

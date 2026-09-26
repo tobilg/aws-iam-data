@@ -77713,6 +77713,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_GetLinkedWhatsAppBusinessAccountPhoneNumber.html"
       },
       {
+        "name": "GetWhatsAppCallPermission",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve voice calling permission for a WhatsApp phone number",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "phone-number-id",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_GetWhatsAppCallPermission.html"
+      },
+      {
         "name": "GetWhatsAppFlow",
         "permissionOnly": false,
         "description": "Grants permission to retrieve the metadata and status of a WhatsApp Flow",
@@ -77942,6 +77959,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_PutWhatsAppBusinessAccountEventDestinations.html"
       },
       {
+        "name": "SendWhatsAppCallEvent",
+        "permissionOnly": false,
+        "description": "Grants permission to send a voice calling event through WhatsApp",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "phone-number-id",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_SendWhatsAppCallEvent.html"
+      },
+      {
         "name": "SendWhatsAppMessage",
         "permissionOnly": false,
         "description": "Grants permission to send a message through WhatsApp",
@@ -78013,6 +78047,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_UntagResource.html"
+      },
+      {
+        "name": "UpdateLinkedWhatsAppBusinessAccountPhoneNumber",
+        "permissionOnly": false,
+        "description": "Grants permission to update the settings of a linked WhatsApp phone number",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "phone-number-id",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_UpdateLinkedWhatsAppBusinessAccountPhoneNumber.html"
       },
       {
         "name": "UpdateWhatsAppFlow",
@@ -170172,6 +170223,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_GetSecurityRequirementPack.html"
       },
       {
+        "name": "HandleProviderCallback",
+        "permissionOnly": false,
+        "description": "Grants permission to handle the provider OAuth registration callback that completes integration setup",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_HandleProviderCallback.html"
+      },
+      {
         "name": "HandleProviderRegistrationCallback",
         "permissionOnly": false,
         "description": "Grants permission to handle the provider OAuth registration callback that completes integration setup",
@@ -171137,6 +171203,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateIntegratedResources.html"
+      },
+      {
+        "name": "UpdateIntegration",
+        "permissionOnly": false,
+        "description": "Grants permission to update an integration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Integration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateIntegration.html"
       },
       {
         "name": "UpdatePentest",
@@ -287907,7 +287990,6 @@
               "ec2:AvailabilityZone",
               "ec2:CapacityReservationFleet",
               "ec2:CreateDate",
-              "ec2:DestinationCapacityReservationId",
               "ec2:EbsOptimized",
               "ec2:EndDate",
               "ec2:EndDateType",
@@ -287919,7 +288001,6 @@
               "ec2:PlacementGroup",
               "ec2:Region",
               "ec2:ResourceTag/${TagKey}",
-              "ec2:SourceCapacityReservationId",
               "ec2:Tenancy"
             ],
             "dependentActions": []
@@ -288456,7 +288537,6 @@
               "ec2:AvailabilityZone",
               "ec2:CapacityReservationFleet",
               "ec2:CreateDate",
-              "ec2:DestinationCapacityReservationId",
               "ec2:EbsOptimized",
               "ec2:EndDate",
               "ec2:EndDateType",
@@ -288468,7 +288548,6 @@
               "ec2:PlacementGroup",
               "ec2:Region",
               "ec2:ResourceTag/${TagKey}",
-              "ec2:SourceCapacityReservationId",
               "ec2:Tenancy"
             ],
             "dependentActions": []
@@ -290397,6 +290476,18 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "capacity-reservation",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "ec2:CreateTags"
+            ]
+          },
+          {
             "resourceType": "fleet",
             "required": true,
             "conditionKeys": [
@@ -290662,6 +290753,7 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
+              "ec2:BootModeOverride",
               "ec2:ImageID",
               "ec2:Owner",
               "ec2:Region"
@@ -303254,7 +303346,6 @@
               "ec2:AvailabilityZone",
               "ec2:CapacityReservationFleet",
               "ec2:CreateDate",
-              "ec2:DestinationCapacityReservationId",
               "ec2:EbsOptimized",
               "ec2:EndDate",
               "ec2:EndDateType",
@@ -303266,7 +303357,6 @@
               "ec2:PlacementGroup",
               "ec2:Region",
               "ec2:ResourceTag/${TagKey}",
-              "ec2:SourceCapacityReservationId",
               "ec2:Tenancy"
             ],
             "dependentActions": []
@@ -309403,7 +309493,6 @@
               "ec2:AvailabilityZone",
               "ec2:CapacityReservationFleet",
               "ec2:CreateDate",
-              "ec2:DestinationCapacityReservationId",
               "ec2:EbsOptimized",
               "ec2:EndDate",
               "ec2:EndDateType",
@@ -309415,7 +309504,6 @@
               "ec2:PlacementGroup",
               "ec2:Region",
               "ec2:ResourceTag/${TagKey}",
-              "ec2:SourceCapacityReservationId",
               "ec2:Tenancy"
             ],
             "dependentActions": []
@@ -309674,6 +309762,30 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ReplaceImageCriteriaInAllowedImagesSettings.html"
+      },
+      {
+        "name": "ReplaceImageInstanceTypeSpecification",
+        "permissionOnly": false,
+        "description": "Grants permission to replace or remove the instance type specification for an Amazon Machine Image (AMI)",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "image",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:ImageID",
+              "ec2:ImageType",
+              "ec2:Owner",
+              "ec2:Public",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}",
+              "ec2:RootDeviceType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ReplaceImageInstanceTypeSpecification.html"
       },
       {
         "name": "ReplaceNetworkAclAssociation",
@@ -311492,6 +311604,27 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_UpdateSecurityGroupRuleDescriptionsIngress.html"
       },
       {
+        "name": "ValidateSecurityGroupQuotasForInterface",
+        "permissionOnly": false,
+        "description": "Grants permission to validate whether the specified security groups can be associated with a single network interface without exceeding applicable quotas",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "security-group",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}",
+              "ec2:SecurityGroupID",
+              "ec2:Vpc"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ValidateSecurityGroupQuotasForInterface.html"
+      },
+      {
         "name": "WithdrawByoipCidr",
         "permissionOnly": false,
         "description": "Grants permission to stop advertising an address range that was provisioned for use in AWS through bring your own IP addresses (BYOIP)",
@@ -311860,6 +311993,7 @@
           "aws:TagKeys",
           "ec2:Attribute",
           "ec2:Attribute/${AttributeName}",
+          "ec2:BootModeOverride",
           "ec2:ImageID",
           "ec2:ImageType",
           "ec2:IsLaunchTemplateResource",
@@ -313248,6 +313382,12 @@
         "name": "ec2:AvailabilityZoneId",
         "apiReferenceUrl": "",
         "description": "Filters access by the ID of an Availability Zone in an AWS Region",
+        "type": "String"
+      },
+      {
+        "name": "ec2:BootModeOverride",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the boot mode",
         "type": "String"
       },
       {
@@ -391268,14 +391408,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "MessageTemplate",
             "required": true,
             "conditionKeys": [
@@ -391468,16 +391600,6 @@
               "aws:TagKeys"
             ],
             "dependentActions": []
-          },
-          {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wisdom/latest/APIReference/API_CreateContentAssociation.html"
@@ -391526,14 +391648,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "MessageTemplate",
             "required": true,
             "conditionKeys": [
@@ -391551,14 +391665,6 @@
         "description": "Grants permission to create a version of a message template",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "MessageTemplate",
             "required": true,
@@ -391613,14 +391719,6 @@
         "description": "Grants permission to deactivate a message template",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "MessageTemplate",
             "required": true,
@@ -391782,14 +391880,6 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
-          },
-          {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wisdom/latest/APIReference/API_DeleteContent.html"
@@ -391810,14 +391900,6 @@
           },
           {
             "resourceType": "ContentAssociation",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "KnowledgeBase",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -391868,14 +391950,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "MessageTemplate",
             "required": true,
             "conditionKeys": [
@@ -391894,14 +391968,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "MessageTemplate",
             "required": true,
             "conditionKeys": [
@@ -391919,14 +391985,6 @@
         "description": "Grants permission to delete quick response",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "QuickResponse",
             "required": true,
@@ -392036,14 +392094,6 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
-          },
-          {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wisdom/latest/APIReference/API_GetContent.html"
@@ -392069,14 +392119,6 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
-          },
-          {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wisdom/latest/APIReference/API_GetContentAssociation.html"
@@ -392089,14 +392131,6 @@
         "resourceTypes": [
           {
             "resourceType": "Content",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "KnowledgeBase",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -392147,15 +392181,6 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
-              "wisdom:MessageTemplate/RoutingProfileArn"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "MessageTemplate",
             "required": true,
             "conditionKeys": [
@@ -392190,14 +392215,6 @@
         "description": "Grants permission to retrieve content",
         "accessLevel": "Read",
         "resourceTypes": [
-          {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "QuickResponse",
             "required": true,
@@ -392382,14 +392399,6 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
-          },
-          {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wisdom/latest/APIReference/API_ListContentAssociations.html"
@@ -392449,14 +392458,6 @@
         "description": "Grants permission to list message template versions for the specified message template",
         "accessLevel": "List",
         "resourceTypes": [
-          {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "MessageTemplate",
             "required": true,
@@ -392660,15 +392661,6 @@
         "description": "Grants permission to render a message template",
         "accessLevel": "Read",
         "resourceTypes": [
-          {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
-              "wisdom:MessageTemplate/RoutingProfileArn"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "MessageTemplate",
             "required": true,
@@ -393073,14 +393065,6 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
-          },
-          {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wisdom/latest/APIReference/API_UpdateContent.html"
@@ -393109,14 +393093,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "MessageTemplate",
             "required": true,
             "conditionKeys": [
@@ -393135,14 +393111,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "MessageTemplate",
             "required": true,
             "conditionKeys": [
@@ -393160,14 +393128,6 @@
         "description": "Grants permission to update information or content of the quick response",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "KnowledgeBase",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "QuickResponse",
             "required": true,
@@ -429351,6 +429311,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AssociateTrialComponent.html"
       },
       {
+        "name": "AttachClusterNodeNetworkInterface",
+        "permissionOnly": false,
+        "description": "Grants permission to attach an elastic network interface to a SageMaker HyperPod cluster node",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cluster",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_AttachClusterNodeNetworkInterface.html"
+      },
+      {
         "name": "AttachClusterNodeVolume",
         "permissionOnly": false,
         "description": "Grants permission to attach an Amazon EBS volume to a SageMaker HyperPod cluster node",
@@ -431828,7 +431806,6 @@
             "resourceType": "feature-group",
             "required": true,
             "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "sagemaker:ResourceTag/${TagKey}"
             ],
