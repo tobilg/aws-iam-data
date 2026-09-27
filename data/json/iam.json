@@ -68157,7 +68157,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "mediaconvert:ListJobs"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconvert/latest/apireference/jobs-id.html"
