@@ -77528,6 +77528,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_AssociateWhatsAppBusinessAccount.html"
       },
       {
+        "name": "CreateWhatsAppDataset",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new WhatsApp dataset for a WhatsApp Business Account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "waba",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_CreateWhatsAppDataset.html"
+      },
+      {
         "name": "CreateWhatsAppFlow",
         "permissionOnly": false,
         "description": "Grants permission to create a new WhatsApp Flow",
@@ -77713,6 +77730,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_GetLinkedWhatsAppBusinessAccountPhoneNumber.html"
+      },
+      {
+        "name": "GetWhatsAppBusinessPublicKey",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the WhatsApp business public key for a phone number",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "phone-number-id",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_GetWhatsAppBusinessPublicKey.html"
       },
       {
         "name": "GetWhatsAppCallPermission",
@@ -77961,6 +77995,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_PutWhatsAppBusinessAccountEventDestinations.html"
       },
       {
+        "name": "PutWhatsAppBusinessPublicKey",
+        "permissionOnly": false,
+        "description": "Grants permission to set the WhatsApp business public key for a phone number",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "phone-number-id",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_PutWhatsAppBusinessPublicKey.html"
+      },
+      {
         "name": "SendWhatsAppCallEvent",
         "permissionOnly": false,
         "description": "Grants permission to send a voice calling event through WhatsApp",
@@ -77976,6 +78027,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_SendWhatsAppCallEvent.html"
+      },
+      {
+        "name": "SendWhatsAppConversionEvent",
+        "permissionOnly": false,
+        "description": "Grants permission to send a conversion event through WhatsApp",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "waba",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/social-messaging/latest/APIReference/API_SendWhatsAppConversionEvent.html"
       },
       {
         "name": "SendWhatsAppMessage",
@@ -183190,6 +183258,30 @@
     ]
   },
   {
+    "name": "AWS Startups",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_startups.html",
+    "servicePrefix": "startups",
+    "actions": [
+      {
+        "name": "GetSpendSummary",
+        "permissionOnly": false,
+        "description": "Grants permission to summarize billing, cost, and cost forecast information for which you have permissions",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/startupadvisor/latest/userguide/#"
+      }
+    ],
+    "resourceTypes": [],
+    "conditionKeys": []
+  },
+  {
     "name": "AWS Step Functions",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_stepfunctions.html",
     "servicePrefix": "states",
@@ -222881,6 +222973,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/arc-region-switch/latest/api/API_ListRoute53HealthChecksInRegion.html"
+      },
+      {
+        "name": "ListServiceQuotaWarnings",
+        "permissionOnly": false,
+        "description": "Grants permission to list service quota warnings for plans that have opted in to the feature",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/arc-region-switch/latest/api/API_ListServiceQuotaWarnings.html"
       },
       {
         "name": "ListTagsForResource",

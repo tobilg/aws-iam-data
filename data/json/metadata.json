@@ -1,5 +1,5 @@
 {
-  "serviceCount": 476,
+  "serviceCount": 477,
   "services": [
     {
       "name": "AWS Billing Conductor",
@@ -5635,9 +5635,10 @@
       "name": "AWS End User Messaging Social",
       "servicePrefix": "social-messaging",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_socialmessaging.html",
-      "actionsCount": 34,
+      "actionsCount": 38,
       "actions": [
         "AssociateWhatsAppBusinessAccount",
+        "CreateWhatsAppDataset",
         "CreateWhatsAppFlow",
         "CreateWhatsAppMessageTemplate",
         "CreateWhatsAppMessageTemplateFromLibrary",
@@ -5649,6 +5650,7 @@
         "DisassociateWhatsAppBusinessAccount",
         "GetLinkedWhatsAppBusinessAccount",
         "GetLinkedWhatsAppBusinessAccountPhoneNumber",
+        "GetWhatsAppBusinessPublicKey",
         "GetWhatsAppCallPermission",
         "GetWhatsAppFlow",
         "GetWhatsAppFlowPreview",
@@ -5663,7 +5665,9 @@
         "PostWhatsAppMessageMedia",
         "PublishWhatsAppFlow",
         "PutWhatsAppBusinessAccountEventDestinations",
+        "PutWhatsAppBusinessPublicKey",
         "SendWhatsAppCallEvent",
+        "SendWhatsAppConversionEvent",
         "SendWhatsAppMessage",
         "TagResource",
         "UntagResource",
@@ -13158,6 +13162,19 @@
       ]
     },
     {
+      "name": "AWS Startups",
+      "servicePrefix": "startups",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_startups.html",
+      "actionsCount": 1,
+      "actions": [
+        "GetSpendSummary"
+      ],
+      "resourceTypesCount": 0,
+      "resourceTypes": [],
+      "conditionKeysCount": 0,
+      "conditionKeys": []
+    },
+    {
       "name": "AWS Step Functions",
       "servicePrefix": "states",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_stepfunctions.html",
@@ -16288,7 +16305,7 @@
       "name": "Amazon ARC Region switch",
       "servicePrefix": "arc-region-switch",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_arc-region-switch.html",
-      "actionsCount": 21,
+      "actionsCount": 22,
       "actions": [
         "ApprovePlanExecutionStep",
         "CancelPlanExecution",
@@ -16304,6 +16321,7 @@
         "ListPlansInRegion",
         "ListRoute53HealthChecks",
         "ListRoute53HealthChecksInRegion",
+        "ListServiceQuotaWarnings",
         "ListTagsForResource",
         "StartPlanExecution",
         "TagResource",

@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2026-09-29",
+    "addedServices": [
+      "AWS Startups"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS End User Messaging Social": [
+        "social-messaging:CreateWhatsAppDataset",
+        "social-messaging:GetWhatsAppBusinessPublicKey",
+        "social-messaging:PutWhatsAppBusinessPublicKey",
+        "social-messaging:SendWhatsAppConversionEvent"
+      ],
+      "Amazon ARC Region switch": [
+        "arc-region-switch:ListServiceQuotaWarnings"
+      ],
+      "AWS Startups": [
+        "startups:GetSpendSummary"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-09-26",
     "addedServices": [],
     "removedServices": [],
