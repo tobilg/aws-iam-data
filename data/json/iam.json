@@ -64314,7 +64314,6 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
-              "elasticloadbalancing:ListenerProtocol",
               "elasticloadbalancing:ResourceTag/${TagKey}",
               "elasticloadbalancing:Scheme",
               "elasticloadbalancing:SecurityGroup",
@@ -64331,7 +64330,6 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
-              "elasticloadbalancing:ListenerProtocol",
               "elasticloadbalancing:ResourceTag/${TagKey}",
               "elasticloadbalancing:Scheme",
               "elasticloadbalancing:SecurityGroup",
@@ -64348,7 +64346,6 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
-              "elasticloadbalancing:ListenerProtocol",
               "elasticloadbalancing:ResourceTag/${TagKey}",
               "elasticloadbalancing:Scheme",
               "elasticloadbalancing:SecurityGroup",
@@ -105664,7 +105661,8 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "interconnect:RemoteAccount"
             ],
             "dependentActions": [
               "interconnect:TagResource"
@@ -105886,6 +105884,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by a list of tag keys that are allowed in the request",
         "type": "ArrayOfString"
+      },
+      {
+        "name": "interconnect:RemoteAccount",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the remote partner account identifier supplied when creating a connection",
+        "type": "String"
       }
     ]
   },
@@ -113615,773 +113619,6 @@
     ],
     "resourceTypes": [],
     "conditionKeys": []
-  },
-  {
-    "name": "AWS IoT Events",
-    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_iotevents.html",
-    "servicePrefix": "iotevents",
-    "actions": [
-      {
-        "name": "BatchAcknowledgeAlarm",
-        "permissionOnly": false,
-        "description": "Grants permission to send one or more acknowledge action requests to AWS IoT Events",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchAcknowledgeAlarm.html"
-      },
-      {
-        "name": "BatchDeleteDetector",
-        "permissionOnly": false,
-        "description": "Grants permission to delete a detector instance within the AWS IoT Events system",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "detectorModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchDeleteDetector.html"
-      },
-      {
-        "name": "BatchDisableAlarm",
-        "permissionOnly": false,
-        "description": "Grants permission to disable one or more alarm instances",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchDisableAlarm.html"
-      },
-      {
-        "name": "BatchEnableAlarm",
-        "permissionOnly": false,
-        "description": "Grants permission to enable one or more alarm instances",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchEnableAlarm.html"
-      },
-      {
-        "name": "BatchPutMessage",
-        "permissionOnly": false,
-        "description": "Grants permission to send a set of messages to the AWS IoT Events system",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "input",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchPutMessage.html"
-      },
-      {
-        "name": "BatchResetAlarm",
-        "permissionOnly": false,
-        "description": "Grants permission to reset one or more alarm instances",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchResetAlarm.html"
-      },
-      {
-        "name": "BatchSnoozeAlarm",
-        "permissionOnly": false,
-        "description": "Grants permission to change one or more alarm instances to the snooze mode",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchSnoozeAlarm.html"
-      },
-      {
-        "name": "BatchUpdateDetector",
-        "permissionOnly": false,
-        "description": "Grants permission to update a detector instance within the AWS IoT Events system",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "detectorModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_BatchUpdateDetector.html"
-      },
-      {
-        "name": "CreateAlarmModel",
-        "permissionOnly": false,
-        "description": "Grants permission to create an alarm model to monitor an AWS IoT Events input attribute or an AWS IoT SiteWise asset property",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_CreateAlarmModel.html"
-      },
-      {
-        "name": "CreateDetectorModel",
-        "permissionOnly": false,
-        "description": "Grants permission to create a detector model to monitor an AWS IoT Events input attribute",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "detectorModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_CreateDetectorModel.html"
-      },
-      {
-        "name": "CreateInput",
-        "permissionOnly": false,
-        "description": "Grants permission to create an Input in IotEvents",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "input",
-            "required": true,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_CreateInput.html"
-      },
-      {
-        "name": "DeleteAlarmModel",
-        "permissionOnly": false,
-        "description": "Grants permission to delete an alarm model",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_DeleteAlarmModel.html"
-      },
-      {
-        "name": "DeleteDetectorModel",
-        "permissionOnly": false,
-        "description": "Grants permission to delete a detector model",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "detectorModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_DeleteDetectorModel.html"
-      },
-      {
-        "name": "DeleteInput",
-        "permissionOnly": false,
-        "description": "Grants permission to delete an input",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "input",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_DeleteInput.html"
-      },
-      {
-        "name": "DescribeAlarm",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve information about an alarm instance",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_DescribeAlarm.html"
-      },
-      {
-        "name": "DescribeAlarmModel",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve information about an alarm model",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_DescribeAlarmModel.html"
-      },
-      {
-        "name": "DescribeDetector",
-        "permissionOnly": false,
-        "description": "Grants permission to retriev information about a detector instance",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "detectorModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_DescribeDetector.html"
-      },
-      {
-        "name": "DescribeDetectorModel",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve information about a detector model",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "detectorModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_DescribeDetectorModel.html"
-      },
-      {
-        "name": "DescribeDetectorModelAnalysis",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve the detector model analysis information",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_DescribeDetectorModelAnalysis.html"
-      },
-      {
-        "name": "DescribeInput",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve an information about Input",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "input",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_DescribeInput.html"
-      },
-      {
-        "name": "DescribeLoggingOptions",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve the current settings of the AWS IoT Events logging options",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_DescribeLoggingOptions.html"
-      },
-      {
-        "name": "GetDetectorModelAnalysisResults",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve the detector model analysis results",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_GetDetectorModelAnalysisResults.html"
-      },
-      {
-        "name": "ListAlarmModelVersions",
-        "permissionOnly": false,
-        "description": "Grants permission to list all the versions of an alarm model",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_ListAlarmModelVersions.html"
-      },
-      {
-        "name": "ListAlarmModels",
-        "permissionOnly": false,
-        "description": "Grants permission to list the alarm models that you created",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_ListAlarmModels.html"
-      },
-      {
-        "name": "ListAlarms",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve information about all alarm instances per alarmModel",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_ListAlarms.html"
-      },
-      {
-        "name": "ListDetectorModelVersions",
-        "permissionOnly": false,
-        "description": "Grants permission to list all the versions of a detector model",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "detectorModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_ListDetectorModelVersions.html"
-      },
-      {
-        "name": "ListDetectorModels",
-        "permissionOnly": false,
-        "description": "Grants permission to list the detector models that you created",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_ListDetectorModels.html"
-      },
-      {
-        "name": "ListDetectors",
-        "permissionOnly": false,
-        "description": "Grants permission to retrieve information about all detector instances per detectormodel",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "detectorModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_iotevents-data_ListDetectors.html"
-      },
-      {
-        "name": "ListInputRoutings",
-        "permissionOnly": false,
-        "description": "Grants permission to list one or more input routings",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_ListInputRoutings.html"
-      },
-      {
-        "name": "ListInputs",
-        "permissionOnly": false,
-        "description": "Grants permission to lists the inputs you have created",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_ListInputs.html"
-      },
-      {
-        "name": "ListTagsForResource",
-        "permissionOnly": false,
-        "description": "Grants permission to list the tags (metadata) which you have assigned to the resource",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": false,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "detectorModel",
-            "required": false,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "input",
-            "required": false,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_ListTagsForResource.html"
-      },
-      {
-        "name": "PutLoggingOptions",
-        "permissionOnly": false,
-        "description": "Grants permission to set or update the AWS IoT Events logging options",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_PutLoggingOptions.html"
-      },
-      {
-        "name": "StartDetectorModelAnalysis",
-        "permissionOnly": false,
-        "description": "Grants permission to start the detector model analysis",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_StartDetectorModelAnalysis.html"
-      },
-      {
-        "name": "TagResource",
-        "permissionOnly": false,
-        "description": "Grants permission to adds to or modifies the tags of the given resource.Tags are metadata which can be used to manage a resource",
-        "accessLevel": "Tagging, Write",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "detectorModel",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "input",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_TagResource.html"
-      },
-      {
-        "name": "UntagResource",
-        "permissionOnly": false,
-        "description": "Grants permission to remove the given tags (metadata) from the resource",
-        "accessLevel": "Tagging, Write",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": false,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "detectorModel",
-            "required": false,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "input",
-            "required": false,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_UntagResource.html"
-      },
-      {
-        "name": "UpdateAlarmModel",
-        "permissionOnly": false,
-        "description": "Grants permission to update an alarm model",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "alarmModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_UpdateAlarmModel.html"
-      },
-      {
-        "name": "UpdateDetectorModel",
-        "permissionOnly": false,
-        "description": "Grants permission to update a detector model",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "detectorModel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_UpdateDetectorModel.html"
-      },
-      {
-        "name": "UpdateInput",
-        "permissionOnly": false,
-        "description": "Grants permission to update an input",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "input",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_UpdateInput.html"
-      },
-      {
-        "name": "UpdateInputRouting",
-        "permissionOnly": false,
-        "description": "Grants permission to update input routing",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "input",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/iotevents/latest/apireference/API_UpdateInputRouting.html"
-      }
-    ],
-    "resourceTypes": [
-      {
-        "name": "alarmModel",
-        "apiReferenceUrl": "",
-        "arnPattern": "arn:${Partition}:iotevents:${Region}:${Account}:alarmModel/${AlarmModelName}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ]
-      },
-      {
-        "name": "detectorModel",
-        "apiReferenceUrl": "",
-        "arnPattern": "arn:${Partition}:iotevents:${Region}:${Account}:detectorModel/${DetectorModelName}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ]
-      },
-      {
-        "name": "input",
-        "apiReferenceUrl": "",
-        "arnPattern": "arn:${Partition}:iotevents:${Region}:${Account}:input/${InputName}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ]
-      }
-    ],
-    "conditionKeys": [
-      {
-        "name": "aws:RequestTag/${TagKey}",
-        "apiReferenceUrl": "",
-        "description": "Filters access by the tag key-value pairs in the request",
-        "type": "String"
-      },
-      {
-        "name": "aws:ResourceTag/${TagKey}",
-        "apiReferenceUrl": "",
-        "description": "Filters access by the tags attached to the resource",
-        "type": "String"
-      },
-      {
-        "name": "aws:TagKeys",
-        "apiReferenceUrl": "",
-        "description": "Filters actions by the tag keys in the request",
-        "type": "ArrayOfString"
-      },
-      {
-        "name": "iotevents:keyValue",
-        "apiReferenceUrl": "",
-        "description": "Filters access by the instanceId (key-value) of the message",
-        "type": "String"
-      }
-    ]
   },
   {
     "name": "AWS IoT Fleet Hub for Device Management",
@@ -172823,6 +172060,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetRecommendedPolicyV2.html"
       },
       {
+        "name": "GetRemediationsV2",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of remediation targets and their metadata",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "hubv2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetRemediationsV2.html"
+      },
+      {
         "name": "GetResourcesStatisticsV2",
         "permissionOnly": false,
         "description": "Grants permission to retrieve aggregate statistics about resources",
@@ -173026,6 +172280,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_ListEnabledProductsForImport.html"
+      },
+      {
+        "name": "ListExposuresByRemediationV2",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of exposure findings associated with a remediation target",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "hubv2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_ListExposuresByRemediationV2.html"
       },
       {
         "name": "ListFindingAggregators",
@@ -253502,789 +252773,6 @@
     ]
   },
   {
-    "name": "Amazon CloudWatch Evidently",
-    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_evidently.html",
-    "servicePrefix": "evidently",
-    "actions": [
-      {
-        "name": "BatchEvaluateFeature",
-        "permissionOnly": false,
-        "description": "Grants permission to send a batched evaluate feature request",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Feature",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_BatchEvaluateFeature.html"
-      },
-      {
-        "name": "CreateExperiment",
-        "permissionOnly": false,
-        "description": "Grants permission to create an experiment",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_CreateExperiment.html"
-      },
-      {
-        "name": "CreateFeature",
-        "permissionOnly": false,
-        "description": "Grants permission to create a feature",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_CreateFeature.html"
-      },
-      {
-        "name": "CreateLaunch",
-        "permissionOnly": false,
-        "description": "Grants permission to create a launch",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_CreateLaunch.html"
-      },
-      {
-        "name": "CreateProject",
-        "permissionOnly": false,
-        "description": "Grants permission to create a project",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_CreateProject.html"
-      },
-      {
-        "name": "CreateSegment",
-        "permissionOnly": false,
-        "description": "Grants permission to create a segment",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_CreateSegment.html"
-      },
-      {
-        "name": "DeleteExperiment",
-        "permissionOnly": false,
-        "description": "Grants permission to delete an experiment",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Experiment",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_DeleteExperiment.html"
-      },
-      {
-        "name": "DeleteFeature",
-        "permissionOnly": false,
-        "description": "Grants permission to delete a feature",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Feature",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_DeleteFeature.html"
-      },
-      {
-        "name": "DeleteLaunch",
-        "permissionOnly": false,
-        "description": "Grants permission to delete a launch",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Launch",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_DeleteLaunch.html"
-      },
-      {
-        "name": "DeleteProject",
-        "permissionOnly": false,
-        "description": "Grants permission to delete a project",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_DeleteProject.html"
-      },
-      {
-        "name": "DeleteSegment",
-        "permissionOnly": false,
-        "description": "Grants permission to delete a segment",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Segment",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_DeleteSegment.html"
-      },
-      {
-        "name": "EvaluateFeature",
-        "permissionOnly": false,
-        "description": "Grants permission to send an evaluate feature request",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Feature",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_EvaluateFeature.html"
-      },
-      {
-        "name": "GetExperiment",
-        "permissionOnly": false,
-        "description": "Grants permission to get experiment details",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "Experiment",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_GetExperiment.html"
-      },
-      {
-        "name": "GetExperimentResults",
-        "permissionOnly": false,
-        "description": "Grants permission to get experiment result",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "Experiment",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_GetExperimentResults.html"
-      },
-      {
-        "name": "GetFeature",
-        "permissionOnly": false,
-        "description": "Grants permission to get feature details",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "Feature",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_GetFeature.html"
-      },
-      {
-        "name": "GetLaunch",
-        "permissionOnly": false,
-        "description": "Grants permission to get launch details",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "Launch",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_GetLaunch.html"
-      },
-      {
-        "name": "GetProject",
-        "permissionOnly": false,
-        "description": "Grants permission to get project details",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "Project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_GetProject.html"
-      },
-      {
-        "name": "GetSegment",
-        "permissionOnly": false,
-        "description": "Grants permission to get segment details",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "Segment",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_GetSegment.html"
-      },
-      {
-        "name": "ListExperiments",
-        "permissionOnly": false,
-        "description": "Grants permission to list experiments",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_ListExperiments.html"
-      },
-      {
-        "name": "ListFeatures",
-        "permissionOnly": false,
-        "description": "Grants permission to list features",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_ListFeatures.html"
-      },
-      {
-        "name": "ListLaunches",
-        "permissionOnly": false,
-        "description": "Grants permission to list launches",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_ListLaunches.html"
-      },
-      {
-        "name": "ListProjects",
-        "permissionOnly": false,
-        "description": "Grants permission to list projects",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_ListProjects.html"
-      },
-      {
-        "name": "ListSegmentReferences",
-        "permissionOnly": false,
-        "description": "Grants permission to list resources referencing a segment",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_ListSegmentReferences.html"
-      },
-      {
-        "name": "ListSegments",
-        "permissionOnly": false,
-        "description": "Grants permission to list segments",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_ListSegments.html"
-      },
-      {
-        "name": "ListTagsForResource",
-        "permissionOnly": false,
-        "description": "Grants permission to list tags for resources",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_ListTagsForResource.html"
-      },
-      {
-        "name": "PutProjectEvents",
-        "permissionOnly": false,
-        "description": "Grants permission to send performance events",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_PutProjectEvents.html"
-      },
-      {
-        "name": "StartExperiment",
-        "permissionOnly": false,
-        "description": "Grants permission to start an experiment",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Experiment",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_StartExperiment.html"
-      },
-      {
-        "name": "StartLaunch",
-        "permissionOnly": false,
-        "description": "Grants permission to start a launch",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Launch",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_StartLaunch.html"
-      },
-      {
-        "name": "StopExperiment",
-        "permissionOnly": false,
-        "description": "Grants permission to stop an experiment",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Experiment",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_StopExperiment.html"
-      },
-      {
-        "name": "StopLaunch",
-        "permissionOnly": false,
-        "description": "Grants permission to stop a launch",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Launch",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_StopLaunch.html"
-      },
-      {
-        "name": "TagResource",
-        "permissionOnly": false,
-        "description": "Grants permission to tag resources",
-        "accessLevel": "Tagging, Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Experiment",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "Feature",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "Launch",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "Project",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "Segment",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_TagResource.html"
-      },
-      {
-        "name": "TestSegmentPattern",
-        "permissionOnly": false,
-        "description": "Grants permission to test a segment pattern",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_TestSegmentPattern.html"
-      },
-      {
-        "name": "UntagResource",
-        "permissionOnly": false,
-        "description": "Grants permission to untag resources",
-        "accessLevel": "Tagging, Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Experiment",
-            "required": false,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "Feature",
-            "required": false,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "Launch",
-            "required": false,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "Project",
-            "required": false,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "Segment",
-            "required": false,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_UntagResource.html"
-      },
-      {
-        "name": "UpdateExperiment",
-        "permissionOnly": false,
-        "description": "Grants permission to update experiment",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Experiment",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_UpdateExperiment.html"
-      },
-      {
-        "name": "UpdateFeature",
-        "permissionOnly": false,
-        "description": "Grants permission to update feature",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Feature",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_UpdateFeature.html"
-      },
-      {
-        "name": "UpdateLaunch",
-        "permissionOnly": false,
-        "description": "Grants permission to update a launch",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Launch",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_UpdateLaunch.html"
-      },
-      {
-        "name": "UpdateProject",
-        "permissionOnly": false,
-        "description": "Grants permission to update project",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_UpdateProject.html"
-      },
-      {
-        "name": "UpdateProjectDataDelivery",
-        "permissionOnly": false,
-        "description": "Grants permission to update project data delivery",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "Project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatchevidently/latest/APIReference/API_UpdateProjectDataDelivery.html"
-      }
-    ],
-    "resourceTypes": [
-      {
-        "name": "Experiment",
-        "apiReferenceUrl": "",
-        "arnPattern": "arn:${Partition}:evidently:${Region}:${Account}:project/${ProjectName}/experiment/${ExperimentName}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ]
-      },
-      {
-        "name": "Feature",
-        "apiReferenceUrl": "",
-        "arnPattern": "arn:${Partition}:evidently:${Region}:${Account}:project/${ProjectName}/feature/${FeatureName}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ]
-      },
-      {
-        "name": "Launch",
-        "apiReferenceUrl": "",
-        "arnPattern": "arn:${Partition}:evidently:${Region}:${Account}:project/${ProjectName}/launch/${LaunchName}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ]
-      },
-      {
-        "name": "Project",
-        "apiReferenceUrl": "",
-        "arnPattern": "arn:${Partition}:evidently:${Region}:${Account}:project/${ProjectName}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ]
-      },
-      {
-        "name": "Segment",
-        "apiReferenceUrl": "",
-        "arnPattern": "arn:${Partition}:evidently:${Region}:${Account}:segment/${SegmentName}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ]
-      }
-    ],
-    "conditionKeys": [
-      {
-        "name": "aws:RequestTag/${TagKey}",
-        "apiReferenceUrl": "",
-        "description": "Filters access by the tags that are passed the request on behalf of the IAM principal",
-        "type": "String"
-      },
-      {
-        "name": "aws:ResourceTag/${TagKey}",
-        "apiReferenceUrl": "",
-        "description": "Filters access by the tags associated with the resource that make the request on behalf of the IAM principal",
-        "type": "String"
-      },
-      {
-        "name": "aws:TagKeys",
-        "apiReferenceUrl": "",
-        "description": "Filters access by the tag keys that are passed in the request on behalf of the IAM principal",
-        "type": "ArrayOfString"
-      }
-    ]
-  },
-  {
     "name": "Amazon CloudWatch Internet Monitor",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_internetmonitor.html",
     "servicePrefix": "internetmonitor",
@@ -281378,21 +279866,6 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_CreateConnection.html"
       },
       {
-        "name": "CreateDataApp",
-        "permissionOnly": false,
-        "description": "Grants permission to create data apps",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_CreateDataApp.html"
-      },
-      {
         "name": "CreateDataProduct",
         "permissionOnly": false,
         "description": "Grants permission to create data product",
@@ -281870,36 +280343,6 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteConnection.html"
       },
       {
-        "name": "DeleteConversation",
-        "permissionOnly": false,
-        "description": "Grants permission to delete conversations",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteConversation.html"
-      },
-      {
-        "name": "DeleteDataApp",
-        "permissionOnly": false,
-        "description": "Grants permission to delete data apps",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteDataApp.html"
-      },
-      {
         "name": "DeleteDataExportConfiguration",
         "permissionOnly": false,
         "description": "Grants permission to delete DataZone catalog data export configuration",
@@ -282277,21 +280720,6 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteTimeSeriesDataPoints.html"
       },
       {
-        "name": "DeregisterAgentArtifact",
-        "permissionOnly": false,
-        "description": "Grants permission to deregister agent artifacts",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_DeregisterAgentArtifact.html"
-      },
-      {
         "name": "DisassociateEnvironmentRole",
         "permissionOnly": false,
         "description": "Grants permission to disassociate a role in a default service blueprint environment",
@@ -282500,21 +280928,6 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_GetCurrentEffectivePolicy.html"
-      },
-      {
-        "name": "GetDataApp",
-        "permissionOnly": false,
-        "description": "Grants permission to get data apps",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_GetDataApp.html"
       },
       {
         "name": "GetDataExportConfiguration",
@@ -283074,21 +281487,6 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_GetUserProfile.html"
       },
       {
-        "name": "InvokeAgent",
-        "permissionOnly": false,
-        "description": "Grants permission to invoke agent",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_InvokeAgent.html"
-      },
-      {
         "name": "ListAccountEnvironments",
         "permissionOnly": false,
         "description": "Grants permission to list Environments across all domains in an AWS Account",
@@ -283132,36 +281530,6 @@
           }
         ],
         "apiReferenceUrl": "{APIReferenceDocPage}API_ListAccountsInAccountPool.html"
-      },
-      {
-        "name": "ListAgentArtifacts",
-        "permissionOnly": false,
-        "description": "Grants permission to list agent artifacts",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_ListAgentArtifacts.html"
-      },
-      {
-        "name": "ListAgentSessionRecords",
-        "permissionOnly": false,
-        "description": "Grants permission to list agent session records",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_ListAgentSessionRecords.html"
       },
       {
         "name": "ListAssetFilters",
@@ -283237,21 +281605,6 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_ListConversations.html"
-      },
-      {
-        "name": "ListDataApps",
-        "permissionOnly": false,
-        "description": "Grants permission to list data apps",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_ListDataApps.html"
       },
       {
         "name": "ListDataProductRevisions",
@@ -283644,21 +281997,6 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_ListRules.html"
       },
       {
-        "name": "ListSharedDataApps",
-        "permissionOnly": false,
-        "description": "Grants permission to list shared data apps",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_ListSharedDataApps.html"
-      },
-      {
         "name": "ListSubscriptionGrants",
         "permissionOnly": false,
         "description": "Grants permission to List subscription grants for a subscribed principal",
@@ -283841,21 +282179,6 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_QueryGraph.html"
-      },
-      {
-        "name": "RegisterAgentArtifact",
-        "permissionOnly": false,
-        "description": "Grants permission to register agent artifacts",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_RegisterAgentArtifact.html"
       },
       {
         "name": "RejectPredictions",
@@ -284158,21 +282481,6 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_StartNotebookSync.html"
       },
       {
-        "name": "StopAgent",
-        "permissionOnly": false,
-        "description": "Grants permission to stop agent",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_StopAgent.html"
-      },
-      {
         "name": "StopCompute",
         "permissionOnly": false,
         "description": "Grants permission to stop compute",
@@ -284345,36 +282653,6 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateConnection.html"
-      },
-      {
-        "name": "UpdateConversation",
-        "permissionOnly": false,
-        "description": "Grants permission to update conversations",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateConversation.html"
-      },
-      {
-        "name": "UpdateDataApp",
-        "permissionOnly": false,
-        "description": "Grants permission to update data apps",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateDataApp.html"
       },
       {
         "name": "UpdateDataSource",
@@ -320692,7 +318970,9 @@
               "ecs:container-instances",
               "ecs:enable-ebs-volumes",
               "ecs:enable-execute-command",
-              "ecs:ResourceTag/${TagKey}"
+              "ecs:ResourceTag/${TagKey}",
+              "ecs:task-cpu",
+              "ecs:task-memory"
             ],
             "dependentActions": [
               "ecs:TagResource",
@@ -394733,7 +393013,6 @@
               "aws:TagKeys"
             ],
             "dependentActions": [
-              "quicksight:CreateDataSource",
               "quicksight:TagResource"
             ]
           }
@@ -395439,9 +393718,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "quicksight:DeleteDataSource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DeleteOAuthClientApplication.html"
@@ -396462,9 +394739,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "quicksight:DescribeDataSource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_DescribeOAuthClientApplication.html"
@@ -397429,9 +395704,7 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "quicksight:ListDataSources"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_ListOAuthClientApplications.html"
@@ -399368,9 +397641,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "quicksight:UpdateDataSource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/quicksight/latest/APIReference/API_UpdateOAuthClientApplication.html"
