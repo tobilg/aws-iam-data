@@ -135,7 +135,7 @@
       "name": "AWS Account Management",
       "servicePrefix": "account",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_account.html",
-      "actionsCount": 16,
+      "actionsCount": 18,
       "actions": [
         "AcceptPrimaryEmailUpdate",
         "DeleteAlternateContact",
@@ -152,7 +152,9 @@
         "PutAccountName",
         "PutAlternateContact",
         "PutContactInformation",
-        "StartPrimaryEmailUpdate"
+        "SendPhoneNumberVerification",
+        "StartPrimaryEmailUpdate",
+        "VerifyPhoneNumber"
       ],
       "resourceTypesCount": 2,
       "resourceTypes": [
@@ -22578,7 +22580,7 @@
         "user",
         "usergroup"
       ],
-      "conditionKeysCount": 24,
+      "conditionKeysCount": 25,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
@@ -22589,6 +22591,7 @@
         "elasticache:CacheNodeType",
         "elasticache:CacheParameterGroupName",
         "elasticache:ClusterModeEnabled",
+        "elasticache:ConnectionType",
         "elasticache:DataStorageUnit",
         "elasticache:Durability",
         "elasticache:EngineType",
@@ -29380,7 +29383,7 @@
       "name": "Amazon S3 Vectors",
       "servicePrefix": "s3vectors",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_s3vectors.html",
-      "actionsCount": 19,
+      "actionsCount": 21,
       "actions": [
         "CreateIndex",
         "CreateVectorBucket",
@@ -29396,11 +29399,13 @@
         "ListTagsForResource",
         "ListVectorBuckets",
         "ListVectors",
+        "PutVectorBucketDefaultIndexMode",
         "PutVectorBucketPolicy",
         "PutVectors",
         "QueryVectors",
         "TagResource",
-        "UntagResource"
+        "UntagResource",
+        "UpdateIndexMode"
       ],
       "resourceTypesCount": 2,
       "resourceTypes": [

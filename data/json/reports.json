@@ -2,7 +2,7 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 10614
+      "value": 10618
     },
     {
       "key": "List Actions",
@@ -173,15 +173,15 @@
       "value": 84
     },
     {
-      "key": "instance - arn:${Partition}:ec2:${Region}:${Account}:instance/${InstanceId}",
-      "value": 76
-    },
-    {
       "key": "rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog",
       "value": 76
     },
     {
       "key": "AgentSpace - arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}",
+      "value": 74
+    },
+    {
+      "key": "instance - arn:${Partition}:ec2:${Region}:${Account}:instance/${InstanceId}",
       "value": 74
     }
   ],
@@ -414,7 +414,7 @@
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 1581
+      "value": 1582
     }
   ]
 }

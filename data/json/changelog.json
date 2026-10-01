@@ -1,5 +1,21 @@
 [
   {
+    "dateOfChange": "2026-10-01",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Account Management": [
+        "account:SendPhoneNumberVerification",
+        "account:VerifyPhoneNumber"
+      ],
+      "Amazon S3 Vectors": [
+        "s3vectors:PutVectorBucketDefaultIndexMode",
+        "s3vectors:UpdateIndexMode"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-09-30",
     "addedServices": [],
     "removedServices": [
