@@ -56713,6 +56713,8 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -56900,6 +56902,8 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -57076,13 +57080,13 @@
         "name": "aidevops:SourceAgentSpaceArn",
         "apiReferenceUrl": "",
         "description": "Filters access by the source AgentSpace ARN on the request. Set by the service from the request context, not supplied by the caller",
-        "type": "String"
+        "type": "ARN"
       },
       {
         "name": "aidevops:TargetAgentSpaceArn",
         "apiReferenceUrl": "",
         "description": "Filters access by the target AgentSpace ARN on the request. Set by the service from the request context, not supplied by the caller",
-        "type": "String"
+        "type": "ARN"
       },
       {
         "name": "aws:RequestTag/${TagKey}",
@@ -131426,6 +131430,61 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_CreateNetworkConnector.html"
       },
       {
+        "name": "CreateWebFunction",
+        "permissionOnly": false,
+        "description": "Grants permission to create a Lambda web function",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "webFunction",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "lambda:Request/WebFunctionAuthType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_CreateWebFunction.html"
+      },
+      {
+        "name": "CreateWebFunctionEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to create an endpoint for a Lambda web function",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "webFunction",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "lambda:Request/WebFunctionAuthType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_CreateWebFunctionEndpoint.html"
+      },
+      {
+        "name": "CreateWebFunctionRevision",
+        "permissionOnly": false,
+        "description": "Grants permission to create a revision for a Lambda web function",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "webFunction",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_CreateWebFunctionRevision.html"
+      },
+      {
         "name": "DeleteAlias",
         "permissionOnly": false,
         "description": "Grants permission to delete an AWS Lambda function alias",
@@ -131675,7 +131734,7 @@
       {
         "name": "DeleteResourcePolicy",
         "permissionOnly": false,
-        "description": "Grants permission to detach a policy from an AWS Lambda resource",
+        "description": "Grants permission to detach a policy from an AWS Lambda resource, additionally requiring lambda:RemovePermission only for a function resource",
         "accessLevel": "Permissions management, Write",
         "resourceTypes": [
           {
@@ -131686,9 +131745,70 @@
               "lambda:Principal"
             ],
             "dependentActions": []
+          },
+          {
+            "resourceType": "webFunction",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "lambda:Principal"
+            ],
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_DeleteResourcePolicy.html"
+      },
+      {
+        "name": "DeleteWebFunction",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a Lambda web function",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "webFunction",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_DeleteWebFunction.html"
+      },
+      {
+        "name": "DeleteWebFunctionEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an endpoint for a Lambda web function",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "webFunctionEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "lambda:Resource/WebFunctionAuthType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_DeleteWebFunctionEndpoint.html"
+      },
+      {
+        "name": "DeleteWebFunctionRevision",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a revision for a Lambda web function",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "webFunctionRevision",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_DeleteWebFunctionRevision.html"
       },
       {
         "name": "GetAccountSettings",
@@ -132123,11 +132243,19 @@
       {
         "name": "GetResourcePolicy",
         "permissionOnly": false,
-        "description": "Grants permission to view a policy for an AWS Lambda resource",
+        "description": "Grants permission to view a policy for an AWS Lambda resource, additionally requiring lambda:GetPolicy only for a function resource",
         "accessLevel": "Read",
         "resourceTypes": [
           {
             "resourceType": "function",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "webFunction",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -132153,6 +132281,73 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_GetRuntimeManagementConfig.html"
+      },
+      {
+        "name": "GetWebAccountSettings",
+        "permissionOnly": false,
+        "description": "Grants permission to view the account settings",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_GetWebAccountSettings.html"
+      },
+      {
+        "name": "GetWebFunction",
+        "permissionOnly": false,
+        "description": "Grants permission to view details about a Lambda web function",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "webFunction",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_GetWebFunction.html"
+      },
+      {
+        "name": "GetWebFunctionEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to view details about an endpoint for a Lambda web function",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "webFunctionEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "lambda:Resource/WebFunctionAuthType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_GetWebFunctionEndpoint.html"
+      },
+      {
+        "name": "GetWebFunctionRevision",
+        "permissionOnly": false,
+        "description": "Grants permission to view details about a revision for a Lambda web function",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "webFunctionRevision",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_GetWebFunctionRevision.html"
       },
       {
         "name": "InvokeAsync",
@@ -132514,7 +132709,7 @@
       {
         "name": "ListTags",
         "permissionOnly": false,
-        "description": "Grants permission to retrieve a list of tags for an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector or MicroVM image resource",
+        "description": "Grants permission to retrieve a list of tags for an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, or a web function resource",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -132564,6 +132759,14 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
+          },
+          {
+            "resourceType": "webFunction",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_ListTags.html"
@@ -132584,6 +132787,55 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_ListVersionsByFunction.html"
+      },
+      {
+        "name": "ListWebFunctionEndpoints",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of endpoints for a Lambda web function",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "webFunction",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_ListWebFunctionEndpoints.html"
+      },
+      {
+        "name": "ListWebFunctionRevisions",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of revisions for a Lambda web function",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "webFunction",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_ListWebFunctionRevisions.html"
+      },
+      {
+        "name": "ListWebFunctions",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of Lambda web functions",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_ListWebFunctions.html"
       },
       {
         "name": "PublishLayerVersion",
@@ -132740,11 +132992,20 @@
       {
         "name": "PutResourcePolicy",
         "permissionOnly": false,
-        "description": "Grants permission to attach a policy to an AWS Lambda resource",
+        "description": "Grants permission to attach a policy to an AWS Lambda resource, additionally requiring lambda:AddPermission and lambda:RemovePermission only for a function resource",
         "accessLevel": "Permissions management, Write",
         "resourceTypes": [
           {
             "resourceType": "function",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "lambda:Principal"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "webFunction",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -132928,7 +133189,7 @@
       {
         "name": "TagResource",
         "permissionOnly": false,
-        "description": "Grants permission to add tags to an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector or MicroVM image resource",
+        "description": "Grants permission to add tags to an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, or a web function resource",
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
@@ -132983,6 +133244,16 @@
           },
           {
             "resourceType": "networkConnector",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "webFunction",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -133014,7 +133285,7 @@
       {
         "name": "UntagResource",
         "permissionOnly": false,
-        "description": "Grants permission to remove tags from an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector or MicroVM image resource",
+        "description": "Grants permission to remove tags from an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, or a web function resource",
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
@@ -133064,6 +133335,15 @@
           },
           {
             "resourceType": "networkConnector",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "webFunction",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -133292,6 +133572,25 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_UpdateNetworkConnector.html"
+      },
+      {
+        "name": "UpdateWebFunctionEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to update an endpoint for a Lambda web function",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "webFunctionEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "lambda:Request/WebFunctionAuthType",
+              "lambda:Resource/WebFunctionAuthType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_UpdateWebFunctionEndpoint.html"
       }
     ],
     "resourceTypes": [
@@ -133378,6 +133677,30 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
+      },
+      {
+        "name": "webFunction",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:lambda:${Region}:${Account}:web-function/${FunctionName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "webFunctionEndpoint",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:lambda:${Region}:${Account}:web-function/${FunctionName}/endpoint/${EndpointName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "webFunctionRevision",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:lambda:${Region}:${Account}:web-function/${FunctionName}/revision/${RevisionId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -133439,6 +133762,18 @@
         "name": "lambda:Principal",
         "apiReferenceUrl": "",
         "description": "Filters access by restricting the AWS service or account that can invoke a function",
+        "type": "String"
+      },
+      {
+        "name": "lambda:Request/WebFunctionAuthType",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the auth type specified in the request. Available during CreateWebFunction, CreateWebFunctionEndpoint, and UpdateWebFunctionEndpoint operations",
+        "type": "String"
+      },
+      {
+        "name": "lambda:Resource/WebFunctionAuthType",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the auth type configured on the web function endpoint resource. Available during InvokeWebFunctionEndpoint, UpdateWebFunctionEndpoint, DeleteWebFunctionEndpoint, and GetWebFunctionEndpoint operations",
         "type": "String"
       },
       {
@@ -173172,6 +173507,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/security-ir/latest/APIReference/API_GetCaseAttachmentUploadUrl.html"
       },
       {
+        "name": "GetFindingMetrics",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve finding-lifecycle metrics for a membership over a date range",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "membership",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/security-ir/latest/APIReference/API_GetFindingMetrics.html"
+      },
+      {
         "name": "GetMembership",
         "permissionOnly": false,
         "description": "Grants permission to get a membership",
@@ -206500,6 +206852,36 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_billing_ListBillingViews.html"
+      },
+      {
+        "name": "ListBusinessSupportAccountCharges",
+        "permissionOnly": false,
+        "description": "Grants permission to view Business Support charges broken down by linked account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+      },
+      {
+        "name": "ListBusinessSupportSubscriptionHistory",
+        "permissionOnly": false,
+        "description": "Grants permission to view Business Support subscription contract history",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
       },
       {
         "name": "ListEnterpriseSupportLinkedAccountCharges",
@@ -249002,6 +249384,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateOneTimeDeepLinkCode.html"
       },
       {
+        "name": "CreateResourceMetricsConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to create a resource metrics configuration that enables detailed monitoring for a resource",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:ResourceArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_CreateResourceMetricsConfiguration.html"
+      },
+      {
         "name": "CreateServiceLevelObjective",
         "permissionOnly": false,
         "description": "Grants permission to create a service level objective",
@@ -249326,6 +249725,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteOmniThread.html"
+      },
+      {
+        "name": "DeleteResourceMetricsConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a resource metrics configuration and disable detailed monitoring for a resource",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:ResourceArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DeleteResourceMetricsConfiguration.html"
       },
       {
         "name": "DeleteServiceLevelObjective",
@@ -249963,6 +250379,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetRecords.html"
+      },
+      {
+        "name": "GetResourceMetricsConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the resource metrics configuration and detailed monitoring status for a resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:ResourceArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetResourceMetricsConfiguration.html"
       },
       {
         "name": "GetService",
@@ -251332,6 +251765,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdatePreferences.html"
       },
       {
+        "name": "UpdateResourceMetricsConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to update the resource metrics configuration for a resource",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:ResourceArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_UpdateResourceMetricsConfiguration.html"
+      },
+      {
         "name": "UpdateServiceLevelObjective",
         "permissionOnly": false,
         "description": "Grants permission to update a service level objective",
@@ -251569,6 +252019,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by the presence of access grants associated with the request",
         "type": "String"
+      },
+      {
+        "name": "cloudwatch:ResourceArn",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the ARN of the AWS resource that a resource metrics configuration request targets",
+        "type": "ARN"
       },
       {
         "name": "cloudwatch:namespace",
@@ -392675,6 +393131,7 @@
               "quicksight:DescribeTemplate",
               "quicksight:DescribeTheme",
               "quicksight:PassDataSet",
+              "quicksight:PassTopic",
               "quicksight:TagResource"
             ]
           }
@@ -452197,6 +452654,7 @@
               "vpc-lattice:VpcId"
             ],
             "dependentActions": [
+              "vpc-lattice:AssociateViaAWSService",
               "vpc-lattice:TagResource"
             ]
           },
@@ -452214,6 +452672,7 @@
               "vpc-lattice:VpcId"
             ],
             "dependentActions": [
+              "vpc-lattice:AssociateViaAWSService",
               "vpc-lattice:TagResource"
             ]
           }
@@ -453068,8 +453527,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
-              "vpc-lattice:ServiceNetworkArn",
-              "vpc-lattice:VpcId"
+              "vpc-lattice:ServiceNetworkArn"
             ],
             "dependentActions": []
           }
@@ -461949,15 +462407,13 @@
       {
         "name": "CreateUserProfile",
         "permissionOnly": false,
-        "description": "Grants permission to create a user profile in a workspace",
+        "description": "Grants permission to create a user profile",
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "workspace",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ],
@@ -461970,11 +462426,9 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "workspace",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ],
@@ -462361,11 +462815,9 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "workspace",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ],
@@ -462593,15 +463045,13 @@
       {
         "name": "ListUserProfiles",
         "permissionOnly": false,
-        "description": "Grants permission to list user profiles in a workspace",
+        "description": "Grants permission to list user profiles",
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "workspace",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ],
@@ -462847,15 +463297,13 @@
       {
         "name": "UpdateUserProfile",
         "permissionOnly": false,
-        "description": "Grants permission to update a user profile in a workspace",
+        "description": "Grants permission to update a user profile",
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "workspace",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
             "dependentActions": []
           }
         ],

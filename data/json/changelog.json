@@ -1,5 +1,42 @@
 [
   {
+    "dateOfChange": "2026-10-02",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Lambda": [
+        "lambda:CreateWebFunction",
+        "lambda:CreateWebFunctionEndpoint",
+        "lambda:CreateWebFunctionRevision",
+        "lambda:DeleteWebFunction",
+        "lambda:DeleteWebFunctionEndpoint",
+        "lambda:DeleteWebFunctionRevision",
+        "lambda:GetWebAccountSettings",
+        "lambda:GetWebFunction",
+        "lambda:GetWebFunctionEndpoint",
+        "lambda:GetWebFunctionRevision",
+        "lambda:ListWebFunctionEndpoints",
+        "lambda:ListWebFunctionRevisions",
+        "lambda:ListWebFunctions",
+        "lambda:UpdateWebFunctionEndpoint"
+      ],
+      "AWS Security Incident Response": [
+        "security-ir:GetFindingMetrics"
+      ],
+      "AWS Billing": [
+        "billing:ListBusinessSupportAccountCharges",
+        "billing:ListBusinessSupportSubscriptionHistory"
+      ],
+      "Amazon CloudWatch": [
+        "cloudwatch:CreateResourceMetricsConfiguration",
+        "cloudwatch:DeleteResourceMetricsConfiguration",
+        "cloudwatch:GetResourceMetricsConfiguration",
+        "cloudwatch:UpdateResourceMetricsConfiguration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-10-01",
     "addedServices": [],
     "removedServices": [],
