@@ -9,7 +9,7 @@ on:
 
 permissions:
   contents: write
-  id-token: write
+  id-token: write # Required for npm trusted publishing via OIDC
 
 jobs:
 
@@ -24,8 +24,11 @@ jobs:
       - uses: actions/setup-node@v7
         with:
           node-version: '24.x'
-          registry-url: 'https://registry.npmjs.org'
           package-manager-cache: false
+
+      - name: Install npm with trusted publishing support
+        # Trusted publishing requires npm >= 11.5.1.
+        run: npm install --global npm@11
 
       - name: Gather data and check for changes
         id: gather_data
@@ -76,5 +79,5 @@ jobs:
           git push
           # Build package sources
           npm run build
-          # Publish new version to npm registry
-          npm publish
+          # Publish via OIDC using the trusted publisher configured on npmjs.com
+          npm publish --registry=https://registry.npmjs.org
