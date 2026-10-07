@@ -197754,7 +197754,9 @@
             "resourceType": "ManagedNotificationConfiguration",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "notifications:SubscribeSensitiveEvents"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/notifications/latest/APIReference/API_UpdateManagedNotificationChannelAssociation.html"
@@ -332522,9 +332524,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "finspace:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/finspace/latest/management-api/API_CreateKxDataview.html"
