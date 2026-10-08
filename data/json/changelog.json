@@ -1,5 +1,44 @@
 [
   {
+    "dateOfChange": "2026-10-08",
+    "addedServices": [
+      "AWS End User Messaging"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS End User Messaging": [
+        "end-user-messaging:CreateBrandProfile",
+        "end-user-messaging:CreateBrandProfileAttributes",
+        "end-user-messaging:CreateBrandProfileFromRegistration",
+        "end-user-messaging:CreateNotifyCodeConfiguration",
+        "end-user-messaging:CreateRegistrationsFromBrandProfile",
+        "end-user-messaging:DeleteBrandProfile",
+        "end-user-messaging:DeleteBrandProfileAttribute",
+        "end-user-messaging:DeleteNotifyCodeConfiguration",
+        "end-user-messaging:GetBrandProfile",
+        "end-user-messaging:GetBrandProfileAttribute",
+        "end-user-messaging:GetJob",
+        "end-user-messaging:GetNotifyCodeConfiguration",
+        "end-user-messaging:ListBrandProfileAttributes",
+        "end-user-messaging:ListBrandProfiles",
+        "end-user-messaging:ListJobs",
+        "end-user-messaging:ListNotifyCodeConfigurations",
+        "end-user-messaging:ListRegistrationsFromBrandProfile",
+        "end-user-messaging:ListTagsForResource",
+        "end-user-messaging:SendNotifyCodeVerification",
+        "end-user-messaging:TagResource",
+        "end-user-messaging:UntagResource",
+        "end-user-messaging:UpdateBrandProfile",
+        "end-user-messaging:UpdateBrandProfileAttribute",
+        "end-user-messaging:UpdateBrandProfileFromRegistration",
+        "end-user-messaging:UpdateNotifyCodeConfiguration",
+        "end-user-messaging:UpdateRegistrationsFromBrandProfile",
+        "end-user-messaging:ValidateNotifyCodeVerification"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-10-02",
     "addedServices": [],
     "removedServices": [],

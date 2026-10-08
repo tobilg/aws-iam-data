@@ -47012,7 +47012,8 @@
               "dms:req-tag/${TagKey}"
             ],
             "dependentActions": [
-              "dms:AddTagsToResource"
+              "dms:AddTagsToResource",
+              "iam:PassRole"
             ]
           }
         ],
@@ -74876,6 +74877,533 @@
     "actions": [],
     "resourceTypes": [],
     "conditionKeys": []
+  },
+  {
+    "name": "AWS End User Messaging",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_endusermessaging.html",
+    "servicePrefix": "end-user-messaging",
+    "actions": [
+      {
+        "name": "CreateBrandProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to create a brand profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_CreateBrandProfile.html"
+      },
+      {
+        "name": "CreateBrandProfileAttributes",
+        "permissionOnly": false,
+        "description": "Grants permission to create attributes for a brand profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_CreateBrandProfileAttributes.html"
+      },
+      {
+        "name": "CreateBrandProfileFromRegistration",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new brand profile populated from an existing registration via Bedrock mapping",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_CreateBrandProfileFromRegistration.html"
+      },
+      {
+        "name": "CreateNotifyCodeConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to create a notify code configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_CreateNotifyCodeConfiguration.html"
+      },
+      {
+        "name": "CreateRegistrationsFromBrandProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to create DRAFT registrations pre-filled from brand profile attributes via Bedrock mapping",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_CreateRegistrationsFromBrandProfile.html"
+      },
+      {
+        "name": "DeleteBrandProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a brand profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_DeleteBrandProfile.html"
+      },
+      {
+        "name": "DeleteBrandProfileAttribute",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a brand profile attribute",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_DeleteBrandProfileAttribute.html"
+      },
+      {
+        "name": "DeleteNotifyCodeConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a notify code configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "notify-code-configuration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_DeleteNotifyCodeConfiguration.html"
+      },
+      {
+        "name": "GetBrandProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to get a brand profile",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_GetBrandProfile.html"
+      },
+      {
+        "name": "GetBrandProfileAttribute",
+        "permissionOnly": false,
+        "description": "Grants permission to get a brand profile attribute",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_GetBrandProfileAttribute.html"
+      },
+      {
+        "name": "GetJob",
+        "permissionOnly": false,
+        "description": "Grants permission to get the details of an asynchronous job",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_GetJob.html"
+      },
+      {
+        "name": "GetNotifyCodeConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to get a notify code configuration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "notify-code-configuration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_GetNotifyCodeConfiguration.html"
+      },
+      {
+        "name": "ListBrandProfileAttributes",
+        "permissionOnly": false,
+        "description": "Grants permission to list the attributes for a brand profile",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_ListBrandProfileAttributes.html"
+      },
+      {
+        "name": "ListBrandProfiles",
+        "permissionOnly": false,
+        "description": "Grants permission to list brand profiles",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_ListBrandProfiles.html"
+      },
+      {
+        "name": "ListJobs",
+        "permissionOnly": false,
+        "description": "Grants permission to list asynchronous jobs in your account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_ListJobs.html"
+      },
+      {
+        "name": "ListNotifyCodeConfigurations",
+        "permissionOnly": false,
+        "description": "Grants permission to list notify code configurations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_ListNotifyCodeConfigurations.html"
+      },
+      {
+        "name": "ListRegistrationsFromBrandProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to list the registrations created from a brand profile",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_ListRegistrationsFromBrandProfile.html"
+      },
+      {
+        "name": "ListTagsForResource",
+        "permissionOnly": false,
+        "description": "Grants permission to list tags for a resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "notify-code-configuration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_ListTagsForResource.html"
+      },
+      {
+        "name": "SendNotifyCodeVerification",
+        "permissionOnly": false,
+        "description": "Grants permission to send a notify code verification",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "notify-code-configuration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_SendNotifyCodeVerification.html"
+      },
+      {
+        "name": "TagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to tag a resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "notify-code-configuration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_TagResource.html"
+      },
+      {
+        "name": "UntagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to untag a resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "notify-code-configuration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_UntagResource.html"
+      },
+      {
+        "name": "UpdateBrandProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to update a brand profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_UpdateBrandProfile.html"
+      },
+      {
+        "name": "UpdateBrandProfileAttribute",
+        "permissionOnly": false,
+        "description": "Grants permission to update a brand profile attribute",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_UpdateBrandProfileAttribute.html"
+      },
+      {
+        "name": "UpdateBrandProfileFromRegistration",
+        "permissionOnly": false,
+        "description": "Grants permission to update a brand profile from a registration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_UpdateBrandProfileFromRegistration.html"
+      },
+      {
+        "name": "UpdateNotifyCodeConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to update a notify code configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "notify-code-configuration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_UpdateNotifyCodeConfiguration.html"
+      },
+      {
+        "name": "UpdateRegistrationsFromBrandProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to update registrations from a brand profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "brand-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_UpdateRegistrationsFromBrandProfile.html"
+      },
+      {
+        "name": "ValidateNotifyCodeVerification",
+        "permissionOnly": false,
+        "description": "Grants permission to validate a notify code verification",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/end-user-messaging/latest/APIReference/API_ValidateNotifyCodeVerification.html"
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "brand-profile",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:end-user-messaging:${Region}:${Account}:brand-profile/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "notify-code-configuration",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:end-user-messaging:${Region}:${Account}:notify-code-configuration/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      }
+    ],
+    "conditionKeys": [
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tags that are passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tags attached to the resource",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tag keys that are passed in the request",
+        "type": "ArrayOfString"
+      }
+    ]
   },
   {
     "name": "AWS End User Messaging SMS and Voice V2",
@@ -189801,6 +190329,7 @@
               "ssm:resourceTag/${TagKey}"
             ],
             "dependentActions": [
+              "ssm:GetDocument",
               "iam:PassRole"
             ]
           }

@@ -1,5 +1,5 @@
 {
-  "serviceCount": 475,
+  "serviceCount": 476,
   "services": [
     {
       "name": "AWS Billing Conductor",
@@ -5493,6 +5493,52 @@
       "resourceTypes": [],
       "conditionKeysCount": 0,
       "conditionKeys": []
+    },
+    {
+      "name": "AWS End User Messaging",
+      "servicePrefix": "end-user-messaging",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_endusermessaging.html",
+      "actionsCount": 27,
+      "actions": [
+        "CreateBrandProfile",
+        "CreateBrandProfileAttributes",
+        "CreateBrandProfileFromRegistration",
+        "CreateNotifyCodeConfiguration",
+        "CreateRegistrationsFromBrandProfile",
+        "DeleteBrandProfile",
+        "DeleteBrandProfileAttribute",
+        "DeleteNotifyCodeConfiguration",
+        "GetBrandProfile",
+        "GetBrandProfileAttribute",
+        "GetJob",
+        "GetNotifyCodeConfiguration",
+        "ListBrandProfileAttributes",
+        "ListBrandProfiles",
+        "ListJobs",
+        "ListNotifyCodeConfigurations",
+        "ListRegistrationsFromBrandProfile",
+        "ListTagsForResource",
+        "SendNotifyCodeVerification",
+        "TagResource",
+        "UntagResource",
+        "UpdateBrandProfile",
+        "UpdateBrandProfileAttribute",
+        "UpdateBrandProfileFromRegistration",
+        "UpdateNotifyCodeConfiguration",
+        "UpdateRegistrationsFromBrandProfile",
+        "ValidateNotifyCodeVerification"
+      ],
+      "resourceTypesCount": 2,
+      "resourceTypes": [
+        "brand-profile",
+        "notify-code-configuration"
+      ],
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "AWS End User Messaging SMS and Voice V2",
