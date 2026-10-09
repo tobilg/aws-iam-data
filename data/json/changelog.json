@@ -1,5 +1,37 @@
 [
   {
+    "dateOfChange": "2026-10-09",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Glue": [
+        "glue:GetSystemLogsForJobRun",
+        "glue:GetSystemLogsForSession"
+      ],
+      "AWS Security Hub": [
+        "securityhub:CancelExportJobV2",
+        "securityhub:GetExportJobV2",
+        "securityhub:ListExportJobsV2",
+        "securityhub:StartExportJobV2"
+      ],
+      "AWS Billing": [
+        "billing:ListCreditEntitlementPeriods",
+        "billing:ListCreditEntitlements",
+        "billing:SplitCredit",
+        "billing:TransferCredit"
+      ],
+      "Amazon CloudWatch": [
+        "cloudwatch:PutRecords"
+      ],
+      "Amazon WorkSpaces AgentAccess MCP Server": [
+        "agentaccess-mcp:GetSessionInfo",
+        "agentaccess-mcp:LaunchApplication",
+        "agentaccess-mcp:ToggleAppSwitcher"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-10-08",
     "addedServices": [
       "AWS End User Messaging"

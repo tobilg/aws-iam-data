@@ -86388,6 +86388,46 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/monitor-spark-ui.html"
       },
       {
+        "name": "GetSystemLogsForJobRun",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve system logs for a job run",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "job",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "glue:GetDatabases",
+              "glue:SearchTables"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-jobs-runs.html"
+      },
+      {
+        "name": "GetSystemLogsForSession",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve system logs for an interactive session",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "session",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "glue:GetDatabases",
+              "glue:SearchTables"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-interactive-sessions.html"
+      },
+      {
         "name": "GetTable",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a table",
@@ -171878,6 +171918,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_BatchUpdateStandardsControlAssociations.html"
       },
       {
+        "name": "CancelExportJobV2",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel an export job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_CancelExportJobV2.html"
+      },
+      {
         "name": "ConnectorRegistrationsV2",
         "permissionOnly": false,
         "description": "Grants permission to complete the OAuth 2.0 authorization code flow based on input parameters",
@@ -172789,6 +172844,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetEnabledStandards.html"
       },
       {
+        "name": "GetExportJobV2",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an export job",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetExportJobV2.html"
+      },
+      {
         "name": "GetFindingAggregator",
         "permissionOnly": false,
         "description": "Grants permission to retrieve details for a finding aggregator, which configures finding aggregation across Regions",
@@ -173187,6 +173257,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_ListEnabledProductsForImport.html"
       },
       {
+        "name": "ListExportJobsV2",
+        "permissionOnly": false,
+        "description": "Grants permission to list export jobs",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_ListExportJobsV2.html"
+      },
+      {
         "name": "ListExposuresByRemediationV2",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a list of exposure findings associated with a remediation target",
@@ -173384,6 +173469,25 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_StartConfigurationPolicyDisassociation.html"
+      },
+      {
+        "name": "StartExportJobV2",
+        "permissionOnly": false,
+        "description": "Grants permission to start an export job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "hubv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "securityhub:GetFindings"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_StartExportJobV2.html"
       },
       {
         "name": "TagResource",
@@ -207415,6 +207519,36 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
       },
       {
+        "name": "ListCreditEntitlementPeriods",
+        "permissionOnly": false,
+        "description": "Grants permission to view the measurement periods of a credit entitlement",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+      },
+      {
+        "name": "ListCreditEntitlements",
+        "permissionOnly": false,
+        "description": "Grants permission to view the credit entitlements the caller's account is set to receive",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+      },
+      {
         "name": "ListEnterpriseSupportLinkedAccountCharges",
         "permissionOnly": false,
         "description": "Grants permission to view Enterprise Support charges broken down by linked account",
@@ -207481,6 +207615,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
       },
       {
+        "name": "SplitCredit",
+        "permissionOnly": false,
+        "description": "Grants permission to split a credit into multiple child credits in the same account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+      },
+      {
         "name": "TagResource",
         "permissionOnly": false,
         "description": "Grants permission to add tags to a specified billing view",
@@ -207498,6 +207647,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_billing_TagResource.html"
+      },
+      {
+        "name": "TransferCredit",
+        "permissionOnly": false,
+        "description": "Grants permission to transfer a credit to another account under the same payer",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
       },
       {
         "name": "UntagResource",
@@ -250897,7 +251061,7 @@
       {
         "name": "GetRecords",
         "permissionOnly": false,
-        "description": "Grants permission to fetch logs, metrics, and traces",
+        "description": "Grants permission to fetch logs and traces",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -251766,6 +251930,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricStream.html"
+      },
+      {
+        "name": "PutRecords",
+        "permissionOnly": false,
+        "description": "Grants permission to put logs and traces",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_PutRecords.html"
       },
       {
         "name": "QueryTraces",
@@ -275785,14 +275966,6 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
-          },
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_BatchGetCalculatedAttributeForProfile.html"
@@ -275831,16 +276004,6 @@
             "dependentActions": [
               "profile:TagResource"
             ]
-          },
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": [
-              "profile:TagResource"
-            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_CreateCalculatedAttributeDefinition.html"
@@ -275873,16 +276036,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": [
-              "profile:TagResource"
-            ]
-          },
-          {
             "resourceType": "layouts",
             "required": true,
             "conditionKeys": [
@@ -275904,16 +276057,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": [
-              "profile:TagResource"
-            ]
-          },
-          {
             "resourceType": "event-streams",
             "required": true,
             "conditionKeys": [
@@ -275934,16 +276077,6 @@
         "description": "Grants permission to create an event trigger in the domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": [
-              "profile:TagResource"
-            ]
-          },
           {
             "resourceType": "event-triggers",
             "required": true,
@@ -276014,14 +276147,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "recommenders",
             "required": true,
             "conditionKeys": [
@@ -276040,18 +276165,6 @@
         "description": "Grants permission to create a recommender filter in the domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": [
-              "profile:TagResource"
-            ]
-          },
           {
             "resourceType": "recommender-filters",
             "required": true,
@@ -276074,18 +276187,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": [
-              "profile:TagResource"
-            ]
-          },
-          {
             "resourceType": "recommender-schemas",
             "required": true,
             "conditionKeys": [
@@ -276106,16 +276207,6 @@
         "description": "Grants permission to create a segment definition in the domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": [
-              "profile:TagResource"
-            ]
-          },
           {
             "resourceType": "segment-definitions",
             "required": true,
@@ -276154,16 +276245,6 @@
         "description": "Grants permission to create a segment snapshot in the domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": [
-              "iam:PassRole"
-            ]
-          },
           {
             "resourceType": "segment-definitions",
             "required": true,
@@ -276207,14 +276288,6 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
-          },
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_DeleteCalculatedAttributeDefinition.html"
@@ -276243,14 +276316,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "layouts",
             "required": true,
             "conditionKeys": [
@@ -276274,14 +276339,6 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
-          },
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_DeleteDomainObjectType.html"
@@ -276292,14 +276349,6 @@
         "description": "Grants permission to delete an event stream in a domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "event-streams",
             "required": true,
@@ -276318,14 +276367,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "event-triggers",
             "required": true,
             "conditionKeys": [
@@ -276342,14 +276383,6 @@
         "description": "Grants permission to delete a integration in a domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "integrations",
             "required": true,
@@ -276402,14 +276435,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "object-types",
             "required": true,
             "conditionKeys": [
@@ -276426,14 +276451,6 @@
         "description": "Grants permission to delete a specific profile object type in the domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "object-types",
             "required": true,
@@ -276452,14 +276469,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "recommenders",
             "required": true,
             "conditionKeys": [
@@ -276476,14 +276485,6 @@
         "description": "Grants permission to delete a recommender filter in the domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "recommender-filters",
             "required": true,
@@ -276502,14 +276503,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "recommender-schemas",
             "required": true,
             "conditionKeys": [
@@ -276526,14 +276519,6 @@
         "description": "Grants permission to delete a segment definition in the domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "segment-definitions",
             "required": true,
@@ -276651,14 +276636,6 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
-          },
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetCalculatedAttributeDefinition.html"
@@ -276671,14 +276648,6 @@
         "resourceTypes": [
           {
             "resourceType": "calculated-attributes",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "domains",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -276712,14 +276681,6 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "layouts",
             "required": true,
             "conditionKeys": [
@@ -276743,14 +276704,6 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
-          },
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_GetDomainObjectType.html"
@@ -276761,14 +276714,6 @@
         "description": "Grants permission to get a specific event stream in a domain",
         "accessLevel": "Read",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "event-streams",
             "required": true,
@@ -276786,14 +276731,6 @@
         "description": "Grants permission to get an event trigger in the domain",
         "accessLevel": "Read",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "event-triggers",
             "required": true,
@@ -276829,14 +276766,6 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "integrations",
             "required": true,
             "conditionKeys": [
@@ -276870,14 +276799,6 @@
         "description": "Grants permission to get statistics of a specific attribute for object type in the domain",
         "accessLevel": "Read",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "object-types",
             "required": true,
@@ -276930,14 +276851,6 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "object-types",
             "required": true,
             "conditionKeys": [
@@ -276970,14 +276883,6 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "recommenders",
             "required": true,
             "conditionKeys": [
@@ -276994,14 +276899,6 @@
         "description": "Grants permission to get Recommender details in a domain",
         "accessLevel": "Read",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "recommenders",
             "required": true,
@@ -277020,14 +276917,6 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "recommender-filters",
             "required": true,
             "conditionKeys": [
@@ -277045,14 +276934,6 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "recommender-schemas",
             "required": true,
             "conditionKeys": [
@@ -277069,14 +276950,6 @@
         "description": "Grants permission to get a segment definition in the domain",
         "accessLevel": "Read",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "segment-definitions",
             "required": true,
@@ -277136,14 +277009,6 @@
         "description": "Grants permission to get a segment snapshot in the domain",
         "accessLevel": "Read",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "segment-definitions",
             "required": true,
@@ -277378,14 +277243,6 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
-          },
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_ListDomainObjects.html"
@@ -277480,14 +277337,6 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "object-types",
             "required": true,
             "conditionKeys": [
@@ -277504,14 +277353,6 @@
         "description": "Grants permission to list all the attributes of a specific object type in the domain",
         "accessLevel": "List",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "object-types",
             "required": true,
@@ -277595,14 +277436,6 @@
         "description": "Grants permission to list all the profile objects for a profile",
         "accessLevel": "List",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "object-types",
             "required": true,
@@ -277912,16 +277745,6 @@
             "dependentActions": [
               "profile:TagResource"
             ]
-          },
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": [
-              "profile:TagResource"
-            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_PutDomainObjectType.html"
@@ -277932,16 +277755,6 @@
         "description": "Grants permission to put a integration in a domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": [
-              "profile:TagResource"
-            ]
-          },
           {
             "resourceType": "integrations",
             "required": true,
@@ -277964,14 +277777,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "object-types",
             "required": true,
             "conditionKeys": [
@@ -277988,16 +277793,6 @@
         "description": "Grants permission to put a specific profile object type in the domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": [
-              "profile:TagResource"
-            ]
-          },
           {
             "resourceType": "object-types",
             "required": true,
@@ -278062,14 +277857,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "recommenders",
             "required": true,
             "conditionKeys": [
@@ -278103,14 +277890,6 @@
         "description": "Grants permission to stop a recommender in a domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "recommenders",
             "required": true,
@@ -278398,14 +278177,6 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
-          },
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/customerprofiles/latest/APIReference/API_UpdateCalculatedAttributeDefinition.html"
@@ -278434,14 +278205,6 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
             "resourceType": "layouts",
             "required": true,
             "conditionKeys": [
@@ -278458,14 +278221,6 @@
         "description": "Grants permission to update an event trigger in the domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "event-triggers",
             "required": true,
@@ -278500,14 +278255,6 @@
         "description": "Grants permission to update a Recommender in the domain",
         "accessLevel": "Write",
         "resourceTypes": [
-          {
-            "resourceType": "domains",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
           {
             "resourceType": "recommenders",
             "required": true,
@@ -460004,6 +459751,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/"
       },
       {
+        "name": "GetSessionInfo",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve information about the current session",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/"
+      },
+      {
         "name": "HoldKey",
         "permissionOnly": false,
         "description": "Grants permission to hold key down",
@@ -460041,6 +459805,23 @@
         "name": "KeyPress",
         "permissionOnly": false,
         "description": "Grants permission to press key or key combination",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/"
+      },
+      {
+        "name": "LaunchApplication",
+        "permissionOnly": false,
+        "description": "Grants permission to launch an application on a streaming session",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -460177,6 +459958,23 @@
         "name": "Scroll",
         "permissionOnly": false,
         "description": "Grants permission to scroll in any direction",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/"
+      },
+      {
+        "name": "ToggleAppSwitcher",
+        "permissionOnly": false,
+        "description": "Grants permission to toggle the application switcher overlay",
         "accessLevel": "Write",
         "resourceTypes": [
           {

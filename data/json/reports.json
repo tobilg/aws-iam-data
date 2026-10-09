@@ -2,11 +2,11 @@
   "Actions by type": [
     {
       "key": "List Actions",
-      "value": 3561
+      "value": 3562
     },
     {
       "key": "Read Actions",
-      "value": 5438
+      "value": 5444
     },
     {
       "key": null,
@@ -14,7 +14,7 @@
     },
     {
       "key": "Write Actions",
-      "value": 10643
+      "value": 10650
     }
   ],
   "Longest action names": [
@@ -149,10 +149,6 @@
       "value": 144
     },
     {
-      "key": "domains - arn:${Partition}:profile:${Region}:${Account}:domains/${DomainName}",
-      "value": 110
-    },
-    {
       "key": "application - arn:${Partition}:qbusiness:${Region}:${Account}:application/${ApplicationId}",
       "value": 106
     },
@@ -183,6 +179,10 @@
     {
       "key": "instance - arn:${Partition}:ec2:${Region}:${Account}:instance/${InstanceId}",
       "value": 74
+    },
+    {
+      "key": "mlflow-tracking-server - arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-tracking-server/${MlflowTrackingServerName}",
+      "value": 70
     }
   ],
   "Services with least actions": [
@@ -246,7 +246,7 @@
     },
     {
       "key": "AWS Glue",
-      "value": 298
+      "value": 300
     },
     {
       "key": "AWS IoT",
