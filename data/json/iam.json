@@ -52410,6 +52410,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_ListLimits.html"
       },
       {
+        "name": "ListMemberships",
+        "permissionOnly": false,
+        "description": "Grants permission to list Deadline Cloud resource memberships associated with an IAM Identity Center principal",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "deadline:PrincipalId",
+              "deadline:RequesterPrincipalId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/deadline-cloud/latest/APIReference/API_ListMemberships.html"
+      },
+      {
         "name": "ListMeteredProducts",
         "permissionOnly": false,
         "description": "Grants permission to list all metered products in a license endpoint",
