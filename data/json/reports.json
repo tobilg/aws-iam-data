@@ -2,19 +2,19 @@
   "Actions by type": [
     {
       "key": "Write Actions",
-      "value": 10650
-    },
-    {
-      "key": "List Actions",
-      "value": 3563
+      "value": 10660
     },
     {
       "key": "Read Actions",
-      "value": 5444
+      "value": 5449
     },
     {
       "key": null,
       "value": 1052
+    },
+    {
+      "key": "List Actions",
+      "value": 3567
     }
   ],
   "Longest action names": [
@@ -169,12 +169,12 @@
       "value": 84
     },
     {
-      "key": "rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog",
+      "key": "AgentSpace - arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}",
       "value": 76
     },
     {
-      "key": "AgentSpace - arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}",
-      "value": 74
+      "key": "rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog",
+      "value": 76
     },
     {
       "key": "instance - arn:${Partition}:ec2:${Region}:${Account}:instance/${InstanceId}",
@@ -234,7 +234,7 @@
     },
     {
       "key": "Amazon SageMaker",
-      "value": 434
+      "value": 445
     },
     {
       "key": "Amazon Connect",
@@ -410,7 +410,7 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 2265
+      "value": 2266
     },
     {
       "key": "Total number of distinct condition keys",

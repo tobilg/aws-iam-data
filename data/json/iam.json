@@ -22039,6 +22039,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_CreateAcmeExternalAccountBinding.html"
       },
       {
+        "name": "CreateTimeStamp",
+        "permissionOnly": false,
+        "description": "Grants permission to create an RFC 3161 timestamp token over a submitted message digest",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/acm/latest/APIReference/API_CreateTimeStamp.html"
+      },
+      {
         "name": "DeleteAcmeDomainValidation",
         "permissionOnly": false,
         "description": "Grants permission to delete an ACME domain validation",
@@ -133261,6 +133276,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/microvm-api/API_ListMicrovms.html"
       },
       {
+        "name": "ListNetworkConnectorVersions",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of versions of an AWS Lambda network connector",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "networkConnector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_ListNetworkConnectorVersions.html"
+      },
+      {
         "name": "ListNetworkConnectors",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a list of AWS Lambda network connectors",
@@ -152458,6 +152490,40 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_GetPartner.html"
       },
       {
+        "name": "GetPartnerCentralContentDocument",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a content document in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "API_content_GetPartnerCentralContentDocument.html"
+      },
+      {
+        "name": "GetPartnerCentralContentMetadata",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve content metadata in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "API_content_GetPartnerCentralContentMetadata.html"
+      },
+      {
         "name": "GetPartnerDashboard",
         "permissionOnly": false,
         "description": "Grants permission to retrieve partner dashboard information in AWS Partner Central",
@@ -153005,6 +153071,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_ListOpportunityFromEngagementTasks.html"
       },
       {
+        "name": "ListPartnerCentralContent",
+        "permissionOnly": false,
+        "description": "Grants permission to list content in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "API_content_ListPartnerCentralContent.html"
+      },
+      {
         "name": "ListPartners",
         "permissionOnly": false,
         "description": "Grants permission to list partners in AWS Partner Central",
@@ -153306,6 +153389,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_RejectEngagementInvitation.html"
+      },
+      {
+        "name": "SearchPartnerCentralContent",
+        "permissionOnly": false,
+        "description": "Grants permission to search content in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "API_content_SearchPartnerCentralContent.html"
       },
       {
         "name": "SendEmailVerificationCode",
@@ -169592,6 +169692,40 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchDeleteThreats.html"
+      },
+      {
+        "name": "BatchDisassociateFindingIssue",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate issues from findings",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchDisassociateFindingIssue.html"
+      },
+      {
+        "name": "BatchExportFindings",
+        "permissionOnly": false,
+        "description": "Grants permission to create issues for the findings",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchExportFindings.html"
       },
       {
         "name": "BatchGetAgentSpaces",
@@ -430365,6 +430499,29 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingPlan.html"
       },
       {
+        "name": "CreateTrainingSession",
+        "permissionOnly": false,
+        "description": "Grants permission to create a SageMaker training session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "training-session",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "sagemaker:OutputKmsKeyArn",
+              "sagemaker:ResourceTag/${TagKey}",
+              "sagemaker:VpcSecurityGroupIds",
+              "sagemaker:VpcSubnets"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateTrainingSession.html"
+      },
+      {
         "name": "CreateTransformJob",
         "permissionOnly": false,
         "description": "Grants permission to start a transform job. After the results are obtained, Amazon SageMaker saves them to an Amazon S3 location that you specify",
@@ -432253,6 +432410,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteTrainingJob.html"
       },
       {
+        "name": "DeleteTrainingSession",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a SageMaker training session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "training-session",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteTrainingSession.html"
+      },
+      {
         "name": "DeleteTrial",
         "permissionOnly": false,
         "description": "Grants permission to delete a trial",
@@ -433670,6 +433845,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeTrainingPlanExtensionHistory.html"
       },
       {
+        "name": "DescribeTrainingSession",
+        "permissionOnly": false,
+        "description": "Grants permission to return information about a SageMaker training session",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "training-session",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeTrainingSession.html"
+      },
+      {
         "name": "DescribeTransformJob",
         "permissionOnly": false,
         "description": "Grants permission to return information about a transform job",
@@ -433862,6 +434055,42 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_EnableSagemakerServicecatalogPortfolio.html"
       },
       {
+        "name": "ExecuteSamplingOperation",
+        "permissionOnly": false,
+        "description": "Grants permission to execute a sampling operation against a training session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "training-session",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ExecuteSamplingOperation.html"
+      },
+      {
+        "name": "ExecuteTrainingOperation",
+        "permissionOnly": false,
+        "description": "Grants permission to execute a training operation against a training session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "training-session",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ExecuteTrainingOperation.html"
+      },
+      {
         "name": "ExtendTrainingPlan",
         "permissionOnly": false,
         "description": "Grants permission to extend an existing training plan by purchasing an extension offering",
@@ -433997,6 +434226,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_GetSagemakerServicecatalogPortfolioStatus.html"
       },
       {
+        "name": "GetSamplingOperationResult",
+        "permissionOnly": false,
+        "description": "Grants permission to get the result of a sampling operation for a training session",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "training-session",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_GetSamplingOperationResult.html"
+      },
+      {
         "name": "GetScalingConfigurationRecommendation",
         "permissionOnly": false,
         "description": "Grants permission to get a scaling policy configuration recommendation",
@@ -434028,6 +434275,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_GetSearchSuggestions.html"
+      },
+      {
+        "name": "GetTrainingOperationResult",
+        "permissionOnly": false,
+        "description": "Grants permission to get the result of a training operation for a training session",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "training-session",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_GetTrainingOperationResult.html"
       },
       {
         "name": "ImportHubContent",
@@ -436040,6 +436305,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListTrainingPlans.html"
       },
       {
+        "name": "ListTrainingSessions",
+        "permissionOnly": false,
+        "description": "Grants permission to list SageMaker training sessions",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListTrainingSessions.html"
+      },
+      {
         "name": "ListTransformJobs",
         "permissionOnly": false,
         "description": "Grants permission to list transform jobs",
@@ -436285,6 +436565,42 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_Sample.html"
+      },
+      {
+        "name": "SampleTrainingSession",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke a synchronous sample request against a training session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "training-session",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SampleTrainingSession.html"
+      },
+      {
+        "name": "SampleTrainingSessionWithResponseStream",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke a streaming sample request against a training session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "training-session",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_SampleTrainingSessionWithResponseStream.html"
       },
       {
         "name": "SampleWithResponseStream",
@@ -436891,6 +437207,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopTrainingJob.html"
+      },
+      {
+        "name": "StopTrainingSession",
+        "permissionOnly": false,
+        "description": "Grants permission to stop a SageMaker training session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "training-session",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_StopTrainingSession.html"
       },
       {
         "name": "StopTransformJob",
@@ -438478,6 +438812,15 @@
         "name": "training-plan",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:sagemaker:${Region}:${Account}:training-plan/${TrainingPlanName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "sagemaker:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "training-session",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:sagemaker:${Region}:${Account}:training-session/${SessionName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
           "sagemaker:ResourceTag/${TagKey}"

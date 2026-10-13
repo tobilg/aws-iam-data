@@ -1,5 +1,42 @@
 [
   {
+    "dateOfChange": "2026-10-13",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Certificate Manager": [
+        "acm:CreateTimeStamp"
+      ],
+      "AWS Lambda": [
+        "lambda:ListNetworkConnectorVersions"
+      ],
+      "AWS Partner Central": [
+        "partnercentral:GetPartnerCentralContentDocument",
+        "partnercentral:GetPartnerCentralContentMetadata",
+        "partnercentral:ListPartnerCentralContent",
+        "partnercentral:SearchPartnerCentralContent"
+      ],
+      "AWS Security Agent": [
+        "securityagent:BatchDisassociateFindingIssue",
+        "securityagent:BatchExportFindings"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:CreateTrainingSession",
+        "sagemaker:DeleteTrainingSession",
+        "sagemaker:DescribeTrainingSession",
+        "sagemaker:ExecuteSamplingOperation",
+        "sagemaker:ExecuteTrainingOperation",
+        "sagemaker:GetSamplingOperationResult",
+        "sagemaker:GetTrainingOperationResult",
+        "sagemaker:ListTrainingSessions",
+        "sagemaker:SampleTrainingSession",
+        "sagemaker:SampleTrainingSessionWithResponseStream",
+        "sagemaker:StopTrainingSession"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-10-10",
     "addedServices": [],
     "removedServices": [],
