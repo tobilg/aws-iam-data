@@ -1,5 +1,50 @@
 [
   {
+    "dateOfChange": "2026-10-14",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Lake Formation": [
+        "lakeformation:AttachRLSPolicy",
+        "lakeformation:CreateRLSPolicy",
+        "lakeformation:DeleteRLSPolicy",
+        "lakeformation:DetachRLSPolicy",
+        "lakeformation:GetRLSPolicy",
+        "lakeformation:ListRLSPolicies",
+        "lakeformation:ListRLSPolicyAttachments",
+        "lakeformation:UpdateRLSPolicy"
+      ],
+      "AWS Resilience Hub": [
+        "resiliencehub:GetDependencyInsights",
+        "resiliencehub:ListPolicyEvents",
+        "resiliencehub:StartDependencyInsights"
+      ],
+      "Amazon DataZone": [
+        "datazone:CreateDataApp",
+        "datazone:DeleteAgentApprovalPolicy",
+        "datazone:DeleteConversation",
+        "datazone:DeleteDataApp",
+        "datazone:DeregisterAgentArtifact",
+        "datazone:GetAgentApprovalPolicy",
+        "datazone:GetDataApp",
+        "datazone:InvokeAgent",
+        "datazone:ListAgentArtifacts",
+        "datazone:ListAgentSessionRecords",
+        "datazone:ListDataApps",
+        "datazone:ListSharedDataApps",
+        "datazone:PutAgentApprovalPolicy",
+        "datazone:RegisterAgentArtifact",
+        "datazone:StopAgent",
+        "datazone:UpdateConversation",
+        "datazone:UpdateDataApp"
+      ],
+      "Amazon Route 53 Domains": [
+        "route53domains:GetDomainPrices"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-10-13",
     "addedServices": [],
     "removedServices": [],

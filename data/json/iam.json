@@ -130871,6 +130871,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_AddLFTagsToResource.html"
       },
       {
+        "name": "AttachRLSPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to attach a Lake Formation row-level security policy to a resource for one or more principals",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_AttachRLSPolicy.html"
+      },
+      {
         "name": "BatchGrantPermissions",
         "permissionOnly": false,
         "description": "Grants permission to data lake permissions to one or more principals in a batch",
@@ -131006,6 +131021,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_CreateLakeFormationOptIn.html"
       },
       {
+        "name": "CreateRLSPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to create a Lake Formation row-level security policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_CreateRLSPolicy.html"
+      },
+      {
         "name": "DeleteDataCellsFilter",
         "permissionOnly": false,
         "description": "Grants permission to delete a Lake Formation data cell filter",
@@ -131096,6 +131126,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_DeleteObjectsOnCancel.html"
       },
       {
+        "name": "DeleteRLSPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a Lake Formation row-level security policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_DeleteRLSPolicy.html"
+      },
+      {
         "name": "DeregisterResource",
         "permissionOnly": false,
         "description": "Grants permission to deregister a registered location",
@@ -131154,6 +131199,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_DescribeTransaction.html"
+      },
+      {
+        "name": "DetachRLSPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to detach a Lake Formation row-level security policy from a resource for one or more principals",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_DetachRLSPolicy.html"
       },
       {
         "name": "ExtendTransaction",
@@ -131306,6 +131366,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_GetQueryStatistics.html"
+      },
+      {
+        "name": "GetRLSPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a Lake Formation row-level security policy",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_GetRLSPolicy.html"
       },
       {
         "name": "GetResourceLFTags",
@@ -131486,6 +131561,36 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_ListPermissions.html"
+      },
+      {
+        "name": "ListRLSPolicies",
+        "permissionOnly": false,
+        "description": "Grants permission to list Lake Formation row-level security policies",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_ListRLSPolicies.html"
+      },
+      {
+        "name": "ListRLSPolicyAttachments",
+        "permissionOnly": false,
+        "description": "Grants permission to list the resource and principal attachments of Lake Formation row-level security policies",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_ListRLSPolicyAttachments.html"
       },
       {
         "name": "ListResources",
@@ -131726,6 +131831,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_UpdateLakeFormationIdentityCenterConfiguration.html"
+      },
+      {
+        "name": "UpdateRLSPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to update the filter expression of a Lake Formation row-level security policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lake-formation/latest/APIReference/API_UpdateRLSPolicy.html"
       },
       {
         "name": "UpdateResource",
@@ -161668,6 +161788,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_DescribeResourceGroupingRecommendationTask.html"
       },
       {
+        "name": "GetDependencyInsights",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve dependency insights for a service",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/v2/APIReference/API_GetDependencyInsights.html"
+      },
+      {
         "name": "GetFailureModeFinding",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a failure mode finding",
@@ -162184,6 +162321,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/v2/APIReference/API_ListPolicies.html"
+      },
+      {
+        "name": "ListPolicyEvents",
+        "permissionOnly": false,
+        "description": "Grants permission to list events for a resilience policy",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "policy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/v2/APIReference/API_ListPolicyEvents.html"
       },
       {
         "name": "ListRecommendationTemplates",
@@ -162785,6 +162939,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/latest/APIReference/API_StartAppAssessment.html"
+      },
+      {
+        "name": "StartDependencyInsights",
+        "permissionOnly": false,
+        "description": "Grants permission to start generating dependency insights for a service",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "service",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/resilience-hub/v2/APIReference/API_StartDependencyInsights.html"
       },
       {
         "name": "StartFailureModeAssessment",
@@ -280732,10 +280903,27 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_CreateConnection.html"
+      },
+      {
+        "name": "CreateDataApp",
+        "permissionOnly": false,
+        "description": "Grants permission to create data apps",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_CreateDataApp.html"
       },
       {
         "name": "CreateDataProduct",
@@ -281125,6 +281313,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteAccountPool.html"
       },
       {
+        "name": "DeleteAgentApprovalPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an agent approval policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteAgentApprovalPolicy.html"
+      },
+      {
         "name": "DeleteAsset",
         "permissionOnly": false,
         "description": "Grants permission to delete an asset",
@@ -281213,6 +281416,36 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteConnection.html"
+      },
+      {
+        "name": "DeleteConversation",
+        "permissionOnly": false,
+        "description": "Grants permission to delete conversations",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteConversation.html"
+      },
+      {
+        "name": "DeleteDataApp",
+        "permissionOnly": false,
+        "description": "Grants permission to delete data apps",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteDataApp.html"
       },
       {
         "name": "DeleteDataExportConfiguration",
@@ -281592,6 +281825,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteTimeSeriesDataPoints.html"
       },
       {
+        "name": "DeregisterAgentArtifact",
+        "permissionOnly": false,
+        "description": "Grants permission to deregister agent artifacts",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_DeregisterAgentArtifact.html"
+      },
+      {
         "name": "DisassociateEnvironmentRole",
         "permissionOnly": false,
         "description": "Grants permission to disassociate a role in a default service blueprint environment",
@@ -281650,6 +281898,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_GetAccountPool.html"
+      },
+      {
+        "name": "GetAgentApprovalPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to get an agent approval policy",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_GetAgentApprovalPolicy.html"
       },
       {
         "name": "GetAsset",
@@ -281800,6 +282063,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_GetCurrentEffectivePolicy.html"
+      },
+      {
+        "name": "GetDataApp",
+        "permissionOnly": false,
+        "description": "Grants permission to get data apps",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_GetDataApp.html"
       },
       {
         "name": "GetDataExportConfiguration",
@@ -282359,6 +282637,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_GetUserProfile.html"
       },
       {
+        "name": "InvokeAgent",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_InvokeAgent.html"
+      },
+      {
         "name": "ListAccountEnvironments",
         "permissionOnly": false,
         "description": "Grants permission to list Environments across all domains in an AWS Account",
@@ -282402,6 +282695,36 @@
           }
         ],
         "apiReferenceUrl": "{APIReferenceDocPage}API_ListAccountsInAccountPool.html"
+      },
+      {
+        "name": "ListAgentArtifacts",
+        "permissionOnly": false,
+        "description": "Grants permission to list agent artifacts",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_ListAgentArtifacts.html"
+      },
+      {
+        "name": "ListAgentSessionRecords",
+        "permissionOnly": false,
+        "description": "Grants permission to list agent session records",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_ListAgentSessionRecords.html"
       },
       {
         "name": "ListAssetFilters",
@@ -282477,6 +282800,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_ListConversations.html"
+      },
+      {
+        "name": "ListDataApps",
+        "permissionOnly": false,
+        "description": "Grants permission to list data apps",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_ListDataApps.html"
       },
       {
         "name": "ListDataProductRevisions",
@@ -282869,6 +283207,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_ListRules.html"
       },
       {
+        "name": "ListSharedDataApps",
+        "permissionOnly": false,
+        "description": "Grants permission to list shared data apps",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_ListSharedDataApps.html"
+      },
+      {
         "name": "ListSubscriptionGrants",
         "permissionOnly": false,
         "description": "Grants permission to List subscription grants for a subscribed principal",
@@ -282991,6 +283344,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_PostTimeSeriesDataPoints.html"
       },
       {
+        "name": "PutAgentApprovalPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to create or update an agent approval policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_PutAgentApprovalPolicy.html"
+      },
+      {
         "name": "PutCellRunResult",
         "permissionOnly": false,
         "description": "Grants permission to put cell run results",
@@ -283051,6 +283419,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_QueryGraph.html"
+      },
+      {
+        "name": "RegisterAgentArtifact",
+        "permissionOnly": false,
+        "description": "Grants permission to register agent artifacts",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_RegisterAgentArtifact.html"
       },
       {
         "name": "RejectPredictions",
@@ -283353,6 +283736,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_StartNotebookSync.html"
       },
       {
+        "name": "StopAgent",
+        "permissionOnly": false,
+        "description": "Grants permission to stop agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_StopAgent.html"
+      },
+      {
         "name": "StopCompute",
         "permissionOnly": false,
         "description": "Grants permission to stop compute",
@@ -283525,6 +283923,36 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateConnection.html"
+      },
+      {
+        "name": "UpdateConversation",
+        "permissionOnly": false,
+        "description": "Grants permission to update conversations",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateConversation.html"
+      },
+      {
+        "name": "UpdateDataApp",
+        "permissionOnly": false,
+        "description": "Grants permission to update data apps",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateDataApp.html"
       },
       {
         "name": "UpdateDataSource",
@@ -412884,6 +413312,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_GetDomainDetail.html"
+      },
+      {
+        "name": "GetDomainPrices",
+        "permissionOnly": false,
+        "description": "Grants permission to get the prices of operations for the given domain name",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_domains_GetDomainPrices.html"
       },
       {
         "name": "GetDomainSuggestions",
