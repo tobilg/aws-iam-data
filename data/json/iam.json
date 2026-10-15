@@ -55577,6 +55577,7 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:ServiceType",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": [
@@ -55963,6 +55964,7 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:ServiceType",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -55970,7 +55972,9 @@
           {
             "resourceType": "associations",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aidevops:ServiceType"
+            ],
             "dependentActions": []
           }
         ],
@@ -56145,6 +56149,7 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:ServiceType",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -56152,7 +56157,9 @@
           {
             "resourceType": "associations",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aidevops:ServiceType"
+            ],
             "dependentActions": []
           }
         ],
@@ -56653,6 +56660,7 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:ServiceType",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -56660,7 +56668,9 @@
           {
             "resourceType": "associations",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aidevops:ServiceType"
+            ],
             "dependentActions": []
           }
         ],
@@ -56909,6 +56919,7 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:ServiceType",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": [
@@ -56918,7 +56929,9 @@
           {
             "resourceType": "associations",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aidevops:ServiceType"
+            ],
             "dependentActions": [
               "iam:PassRole"
             ]
@@ -57110,6 +57123,12 @@
       }
     ],
     "conditionKeys": [
+      {
+        "name": "aidevops:ServiceType",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the type of service in the association, such as github, slack, aws or sourceAws. Set by the service from the association's configuration, not supplied by the caller",
+        "type": "String"
+      },
       {
         "name": "aidevops:SourceAgentSpaceArn",
         "apiReferenceUrl": "",
@@ -252084,7 +252103,8 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
-              "cloudwatch:AlarmActions"
+              "cloudwatch:AlarmActions",
+              "cloudwatch:AlarmTagsPropagationEnabled"
             ],
             "dependentActions": []
           }
@@ -252160,7 +252180,8 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
-              "cloudwatch:AlarmActions"
+              "cloudwatch:AlarmActions",
+              "cloudwatch:AlarmTagsPropagationEnabled"
             ],
             "dependentActions": []
           }
@@ -252199,7 +252220,8 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
-              "cloudwatch:AlarmActions"
+              "cloudwatch:AlarmActions",
+              "cloudwatch:AlarmTagsPropagationEnabled"
             ],
             "dependentActions": []
           },
@@ -252210,7 +252232,8 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
-              "cloudwatch:AlarmActions"
+              "cloudwatch:AlarmActions",
+              "cloudwatch:AlarmTagsPropagationEnabled"
             ],
             "dependentActions": []
           }
@@ -253048,6 +253071,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by defined alarm actions",
         "type": "ArrayOfString"
+      },
+      {
+        "name": "cloudwatch:AlarmTagsPropagationEnabled",
+        "apiReferenceUrl": "",
+        "description": "Filters access by whether the request enables propagation of the alarm's tags in notification payloads",
+        "type": "Bool"
       },
       {
         "name": "cloudwatch:HasAccessGrant",
@@ -463265,6 +463294,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
       },
       {
+        "name": "ArchiveDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to archive a managed agent deployment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
+      },
+      {
         "name": "ArchiveEnvironment",
         "permissionOnly": false,
         "description": "Grants permission to archive a managed agent environment",
@@ -463421,6 +463467,23 @@
         "name": "CreateBatchInference",
         "permissionOnly": false,
         "description": "Grants permission to create a batch inference request",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
+      },
+      {
+        "name": "CreateDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to create a managed agent deployment in a workspace",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -463822,6 +463885,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
       },
       {
+        "name": "GetDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a managed agent deployment or its runs",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
+      },
+      {
         "name": "GetEnvironment",
         "permissionOnly": false,
         "description": "Grants permission to retrieve details of a managed agent environment",
@@ -464041,6 +464121,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
       },
       {
+        "name": "ListDeployments",
+        "permissionOnly": false,
+        "description": "Grants permission to list managed agent deployments in a workspace",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
+      },
+      {
         "name": "ListEnvironments",
         "permissionOnly": false,
         "description": "Grants permission to list managed agent environments in a workspace",
@@ -464239,6 +464336,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
       },
       {
+        "name": "PauseDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to pause a managed agent deployment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
+      },
+      {
         "name": "ProcessEnvironmentWork",
         "permissionOnly": false,
         "description": "Grants permission to process work items in a self-hosted managed agent environment",
@@ -464288,6 +464402,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
       },
       {
+        "name": "RunDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to trigger a managed agent deployment run",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
+      },
+      {
         "name": "TagResource",
         "permissionOnly": false,
         "description": "Grants permission to tag a resource",
@@ -464300,6 +464431,23 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
+      },
+      {
+        "name": "UnpauseDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to resume a paused managed agent deployment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -464328,6 +464476,23 @@
         "name": "UpdateAgent",
         "permissionOnly": false,
         "description": "Grants permission to update a managed agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "workspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/claude-platform/latest/userguide/iam-actions.html#iam-actions"
+      },
+      {
+        "name": "UpdateDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to update a managed agent deployment",
         "accessLevel": "Write",
         "resourceTypes": [
           {

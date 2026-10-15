@@ -1,5 +1,23 @@
 [
   {
+    "dateOfChange": "2026-10-15",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Claude Platform on AWS": [
+        "aws-external-anthropic:ArchiveDeployment",
+        "aws-external-anthropic:CreateDeployment",
+        "aws-external-anthropic:GetDeployment",
+        "aws-external-anthropic:ListDeployments",
+        "aws-external-anthropic:PauseDeployment",
+        "aws-external-anthropic:RunDeployment",
+        "aws-external-anthropic:UnpauseDeployment",
+        "aws-external-anthropic:UpdateDeployment"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-10-14",
     "addedServices": [],
     "removedServices": [],
