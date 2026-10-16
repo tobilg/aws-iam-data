@@ -132167,7 +132167,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_CreateNetworkConnector.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_CreateNetworkConnector.html"
       },
       {
         "name": "CreateWebFunction",
@@ -132444,7 +132444,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_DeleteNetworkConnector.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_DeleteNetworkConnector.html"
       },
       {
         "name": "DeleteProvisionedConcurrencyConfig",
@@ -132936,7 +132936,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_GetNetworkConnector.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_GetNetworkConnector.html"
       },
       {
         "name": "GetPolicy",
@@ -133429,7 +133429,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_ListNetworkConnectorVersions.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_ListNetworkConnectorVersions.html"
       },
       {
         "name": "ListNetworkConnectors",
@@ -133444,7 +133444,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_ListNetworkConnectors.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_ListNetworkConnectors.html"
       },
       {
         "name": "ListProvisionedConcurrencyConfigs",
@@ -134328,7 +134328,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_UpdateNetworkConnector.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_UpdateNetworkConnector.html"
       },
       {
         "name": "UpdateWebFunctionEndpoint",
@@ -368829,7 +368829,10 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "grafana:CreateWorkspace",
+              "iam:PassRole"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/grafana/latest/APIReference/API_TagResource.html"

@@ -6039,7 +6039,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 6038,145,lambda:CreateMicrovmAuthToken,https://docs.aws.amazon.com/lambda/latest/microvm-api/API_CreateMicrovmAuthToken.html,false,Write
 6039,145,lambda:CreateMicrovmImage,https://docs.aws.amazon.com/lambda/latest/microvm-api/API_CreateMicrovmImage.html,false,Write
 6040,145,lambda:CreateMicrovmShellAuthToken,https://docs.aws.amazon.com/lambda/latest/microvm-api/API_CreateMicrovmShellAuthToken.html,false,Write
-6041,145,lambda:CreateNetworkConnector,https://docs.aws.amazon.com/lambda/latest/dg/API_CreateNetworkConnector.html,false,Write
+6041,145,lambda:CreateNetworkConnector,https://docs.aws.amazon.com/lambda/latest/lambda-core/API_CreateNetworkConnector.html,false,Write
 6042,145,lambda:CreateWebFunction,https://docs.aws.amazon.com/lambda/latest/lambda-web/API_CreateWebFunction.html,false,Write
 6043,145,lambda:CreateWebFunctionEndpoint,https://docs.aws.amazon.com/lambda/latest/lambda-web/API_CreateWebFunctionEndpoint.html,false,Write
 6044,145,lambda:CreateWebFunctionRevision,https://docs.aws.amazon.com/lambda/latest/lambda-web/API_CreateWebFunctionRevision.html,false,Write
@@ -6055,7 +6055,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 6054,145,lambda:DeleteLayerVersion,https://docs.aws.amazon.com/lambda/latest/dg/API_DeleteLayerVersion.html,false,Write
 6055,145,lambda:DeleteMicrovmImage,https://docs.aws.amazon.com/lambda/latest/microvm-api/API_DeleteMicrovmImage.html,false,Write
 6056,145,lambda:DeleteMicrovmImageVersion,https://docs.aws.amazon.com/lambda/latest/microvm-api/API_DeleteMicrovmImageVersion.html,false,Write
-6057,145,lambda:DeleteNetworkConnector,https://docs.aws.amazon.com/lambda/latest/dg/API_DeleteNetworkConnector.html,false,Write
+6057,145,lambda:DeleteNetworkConnector,https://docs.aws.amazon.com/lambda/latest/lambda-core/API_DeleteNetworkConnector.html,false,Write
 6058,145,lambda:DeleteProvisionedConcurrencyConfig,https://docs.aws.amazon.com/lambda/latest/dg/API_DeleteProvisionedConcurrencyConfig.html,false,Write
 6059,145,lambda:DeleteResourcePolicy,https://docs.aws.amazon.com/lambda/latest/dg/API_DeleteResourcePolicy.html,false,"Permissions management, Write"
 6060,145,lambda:DeleteWebFunction,https://docs.aws.amazon.com/lambda/latest/lambda-web/API_DeleteWebFunction.html,false,Write
@@ -6083,7 +6083,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 6082,145,lambda:GetMicrovmImage,https://docs.aws.amazon.com/lambda/latest/microvm-api/API_GetMicrovmImage.html,false,Read
 6083,145,lambda:GetMicrovmImageBuild,https://docs.aws.amazon.com/lambda/latest/microvm-api/API_GetMicrovmImageBuild.html,false,Read
 6084,145,lambda:GetMicrovmImageVersion,https://docs.aws.amazon.com/lambda/latest/microvm-api/API_GetMicrovmImageVersion.html,false,Read
-6085,145,lambda:GetNetworkConnector,https://docs.aws.amazon.com/lambda/latest/dg/API_GetNetworkConnector.html,false,Read
+6085,145,lambda:GetNetworkConnector,https://docs.aws.amazon.com/lambda/latest/lambda-core/API_GetNetworkConnector.html,false,Read
 6086,145,lambda:GetPolicy,https://docs.aws.amazon.com/lambda/latest/dg/API_GetPolicy.html,false,Read
 6087,145,lambda:GetProvisionedConcurrencyConfig,https://docs.aws.amazon.com/lambda/latest/dg/API_GetProvisionedConcurrencyConfig.html,false,Read
 6088,145,lambda:GetResourcePolicy,https://docs.aws.amazon.com/lambda/latest/dg/API_GetResourcePolicy.html,false,Read
@@ -6112,8 +6112,8 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 6111,145,lambda:ListMicrovmImageVersions,https://docs.aws.amazon.com/lambda/latest/microvm-api/API_ListMicrovmImageVersions.html,false,List
 6112,145,lambda:ListMicrovmImages,https://docs.aws.amazon.com/lambda/latest/microvm-api/API_ListMicrovmImages.html,false,List
 6113,145,lambda:ListMicrovms,https://docs.aws.amazon.com/lambda/latest/microvm-api/API_ListMicrovms.html,false,List
-6114,145,lambda:ListNetworkConnectorVersions,https://docs.aws.amazon.com/lambda/latest/dg/API_ListNetworkConnectorVersions.html,false,List
-6115,145,lambda:ListNetworkConnectors,https://docs.aws.amazon.com/lambda/latest/dg/API_ListNetworkConnectors.html,false,List
+6114,145,lambda:ListNetworkConnectorVersions,https://docs.aws.amazon.com/lambda/latest/lambda-core/API_ListNetworkConnectorVersions.html,false,List
+6115,145,lambda:ListNetworkConnectors,https://docs.aws.amazon.com/lambda/latest/lambda-core/API_ListNetworkConnectors.html,false,List
 6116,145,lambda:ListProvisionedConcurrencyConfigs,https://docs.aws.amazon.com/lambda/latest/dg/API_ListProvisionedConcurrencyConfigs.html,false,List
 6117,145,lambda:ListTags,https://docs.aws.amazon.com/lambda/latest/dg/API_ListTags.html,false,Read
 6118,145,lambda:ListVersionsByFunction,https://docs.aws.amazon.com/lambda/latest/dg/API_ListVersionsByFunction.html,false,List
@@ -6153,7 +6153,7 @@ action_id,service_id,name,reference_url,permission_only_flag,access_level
 6152,145,lambda:UpdateFunctionUrlConfig,https://docs.aws.amazon.com/lambda/latest/dg/API_UpdateFunctionUrlConfig.html,false,Write
 6153,145,lambda:UpdateMicrovmImage,https://docs.aws.amazon.com/lambda/latest/microvm-api/API_UpdateMicrovmImage.html,false,Write
 6154,145,lambda:UpdateMicrovmImageVersion,https://docs.aws.amazon.com/lambda/latest/microvm-api/API_UpdateMicrovmImageVersion.html,false,Write
-6155,145,lambda:UpdateNetworkConnector,https://docs.aws.amazon.com/lambda/latest/dg/API_UpdateNetworkConnector.html,false,Write
+6155,145,lambda:UpdateNetworkConnector,https://docs.aws.amazon.com/lambda/latest/lambda-core/API_UpdateNetworkConnector.html,false,Write
 6156,145,lambda:UpdateWebFunctionEndpoint,https://docs.aws.amazon.com/lambda/latest/lambda-web/API_UpdateWebFunctionEndpoint.html,false,Write
 6157,146,launchwizard:CreateDeployment,https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_CreateDeployment.html,false,Write
 6158,146,launchwizard:DeleteDeployment,https://docs.aws.amazon.com/launchwizard/latest/APIReference/API_DeleteDeployment.html,false,Write
