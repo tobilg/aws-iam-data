@@ -63027,7 +63027,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "drs:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/drs/latest/APIReference/API_StartRecoveryPlanExecution.html"
@@ -196194,7 +196196,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "transfer:ExportHostKey"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/transfer/latest/userguide/API_UpdateHostKey.html"
