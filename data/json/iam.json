@@ -209490,8 +209490,7 @@
               "aws-marketplace:ProductId"
             ],
             "dependentActions": [
-              "aws-marketplace:Subscribe",
-              "aws-marketplace:UpdatePurchaseOrders"
+              "aws-marketplace:Subscribe"
             ]
           }
         ],
@@ -411452,9 +411451,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": [
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/rekognition/latest/APIReference/API_StartPersonTracking.html"
