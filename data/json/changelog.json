@@ -1,5 +1,33 @@
 [
   {
+    "dateOfChange": "2026-10-20",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS WorkSpaces Managed Instances": [
+        "workspaces-instances:ModifyVolume"
+      ],
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:IngestData",
+        "bedrock-agentcore:ResetTokenVaultKeyMaterial"
+      ],
+      "Amazon Elastic Container Service": [
+        "ecs:AssociateGatewayWithCluster",
+        "ecs:CreateGateway",
+        "ecs:DeleteGateway",
+        "ecs:DescribeGateway",
+        "ecs:DescribeGatewayResources",
+        "ecs:DescribeGatewayRoute",
+        "ecs:DisassociateGatewayFromCluster",
+        "ecs:ListGatewayClusterAssociations",
+        "ecs:ListGatewayRoutes",
+        "ecs:ListGateways",
+        "ecs:UpdateGateway"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-10-15",
     "addedServices": [],
     "removedServices": [],

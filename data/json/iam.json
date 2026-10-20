@@ -206651,7 +206651,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_AssociateVolume.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_AssociateVolume.html"
       },
       {
         "name": "CreateVolume",
@@ -206666,7 +206666,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_CreateVolume.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_CreateVolume.html"
       },
       {
         "name": "CreateWorkspaceInstance",
@@ -206686,7 +206686,7 @@
             ]
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_CreateWorkspaceInstance.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_CreateWorkspaceInstance.html"
       },
       {
         "name": "DeleteVolume",
@@ -206703,7 +206703,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_DeleteVolume.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_DeleteVolume.html"
       },
       {
         "name": "DeleteWorkspaceInstance",
@@ -206720,7 +206720,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_DeleteWorkspaceInstance.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_DeleteWorkspaceInstance.html"
       },
       {
         "name": "DisassociateVolume",
@@ -206737,7 +206737,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_DisassociateVolume.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_DisassociateVolume.html"
       },
       {
         "name": "GetWorkspaceInstance",
@@ -206754,7 +206754,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_GetWorkspaceInstance.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_GetWorkspaceInstance.html"
       },
       {
         "name": "ListInstanceTypes",
@@ -206769,7 +206769,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_ListInstanceTypes.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_ListInstanceTypes.html"
       },
       {
         "name": "ListRegions",
@@ -206784,7 +206784,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_ListRegions.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_ListRegions.html"
       },
       {
         "name": "ListTagsForResource",
@@ -206801,7 +206801,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_ListTagsForResource.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_ListTagsForResource.html"
       },
       {
         "name": "ListWorkspaceInstances",
@@ -206816,7 +206816,24 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_ListWorkspaceInstances.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_ListWorkspaceInstances.html"
+      },
+      {
+        "name": "ModifyVolume",
+        "permissionOnly": false,
+        "description": "Grants permission to modify a workspace managed volume in your account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "VolumeId",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_ModifyVolume.html"
       },
       {
         "name": "TagResource",
@@ -206835,7 +206852,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_TagResource.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_TagResource.html"
       },
       {
         "name": "UntagResource",
@@ -206853,7 +206870,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces/latest/api/API_UntagResource.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/workspaces-instances/latest/api/API_UntagResource.html"
       }
     ],
     "resourceTypes": [
@@ -232139,7 +232156,8 @@
             "resourceType": "memory",
             "required": true,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "bedrock-agentcore:namespace"
             ],
             "dependentActions": []
           }
@@ -232174,7 +232192,8 @@
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
-              "bedrock-agentcore:namespace"
+              "bedrock-agentcore:namespace",
+              "bedrock-agentcore:sourceNamespace"
             ],
             "dependentActions": []
           }
@@ -232538,6 +232557,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "bedrock-agentcore:actorId",
+              "bedrock-agentcore:namespaceVariable/${VariableName}",
               "bedrock-agentcore:sessionId"
             ],
             "dependentActions": []
@@ -233338,7 +233358,8 @@
             "resourceType": "memory",
             "required": true,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "bedrock-agentcore:namespace"
             ],
             "dependentActions": []
           }
@@ -234123,7 +234144,8 @@
             "resourceType": "memory",
             "required": true,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "bedrock-agentcore:namespace"
             ],
             "dependentActions": []
           }
@@ -234739,6 +234761,26 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetWorkloadIdentity.html"
+      },
+      {
+        "name": "IngestData",
+        "permissionOnly": false,
+        "description": "Grants permission to ingest content to generate long-term memory records",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "memory",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "bedrock-agentcore:actorId",
+              "bedrock-agentcore:namespaceVariable/${VariableName}",
+              "bedrock-agentcore:sessionId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_IngestData.html"
       },
       {
         "name": "InvokeAgentRuntime",
@@ -235468,6 +235510,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "bedrock-agentcore:namespace",
+              "bedrock-agentcore:namespacePath",
               "bedrock-agentcore:strategyId"
             ],
             "dependentActions": []
@@ -236027,6 +236070,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_PutResourcePolicy.html"
       },
       {
+        "name": "ResetTokenVaultKeyMaterial",
+        "permissionOnly": false,
+        "description": "Grants permission to reset a TokenVault's key material to a Service Managed Key after its Customer Managed Key (CMK) has been deleted",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "token-vault",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ResetTokenVaultKeyMaterial.html"
+      },
+      {
         "name": "RetrieveMemoryRecords",
         "permissionOnly": false,
         "description": "Grants permission to retrieve memory records through sematic query",
@@ -236038,6 +236098,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "bedrock-agentcore:namespace",
+              "bedrock-agentcore:namespacePath",
               "bedrock-agentcore:strategyId"
             ],
             "dependentActions": []
@@ -237679,6 +237740,18 @@
         "type": "String"
       },
       {
+        "name": "bedrock-agentcore:namespacePath",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the namespace path hierarchy of the memory records in the request",
+        "type": "String"
+      },
+      {
+        "name": "bedrock-agentcore:namespaceVariable/${VariableName}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the value of a custom namespace variable in the request",
+        "type": "String"
+      },
+      {
         "name": "bedrock-agentcore:runtimeSessionId",
         "apiReferenceUrl": "",
         "description": "Filters access by Runtime Session Id",
@@ -237694,6 +237767,12 @@
         "name": "bedrock-agentcore:sessionId",
         "apiReferenceUrl": "",
         "description": "Filters access by Memory Session Id",
+        "type": "String"
+      },
+      {
+        "name": "bedrock-agentcore:sourceNamespace",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the source namespace of the memory records in the request",
         "type": "String"
       },
       {
@@ -319035,6 +319114,24 @@
     "servicePrefix": "ecs",
     "actions": [
       {
+        "name": "AssociateGatewayWithCluster",
+        "permissionOnly": false,
+        "description": "Grants permission to associate an Amazon ECS gateway with a cluster",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_AssociateGatewayWithCluster.html"
+      },
+      {
         "name": "ContinueServiceDeployment",
         "permissionOnly": false,
         "description": "Grants permission to continue a paused service deployment",
@@ -319166,7 +319263,9 @@
               "ecs:task-memory"
             ],
             "dependentActions": [
+              "ecs:AssociateGatewayWithCluster",
               "ecs:CreateCluster",
+              "ecs:CreateGateway",
               "ecs:RegisterTaskDefinition",
               "ecs:TagResource",
               "iam:PassRole"
@@ -319174,6 +319273,27 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateExpressGatewayService.html"
+      },
+      {
+        "name": "CreateGateway",
+        "permissionOnly": false,
+        "description": "Grants permission to create an Amazon ECS gateway",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "ecs:enable-ecs-managed-tags",
+              "ecs:propagate-tags"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateGateway.html"
       },
       {
         "name": "CreateService",
@@ -319366,6 +319486,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteExpressGatewayService.html"
+      },
+      {
+        "name": "DeleteGateway",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an Amazon ECS gateway",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DeleteGateway.html"
       },
       {
         "name": "DeleteService",
@@ -319623,6 +319760,66 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeExpressGatewayService.html"
       },
       {
+        "name": "DescribeGateway",
+        "permissionOnly": false,
+        "description": "Grants permission to describe an Amazon ECS gateway",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeGateway.html"
+      },
+      {
+        "name": "DescribeGatewayResources",
+        "permissionOnly": false,
+        "description": "Grants permission to describe the resources associated with an Amazon ECS gateway",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeGatewayResources.html"
+      },
+      {
+        "name": "DescribeGatewayRoute",
+        "permissionOnly": false,
+        "description": "Grants permission to describe a route for an Amazon ECS gateway",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "gateway-route",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:gateway"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeGatewayRoute.html"
+      },
+      {
         "name": "DescribeServiceDeployments",
         "permissionOnly": false,
         "description": "Grants permission to describe one or more of your service deployments",
@@ -319752,6 +319949,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DescribeTasks.html"
+      },
+      {
+        "name": "DisassociateGatewayFromCluster",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate an Amazon ECS gateway from a cluster",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_DisassociateGatewayFromCluster.html"
       },
       {
         "name": "DiscoverPollEndpoint",
@@ -319935,6 +320150,101 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListDaemons.html"
+      },
+      {
+        "name": "ListGatewayClusterAssociations",
+        "permissionOnly": false,
+        "description": "Grants permission to list the cluster associations for Amazon ECS gateways",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "cluster",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster",
+              "ecs:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster",
+              "ecs:gateway"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListGatewayClusterAssociations.html"
+      },
+      {
+        "name": "ListGatewayRoutes",
+        "permissionOnly": false,
+        "description": "Grants permission to list the routes for an Amazon ECS gateway",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "cluster",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster",
+              "ecs:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "gateway",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:gateway"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "gateway-route",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:gateway"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "service",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:cluster",
+              "ecs:ResourceTag/${TagKey}",
+              "ecs:service"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListGatewayRoutes.html"
+      },
+      {
+        "name": "ListGateways",
+        "permissionOnly": false,
+        "description": "Grants permission to list Amazon ECS gateways",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:gateway"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_ListGateways.html"
       },
       {
         "name": "ListServiceDeployments",
@@ -320482,6 +320792,17 @@
             "dependentActions": []
           },
           {
+            "resourceType": "gateway",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "ecs:CreateAction"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "service",
             "required": false,
             "conditionKeys": [
@@ -320580,6 +320901,15 @@
           },
           {
             "resourceType": "daemon-task-definition",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "gateway",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -320776,12 +321106,33 @@
               "ecs:task-memory"
             ],
             "dependentActions": [
+              "ecs:AssociateGatewayWithCluster",
+              "ecs:CreateGateway",
               "ecs:RegisterTaskDefinition",
               "iam:PassRole"
             ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_UpdateExpressGatewayService.html"
+      },
+      {
+        "name": "UpdateGateway",
+        "permissionOnly": false,
+        "description": "Grants permission to modify the parameters of an Amazon ECS gateway",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "gateway",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ecs:enable-ecs-managed-tags",
+              "ecs:propagate-tags"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_UpdateGateway.html"
       },
       {
         "name": "UpdateService",
@@ -320939,6 +321290,23 @@
         "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:daemon-task-definition/${DaemonTaskDefinitionFamilyName}:${DaemonTaskDefinitionRevisionNumber}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "gateway",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:gateway/${GatewayName}/${GatewayId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "gateway-route",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:ecs:${Region}:${Account}:gateway-route/${GatewayName}/${GatewayId}/${RouteId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "ecs:gateway"
         ]
       },
       {
@@ -329972,7 +330340,11 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "emr-serverless:AccessSystemProfileLogs",
+              "glue:GetDatabases",
+              "glue:SearchTables"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/emr-serverless/latest/APIReference/API_GetResourceDashboard.html"
