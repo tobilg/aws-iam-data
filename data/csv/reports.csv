@@ -1,8 +1,8 @@
 report_name,metric_name,value
-Actions by type,Write Actions,10689
-Actions by type,Read Actions,5459
-Actions by type,List Actions,3577
-Actions by type,,1054
+Actions by type,Write Actions,10745
+Actions by type,Read Actions,5509
+Actions by type,List Actions,3581
+Actions by type,,1056
 Longest action names,license-manager-linux-subscriptions:ListRegisteredSubscriptionProviders,71
 Longest action names,license-manager-linux-subscriptions:GetRegisteredSubscriptionProvider,69
 Longest action names,network-security-manager:ListAggregateResourceSynchronizationStatuses,69
@@ -39,10 +39,10 @@ Most referenced resource ARNs,userpool - arn:${Partition}:cognito-idp:${Region}:
 Most referenced resource ARNs,"bot - arn:${Partition}:lex:${Region}:${Account}:bot/${BotId}, arn:${Partition}:lex:${Region}:${Account}:bot:${BotName}",91
 Most referenced resource ARNs,organization - arn:${Partition}:workmail:${Region}:${Account}:organization/${ResourceId},88
 Most referenced resource ARNs,directory - arn:${Partition}:ds:${Region}:${Account}:directory/${DirectoryId},84
-Most referenced resource ARNs,AgentSpace - arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId},76
+Most referenced resource ARNs,environment - arn:${Partition}:assurance:${Region}:${Account}:environment/${Environment},83
 Most referenced resource ARNs,rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog,76
+Most referenced resource ARNs,AgentSpace - arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId},76
 Most referenced resource ARNs,instance - arn:${Partition}:ec2:${Region}:${Account}:instance/${InstanceId},74
-Most referenced resource ARNs,mlflow-tracking-server - arn:${Partition}:sagemaker:${Region}:${Account}:mlflow-tracking-server/${MlflowTrackingServerName},70
 Services with least actions,AWS Billing And Cost Management Recommended Actions,1
 Services with least actions,AWS Marketplace Reporting,1
 Services with least actions,AWS CloudTrail Data,1
@@ -60,7 +60,7 @@ Services with most actions,Amazon Chime,312
 Services with most actions,AWS Glue,300
 Services with most actions,AWS IoT,293
 Services with most actions,Amazon QuickSight,287
-Services with most actions,Amazon Bedrock,252
+Services with most actions,Amazon Bedrock,259
 Services with most actions,Amazon Bedrock Agentcore,243
 Services with most actions,Amazon DataZone,242
 Shortest action names,ce:GetTags,10
@@ -93,8 +93,8 @@ Shortest service prefixes,iq,2
 Shortest service prefixes,m2,2
 Shortest service prefixes,ts,2
 Shortest service prefixes,pi,2
-Summary,Total number of distinct resource ARNS,2268
-Summary,Total number of distinct condition keys,1590
-Summary,Total number of services,476
+Summary,Total number of distinct resource ARNS,2272
+Summary,Total number of distinct condition keys,1591
+Summary,Total number of services,477
 Summary,Average number of actions per service,48
 Summary,Median number of actions per service,31

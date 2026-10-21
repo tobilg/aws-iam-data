@@ -15061,6 +15061,1580 @@
     ]
   },
   {
+    "name": "AWS Assurance",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_assurance.html",
+    "servicePrefix": "assurance",
+    "actions": [
+      {
+        "name": "AcceptInvitation",
+        "permissionOnly": false,
+        "description": "Grants permission to accept an invitation to connect an account to an environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_AcceptInvitation.html"
+      },
+      {
+        "name": "AssignPermissionSet",
+        "permissionOnly": false,
+        "description": "Grants permission to assign a permission set to a principal",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_AssignPermissionSet.html"
+      },
+      {
+        "name": "BatchGetComment",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve multiple comments in a single request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_BatchGetComment.html"
+      },
+      {
+        "name": "BatchGetControl",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve multiple controls in a single request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_BatchGetControl.html"
+      },
+      {
+        "name": "BatchGetTask",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve multiple tasks in a single request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_BatchGetTask.html"
+      },
+      {
+        "name": "Chat",
+        "permissionOnly": false,
+        "description": "Grants permission to start a streaming chat session with the AI Governance agent",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_Chat.html"
+      },
+      {
+        "name": "CreateComment",
+        "permissionOnly": false,
+        "description": "Grants permission to add a new comment to a specific control",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_CreateComment.html"
+      },
+      {
+        "name": "CreateControl",
+        "permissionOnly": false,
+        "description": "Grants permission to create a leaf control within a custom framework",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_CreateControl.html"
+      },
+      {
+        "name": "CreateControlGroup",
+        "permissionOnly": false,
+        "description": "Grants permission to create a control group within a custom framework",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_CreateControlGroup.html"
+      },
+      {
+        "name": "CreateEnvironment",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new governance environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_CreateEnvironment.html"
+      },
+      {
+        "name": "CreateEnvironmentConnection",
+        "permissionOnly": false,
+        "description": "Grants permission to create an environment connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_CreateEnvironmentConnection.html"
+      },
+      {
+        "name": "CreateFramework",
+        "permissionOnly": false,
+        "description": "Grants permission to create a custom customer-owned framework",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_CreateFramework.html"
+      },
+      {
+        "name": "CreateInvitation",
+        "permissionOnly": false,
+        "description": "Grants permission to invite an account to connect to an environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_CreateInvitation.html"
+      },
+      {
+        "name": "CreatePermissionSet",
+        "permissionOnly": false,
+        "description": "Grants permission to create a permission set in an environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_CreatePermissionSet.html"
+      },
+      {
+        "name": "CreateProject",
+        "permissionOnly": false,
+        "description": "Grants permission to create a project",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_CreateProject.html"
+      },
+      {
+        "name": "DeleteComment",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a specific comment by its identifying fields",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_DeleteComment.html"
+      },
+      {
+        "name": "DeleteControl",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a custom control",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_DeleteControl.html"
+      },
+      {
+        "name": "DeleteControlGroup",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a control group",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_DeleteControlGroup.html"
+      },
+      {
+        "name": "DeleteEnvironment",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a governance environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_DeleteEnvironment.html"
+      },
+      {
+        "name": "DeleteEnvironmentConnection",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an environment connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_DeleteEnvironmentConnection.html"
+      },
+      {
+        "name": "DeleteEvidence",
+        "permissionOnly": false,
+        "description": "Grants permission to remove an evidence item",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_DeleteEvidence.html"
+      },
+      {
+        "name": "DeleteFramework",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a custom framework",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_DeleteFramework.html"
+      },
+      {
+        "name": "DeleteInvitation",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an invitation or unlink a connected account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_DeleteInvitation.html"
+      },
+      {
+        "name": "DeletePermissionSet",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a permission set",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_DeletePermissionSet.html"
+      },
+      {
+        "name": "DeleteProject",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a project and all its associated resources",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_DeleteProject.html"
+      },
+      {
+        "name": "DeregisterOrganizationDelegatedAdmin",
+        "permissionOnly": false,
+        "description": "Grants permission to deregister the delegated administrator for AWS Assurance in the caller's organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_DeregisterOrganizationDelegatedAdmin.html"
+      },
+      {
+        "name": "DisableFramework",
+        "permissionOnly": false,
+        "description": "Grants permission to disable a previously enabled framework for a specific project",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_DisableFramework.html"
+      },
+      {
+        "name": "EnableFramework",
+        "permissionOnly": false,
+        "description": "Grants permission to enable a framework for a project",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_EnableFramework.html"
+      },
+      {
+        "name": "GetAnnotation",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the annotation for a specific piece of evidence",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetAnnotation.html"
+      },
+      {
+        "name": "GetAssessment",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a single assessment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetAssessment.html"
+      },
+      {
+        "name": "GetAssessmentReportContent",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the content of a prepared assessment report",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetAssessmentReportContent.html"
+      },
+      {
+        "name": "GetAssessmentReportExport",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the state of an assessment report export",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetAssessmentReportExport.html"
+      },
+      {
+        "name": "GetChatMessages",
+        "permissionOnly": false,
+        "description": "Grants permission to get messages for a chat session in chronological order",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetChatMessages.html"
+      },
+      {
+        "name": "GetComment",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a specific comment by its identifying fields",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetComment.html"
+      },
+      {
+        "name": "GetControl",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a single leaf control within a framework version",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetControl.html"
+      },
+      {
+        "name": "GetControlGroup",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a single control group within a framework version",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetControlGroup.html"
+      },
+      {
+        "name": "GetControlStatus",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the effective compliance status of a control",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetControlStatus.html"
+      },
+      {
+        "name": "GetEnvironment",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a governance environment by ARN or domain",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetEnvironment.html"
+      },
+      {
+        "name": "GetEvidence",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve metadata for an evidence item",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetEvidence.html"
+      },
+      {
+        "name": "GetEvidenceContent",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the content of an evidence item",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetEvidenceContent.html"
+      },
+      {
+        "name": "GetFramework",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a framework resource by type and key fields",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetFramework.html"
+      },
+      {
+        "name": "GetInvitation",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an invitation",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetInvitation.html"
+      },
+      {
+        "name": "GetPermissionSet",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a permission set",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetPermissionSet.html"
+      },
+      {
+        "name": "GetProject",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a project",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetProject.html"
+      },
+      {
+        "name": "GetTask",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a specific task by its identifying fields",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_GetTask.html"
+      },
+      {
+        "name": "ListAssessmentAnnotations",
+        "permissionOnly": false,
+        "description": "Grants permission to list the annotations on one assessment, paginated",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListAssessmentAnnotations.html"
+      },
+      {
+        "name": "ListAssessmentJournalRecords",
+        "permissionOnly": false,
+        "description": "Grants permission to list assessment journal records, paginated",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListAssessmentJournalRecords.html"
+      },
+      {
+        "name": "ListAssessmentOutcomes",
+        "permissionOnly": false,
+        "description": "Grants permission to list a compliance score over time",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListAssessmentOutcomes.html"
+      },
+      {
+        "name": "ListAssessments",
+        "permissionOnly": false,
+        "description": "Grants permission to list assessments, paginated",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListAssessments.html"
+      },
+      {
+        "name": "ListChatSessions",
+        "permissionOnly": false,
+        "description": "Grants permission to list chat sessions for the calling user in a governance environment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListChatSessions.html"
+      },
+      {
+        "name": "ListComments",
+        "permissionOnly": false,
+        "description": "Grants permission to list comments in a governance environment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListComments.html"
+      },
+      {
+        "name": "ListConnectionItems",
+        "permissionOnly": false,
+        "description": "Grants permission to list the contents of an environment connection",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListConnectionItems.html"
+      },
+      {
+        "name": "ListControlGroups",
+        "permissionOnly": false,
+        "description": "Grants permission to list control groups in a framework version",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListControlGroups.html"
+      },
+      {
+        "name": "ListControlResources",
+        "permissionOnly": false,
+        "description": "Grants permission to list in-scope resources for a control",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListControlResources.html"
+      },
+      {
+        "name": "ListControls",
+        "permissionOnly": false,
+        "description": "Grants permission to list controls within a control group",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListControls.html"
+      },
+      {
+        "name": "ListDiscoveredResources",
+        "permissionOnly": false,
+        "description": "Grants permission to list the resources found by a discovery job (paginated)",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListDiscoveredResources.html"
+      },
+      {
+        "name": "ListEnabledFrameworks",
+        "permissionOnly": false,
+        "description": "Grants permission to list enabled frameworks for a governance environment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListEnabledFrameworks.html"
+      },
+      {
+        "name": "ListEnvironmentConnections",
+        "permissionOnly": false,
+        "description": "Grants permission to list environment connections in a governance environment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListEnvironmentConnections.html"
+      },
+      {
+        "name": "ListEnvironments",
+        "permissionOnly": false,
+        "description": "Grants permission to list all governance environments with optional pagination",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListEnvironments.html"
+      },
+      {
+        "name": "ListEvidence",
+        "permissionOnly": false,
+        "description": "Grants permission to list evidence items (paginated)",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListEvidence.html"
+      },
+      {
+        "name": "ListEvidenceAnnotations",
+        "permissionOnly": false,
+        "description": "Grants permission to list the annotations on one version of a piece of evidence within a project, paginated",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListEvidenceAnnotations.html"
+      },
+      {
+        "name": "ListFrameworks",
+        "permissionOnly": false,
+        "description": "Grants permission to list frameworks",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListFrameworks.html"
+      },
+      {
+        "name": "ListInboundInvitations",
+        "permissionOnly": false,
+        "description": "Grants permission to list invitations addressed to the caller's account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListInboundInvitations.html"
+      },
+      {
+        "name": "ListOutboundInvitations",
+        "permissionOnly": false,
+        "description": "Grants permission to list invitations extended from an owned environment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListOutboundInvitations.html"
+      },
+      {
+        "name": "ListPermissionSetAssignments",
+        "permissionOnly": false,
+        "description": "Grants permission to list permission set assignments in an environment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListPermissionSetAssignments.html"
+      },
+      {
+        "name": "ListPermissionSets",
+        "permissionOnly": false,
+        "description": "Grants permission to list permission sets in an environment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListPermissionSets.html"
+      },
+      {
+        "name": "ListProjects",
+        "permissionOnly": false,
+        "description": "Grants permission to list all projects within a governance environment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListProjects.html"
+      },
+      {
+        "name": "ListResourcesForControl",
+        "permissionOnly": false,
+        "description": "Grants permission to list in-scope resources for a control",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListResourcesForControl.html"
+      },
+      {
+        "name": "ListTagsForResource",
+        "permissionOnly": false,
+        "description": "Grants permission to list tags for a resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListTagsForResource.html"
+      },
+      {
+        "name": "ListTaskHistory",
+        "permissionOnly": false,
+        "description": "Grants permission to list task history for a task",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListTaskHistory.html"
+      },
+      {
+        "name": "ListTasks",
+        "permissionOnly": false,
+        "description": "Grants permission to list all tasks within a governance environment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListTasks.html"
+      },
+      {
+        "name": "PublishFramework",
+        "permissionOnly": false,
+        "description": "Grants permission to publish a custom framework",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_PublishFramework.html"
+      },
+      {
+        "name": "PutControlStatusOverride",
+        "permissionOnly": false,
+        "description": "Grants permission to declare or remove an applicability override on a control or requirement",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_PutControlStatusOverride.html"
+      },
+      {
+        "name": "PutEvidence",
+        "permissionOnly": false,
+        "description": "Grants permission to add evidence, or a new version of existing evidence, to support a compliance assessment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_PutEvidence.html"
+      },
+      {
+        "name": "RegisterOrganizationDelegatedAdmin",
+        "permissionOnly": false,
+        "description": "Grants permission to register a delegated administrator for AWS Assurance in the caller's organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_RegisterOrganizationDelegatedAdmin.html"
+      },
+      {
+        "name": "RejectInvitation",
+        "permissionOnly": false,
+        "description": "Grants permission to reject an invitation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_RejectInvitation.html"
+      },
+      {
+        "name": "RevokePermissionSet",
+        "permissionOnly": false,
+        "description": "Grants permission to revoke a permission set assignment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_RevokePermissionSet.html"
+      },
+      {
+        "name": "StartAssessment",
+        "permissionOnly": false,
+        "description": "Grants permission to begin a new assessment for a control or framework",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_StartAssessment.html"
+      },
+      {
+        "name": "StartAssessmentReportExport",
+        "permissionOnly": false,
+        "description": "Grants permission to start preparing an assessment report",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_StartAssessmentReportExport.html"
+      },
+      {
+        "name": "StartResourceDiscovery",
+        "permissionOnly": false,
+        "description": "Grants permission to start discovery of in-scope resources",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_StartResourceDiscovery.html"
+      },
+      {
+        "name": "TagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to add or overwrite tags on a resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_TagResource.html"
+      },
+      {
+        "name": "UntagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to remove tags from a resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_UntagResource.html"
+      },
+      {
+        "name": "UpdateComment",
+        "permissionOnly": false,
+        "description": "Grants permission to modify the content of an existing comment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_UpdateComment.html"
+      },
+      {
+        "name": "UpdateControl",
+        "permissionOnly": false,
+        "description": "Grants permission to update a custom control",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_UpdateControl.html"
+      },
+      {
+        "name": "UpdateControlGroup",
+        "permissionOnly": false,
+        "description": "Grants permission to update a control group's mutable attributes",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_UpdateControlGroup.html"
+      },
+      {
+        "name": "UpdateEnvironment",
+        "permissionOnly": false,
+        "description": "Grants permission to update a governance environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_UpdateEnvironment.html"
+      },
+      {
+        "name": "UpdateEvidence",
+        "permissionOnly": false,
+        "description": "Grants permission to update evidence metadata and manage control links",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_UpdateEvidence.html"
+      },
+      {
+        "name": "UpdateFramework",
+        "permissionOnly": false,
+        "description": "Grants permission to update a custom framework",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_UpdateFramework.html"
+      },
+      {
+        "name": "UpdatePermissionSet",
+        "permissionOnly": false,
+        "description": "Grants permission to update a permission set",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_UpdatePermissionSet.html"
+      },
+      {
+        "name": "UpdateProject",
+        "permissionOnly": false,
+        "description": "Grants permission to update a project",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_UpdateProject.html"
+      },
+      {
+        "name": "UpdateTask",
+        "permissionOnly": false,
+        "description": "Grants permission to update an existing task's mutable fields",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_UpdateTask.html"
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "environment",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:assurance:${Region}:${Account}:environment/${Environment}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      }
+    ],
+    "conditionKeys": [
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tags that are passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by a tag key and value pair of a resource",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tag keys that are passed in the request",
+        "type": "ArrayOfString"
+      }
+    ]
+  },
+  {
     "name": "AWS Audit Manager",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_auditmanager.html",
     "servicePrefix": "auditmanager",
@@ -105842,7 +107416,9 @@
           {
             "resourceType": "Identitystore",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "identitystore:VpceAccessRequired"
+            ],
             "dependentActions": []
           }
         ],
@@ -105962,6 +107538,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by Identity Store User ID",
         "type": "String"
+      },
+      {
+        "name": "identitystore:VpceAccessRequired",
+        "apiReferenceUrl": "",
+        "description": "Filters access by whether the Identity Store requires access through a VPC endpoint",
+        "type": "Bool"
       }
     ]
   },
@@ -171770,7 +173352,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_UpdateFinding.html"
@@ -207634,6 +209218,21 @@
     "servicePrefix": "billing",
     "actions": [
       {
+        "name": "AssociateContract",
+        "permissionOnly": false,
+        "description": "Grants permission to associate a Private Pricing Addendum with the caller's AWS account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "contract",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+      },
+      {
         "name": "AssociateSourceViews",
         "permissionOnly": false,
         "description": "Grants permission to associate source views to a billing view",
@@ -207651,6 +209250,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_billing_AssociateSourceViews.html"
+      },
+      {
+        "name": "CancelContractualInvestmentAttestation",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel an attestation claiming an investment award for an outcome completion within a Private Pricing Addendum",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "contract",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
       },
       {
         "name": "CreateBillingView",
@@ -207675,6 +209289,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_billing_CreateBillingView.html"
       },
       {
+        "name": "CreateContractualInvestmentAttestation",
+        "permissionOnly": false,
+        "description": "Grants permission to create an attestation claiming an investment award for an outcome completion within a Private Pricing Addendum",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "contract",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+      },
+      {
         "name": "DeleteBillingView",
         "permissionOnly": false,
         "description": "Grants permission to delete a billing view",
@@ -207690,6 +209319,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_billing_DeleteBillingView.html"
+      },
+      {
+        "name": "DisassociateContract",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate a Private Pricing Addendum from the caller's AWS account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "contract",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
       },
       {
         "name": "DisassociateSourceViews",
@@ -207875,6 +209519,66 @@
           {
             "resourceType": "",
             "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+      },
+      {
+        "name": "ListContracts",
+        "permissionOnly": false,
+        "description": "Grants permission to list the contracts visible to the caller's account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+      },
+      {
+        "name": "ListContractualInvestmentAttestations",
+        "permissionOnly": false,
+        "description": "Grants permission to list the investment attestations submitted under a Private Pricing Addendum",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "contract",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+      },
+      {
+        "name": "ListContractualInvestmentSummaries",
+        "permissionOnly": false,
+        "description": "Grants permission to list the investment summaries within a Private Pricing Addendum",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "contract",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/billing-permissions-ref.html#user-permissions"
+      },
+      {
+        "name": "ListContractualInvestments",
+        "permissionOnly": false,
+        "description": "Grants permission to list the investments under an investment summary of a Private Pricing Addendum",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "contract",
+            "required": true,
             "conditionKeys": [],
             "dependentActions": []
           }
@@ -208087,6 +209791,12 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
+      },
+      {
+        "name": "contract",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:billing::${Account}:contract/${ContractId}",
+        "conditionKeys": []
       }
     ],
     "conditionKeys": [
@@ -226964,6 +228674,41 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_CreateProvisionedModelThroughput.html"
       },
       {
+        "name": "CreateRetrievalInstruction",
+        "permissionOnly": false,
+        "description": "Grants permission to create a retrieval instruction",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_CreateRetrievalInstruction.html"
+      },
+      {
+        "name": "CreateRetrievalInstructionVersion",
+        "permissionOnly": false,
+        "description": "Grants permission to create a version of a retrieval instruction",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "retrieval-instruction",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_CreateRetrievalInstructionVersion.html"
+      },
+      {
         "name": "CreateSession",
         "permissionOnly": false,
         "description": "Grants permission to create a new session",
@@ -227513,6 +229258,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_DeleteProvisionedModelThroughput.html"
+      },
+      {
+        "name": "DeleteRetrievalInstruction",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a retrieval instruction",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "retrieval-instruction",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_DeleteRetrievalInstruction.html"
       },
       {
         "name": "DeleteSession",
@@ -228667,6 +230429,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetProvisionedModelThroughput.html"
+      },
+      {
+        "name": "GetRetrievalInstruction",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a retrieval instruction",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "retrieval-instruction",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_GetRetrievalInstruction.html"
       },
       {
         "name": "GetSession",
@@ -230005,6 +231784,38 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_ListProvisionedModelThroughputs.html"
       },
       {
+        "name": "ListRetrievalInstructionVersions",
+        "permissionOnly": false,
+        "description": "Grants permission to list the versions of a retrieval instruction",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "retrieval-instruction",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_ListRetrievalInstructionVersions.html"
+      },
+      {
+        "name": "ListRetrievalInstructions",
+        "permissionOnly": false,
+        "description": "Grants permission to list retrieval instructions",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_ListRetrievalInstructions.html"
+      },
+      {
         "name": "ListSessions",
         "permissionOnly": false,
         "description": "Grants permission to list existing sessions",
@@ -230259,6 +232070,14 @@
           },
           {
             "resourceType": "provisioned-model",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "retrieval-instruction",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -230980,6 +232799,16 @@
             "dependentActions": []
           },
           {
+            "resourceType": "retrieval-instruction",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "session",
             "required": false,
             "conditionKeys": [
@@ -231261,6 +233090,15 @@
           },
           {
             "resourceType": "provisioned-model",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "retrieval-instruction",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -231687,6 +233525,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_UpdateProvisionedModelThroughput.html"
       },
       {
+        "name": "UpdateRetrievalInstruction",
+        "permissionOnly": false,
+        "description": "Grants permission to update a retrieval instruction",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "retrieval-instruction",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_UpdateRetrievalInstruction.html"
+      },
+      {
         "name": "UpdateSession",
         "permissionOnly": false,
         "description": "Grants permission to update an existing session",
@@ -232006,6 +233861,14 @@
         "name": "provisioned-model",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:bedrock:${Region}:${Account}:provisioned-model/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "retrieval-instruction",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:bedrock:${Region}:${Account}:retrieval-instruction/${RetrievalInstructionId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -319290,7 +321153,10 @@
               "ecs:enable-ecs-managed-tags",
               "ecs:propagate-tags"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "ecs:TagResource",
+              "iam:PassRole"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_CreateGateway.html"
@@ -321129,7 +322995,9 @@
               "ecs:enable-ecs-managed-tags",
               "ecs:propagate-tags"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECS/latest/APIReference/API_UpdateGateway.html"
@@ -370789,6 +372657,17 @@
             "dependentActions": [
               "kafka:TagResource"
             ]
+          },
+          {
+            "resourceType": "configuration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "kafka:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/msk/1.0/apireference/clusters.html#CreateCluster"
@@ -370805,6 +372684,17 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "kafka:TagResource"
+            ]
+          },
+          {
+            "resourceType": "configuration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
             "dependentActions": [
@@ -400286,6 +402176,18 @@
             "dependentActions": []
           },
           {
+            "resourceType": "db-capacity-reservation",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "rds:req-tag/${TagKey}",
+              "rds:TagsFromRequest"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "deployment",
             "required": false,
             "conditionKeys": [
@@ -400559,6 +402461,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_BacktrackDBCluster.html"
       },
       {
+        "name": "CancelDBCapacityReservation",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel a DB capacity reservation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "db-capacity-reservation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CancelDBCapacityReservation.html"
+      },
+      {
         "name": "CancelExportTask",
         "permissionOnly": false,
         "description": "Grants permission to cancel an export task in progress",
@@ -400824,6 +402743,26 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateCustomDBEngineVersion.html"
       },
       {
+        "name": "CreateDBCapacityReservation",
+        "permissionOnly": false,
+        "description": "Grants permission to create a DB capacity reservation that reserves DB instance capacity in one or more Availability Zones",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "db-capacity-reservation",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "rds:req-tag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_CreateDBCapacityReservation.html"
+      },
+      {
         "name": "CreateDBCluster",
         "permissionOnly": false,
         "description": "Grants permission to create a new DB cluster",
@@ -401080,6 +403019,20 @@
             "dependentActions": []
           },
           {
+            "resourceType": "db-capacity-reservation",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "rds:BackupTarget",
+              "rds:ManageMasterUserPassword",
+              "rds:PubliclyAccessible",
+              "rds:req-tag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "og",
             "required": false,
             "conditionKeys": [
@@ -401179,6 +403132,18 @@
               "rds:StorageEncrypted",
               "rds:StorageSize",
               "rds:Vpc"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "db-capacity-reservation",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "rds:PubliclyAccessible",
+              "rds:req-tag/${TagKey}"
             ],
             "dependentActions": []
           },
@@ -402079,6 +404044,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeCertificates.html"
+      },
+      {
+        "name": "DescribeDBCapacityReservations",
+        "permissionOnly": false,
+        "description": "Grants permission to return information about DB capacity reservations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "db-capacity-reservation",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_DescribeDBCapacityReservations.html"
       },
       {
         "name": "DescribeDBClusterAutomatedBackups",
@@ -403220,6 +405202,14 @@
             "dependentActions": []
           },
           {
+            "resourceType": "db-capacity-reservation",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "es",
             "required": false,
             "conditionKeys": [
@@ -403426,6 +405416,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyCustomDBEngineVersion.html"
       },
       {
+        "name": "ModifyDBCapacityReservation",
+        "permissionOnly": false,
+        "description": "Grants permission to modify settings for a DB capacity reservation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "db-capacity-reservation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonRDS/latest/APIReference/API_ModifyDBCapacityReservation.html"
+      },
+      {
         "name": "ModifyDBCluster",
         "permissionOnly": false,
         "description": "Grants permission to modify a setting for an Amazon Aurora DB cluster or Amazon DocumentDB cluster",
@@ -403560,6 +405567,15 @@
               "rds:StorageEncrypted",
               "rds:StorageSize",
               "rds:Vpc"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "db-capacity-reservation",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "rds:ManageMasterUserPassword"
             ],
             "dependentActions": []
           },
@@ -404233,6 +406249,17 @@
             "dependentActions": []
           },
           {
+            "resourceType": "db-capacity-reservation",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "rds:req-tag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "deployment",
             "required": false,
             "conditionKeys": [
@@ -404754,6 +406781,20 @@
             "dependentActions": []
           },
           {
+            "resourceType": "db-capacity-reservation",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "rds:BackupTarget",
+              "rds:ManageMasterUserPassword",
+              "rds:PubliclyAccessible",
+              "rds:req-tag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "og",
             "required": true,
             "conditionKeys": [
@@ -404841,6 +406882,19 @@
               "rds:StorageEncrypted",
               "rds:StorageSize",
               "rds:Vpc"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "db-capacity-reservation",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "rds:ManageMasterUserPassword",
+              "rds:PubliclyAccessible",
+              "rds:req-tag/${TagKey}"
             ],
             "dependentActions": []
           },
@@ -404943,6 +406997,20 @@
               "rds:StorageEncrypted",
               "rds:StorageSize",
               "rds:Vpc"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "db-capacity-reservation",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "rds:BackupTarget",
+              "rds:ManageMasterUserPassword",
+              "rds:PubliclyAccessible",
+              "rds:req-tag/${TagKey}"
             ],
             "dependentActions": []
           },
@@ -405085,6 +407153,14 @@
               "rds:StorageEncrypted",
               "rds:StorageSize",
               "rds:Vpc"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "db-capacity-reservation",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -405426,6 +407502,14 @@
           "rds:StorageSize",
           "rds:Vpc",
           "rds:db-tag/${TagKey}"
+        ]
+      },
+      {
+        "name": "db-capacity-reservation",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:rds:${Region}:${Account}:db-capacity-reservation:${DBCapacityReservationIdentifier}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
         ]
       },
       {
@@ -405895,13 +407979,15 @@
       {
         "name": "connect",
         "permissionOnly": false,
-        "description": "Allows IAM role or user to connect to RDS database",
+        "description": "Grants permission to connect to an RDS database from an IAM role or user",
         "accessLevel": "Permissions management, Write",
         "resourceTypes": [
           {
             "resourceType": "db-user",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ],
@@ -405913,10 +407999,19 @@
         "name": "db-user",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:rds-db:${Region}:${Account}:dbuser:${DbiResourceId}/${DbUserName}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
-    "conditionKeys": []
+    "conditionKeys": [
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tags associated with the parent RDS DB instance or Aurora DB cluster of the db-user",
+        "type": "String"
+      }
+    ]
   },
   {
     "name": "Amazon Redshift",
@@ -408448,6 +410543,28 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/redshift/latest/APIReference/API_ModifyIntegration.html"
       },
       {
+        "name": "ModifyLakehouseConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to manage Amazon Redshift federated permissions",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cluster",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "redshift:AssociateDataShareConsumer",
+              "redshift:DeregisterNamespace",
+              "redshift:RegisterNamespace",
+              "iam:PassRole"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/redshift/latest/APIReference/API_ModifyLakehouseConfiguration.html"
+      },
+      {
         "name": "ModifyRedshiftIdcApplication",
         "permissionOnly": false,
         "description": "Grants permission to modify a redshift idc application",
@@ -410465,6 +412582,28 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/redshift-serverless/latest/APIReference/API_UpdateEndpointAccess.html"
+      },
+      {
+        "name": "UpdateLakehouseConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to manage Amazon Redshift federated permissions",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "namespace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "iam:PassRole",
+              "redshift:AssociateDataShareConsumer",
+              "redshift:DeregisterNamespace",
+              "redshift:RegisterNamespace"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/redshift-serverless/latest/APIReference/API_UpdateLakehouseConfiguration.html"
       },
       {
         "name": "UpdateNamespace",
