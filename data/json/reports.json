@@ -2,11 +2,11 @@
   "Actions by type": [
     {
       "key": "List Actions",
-      "value": 3581
+      "value": 3582
     },
     {
       "key": "Read Actions",
-      "value": 5509
+      "value": 5510
     },
     {
       "key": null,
@@ -14,7 +14,7 @@
     },
     {
       "key": "Write Actions",
-      "value": 10745
+      "value": 10749
     }
   ],
   "Longest action names": [
@@ -173,12 +173,12 @@
       "value": 83
     },
     {
-      "key": "AgentSpace - arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}",
+      "key": "rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog",
       "value": 76
     },
     {
-      "key": "rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog",
-      "value": 76
+      "key": "AgentSpace - arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}",
+      "value": 75
     },
     {
       "key": "instance - arn:${Partition}:ec2:${Region}:${Account}:instance/${InstanceId}",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 2272
+      "value": 2275
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 1591
+      "value": 1593
     }
   ]
 }

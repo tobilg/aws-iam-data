@@ -1,5 +1,28 @@
 [
   {
+    "dateOfChange": "2026-10-22",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Key Management Service": [
+        "kms:Decapsulate",
+        "kms:Encapsulate"
+      ],
+      "AWS Network Firewall": [
+        "network-firewall:CreateFirewallPolicyV2",
+        "network-firewall:DeleteFirewallPolicyV2",
+        "network-firewall:DescribeFirewallPolicyV2",
+        "network-firewall:ListFirewallPoliciesV2",
+        "network-firewall:UpdateFirewallPolicyV2"
+      ]
+    },
+    "removedActions": {
+      "AWS Security Agent": [
+        "securityagent:BatchDeleteThreats"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2026-10-21",
     "addedServices": [
       "AWS Assurance"

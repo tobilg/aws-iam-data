@@ -130314,6 +130314,33 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/kms/latest/APIReference/API_CreateKey.html"
       },
       {
+        "name": "Decapsulate",
+        "permissionOnly": false,
+        "description": "Controls permission to use the specified AWS KMS key to recover the plaintext shared secret from its encapsulated (ciphertext) form",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "key",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "kms:CallerAccount",
+              "kms:EncapsulationAlgorithm",
+              "kms:KeyOrigin",
+              "kms:KeySpec",
+              "kms:KeyUsage",
+              "kms:MultiRegion",
+              "kms:MultiRegionKeyType",
+              "kms:RequestAlias",
+              "kms:ResourceAliases",
+              "kms:ViaService"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kms/latest/APIReference/API_Decapsulate.html"
+      },
+      {
         "name": "Decrypt",
         "permissionOnly": false,
         "description": "Controls permission to decrypt ciphertext that was encrypted under an AWS KMS key",
@@ -130389,6 +130416,7 @@
               "kms:RecipientAttestation:PCR6",
               "kms:RecipientAttestation:PCR7",
               "kms:RecipientAttestation:PCR8",
+              "kms:RecipientAttestation:PCR8:ServiceName",
               "kms:RecipientAttestation:PCR9",
               "kms:RequestAlias",
               "kms:ResourceAliases",
@@ -130549,6 +130577,7 @@
               "kms:RecipientAttestation:PCR6",
               "kms:RecipientAttestation:PCR7",
               "kms:RecipientAttestation:PCR8",
+              "kms:RecipientAttestation:PCR8:ServiceName",
               "kms:RecipientAttestation:PCR9",
               "kms:RequestAlias",
               "kms:ResourceAliases",
@@ -130722,6 +130751,33 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/kms/latest/APIReference/API_EnableKeyRotation.html"
       },
       {
+        "name": "Encapsulate",
+        "permissionOnly": false,
+        "description": "Controls permission to use the specified AWS KMS key to generate a shared secret and its encapsulated (ciphertext) form",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "key",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "kms:CallerAccount",
+              "kms:EncapsulationAlgorithm",
+              "kms:KeyOrigin",
+              "kms:KeySpec",
+              "kms:KeyUsage",
+              "kms:MultiRegion",
+              "kms:MultiRegionKeyType",
+              "kms:RequestAlias",
+              "kms:ResourceAliases",
+              "kms:ViaService"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kms/latest/APIReference/API_Encapsulate.html"
+      },
+      {
         "name": "Encrypt",
         "permissionOnly": false,
         "description": "Controls permission to use the specified AWS KMS key to encrypt data and data keys",
@@ -130826,6 +130882,7 @@
               "kms:RecipientAttestation:PCR6",
               "kms:RecipientAttestation:PCR7",
               "kms:RecipientAttestation:PCR8",
+              "kms:RecipientAttestation:PCR8:ServiceName",
               "kms:RecipientAttestation:PCR9",
               "kms:RequestAlias",
               "kms:ResourceAliases",
@@ -130913,6 +130970,7 @@
               "kms:RecipientAttestation:PCR6",
               "kms:RecipientAttestation:PCR7",
               "kms:RecipientAttestation:PCR8",
+              "kms:RecipientAttestation:PCR8:ServiceName",
               "kms:RecipientAttestation:PCR9",
               "kms:RequestAlias",
               "kms:ResourceAliases",
@@ -131019,6 +131077,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "kms:CallerAccount",
               "kms:RecipientAttestation:ImageSha384",
               "kms:RecipientAttestation:NitroTPMPCR0",
               "kms:RecipientAttestation:NitroTPMPCR1",
@@ -131075,6 +131134,7 @@
               "kms:RecipientAttestation:PCR6",
               "kms:RecipientAttestation:PCR7",
               "kms:RecipientAttestation:PCR8",
+              "kms:RecipientAttestation:PCR8:ServiceName",
               "kms:RecipientAttestation:PCR9"
             ],
             "dependentActions": []
@@ -131246,7 +131306,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "kms:CallerAccount",
+              "kms:ViaService"
+            ],
             "dependentActions": []
           }
         ],
@@ -131337,7 +131400,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "kms:CallerAccount",
+              "kms:ViaService"
+            ],
             "dependentActions": []
           }
         ],
@@ -131909,6 +131975,12 @@
         "name": "kms:DataKeyPairSpec",
         "apiReferenceUrl": "",
         "description": "Filters access to GenerateDataKeyPair and GenerateDataKeyPairWithoutPlaintext operations based on the value of the KeyPairSpec parameter in the request",
+        "type": "String"
+      },
+      {
+        "name": "kms:EncapsulationAlgorithm",
+        "apiReferenceUrl": "",
+        "description": "Filters access to the Encapsulate and Decapsulate operations based on the value of the EncapsulationAlgorithm parameter in the request",
         "type": "String"
       },
       {
@@ -142589,6 +142661,16 @@
               "aws:TagKeys"
             ],
             "dependentActions": []
+          },
+          {
+            "resourceType": "FirewallPolicyV2",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_AssociateFirewallPolicy.html"
@@ -142677,7 +142759,20 @@
           },
           {
             "resourceType": "FirewallPolicy",
-            "required": true,
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-firewall:AssociateFirewallPolicy",
+              "network-firewall:TagResource"
+            ]
+          },
+          {
+            "resourceType": "FirewallPolicyV2",
+            "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
@@ -142755,6 +142850,55 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_CreateFirewallPolicy.html"
+      },
+      {
+        "name": "CreateFirewallPolicyV2",
+        "permissionOnly": false,
+        "description": "Grants permission to create an AWS Network Firewall firewall policy v2",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "FirewallPolicyV2",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "TLSInspectionConfiguration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_CreateFirewallPolicyV2.html"
       },
       {
         "name": "CreateProxy",
@@ -142868,6 +143012,30 @@
         "description": "Grants permission to create an AWS Network Firewall rule group",
         "accessLevel": "Write",
         "resourceTypes": [
+          {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-firewall:TagResource"
+            ]
+          },
+          {
+            "resourceType": "IpsRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "network-firewall:TagResource"
+            ]
+          },
           {
             "resourceType": "StatefulRuleGroup",
             "required": false,
@@ -143003,6 +143171,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_DeleteFirewallPolicy.html"
       },
       {
+        "name": "DeleteFirewallPolicyV2",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a firewall policy v2",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "FirewallPolicyV2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_DeleteFirewallPolicyV2.html"
+      },
+      {
         "name": "DeleteNetworkFirewallTransitGatewayAttachment",
         "permissionOnly": false,
         "description": "Grants permission to delete Network Firewall attachments on a transit gateway",
@@ -143110,6 +143295,30 @@
             "dependentActions": []
           },
           {
+            "resourceType": "FirewallPolicyV2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "StatefulRuleGroup",
             "required": false,
             "conditionKeys": [
@@ -143134,6 +143343,22 @@
         "description": "Grants permission to delete a rule group",
         "accessLevel": "Write",
         "resourceTypes": [
+          {
+            "resourceType": "FirewallRuleGroup",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "StatefulRuleGroup",
             "required": true,
@@ -143280,6 +143505,47 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_DescribeFirewallPolicy.html"
       },
       {
+        "name": "DescribeFirewallPolicyV2",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the data objects that define a firewall policy v2",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "FirewallPolicyV2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "TLSInspectionConfiguration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_DescribeFirewallPolicyV2.html"
+      },
+      {
         "name": "DescribeFlowOperation",
         "permissionOnly": false,
         "description": "Grants permission to describe a flow operation performed on a firewall",
@@ -143404,6 +143670,30 @@
             "dependentActions": []
           },
           {
+            "resourceType": "FirewallPolicyV2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "StatefulRuleGroup",
             "required": false,
             "conditionKeys": [
@@ -143428,6 +143718,22 @@
         "description": "Grants permission to retrieve the data objects that define a rule group",
         "accessLevel": "Read",
         "resourceTypes": [
+          {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "StatefulRuleGroup",
             "required": false,
@@ -143454,6 +143760,22 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "StatefulRuleGroup",
             "required": false,
             "conditionKeys": [
@@ -143478,6 +143800,22 @@
         "description": "Grants permission to retrieve the summary information about a rule group",
         "accessLevel": "Read",
         "resourceTypes": [
+          {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "StatefulRuleGroup",
             "required": false,
@@ -143657,6 +143995,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_ListFirewallPolicies.html"
       },
       {
+        "name": "ListFirewallPoliciesV2",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the metadata for firewall policies v2",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "FirewallPolicyV2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_ListFirewallPoliciesV2.html"
+      },
+      {
         "name": "ListFirewalls",
         "permissionOnly": false,
         "description": "Grants permission to retrieve the metadata for firewalls",
@@ -143821,6 +144176,30 @@
             "dependentActions": []
           },
           {
+            "resourceType": "FirewallPolicyV2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "StatefulRuleGroup",
             "required": false,
             "conditionKeys": [
@@ -143888,6 +144267,30 @@
           },
           {
             "resourceType": "FirewallPolicy",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "FirewallPolicyV2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -144018,6 +144421,36 @@
             "dependentActions": []
           },
           {
+            "resourceType": "FirewallPolicyV2",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Proxy",
             "required": false,
             "conditionKeys": [
@@ -144116,6 +144549,33 @@
           },
           {
             "resourceType": "FirewallPolicy",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "FirewallPolicyV2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -144362,6 +144822,47 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_UpdateFirewallPolicyChangeProtection.html"
       },
       {
+        "name": "UpdateFirewallPolicyV2",
+        "permissionOnly": false,
+        "description": "Grants permission to modify a firewall policy v2",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "FirewallPolicyV2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "TLSInspectionConfiguration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_UpdateFirewallPolicyV2.html"
+      },
+      {
         "name": "UpdateLoggingConfiguration",
         "permissionOnly": false,
         "description": "Grants permission to modify the logging configuration of a firewall",
@@ -144470,6 +144971,22 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "FirewallRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IpsRuleGroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "StatefulRuleGroup",
             "required": false,
             "conditionKeys": [
@@ -144544,6 +145061,30 @@
         "name": "FirewallPolicy",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:network-firewall:${Region}:${Account}:firewall-policy/${Name}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "FirewallPolicyV2",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:network-firewall:${Region}:${Account}:firewall-policy-v2/${Name}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "FirewallRuleGroup",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:network-firewall:${Region}:${Account}:firewall-rulegroup/${Name}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "IpsRuleGroup",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:network-firewall:${Region}:${Account}:ips-rulegroup/${Name}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -171451,23 +171992,6 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchDeleteThreatModels.html"
       },
       {
-        "name": "BatchDeleteThreats",
-        "permissionOnly": false,
-        "description": "Grants permission to delete multiple threats",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "AgentSpace",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_BatchDeleteThreats.html"
-      },
-      {
         "name": "BatchDisassociateFindingIssue",
         "permissionOnly": false,
         "description": "Grants permission to disassociate issues from findings",
@@ -195671,9 +196195,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "tnb:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/tnb/latest/APIReference/API_CreateSolFunctionPackage.html"
@@ -195692,9 +196214,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "tnb:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "network-package",
@@ -195704,9 +196224,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "tnb:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/tnb/latest/APIReference/API_CreateSolNetworkInstance.html"
@@ -195725,9 +196243,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "tnb:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/tnb/latest/APIReference/API_CreateSolNetworkPackage.html"
@@ -195950,9 +196466,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "tnb:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/tnb/latest/APIReference/API_InstantiateSolNetworkInstance.html"
@@ -196164,9 +196678,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "tnb:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/tnb/latest/APIReference/API_TerminateSolNetworkInstance.html"
@@ -196256,9 +196768,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "tnb:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "network-instance",
@@ -196268,9 +196778,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "tnb:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/tnb/latest/APIReference/API_UpdateSolNetworkInstance.html"
@@ -335572,9 +336080,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "finspace:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/finspace/latest/management-api/API_CreateEnvironment.html"
@@ -335610,9 +336116,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "finspace:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/finspace/latest/management-api/API_CreateKxCluster.html"
@@ -335631,9 +336135,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "finspace:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/finspace/latest/management-api/API_CreateKxDatabase.html"
@@ -335670,9 +336172,7 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "finspace:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/finspace/latest/management-api/API_CreateKxEnvironment.html"
@@ -335691,9 +336191,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "finspace:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/finspace/latest/management-api/API_CreateKxScalingGroup.html"
@@ -335712,10 +336210,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "finspace:TagResource",
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/finspace/latest/management-api/API_CreateKxUser.html"
@@ -335734,9 +336229,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "finspace:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/finspace/latest/management-api/API_CreateKxVolume.html"
@@ -336744,9 +337237,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/finspace/latest/management-api/API_UpdateKxUser.html"
@@ -336891,7 +337382,7 @@
   },
   {
     "name": "Amazon FinSpace API",
-    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_finspace-data.html",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_finspace-api.html",
     "servicePrefix": "finspace-api",
     "actions": [
       {
@@ -418322,7 +418813,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "route53resolver:AssociateFirewallRuleGroupWithService"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_GetFirewallRuleGroup.html"
