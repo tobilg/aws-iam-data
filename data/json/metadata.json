@@ -1,5 +1,5 @@
 {
-  "serviceCount": 477,
+  "serviceCount": 478,
   "services": [
     {
       "name": "AWS Billing Conductor",
@@ -3438,6 +3438,63 @@
       "resourceTypes": [],
       "conditionKeysCount": 0,
       "conditionKeys": []
+    },
+    {
+      "name": "AWS Continuum",
+      "servicePrefix": "continuum",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_continuum.html",
+      "actionsCount": 33,
+      "actions": [
+        "AssociateCollector",
+        "CreateCodeFinding",
+        "CreateCodeScan",
+        "CreateCollector",
+        "CreateEnvironment",
+        "CreateIntegration",
+        "DeleteCollector",
+        "DeleteEnvironment",
+        "DeleteIntegration",
+        "DisassociateCollector",
+        "GetCodeFinding",
+        "GetCodeIssue",
+        "GetCodeIssueArtifact",
+        "GetCodeScan",
+        "GetCollector",
+        "GetCollectorDataAccessAuthorization",
+        "GetEnvironment",
+        "GetIntegration",
+        "GetResourcePolicy",
+        "ListAssociatedCollectors",
+        "ListAssociatedEnvironments",
+        "ListCodeFindings",
+        "ListCodeIssueArtifacts",
+        "ListCodeIssues",
+        "ListCodeScans",
+        "ListCollectors",
+        "ListEnvironments",
+        "ListIntegrations",
+        "PutResourcePolicy",
+        "StartIntegrationAuthorization",
+        "UpdateCollector",
+        "UpdateEnvironment",
+        "UpdateIntegration"
+      ],
+      "resourceTypesCount": 6,
+      "resourceTypes": [
+        "code-findings",
+        "code-issues",
+        "code-scans",
+        "collectors",
+        "environments",
+        "integrations"
+      ],
+      "conditionKeysCount": 4,
+      "conditionKeys": [
+        "continuum:CollectorArn",
+        "continuum:EnvironmentArn",
+        "continuum:RepositoryName",
+        "continuum:S3BucketName"
+      ]
     },
     {
       "name": "AWS Control Catalog",
@@ -10200,7 +10257,7 @@
       "name": "AWS Network Manager",
       "servicePrefix": "networkmanager",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_networkmanager.html",
-      "actionsCount": 95,
+      "actionsCount": 97,
       "actions": [
         "AcceptAttachment",
         "AssociateConnectPeer",
@@ -10267,6 +10324,7 @@
         "GetTransitGatewayRegistrations",
         "GetTransitGatewayRouteTableAttachment",
         "GetVpcAttachment",
+        "ListAttachmentNatConfigurations",
         "ListAttachmentRoutingPolicyAssociations",
         "ListAttachments",
         "ListConnectPeers",
@@ -10288,6 +10346,7 @@
         "StartRouteAnalysis",
         "TagResource",
         "UntagResource",
+        "UpdateAttachmentNatConfiguration",
         "UpdateConnection",
         "UpdateCoreNetwork",
         "UpdateDevice",
@@ -24188,7 +24247,7 @@
       "name": "Amazon Interactive Video Service",
       "servicePrefix": "ivs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_interactive-video-service.html",
-      "actionsCount": 77,
+      "actionsCount": 78,
       "actions": [
         "BatchGetChannel",
         "BatchGetStreamKey",
@@ -24254,6 +24313,7 @@
         "ListStreams",
         "ListTagsForResource",
         "PutMetadata",
+        "RevokeConnectionToken",
         "StartComposition",
         "StartParticipantReplication",
         "StartViewerSessionRevocation",

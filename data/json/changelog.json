@@ -1,5 +1,57 @@
 [
   {
+    "dateOfChange": "2026-10-23",
+    "addedServices": [
+      "AWS Continuum"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Network Manager": [
+        "networkmanager:ListAttachmentNatConfigurations",
+        "networkmanager:UpdateAttachmentNatConfiguration"
+      ],
+      "Amazon Interactive Video Service": [
+        "ivs:RevokeConnectionToken"
+      ],
+      "AWS Continuum": [
+        "continuum:AssociateCollector",
+        "continuum:CreateCodeFinding",
+        "continuum:CreateCodeScan",
+        "continuum:CreateCollector",
+        "continuum:CreateEnvironment",
+        "continuum:CreateIntegration",
+        "continuum:DeleteCollector",
+        "continuum:DeleteEnvironment",
+        "continuum:DeleteIntegration",
+        "continuum:DisassociateCollector",
+        "continuum:GetCodeFinding",
+        "continuum:GetCodeIssue",
+        "continuum:GetCodeIssueArtifact",
+        "continuum:GetCodeScan",
+        "continuum:GetCollector",
+        "continuum:GetCollectorDataAccessAuthorization",
+        "continuum:GetEnvironment",
+        "continuum:GetIntegration",
+        "continuum:GetResourcePolicy",
+        "continuum:ListAssociatedCollectors",
+        "continuum:ListAssociatedEnvironments",
+        "continuum:ListCodeFindings",
+        "continuum:ListCodeIssueArtifacts",
+        "continuum:ListCodeIssues",
+        "continuum:ListCodeScans",
+        "continuum:ListCollectors",
+        "continuum:ListEnvironments",
+        "continuum:ListIntegrations",
+        "continuum:PutResourcePolicy",
+        "continuum:StartIntegrationAuthorization",
+        "continuum:UpdateCollector",
+        "continuum:UpdateEnvironment",
+        "continuum:UpdateIntegration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-10-22",
     "addedServices": [],
     "removedServices": [],
