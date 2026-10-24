@@ -287048,7 +287048,9 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateConnection.html"
@@ -382397,9 +382399,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": [
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_osis_ValidatePipeline.html"
@@ -382512,7 +382512,7 @@
       {
         "name": "BatchGetCollectionGroup",
         "permissionOnly": false,
-        "description": "Grants permission to get attributes for one or more collection groups",
+        "description": "Grants permission to get attributes for one or more collection-groups",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -382570,6 +382570,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_BatchGetVpcEndpoint.html"
+      },
+      {
+        "name": "CancelIngestionJob",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel an ingestion job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "IngestionJob",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_CancelIngestionJob.html"
       },
       {
         "name": "CreateAccessPolicy",
@@ -382645,6 +382662,49 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_CreateIndex.html"
+      },
+      {
+        "name": "CreateIngestionJob",
+        "permissionOnly": false,
+        "description": "Grants permission to create an ingestion job on a collection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Collection",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "aoss:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_CreateIngestionJob.html"
+      },
+      {
+        "name": "CreateIngestionStream",
+        "permissionOnly": false,
+        "description": "Grants permission to create an ingestion stream on a collection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Collection",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "aoss:TagResource",
+              "iam:PassRole"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_CreateIngestionStream.html"
       },
       {
         "name": "CreateLifecyclePolicy",
@@ -382796,6 +382856,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_DeleteIndex.html"
       },
       {
+        "name": "DeleteIngestionStream",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an ingestion stream",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "IngestionStream",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_DeleteIngestionStream.html"
+      },
+      {
         "name": "DeleteLifecyclePolicy",
         "permissionOnly": false,
         "description": "Grants permission to delete a lifecycle policy",
@@ -382908,6 +382985,40 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_GetIndex.html"
       },
       {
+        "name": "GetIngestionJob",
+        "permissionOnly": false,
+        "description": "Grants permission to get information about an ingestion job",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "IngestionJob",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_GetIngestionJob.html"
+      },
+      {
+        "name": "GetIngestionStream",
+        "permissionOnly": false,
+        "description": "Grants permission to get information about an ingestion stream",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "IngestionStream",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_GetIngestionStream.html"
+      },
+      {
         "name": "GetPoliciesStats",
         "permissionOnly": false,
         "description": "Grants permission to get statistis about the security policies in your account",
@@ -382972,7 +383083,7 @@
       {
         "name": "ListCollectionGroups",
         "permissionOnly": false,
-        "description": "Grants permission to list collection groups",
+        "description": "Grants permission to list collection-groups",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -382998,6 +383109,40 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_ListCollections.html"
+      },
+      {
+        "name": "ListIngestionJobs",
+        "permissionOnly": false,
+        "description": "Grants permission to list ingestion jobs for a collection",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Collection",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_ListIngestionJobs.html"
+      },
+      {
+        "name": "ListIngestionStreams",
+        "permissionOnly": false,
+        "description": "Grants permission to list ingestion streams for a collection",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Collection",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_ListIngestionStreams.html"
       },
       {
         "name": "ListLifecyclePolicies",
@@ -383047,13 +383192,39 @@
       {
         "name": "ListTagsForResource",
         "permissionOnly": false,
-        "description": "Grants permission to list tags for a collection",
+        "description": "Grants permission to list tags for a collection, collection group, ingestion job, or ingestion stream",
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
+            "resourceType": "Collection",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "CollectionGroup",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IngestionJob",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IngestionStream",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ],
@@ -383077,12 +383248,42 @@
       {
         "name": "TagResource",
         "permissionOnly": false,
-        "description": "Grants permission to tag a serverless collection",
-        "accessLevel": "Write",
+        "description": "Grants permission to add tags to a collection, collection group, ingestion job, or ingestion stream",
+        "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "Collection",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "CollectionGroup",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IngestionJob",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IngestionStream",
+            "required": true,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
@@ -383096,13 +383297,41 @@
       {
         "name": "UntagResource",
         "permissionOnly": false,
-        "description": "Grants permission to remove tags from a collection",
-        "accessLevel": "Write",
+        "description": "Grants permission to remove tags from a collection, collection group, ingestion job, or ingestion stream",
+        "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "Collection",
+            "required": true,
             "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "CollectionGroup",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IngestionJob",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IngestionStream",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
             "dependentActions": []
@@ -383153,6 +383382,7 @@
             "resourceType": "Collection",
             "required": true,
             "conditionKeys": [
+              "aoss:DeletionProtection",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -383279,6 +383509,22 @@
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:aoss:${Region}:${Account}:dashboards/default",
         "conditionKeys": []
+      },
+      {
+        "name": "IngestionJob",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:aoss:${Region}:${Account}:collection/${CollectionId}/ingestion-job/${IngestionJobId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "IngestionStream",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:aoss:${Region}:${Account}:collection/${CollectionId}/ingestion-stream/${IngestionStreamId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
     "conditionKeys": [
@@ -383286,6 +383532,12 @@
         "name": "aoss:CollectionId",
         "apiReferenceUrl": "",
         "description": "Filters access by the identifier of the collection",
+        "type": "String"
+      },
+      {
+        "name": "aoss:DeletionProtection",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the deletion protection value set on a collection in the request. Valid values are enabled and disabled",
         "type": "String"
       },
       {
@@ -395766,6 +396018,40 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/wisdom/latest/APIReference/API_QueryAssistant.html"
       },
       {
+        "name": "RegisterAssistantReplicaKey",
+        "permissionOnly": false,
+        "description": "Grants permission to register a replica KMS key for an assistant",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Assistant",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wisdom/latest/APIReference/API_RegisterAssistantReplicaKey.html"
+      },
+      {
+        "name": "RegisterKnowledgeBaseReplicaKey",
+        "permissionOnly": false,
+        "description": "Grants permission to register a replica KMS key for a knowledge base",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "KnowledgeBase",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wisdom/latest/APIReference/API_RegisterKnowledgeBaseReplicaKey.html"
+      },
+      {
         "name": "RemoveAssistantAIAgent",
         "permissionOnly": false,
         "description": "Grants permission to remove an ai agent from an assistant",
@@ -397923,7 +398209,6 @@
               "aws:TagKeys"
             ],
             "dependentActions": [
-              "quicksight:CreateFolderMembership",
               "quicksight:PassDataSet",
               "quicksight:TagResource"
             ]
@@ -455917,6 +456202,25 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/transcribe/latest/dg/API_UpdateCallAnalyticsCategory.html"
+      },
+      {
+        "name": "UpdateLanguageModel",
+        "permissionOnly": false,
+        "description": "Grants permission to update a custom language model",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "languagemodel",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transcribe/latest/dg/API_UpdateLanguageModel.html"
       },
       {
         "name": "UpdateMedicalVocabulary",

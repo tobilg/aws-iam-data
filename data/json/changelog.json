@@ -1,5 +1,30 @@
 [
   {
+    "dateOfChange": "2026-10-24",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon OpenSearch Serverless": [
+        "aoss:CancelIngestionJob",
+        "aoss:CreateIngestionJob",
+        "aoss:CreateIngestionStream",
+        "aoss:DeleteIngestionStream",
+        "aoss:GetIngestionJob",
+        "aoss:GetIngestionStream",
+        "aoss:ListIngestionJobs",
+        "aoss:ListIngestionStreams"
+      ],
+      "Amazon Q in Connect": [
+        "wisdom:RegisterAssistantReplicaKey",
+        "wisdom:RegisterKnowledgeBaseReplicaKey"
+      ],
+      "Amazon Transcribe": [
+        "transcribe:UpdateLanguageModel"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-10-23",
     "addedServices": [
       "AWS Continuum"
