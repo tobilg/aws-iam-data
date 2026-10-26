@@ -179946,7 +179946,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "odb:DeleteDbNode"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_DeleteExadbVmCluster.html"
