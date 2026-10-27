@@ -1,5 +1,58 @@
 [
   {
+    "dateOfChange": "2026-10-27",
+    "addedServices": [],
+    "removedServices": [
+      "AWS CodeStar"
+    ],
+    "addedActions": {
+      "Amazon Elastic Container Registry": [
+        "ecr:DescribeReplicationBackfillResults",
+        "ecr:ListReplicationBackfills",
+        "ecr:StartReplicationBackfill",
+        "ecr:StopReplicationBackfill"
+      ],
+      "Amazon Interactive Video Service": [
+        "ivs:CreateFailoverSlateConfiguration",
+        "ivs:DeleteFailoverSlateConfiguration",
+        "ivs:GetFailoverSlateConfiguration",
+        "ivs:ListFailoverSlateConfigurations",
+        "ivs:UpdateFailoverSlateConfiguration"
+      ],
+      "Amazon OpenSearch Service": [
+        "es:AddReplicationPeer",
+        "es:CompareDomainConfiguration",
+        "es:DescribeDomainReplication",
+        "es:FailoverReplication",
+        "es:RemoveReplicationPeer",
+        "es:SwitchoverReplication"
+      ]
+    },
+    "removedActions": {
+      "AWS CodeStar": [
+        "codestar:AssociateTeamMember",
+        "codestar:CreateProject",
+        "codestar:CreateUserProfile",
+        "codestar:DeleteProject",
+        "codestar:DeleteUserProfile",
+        "codestar:DescribeProject",
+        "codestar:DescribeUserProfile",
+        "codestar:DisassociateTeamMember",
+        "codestar:ListProjects",
+        "codestar:ListResources",
+        "codestar:ListTagsForProject",
+        "codestar:ListTeamMembers",
+        "codestar:ListUserProfiles",
+        "codestar:TagProject",
+        "codestar:UntagProject",
+        "codestar:UpdateProject",
+        "codestar:UpdateTeamMember",
+        "codestar:UpdateUserProfile",
+        "codestar:VerifyServiceRole"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2026-10-24",
     "addedServices": [],
     "removedServices": [],

@@ -1,5 +1,5 @@
 {
-  "serviceCount": 478,
+  "serviceCount": 477,
   "services": [
     {
       "name": "AWS Billing Conductor",
@@ -3070,45 +3070,6 @@
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
         "aws:TagKeys"
-      ]
-    },
-    {
-      "name": "AWS CodeStar",
-      "servicePrefix": "codestar",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_codestar.html",
-      "actionsCount": 19,
-      "actions": [
-        "AssociateTeamMember",
-        "CreateProject",
-        "CreateUserProfile",
-        "DeleteProject",
-        "DeleteUserProfile",
-        "DescribeProject",
-        "DescribeUserProfile",
-        "DisassociateTeamMember",
-        "ListProjects",
-        "ListResources",
-        "ListTagsForProject",
-        "ListTeamMembers",
-        "ListUserProfiles",
-        "TagProject",
-        "UntagProject",
-        "UpdateProject",
-        "UpdateTeamMember",
-        "UpdateUserProfile",
-        "VerifyServiceRole"
-      ],
-      "resourceTypesCount": 2,
-      "resourceTypes": [
-        "project",
-        "user"
-      ],
-      "conditionKeysCount": 4,
-      "conditionKeys": [
-        "aws:RequestTag/${TagKey}",
-        "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys",
-        "iam:ResourceTag/${TagKey}"
       ]
     },
     {
@@ -22206,7 +22167,7 @@
       "name": "Amazon Elastic Container Registry",
       "servicePrefix": "ecr",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_ecr.html",
-      "actionsCount": 57,
+      "actionsCount": 61,
       "actions": [
         "BatchCheckLayerAvailability",
         "BatchDeleteImage",
@@ -22230,6 +22191,7 @@
         "DescribeImages",
         "DescribePullThroughCacheRules",
         "DescribeRegistry",
+        "DescribeReplicationBackfillResults",
         "DescribeRepositories",
         "DescribeRepositoryCreationTemplates",
         "GetAccountSetting",
@@ -22244,6 +22206,7 @@
         "InitiateLayerUpload",
         "ListImages",
         "ListPullTimeUpdateExclusions",
+        "ListReplicationBackfills",
         "ListTagsForResource",
         "PutAccountSetting",
         "PutImage",
@@ -22258,6 +22221,8 @@
         "SetRepositoryPolicy",
         "StartImageScan",
         "StartLifecyclePolicyPreview",
+        "StartReplicationBackfill",
+        "StopReplicationBackfill",
         "TagResource",
         "UntagResource",
         "UpdateImageStorageClass",
@@ -24247,7 +24212,7 @@
       "name": "Amazon Interactive Video Service",
       "servicePrefix": "ivs",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_interactive-video-service.html",
-      "actionsCount": 78,
+      "actionsCount": 83,
       "actions": [
         "BatchGetChannel",
         "BatchGetStreamKey",
@@ -24255,6 +24220,7 @@
         "CreateAdConfiguration",
         "CreateChannel",
         "CreateEncoderConfiguration",
+        "CreateFailoverSlateConfiguration",
         "CreateIngestConfiguration",
         "CreateParticipantToken",
         "CreatePlaybackRestrictionPolicy",
@@ -24265,6 +24231,7 @@
         "DeleteAdConfiguration",
         "DeleteChannel",
         "DeleteEncoderConfiguration",
+        "DeleteFailoverSlateConfiguration",
         "DeleteIngestConfiguration",
         "DeletePlaybackKeyPair",
         "DeletePlaybackRestrictionPolicy",
@@ -24278,6 +24245,7 @@
         "GetChannel",
         "GetComposition",
         "GetEncoderConfiguration",
+        "GetFailoverSlateConfiguration",
         "GetIngestConfiguration",
         "GetParticipant",
         "GetPlaybackKeyPair",
@@ -24297,6 +24265,7 @@
         "ListChannels",
         "ListCompositions",
         "ListEncoderConfigurations",
+        "ListFailoverSlateConfigurations",
         "ListIngestConfigurations",
         "ListParticipantEvents",
         "ListParticipantReplicas",
@@ -24324,16 +24293,18 @@
         "UntagResource",
         "UpdateAdConfiguration",
         "UpdateChannel",
+        "UpdateFailoverSlateConfiguration",
         "UpdateIngestConfiguration",
         "UpdatePlaybackRestrictionPolicy",
         "UpdateStage"
       ],
-      "resourceTypesCount": 12,
+      "resourceTypesCount": 13,
       "resourceTypes": [
         "Ad-Configuration",
         "Channel",
         "Composition",
         "Encoder-Configuration",
+        "Failover-Slate-Configuration",
         "Ingest-Configuration",
         "Playback-Key-Pair",
         "Playback-Restriction-Policy",
@@ -26684,12 +26655,13 @@
       "name": "Amazon OpenSearch Service",
       "servicePrefix": "es",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_es.html",
-      "actionsCount": 131,
+      "actionsCount": 137,
       "actions": [
         "AcceptInboundConnection",
         "AcceptInboundCrossClusterSearchConnection",
         "AddDataSource",
         "AddDirectQueryDataSource",
+        "AddReplicationPeer",
         "AddTags",
         "AssociatePackage",
         "AssociatePackages",
@@ -26698,6 +26670,7 @@
         "CancelDomainConfigChange",
         "CancelElasticsearchServiceSoftwareUpdate",
         "CancelServiceSoftwareUpdate",
+        "CompareDomainConfiguration",
         "CreateApplication",
         "CreateDomain",
         "CreateElasticsearchDomain",
@@ -26729,6 +26702,7 @@
         "DescribeDomainConfig",
         "DescribeDomainHealth",
         "DescribeDomainNodes",
+        "DescribeDomainReplication",
         "DescribeDomains",
         "DescribeDryRunProgress",
         "DescribeElasticsearchDomain",
@@ -26757,6 +26731,7 @@
         "ESHttpPatch",
         "ESHttpPost",
         "ESHttpPut",
+        "FailoverReplication",
         "GetApplication",
         "GetCapability",
         "GetCompatibleElasticsearchVersions",
@@ -26797,6 +26772,7 @@
         "RegisterCapability",
         "RejectInboundConnection",
         "RejectInboundCrossClusterSearchConnection",
+        "RemoveReplicationPeer",
         "RemoveTags",
         "RevokeVpcEndpointAccess",
         "RollbackElasticsearchServiceSoftwareUpdate",
@@ -26805,6 +26781,7 @@
         "StartElasticsearchServiceSoftwareUpdate",
         "StartMigration",
         "StartServiceSoftwareUpdate",
+        "SwitchoverReplication",
         "UpdateApplication",
         "UpdateDataSource",
         "UpdateDirectQueryDataSource",
@@ -26826,11 +26803,13 @@
         "es_role",
         "opensearchservice_role"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 5,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "es:SecurityGroupIds",
+        "es:SubnetIds"
       ]
     },
     {

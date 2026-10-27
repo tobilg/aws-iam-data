@@ -40512,375 +40512,6 @@
     ]
   },
   {
-    "name": "AWS CodeStar",
-    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_codestar.html",
-    "servicePrefix": "codestar",
-    "actions": [
-      {
-        "name": "AssociateTeamMember",
-        "permissionOnly": false,
-        "description": "Grants permission to add a user to the team for an AWS CodeStar project",
-        "accessLevel": "Permissions management, Write",
-        "resourceTypes": [
-          {
-            "resourceType": "project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_AssociateTeamMember.html"
-      },
-      {
-        "name": "CreateProject",
-        "permissionOnly": false,
-        "description": "Grants permission to create a project with minimal structure, customer policies, and no resources",
-        "accessLevel": "Permissions management, Write",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_CreateProject.html"
-      },
-      {
-        "name": "CreateUserProfile",
-        "permissionOnly": false,
-        "description": "Grants permission to create a profile for a user that includes user preferences, display name, and email",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "user",
-            "required": true,
-            "conditionKeys": [
-              "iam:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_CreateUserProfile.html"
-      },
-      {
-        "name": "DeleteProject",
-        "permissionOnly": false,
-        "description": "Grants permission to delete a project, including project resources. Does not delete users associated with the project, but does delete the IAM roles that allowed access to the project",
-        "accessLevel": "Permissions management, Write",
-        "resourceTypes": [
-          {
-            "resourceType": "project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_DeleteProject.html"
-      },
-      {
-        "name": "DeleteUserProfile",
-        "permissionOnly": false,
-        "description": "Grants permission to delete a user profile in AWS CodeStar, including all personal preference data associated with that profile, such as display name and email address. It does not delete the history of that user, for example the history of commits made by that user",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "user",
-            "required": true,
-            "conditionKeys": [
-              "iam:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_DeleteUserProfile.html"
-      },
-      {
-        "name": "DescribeProject",
-        "permissionOnly": false,
-        "description": "Grants permission to describe a project and its resources",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_DescribeProject.html"
-      },
-      {
-        "name": "DescribeUserProfile",
-        "permissionOnly": false,
-        "description": "Grants permission to describe a user in AWS CodeStar and the user attributes across all projects",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_DescribeUserProfile.html"
-      },
-      {
-        "name": "DisassociateTeamMember",
-        "permissionOnly": false,
-        "description": "Grants permission to remove a user from a project. Removing a user from a project also removes the IAM policies from that user that allowed access to the project and its resources",
-        "accessLevel": "Permissions management, Write",
-        "resourceTypes": [
-          {
-            "resourceType": "project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_DisassociateTeamMember.html"
-      },
-      {
-        "name": "ListProjects",
-        "permissionOnly": false,
-        "description": "Grants permission to list all projects in CodeStar associated with your AWS account",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_ListProjects.html"
-      },
-      {
-        "name": "ListResources",
-        "permissionOnly": false,
-        "description": "Grants permission to list all resources associated with a project in CodeStar",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_ListResources.html"
-      },
-      {
-        "name": "ListTagsForProject",
-        "permissionOnly": false,
-        "description": "Grants permission to list the tags associated with a project in CodeStar",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_ListTagsForProject.html"
-      },
-      {
-        "name": "ListTeamMembers",
-        "permissionOnly": false,
-        "description": "Grants permission to list all team members associated with a project",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_ListTeamMembers.html"
-      },
-      {
-        "name": "ListUserProfiles",
-        "permissionOnly": false,
-        "description": "Grants permission to list user profiles in AWS CodeStar",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_ListUserProfiles.html"
-      },
-      {
-        "name": "TagProject",
-        "permissionOnly": false,
-        "description": "Grants permission to add tags to a project in CodeStar",
-        "accessLevel": "Tagging, Write",
-        "resourceTypes": [
-          {
-            "resourceType": "project",
-            "required": true,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_TagProject.html"
-      },
-      {
-        "name": "UntagProject",
-        "permissionOnly": false,
-        "description": "Grants permission to remove tags from a project in CodeStar",
-        "accessLevel": "Tagging, Write",
-        "resourceTypes": [
-          {
-            "resourceType": "project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_UntagProject.html"
-      },
-      {
-        "name": "UpdateProject",
-        "permissionOnly": false,
-        "description": "Grants permission to update a project in CodeStar",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_UpdateProject.html"
-      },
-      {
-        "name": "UpdateTeamMember",
-        "permissionOnly": false,
-        "description": "Grants permission to update team member attributes within a CodeStar project",
-        "accessLevel": "Permissions management, Write",
-        "resourceTypes": [
-          {
-            "resourceType": "project",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_UpdateTeamMember.html"
-      },
-      {
-        "name": "UpdateUserProfile",
-        "permissionOnly": false,
-        "description": "Grants permission to update a profile for a user that includes user preferences, display name, and email",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "user",
-            "required": true,
-            "conditionKeys": [
-              "iam:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/codestar/latest/APIReference/API_UpdateUserProfile.html"
-      },
-      {
-        "name": "VerifyServiceRole",
-        "permissionOnly": false,
-        "description": "Grants permission to verify whether the AWS CodeStar service role exists in the customer's account",
-        "accessLevel": "List",
-        "resourceTypes": [
-          {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
-            "dependentActions": []
-          }
-        ]
-      }
-    ],
-    "resourceTypes": [
-      {
-        "name": "project",
-        "apiReferenceUrl": "",
-        "arnPattern": "arn:${Partition}:codestar:${Region}:${Account}:project/${ProjectId}",
-        "conditionKeys": [
-          "aws:ResourceTag/${TagKey}"
-        ]
-      },
-      {
-        "name": "user",
-        "apiReferenceUrl": "",
-        "arnPattern": "arn:${Partition}:iam::${Account}:user/${AwsUserName}",
-        "conditionKeys": [
-          "iam:ResourceTag/${TagKey}"
-        ]
-      }
-    ],
-    "conditionKeys": [
-      {
-        "name": "aws:RequestTag/${TagKey}",
-        "apiReferenceUrl": "",
-        "description": "Filters access by requests based on the allowed set of values for each of the tags",
-        "type": "String"
-      },
-      {
-        "name": "aws:ResourceTag/${TagKey}",
-        "apiReferenceUrl": "",
-        "description": "Filters access by actions based on tag-value associated with the resource",
-        "type": "String"
-      },
-      {
-        "name": "aws:TagKeys",
-        "apiReferenceUrl": "",
-        "description": "Filters access by requests based on the presence of mandatory tags in the request",
-        "type": "ArrayOfString"
-      },
-      {
-        "name": "iam:ResourceTag/${TagKey}",
-        "apiReferenceUrl": "",
-        "description": "Filters access by actions based on tag-value associated with the resource",
-        "type": "String"
-      }
-    ]
-  },
-  {
     "name": "AWS CodeStar Connections",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_codestar-connections.html",
     "servicePrefix": "codestar-connections",
@@ -51734,10 +51365,11 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "agent",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
             "dependentActions": [
@@ -51858,10 +51490,11 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agent",
+            "required": true,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
             "dependentActions": [
@@ -51879,10 +51512,11 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agent",
+            "required": true,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
             "dependentActions": [
@@ -51899,10 +51533,11 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "agent",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
             "dependentActions": [
@@ -51920,10 +51555,11 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "agent",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
             "dependentActions": [
@@ -51941,10 +51577,11 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "agent",
+            "required": true,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
             "dependentActions": [
@@ -52759,6 +52396,16 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "agent",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
+          {
             "resourceType": "location",
             "required": true,
             "conditionKeys": [
@@ -52869,6 +52516,16 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "agent",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
+          {
             "resourceType": "location",
             "required": true,
             "conditionKeys": [
@@ -52888,6 +52545,14 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
+            "resourceType": "agent",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "location",
             "required": true,
             "conditionKeys": [
@@ -52904,6 +52569,16 @@
         "description": "Grants permission to update a self-managed object storage server location",
         "accessLevel": "Write",
         "resourceTypes": [
+          {
+            "resourceType": "agent",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
           {
             "resourceType": "location",
             "required": true,
@@ -52942,6 +52617,16 @@
         "description": "Grants permission to update a SMB sync location",
         "accessLevel": "Write",
         "resourceTypes": [
+          {
+            "resourceType": "agent",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
           {
             "resourceType": "location",
             "required": true,
@@ -185199,7 +184884,7 @@
       {
         "name": "AuthorizeOAuth2Access",
         "permissionOnly": false,
-        "description": "Grants permission to authenticate through a browser and obtain an OAuth 2.0 authorization code for credential exchange",
+        "description": "Grants permission to authenticate through a browser and obtain an OAuth 2 authorization code for credential exchange",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -185236,12 +184921,12 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_AuthorizeOAuth2Access.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_dataplane-signin_AuthorizeOAuth2Access.html"
       },
       {
         "name": "CreateOAuth2PublicClient",
         "permissionOnly": false,
-        "description": "Grants permission to dynamically register an OAuth 2.0 public client for use with AWS Sign-In",
+        "description": "Grants permission to dynamically register an OAuth 2 public client for use with AWS Sign-In",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -185253,12 +184938,12 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_CreateOAuth2PublicClient.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_dataplane-signin_CreateOAuth2PublicClient.html"
       },
       {
         "name": "CreateOAuth2Token",
         "permissionOnly": false,
-        "description": "Grants permission to exchange an authorization code for OAuth 2.0 access token and refresh token that can be used to access AWS services from developer tools and applications",
+        "description": "Grants permission to exchange an authorization code, refresh token, SigV4 credentials, or JWT for OAuth 2 access token that can be used to access AWS services from developer tools and applications",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -185301,7 +184986,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_CreateOAuth2Token.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_dataplane-signin_CreateOAuth2Token.html"
       },
       {
         "name": "CreateTrustedIdentityPropagationApplicationForConsole",
@@ -185381,7 +185066,7 @@
       {
         "name": "IntrospectOAuth2Token",
         "permissionOnly": false,
-        "description": "Grants permission to inspect the metadata and active state of an OAuth 2.0 access token or refresh token",
+        "description": "Grants permission to inspect the metadata and active state of an OAuth 2 access token or refresh token",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -185412,7 +185097,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_IntrospectOAuth2Token.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_dataplane-signin_IntrospectOAuth2TokenWithIAM.html"
       },
       {
         "name": "ListResourcePermissionStatements",
@@ -185477,7 +185162,7 @@
       {
         "name": "RevokeOAuth2Token",
         "permissionOnly": false,
-        "description": "Grants permission to revoke an OAuth 2.0 refresh token and its associated refresh tokens",
+        "description": "Grants permission to revoke an OAuth 2 refresh token and its associated refresh tokens",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -185505,7 +185190,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_RevokeOAuth2Token.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_dataplane-signin_RevokeOAuth2TokenWithIAM.html"
       }
     ],
     "resourceTypes": [
@@ -321025,6 +320710,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_DescribeRegistry.html"
       },
       {
+        "name": "DescribeReplicationBackfillResults",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the results of a replication backfill for the registry",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_DescribeReplicationBackfillResults.html"
+      },
+      {
         "name": "DescribeRepositories",
         "permissionOnly": false,
         "description": "Grants permission to describe image repositories in a registry",
@@ -321258,6 +320958,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_ListPullTimeUpdateExclusions"
+      },
+      {
+        "name": "ListReplicationBackfills",
+        "permissionOnly": false,
+        "description": "Grants permission to list the replication backfills for the registry",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_ListReplicationBackfills.html"
       },
       {
         "name": "ListTagsForResource",
@@ -321496,6 +321211,36 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_StartLifecyclePolicyPreview.html"
+      },
+      {
+        "name": "StartReplicationBackfill",
+        "permissionOnly": false,
+        "description": "Grants permission to start a replication backfill to a destination region for the registry",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_StartReplicationBackfill.html"
+      },
+      {
+        "name": "StopReplicationBackfill",
+        "permissionOnly": false,
+        "description": "Grants permission to stop an in-progress replication backfill for the registry",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonECR/latest/APIReference/API_StopReplicationBackfill.html"
       },
       {
         "name": "TagResource",
@@ -351258,6 +351003,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/RealTimeAPIReference/API_CreateEncoderConfiguration.html"
       },
       {
+        "name": "CreateFailoverSlateConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new failover slate configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Failover-Slate-Configuration",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_CreateFailoverSlateConfiguration.html"
+      },
+      {
         "name": "CreateIngestConfiguration",
         "permissionOnly": false,
         "description": "Grants permission to create a new ingest configuration",
@@ -351448,6 +351212,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/RealTimeAPIReference/API_DeleteEncoderConfiguration.html"
+      },
+      {
+        "name": "DeleteFailoverSlateConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a failover slate configuration for the specified ARN",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Failover-Slate-Configuration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_DeleteFailoverSlateConfiguration.html"
       },
       {
         "name": "DeleteIngestConfiguration",
@@ -351669,6 +351450,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/RealTimeAPIReference/API_GetEncoderConfiguration.html"
+      },
+      {
+        "name": "GetFailoverSlateConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to get the failover slate configuration for the specified ARN",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Failover-Slate-Configuration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_GetFailoverSlateConfiguration.html"
       },
       {
         "name": "GetIngestConfiguration",
@@ -352002,6 +351800,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/RealTimeAPIReference/API_ListEncoderConfigurations.html"
       },
       {
+        "name": "ListFailoverSlateConfigurations",
+        "permissionOnly": false,
+        "description": "Grants permission to get summary information about failover slate configurations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Failover-Slate-Configuration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_ListFailoverSlateConfigurations.html"
+      },
+      {
         "name": "ListIngestConfigurations",
         "permissionOnly": false,
         "description": "Grants permission to get summary information about ingest configurations",
@@ -352277,6 +352092,16 @@
           },
           {
             "resourceType": "Encoder-Configuration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Failover-Slate-Configuration",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -352583,6 +352408,16 @@
             "dependentActions": []
           },
           {
+            "resourceType": "Failover-Slate-Configuration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Ingest-Configuration",
             "required": false,
             "conditionKeys": [
@@ -352708,6 +352543,15 @@
             "dependentActions": []
           },
           {
+            "resourceType": "Failover-Slate-Configuration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Ingest-Configuration",
             "required": false,
             "conditionKeys": [
@@ -352815,6 +352659,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_UpdateChannel.html"
       },
       {
+        "name": "UpdateFailoverSlateConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to update a failover slate configuration for the specified ARN",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Failover-Slate-Configuration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ivs/latest/LowLatencyAPIReference/API_UpdateFailoverSlateConfiguration.html"
+      },
+      {
         "name": "UpdateIngestConfiguration",
         "permissionOnly": false,
         "description": "Grants permission to update ingest configuration for a specified ARN",
@@ -352895,6 +352756,14 @@
         "name": "Encoder-Configuration",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:ivs:${Region}:${Account}:encoder-configuration/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "Failover-Slate-Configuration",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:ivs:${Region}:${Account}:failover-slate-configuration/${ResourceId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -383654,6 +383523,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_AddDirectQueryDataSource.html"
       },
       {
+        "name": "AddReplicationPeer",
+        "permissionOnly": false,
+        "description": "Grants permission to pair two OpenSearch Service domains for replication. Requires the permission on both domains",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_AddReplicationPeer.html"
+      },
+      {
         "name": "AddTags",
         "permissionOnly": false,
         "description": "Grants permission to attach resource tags to an OpenSearch Service domain, data source, or application",
@@ -383814,6 +383700,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_CancelServiceSoftwareUpdate.html"
       },
       {
+        "name": "CompareDomainConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to compare the configuration of two OpenSearch Service domains. Requires the permission on both domains",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_CompareDomainConfiguration.html"
+      },
+      {
         "name": "CreateApplication",
         "permissionOnly": false,
         "description": "Grants permission to create an OpenSearch Application",
@@ -383843,7 +383746,9 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "es:SecurityGroupIds",
+              "es:SubnetIds"
             ],
             "dependentActions": []
           }
@@ -383862,7 +383767,9 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
-              "aws:TagKeys"
+              "aws:TagKeys",
+              "es:SecurityGroupIds",
+              "es:SubnetIds"
             ],
             "dependentActions": [
               "es:AddTags",
@@ -384334,6 +384241,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_DescribeDomainNodes.html"
       },
       {
+        "name": "DescribeDomainReplication",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the replication relationship details for an OpenSearch Service domain",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_DescribeDomainReplication.html"
+      },
+      {
         "name": "DescribeDomains",
         "permissionOnly": false,
         "description": "Grants permission to view a description of the domain configuration for up to five specified OpenSearch Service domains",
@@ -384800,6 +384724,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/Welcome.html"
+      },
+      {
+        "name": "FailoverReplication",
+        "permissionOnly": false,
+        "description": "Grants permission to promote the secondary domain of a replication relationship when the primary is unavailable. Requires the permission on both domains",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_FailoverReplication.html"
       },
       {
         "name": "GetApplication",
@@ -385476,6 +385417,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_RejectInboundConnection.html"
       },
       {
+        "name": "RemoveReplicationPeer",
+        "permissionOnly": false,
+        "description": "Grants permission to end the replication relationship between two OpenSearch Service domains. Requires the permission on both domains",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_RemoveReplicationPeer.html"
+      },
+      {
         "name": "RemoveTags",
         "permissionOnly": false,
         "description": "Grants permission to remove resource tags from an OpenSearch Service domain, data source, or application",
@@ -385629,6 +385587,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_StartServiceSoftwareUpdate.html"
+      },
+      {
+        "name": "SwitchoverReplication",
+        "permissionOnly": false,
+        "description": "Grants permission to swap the primary and secondary roles of a replication relationship between two OpenSearch Service domains without data loss. Requires the permission on both domains",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_SwitchoverReplication.html"
       },
       {
         "name": "UpdateApplication",
@@ -385893,6 +385868,18 @@
         "name": "aws:TagKeys",
         "apiReferenceUrl": "",
         "description": "Filters access based on the tag keys that are passed in the request",
+        "type": "ArrayOfString"
+      },
+      {
+        "name": "es:SecurityGroupIds",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the security group IDs specified in the VPC options of the request",
+        "type": "ArrayOfString"
+      },
+      {
+        "name": "es:SubnetIds",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the subnet IDs specified in the VPC options of the request",
         "type": "ArrayOfString"
       }
     ]
