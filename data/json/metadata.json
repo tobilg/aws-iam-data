@@ -4986,14 +4986,16 @@
       "name": "AWS Elemental Inference",
       "servicePrefix": "elemental-inference",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_elementalinference.html",
-      "actionsCount": 21,
+      "actionsCount": 24,
       "actions": [
         "AssociateFeed",
         "CreateDictionary",
         "CreateFeed",
+        "CreateScheduleAction",
         "DeleteDictionary",
         "DeleteFeed",
         "DeleteFeedPolicy",
+        "DeleteScheduleAction",
         "DisassociateFeed",
         "ExportDictionaryEntries",
         "GetDictionary",
@@ -5002,6 +5004,7 @@
         "GetMetadata",
         "ListDictionaries",
         "ListFeeds",
+        "ListScheduleActions",
         "ListTagsForResource",
         "PutFeedPolicy",
         "PutMedia",
@@ -10805,7 +10808,7 @@
       "name": "AWS Partner Central",
       "servicePrefix": "partnercentral",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_partner-central.html",
-      "actionsCount": 124,
+      "actionsCount": 125,
       "actions": [
         "AcceptChannelHandshake",
         "AcceptConnectionInvitation",
@@ -10906,6 +10909,7 @@
         "RejectChannelHandshake",
         "RejectConnectionInvitation",
         "RejectEngagementInvitation",
+        "SearchOpportunities",
         "SearchPartnerCentralContent",
         "SendEmailVerificationCode",
         "StartEngagementByAcceptingInvitationTask",
@@ -12768,7 +12772,7 @@
       "name": "AWS Service - Oracle Database@AWS",
       "servicePrefix": "odb",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_odb.html",
-      "actionsCount": 80,
+      "actionsCount": 81,
       "actions": [
         "AcceptMarketplaceRegistration",
         "AssociateIamRoleToResource",
@@ -12847,6 +12851,7 @@
         "UpdateAutonomousDatabaseBackup",
         "UpdateCloudExadataInfrastructure",
         "UpdateExadbVmCluster",
+        "UpdateExascaleCloudExadataInfrastructure",
         "UpdateExascaleDbStorageVault",
         "UpdateOdbNetwork",
         "UpdateOdbPeeringConnection"
@@ -24078,7 +24083,7 @@
       "name": "Amazon Inspector2",
       "servicePrefix": "inspector2",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_inspector2.html",
-      "actionsCount": 81,
+      "actionsCount": 84,
       "actions": [
         "AssociateMember",
         "BatchAssociateCodeSecurityScanConfiguration",
@@ -24121,6 +24126,7 @@
         "GetEncryptionKey",
         "GetFindingsReportStatus",
         "GetMember",
+        "GetOnDemandScanStatus",
         "GetSbomExport",
         "ListAccountPermissions",
         "ListCisScanConfigurations",
@@ -24139,6 +24145,7 @@
         "ListFindingAggregations",
         "ListFindings",
         "ListMembers",
+        "ListOnDemandScans",
         "ListTagsForResource",
         "ListUsageTotals",
         "ResetEncryptionKey",
@@ -24147,6 +24154,7 @@
         "SendCisSessionTelemetry",
         "StartCisSession",
         "StartCodeSecurityScan",
+        "StartOnDemandScan",
         "StopCisSession",
         "TagResource",
         "UntagResource",
@@ -24171,11 +24179,12 @@
         "Filter",
         "Finding"
       ],
-      "conditionKeysCount": 3,
+      "conditionKeysCount": 4,
       "conditionKeys": [
         "aws:RequestTag/${TagKey}",
         "aws:ResourceTag/${TagKey}",
-        "aws:TagKeys"
+        "aws:TagKeys",
+        "inspector2:ExpectedBucketOwner"
       ]
     },
     {
@@ -25919,7 +25928,7 @@
       "name": "Amazon Managed Streaming for Kafka Connect",
       "servicePrefix": "kafkaconnect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_kafkaconnect.html",
-      "actionsCount": 18,
+      "actionsCount": 21,
       "actions": [
         "CreateConnector",
         "CreateCustomPlugin",
@@ -25936,6 +25945,9 @@
         "ListCustomPlugins",
         "ListTagsForResource",
         "ListWorkerConfigurations",
+        "PauseConnector",
+        "RestartConnector",
+        "ResumeConnector",
         "TagResource",
         "UntagResource",
         "UpdateConnector"

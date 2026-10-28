@@ -67675,6 +67675,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_CreateFeed.html"
       },
       {
+        "name": "CreateScheduleAction",
+        "permissionOnly": false,
+        "description": "Grants permission to create a schedule action for a feed",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "feed",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_CreateScheduleAction.html"
+      },
+      {
         "name": "DeleteDictionary",
         "permissionOnly": false,
         "description": "Grants permission to delete a dictionary",
@@ -67724,6 +67741,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_DeleteFeedPolicy.html"
+      },
+      {
+        "name": "DeleteScheduleAction",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a schedule action for a feed",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "feed",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_DeleteScheduleAction.html"
       },
       {
         "name": "DisassociateFeed",
@@ -67856,6 +67890,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_ListFeeds.html"
+      },
+      {
+        "name": "ListScheduleActions",
+        "permissionOnly": false,
+        "description": "Grants permission to list schedule actions for a feed",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "feed",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_ListScheduleActions.html"
       },
       {
         "name": "ListTagsForResource",
@@ -155987,6 +156038,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_RejectEngagementInvitation.html"
       },
       {
+        "name": "SearchOpportunities",
+        "permissionOnly": false,
+        "description": "Grants permission to search Opportunities on AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/access-control.html"
+      },
+      {
         "name": "SearchPartnerCentralContent",
         "permissionOnly": false,
         "description": "Grants permission to search content in AWS Partner Central",
@@ -179421,6 +179489,19 @@
             ]
           },
           {
+            "resourceType": "exascale-db-storage-vault",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "odb:CreateDbNode",
+              "odb:TagResource"
+            ]
+          },
+          {
             "resourceType": "odb-network",
             "required": true,
             "conditionKeys": [
@@ -179478,10 +179559,11 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "cloud-exadata-infrastructure",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
             "dependentActions": [
@@ -180242,9 +180324,11 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "cloud-exadata-infrastructure",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ],
@@ -180885,6 +180969,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_UpdateExadbVmCluster.html"
+      },
+      {
+        "name": "UpdateExascaleCloudExadataInfrastructure",
+        "permissionOnly": false,
+        "description": "Grants permission to configure Exascale storage on an Exadata infrastructure resource",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cloud-exadata-infrastructure",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_UpdateExascaleCloudExadataInfrastructure.html"
       },
       {
         "name": "UpdateExascaleDbStorageVault",
@@ -349228,9 +349329,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": [
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/latest/APIReference/API_RegisterCrossAccountAccessRole.html"
@@ -349628,7 +349727,9 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "inspector2:ExpectedBucketOwner"
+            ],
             "dependentActions": []
           }
         ],
@@ -349643,7 +349744,9 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "inspector2:ExpectedBucketOwner"
+            ],
             "dependentActions": []
           }
         ],
@@ -350005,6 +350108,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_GetMember.html"
       },
       {
+        "name": "GetOnDemandScanStatus",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the status of an on-demand scan for a specified resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_GetOnDemandScanStatus.html"
+      },
+      {
         "name": "GetSbomExport",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a requested SBOM report",
@@ -350275,6 +350393,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_ListMembers.html"
       },
       {
+        "name": "ListOnDemandScans",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve information about on-demand scans for a specified resource",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_ListOnDemandScans.html"
+      },
+      {
         "name": "ListTagsForResource",
         "permissionOnly": false,
         "description": "Grants permission to retrieve the tags for an Amazon Inspector resource",
@@ -350393,6 +350526,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_StartCodeSecurityScan.html"
+      },
+      {
+        "name": "StartOnDemandScan",
+        "permissionOnly": false,
+        "description": "Grants permission to initiate an on-demand scan on a specified resource",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/inspector/v2/APIReference/API_StartOnDemandScan.html"
       },
       {
         "name": "StopCisSession",
@@ -350768,6 +350916,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by the presence of tag keys in the request",
         "type": "ArrayOfString"
+      },
+      {
+        "name": "inspector2:ExpectedBucketOwner",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the AWS account ID that must own the destination S3 bucket when requesting a findings report or SBOM export",
+        "type": "String"
       }
     ]
   },
@@ -375143,6 +375297,57 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/MSKC/latest/mskc/API_ListWorkerConfigurations.html"
+      },
+      {
+        "name": "PauseConnector",
+        "permissionOnly": false,
+        "description": "Grants permission to pause an MSK Connect connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "connector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/MSKC/latest/mskc/API_PauseConnector.html"
+      },
+      {
+        "name": "RestartConnector",
+        "permissionOnly": false,
+        "description": "Grants permission to restart an MSK Connect connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "connector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/MSKC/latest/mskc/API_RestartConnector.html"
+      },
+      {
+        "name": "ResumeConnector",
+        "permissionOnly": false,
+        "description": "Grants permission to resume an MSK Connect connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "connector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/MSKC/latest/mskc/API_ResumeConnector.html"
       },
       {
         "name": "TagResource",
