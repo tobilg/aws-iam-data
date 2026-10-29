@@ -58052,6 +58052,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetBacklogTask.html"
       },
       {
+        "name": "GetCatalogCapability",
+        "permissionOnly": false,
+        "description": "Grants permission to get a capability from the catalog",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/aws-devops-agent-security-devops-agent-iam-permissions.html"
+      },
+      {
         "name": "GetKnowledgeItem",
         "permissionOnly": false,
         "description": "Grants permission to get a knowledge item",
@@ -58290,6 +58305,51 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListBacklogTasks.html"
+      },
+      {
+        "name": "ListCatalogCapabilities",
+        "permissionOnly": false,
+        "description": "Grants permission to list capabilities in the catalog",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/aws-devops-agent-security-devops-agent-iam-permissions.html"
+      },
+      {
+        "name": "ListCatalogCapabilityFiles",
+        "permissionOnly": false,
+        "description": "Grants permission to list the files in a capability from the catalog",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/aws-devops-agent-security-devops-agent-iam-permissions.html"
+      },
+      {
+        "name": "ListCatalogCapabilityTypes",
+        "permissionOnly": false,
+        "description": "Grants permission to list the capability types in the catalog",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/aws-devops-agent-security-devops-agent-iam-permissions.html"
       },
       {
         "name": "ListChats",
@@ -58598,6 +58658,25 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_RotateAccessToken.html"
+      },
+      {
+        "name": "SearchAssets",
+        "permissionOnly": false,
+        "description": "Grants permission to search assets",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/aws-devops-agent-security-devops-agent-iam-permissions.html"
       },
       {
         "name": "SearchServiceAccessibleResource",
@@ -372252,10 +372331,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "grafana:CreateWorkspace",
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/grafana/latest/APIReference/API_TagResource.html"
