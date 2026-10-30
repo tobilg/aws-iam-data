@@ -68357,6 +68357,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_AssociateRouterNetworkInterface.html"
       },
       {
+        "name": "ConnectEndpoints",
+        "permissionOnly": false,
+        "description": "Grants permission to connect a source endpoint to a destination endpoint in AWS Elemental MediaConnect",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DestinationEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_ConnectEndpoints.html"
+      },
+      {
         "name": "CreateBridge",
         "permissionOnly": false,
         "description": "Grants permission to create bridges",
@@ -68432,6 +68449,7 @@
             ],
             "dependentActions": [
               "mediaconnect:AssociateRouterNetworkInterface",
+              "mediaconnect:RegisterDestinationEndpoint",
               "mediaconnect:TagResource",
               "mediaconnect:UpdateFlowOutput",
               "iam:PassRole"
@@ -68477,6 +68495,7 @@
             ],
             "dependentActions": [
               "mediaconnect:AssociateRouterNetworkInterface",
+              "mediaconnect:RegisterSourceEndpoint",
               "mediaconnect:TagResource",
               "mediaconnect:UpdateFlowSource",
               "iam:PassRole"
@@ -68542,6 +68561,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_DeleteGateway.html"
       },
       {
+        "name": "DeleteResourcePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a resource policy from a resource in AWS Elemental MediaConnect",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_DeleteResourcePolicy.html"
+      },
+      {
         "name": "DeleteRouterInput",
         "permissionOnly": false,
         "description": "Grants permission to delete a router input in AWS Elemental MediaConnect",
@@ -68554,6 +68588,7 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": [
+              "mediaconnect:DeregisterDestinationEndpoint",
               "mediaconnect:UpdateFlowOutput"
             ]
           }
@@ -68590,11 +68625,29 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": [
+              "mediaconnect:DeregisterSourceEndpoint",
               "mediaconnect:UpdateFlowSource"
             ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_DeleteRouterOutput.html"
+      },
+      {
+        "name": "DeregisterDestinationEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to deregister a destination endpoint in AWS Elemental MediaConnect",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DestinationEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_DeregisterDestinationEndpoint.html"
       },
       {
         "name": "DeregisterGatewayInstance",
@@ -68610,6 +68663,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_DeregisterGatewayInstance.html"
+      },
+      {
+        "name": "DeregisterSourceEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to deregister a source endpoint in AWS Elemental MediaConnect",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "SourceEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_DeregisterSourceEndpoint.html"
       },
       {
         "name": "DescribeBridge",
@@ -68738,6 +68808,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_DescribeReservation.html"
       },
       {
+        "name": "DisconnectEndpoints",
+        "permissionOnly": false,
+        "description": "Grants permission to disconnect a source endpoint from a destination endpoint in AWS Elemental MediaConnect",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DestinationEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_DisconnectEndpoints.html"
+      },
+      {
         "name": "DiscoverGatewayPollEndpoint",
         "permissionOnly": false,
         "description": "Grants permission to discover gateway poll endpoint",
@@ -68751,6 +68838,38 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_DiscoverGatewayPollEndpoint.html"
+      },
+      {
+        "name": "GetDestinationEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve information about a specific destination endpoint in AWS Elemental MediaConnect",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "DestinationEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_GetDestinationEndpoint.html"
+      },
+      {
+        "name": "GetResourcePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a resource policy for a resource in AWS Elemental MediaConnect",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_GetResourcePolicy.html"
       },
       {
         "name": "GetRouterInput",
@@ -68838,10 +68957,27 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_GetRouterOutput.html"
       },
       {
+        "name": "GetSourceEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve information about a specific source endpoint in AWS Elemental MediaConnect",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "SourceEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_GetSourceEndpoint.html"
+      },
+      {
         "name": "GrantFlowEntitlements",
         "permissionOnly": false,
         "description": "Grants permission to grant entitlements on any flow",
-        "accessLevel": "Write",
+        "accessLevel": "Permissions management, Write",
         "resourceTypes": [
           {
             "resourceType": "Entitlement",
@@ -68886,6 +69022,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_ListBridges.html"
+      },
+      {
+        "name": "ListDestinationEndpoints",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of destination endpoints in AWS Elemental MediaConnect",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_ListDestinationEndpoints.html"
       },
       {
         "name": "ListEntitlements",
@@ -69023,6 +69174,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_ListRouterOutputs.html"
       },
       {
+        "name": "ListSourceEndpoints",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of source endpoints in AWS Elemental MediaConnect",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_ListSourceEndpoints.html"
+      },
+      {
         "name": "ListTagsForResource",
         "permissionOnly": false,
         "description": "Grants permission to display a list of all tags associated with a resource",
@@ -69066,6 +69232,59 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_PurchaseOffering.html"
+      },
+      {
+        "name": "PutResourcePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to attach a resource policy to a resource in AWS Elemental MediaConnect",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_PutResourcePolicy.html"
+      },
+      {
+        "name": "RegisterDestinationEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to register a new destination endpoint in AWS Elemental MediaConnect",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DestinationEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "mediaconnect:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_RegisterDestinationEndpoint.html"
+      },
+      {
+        "name": "RegisterSourceEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to register a new source endpoint in AWS Elemental MediaConnect",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "SourceEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "mediaconnect:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_RegisterSourceEndpoint.html"
       },
       {
         "name": "RemoveBridgeOutput",
@@ -69235,7 +69454,7 @@
         "name": "RevokeFlowEntitlement",
         "permissionOnly": false,
         "description": "Grants permission to revoke entitlements on any flow",
-        "accessLevel": "Write",
+        "accessLevel": "Permissions management, Write",
         "resourceTypes": [
           {
             "resourceType": "Entitlement",
@@ -69380,6 +69599,16 @@
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
+            "resourceType": "DestinationEndpoint",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Entitlement",
             "required": false,
             "conditionKeys": [
@@ -69451,6 +69680,16 @@
           },
           {
             "resourceType": "Source",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "SourceEndpoint",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -69496,6 +69735,15 @@
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
+            "resourceType": "DestinationEndpoint",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Entitlement",
             "required": false,
             "conditionKeys": [
@@ -69560,6 +69808,15 @@
           },
           {
             "resourceType": "Source",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "SourceEndpoint",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -69640,6 +69897,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_UpdateBridgeState.html"
       },
       {
+        "name": "UpdateDestinationEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to update the configuration of a destination endpoint in AWS Elemental MediaConnect",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DestinationEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_UpdateDestinationEndpoint.html"
+      },
+      {
         "name": "UpdateFlow",
         "permissionOnly": false,
         "description": "Grants permission to update flows",
@@ -69660,7 +69934,7 @@
         "name": "UpdateFlowEntitlement",
         "permissionOnly": false,
         "description": "Grants permission to update entitlements on any flow",
-        "accessLevel": "Write",
+        "accessLevel": "Permissions management, Write",
         "resourceTypes": [
           {
             "resourceType": "Flow",
@@ -69831,6 +70105,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_UpdateRouterOutput.html"
+      },
+      {
+        "name": "UpdateSourceEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to update the configuration of a source endpoint in AWS Elemental MediaConnect",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "SourceEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_UpdateSourceEndpoint.html"
       }
     ],
     "resourceTypes": [
@@ -69839,6 +70130,14 @@
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:mediaconnect:${Region}:${Account}:bridge:${BridgeId}:${BridgeName}",
         "conditionKeys": []
+      },
+      {
+        "name": "DestinationEndpoint",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:mediaconnect:${Region}:${Account}:destinationEndpoint:${DestinationEndpointId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "Entitlement",
@@ -69924,6 +70223,14 @@
         "name": "Source",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:mediaconnect:${Region}:${Account}:source:${SourceId}:${SourceName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "SourceEndpoint",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:mediaconnect:${Region}:${Account}:sourceEndpoint:${SourceEndpointId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -96774,7 +97081,7 @@
         "name": "DeleteS3AccessPolicy",
         "permissionOnly": false,
         "description": "Grants permission to delete an access policy on a given store",
-        "accessLevel": "Write",
+        "accessLevel": "Permissions management, Write",
         "resourceTypes": [
           {
             "resourceType": "sequenceStore",
@@ -97761,7 +98068,7 @@
         "name": "PutS3AccessPolicy",
         "permissionOnly": false,
         "description": "Grants permission to put an access policy on a given store",
-        "accessLevel": "Write",
+        "accessLevel": "Permissions management, Write",
         "resourceTypes": [
           {
             "resourceType": "sequenceStore",
