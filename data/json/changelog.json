@@ -1,5 +1,24 @@
 [
   {
+    "dateOfChange": "2026-10-31",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudWatch": [
+        "cloudwatch:GetProfileRecords",
+        "cloudwatch:PutProfileRecords"
+      ],
+      "Amazon Cognito User Pools": [
+        "cognito-idp:DescribeTermsByClient",
+        "cognito-idp:GetClientToken"
+      ],
+      "Amazon Managed Workflows for Apache Airflow": [
+        "airflow:AccessAirflowResource"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-10-30",
     "addedServices": [],
     "removedServices": [],

@@ -254675,6 +254675,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetPreferences.html"
       },
       {
+        "name": "GetProfileRecords",
+        "permissionOnly": false,
+        "description": "Grants permission to query and retrieve CloudWatch application profiling data. This action is unrelated to CloudWatch access profiles (GetAccessProfile and related actions)",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/permissions-reference-cw.html"
+      },
+      {
         "name": "GetRecords",
         "permissionOnly": false,
         "description": "Grants permission to fetch logs and traces",
@@ -255550,6 +255568,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricStream.html"
+      },
+      {
+        "name": "PutProfileRecords",
+        "permissionOnly": false,
+        "description": "Grants permission to ingest CloudWatch application profiling data. This action is unrelated to CloudWatch access profiles (GetAccessProfile and related actions)",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/permissions-reference-cw.html"
       },
       {
         "name": "PutRecords",
@@ -265345,6 +265380,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeTerms.html"
       },
       {
+        "name": "DescribeTermsByClient",
+        "permissionOnly": false,
+        "description": "Grants permission to describe the terms documents associated with an app client",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "cognito-idp:DescribeTerms"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_DescribeTermsByClient.html"
+      },
+      {
         "name": "DescribeUserImportJob",
         "permissionOnly": false,
         "description": "Grants permission to describe any user import job",
@@ -265456,6 +265510,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetCSVHeader.html"
+      },
+      {
+        "name": "GetClientToken",
+        "permissionOnly": false,
+        "description": "Grants permission to issue an access token for machine-to-machine authorization with an app client ID and client secret",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetClientToken.html"
       },
       {
         "name": "GetDevice",
@@ -352711,6 +352780,15 @@
             "dependentActions": []
           },
           {
+            "resourceType": "Stage-Logging-Configuration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Storage-Configuration",
             "required": false,
             "conditionKeys": [
@@ -353018,6 +353096,15 @@
             "dependentActions": []
           },
           {
+            "resourceType": "Stage-Logging-Configuration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "Storage-Configuration",
             "required": false,
             "conditionKeys": [
@@ -353141,6 +353228,14 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Stage-Logging-Configuration",
+            "required": false,
+            "conditionKeys": [
               "aws:TagKeys"
             ],
             "dependentActions": []
@@ -375885,6 +375980,28 @@
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_mwaa.html",
     "servicePrefix": "airflow",
     "actions": [
+      {
+        "name": "AccessAirflowResource",
+        "permissionOnly": false,
+        "description": "Grants permission to check whether a user is authorized to perform an action on an Airflow resource within an Amazon MWAA environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "environment",
+            "required": true,
+            "conditionKeys": [
+              "airflow:DagAccessEntity",
+              "airflow:ResourceAction",
+              "airflow:ResourceId",
+              "airflow:ResourceType",
+              "airflow:TeamNames",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mwaa/latest/API/API_CheckAuthorization.html"
+      },
       {
         "name": "CreateCliToken",
         "permissionOnly": false,
