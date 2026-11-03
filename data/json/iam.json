@@ -122857,7 +122857,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iotsitewise:TagResource"
+            ]
           },
           {
             "resourceType": "project",
@@ -122867,7 +122869,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iotsitewise:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/iot-sitewise/latest/APIReference/API_CreateAccessPolicy.html"
@@ -392011,11 +392015,13 @@
           {
             "resourceType": "lexicon",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/dg/API_DeleteLexicon.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/APIReference/API_DeleteLexicon.html"
       },
       {
         "name": "DescribeVoices",
@@ -392030,7 +392036,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/dg/API_DescribeVoices.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/APIReference/API_DescribeVoices.html"
       },
       {
         "name": "GetLexicon",
@@ -392041,11 +392047,13 @@
           {
             "resourceType": "lexicon",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/dg/API_GetLexicon.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/APIReference/API_GetLexicon.html"
       },
       {
         "name": "GetSpeechSynthesisTask",
@@ -392060,7 +392068,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/dg/API_GetSpeechSynthesisTask.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/APIReference/API_GetSpeechSynthesisTask.html"
       },
       {
         "name": "ListLexicons",
@@ -392075,7 +392083,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/dg/API_ListLexicons.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/APIReference/API_ListLexicons.html"
       },
       {
         "name": "ListSpeechSynthesisTasks",
@@ -392090,7 +392098,24 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/dg/API_ListSpeechSynthesisTasks.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/APIReference/API_ListSpeechSynthesisTasks.html"
+      },
+      {
+        "name": "ListTagsForResource",
+        "permissionOnly": false,
+        "description": "Grants permission to list the tags of a resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "lexicon",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/APIReference/API_ListTagsForResource.html"
       },
       {
         "name": "PutLexicon",
@@ -392101,11 +392126,17 @@
           {
             "resourceType": "lexicon",
             "required": true,
-            "conditionKeys": [],
-            "dependentActions": []
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "polly:TagResource"
+            ]
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/dg/API_PutLexicon.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/APIReference/API_PutLexicon.html"
       },
       {
         "name": "StartSpeechSynthesisStream",
@@ -392116,11 +392147,13 @@
           {
             "resourceType": "lexicon",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/dg/API_StartSpeechSynthesisStream.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/APIReference/API_StartSpeechSynthesisStream.html"
       },
       {
         "name": "StartSpeechSynthesisTask",
@@ -392131,11 +392164,13 @@
           {
             "resourceType": "lexicon",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/dg/API_StartSpeechSynthesisTask.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/APIReference/API_StartSpeechSynthesisTask.html"
       },
       {
         "name": "SynthesizeSpeech",
@@ -392146,11 +392181,50 @@
           {
             "resourceType": "lexicon",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/dg/API_SynthesizeSpeech.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/APIReference/API_SynthesizeSpeech.html"
+      },
+      {
+        "name": "TagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to add tags to a resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "lexicon",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/APIReference/API_TagResource.html"
+      },
+      {
+        "name": "UntagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to remove tags from a resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "lexicon",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/polly/latest/APIReference/API_UntagResource.html"
       }
     ],
     "resourceTypes": [
@@ -392158,10 +392232,31 @@
         "name": "lexicon",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:polly:${Region}:${Account}:lexicon/${LexiconName}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       }
     ],
-    "conditionKeys": []
+    "conditionKeys": [
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by a tag's key and value in a request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tag key-value pairs attached to the resource",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tag keys in a request",
+        "type": "ArrayOfString"
+      }
+    ]
   },
   {
     "name": "Amazon Q",

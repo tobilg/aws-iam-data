@@ -27229,7 +27229,7 @@
       "name": "Amazon Polly",
       "servicePrefix": "polly",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_polly.html",
-      "actionsCount": 10,
+      "actionsCount": 13,
       "actions": [
         "DeleteLexicon",
         "DescribeVoices",
@@ -27237,17 +27237,24 @@
         "GetSpeechSynthesisTask",
         "ListLexicons",
         "ListSpeechSynthesisTasks",
+        "ListTagsForResource",
         "PutLexicon",
         "StartSpeechSynthesisStream",
         "StartSpeechSynthesisTask",
-        "SynthesizeSpeech"
+        "SynthesizeSpeech",
+        "TagResource",
+        "UntagResource"
       ],
       "resourceTypesCount": 1,
       "resourceTypes": [
         "lexicon"
       ],
-      "conditionKeysCount": 0,
-      "conditionKeys": []
+      "conditionKeysCount": 3,
+      "conditionKeys": [
+        "aws:RequestTag/${TagKey}",
+        "aws:ResourceTag/${TagKey}",
+        "aws:TagKeys"
+      ]
     },
     {
       "name": "Amazon Q",
