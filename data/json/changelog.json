@@ -1,5 +1,31 @@
 [
   {
+    "dateOfChange": "2026-11-04",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Security Hub": [
+        "securityhub:GetSoftwareResourcesV2",
+        "securityhub:GetSoftwareStatisticsV2",
+        "securityhub:GetSoftwareV2"
+      ],
+      "Amazon DataZone": [
+        "datazone:CreateUIConfiguration",
+        "datazone:DeleteUIConfiguration",
+        "datazone:GetEffectiveUICustomization",
+        "datazone:GetUIConfiguration",
+        "datazone:ListUIConfigurations",
+        "datazone:UpdateUIConfiguration"
+      ]
+    },
+    "removedActions": {
+      "AWS Assurance": [
+        "assurance:ListResourcesForControl",
+        "assurance:StartResourceDiscovery"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2026-11-03",
     "addedServices": [],
     "removedServices": [],

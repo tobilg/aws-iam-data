@@ -16196,23 +16196,6 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListProjects.html"
       },
       {
-        "name": "ListResourcesForControl",
-        "permissionOnly": false,
-        "description": "Grants permission to list in-scope resources for a control",
-        "accessLevel": "Read",
-        "resourceTypes": [
-          {
-            "resourceType": "environment",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_ListResourcesForControl.html"
-      },
-      {
         "name": "ListTagsForResource",
         "permissionOnly": false,
         "description": "Grants permission to list tags for a resource",
@@ -16396,23 +16379,6 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_StartAssessmentReportExport.html"
-      },
-      {
-        "name": "StartResourceDiscovery",
-        "permissionOnly": false,
-        "description": "Grants permission to start discovery of in-scope resources",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "environment",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/assurance/latest/APIReference/API_StartResourceDiscovery.html"
       },
       {
         "name": "TagResource",
@@ -44005,7 +43971,9 @@
               "aws:TagKeys",
               "config:ConfigurationRecorderServicePrincipal"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "config:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/config/latest/APIReference/API_PutServiceLinkedConfigurationRecorder.html"
@@ -176360,6 +176328,57 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetSecurityControlDefinition.html"
       },
       {
+        "name": "GetSoftwareResourcesV2",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of resources that contain a software package",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "hubv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetSoftwareResourcesV2.html"
+      },
+      {
+        "name": "GetSoftwareStatisticsV2",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve aggregate statistics about software packages",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "hubv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetSoftwareStatisticsV2.html"
+      },
+      {
+        "name": "GetSoftwareV2",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of software packages found on resources",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "hubv2",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_GetSoftwareV2.html"
+      },
+      {
         "name": "InviteMembers",
         "permissionOnly": false,
         "description": "Grants permission to invite other AWS accounts to become Security Hub member accounts",
@@ -211464,6 +211483,7 @@
               "cost-optimization-hub:GetRecommendation",
               "cost-optimization-hub:ListRecommendations",
               "cur:PutReportDefinition",
+              "cur:PutReportDefinition",
               "sustainability:GetCarbonFootprintSummary"
             ]
           },
@@ -211478,6 +211498,7 @@
               "bcm-data-exports:TagResource",
               "cost-optimization-hub:GetRecommendation",
               "cost-optimization-hub:ListRecommendations",
+              "cur:PutReportDefinition",
               "cur:PutReportDefinition",
               "sustainability:GetCarbonFootprintSummary"
             ]
@@ -284661,6 +284682,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_CreateSubscriptionTarget.html"
       },
       {
+        "name": "CreateUIConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to create a UI configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_CreateUIConfiguration.html"
+      },
+      {
         "name": "CreateUserProfile",
         "permissionOnly": false,
         "description": "Grants permission to create a user profile for an existing user in the customers IAM Identity Center",
@@ -285203,6 +285239,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteTimeSeriesDataPoints.html"
       },
       {
+        "name": "DeleteUIConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a UI configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteUIConfiguration.html"
+      },
+      {
         "name": "DeregisterAgentArtifact",
         "permissionOnly": false,
         "description": "Grants permission to deregister agent artifacts",
@@ -285563,6 +285614,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_GetDomainUnit.html"
+      },
+      {
+        "name": "GetEffectiveUICustomization",
+        "permissionOnly": false,
+        "description": "Grants permission to get the effective UI customization",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_GetEffectiveUICustomization.html"
       },
       {
         "name": "GetEnvironment",
@@ -285983,6 +286049,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_GetTimeSeriesDataPoint.html"
+      },
+      {
+        "name": "GetUIConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to get a UI configuration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_GetUIConfiguration.html"
       },
       {
         "name": "GetUpdateEligibility",
@@ -286690,6 +286771,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_ListTimeSeriesDataPoints.html"
+      },
+      {
+        "name": "ListUIConfigurations",
+        "permissionOnly": false,
+        "description": "Grants permission to list UI configurations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_ListUIConfigurations.html"
       },
       {
         "name": "PostLineageEvent",
@@ -287611,6 +287707,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateSubscriptionTarget.html"
+      },
+      {
+        "name": "UpdateUIConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to update a UI configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateUIConfiguration.html"
       },
       {
         "name": "UpdateUserProfile",
