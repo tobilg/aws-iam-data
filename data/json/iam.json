@@ -34701,7 +34701,8 @@
               "codebuild:vpcConfig.vpcId"
             ],
             "dependentActions": [
-              "iam:PassRole"
+              "iam:PassRole",
+              "secretsmanager:DescribeSecret"
             ]
           }
         ],
@@ -35711,7 +35712,8 @@
               "codebuild:vpcConfig.vpcId"
             ],
             "dependentActions": [
-              "iam:PassRole"
+              "iam:PassRole",
+              "secretsmanager:DescribeSecret"
             ]
           }
         ],
@@ -58035,6 +58037,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/aws-devops-agent-security-devops-agent-iam-permissions.html"
       },
       {
+        "name": "GetChat",
+        "permissionOnly": false,
+        "description": "Grants permission to get a chat",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html"
+      },
+      {
         "name": "GetKnowledgeItem",
         "permissionOnly": false,
         "description": "Grants permission to get a knowledge item",
@@ -58871,6 +58890,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_UpdateBacklogTask.html"
+      },
+      {
+        "name": "UpdateChat",
+        "permissionOnly": false,
+        "description": "Grants permission to update a chat",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html"
       },
       {
         "name": "UpdateGoal",
@@ -154704,6 +154740,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_benefits_AssociateBenefitApplicationResource.html"
       },
       {
+        "name": "AssociateBusinessPlan",
+        "permissionOnly": false,
+        "description": "Grants permission to associate business plan items with opportunities or campaigns in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_AssociateBusinessPlan.html"
+      },
+      {
         "name": "AssociateOpportunity",
         "permissionOnly": false,
         "description": "Grants permission to associate Opportunities on AWS Partner Central with other entities",
@@ -154741,6 +154795,44 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_benefits_CancelBenefitApplication.html"
+      },
+      {
+        "name": "CancelBusinessPlan",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel business plans in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:AllowAwsEngagement",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_CancelBusinessPlan.html"
+      },
+      {
+        "name": "CancelBusinessPlanSubmissionTask",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel business plan submission tasks in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:AllowAwsEngagement",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_CancelBusinessPlanSubmissionTask.html"
       },
       {
         "name": "CancelChannelHandshake",
@@ -154834,6 +154926,48 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_benefits_CreateBenefitApplication.html"
+      },
+      {
+        "name": "CreateBusinessPlan",
+        "permissionOnly": false,
+        "description": "Grants permission to create business plans in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "partnercentral:AllowAwsEngagement",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${UserGuideDocPage}controlling-access-in-aws-partner-central.html"
+      },
+      {
+        "name": "CreateBusinessPlanItem",
+        "permissionOnly": false,
+        "description": "Grants permission to create business plan items in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:AllowAwsEngagement",
+              "partnercentral:BusinessPlanItemStage",
+              "partnercentral:BusinessPlanItemType",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_CreateBusinessPlanItem.html"
       },
       {
         "name": "CreateChannelHandshake",
@@ -155110,6 +155244,46 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_prm_CreateRevenueAttribution.html"
       },
       {
+        "name": "DeleteBusinessPlanAttachment",
+        "permissionOnly": false,
+        "description": "Grants permission to delete business plan attachments in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:AllowAwsEngagement",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_DeleteBusinessPlanAttachment.html"
+      },
+      {
+        "name": "DeleteBusinessPlanItem",
+        "permissionOnly": false,
+        "description": "Grants permission to delete business plan items in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:AllowAwsEngagement",
+              "partnercentral:BusinessPlanItemStage",
+              "partnercentral:BusinessPlanItemType",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_DeleteBusinessPlanItem.html"
+      },
+      {
         "name": "DeleteProgramManagementAccount",
         "permissionOnly": false,
         "description": "Grants permission to delete program management accounts in AWS Partner Central",
@@ -155224,6 +155398,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_benefits_DisassociateBenefitApplicationResource.html"
       },
       {
+        "name": "DisassociateBusinessPlan",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate business plan items from opportunities or campaigns in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_DisassociateBusinessPlan.html"
+      },
+      {
         "name": "DisassociateOpportunity",
         "permissionOnly": false,
         "description": "Grants permission to disassociate Opportunities on AWS Partner Central from other entities",
@@ -155336,6 +155528,132 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_benefits_GetBenefitApplication.html"
+      },
+      {
+        "name": "GetBusinessPlan",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve business plan details in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${UserGuideDocPage}controlling-access-in-aws-partner-central.html"
+      },
+      {
+        "name": "GetBusinessPlanAttachment",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve business plan attachment details in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_GetBusinessPlanAttachment.html"
+      },
+      {
+        "name": "GetBusinessPlanAttachmentImportTask",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve business plan attachment import task details in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_GetBusinessPlanAttachmentImportTask.html"
+      },
+      {
+        "name": "GetBusinessPlanItem",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve business plan item details in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:BusinessPlanItemStage",
+              "partnercentral:BusinessPlanItemType",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_GetBusinessPlanItem.html"
+      },
+      {
+        "name": "GetBusinessPlanItemSchema",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the item schema of business plans in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_GetBusinessPlanItemSchema.html"
+      },
+      {
+        "name": "GetBusinessPlanSettings",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve business plan settings in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_GetBusinessPlanSettings.html"
+      },
+      {
+        "name": "GetBusinessPlanSubmissionTask",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve business plan submission task details in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_GetBusinessPlanSubmissionTask.html"
       },
       {
         "name": "GetConnection",
@@ -155536,6 +155854,23 @@
         "resourceTypes": [
           {
             "resourceType": "Dashboard",
+            "required": true,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${UserGuideDocPage}controlling-access-in-aws-partner-central.html"
+      },
+      {
+        "name": "GetPartnerReportingData",
+        "permissionOnly": false,
+        "description": "Grants permission to execute a structured query against a partner analytics dataset in AWS Partner Central",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Dataset",
             "required": true,
             "conditionKeys": [
               "partnercentral:Catalog"
@@ -155850,6 +156185,131 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_benefits_ListBenefits.html"
+      },
+      {
+        "name": "ListBusinessPlanAssociations",
+        "permissionOnly": false,
+        "description": "Grants permission to list business plan associations in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_ListBusinessPlanAssociations.html"
+      },
+      {
+        "name": "ListBusinessPlanAttachmentImportTasks",
+        "permissionOnly": false,
+        "description": "Grants permission to list business plan attachment import tasks in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_ListBusinessPlanAttachmentImportTasks.html"
+      },
+      {
+        "name": "ListBusinessPlanAttachments",
+        "permissionOnly": false,
+        "description": "Grants permission to list business plan attachments in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_ListBusinessPlanAttachments.html"
+      },
+      {
+        "name": "ListBusinessPlanHistory",
+        "permissionOnly": false,
+        "description": "Grants permission to list the change history of business plans in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_ListBusinessPlanHistory.html"
+      },
+      {
+        "name": "ListBusinessPlanItems",
+        "permissionOnly": false,
+        "description": "Grants permission to list business plan items in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_ListBusinessPlanItems.html"
+      },
+      {
+        "name": "ListBusinessPlanSubmissionTasks",
+        "permissionOnly": false,
+        "description": "Grants permission to list business plan submission tasks in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_ListBusinessPlanSubmissionTasks.html"
+      },
+      {
+        "name": "ListBusinessPlans",
+        "permissionOnly": false,
+        "description": "Grants permission to list business plans in AWS Partner Central",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${UserGuideDocPage}controlling-access-in-aws-partner-central.html"
       },
       {
         "name": "ListChannelHandshakes",
@@ -156288,6 +156748,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_PutAllianceLeadContact.html"
       },
       {
+        "name": "PutBusinessPlanSettings",
+        "permissionOnly": false,
+        "description": "Grants permission to set business plan settings, including whether AWS can contribute to business plans, in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_PutBusinessPlanSettings.html"
+      },
+      {
         "name": "PutProfileVisibility",
         "permissionOnly": false,
         "description": "Grants permission to set profile visibility in AWS Partner Central",
@@ -156445,6 +156922,44 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_SendEmailVerificationCode.html"
+      },
+      {
+        "name": "StartBusinessPlanAttachmentImportTask",
+        "permissionOnly": false,
+        "description": "Grants permission to initiate tasks that import business plan attachments in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:AllowAwsEngagement",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_StartBusinessPlanAttachmentImportTask.html"
+      },
+      {
+        "name": "StartBusinessPlanSubmissionTask",
+        "permissionOnly": false,
+        "description": "Grants permission to initiate tasks that submit business plans for review in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:AllowAwsEngagement",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_StartBusinessPlanSubmissionTask.html"
       },
       {
         "name": "StartEngagementByAcceptingInvitationTask",
@@ -156707,6 +157222,19 @@
             "dependentActions": []
           },
           {
+            "resourceType": "BusinessPlan",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "partnercentral:Catalog",
+              "partnercentral:FulfillmentTypes",
+              "partnercentral:Programs"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "ChannelHandshake",
             "required": false,
             "conditionKeys": [
@@ -156821,6 +157349,18 @@
         "resourceTypes": [
           {
             "resourceType": "BenefitApplication",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "partnercentral:Catalog",
+              "partnercentral:FulfillmentTypes",
+              "partnercentral:Programs"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "BusinessPlan",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -156949,6 +157489,46 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_benefits_UpdateBenefitApplication.html"
+      },
+      {
+        "name": "UpdateBusinessPlan",
+        "permissionOnly": false,
+        "description": "Grants permission to update business plans in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:AllowAwsEngagement",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_UpdateBusinessPlan.html"
+      },
+      {
+        "name": "UpdateBusinessPlanItem",
+        "permissionOnly": false,
+        "description": "Grants permission to update business plan items in AWS Partner Central",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "BusinessPlan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "partnercentral:AllowAwsEngagement",
+              "partnercentral:BusinessPlanItemStage",
+              "partnercentral:BusinessPlanItemType",
+              "partnercentral:Catalog"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/partner-central/latest/APIReference/API_account_UpdateBusinessPlanItem.html"
       },
       {
         "name": "UpdateConnectionPreferences",
@@ -157097,6 +157677,14 @@
         ]
       },
       {
+        "name": "BusinessPlan",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/business-plan/${Identifier}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "ChannelHandshake",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:partnercentral:${Region}:${Account}:catalog/${Catalog}/channel-handshake/${Identifier}",
@@ -157126,6 +157714,12 @@
         "name": "Dashboard",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:partnercentral::${Account}:catalog/${Catalog}/ReportingData/${TableId}/Dashboard/${DashboardId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "Dataset",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:partnercentral::${Account}:catalog/${Catalog}/ReportingData/${Domain}/Dataset/${DatasetName}",
         "conditionKeys": []
       },
       {
@@ -157251,6 +157845,24 @@
         "apiReferenceUrl": "",
         "description": "Filters access by the tag keys that are passed in the request",
         "type": "ArrayOfString"
+      },
+      {
+        "name": "partnercentral:AllowAwsEngagement",
+        "apiReferenceUrl": "",
+        "description": "Filters access by whether the partner allows AWS to make changes to their business plans",
+        "type": "String"
+      },
+      {
+        "name": "partnercentral:BusinessPlanItemStage",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the stage of a business plan item",
+        "type": "String"
+      },
+      {
+        "name": "partnercentral:BusinessPlanItemType",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the type of a business plan item",
+        "type": "String"
       },
       {
         "name": "partnercentral:Catalog",
@@ -181321,9 +181933,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_UpdateAutonomousDatabase.html"
@@ -284573,6 +285183,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_CreateNotebook.html"
       },
       {
+        "name": "CreateNotificationPreference",
+        "permissionOnly": false,
+        "description": "Grants permission to create a notification preference",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_CreateNotificationPreference.html"
+      },
+      {
         "name": "CreateProject",
         "permissionOnly": false,
         "description": "Grants permission to create a Project to enable your team to publish and subscribe to data",
@@ -285117,6 +285742,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteNotebook.html"
+      },
+      {
+        "name": "DeleteNotificationPreference",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a notification preference",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_DeleteNotificationPreference.html"
       },
       {
         "name": "DeleteProject",
@@ -285931,6 +286571,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_GetNotebookRun.html"
       },
       {
+        "name": "GetNotificationPreference",
+        "permissionOnly": false,
+        "description": "Grants permission to get a notification preference",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_GetNotificationPreference.html"
+      },
+      {
         "name": "GetProject",
         "permissionOnly": false,
         "description": "Grants permission to get Project details",
@@ -286034,6 +286689,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_GetSubscriptionTarget.html"
+      },
+      {
+        "name": "GetSystemTableExportConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to get a system table export configuration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_GetSystemTableExportConfiguration.html"
       },
       {
         "name": "GetTimeSeriesDataPoint",
@@ -286334,6 +287004,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_ListDataSources.html"
+      },
+      {
+        "name": "ListDeployableEnvironmentBlueprints",
+        "permissionOnly": false,
+        "description": "Grants permission to list deployable environment blueprints",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_ListDeployableEnvironmentBlueprints.html"
       },
       {
         "name": "ListDesignations",
@@ -286880,6 +287565,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_PutEnvironmentBlueprintConfiguration.html"
       },
       {
+        "name": "PutSystemTableExportConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to put a system table export configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_PutSystemTableExportConfiguration.html"
+      },
+      {
         "name": "QueryGraph",
         "permissionOnly": false,
         "description": "Grants permission to query graph",
@@ -287354,6 +288054,21 @@
         "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateAssetFilter.html"
       },
       {
+        "name": "UpdateAssetOwner",
+        "permissionOnly": false,
+        "description": "Grants permission to update the owning project of the asset",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateAssetOwner.html"
+      },
+      {
         "name": "UpdateCell",
         "permissionOnly": false,
         "description": "Grants permission to update cells",
@@ -287615,6 +288330,21 @@
           }
         ],
         "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateNotebook.html"
+      },
+      {
+        "name": "UpdateNotificationPreference",
+        "permissionOnly": false,
+        "description": "Grants permission to update a notification preference",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "${APIReferenceDocPage}API_UpdateNotificationPreference.html"
       },
       {
         "name": "UpdateProject",
@@ -431527,6 +432257,26 @@
     "servicePrefix": "s3tables",
     "actions": [
       {
+        "name": "CompleteTableMigration",
+        "permissionOnly": false,
+        "description": "Grants permission to complete a table migration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Table",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "s3tables:namespace",
+              "s3tables:TableBucketTag/${TagKey}",
+              "s3tables:tableName"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_CompleteTableMigration.html"
+      },
+      {
         "name": "CreateNamespace",
         "permissionOnly": false,
         "description": "Grants permission to create a namespace",
@@ -432013,6 +432763,26 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_GetTableMetadataLocation.html"
       },
       {
+        "name": "GetTableMigration",
+        "permissionOnly": false,
+        "description": "Grants permission to get the status and details of a table migration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Table",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "s3tables:namespace",
+              "s3tables:TableBucketTag/${TagKey}",
+              "s3tables:tableName"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_GetTableMigration.html"
+      },
+      {
         "name": "GetTablePolicy",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a policy on a table",
@@ -432164,6 +432934,37 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_ListTableBuckets.html"
+      },
+      {
+        "name": "ListTableMigrations",
+        "permissionOnly": false,
+        "description": "Grants permission to list table migrations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Table",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "s3tables:namespace",
+              "s3tables:TableBucketTag/${TagKey}",
+              "s3tables:tableName"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "TableBucket",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "s3tables:namespace",
+              "s3tables:TableBucketTag/${TagKey}",
+              "s3tables:tableName"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_ListTableMigrations.html"
       },
       {
         "name": "ListTables",
@@ -432450,6 +433251,51 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_RenameTable.html"
       },
       {
+        "name": "StartTableMigration",
+        "permissionOnly": false,
+        "description": "Grants permission to start a migration of a table into a table bucket",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "TableBucket",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "s3tables:namespace",
+              "s3tables:TableBucketTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_StartTableMigration.html"
+      },
+      {
+        "name": "SyncTableMigration",
+        "permissionOnly": false,
+        "description": "Grants permission to sync a migrated table with its source",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Table",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "s3tables:namespace",
+              "s3tables:TableBucketTag/${TagKey}",
+              "s3tables:tableName"
+            ],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_SyncTableMigration.html"
+      },
+      {
         "name": "TagResource",
         "permissionOnly": false,
         "description": "Grants permission to tag a S3 Tables resource",
@@ -432532,6 +433378,26 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_UpdateTableMetadataLocation.html"
+      },
+      {
+        "name": "UpdateTableMigration",
+        "permissionOnly": false,
+        "description": "Grants permission to update a table migration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Table",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "s3tables:namespace",
+              "s3tables:TableBucketTag/${TagKey}",
+              "s3tables:tableName"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_UpdateTableMigration.html"
       }
     ],
     "resourceTypes": [

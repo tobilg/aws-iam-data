@@ -1,5 +1,65 @@
 [
   {
+    "dateOfChange": "2026-11-05",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS DevOps Agent Service": [
+        "aidevops:GetChat",
+        "aidevops:UpdateChat"
+      ],
+      "AWS Partner Central": [
+        "partnercentral:AssociateBusinessPlan",
+        "partnercentral:CancelBusinessPlan",
+        "partnercentral:CancelBusinessPlanSubmissionTask",
+        "partnercentral:CreateBusinessPlan",
+        "partnercentral:CreateBusinessPlanItem",
+        "partnercentral:DeleteBusinessPlanAttachment",
+        "partnercentral:DeleteBusinessPlanItem",
+        "partnercentral:DisassociateBusinessPlan",
+        "partnercentral:GetBusinessPlan",
+        "partnercentral:GetBusinessPlanAttachment",
+        "partnercentral:GetBusinessPlanAttachmentImportTask",
+        "partnercentral:GetBusinessPlanItem",
+        "partnercentral:GetBusinessPlanItemSchema",
+        "partnercentral:GetBusinessPlanSettings",
+        "partnercentral:GetBusinessPlanSubmissionTask",
+        "partnercentral:GetPartnerReportingData",
+        "partnercentral:ListBusinessPlanAssociations",
+        "partnercentral:ListBusinessPlanAttachmentImportTasks",
+        "partnercentral:ListBusinessPlanAttachments",
+        "partnercentral:ListBusinessPlanHistory",
+        "partnercentral:ListBusinessPlanItems",
+        "partnercentral:ListBusinessPlanSubmissionTasks",
+        "partnercentral:ListBusinessPlans",
+        "partnercentral:PutBusinessPlanSettings",
+        "partnercentral:StartBusinessPlanAttachmentImportTask",
+        "partnercentral:StartBusinessPlanSubmissionTask",
+        "partnercentral:UpdateBusinessPlan",
+        "partnercentral:UpdateBusinessPlanItem"
+      ],
+      "Amazon DataZone": [
+        "datazone:CreateNotificationPreference",
+        "datazone:DeleteNotificationPreference",
+        "datazone:GetNotificationPreference",
+        "datazone:GetSystemTableExportConfiguration",
+        "datazone:ListDeployableEnvironmentBlueprints",
+        "datazone:PutSystemTableExportConfiguration",
+        "datazone:UpdateAssetOwner",
+        "datazone:UpdateNotificationPreference"
+      ],
+      "Amazon S3 Tables": [
+        "s3tables:CompleteTableMigration",
+        "s3tables:GetTableMigration",
+        "s3tables:ListTableMigrations",
+        "s3tables:StartTableMigration",
+        "s3tables:SyncTableMigration",
+        "s3tables:UpdateTableMigration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-11-04",
     "addedServices": [],
     "removedServices": [],
