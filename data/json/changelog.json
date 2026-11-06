@@ -1,5 +1,43 @@
 [
   {
+    "dateOfChange": "2026-11-06",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Assurance": [
+        "assurance:GetResourceActivitiesQueryResults",
+        "assurance:StartResourceActivitiesQuery"
+      ],
+      "AWS Payments": [
+        "payments:CreateConnectedAccount",
+        "payments:DeleteConnectedAccount",
+        "payments:GetConnectedAccount",
+        "payments:ListConnectedAccounts"
+      ],
+      "Amazon Connect": [
+        "connect:UpdateOutboundEmailContactMessage"
+      ],
+      "Amazon DynamoDB": [
+        "dynamodb:BulkPutItems",
+        "dynamodb:CancelBulkOperation",
+        "dynamodb:DescribeBulkOperation",
+        "dynamodb:ListBulkOperations",
+        "dynamodb:StartBulkOperation"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:DescribeResourcePermissions",
+        "quicksight:UpdateResourcePermissions"
+      ],
+      "Amazon Route 53 Domains": [
+        "route53domains:RestoreDomain"
+      ],
+      "Amazon WorkSpaces AgentAccess MCP Server": [
+        "agentaccess-mcp:CloseSession"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-11-05",
     "addedServices": [],
     "removedServices": [],

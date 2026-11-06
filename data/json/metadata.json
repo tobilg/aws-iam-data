@@ -1163,7 +1163,7 @@
       "name": "AWS Assurance",
       "servicePrefix": "assurance",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_assurance.html",
-      "actionsCount": 89,
+      "actionsCount": 91,
       "actions": [
         "AcceptInvitation",
         "AssignPermissionSet",
@@ -1209,6 +1209,7 @@
         "GetInvitation",
         "GetPermissionSet",
         "GetProject",
+        "GetResourceActivitiesQueryResults",
         "GetTask",
         "ListAssessmentAnnotations",
         "ListAssessmentJournalRecords",
@@ -1243,6 +1244,7 @@
         "RevokePermissionSet",
         "StartAssessment",
         "StartAssessmentReportExport",
+        "StartResourceActivitiesQuery",
         "TagResource",
         "UntagResource",
         "UpdateComment",
@@ -11132,16 +11134,20 @@
       "name": "AWS Payments",
       "servicePrefix": "payments",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_payments.html",
-      "actionsCount": 17,
+      "actionsCount": 21,
       "actions": [
         "AcceptFinancingApplicationTerms",
+        "CreateConnectedAccount",
         "CreateFinancingApplication",
         "CreatePaymentInstrument",
+        "DeleteConnectedAccount",
+        "GetConnectedAccount",
         "GetFinancingApplication",
         "GetFinancingLine",
         "GetFinancingLineWithdrawal",
         "GetFinancingOption",
         "GetPaymentInstrument",
+        "ListConnectedAccounts",
         "ListFinancingApplications",
         "ListFinancingLineWithdrawals",
         "ListFinancingLines",
@@ -11152,8 +11158,9 @@
         "UntagResource",
         "UpdateFinancingApplication"
       ],
-      "resourceTypesCount": 1,
+      "resourceTypesCount": 2,
       "resourceTypes": [
+        "connectedaccount",
         "payment-instrument"
       ],
       "conditionKeysCount": 3,
@@ -15850,7 +15857,7 @@
     {
       "name": "Account access manager",
       "servicePrefix": "account-access",
-      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_account-access.html",
+      "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_account-access-manager.html",
       "actionsCount": 11,
       "actions": [
         "CreateApplication",
@@ -17324,7 +17331,7 @@
         "UpdateRegistryRecordStatus",
         "UpdateWorkloadIdentity"
       ],
-      "resourceTypesCount": 33,
+      "resourceTypesCount": 34,
       "resourceTypes": [
         "ab-test",
         "apikeycredentialprovider",
@@ -17356,6 +17363,7 @@
         "runtime",
         "runtime-endpoint",
         "token-vault",
+        "web-answer",
         "web-search",
         "workload-identity",
         "workload-identity-directory"
@@ -19450,7 +19458,7 @@
       "name": "Amazon Connect",
       "servicePrefix": "connect",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_connect.html",
-      "actionsCount": 379,
+      "actionsCount": 380,
       "actions": [
         "ActivateEvaluationForm",
         "AdminGetEmergencyAccessToken",
@@ -19793,6 +19801,7 @@
         "UpdateMetricContent",
         "UpdateMetricMetadata",
         "UpdateNotificationContent",
+        "UpdateOutboundEmailContactMessage",
         "UpdateParticipantAuthentication",
         "UpdateParticipantRoleConfig",
         "UpdatePhoneNumber",
@@ -20704,10 +20713,12 @@
       "name": "Amazon DynamoDB",
       "servicePrefix": "dynamodb",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_dynamodb.html",
-      "actionsCount": 62,
+      "actionsCount": 67,
       "actions": [
         "BatchGetItem",
         "BatchWriteItem",
+        "BulkPutItems",
+        "CancelBulkOperation",
         "ConditionCheckItem",
         "CreateBackup",
         "CreateGlobalTable",
@@ -20717,6 +20728,7 @@
         "DeleteResourcePolicy",
         "DeleteTable",
         "DescribeBackup",
+        "DescribeBulkOperation",
         "DescribeContinuousBackups",
         "DescribeContributorInsights",
         "DescribeEndpoints",
@@ -20739,6 +20751,7 @@
         "GetShardIterator",
         "ImportTable",
         "ListBackups",
+        "ListBulkOperations",
         "ListContributorInsights",
         "ListExports",
         "ListGlobalTables",
@@ -20757,6 +20770,7 @@
         "RestoreTableToPointInTime",
         "Scan",
         "SearchVectors",
+        "StartBulkOperation",
         "TagResource",
         "UntagResource",
         "UpdateContinuousBackups",
@@ -20769,9 +20783,10 @@
         "UpdateTableReplicaAutoScaling",
         "UpdateTimeToLive"
       ],
-      "resourceTypesCount": 7,
+      "resourceTypesCount": 8,
       "resourceTypes": [
         "backup",
+        "bulk-operation",
         "export",
         "global-table",
         "import",
@@ -26236,12 +26251,16 @@
         "OpenControlChannel",
         "OpenDataChannel"
       ],
-      "resourceTypesCount": 0,
-      "resourceTypes": [],
-      "conditionKeysCount": 2,
+      "resourceTypesCount": 1,
+      "resourceTypes": [
+        "session"
+      ],
+      "conditionKeysCount": 4,
       "conditionKeys": [
         "ec2:SourceInstanceARN",
-        "ssm:SourceInstanceARN"
+        "ssm:SourceInstanceARN",
+        "ssm:resourceTag/aws:ssmmessages:session-id",
+        "ssm:resourceTag/aws:ssmmessages:target-id"
       ]
     },
     {
@@ -27709,7 +27728,7 @@
       "name": "Amazon QuickSight",
       "servicePrefix": "quicksight",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_quicksight.html",
-      "actionsCount": 287,
+      "actionsCount": 289,
       "actions": [
         "BatchCreateTopicReviewedAnswer",
         "BatchDeleteKnowledgeBase",
@@ -27841,6 +27860,7 @@
         "DescribeQPersonalizationConfiguration",
         "DescribeQuickSightQSearchConfiguration",
         "DescribeRefreshSchedule",
+        "DescribeResourcePermissions",
         "DescribeRoleCustomPermission",
         "DescribeSelfUpgradeConfiguration",
         "DescribeSpace",
@@ -27979,6 +27999,7 @@
         "UpdateQPersonalizationConfiguration",
         "UpdateQuickSightQSearchConfiguration",
         "UpdateRefreshSchedule",
+        "UpdateResourcePermissions",
         "UpdateRoleCustomPermission",
         "UpdateSPICECapacityConfiguration",
         "UpdateSelfUpgrade",
@@ -27999,8 +28020,9 @@
         "UpdateUserCustomPermission",
         "UpdateVPCConnection"
       ],
-      "resourceTypesCount": 38,
+      "resourceTypesCount": 40,
       "resourceTypes": [
+        "accessControlApplication",
         "account",
         "actionconnector",
         "agent",
@@ -28027,6 +28049,7 @@
         "flow",
         "folder",
         "group",
+        "inboundConnector",
         "ingestion",
         "knowledgeBase",
         "limitsProfile",
@@ -28885,7 +28908,7 @@
       "name": "Amazon Route 53 Domains",
       "servicePrefix": "route53domains",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_route53domains.html",
-      "actionsCount": 35,
+      "actionsCount": 36,
       "actions": [
         "AcceptDomainTransferFromAnotherAwsAccount",
         "AssociateDelegationSignerToDomain",
@@ -28914,6 +28937,7 @@
         "RenewDomain",
         "ResendContactReachabilityEmail",
         "ResendOperationAuthorization",
+        "RestoreDomain",
         "RetrieveDomainAuthCode",
         "TransferDomain",
         "TransferDomainToAnotherAwsAccount",
@@ -32014,10 +32038,11 @@
       "name": "Amazon WorkSpaces AgentAccess MCP Server",
       "servicePrefix": "agentaccess-mcp",
       "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_agentaccess-mcp.html",
-      "actionsCount": 20,
+      "actionsCount": 21,
       "actions": [
         "CallForwardedTool",
         "CheckConnectionStatus",
+        "CloseSession",
         "DoubleClick",
         "GetScreenshot",
         "GetSessionInfo",
