@@ -85288,6 +85288,9 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
+              "glue:ConnectionType",
+              "glue:CredentialVendingMode",
+              "glue:InstanceUrl",
               "glue:LakeFormationPermissions"
             ],
             "dependentActions": [
@@ -85302,6 +85305,9 @@
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys",
+              "glue:ConnectionType",
+              "glue:CredentialVendingMode",
+              "glue:InstanceUrl",
               "glue:LakeFormationPermissions"
             ],
             "dependentActions": [
@@ -91549,6 +91555,9 @@
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
+              "glue:ConnectionType",
+              "glue:CredentialVendingMode",
+              "glue:InstanceUrl",
               "glue:LakeFormationPermissions"
             ],
             "dependentActions": [
@@ -91561,6 +91570,9 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
+              "glue:ConnectionType",
+              "glue:CredentialVendingMode",
+              "glue:InstanceUrl",
               "glue:LakeFormationPermissions"
             ],
             "dependentActions": [
@@ -91572,6 +91584,9 @@
             "resourceType": "rootcatalog",
             "required": true,
             "conditionKeys": [
+              "glue:ConnectionType",
+              "glue:CredentialVendingMode",
+              "glue:InstanceUrl",
               "glue:LakeFormationPermissions"
             ],
             "dependentActions": [
@@ -92385,9 +92400,21 @@
         "type": "ArrayOfString"
       },
       {
+        "name": "glue:ConnectionType",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the connection type specified in the request",
+        "type": "String"
+      },
+      {
         "name": "glue:CredentialIssuingService",
         "apiReferenceUrl": "",
         "description": "Filters access by the service from which the credentials of the request is issued",
+        "type": "String"
+      },
+      {
+        "name": "glue:CredentialVendingMode",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the credential vending mode connection property specified in the request",
         "type": "String"
       },
       {
@@ -92400,6 +92427,12 @@
         "name": "glue:FederatedAuthorizationSource",
         "apiReferenceUrl": "",
         "description": "Filters access by whether the resource belongs to federated authorization",
+        "type": "String"
+      },
+      {
+        "name": "glue:InstanceUrl",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the URL and INSTANCE_URL connection property specified in the request",
         "type": "String"
       },
       {
@@ -167225,7 +167258,12 @@
               "aws:ResourceTag/${TagKey}",
               "ram:AllowsExternalPrincipals",
               "ram:Principal",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:RequestedPrincipals",
+              "ram:RequestedResourceArns",
               "ram:RequestedResourceType",
+              "ram:RequestedResourceTypes",
               "ram:ResourceArn",
               "ram:ResourceShareName",
               "ram:ResourceTag/${TagKey}",
@@ -167248,7 +167286,11 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:PermissionTemplateParameter/${ParameterName}",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           },
@@ -167257,7 +167299,10 @@
             "required": true,
             "conditionKeys": [
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:PermissionTemplateParameter/${ParameterName}",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes"
             ],
             "dependentActions": []
           },
@@ -167267,7 +167312,12 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ram:AllowsExternalPrincipals",
-              "ram:ResourceShareName"
+              "ram:PermissionArn",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:ResourceShareName",
+              "ram:ResourceTag/${TagKey}",
+              "ram:RetainSharingOnAccountLeaveOrganization"
             ],
             "dependentActions": []
           }
@@ -167281,14 +167331,17 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
+            "resourceType": "customer-managed-permission",
+            "required": true,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:ResourceTag/${TagKey}"
             ],
             "dependentActions": [
               "ram:TagResource"
@@ -167309,7 +167362,10 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -167323,16 +167379,62 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "",
+            "resourceType": "customer-managed-permission",
             "required": false,
             "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "ram:PermissionArn",
+              "ram:PermissionResourceType",
+              "ram:PermissionTemplateParameter/${ParameterName}",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:RequestedPrincipals",
+              "ram:RequestedResourceArns",
+              "ram:RequestedResourceTypes",
+              "ram:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "ram:TagResource"
+            ]
+          },
+          {
+            "resourceType": "permission",
+            "required": false,
+            "conditionKeys": [
+              "aws:TagKeys",
+              "ram:PermissionArn",
+              "ram:PermissionResourceType",
+              "ram:PermissionTemplateParameter/${ParameterName}",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:RequestedPrincipals",
+              "ram:RequestedResourceArns",
+              "ram:RequestedResourceTypes"
+            ],
+            "dependentActions": [
+              "ram:TagResource"
+            ]
+          },
+          {
+            "resourceType": "resource-share",
+            "required": true,
+            "conditionKeys": [
               "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
               "ram:AllowsExternalPrincipals",
               "ram:Principal",
               "ram:RequestedAllowsExternalPrincipals",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:RequestedPrincipals",
+              "ram:RequestedResourceArns",
               "ram:RequestedResourceType",
+              "ram:RequestedResourceTypes",
               "ram:ResourceArn",
+              "ram:ResourceShareName",
+              "ram:ResourceTag/${TagKey}",
               "ram:RetainSharingOnAccountLeaveOrganization"
             ],
             "dependentActions": [
@@ -167354,7 +167456,10 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -167373,7 +167478,10 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -167414,7 +167522,10 @@
               "aws:ResourceTag/${TagKey}",
               "ram:AllowsExternalPrincipals",
               "ram:Principal",
+              "ram:RequestedPrincipals",
+              "ram:RequestedResourceArns",
               "ram:RequestedResourceType",
+              "ram:RequestedResourceTypes",
               "ram:ResourceArn",
               "ram:ResourceShareName",
               "ram:ResourceTag/${TagKey}",
@@ -167437,7 +167548,10 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           },
@@ -167446,7 +167560,9 @@
             "required": true,
             "conditionKeys": [
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes"
             ],
             "dependentActions": []
           },
@@ -167456,7 +167572,12 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ram:AllowsExternalPrincipals",
-              "ram:ResourceShareName"
+              "ram:PermissionArn",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:ResourceShareName",
+              "ram:ResourceTag/${TagKey}",
+              "ram:RetainSharingOnAccountLeaveOrganization"
             ],
             "dependentActions": []
           }
@@ -167490,7 +167611,10 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           },
@@ -167499,7 +167623,9 @@
             "required": true,
             "conditionKeys": [
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes"
             ],
             "dependentActions": []
           }
@@ -167560,10 +167686,7 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [
-              "aws:RequestTag/${TagKey}",
-              "aws:TagKeys"
-            ],
+            "conditionKeys": [],
             "dependentActions": []
           }
         ],
@@ -167594,21 +167717,11 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "customer-managed-permission",
-            "required": true,
+            "resourceType": "",
+            "required": false,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}",
-              "ram:PermissionArn",
-              "ram:PermissionResourceType"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "permission",
-            "required": true,
-            "conditionKeys": [
-              "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes"
             ],
             "dependentActions": []
           }
@@ -167622,9 +167735,23 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
+            "resourceType": "customer-managed-permission",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ram:PermissionArn",
+              "ram:PermissionResourceType",
+              "ram:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "permission",
+            "required": true,
+            "conditionKeys": [
+              "ram:PermissionArn",
+              "ram:PermissionResourceType"
+            ],
             "dependentActions": []
           }
         ],
@@ -167688,6 +167815,7 @@
               "aws:ResourceTag/${TagKey}",
               "ram:AllowsExternalPrincipals",
               "ram:ResourceShareName",
+              "ram:ResourceTag/${TagKey}",
               "ram:RetainSharingOnAccountLeaveOrganization"
             ],
             "dependentActions": []
@@ -167752,7 +167880,10 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -167771,7 +167902,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ram:AllowsExternalPrincipals",
-              "ram:ResourceShareName"
+              "ram:ResourceShareName",
+              "ram:ResourceTag/${TagKey}",
+              "ram:RetainSharingOnAccountLeaveOrganization"
             ],
             "dependentActions": []
           }
@@ -167808,7 +167941,11 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:PermissionTemplateParameter/${ParameterName}",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           },
@@ -167817,7 +167954,10 @@
             "required": true,
             "conditionKeys": [
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:PermissionTemplateParameter/${ParameterName}",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes"
             ],
             "dependentActions": []
           }
@@ -167836,7 +167976,10 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -167857,7 +168000,8 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           },
@@ -167869,7 +168013,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
               "ram:AllowsExternalPrincipals",
-              "ram:ResourceShareName"
+              "ram:ResourceShareName",
+              "ram:ResourceTag/${TagKey}",
+              "ram:RetainSharingOnAccountLeaveOrganization"
             ],
             "dependentActions": []
           }
@@ -167889,7 +168035,8 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
               "ram:PermissionArn",
-              "ram:PermissionResourceType"
+              "ram:PermissionResourceType",
+              "ram:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           },
@@ -167900,12 +168047,36 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
               "ram:AllowsExternalPrincipals",
-              "ram:ResourceShareName"
+              "ram:ResourceShareName",
+              "ram:ResourceTag/${TagKey}",
+              "ram:RetainSharingOnAccountLeaveOrganization"
             ],
             "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/ram/latest/APIReference/API_UntagResource.html"
+      },
+      {
+        "name": "UpdatePermission",
+        "permissionOnly": false,
+        "description": "Grants permission to update a customer managed permission, such as to deprecate it or restore it",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "customer-managed-permission",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ram:PermissionArn",
+              "ram:PermissionResourceType",
+              "ram:RequestedPermissionArns",
+              "ram:RequestedPermissionResourceTypes",
+              "ram:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ram/latest/APIReference/API_UpdatePermission.html"
       },
       {
         "name": "UpdateResourceShare",
@@ -167938,13 +168109,14 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
           "ram:PermissionArn",
-          "ram:PermissionResourceType"
+          "ram:PermissionResourceType",
+          "ram:ResourceTag/${TagKey}"
         ]
       },
       {
         "name": "permission",
         "apiReferenceUrl": "",
-        "arnPattern": "arn:${Partition}:ram::${Account}:permission/${ResourcePath}",
+        "arnPattern": "arn:${Partition}:ram::aws:permission/${ResourcePath}",
         "conditionKeys": [
           "ram:PermissionArn",
           "ram:PermissionResourceType"
@@ -167957,7 +168129,9 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
           "ram:AllowsExternalPrincipals",
-          "ram:ResourceShareName"
+          "ram:ResourceShareName",
+          "ram:ResourceTag/${TagKey}",
+          "ram:RetainSharingOnAccountLeaveOrganization"
         ]
       },
       {
@@ -167965,6 +168139,7 @@
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:ram:${Region}:${Account}:resource-share-invitation/${ResourcePath}",
         "conditionKeys": [
+          "ram:ResourceShareName",
           "ram:ShareOwnerAccountId"
         ]
       }
@@ -167997,19 +168172,25 @@
       {
         "name": "ram:PermissionArn",
         "apiReferenceUrl": "",
-        "description": "Filters access by the specified Permission ARN",
+        "description": "Filters access by the specified Permission ARN. WARNING: We recommend using ram:RequestedPermissionArns instead",
         "type": "ARN"
       },
       {
         "name": "ram:PermissionResourceType",
         "apiReferenceUrl": "",
-        "description": "Filters access by permissions of specified resource type",
+        "description": "Filters access by permissions of specified resource type. WARNING: We recommend using ram:RequestedPermissionResourceTypes instead",
         "type": "String"
+      },
+      {
+        "name": "ram:PermissionTemplateParameter/${ParameterName}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by permission template parameter values",
+        "type": "ArrayOfString"
       },
       {
         "name": "ram:Principal",
         "apiReferenceUrl": "",
-        "description": "Filters access by format of the specified principal",
+        "description": "Filters access by format of the specified principal. WARNING: We recommend using ram:RequestedPrincipals instead",
         "type": "String"
       },
       {
@@ -168019,15 +168200,45 @@
         "type": "Bool"
       },
       {
+        "name": "ram:RequestedPermissionArns",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the specified Permission ARNs",
+        "type": "ArrayOfARN"
+      },
+      {
+        "name": "ram:RequestedPermissionResourceTypes",
+        "apiReferenceUrl": "",
+        "description": "Filters access by permissions of specified resource types",
+        "type": "ArrayOfString"
+      },
+      {
+        "name": "ram:RequestedPrincipals",
+        "apiReferenceUrl": "",
+        "description": "Filters access by format of the specified principals",
+        "type": "ArrayOfString"
+      },
+      {
+        "name": "ram:RequestedResourceArns",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the specified ARNs",
+        "type": "ArrayOfARN"
+      },
+      {
         "name": "ram:RequestedResourceType",
         "apiReferenceUrl": "",
-        "description": "Filters access by the specified resource type",
+        "description": "Filters access by the specified resource type. WARNING: We recommend using ram:RequestedResourceTypes instead",
         "type": "String"
+      },
+      {
+        "name": "ram:RequestedResourceTypes",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the specified resource types",
+        "type": "ArrayOfString"
       },
       {
         "name": "ram:ResourceArn",
         "apiReferenceUrl": "",
-        "description": "Filters access by  the specified ARN",
+        "description": "Filters access by the specified ARN. WARNING: We recommend using ram:RequestedResourceArns instead",
         "type": "ARN"
       },
       {
@@ -191943,6 +192154,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DeleteResourcePolicy.html"
       },
       {
+        "name": "DeregisterDefaultHostManagementConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to disable Default Host Management Configuration (DHMC) for an AWS account and Region",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_DeregisterDefaultHostManagementConfiguration.html"
+      },
+      {
         "name": "DeregisterManagedInstance",
         "permissionOnly": false,
         "description": "Grants permission to deregister a specified on-premises server or virtual machine (VM) from Systems Manager",
@@ -193726,6 +193952,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_PutResourcePolicy.html"
+      },
+      {
+        "name": "RegisterDefaultHostManagementConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to enable Default Host Management Configuration (DHMC) for an AWS account and Region",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/systems-manager/latest/APIReference/API_RegisterDefaultHostManagementConfiguration.html"
       },
       {
         "name": "RegisterDefaultPatchBaseline",
@@ -227853,6 +228096,27 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/athena/latest/APIReference/API_CreatePresignedNotebookUrl.html"
       },
       {
+        "name": "CreateSystemTableConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to create a system table configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "system-table",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "athena:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/athena/latest/APIReference/API_CreateSystemTableConfiguration.html"
+      },
+      {
         "name": "CreateWorkGroup",
         "permissionOnly": false,
         "description": "Grants permission to create a workgroup",
@@ -227958,6 +228222,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/athena/latest/APIReference/API_DeletePreparedStatement.html"
+      },
+      {
+        "name": "DeleteSystemTableConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a system table configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "system-table",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/athena/latest/APIReference/API_DeleteSystemTableConfiguration.html"
       },
       {
         "name": "DeleteWorkGroup",
@@ -228422,6 +228703,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/athena/latest/APIReference/API_GetSessionStatus.html"
       },
       {
+        "name": "GetSystemTableConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to get a system table configuration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "system-table",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/athena/latest/APIReference/API_GetSystemTableConfiguration.html"
+      },
+      {
         "name": "GetTable",
         "permissionOnly": false,
         "description": "Grants permission to enable access to the specified table. Applies only to AWS services managed policy and principals that use an Athena JDBC driver version 1.1.0",
@@ -228714,6 +229012,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/athena/latest/APIReference/API_ListSessions.html"
       },
       {
+        "name": "ListSystemTableStatuses",
+        "permissionOnly": false,
+        "description": "Grants permission to return the statuses of system tables for the specified AWS account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/athena/latest/APIReference/API_ListSystemTableStatuses.html"
+      },
+      {
         "name": "ListTableMetadata",
         "permissionOnly": false,
         "description": "Grants permission to return a list of table metadata in a database for a given datacatalog",
@@ -228754,6 +229067,14 @@
           },
           {
             "resourceType": "session",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "system-table",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -228968,6 +229289,16 @@
             "dependentActions": []
           },
           {
+            "resourceType": "system-table",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "workgroup",
             "required": true,
             "conditionKeys": [
@@ -229031,6 +229362,15 @@
           },
           {
             "resourceType": "session",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "system-table",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -229153,6 +229493,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/athena/latest/APIReference/API_UpdatePreparedStatement.html"
       },
       {
+        "name": "UpdateSystemTableConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to update a system table configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "system-table",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/athena/latest/APIReference/API_UpdateSystemTableConfiguration.html"
+      },
+      {
         "name": "UpdateWorkGroup",
         "permissionOnly": false,
         "description": "Grants permission to update a workgroup",
@@ -229193,6 +229550,14 @@
         "name": "session",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:athena:${Region}:${Account}:workgroup/${WorkGroupName}/session/${SessionId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "system-table",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:athena:${Region}:${Account}:system-table/${TableName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]

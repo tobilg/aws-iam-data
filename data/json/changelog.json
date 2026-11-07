@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2026-11-07",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Resource Access Manager (RAM)": [
+        "ram:UpdatePermission"
+      ],
+      "AWS Systems Manager": [
+        "ssm:DeregisterDefaultHostManagementConfiguration",
+        "ssm:RegisterDefaultHostManagementConfiguration"
+      ],
+      "Amazon Athena": [
+        "athena:CreateSystemTableConfiguration",
+        "athena:DeleteSystemTableConfiguration",
+        "athena:GetSystemTableConfiguration",
+        "athena:ListSystemTableStatuses",
+        "athena:UpdateSystemTableConfiguration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-11-06",
     "addedServices": [],
     "removedServices": [],
