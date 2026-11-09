@@ -11081,6 +11081,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_CreateNetworkMigrationDefinition.html"
       },
       {
+        "name": "CreateRemoteSourceAction",
+        "permissionOnly": false,
+        "description": "Grants permission to create a remote source action",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_CreateRemoteSourceAction.html"
+      },
+      {
         "name": "CreateReplicationConfigurationTemplate",
         "permissionOnly": false,
         "description": "Grants permission to create replication configuration template",
@@ -11204,6 +11222,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_DeleteNetworkMigrationDefinition.html"
+      },
+      {
+        "name": "DeleteRemoteSourceAction",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a remote source action",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "RemoteSourceActionResource",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_DeleteRemoteSourceAction.html"
       },
       {
         "name": "DeleteReplicationConfigurationTemplate",
@@ -11480,6 +11515,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_GetLaunchConfiguration.html"
+      },
+      {
+        "name": "GetLaunchConfigurationDefaults",
+        "permissionOnly": false,
+        "description": "Grants permission to get launch configuration defaults",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "SourceServerResource",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_GetLaunchConfigurationDefaults.html"
       },
       {
         "name": "GetNetworkMigrationDefinition",
@@ -11840,6 +11892,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_ListNetworkMigrationExecutions.html"
       },
       {
+        "name": "ListNetworkMigrationInsights",
+        "permissionOnly": false,
+        "description": "Grants permission to list network migration insights",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "NetworkMigrationDefinitionResource",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_ListNetworkMigrationInsights.html"
+      },
+      {
         "name": "ListNetworkMigrationMapperSegmentConstructs",
         "permissionOnly": false,
         "description": "Grants permission to list network migration mapper segment constructs",
@@ -11906,6 +11975,70 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_ListNetworkMigrationMappings.html"
+      },
+      {
+        "name": "ListRemoteSourceActionInvocationResults",
+        "permissionOnly": false,
+        "description": "Grants permission to list the remote source action invocation results of a source server",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "SourceServerResource",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_ListRemoteSourceActionInvocationResults.html"
+      },
+      {
+        "name": "ListRemoteSourceActionInvocations",
+        "permissionOnly": false,
+        "description": "Grants permission to list the invocations of a remote source action job",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "RemoteSourceActionJobResource",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_ListRemoteSourceActionInvocations.html"
+      },
+      {
+        "name": "ListRemoteSourceActionJobs",
+        "permissionOnly": false,
+        "description": "Grants permission to list remote source action jobs",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_ListRemoteSourceActionJobs.html"
+      },
+      {
+        "name": "ListRemoteSourceActions",
+        "permissionOnly": false,
+        "description": "Grants permission to list remote source actions",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_ListRemoteSourceActions.html"
       },
       {
         "name": "ListSourceServerActions",
@@ -12286,6 +12419,45 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_StartNetworkMigrationMappingUpdate.html"
       },
       {
+        "name": "StartRemoteSourceActionJob",
+        "permissionOnly": false,
+        "description": "Grants permission to start a remote source action job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ConnectorResource",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "RemoteSourceActionResource",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "SourceServerResource",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_StartRemoteSourceActionJob.html"
+      },
+      {
         "name": "StartReplication",
         "permissionOnly": false,
         "description": "Grants permission to start replication",
@@ -12403,6 +12575,28 @@
           },
           {
             "resourceType": "LaunchConfigurationTemplateResource",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "mgn:CreateAction"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "RemoteSourceActionJobResource",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "mgn:CreateAction"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "RemoteSourceActionResource",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -12557,6 +12751,24 @@
             "dependentActions": []
           },
           {
+            "resourceType": "RemoteSourceActionJobResource",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "RemoteSourceActionResource",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "ReplicationConfigurationTemplateResource",
             "required": false,
             "conditionKeys": [
@@ -12662,6 +12874,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_UpdateLaunchConfiguration.html"
       },
       {
+        "name": "UpdateLaunchConfigurationDefaults",
+        "permissionOnly": false,
+        "description": "Grants permission to update launch configuration defaults",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "SourceServerResource",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_UpdateLaunchConfigurationDefaults.html"
+      },
+      {
         "name": "UpdateLaunchConfigurationTemplate",
         "permissionOnly": false,
         "description": "Grants permission to update launch configuration",
@@ -12728,6 +12957,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_UpdateNetworkMigrationMapperSegmentConstruct.html"
+      },
+      {
+        "name": "UpdateRemoteSourceAction",
+        "permissionOnly": false,
+        "description": "Grants permission to update a remote source action",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "RemoteSourceActionResource",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_UpdateRemoteSourceAction.html"
       },
       {
         "name": "UpdateReplicationConfiguration",
@@ -12868,6 +13114,22 @@
         "name": "NetworkMigrationDefinitionResource",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:mgn:${Region}:${Account}:network-migration-definition/${NetworkMigrationDefinitionID}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "RemoteSourceActionJobResource",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:mgn:${Region}:${Account}:remote-source-action-job/${RemoteSourceActionJobID}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "RemoteSourceActionResource",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:mgn:${Region}:${Account}:remote-source-action/${RemoteSourceActionID}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -23207,9 +23469,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "aws-portal:ViewBilling"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_DescribeBudgetAction.html"
@@ -260913,7 +261173,8 @@
               "logs:DescribeLogGroups",
               "logs:DescribeQueryDefinitions",
               "logs:FilterLogEvents",
-              "logs:Unmask"
+              "logs:Unmask",
+              "iam:PassRole"
             ]
           }
         ],

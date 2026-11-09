@@ -1,5 +1,26 @@
 [
   {
+    "dateOfChange": "2026-11-09",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Application Migration Service": [
+        "mgn:CreateRemoteSourceAction",
+        "mgn:DeleteRemoteSourceAction",
+        "mgn:GetLaunchConfigurationDefaults",
+        "mgn:ListNetworkMigrationInsights",
+        "mgn:ListRemoteSourceActionInvocationResults",
+        "mgn:ListRemoteSourceActionInvocations",
+        "mgn:ListRemoteSourceActionJobs",
+        "mgn:ListRemoteSourceActions",
+        "mgn:StartRemoteSourceActionJob",
+        "mgn:UpdateLaunchConfigurationDefaults",
+        "mgn:UpdateRemoteSourceAction"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-11-07",
     "addedServices": [],
     "removedServices": [],
