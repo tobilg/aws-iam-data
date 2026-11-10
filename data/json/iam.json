@@ -58348,6 +58348,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/what-is.html"
       },
       {
+        "name": "GetKnowledgeGraph",
+        "permissionOnly": false,
+        "description": "Grants permission to get the knowledge graph of an agentspace",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/aws-devops-agent-security-devops-agent-iam-permissions.html"
+      },
+      {
         "name": "GetKnowledgeItem",
         "permissionOnly": false,
         "description": "Grants permission to get a knowledge item",
@@ -58380,6 +58399,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_GetOperatorApp.html"
+      },
+      {
+        "name": "GetPlan",
+        "permissionOnly": false,
+        "description": "Grants permission to get a mitigation plan",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/aws-devops-agent-security-devops-agent-iam-permissions.html"
       },
       {
         "name": "GetRecommendation",
@@ -58467,6 +58503,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListAccessTokens.html"
       },
       {
+        "name": "ListAgentSpaceMetrics",
+        "permissionOnly": false,
+        "description": "Grants permission to list the investigation metrics of an agent space",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/aws-devops-agent-security-devops-agent-iam-permissions.html"
+      },
+      {
         "name": "ListAgentSpaces",
         "permissionOnly": false,
         "description": "Grants permission to list agentspace",
@@ -58480,6 +58533,25 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_ListAgentSpaces.html"
+      },
+      {
+        "name": "ListAssetChanges",
+        "permissionOnly": false,
+        "description": "Grants permission to list asset changes",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [
+              "aidevops:SourceAgentSpaceArn",
+              "aidevops:TargetAgentSpaceArn",
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/aws-devops-agent-security-devops-agent-iam-permissions.html"
       },
       {
         "name": "ListAssetFiles",
@@ -58994,6 +59066,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/APIReference/API_SendMessage.html"
       },
       {
+        "name": "StopPlan",
+        "permissionOnly": false,
+        "description": "Grants permission to stop a mitigation plan",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agentspace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/devopsagent/latest/userguide/aws-devops-agent-security-devops-agent-iam-permissions.html"
+      },
+      {
         "name": "TagResource",
         "permissionOnly": false,
         "description": "Grants permission to tag a resource",
@@ -59095,6 +59184,7 @@
             "resourceType": "agentspace",
             "required": true,
             "conditionKeys": [
+              "aidevops:ApprovalTarget",
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
@@ -59367,6 +59457,12 @@
       }
     ],
     "conditionKeys": [
+      {
+        "name": "aidevops:ApprovalTarget",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the approvalTarget parameter in the request. TOOL_CALL is an approval for a single agent tool call. PLAN is an approval for a mitigation plan stage or its rollback. Defaults to TOOL_CALL",
+        "type": "String"
+      },
       {
         "name": "aidevops:ServiceType",
         "apiReferenceUrl": "",
@@ -133505,6 +133601,12 @@
         "type": "String"
       },
       {
+        "name": "kms:RecipientAttestation:PCR8:ServiceName",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the AWS Service Name corresponding to the platform configuration register (PCR) 8 in the attestation document in the request. PCR8 is a measure of the signing certificate specified for the enclave image file",
+        "type": "String"
+      },
+      {
         "name": "kms:RecipientAttestation:PCR9",
         "apiReferenceUrl": "",
         "description": "Filters access by the platform configuration register (PCR) 9 in the attestation document in the request. PCR9 is a custom PCR that can be defined by the user for specific use cases",
@@ -178318,6 +178420,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_UpdateSecurityHubConfiguration.html"
       },
       {
+        "name": "UpdateSecurityHubV2",
+        "permissionOnly": false,
+        "description": "Grants permission to update a Security Hub V2 resource configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "hubv2",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityhub/1.0/APIReference/API_UpdateSecurityHubV2.html"
+      },
+      {
         "name": "UpdateStandardsControl",
         "permissionOnly": false,
         "description": "Grants permission to update Security Hub standards controls",
@@ -186649,6 +186768,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_dataplane-signin_AuthorizeOAuth2Access.html"
+      },
+      {
+        "name": "CreateBearerToken",
+        "permissionOnly": false,
+        "description": "Grants permission to exchange SigV4 credentials for a bearer token that can be used to access supported AWS services",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "oauth2-resource-service-principal",
+            "required": true,
+            "conditionKeys": [
+              "signin:OAuthClientId",
+              "signin:OAuthGrantType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/signin/latest/APIReference/API_dataplane-signin_CreateBearerToken.html"
       },
       {
         "name": "CreateOAuth2PublicClient",
@@ -215769,6 +215906,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/userguide/dashboards.html#reports-accessing"
+      },
+      {
+        "name": "GetSellerReportingData",
+        "permissionOnly": false,
+        "description": "Grants permission to query a seller reporting dataset",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "SellerDataset",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/userguide/reports-and-data-feed.html"
       }
     ],
     "resourceTypes": [
@@ -215776,6 +215928,12 @@
         "name": "SellerDashboard",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dashboard/${DashboardName}",
+        "conditionKeys": []
+      },
+      {
+        "name": "SellerDataset",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:aws-marketplace::${Account}:${Catalog}/ReportingData/${FactTable}/Dataset/${DatasetName}",
         "conditionKeys": []
       }
     ],
@@ -293991,6 +294149,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -294367,6 +294526,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ec2:CapacityReservationFleet",
+              "ec2:FutureCapacitySpecification",
               "ec2:Region"
             ],
             "dependentActions": []
@@ -294860,6 +295020,7 @@
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
+              "ec2:FutureCapacitySpecification",
               "ec2:Region",
               "ec2:ResourceTag/${TagKey}"
             ],
@@ -294881,6 +295042,40 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateCapacityReservationCancellationQuote.html"
+      },
+      {
+        "name": "CreateCapacityReservationDateChangeQuote",
+        "permissionOnly": false,
+        "description": "Grants permission to generate a quote for changing the start date of a future-dated Capacity Reservation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "capacity-reservation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:FutureCapacitySpecification",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "ec2:CreateTags"
+            ]
+          },
+          {
+            "resourceType": "capacity-reservation-modification-quote",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "ec2:Region"
+            ],
+            "dependentActions": [
+              "ec2:CreateTags"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_CreateCapacityReservationDateChangeQuote.html"
       },
       {
         "name": "CreateCapacityReservationFleet",
@@ -295610,6 +295805,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -296936,6 +297132,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -297465,6 +297662,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -297604,6 +297802,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
               "ec2:CreateAction",
+              "ec2:FutureCapacitySpecification",
               "ec2:Region"
             ],
             "dependentActions": []
@@ -297859,6 +298058,7 @@
               "ec2:CreateAction",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -300181,9 +300381,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ec2:Region",
-              "ec2:ResourceTag/${TagKey}",
-              "ec2:VpceMultiRegion",
-              "ec2:VpceServiceRegion"
+              "ec2:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -300508,6 +300706,31 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteClientVpnEndpoint.html"
+      },
+      {
+        "name": "DeleteClientVpnEndpointAuthorizationPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the authorization policy for a Client VPN endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "client-vpn-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:ClientRootCertificateChainArn",
+              "ec2:CloudwatchLogGroupArn",
+              "ec2:CloudwatchLogStreamArn",
+              "ec2:DirectoryArn",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}",
+              "ec2:SamlProviderArn",
+              "ec2:ServerCertificateArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DeleteClientVpnEndpointAuthorizationPolicy.html"
       },
       {
         "name": "DeleteClientVpnRoute",
@@ -303531,9 +303754,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ec2:Region",
-              "ec2:ResourceTag/${TagKey}",
-              "ec2:VpceMultiRegion",
-              "ec2:VpceSupportedRegion"
+              "ec2:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -303768,6 +303989,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -304239,6 +304461,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeCapacityReservationCancellationQuotes.html"
+      },
+      {
+        "name": "DescribeCapacityReservationDateChangeQuotes",
+        "permissionOnly": false,
+        "description": "Grants permission to describe one or more Capacity Reservation date change quotes",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ec2:Region"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_DescribeCapacityReservationDateChangeQuotes.html"
       },
       {
         "name": "DescribeCapacityReservationFleets",
@@ -304847,6 +305086,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -307120,9 +307360,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ec2:Region",
-              "ec2:ResourceTag/${TagKey}",
-              "ec2:VpceMultiRegion",
-              "ec2:VpceSupportedRegion"
+              "ec2:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -307307,6 +307545,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -307709,6 +307948,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -307750,6 +307990,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -307774,6 +308015,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -308783,6 +309025,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -308885,6 +309128,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -309310,6 +309554,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -309527,12 +309772,38 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ec2:CapacityReservationFleet",
+              "ec2:FutureCapacitySpecification",
               "ec2:Region"
             ],
             "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetCapacityReservationUsage.html"
+      },
+      {
+        "name": "GetClientVpnEndpointAuthorizationPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to describe the authorization policy for a Client VPN endpoint",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "client-vpn-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:ClientRootCertificateChainArn",
+              "ec2:CloudwatchLogGroupArn",
+              "ec2:CloudwatchLogStreamArn",
+              "ec2:DirectoryArn",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}",
+              "ec2:SamlProviderArn",
+              "ec2:ServerCertificateArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetClientVpnEndpointAuthorizationPolicy.html"
       },
       {
         "name": "GetCoipPoolUsage",
@@ -309748,6 +310019,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ec2:CapacityReservationFleet",
+              "ec2:FutureCapacitySpecification",
               "ec2:Region"
             ],
             "dependentActions": []
@@ -309785,6 +310057,7 @@
               "aws:ResourceTag/${TagKey}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -309812,6 +310085,31 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetImageBlockPublicAccessState.html"
+      },
+      {
+        "name": "GetImageFindings",
+        "permissionOnly": false,
+        "description": "Grants permission to describe the Amazon Inspector vulnerability findings for an Amazon Machine Image (AMI)",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "image",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:ImageID",
+              "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
+              "ec2:Owner",
+              "ec2:Public",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}",
+              "ec2:RootDeviceType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetImageFindings.html"
       },
       {
         "name": "GetInstanceMetadataDefaults",
@@ -310646,6 +310944,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetSubnetCidrReservations.html"
       },
       {
+        "name": "GetTransitGatewayAttachmentNatConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to describe the NAT configuration for a transit gateway attachment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "transit-gateway-attachment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_GetTransitGatewayAttachmentNatConfiguration.html"
+      },
+      {
         "name": "GetTransitGatewayAttachmentPropagations",
         "permissionOnly": false,
         "description": "Grants permission to list the route tables to which a resource attachment propagates routes",
@@ -311365,7 +311682,18 @@
               "ec2:Attribute",
               "ec2:Attribute/${AttributeName}",
               "ec2:CapacityReservationFleet",
+              "ec2:FutureCapacitySpecification",
               "ec2:Region"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "capacity-reservation-modification-quote",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -311454,6 +311782,33 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyClientVpnEndpoint.html"
+      },
+      {
+        "name": "ModifyClientVpnEndpointAuthorizationPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to create or update the authorization policy for a Client VPN endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "client-vpn-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Attribute",
+              "ec2:Attribute/${AttributeName}",
+              "ec2:ClientRootCertificateChainArn",
+              "ec2:CloudwatchLogGroupArn",
+              "ec2:CloudwatchLogStreamArn",
+              "ec2:DirectoryArn",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}",
+              "ec2:SamlProviderArn",
+              "ec2:ServerCertificateArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyClientVpnEndpointAuthorizationPolicy.html"
       },
       {
         "name": "ModifyDefaultCreditSpecification",
@@ -311643,6 +311998,7 @@
               "ec2:Attribute/${AttributeName}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -311738,6 +312094,7 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
+              "ec2:FutureCapacitySpecification",
               "ec2:Region"
             ],
             "dependentActions": []
@@ -312981,6 +313338,27 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyTransitGateway.html"
       },
       {
+        "name": "ModifyTransitGatewayAttachmentNatConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to modify the NAT configuration for a transit gateway attachment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "transit-gateway-attachment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "ec2:Attribute",
+              "ec2:Attribute/${AttributeName}",
+              "ec2:Region",
+              "ec2:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSEC2/latest/APIReference/API_ModifyTransitGatewayAttachmentNatConfiguration.html"
+      },
+      {
         "name": "ModifyTransitGatewayMeteringPolicy",
         "permissionOnly": false,
         "description": "Grants permission to modify a transit gateway metering policy",
@@ -313530,9 +313908,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "ec2:Region",
-              "ec2:ResourceTag/${TagKey}",
-              "ec2:VpceMultiRegion",
-              "ec2:VpceSupportedRegion"
+              "ec2:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
           }
@@ -315150,6 +315526,7 @@
               "ec2:Attribute/${AttributeName}",
               "ec2:ImageID",
               "ec2:ImageType",
+              "ec2:ImageWatermarkKeys",
               "ec2:Owner",
               "ec2:Public",
               "ec2:Region",
@@ -315466,6 +315843,7 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
+              "ec2:FutureCapacitySpecification",
               "ec2:IsLaunchTemplateResource",
               "ec2:LaunchTemplate",
               "ec2:Region"
@@ -316488,6 +316866,7 @@
           "ec2:EndDate",
           "ec2:EndDateType",
           "ec2:EphemeralStorage",
+          "ec2:FutureCapacitySpecification",
           "ec2:InstanceCount",
           "ec2:InstanceMatchCriteria",
           "ec2:InstancePlatform",
@@ -316524,6 +316903,20 @@
         "name": "capacity-reservation-fleet",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:ec2:${Region}:${Account}:capacity-reservation-fleet/${CapacityReservationFleetId}",
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys",
+          "ec2:Attribute",
+          "ec2:Attribute/${AttributeName}",
+          "ec2:Region",
+          "ec2:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "capacity-reservation-modification-quote",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:ec2:${Region}:${Account}:capacity-reservation-modification-quote/${CapacityReservationModificationQuoteId}",
         "conditionKeys": [
           "aws:RequestTag/${TagKey}",
           "aws:ResourceTag/${TagKey}",
@@ -316779,6 +317172,7 @@
           "ec2:BootModeOverride",
           "ec2:ImageID",
           "ec2:ImageType",
+          "ec2:ImageWatermarkKeys",
           "ec2:IsLaunchTemplateResource",
           "ec2:LaunchTemplate",
           "ec2:Owner",
@@ -318170,7 +318564,7 @@
       {
         "name": "ec2:BootModeOverride",
         "apiReferenceUrl": "",
-        "description": "Filters access by the boot mode",
+        "description": "Filters access by the boot mode override",
         "type": "String"
       },
       {
@@ -318300,6 +318694,12 @@
         "type": "ArrayOfARN"
       },
       {
+        "name": "ec2:FutureCapacitySpecification",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the ARN of the Future Capacity Specification",
+        "type": "ARN"
+      },
+      {
         "name": "ec2:GatewayType",
         "apiReferenceUrl": "",
         "description": "Filters access by the gateway type for a VPN endpoint on the AWS side of a VPN connection",
@@ -318328,6 +318728,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by the type of image (machine, aki, or ari)",
         "type": "String"
+      },
+      {
+        "name": "ec2:ImageWatermarkKeys",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the watermark keys of an image",
+        "type": "ArrayOfString"
       },
       {
         "name": "ec2:InsideTunnelCidr",
@@ -388076,6 +388482,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_UpdateApplication.html"
       },
       {
+        "name": "UpdateClone",
+        "permissionOnly": false,
+        "description": "Grants permission to manage an in-progress cloned blue/green upgrade of an OpenSearch Service domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/APIReference/API_UpdateClone.html"
+      },
+      {
         "name": "UpdateDataSource",
         "permissionOnly": false,
         "description": "Grants permission to update the data source for the OpenSearch Service domain",
@@ -420546,6 +420969,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53profiles_UntagResource.html"
+      },
+      {
+        "name": "UpdateProfileAssociation",
+        "permissionOnly": false,
+        "description": "Grants permission to update the name or priority of a Profile to VPC association specified by the Profile association ID",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53profiles_UpdateProfileAssociation.html"
       },
       {
         "name": "UpdateProfileResourceAssociation",
@@ -467344,6 +467782,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/"
       },
       {
+        "name": "ExecuteSequence",
+        "permissionOnly": false,
+        "description": "Grants permission to use execute sequence tool",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/"
+      },
+      {
         "name": "GetScreenshot",
         "permissionOnly": false,
         "description": "Grants permission to capture screen state",
@@ -467619,6 +468074,23 @@
         "name": "TypeText",
         "permissionOnly": false,
         "description": "Grants permission to type text string",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/"
+      },
+      {
+        "name": "Wait",
+        "permissionOnly": false,
+        "description": "Grants permission to use wait tool",
         "accessLevel": "Write",
         "resourceTypes": [
           {

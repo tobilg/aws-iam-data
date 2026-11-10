@@ -1,8 +1,12 @@
 {
   "Actions by type": [
     {
+      "key": "List Actions",
+      "value": 3617
+    },
+    {
       "key": "Read Actions",
-      "value": 5556
+      "value": 5564
     },
     {
       "key": null,
@@ -10,11 +14,7 @@
     },
     {
       "key": "Write Actions",
-      "value": 10834
-    },
-    {
-      "key": "List Actions",
-      "value": 3615
+      "value": 10844
     }
   ],
   "Longest action names": [
@@ -173,16 +173,16 @@
       "value": 83
     },
     {
+      "key": "agentspace - arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}",
+      "value": 76
+    },
+    {
       "key": "rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog",
       "value": 76
     },
     {
       "key": "AgentSpace - arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}",
       "value": 75
-    },
-    {
-      "key": "instance - arn:${Partition}:ec2:${Region}:${Account}:instance/${InstanceId}",
-      "value": 74
     }
   ],
   "Services with least actions": [
@@ -211,10 +211,6 @@
       "value": 1
     },
     {
-      "key": "AWS Marketplace Seller Reporting",
-      "value": 1
-    },
-    {
       "key": "AWS Startups",
       "value": 1
     },
@@ -225,12 +221,16 @@
     {
       "key": "Amazon FinSpace API",
       "value": 1
+    },
+    {
+      "key": "Amazon InspectorScan",
+      "value": 1
     }
   ],
   "Services with most actions": [
     {
       "key": "Amazon EC2",
-      "value": 802
+      "value": 810
     },
     {
       "key": "Amazon SageMaker",
@@ -410,11 +410,11 @@
     },
     {
       "key": "Total number of distinct resource ARNS",
-      "value": 2294
+      "value": 2296
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 1613
+      "value": 1616
     }
   ]
 }

@@ -1,5 +1,49 @@
 [
   {
+    "dateOfChange": "2026-11-10",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS DevOps Agent Service": [
+        "aidevops:GetKnowledgeGraph",
+        "aidevops:GetPlan",
+        "aidevops:ListAgentSpaceMetrics",
+        "aidevops:ListAssetChanges",
+        "aidevops:StopPlan"
+      ],
+      "AWS Security Hub": [
+        "securityhub:UpdateSecurityHubV2"
+      ],
+      "AWS Signin": [
+        "signin:CreateBearerToken"
+      ],
+      "AWS Marketplace Seller Reporting": [
+        "aws-marketplace:GetSellerReportingData"
+      ],
+      "Amazon EC2": [
+        "ec2:CreateCapacityReservationDateChangeQuote",
+        "ec2:DeleteClientVpnEndpointAuthorizationPolicy",
+        "ec2:DescribeCapacityReservationDateChangeQuotes",
+        "ec2:GetClientVpnEndpointAuthorizationPolicy",
+        "ec2:GetImageFindings",
+        "ec2:GetTransitGatewayAttachmentNatConfiguration",
+        "ec2:ModifyClientVpnEndpointAuthorizationPolicy",
+        "ec2:ModifyTransitGatewayAttachmentNatConfiguration"
+      ],
+      "Amazon OpenSearch Service": [
+        "es:UpdateClone"
+      ],
+      "Amazon Route 53 Profiles": [
+        "route53profiles:UpdateProfileAssociation"
+      ],
+      "Amazon WorkSpaces AgentAccess MCP Server": [
+        "agentaccess-mcp:ExecuteSequence",
+        "agentaccess-mcp:Wait"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-11-09",
     "addedServices": [],
     "removedServices": [],
