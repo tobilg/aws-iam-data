@@ -1,5 +1,20 @@
 [
   {
+    "dateOfChange": "2026-11-11",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon CloudWatch": [
+        "cloudwatch:GetSpaceDataAccess"
+      ],
+      "Amazon S3 Tables": [
+        "s3tables:GetTableBucketLogging",
+        "s3tables:PutTableBucketLogging"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-11-10",
     "addedServices": [],
     "removedServices": [],

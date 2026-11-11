@@ -144032,7 +144032,11 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "network-firewall:ListRuleGroups",
+              "network-firewall:ListTLSInspectionConfigurations",
+              "network-firewall:TagResource"
+            ]
           },
           {
             "resourceType": "FirewallRuleGroup",
@@ -144042,7 +144046,11 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "network-firewall:ListRuleGroups",
+              "network-firewall:ListTLSInspectionConfigurations",
+              "network-firewall:TagResource"
+            ]
           },
           {
             "resourceType": "IpsRuleGroup",
@@ -144052,7 +144060,11 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "network-firewall:ListRuleGroups",
+              "network-firewall:ListTLSInspectionConfigurations",
+              "network-firewall:TagResource"
+            ]
           },
           {
             "resourceType": "TLSInspectionConfiguration",
@@ -144062,7 +144074,11 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "network-firewall:ListRuleGroups",
+              "network-firewall:ListTLSInspectionConfigurations",
+              "network-firewall:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_CreateFirewallPolicyV2.html"
@@ -146000,7 +146016,10 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "network-firewall:ListRuleGroups",
+              "network-firewall:ListTLSInspectionConfigurations"
+            ]
           },
           {
             "resourceType": "FirewallRuleGroup",
@@ -146008,7 +146027,10 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "network-firewall:ListRuleGroups",
+              "network-firewall:ListTLSInspectionConfigurations"
+            ]
           },
           {
             "resourceType": "IpsRuleGroup",
@@ -146016,7 +146038,10 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "network-firewall:ListRuleGroups",
+              "network-firewall:ListTLSInspectionConfigurations"
+            ]
           },
           {
             "resourceType": "TLSInspectionConfiguration",
@@ -146024,7 +146049,10 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "network-firewall:ListRuleGroups",
+              "network-firewall:ListTLSInspectionConfigurations"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_UpdateFirewallPolicyV2.html"
@@ -161578,7 +161606,9 @@
               "acm-pca:TemplateArn",
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "acm-pca:GetCertificate"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/privateca/latest/APIReference/API_IssueCertificate.html"
@@ -173311,6 +173341,7 @@
               "secretsmanager:Type"
             ],
             "dependentActions": [
+              "secretsmanager:PutResourcePolicy",
               "secretsmanager:ReplicateSecretToRegions",
               "secretsmanager:TagResource"
             ]
@@ -256367,6 +256398,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetSpaceCredentialsForOrganization.html"
+      },
+      {
+        "name": "GetSpaceDataAccess",
+        "permissionOnly": false,
+        "description": "Grants permission to get temporary credentials, limited to the requested actions, for working with data in a space",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetSpaceDataAccess.html"
       },
       {
         "name": "GetTelemetryQueryResults",
@@ -434049,6 +434097,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_GetTableBucketEncryption.html"
       },
       {
+        "name": "GetTableBucketLogging",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the server access logging configuration for a table bucket",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "TableBucket",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "s3tables:TableBucketTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_GetTableBucketLogging.html"
+      },
+      {
         "name": "GetTableBucketMaintenanceConfiguration",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a maintenance configuration on a table bucket",
@@ -434489,6 +434555,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_PutTableBucketEncryption.html"
+      },
+      {
+        "name": "PutTableBucketLogging",
+        "permissionOnly": false,
+        "description": "Grants permission to set, update, or remove the server access logging configuration for a table bucket",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "TableBucket",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "s3tables:TableBucketTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_s3Buckets_PutTableBucketLogging.html"
       },
       {
         "name": "PutTableBucketMaintenanceConfiguration",
