@@ -173699,7 +173699,9 @@
               "secretsmanager:SecretId",
               "secretsmanager:SecretPrimaryRegion"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "secretsmanager:DeleteResourcePolicy"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_StopReplicationToReplica.html"
@@ -203540,6 +203542,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html"
       },
       {
+        "name": "GetOverageConfig",
+        "permissionOnly": false,
+        "description": "Grants permission to get a User subscription overage configuration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html"
+      },
+      {
         "name": "GetPurchaseSession",
         "permissionOnly": false,
         "description": "Grants permission to get a User subscription purchase session",
@@ -203633,6 +203650,21 @@
         "name": "ListUsageLimits",
         "permissionOnly": false,
         "description": "Grants permission to list all User subscription usage limits",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amazonq/latest/qdeveloper-ug/security_iam_permissions.html"
+      },
+      {
+        "name": "ListUsagesAndLimits",
+        "permissionOnly": false,
+        "description": "Grants permission to list User subscription usages and limits",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -266264,6 +266296,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminListUserAuthEvents.html"
       },
       {
+        "name": "AdminListUserSessions",
+        "permissionOnly": false,
+        "description": "Grants permission to list the sessions of any user",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminListUserSessions.html"
+      },
+      {
         "name": "AdminRemoveUserFromGroup",
         "permissionOnly": false,
         "description": "Grants permission to remove any user from any group",
@@ -266313,6 +266362,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminRespondToAuthChallenge.html"
+      },
+      {
+        "name": "AdminRevokeUserSession",
+        "permissionOnly": false,
+        "description": "Grants permission to revoke any session of any user",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_AdminRevokeUserSession.html"
       },
       {
         "name": "AdminSetUserMFAPreference",
@@ -267299,6 +267365,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetUserAttributeVerificationCode.html"
       },
       {
+        "name": "GetUserPoolClientSessionConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to look up the session configuration of user pool clients",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetUserPoolClientSessionConfiguration.html"
+      },
+      {
         "name": "GetUserPoolMfaConfig",
         "permissionOnly": false,
         "description": "Grants permission to look up the MFA configuration of user pools",
@@ -267314,6 +267397,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetUserPoolMfaConfig.html"
+      },
+      {
+        "name": "GetUserPoolSessionConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to look up the session configuration of user pools",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_GetUserPoolSessionConfiguration.html"
       },
       {
         "name": "GlobalSignOut",
@@ -267529,6 +267629,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ListUserPools.html"
       },
       {
+        "name": "ListUserSessions",
+        "permissionOnly": false,
+        "description": "Grants permission to allow a user to list one's own sessions",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_ListUserSessions.html"
+      },
+      {
         "name": "ListUsers",
         "permissionOnly": false,
         "description": "Grants permission to list all user pool users",
@@ -267608,6 +267723,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeToken.html"
       },
       {
+        "name": "RevokeUserSession",
+        "permissionOnly": false,
+        "description": "Grants permission to allow a user to revoke one's own session",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_RevokeUserSession.html"
+      },
+      {
         "name": "SetLogDeliveryConfiguration",
         "permissionOnly": false,
         "description": "Grants permission to set up or modify the detailed activity logging configuration of a user pool",
@@ -267674,6 +267804,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUserMFAPreference.html"
       },
       {
+        "name": "SetUserPoolClientSessionConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to set the session configuration of user pool clients",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUserPoolClientSessionConfiguration.html"
+      },
+      {
         "name": "SetUserPoolMfaConfig",
         "permissionOnly": false,
         "description": "Grants permission to set user pool MFA configuration",
@@ -267691,6 +267838,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUserPoolMfaConfig.html"
+      },
+      {
+        "name": "SetUserPoolSessionConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to set the session configuration of user pools",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "userpool",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cognito-user-identity-pools/latest/APIReference/API_SetUserPoolSessionConfiguration.html"
       },
       {
         "name": "SetUserSettings",

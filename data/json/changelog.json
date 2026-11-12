@@ -1,5 +1,27 @@
 [
   {
+    "dateOfChange": "2026-11-12",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS User Subscriptions": [
+        "user-subscriptions:GetOverageConfig",
+        "user-subscriptions:ListUsagesAndLimits"
+      ],
+      "Amazon Cognito User Pools": [
+        "cognito-idp:AdminListUserSessions",
+        "cognito-idp:AdminRevokeUserSession",
+        "cognito-idp:GetUserPoolClientSessionConfiguration",
+        "cognito-idp:GetUserPoolSessionConfiguration",
+        "cognito-idp:ListUserSessions",
+        "cognito-idp:RevokeUserSession",
+        "cognito-idp:SetUserPoolClientSessionConfiguration",
+        "cognito-idp:SetUserPoolSessionConfiguration"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-11-11",
     "addedServices": [],
     "removedServices": [],
