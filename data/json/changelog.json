@@ -1,5 +1,36 @@
 [
   {
+    "dateOfChange": "2026-11-13",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS MWAA Serverless": [
+        "airflow-serverless:CreateAirflowUiUrl"
+      ],
+      "AWS Secrets Manager": [
+        "secretsmanager:AssociateCrossAccountReplica",
+        "secretsmanager:DisassociateCrossAccountReplica",
+        "secretsmanager:ListResourcePolicies"
+      ],
+      "AWS Transform custom": [
+        "transform-custom:ContributeKnowledgeItems",
+        "transform-custom:DeleteResourcePolicy",
+        "transform-custom:GetResourcePolicy",
+        "transform-custom:PutResourcePolicy"
+      ],
+      "Amazon AppStream 2.0": [
+        "appstream:UpdateImageBuilder"
+      ],
+      "Amazon CloudWatch": [
+        "cloudwatch:DeleteMetricDataQueryDefinition",
+        "cloudwatch:GetMetricDataQueryDefinition",
+        "cloudwatch:ListMetricDataQueryDefinitions",
+        "cloudwatch:PutMetricDataQueryDefinition"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-11-12",
     "addedServices": [],
     "removedServices": [],

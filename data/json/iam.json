@@ -143471,6 +143471,21 @@
     "servicePrefix": "airflow-serverless",
     "actions": [
       {
+        "name": "CreateAirflowUiUrl",
+        "permissionOnly": false,
+        "description": "Grants permission to create a URL with access to the Airflow UI",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/mwaa-serverless/latest/APIReference/API_CreateAirflowUiUrl.html"
+      },
+      {
         "name": "CreateWorkflow",
         "permissionOnly": false,
         "description": "Grants permission to create a new workflow",
@@ -173275,6 +173290,36 @@
     "servicePrefix": "secretsmanager",
     "actions": [
       {
+        "name": "AssociateCrossAccountReplica",
+        "permissionOnly": false,
+        "description": "Grants permission to replicate a cross-account primary secret to a cross-account replica secret",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Secret",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "secretsmanager:CrossAccountReplicaARN",
+              "secretsmanager:ReplicaRestriction",
+              "secretsmanager:ReplicationRoleARN",
+              "secretsmanager:resource/AllowRotationLambdaArn",
+              "secretsmanager:resource/Type",
+              "secretsmanager:ResourceTag/tag-key",
+              "secretsmanager:SecretId",
+              "secretsmanager:SecretPrimaryRegion"
+            ],
+            "dependentActions": [
+              "secretsmanager:GetSecretValue",
+              "iam:PassRole"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_AssociateCrossAccountReplica.html"
+      },
+      {
         "name": "BatchGetSecretValue",
         "permissionOnly": false,
         "description": "Grants permission to retrieve and decrypt a list of secrets",
@@ -173330,6 +173375,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
               "secretsmanager:AddReplicaRegions",
+              "secretsmanager:CrossAccountPrimaryARN",
               "secretsmanager:Description",
               "secretsmanager:ForceOverwriteReplicaSecret",
               "secretsmanager:KmsKeyArn",
@@ -173338,6 +173384,7 @@
               "secretsmanager:resource/AllowRotationLambdaArn",
               "secretsmanager:resource/Type",
               "secretsmanager:ResourceTag/tag-key",
+              "secretsmanager:SecretPrimaryRegion",
               "secretsmanager:Type"
             ],
             "dependentActions": [
@@ -173362,6 +173409,7 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
+              "secretsmanager:PolicyName",
               "secretsmanager:resource/AllowRotationLambdaArn",
               "secretsmanager:resource/Type",
               "secretsmanager:ResourceTag/tag-key",
@@ -173424,6 +173472,31 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_DescribeSecret.html"
       },
       {
+        "name": "DisassociateCrossAccountReplica",
+        "permissionOnly": false,
+        "description": "Grants permission to stop replication from a cross-account primary secret to a cross-account replica secret",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Secret",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "secretsmanager:CrossAccountReplicaARN",
+              "secretsmanager:resource/AllowRotationLambdaArn",
+              "secretsmanager:resource/Type",
+              "secretsmanager:ResourceTag/tag-key",
+              "secretsmanager:SecretId",
+              "secretsmanager:SecretPrimaryRegion"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_DisassociateCrossAccountReplica.html"
+      },
+      {
         "name": "GetRandomPassword",
         "permissionOnly": false,
         "description": "Grants permission to generate a random string for use in password creation",
@@ -173451,6 +173524,7 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
+              "secretsmanager:PolicyName",
               "secretsmanager:resource/AllowRotationLambdaArn",
               "secretsmanager:resource/Type",
               "secretsmanager:ResourceTag/tag-key",
@@ -173487,6 +173561,30 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_GetSecretValue.html"
+      },
+      {
+        "name": "ListResourcePolicies",
+        "permissionOnly": false,
+        "description": "Grants permission to list the resource polices attached to a secret",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Secret",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "secretsmanager:resource/AllowRotationLambdaArn",
+              "secretsmanager:resource/Type",
+              "secretsmanager:ResourceTag/tag-key",
+              "secretsmanager:SecretId",
+              "secretsmanager:SecretPrimaryRegion"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/secretsmanager/latest/apireference/API_ListResourcePolicies.html"
       },
       {
         "name": "ListSecretVersionIds",
@@ -173541,6 +173639,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
               "secretsmanager:BlockPublicPolicy",
+              "secretsmanager:PolicyName",
               "secretsmanager:resource/AllowRotationLambdaArn",
               "secretsmanager:resource/Type",
               "secretsmanager:ResourceTag/tag-key",
@@ -173683,7 +173782,7 @@
       {
         "name": "StopReplicationToReplica",
         "permissionOnly": false,
-        "description": "Grants permission to remove the secret from replication and promote the secret to a regional secret in the replica Region",
+        "description": "Grants permission to remove the secret from replication and promote the secret to a standalone secret",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -173844,6 +173943,7 @@
           "aws:ResourceTag/${TagKey}",
           "aws:TagKeys",
           "secretsmanager:ResourceTag/tag-key",
+          "secretsmanager:SecretPrimaryRegion",
           "secretsmanager:resource/AllowRotationLambdaArn",
           "secretsmanager:resource/Type"
         ]
@@ -173879,6 +173979,18 @@
         "apiReferenceUrl": "",
         "description": "Filters access by whether the resource policy blocks broad AWS account access",
         "type": "Bool"
+      },
+      {
+        "name": "secretsmanager:CrossAccountPrimaryARN",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the cross-account primary secret ARN provided in the request when calling against a cross-account replica secret",
+        "type": "ARN"
+      },
+      {
+        "name": "secretsmanager:CrossAccountReplicaARN",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the cross-account replica secret ARN provided in the request when calling against a cross-account primary secret",
+        "type": "ARN"
       },
       {
         "name": "secretsmanager:Description",
@@ -173929,10 +174041,28 @@
         "type": "String"
       },
       {
+        "name": "secretsmanager:PolicyName",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the resource policy name in the request",
+        "type": "String"
+      },
+      {
         "name": "secretsmanager:RecoveryWindowInDays",
         "apiReferenceUrl": "",
         "description": "Filters access by the number of days that Secrets Manager waits before it can delete the secret",
         "type": "Numeric"
+      },
+      {
+        "name": "secretsmanager:ReplicaRestriction",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the cross-account replica restriction in the request",
+        "type": "String"
+      },
+      {
+        "name": "secretsmanager:ReplicationRoleARN",
+        "apiReferenceUrl": "",
+        "description": "Filters access by cross-account replication role ARN in the request",
+        "type": "ARN"
       },
       {
         "name": "secretsmanager:ResourceTag/tag-key",
@@ -200879,6 +201009,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
       },
       {
+        "name": "ContributeKnowledgeItems",
+        "permissionOnly": false,
+        "description": "Grants permission to contribute knowledge items to a Transformation Package on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "package",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
         "name": "ConverseStream",
         "permissionOnly": false,
         "description": "Grants permission to invoke ConverseStream on AWS Transform custom",
@@ -201110,6 +201257,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
       },
       {
+        "name": "DeleteResourcePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the resource policy attached to a shareable resource",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "package",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
         "name": "DeleteSource",
         "permissionOnly": false,
         "description": "Grants permission to invoke DeleteSource on AWS Transform custom",
@@ -201285,6 +201449,23 @@
         "resourceTypes": [
           {
             "resourceType": "repository",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
+        "name": "GetResourcePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the resource policy attached to a shareable resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "package",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -201502,6 +201683,23 @@
         "permissionOnly": false,
         "description": "Grants permission to list active shares of a Transformation Package",
         "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "package",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
+        "name": "PutResourcePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to attach or replace the resource policy on a shareable resource",
+        "accessLevel": "Permissions management, Write",
         "resourceTypes": [
           {
             "resourceType": "package",
@@ -227821,6 +228019,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_UpdateFleet.html"
+      },
+      {
+        "name": "UpdateImageBuilder",
+        "permissionOnly": false,
+        "description": "Grants permission to update a specific image builder. An image builder is a virtual machine that is used to create an image",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "image-builder",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_UpdateImageBuilder.html"
       },
       {
         "name": "UpdateImagePermissions",
@@ -255609,6 +255824,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteIntegration.html"
       },
       {
+        "name": "DeleteMetricDataQueryDefinition",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a CloudWatch metric data query definition",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "metric-query-definition",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_DeleteMetricDataQueryDefinition.html"
+      },
+      {
         "name": "DeleteMetricStream",
         "permissionOnly": false,
         "description": "Grants permission to delete the CloudWatch metric stream that you specify",
@@ -256199,6 +256431,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricData.html"
       },
       {
+        "name": "GetMetricDataQueryDefinition",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a CloudWatch metric data query definition",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "metric-query-definition",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_GetMetricDataQueryDefinition.html"
+      },
+      {
         "name": "GetMetricStatistics",
         "permissionOnly": false,
         "description": "Grants permission to retrieve statistics for the specified metric",
@@ -256699,6 +256948,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListManagedInsightRules.html"
       },
       {
+        "name": "ListMetricDataQueryDefinitions",
+        "permissionOnly": false,
+        "description": "Grants permission to list CloudWatch metric data query definitions",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_ListMetricDataQueryDefinitions.html"
+      },
+      {
         "name": "ListMetricStreams",
         "permissionOnly": false,
         "description": "Grants permission to return a list of all CloudWatch metric streams in your account",
@@ -256890,6 +257154,15 @@
           },
           {
             "resourceType": "insight-rule",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "metric-query-definition",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -257191,6 +257464,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricData.html"
       },
       {
+        "name": "PutMetricDataQueryDefinition",
+        "permissionOnly": false,
+        "description": "Grants permission to create or update a CloudWatch metric data query definition",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "metric-query-definition",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutMetricDataQueryDefinition.html"
+      },
+      {
         "name": "PutMetricStream",
         "permissionOnly": false,
         "description": "Grants permission to create a CloudWatch metric stream, or update an existing metric stream if it already exists",
@@ -257490,6 +257782,17 @@
             "dependentActions": []
           },
           {
+            "resourceType": "metric-query-definition",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "metric-stream",
             "required": false,
             "conditionKeys": [
@@ -257573,6 +257876,16 @@
           },
           {
             "resourceType": "insight-rule",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "metric-query-definition",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -257927,6 +258240,14 @@
         "name": "integration",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:integration/${IntegrationId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "metric-query-definition",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:metric-query-definition/${MetricDataQueryDefinitionId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
