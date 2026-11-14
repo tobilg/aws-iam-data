@@ -23469,7 +23469,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "aws-portal:ViewBilling"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_budgets_DescribeBudgetAction.html"
@@ -31129,6 +31131,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RegisterType.html"
       },
       {
+        "name": "RemoveAlias",
+        "permissionOnly": false,
+        "description": "Grants permission to remove an alias from the stack it is associated with",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "stack",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RemoveAlias.html"
+      },
+      {
         "name": "RollbackStack",
         "permissionOnly": false,
         "description": "Grants permission to rollback the stack to the last stable state",
@@ -31147,6 +31166,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_RollbackStack.html"
+      },
+      {
+        "name": "SetAlias",
+        "permissionOnly": false,
+        "description": "Grants permission to set an alias for the specified stack",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "stack",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AWSCloudFormation/latest/APIReference/API_SetAlias.html"
       },
       {
         "name": "SetStackPolicy",
@@ -102423,7 +102459,8 @@
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
-              "sso:PrimaryRegion"
+              "sso:PrimaryRegion",
+              "sso:VpceAccessRequired"
             ],
             "dependentActions": []
           }
@@ -102647,6 +102684,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by the primary region of the IAM Identity Center instance",
         "type": "String"
+      },
+      {
+        "name": "sso:VpceAccessRequired",
+        "apiReferenceUrl": "",
+        "description": "Filters access by whether the network configuration that results from the operation requires requests to the IAM Identity Center instance to arrive through a VPC endpoint",
+        "type": "Bool"
       }
     ]
   },
@@ -144112,9 +144155,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "network-firewall:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "ProxyConfiguration",
@@ -144124,9 +144165,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "network-firewall:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_CreateProxy.html"
@@ -144145,10 +144184,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "network-firewall:AttachRuleGroupsToProxyConfiguration",
-              "network-firewall:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "ProxyRuleGroup",
@@ -144158,10 +144194,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "network-firewall:AttachRuleGroupsToProxyConfiguration",
-              "network-firewall:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_CreateProxyConfiguration.html"
@@ -144180,9 +144213,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "network-firewall:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_CreateProxyRuleGroup.html"
@@ -175750,6 +175781,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_PutDesignReviewFeedback.html"
       },
       {
+        "name": "ResumePentestJob",
+        "permissionOnly": false,
+        "description": "Grants permission to resume a stopped or paused penetration test",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "AgentSpace",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/securityagent/API_ResumePentestJob.html"
+      },
+      {
         "name": "StartCodeRemediation",
         "permissionOnly": false,
         "description": "Grants permission to start code remediation for the findings",
@@ -181251,6 +181299,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_AssociateIamRoleToResource.html"
       },
       {
+        "name": "AssociateVirtualMachinesToCloudVmCluster",
+        "permissionOnly": false,
+        "description": "Grants permission to associate virtual machines to a specified VM cluster",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cloud-vm-cluster",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_AssociateVirtualMachinesToCloudVmCluster.html"
+      },
+      {
         "name": "AssociateVirtualMachinesToExadbVmCluster",
         "permissionOnly": false,
         "description": "Grants permission to associate virtual machines to a specified Exadb VM cluster",
@@ -181705,6 +181770,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_DisassociateIamRoleFromResource.html"
+      },
+      {
+        "name": "DisassociateVirtualMachinesFromCloudVmCluster",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate virtual machines from a specified VM cluster",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cloud-vm-cluster",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_DisassociateVirtualMachinesFromCloudVmCluster.html"
       },
       {
         "name": "DisassociateVirtualMachinesFromExadbVmCluster",
@@ -182845,6 +182927,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_UpdateAutonomousDatabaseBackup.html"
       },
       {
+        "name": "UpdateCloudAutonomousVmCluster",
+        "permissionOnly": false,
+        "description": "Grants permission to update properties of a specified Autonomous VM cluster",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cloud-autonomous-vm-cluster",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_UpdateCloudAutonomousVmCluster.html"
+      },
+      {
         "name": "UpdateCloudExadataInfrastructure",
         "permissionOnly": false,
         "description": "Grants permission to update the properties of an Exadata infrastructure resource",
@@ -182860,6 +182959,40 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_UpdateCloudExadataInfrastructure.html"
+      },
+      {
+        "name": "UpdateCloudExadataInfrastructureStorageCapacity",
+        "permissionOnly": false,
+        "description": "Grants permission to update the storage capacity of an Exadata infrastructure resource",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cloud-exadata-infrastructure",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_UpdateCloudExadataInfrastructureStorageCapacity.html"
+      },
+      {
+        "name": "UpdateCloudVmCluster",
+        "permissionOnly": false,
+        "description": "Grants permission to update properties of a specified VM cluster",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "cloud-vm-cluster",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_UpdateCloudVmCluster.html"
       },
       {
         "name": "UpdateExadbVmCluster",
@@ -208554,6 +208687,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_AssociateProfiles.html"
       },
       {
+        "name": "CreateAgentBasicProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to create a basic profile for the calling account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_CreateAgentBasicProfile.html"
+      },
+      {
         "name": "CreateAgentContext",
         "permissionOnly": false,
         "description": "Grants permission to create a context associated with a profile",
@@ -208586,6 +208737,39 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_CreateAgentGoal.html"
+      },
+      {
+        "name": "CreateAgentOrganizationalProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to create an organizational profile for use with AWS Organizations integration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_CreateAgentOrganizationalProfile.html"
+      },
+      {
+        "name": "CreateAgentOrganizationalReport",
+        "permissionOnly": false,
+        "description": "Grants permission to create an organizational report, a point-in-time snapshot of recommendations across all agent profiles in the AWS Organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_CreateAgentOrganizationalReport.html"
       },
       {
         "name": "CreateAgentProfile",
@@ -208810,6 +208994,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_DeleteAgentGoal.html"
       },
       {
+        "name": "DeleteAgentOrganizationalReport",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an organizational report and its associated artifacts",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_DeleteAgentOrganizationalReport.html"
+      },
+      {
         "name": "DeleteAgentProfile",
         "permissionOnly": false,
         "description": "Grants permission to delete an agent profile",
@@ -208825,6 +209024,40 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_DeleteAgentProfile.html"
+      },
+      {
+        "name": "DeleteAgentProfilePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to remove the resource-based policy from the specified agent profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agent-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_DeleteAgentProfilePolicy.html"
+      },
+      {
+        "name": "DeleteAgentRecommendationPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to remove the resource-based policy from the specified agent recommendation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agent-recommendation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_DeleteAgentRecommendationPolicy.html"
       },
       {
         "name": "DeleteLens",
@@ -209048,6 +209281,51 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_GetAgentGoal.html"
       },
       {
+        "name": "GetAgentOrganizationalReport",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve metadata and current state for a single organizational report",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_GetAgentOrganizationalReport.html"
+      },
+      {
+        "name": "GetAgentOrganizationalReportData",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the data artifact for a completed organizational report as a short-lived presigned S3 URL",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_GetAgentOrganizationalReportData.html"
+      },
+      {
+        "name": "GetAgentPreferences",
+        "permissionOnly": false,
+        "description": "Grants permission to get the caller's complete set of Well-Architected Agent preferences",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_GetAgentPreferences.html"
+      },
+      {
         "name": "GetAgentProfile",
         "permissionOnly": false,
         "description": "Grants permission to get agent profile by profile arn",
@@ -209063,6 +209341,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_GetAgentProfile.html"
+      },
+      {
+        "name": "GetAgentProfilePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the resource-based policy attached to the specified agent profile",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agent-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_GetAgentProfilePolicy.html"
       },
       {
         "name": "GetAgentRecommendation",
@@ -209097,6 +209392,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_GetAgentRecommendationGeneration.html"
+      },
+      {
+        "name": "GetAgentRecommendationPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the resource-based policy attached to the specified agent recommendation",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agent-recommendation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_GetAgentRecommendationPolicy.html"
       },
       {
         "name": "GetAnswer",
@@ -209354,7 +209666,7 @@
         "name": "ListAgentContexts",
         "permissionOnly": false,
         "description": "Grants permission to list contexts associated with a profile by filters on the fields",
-        "accessLevel": "Read",
+        "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "agent-profile",
@@ -209371,7 +209683,7 @@
         "name": "ListAgentGoals",
         "permissionOnly": false,
         "description": "Grants permission to list goals associated with a profile by filters on the fields",
-        "accessLevel": "Read",
+        "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "agent-profile",
@@ -209385,10 +209697,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_ListAgentGoals.html"
       },
       {
+        "name": "ListAgentOrganizationalReports",
+        "permissionOnly": false,
+        "description": "Grants permission to list organizational reports owned by the caller's account within the AWS Organization",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_ListAgentOrganizationalReports.html"
+      },
+      {
         "name": "ListAgentProfiles",
         "permissionOnly": false,
         "description": "Grants permission to list agent profiles",
-        "accessLevel": "Read",
+        "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "",
@@ -209403,7 +209730,7 @@
         "name": "ListAgentRecommendationGenerations",
         "permissionOnly": false,
         "description": "Grants permission to list recommendation generations",
-        "accessLevel": "Read",
+        "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "agent-profile",
@@ -209420,7 +209747,7 @@
         "name": "ListAgentRecommendationItems",
         "permissionOnly": false,
         "description": "Grants permission to list recommendation items associated with a recommendation",
-        "accessLevel": "Read",
+        "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "agent-recommendation",
@@ -209437,7 +209764,7 @@
         "name": "ListAgentRecommendations",
         "permissionOnly": false,
         "description": "Grants permission to list recommendations by profile ARN",
-        "accessLevel": "Read",
+        "accessLevel": "List",
         "resourceTypes": [
           {
             "resourceType": "agent-profile",
@@ -209800,6 +210127,38 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_ListWorkloads.html"
       },
       {
+        "name": "PutAgentPreferences",
+        "permissionOnly": false,
+        "description": "Grants permission to create or replace the caller's Well-Architected Agent preferences",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_PutAgentPreferences.html"
+      },
+      {
+        "name": "PutAgentProfilePolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to attach or replace a resource-based policy on the specified agent profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agent-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_PutAgentProfilePolicy.html"
+      },
+      {
         "name": "PutAgentRecommendationFeedback",
         "permissionOnly": false,
         "description": "Grants permission to put feedback on a recommendation",
@@ -209815,6 +210174,38 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_PutAgentRecommendationFeedback.html"
+      },
+      {
+        "name": "PutAgentRecommendationPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to attach or replace a resource-based policy on the specified agent recommendation",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agent-recommendation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_PutAgentRecommendationPolicy.html"
+      },
+      {
+        "name": "SendAgentOrganizationalReportDataToS3",
+        "permissionOnly": false,
+        "description": "Grants permission to write the data artifact for a completed organizational report directly into a caller-owned S3 bucket",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_SendAgentOrganizationalReportDataToS3.html"
       },
       {
         "name": "StartAgentRecommendationGeneration",
@@ -209998,6 +210389,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_UpdateAgentGoal.html"
+      },
+      {
+        "name": "UpdateAgentOrganizationalProfile",
+        "permissionOnly": false,
+        "description": "Grants permission to update an organizational profile",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agent-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_UpdateAgentOrganizationalProfile.html"
       },
       {
         "name": "UpdateAgentProfile",
@@ -350893,6 +351301,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListIPSets.html"
       },
       {
+        "name": "ListInvestigationRecords",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the records of a GuardDuty investigation",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/guardduty/latest/APIReference/API_ListInvestigationRecords.html"
+      },
+      {
         "name": "ListInvestigations",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a list of GuardDuty investigations",
@@ -378899,31 +379322,31 @@
       {
         "name": "airflow:DagAccessEntity",
         "apiReferenceUrl": "",
-        "description": "Filters access by the DAG sub-resource being accessed",
+        "description": "Filters access by the DAG sub-resource that the caller specifies in the request, such as RUN, CODE, or TASK_LOGS",
         "type": "String"
       },
       {
         "name": "airflow:ResourceAction",
         "apiReferenceUrl": "",
-        "description": "Filters access by the action being performed on the Airflow resource",
+        "description": "Filters access by the action on the Airflow resource that the caller specifies in the request, such as GET, POST, PUT, DELETE, or LIST",
         "type": "String"
       },
       {
         "name": "airflow:ResourceId",
         "apiReferenceUrl": "",
-        "description": "Filters access by the identifier of the specific Airflow resource, such as a DAG ID or connection ID",
+        "description": "Filters access by the Airflow resource identifier that the caller specifies in the request, such as a DAG ID or connection ID",
         "type": "String"
       },
       {
         "name": "airflow:ResourceType",
         "apiReferenceUrl": "",
-        "description": "Filters access by the Airflow resource type specified in the request",
+        "description": "Filters access by the Airflow resource type that the caller specifies in the request, such as DAG, Connection, Variable, or Pool",
         "type": "String"
       },
       {
         "name": "airflow:TeamNames",
         "apiReferenceUrl": "",
-        "description": "Filters access by the team names associated with the caller's identity, enabling team-based access control for Airflow resources",
+        "description": "Filters access by the team names that the caller specifies in the request. AWS does not verify that the caller is a member of these teams",
         "type": "ArrayOfString"
       },
       {
@@ -419617,6 +420040,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateHostedZone.html"
       },
       {
+        "name": "CreateIpGuardrailPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to create an IP guardrail policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateIpGuardrailPolicy.html"
+      },
+      {
         "name": "CreateKeySigningKey",
         "permissionOnly": false,
         "description": "Grants permission to create a new key-signing key associated with a hosted zone",
@@ -419645,6 +420083,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateQueryLoggingConfig.html"
+      },
+      {
+        "name": "CreateResourceRecordSetProtections",
+        "permissionOnly": false,
+        "description": "Grants permission to create protections that block changes to specified records in a hosted zone",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "hostedzone",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_CreateResourceRecordSetProtections.html"
       },
       {
         "name": "CreateReusableDelegationSet",
@@ -419790,6 +420243,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteHostedZone.html"
       },
       {
+        "name": "DeleteIpGuardrailPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an IP guardrail policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteIpGuardrailPolicy.html"
+      },
+      {
         "name": "DeleteKeySigningKey",
         "permissionOnly": false,
         "description": "Grants permission to delete a key-signing key",
@@ -419818,6 +420286,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteQueryLoggingConfig.html"
+      },
+      {
+        "name": "DeleteResourceRecordSetProtections",
+        "permissionOnly": false,
+        "description": "Grants permission to delete protections from specified records in a hosted zone",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "hostedzone",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_DeleteResourceRecordSetProtections.html"
       },
       {
         "name": "DeleteReusableDelegationSet",
@@ -420109,6 +420592,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetHostedZoneLimit.html"
       },
       {
+        "name": "GetIpGuardrailPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to get information about an IP guardrail policy",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_GetIpGuardrailPolicy.html"
+      },
+      {
         "name": "GetQueryLoggingConfig",
         "permissionOnly": false,
         "description": "Grants permission to get information about a specified configuration for DNS query logging",
@@ -420321,6 +420819,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListHostedZonesByVPC.html"
       },
       {
+        "name": "ListIpGuardrailPolicies",
+        "permissionOnly": false,
+        "description": "Grants permission to list the IP guardrail policies in an organization",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListIpGuardrailPolicies.html"
+      },
+      {
         "name": "ListQueryLoggingConfigs",
         "permissionOnly": false,
         "description": "Grants permission to list the configurations for DNS query logging that are associated with the current AWS account or the configuration that is associated with a specified hosted zone",
@@ -420334,6 +420847,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListQueryLoggingConfigs.html"
+      },
+      {
+        "name": "ListResourceRecordSetProtections",
+        "permissionOnly": false,
+        "description": "Grants permission to list the record protections in a specified hosted zone",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "hostedzone",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_ListResourceRecordSetProtections.html"
       },
       {
         "name": "ListResourceRecordSets",
@@ -420556,6 +421084,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_UpdateHostedZoneFeatures.html"
+      },
+      {
+        "name": "UpdateIpGuardrailPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to update the rules of an IP guardrail policy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_UpdateIpGuardrailPolicy.html"
       },
       {
         "name": "UpdateTrafficPolicyComment",
@@ -468292,6 +468835,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468309,6 +468853,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468326,6 +468871,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468343,6 +468889,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468360,6 +468907,25 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/"
+      },
+      {
+        "name": "GetCurrentUser",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the currently logged-in local user account on an image builder desktop",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468377,6 +468943,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468394,6 +468961,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468411,6 +468979,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468428,6 +468997,8 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
+              "agentaccess-mcp:LocalUser",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468445,6 +469016,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468462,6 +469034,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468479,6 +469052,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468496,6 +469070,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468513,6 +469088,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468530,6 +469106,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468547,6 +469124,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468564,6 +469142,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468581,6 +469160,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468598,6 +469178,26 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
+              "agentaccess-mcp:StackArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/developerguide/"
+      },
+      {
+        "name": "SwitchUser",
+        "permissionOnly": false,
+        "description": "Grants permission to switch the logged-in local user account on an image builder desktop",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
+              "agentaccess-mcp:LocalUser",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468615,6 +469215,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468632,6 +469233,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468649,6 +469251,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468666,6 +469269,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [
+              "agentaccess-mcp:ImageBuilderArn",
               "agentaccess-mcp:StackArn"
             ],
             "dependentActions": []
@@ -468676,6 +469280,18 @@
     ],
     "resourceTypes": [],
     "conditionKeys": [
+      {
+        "name": "agentaccess-mcp:ImageBuilderArn",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the ARN of the WorkSpaces Applications image builder",
+        "type": "ARN"
+      },
+      {
+        "name": "agentaccess-mcp:LocalUser",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the local user account an agent may log in as on the image builder",
+        "type": "String"
+      },
       {
         "name": "agentaccess-mcp:StackArn",
         "apiReferenceUrl": "",

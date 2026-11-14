@@ -1,5 +1,63 @@
 [
   {
+    "dateOfChange": "2026-11-14",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "AWS CloudFormation": [
+        "cloudformation:RemoveAlias",
+        "cloudformation:SetAlias"
+      ],
+      "AWS Security Agent": [
+        "securityagent:ResumePentestJob"
+      ],
+      "AWS Service - Oracle Database@AWS": [
+        "odb:AssociateVirtualMachinesToCloudVmCluster",
+        "odb:DisassociateVirtualMachinesFromCloudVmCluster",
+        "odb:UpdateCloudAutonomousVmCluster",
+        "odb:UpdateCloudExadataInfrastructureStorageCapacity",
+        "odb:UpdateCloudVmCluster"
+      ],
+      "AWS Well-Architected Tool": [
+        "wellarchitected:CreateAgentBasicProfile",
+        "wellarchitected:CreateAgentOrganizationalProfile",
+        "wellarchitected:CreateAgentOrganizationalReport",
+        "wellarchitected:DeleteAgentOrganizationalReport",
+        "wellarchitected:DeleteAgentProfilePolicy",
+        "wellarchitected:DeleteAgentRecommendationPolicy",
+        "wellarchitected:GetAgentOrganizationalReport",
+        "wellarchitected:GetAgentOrganizationalReportData",
+        "wellarchitected:GetAgentPreferences",
+        "wellarchitected:GetAgentProfilePolicy",
+        "wellarchitected:GetAgentRecommendationPolicy",
+        "wellarchitected:ListAgentOrganizationalReports",
+        "wellarchitected:PutAgentPreferences",
+        "wellarchitected:PutAgentProfilePolicy",
+        "wellarchitected:PutAgentRecommendationPolicy",
+        "wellarchitected:SendAgentOrganizationalReportDataToS3",
+        "wellarchitected:UpdateAgentOrganizationalProfile"
+      ],
+      "Amazon GuardDuty": [
+        "guardduty:ListInvestigationRecords"
+      ],
+      "Amazon Route 53": [
+        "route53:CreateIpGuardrailPolicy",
+        "route53:CreateResourceRecordSetProtections",
+        "route53:DeleteIpGuardrailPolicy",
+        "route53:DeleteResourceRecordSetProtections",
+        "route53:GetIpGuardrailPolicy",
+        "route53:ListIpGuardrailPolicies",
+        "route53:ListResourceRecordSetProtections",
+        "route53:UpdateIpGuardrailPolicy"
+      ],
+      "Amazon WorkSpaces AgentAccess MCP Server": [
+        "agentaccess-mcp:GetCurrentUser",
+        "agentaccess-mcp:SwitchUser"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-11-13",
     "addedServices": [],
     "removedServices": [],

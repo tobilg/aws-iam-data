@@ -1,20 +1,20 @@
 {
   "Actions by type": [
     {
-      "key": "List Actions",
-      "value": 3621
-    },
-    {
       "key": "Read Actions",
-      "value": 5573
+      "value": 5575
     },
     {
       "key": null,
       "value": 1062
     },
     {
+      "key": "List Actions",
+      "value": 3630
+    },
+    {
       "key": "Write Actions",
-      "value": 10855
+      "value": 10880
     }
   ],
   "Longest action names": [
@@ -173,16 +173,16 @@
       "value": 83
     },
     {
+      "key": "AgentSpace - arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}",
+      "value": 76
+    },
+    {
       "key": "agentspace - arn:${Partition}:aidevops:${Region}:${Account}:agentspace/${AgentSpaceId}",
       "value": 76
     },
     {
       "key": "rootcatalog - arn:${Partition}:glue:${Region}:${Account}:catalog",
       "value": 76
-    },
-    {
-      "key": "AgentSpace - arn:${Partition}:securityagent:${Region}:${Account}:agent-space/${AgentId}",
-      "value": 75
     }
   ],
   "Services with least actions": [
@@ -402,7 +402,7 @@
     },
     {
       "key": "Average number of actions per service",
-      "value": 48
+      "value": 49
     },
     {
       "key": "Median number of actions per service",
@@ -414,7 +414,7 @@
     },
     {
       "key": "Total number of distinct condition keys",
-      "value": 1621
+      "value": 1624
     }
   ]
 }
