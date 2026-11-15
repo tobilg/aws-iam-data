@@ -108638,6 +108638,7 @@
               "identitystore:UserExternalIdIssuers"
             ],
             "dependentActions": [
+              "sso-directory:DisableUser",
               "sso-directory:UpdateUser",
               "sso-directory:UpdateUserName"
             ]
@@ -108650,6 +108651,7 @@
               "identitystore:UserExternalIdIssuers"
             ],
             "dependentActions": [
+              "sso-directory:DisableUser",
               "sso-directory:UpdateUser",
               "sso-directory:UpdateUserName"
             ]
