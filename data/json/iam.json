@@ -44895,7 +44895,9 @@
             "conditionKeys": [
               "continuum:S3BucketName"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/continuum/latest/APIReference/API_CreateIntegration.html"
@@ -45314,7 +45316,9 @@
             "resourceType": "integrations",
             "required": true,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/continuum/latest/APIReference/API_UpdateIntegration.html"
@@ -261928,7 +261932,9 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_PutIntegration.html"
