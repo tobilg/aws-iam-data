@@ -1,5 +1,125 @@
 [
   {
+    "dateOfChange": "2026-11-17",
+    "addedServices": [
+      "Amazon OpenSearch Memory"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Glue": [
+        "glue:CreateDataQualityEvaluationConfig",
+        "glue:DeleteDataQualityEvaluationConfig",
+        "glue:GetDataQualityEvaluationConfig",
+        "glue:ListDataQualityEvaluationConfigs",
+        "glue:ListIntegrationTableProperties",
+        "glue:UpdateDataQualityEvaluationConfig"
+      ],
+      "AWS Lambda": [
+        "lambda:CreateRuntime",
+        "lambda:CreateRuntimeAlias",
+        "lambda:CreateRuntimeVersion",
+        "lambda:DeleteRuntime",
+        "lambda:DeleteRuntimeAlias",
+        "lambda:DeleteRuntimeVersion",
+        "lambda:GetRuntime",
+        "lambda:GetRuntimeAlias",
+        "lambda:GetRuntimeVersion",
+        "lambda:ListRuntimeAliases",
+        "lambda:ListRuntimeVersions",
+        "lambda:ListRuntimes",
+        "lambda:RestoreRuntime",
+        "lambda:UpdateRuntime",
+        "lambda:UpdateRuntimeAlias",
+        "lambda:UpdateRuntimeVersion"
+      ],
+      "AWS Network Firewall": [
+        "network-firewall:ListContextStores",
+        "network-firewall:ListResourcesInContextStore"
+      ],
+      "AWS Transform custom": [
+        "transform-custom:CancelSkillCreationJob",
+        "transform-custom:ConnectSource",
+        "transform-custom:CreateRemediationPlan",
+        "transform-custom:DeleteRemediationPlan",
+        "transform-custom:GetIssueGroup",
+        "transform-custom:GetRemediationPlan",
+        "transform-custom:GetSkillCreationJob",
+        "transform-custom:ListIssueGroups",
+        "transform-custom:ListRemediationPlans",
+        "transform-custom:ListSkillCreationJobs",
+        "transform-custom:StartSkillCreationJob",
+        "transform-custom:UpdateIssueGroup",
+        "transform-custom:UpdateRemediationPlan",
+        "transform-custom:UpdateSkillCreationJob"
+      ],
+      "AWS Support": [
+        "support:SearchInteractions"
+      ],
+      "Amazon Connect Health": [
+        "health-agent:CreateDataset",
+        "health-agent:DeleteDataset",
+        "health-agent:GetDataset",
+        "health-agent:GetMedicalCodingJob",
+        "health-agent:ListDatasets",
+        "health-agent:StartMedicalCodingJob",
+        "health-agent:SubmitFeedback"
+      ],
+      "Amazon S3 Vectors": [
+        "s3vectors:UpdateMetadataConfiguration"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:CreateInferenceRouter",
+        "sagemaker:DeleteEndpointPolicy",
+        "sagemaker:DeleteInferenceRouter",
+        "sagemaker:DescribeInferenceRouter",
+        "sagemaker:GetEndpointPolicy",
+        "sagemaker:InvokeInferenceRouter",
+        "sagemaker:InvokeInferenceRouterAsync",
+        "sagemaker:ListInferenceRouters",
+        "sagemaker:PutEndpointPolicy",
+        "sagemaker:UpdateInferenceRouter"
+      ],
+      "Amazon Simple Email Service v2": [
+        "ses:PutAccountDeliveryAttributes"
+      ],
+      "Network Flow Monitor": [
+        "networkflowmonitor:CreatePerformanceMonitor",
+        "networkflowmonitor:DeletePerformanceMonitor",
+        "networkflowmonitor:GetMonitorScopeSuggestions",
+        "networkflowmonitor:GetPerformanceMonitor",
+        "networkflowmonitor:GetQueryResultsPerformanceMonitor",
+        "networkflowmonitor:GetQueryStatusPerformanceMonitor",
+        "networkflowmonitor:ListPerformanceMonitors",
+        "networkflowmonitor:StartQueryPerformanceMonitor",
+        "networkflowmonitor:StopQueryPerformanceMonitor",
+        "networkflowmonitor:UpdatePerformanceMonitor"
+      ],
+      "Amazon OpenSearch Memory": [
+        "osm:BatchGetEvent",
+        "osm:CreateEvent",
+        "osm:CreateMemory",
+        "osm:CreateSpace",
+        "osm:DeleteEvent",
+        "osm:DeleteMemory",
+        "osm:DeleteSpace",
+        "osm:GetEvent",
+        "osm:GetMemory",
+        "osm:GetSpace",
+        "osm:ListEvents",
+        "osm:ListMemories",
+        "osm:ListSpaces",
+        "osm:ListTagsForResource",
+        "osm:SearchEvents",
+        "osm:SearchMemories",
+        "osm:TagResource",
+        "osm:UntagResource",
+        "osm:UpdateMemory",
+        "osm:UpdateSpace"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-11-14",
     "addedServices": [],
     "removedServices": [],

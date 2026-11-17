@@ -68803,6 +68803,14 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
+          },
+          {
+            "resourceType": "SourceEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_ConnectEndpoints.html"
@@ -69254,6 +69262,14 @@
               "aws:ResourceTag/${TagKey}"
             ],
             "dependentActions": []
+          },
+          {
+            "resourceType": "SourceEndpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mediaconnect/latest/api/API_DisconnectEndpoints.html"
@@ -69659,7 +69675,7 @@
         "accessLevel": "Write",
         "resourceTypes": [
           {
-            "resourceType": "Reservation",
+            "resourceType": "Offering",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -70370,6 +70386,16 @@
         "description": "Grants permission to update entitlements on any flow",
         "accessLevel": "Permissions management, Write",
         "resourceTypes": [
+          {
+            "resourceType": "Entitlement",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": [
+              "iam:PassRole"
+            ]
+          },
           {
             "resourceType": "Flow",
             "required": true,
@@ -85757,6 +85783,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-sensitive-data-api.html#aws-glue-api-sensitive-data-api-CreateCustomEntityType"
       },
       {
+        "name": "CreateDataQualityEvaluationConfig",
+        "permissionOnly": false,
+        "description": "Grants permission to create a Data Quality evaluation configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataQualityEvaluationConfig",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-data-quality-api.html#aws-glue-api-data-quality-api-CreateDataQualityEvaluationConfig"
+      },
+      {
         "name": "CreateDataQualityRuleset",
         "permissionOnly": false,
         "description": "Grants permission to create a Data Quality ruleset",
@@ -86712,6 +86757,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-sensitive-data-api.html#aws-glue-api-sensitive-data-api-DeleteCustomEntityType"
+      },
+      {
+        "name": "DeleteDataQualityEvaluationConfig",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a Data Quality evaluation configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataQualityEvaluationConfig",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-data-quality-api.html#aws-glue-api-data-quality-api-DeleteDataQualityEvaluationConfig"
       },
       {
         "name": "DeleteDataQualityRuleset",
@@ -87982,6 +88044,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/ug/notebook-getting-started.html#create-notebook-permissions-operations"
+      },
+      {
+        "name": "GetDataQualityEvaluationConfig",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a Data Quality evaluation configuration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "dataQualityEvaluationConfig",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-data-quality-api.html#aws-glue-api-data-quality-api-GetDataQualityEvaluationConfig"
       },
       {
         "name": "GetDataQualityModel",
@@ -89511,6 +89590,14 @@
             "dependentActions": []
           },
           {
+            "resourceType": "dataQualityEvaluationConfig",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "database",
             "required": false,
             "conditionKeys": [
@@ -89910,6 +89997,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-sensitive-data-api.html#aws-glue-api-sensitive-data-api-ListGetCustomEntityTypes"
       },
       {
+        "name": "ListDataQualityEvaluationConfigs",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of Data Quality evaluation configurations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "dataQualityEvaluationConfig",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-data-quality-api.html#aws-glue-api-data-quality-api-ListDataQualityEvaluationConfigs"
+      },
+      {
         "name": "ListDataQualityResults",
         "permissionOnly": false,
         "description": "Grants permission to retrieve all Data Quality results",
@@ -90063,6 +90167,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-integrations.html#aws-glue-api-integrations-ListIntegrationResourceProperties"
+      },
+      {
+        "name": "ListIntegrationTableProperties",
+        "permissionOnly": false,
+        "description": "Grants permission to list zero-ETL integration table properties",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-integrations.html#aws-glue-api-integrations-ListIntegrationTableProperties"
       },
       {
         "name": "ListJobUpgradeAnalyses",
@@ -91363,6 +91482,17 @@
             "dependentActions": []
           },
           {
+            "resourceType": "dataQualityEvaluationConfig",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "glue:LakeFormationPermissions"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "dataQualityRuleset",
             "required": false,
             "conditionKeys": [
@@ -91610,6 +91740,16 @@
           },
           {
             "resourceType": "customEntityType",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "glue:LakeFormationPermissions"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "dataQualityEvaluationConfig",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -92026,6 +92166,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-crawler-scheduler.html#aws-glue-api-crawler-scheduler-UpdateCrawlerSchedule"
+      },
+      {
+        "name": "UpdateDataQualityEvaluationConfig",
+        "permissionOnly": false,
+        "description": "Grants permission to update a Data Quality evaluation configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataQualityEvaluationConfig",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/glue/latest/dg/aws-glue-api-data-quality-api.html#aws-glue-api-data-quality-api-UpdateDataQualityEvaluationConfig"
       },
       {
         "name": "UpdateDataQualityRuleset",
@@ -92637,6 +92794,14 @@
         "name": "customEntityType",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:glue:${Region}:${Account}:customEntityType/${CustomEntityTypeId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "dataQualityEvaluationConfig",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:glue:${Region}:${Account}:dataQualityEvaluationConfig/${EvaluationConfigName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -132394,6 +132559,7 @@
               "kms:KeyUsage",
               "kms:MultiRegion",
               "kms:MultiRegionKeyType",
+              "kms:PolicyName",
               "kms:ResourceAliases",
               "kms:ViaService"
             ],
@@ -132677,6 +132843,7 @@
               "kms:KeyUsage",
               "kms:MultiRegion",
               "kms:MultiRegionKeyType",
+              "kms:PolicyName",
               "kms:ResourceAliases",
               "kms:ViaService"
             ],
@@ -133299,6 +133466,12 @@
         "name": "kms:MultiRegionKeyType",
         "apiReferenceUrl": "",
         "description": "Filters access to an API operation based on the MultiRegionKeyType property of the AWS KMS key created by or used in the operation. Use it to qualify authorization of the CreateKey operation or any operation that is authorized for a KMS key resource",
+        "type": "String"
+      },
+      {
+        "name": "kms:PolicyName",
+        "apiReferenceUrl": "",
+        "description": "Filters access to the GetKeyPolicy and PutKeyPolicy operations based on the value of the PolicyName parameter in the request",
         "type": "String"
       },
       {
@@ -135042,6 +135215,59 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_CreateNetworkConnector.html"
       },
       {
+        "name": "CreateRuntime",
+        "permissionOnly": false,
+        "description": "Grants permission to create an AWS Lambda customer-managed runtime",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runtime",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_CreateRuntime.html"
+      },
+      {
+        "name": "CreateRuntimeAlias",
+        "permissionOnly": false,
+        "description": "Grants permission to create an AWS Lambda customer-managed runtime alias",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runtimeAlias",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_CreateRuntimeAlias.html"
+      },
+      {
+        "name": "CreateRuntimeVersion",
+        "permissionOnly": false,
+        "description": "Grants permission to create an AWS Lambda customer-managed runtime version",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runtimeVersion",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_CreateRuntimeVersion.html"
+      },
+      {
         "name": "CreateWebFunction",
         "permissionOnly": false,
         "description": "Grants permission to create a Lambda web function",
@@ -135351,7 +135577,16 @@
         "resourceTypes": [
           {
             "resourceType": "function",
-            "required": true,
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "lambda:Principal"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "runtime",
+            "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "lambda:Principal"
@@ -135360,7 +135595,7 @@
           },
           {
             "resourceType": "webFunction",
-            "required": true,
+            "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "lambda:Principal"
@@ -135369,6 +135604,57 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_DeleteResourcePolicy.html"
+      },
+      {
+        "name": "DeleteRuntime",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an AWS Lambda customer-managed runtime",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runtime",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_DeleteRuntime.html"
+      },
+      {
+        "name": "DeleteRuntimeAlias",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an AWS Lambda customer-managed runtime alias",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runtimeAlias",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_DeleteRuntimeAlias.html"
+      },
+      {
+        "name": "DeleteRuntimeVersion",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an AWS Lambda customer-managed runtime version",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runtimeVersion",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_DeleteRuntimeVersion.html"
       },
       {
         "name": "DeleteWebFunction",
@@ -135860,7 +136146,15 @@
         "resourceTypes": [
           {
             "resourceType": "function",
-            "required": true,
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "runtime",
+            "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
@@ -135868,7 +136162,7 @@
           },
           {
             "resourceType": "webFunction",
-            "required": true,
+            "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
@@ -135876,6 +136170,40 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_GetResourcePolicy.html"
+      },
+      {
+        "name": "GetRuntime",
+        "permissionOnly": false,
+        "description": "Grants permission to view details about an AWS Lambda customer-managed runtime",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "runtime",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_GetRuntime.html"
+      },
+      {
+        "name": "GetRuntimeAlias",
+        "permissionOnly": false,
+        "description": "Grants permission to view details about an AWS Lambda customer-managed runtime alias",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "runtimeAlias",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_GetRuntimeAlias.html"
       },
       {
         "name": "GetRuntimeManagementConfig",
@@ -135893,6 +136221,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_GetRuntimeManagementConfig.html"
+      },
+      {
+        "name": "GetRuntimeVersion",
+        "permissionOnly": false,
+        "description": "Grants permission to view details about an AWS Lambda customer-managed runtime version",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "runtimeVersion",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_GetRuntimeVersion.html"
       },
       {
         "name": "GetWebAccountSettings",
@@ -136336,9 +136681,58 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_ListProvisionedConcurrencyConfigs.html"
       },
       {
+        "name": "ListRuntimeAliases",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of AWS Lambda customer-managed runtime aliases",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "runtime",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_ListRuntimeAliases.html"
+      },
+      {
+        "name": "ListRuntimeVersions",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of AWS Lambda customer-managed runtime versions",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "runtime",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_ListRuntimeVersions.html"
+      },
+      {
+        "name": "ListRuntimes",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of AWS Lambda customer-managed runtimes",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_ListRuntimes.html"
+      },
+      {
         "name": "ListTags",
         "permissionOnly": false,
-        "description": "Grants permission to retrieve a list of tags for an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, or a web function resource",
+        "description": "Grants permission to retrieve a list of tags for an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, a web function resource, or a runtime resource",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -136383,6 +136777,14 @@
           },
           {
             "resourceType": "networkConnector",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "runtime",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -136626,7 +137028,16 @@
         "resourceTypes": [
           {
             "resourceType": "function",
-            "required": true,
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "lambda:Principal"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "runtime",
+            "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "lambda:Principal"
@@ -136635,7 +137046,7 @@
           },
           {
             "resourceType": "webFunction",
-            "required": true,
+            "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "lambda:Principal"
@@ -136695,6 +137106,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_RemovePermission.html"
+      },
+      {
+        "name": "RestoreRuntime",
+        "permissionOnly": false,
+        "description": "Grants permission to restore an AWS Lambda customer-managed runtime",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runtime",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_RestoreRuntime.html"
       },
       {
         "name": "ResumeMicrovm",
@@ -136818,7 +137246,7 @@
       {
         "name": "TagResource",
         "permissionOnly": false,
-        "description": "Grants permission to add tags to an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, or a web function resource",
+        "description": "Grants permission to add tags to an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, a web function resource, or a runtime resource",
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
@@ -136873,6 +137301,16 @@
           },
           {
             "resourceType": "networkConnector",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "runtime",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -136914,7 +137352,7 @@
       {
         "name": "UntagResource",
         "permissionOnly": false,
-        "description": "Grants permission to remove tags from an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, or a web function resource",
+        "description": "Grants permission to remove tags from an AWS Lambda function, event source mapping, capacity provider, code signing configuration, network connector, MicroVM image resource, a web function resource, or a runtime resource",
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
@@ -136964,6 +137402,15 @@
           },
           {
             "resourceType": "networkConnector",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "runtime",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -137203,6 +137650,57 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_UpdateNetworkConnector.html"
       },
       {
+        "name": "UpdateRuntime",
+        "permissionOnly": false,
+        "description": "Grants permission to update an AWS Lambda customer-managed runtime",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runtime",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_UpdateRuntime.html"
+      },
+      {
+        "name": "UpdateRuntimeAlias",
+        "permissionOnly": false,
+        "description": "Grants permission to update an AWS Lambda customer-managed runtime alias",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runtimeAlias",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_UpdateRuntimeAlias.html"
+      },
+      {
+        "name": "UpdateRuntimeVersion",
+        "permissionOnly": false,
+        "description": "Grants permission to update an AWS Lambda customer-managed runtime version",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "runtimeVersion",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_UpdateRuntimeVersion.html"
+      },
+      {
         "name": "UpdateWebFunctionEndpoint",
         "permissionOnly": false,
         "description": "Grants permission to update an endpoint for a Lambda web function",
@@ -137303,6 +137801,30 @@
         "name": "networkConnector",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:lambda:${Region}:${Account}:network-connector:${NetworkConnectorId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "runtime",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:lambda:${Region}:${Account}:runtime/${RuntimeName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "runtimeAlias",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:lambda:${Region}:${Account}:runtime/${RuntimeName}/alias/${Name}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "runtimeVersion",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:lambda:${Region}:${Account}:runtime/${RuntimeName}/version/${Name}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -145213,6 +145735,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_ListContainerAssociations.html"
       },
       {
+        "name": "ListContextStores",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the context stores associated with the transit gateway firewalls in an account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_ListContextStores.html"
+      },
+      {
         "name": "ListFirewallPolicies",
         "permissionOnly": false,
         "description": "Grants permission to retrieve the metadata for firewall policies",
@@ -145347,6 +145884,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_ListProxyRuleGroups.html"
+      },
+      {
+        "name": "ListResourcesInContextStore",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the resource contexts recorded in a context store",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/network-firewall/latest/APIReference/API_ListResourcesInContextStore.html"
       },
       {
         "name": "ListRuleGroups",
@@ -201131,6 +201683,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
       },
       {
+        "name": "CancelSkillCreationJob",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke CancelSkillCreationJob on AWS Transform custom. Does not grant reporting a job's progress or result, which is UpdateSkillCreationJob",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "skill-creation-job",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
         "name": "CompleteTransformationPackageUpload",
         "permissionOnly": false,
         "description": "Grants permission to invoke CompleteTransformationPackageUpload on AWS Transform custom",
@@ -201138,6 +201707,23 @@
         "resourceTypes": [
           {
             "resourceType": "package",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
+        "name": "ConnectSource",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke ConnectSource on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "source",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -201225,6 +201811,25 @@
         "resourceTypes": [
           {
             "resourceType": "remediation",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
+        "name": "CreateRemediationPlan",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke CreateRemediationPlan on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "remediation-plan",
             "required": true,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -201369,6 +201974,23 @@
         "resourceTypes": [
           {
             "resourceType": "remediation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
+        "name": "DeleteRemediationPlan",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke DeleteRemediationPlan on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "remediation-plan",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -201547,6 +202169,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
       },
       {
+        "name": "GetIssueGroup",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke GetIssueGroup on AWS Transform custom",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "issue-group",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
         "name": "GetKnowledgeItem",
         "permissionOnly": false,
         "description": "Grants permission to invoke GetKnowledgeItem on AWS Transform custom",
@@ -201581,6 +202220,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
       },
       {
+        "name": "GetRemediationPlan",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke GetRemediationPlan on AWS Transform custom",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "remediation-plan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
         "name": "GetRepository",
         "permissionOnly": false,
         "description": "Grants permission to invoke GetRepository on AWS Transform custom",
@@ -201605,6 +202261,23 @@
         "resourceTypes": [
           {
             "resourceType": "package",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
+        "name": "GetSkillCreationJob",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke GetSkillCreationJob on AWS Transform custom",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "skill-creation-job",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -201728,9 +202401,39 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
       },
       {
+        "name": "ListIssueGroups",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke ListIssueGroups on AWS Transform custom",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
         "name": "ListKnowledgeItems",
         "permissionOnly": false,
         "description": "Grants permission to invoke ListKnowledgeItems on AWS Transform custom",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
+        "name": "ListRemediationPlans",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke ListRemediationPlans on AWS Transform custom",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -201761,6 +202464,21 @@
         "name": "ListRepositories",
         "permissionOnly": false,
         "description": "Grants permission to invoke ListRepositories on AWS Transform custom",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
+        "name": "ListSkillCreationJobs",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke ListSkillCreationJobs on AWS Transform custom",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -201884,6 +202602,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
       },
       {
+        "name": "StartSkillCreationJob",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke StartSkillCreationJob on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "skill-creation-job",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
         "name": "TagResource",
         "permissionOnly": false,
         "description": "Grants permission to invoke TagResource on AWS Transform custom",
@@ -201911,6 +202648,16 @@
           },
           {
             "resourceType": "finding",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "issue-group",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -201950,7 +202697,27 @@
             "dependentActions": []
           },
           {
+            "resourceType": "remediation-plan",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "repository",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "skill-creation-job",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -202023,6 +202790,15 @@
             "dependentActions": []
           },
           {
+            "resourceType": "issue-group",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "knowledge-item",
             "required": false,
             "conditionKeys": [
@@ -202050,7 +202826,25 @@
             "dependentActions": []
           },
           {
+            "resourceType": "remediation-plan",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "repository",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "skill-creation-job",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -202122,6 +202916,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
       },
       {
+        "name": "UpdateIssueGroup",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke UpdateIssueGroup on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "issue-group",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
         "name": "UpdateKnowledgeItemConfiguration",
         "permissionOnly": false,
         "description": "Grants permission to invoke UpdateKnowledgeItemConfiguration on AWS Transform custom",
@@ -202173,6 +202984,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
       },
       {
+        "name": "UpdateRemediationPlan",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke UpdateRemediationPlan on AWS Transform custom",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "remediation-plan",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
         "name": "UpdateRepository",
         "permissionOnly": false,
         "description": "Grants permission to invoke UpdateRepository on AWS Transform custom",
@@ -202180,6 +203008,23 @@
         "resourceTypes": [
           {
             "resourceType": "repository",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/transform/latest/userguide/custom.html"
+      },
+      {
+        "name": "UpdateSkillCreationJob",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke UpdateSkillCreationJob on AWS Transform custom. Granted to a skill-creation job's executor, which needs only this action and GetSkillCreationJob; it does not grant cancelling a job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "skill-creation-job",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -202233,6 +203078,14 @@
         ]
       },
       {
+        "name": "issue-group",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:transform-custom:${Region}:${Account}:issue-group/${IssueGroupId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "knowledge-item",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:transform-custom:${Region}:${Account}:package/${TransformationPackageName}/knowledge-item/${Id}",
@@ -202257,9 +203110,25 @@
         ]
       },
       {
+        "name": "remediation-plan",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:transform-custom:${Region}:${Account}:remediation-plan/${RemediationPlanId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "repository",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:transform-custom:${Region}:${Account}:repository/${RepositoryId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "skill-creation-job",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:transform-custom:${Region}:${Account}:skill-creation-job/${SkillCreationJobId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -207285,7 +208154,8 @@
               "aws:TagKeys"
             ],
             "dependentActions": [
-              "wafv2:TagResource"
+              "wafv2:TagResource",
+              "iam:PassRole"
             ]
           },
           {
@@ -207296,7 +208166,8 @@
               "aws:TagKeys"
             ],
             "dependentActions": [
-              "wafv2:TagResource"
+              "wafv2:TagResource",
+              "iam:PassRole"
             ]
           },
           {
@@ -207308,7 +208179,8 @@
               "aws:TagKeys"
             ],
             "dependentActions": [
-              "wafv2:TagResource"
+              "wafv2:TagResource",
+              "iam:PassRole"
             ]
           },
           {
@@ -207320,7 +208192,8 @@
               "aws:TagKeys"
             ],
             "dependentActions": [
-              "wafv2:TagResource"
+              "wafv2:TagResource",
+              "iam:PassRole"
             ]
           },
           {
@@ -207332,7 +208205,8 @@
               "aws:TagKeys"
             ],
             "dependentActions": [
-              "wafv2:TagResource"
+              "wafv2:TagResource",
+              "iam:PassRole"
             ]
           }
         ],
@@ -208494,7 +209368,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           },
           {
             "resourceType": "managedruleset",
@@ -208502,7 +209378,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           },
           {
             "resourceType": "regexpatternset",
@@ -208510,7 +209388,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           },
           {
             "resourceType": "rulegroup",
@@ -208518,7 +209398,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           },
           {
             "resourceType": "webacl",
@@ -208526,7 +209408,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_UpdateWebACL.html"
@@ -217663,6 +218547,21 @@
         "name": "SearchForCases",
         "permissionOnly": false,
         "description": "Grants permission to return a list of AWS Support cases that matches the given inputs",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awssupport/latest/user/accessing-support.html"
+      },
+      {
+        "name": "SearchInteractions",
+        "permissionOnly": false,
+        "description": "Grants permission to search interactions using filters",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -284648,6 +285547,31 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_ActivateSubscription.html"
       },
       {
+        "name": "CreateDataset",
+        "permissionOnly": false,
+        "description": "Grants permission to create a dataset within a domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_CreateDataset.html"
+      },
+      {
         "name": "CreateDomain",
         "permissionOnly": false,
         "description": "Grants permission to create a new domain for managing HealthAgent resources",
@@ -284719,6 +285643,31 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_DeactivateSubscription.html"
       },
       {
+        "name": "DeleteDataset",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a dataset",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_DeleteDataset.html"
+      },
+      {
         "name": "DeleteDomain",
         "permissionOnly": false,
         "description": "Grants permission to delete a domain and all associated resources",
@@ -284734,6 +285683,31 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_DeleteDomain.html"
+      },
+      {
+        "name": "GetDataset",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve information about a dataset",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_GetDataset.html"
       },
       {
         "name": "GetDomain",
@@ -284768,6 +285742,31 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_GetDomainAnalytics.html"
+      },
+      {
+        "name": "GetMedicalCodingJob",
+        "permissionOnly": false,
+        "description": "Grants permission to get details of a started medical coding job",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "MedicalCodingJob",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_GetMedicalCodingJob.html"
       },
       {
         "name": "GetMedicalScribeListeningSession",
@@ -284845,6 +285844,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_GetSubscription.html"
       },
       {
+        "name": "ListDatasets",
+        "permissionOnly": false,
+        "description": "Grants permission to list the datasets within a domain",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_ListDatasets.html"
+      },
+      {
         "name": "ListDomains",
         "permissionOnly": false,
         "description": "Grants permission to list domains for a given account",
@@ -284911,6 +285927,31 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_ListTagsForResource.html"
       },
       {
+        "name": "StartMedicalCodingJob",
+        "permissionOnly": false,
+        "description": "Grants permission to start a medical coding job",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "MedicalCodingJob",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_StartMedicalCodingJob.html"
+      },
+      {
         "name": "StartMedicalScribeListeningSession",
         "permissionOnly": false,
         "description": "Grants permission to start a new Medical Scribe listening session for real-time audio transcription",
@@ -284961,6 +286002,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_StartPatientInsightsJob.html"
       },
       {
+        "name": "SubmitFeedback",
+        "permissionOnly": false,
+        "description": "Grants permission to submit feedback on the output of a job/session within a domain",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Domain",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connecthealth/latest/APIReference/API_SubmitFeedback.html"
+      },
+      {
         "name": "TagResource",
         "permissionOnly": false,
         "description": "Grants permission to add the specified tags to the specified resource",
@@ -285008,6 +286066,14 @@
         ]
       },
       {
+        "name": "Dataset",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/dataset/${DatasetId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "Domain",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}",
@@ -285019,6 +286085,14 @@
         "name": "Integration",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/integration/${IntegrationId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "MedicalCodingJob",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:health-agent:${Region}:${Account}:domain/${DomainId}/medical-coding-job/${JobId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -386145,6 +387219,430 @@
     ]
   },
   {
+    "name": "Amazon OpenSearch Memory",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_opensearchmemory.html",
+    "servicePrefix": "osm",
+    "actions": [
+      {
+        "name": "BatchGetEvent",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve multiple events from a session in an OpenSearch Memory space",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "osm:actorId",
+              "osm:sessionId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_BatchGetEvent.html"
+      },
+      {
+        "name": "CreateEvent",
+        "permissionOnly": false,
+        "description": "Grants permission to submit an event to a session within an OpenSearch Memory space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "osm:actorId",
+              "osm:sessionId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_CreateEvent.html"
+      },
+      {
+        "name": "CreateMemory",
+        "permissionOnly": false,
+        "description": "Grants permission to submit a pre-formed memory into an OpenSearch Memory space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "osm:actorId",
+              "osm:strategyName"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_CreateMemory.html"
+      },
+      {
+        "name": "CreateSpace",
+        "permissionOnly": false,
+        "description": "Grants permission to create an OpenSearch Memory space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_CreateSpace.html"
+      },
+      {
+        "name": "DeleteEvent",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an event from a session within an OpenSearch Memory space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "osm:actorId",
+              "osm:sessionId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_DeleteEvent.html"
+      },
+      {
+        "name": "DeleteMemory",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a single memory from an OpenSearch Memory space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "osm:actorId",
+              "osm:strategyName"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_DeleteMemory.html"
+      },
+      {
+        "name": "DeleteSpace",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an OpenSearch Memory space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_DeleteSpace.html"
+      },
+      {
+        "name": "GetEvent",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a single event from an OpenSearch Memory space",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "osm:actorId",
+              "osm:sessionId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_GetEvent.html"
+      },
+      {
+        "name": "GetMemory",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a single memory from an OpenSearch Memory space",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "osm:actorId",
+              "osm:strategyName"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_GetMemory.html"
+      },
+      {
+        "name": "GetSpace",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve metadata about an OpenSearch Memory space",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_GetSpace.html"
+      },
+      {
+        "name": "ListEvents",
+        "permissionOnly": false,
+        "description": "Grants permission to list event metadata for a session within an OpenSearch Memory space",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "osm:actorId",
+              "osm:sessionId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_ListEvents.html"
+      },
+      {
+        "name": "ListMemories",
+        "permissionOnly": false,
+        "description": "Grants permission to enumerate the memories in an OpenSearch Memory space",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "osm:actorId",
+              "osm:strategyName"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_ListMemories.html"
+      },
+      {
+        "name": "ListSpaces",
+        "permissionOnly": false,
+        "description": "Grants permission to list the OpenSearch Memory spaces in the account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_ListSpaces.html"
+      },
+      {
+        "name": "ListTagsForResource",
+        "permissionOnly": false,
+        "description": "Grants permission to list the tags on an OpenSearch Memory space",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_ListTagsForResource.html"
+      },
+      {
+        "name": "SearchEvents",
+        "permissionOnly": false,
+        "description": "Grants permission to run a relevance search over the raw event index of an OpenSearch Memory space",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "osm:actorId",
+              "osm:sessionId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_SearchEvents.html"
+      },
+      {
+        "name": "SearchMemories",
+        "permissionOnly": false,
+        "description": "Grants permission to run a relevance search over the memory indexes of an OpenSearch Memory space",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "osm:actorId",
+              "osm:strategyName"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_SearchMemories.html"
+      },
+      {
+        "name": "TagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to add or overwrite tags on an OpenSearch Memory space",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_TagResource.html"
+      },
+      {
+        "name": "UntagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to remove tags from an OpenSearch Memory space",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_UntagResource.html"
+      },
+      {
+        "name": "UpdateMemory",
+        "permissionOnly": false,
+        "description": "Grants permission to update a single memory in an OpenSearch Memory space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "osm:actorId",
+              "osm:strategyName"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_UpdateMemory.html"
+      },
+      {
+        "name": "UpdateSpace",
+        "permissionOnly": false,
+        "description": "Grants permission to update the configuration of an OpenSearch Memory space",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "space",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/MemoryAPIReference/API_UpdateSpace.html"
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "space",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:osm:${Region}:${Account}:space/${SpaceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      }
+    ],
+    "conditionKeys": [
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tags that are passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tags associated with the resource",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tag keys that are passed in the request",
+        "type": "ArrayOfString"
+      },
+      {
+        "name": "osm:actorId",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the actor IDs specified in the request",
+        "type": "ArrayOfString"
+      },
+      {
+        "name": "osm:sessionId",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the session IDs specified in the request",
+        "type": "ArrayOfString"
+      },
+      {
+        "name": "osm:strategyName",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the memory strategy names specified in the request",
+        "type": "ArrayOfString"
+      }
+    ]
+  },
+  {
     "name": "Amazon OpenSearch Serverless",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_opensearchserverless.html",
     "servicePrefix": "aoss",
@@ -386895,7 +388393,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "osm:ListTagsForResource"
+            ]
           },
           {
             "resourceType": "CollectionGroup",
@@ -386903,7 +388403,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "osm:ListTagsForResource"
+            ]
           },
           {
             "resourceType": "IngestionJob",
@@ -386911,7 +388413,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "osm:ListTagsForResource"
+            ]
           },
           {
             "resourceType": "IngestionStream",
@@ -386919,7 +388423,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "osm:ListTagsForResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_ListTagsForResource.html"
@@ -386953,7 +388459,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "osm:TagResource"
+            ]
           },
           {
             "resourceType": "CollectionGroup",
@@ -386963,7 +388471,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "osm:TagResource"
+            ]
           },
           {
             "resourceType": "IngestionJob",
@@ -386973,7 +388483,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "osm:TagResource"
+            ]
           },
           {
             "resourceType": "IngestionStream",
@@ -386983,7 +388495,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "osm:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_TagResource.html"
@@ -387001,7 +388515,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "osm:UntagResource"
+            ]
           },
           {
             "resourceType": "CollectionGroup",
@@ -387010,7 +388526,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "osm:UntagResource"
+            ]
           },
           {
             "resourceType": "IngestionJob",
@@ -387019,7 +388537,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "osm:UntagResource"
+            ]
           },
           {
             "resourceType": "IngestionStream",
@@ -387028,7 +388548,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "osm:UntagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/opensearch-service/latest/ServerlessAPIReference/API_UntagResource.html"
@@ -436383,7 +437905,7 @@
       {
         "name": "QueryVectors",
         "permissionOnly": false,
-        "description": "Grants permission to find approximate nearest neighbors within a specified search vector index for a given query vector",
+        "description": "Grants permission to query a specified vector index using vector similarity, full-text, or hybrid search",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -436475,6 +437997,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3VectorBuckets_UpdateIndexMode.html"
+      },
+      {
+        "name": "UpdateMetadataConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to update the metadata configuration for a specified vector index",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Index",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "s3vectors:VectorBucketTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonS3/latest/API/API_S3VectorBuckets_UpdateMetadataConfiguration.html"
       }
     ],
     "resourceTypes": [
@@ -437011,6 +438551,18 @@
           },
           {
             "resourceType": "inference-recommendations-job",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "sagemaker:ResourceTag/${TagKey}",
+              "sagemaker:TaggingAction"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "inference-router",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -438546,6 +440098,26 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceRecommendationsJob.html"
       },
       {
+        "name": "CreateInferenceRouter",
+        "permissionOnly": false,
+        "description": "Grants permission to create an inference router",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "inference-router",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_CreateInferenceRouter.html"
+      },
+      {
         "name": "CreateJob",
         "permissionOnly": false,
         "description": "Grants permission to create a SageMaker model customization job",
@@ -439868,6 +441440,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteEndpointConfig.html"
       },
       {
+        "name": "DeleteEndpointPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the resource-based policy of an endpoint",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteEndpointPolicy.html"
+      },
+      {
         "name": "DeleteExperiment",
         "permissionOnly": false,
         "description": "Grants permission to delete an experiment",
@@ -440115,6 +441705,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteInferenceExperiment.html"
+      },
+      {
+        "name": "DeleteInferenceRouter",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an inference router",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "inference-router",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DeleteInferenceRouter.html"
       },
       {
         "name": "DeleteJob",
@@ -440880,6 +442488,16 @@
           },
           {
             "resourceType": "inference-recommendations-job",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "inference-router",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -442060,6 +443678,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeInferenceRecommendationsJob.html"
       },
       {
+        "name": "DescribeInferenceRouter",
+        "permissionOnly": false,
+        "description": "Grants permission to return the description of an inference router",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "inference-router",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_DescribeInferenceRouter.html"
+      },
+      {
         "name": "DescribeJob",
         "permissionOnly": false,
         "description": "Grants permission to return information about a SageMaker model customization job",
@@ -442931,6 +444567,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_edge_GetDeviceRegistration.html"
       },
       {
+        "name": "GetEndpointPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to get the resource-based policy of an endpoint",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_GetEndpointPolicy.html"
+      },
+      {
         "name": "GetLineageGroupPolicy",
         "permissionOnly": false,
         "description": "Grants permission to retreive a lineage group policy",
@@ -443108,6 +444762,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "sagemaker:ResourceTag/${TagKey}",
+              "sagemaker:SourceInferenceRouterArn",
               "sagemaker:TargetModel"
             ],
             "dependentActions": []
@@ -443118,6 +444773,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "sagemaker:ResourceTag/${TagKey}",
+              "sagemaker:SourceInferenceRouterArn",
               "sagemaker:TargetModel"
             ],
             "dependentActions": []
@@ -443136,7 +444792,8 @@
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
-              "sagemaker:ResourceTag/${TagKey}"
+              "sagemaker:ResourceTag/${TagKey}",
+              "sagemaker:SourceInferenceRouterArn"
             ],
             "dependentActions": []
           }
@@ -443169,6 +444826,42 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeEndpointWithResponseStream.html"
+      },
+      {
+        "name": "InvokeInferenceRouter",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke an inference router",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "inference-router",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeInferenceRouter.html"
+      },
+      {
+        "name": "InvokeInferenceRouterAsync",
+        "permissionOnly": false,
+        "description": "Grants permission to invoke an inference router in an asynchronous manner",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "inference-router",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_runtime_InvokeInferenceRouterAsync.html"
       },
       {
         "name": "ListAIBenchmarkJobs",
@@ -443850,6 +445543,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListInferenceRecommendationsJobs.html"
+      },
+      {
+        "name": "ListInferenceRouters",
+        "permissionOnly": false,
+        "description": "Grants permission to list inference routers",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListInferenceRouters.html"
       },
       {
         "name": "ListJobSchemaVersions",
@@ -444773,6 +446481,15 @@
             "dependentActions": []
           },
           {
+            "resourceType": "inference-router",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "job",
             "required": false,
             "conditionKeys": [
@@ -445197,6 +446914,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_ListWorkteams.html"
+      },
+      {
+        "name": "PutEndpointPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to attach or replace the resource-based policy of an endpoint",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_PutEndpointPolicy.html"
       },
       {
         "name": "PutLineageGroupPolicy",
@@ -446555,6 +448290,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateInferenceExperiment.html"
       },
       {
+        "name": "UpdateInferenceRouter",
+        "permissionOnly": false,
+        "description": "Grants permission to update an inference router",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "inference-router",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "sagemaker:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/sagemaker/latest/APIReference/API_UpdateInferenceRouter.html"
+      },
+      {
         "name": "UpdateMlflowApp",
         "permissionOnly": false,
         "description": "Grants permission to update an MLflow app",
@@ -447322,6 +449075,15 @@
         ]
       },
       {
+        "name": "inference-router",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:sagemaker:${Region}:${Account}:inference-router/${InferenceRouterName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "sagemaker:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "job",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:sagemaker:${Region}:${Account}:job/${JobCategory}/${JobName}",
@@ -447970,6 +449732,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by limiting memory size used for Serverless inference in the request",
         "type": "Numeric"
+      },
+      {
+        "name": "sagemaker:SourceInferenceRouterArn",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the ARN of the inference router that the request was routed through",
+        "type": "ARN"
       },
       {
         "name": "sagemaker:SpaceSharingType",
@@ -454544,6 +456312,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_PutAccountDedicatedIpWarmupAttributes.html"
+      },
+      {
+        "name": "PutAccountDeliveryAttributes",
+        "permissionOnly": false,
+        "description": "Grants permission to change the delivery attributes for your account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "ses:ApiVersion"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_PutAccountDeliveryAttributes.html"
       },
       {
         "name": "PutAccountDetails",
@@ -473823,6 +475608,27 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_CreateMonitor.html"
       },
       {
+        "name": "CreatePerformanceMonitor",
+        "permissionOnly": false,
+        "description": "Grants permission to create a performance monitor",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "performancemonitor",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "networkflowmonitor:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_CreatePerformanceMonitor.html"
+      },
+      {
         "name": "CreateScope",
         "permissionOnly": false,
         "description": "Grants permission to create a scope",
@@ -473860,6 +475666,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_DeleteMonitor.html"
       },
       {
+        "name": "DeletePerformanceMonitor",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a performance monitor",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "performancemonitor",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_DeletePerformanceMonitor.html"
+      },
+      {
         "name": "DeleteScope",
         "permissionOnly": false,
         "description": "Grants permission to delete a scope",
@@ -473894,6 +475717,40 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_GetMonitor.html"
       },
       {
+        "name": "GetMonitorScopeSuggestions",
+        "permissionOnly": false,
+        "description": "Grants permission to get scope suggestions for a performance monitor",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "performancemonitor",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_GetMonitorScopeSuggestions.html"
+      },
+      {
+        "name": "GetPerformanceMonitor",
+        "permissionOnly": false,
+        "description": "Grants permission to get information about a performance monitor",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "performancemonitor",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_GetPerformanceMonitor.html"
+      },
+      {
         "name": "GetQueryResultsMonitorTopContributors",
         "permissionOnly": false,
         "description": "Grants permission to get the results of a query that retrieves top contributors data for a monitor",
@@ -473909,6 +475766,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_GetQueryResultsMonitorTopContributors.html"
+      },
+      {
+        "name": "GetQueryResultsPerformanceMonitor",
+        "permissionOnly": false,
+        "description": "Grants permission to get the results of a performance monitor query",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "performancemonitor",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_GetQueryResultsPerformanceMonitor.html"
       },
       {
         "name": "GetQueryResultsWorkloadInsightsTopContributors",
@@ -473960,6 +475834,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_GetQueryStatusMonitorTopContributors.html"
+      },
+      {
+        "name": "GetQueryStatusPerformanceMonitor",
+        "permissionOnly": false,
+        "description": "Grants permission to get the status of a performance monitor query",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "performancemonitor",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_GetQueryStatusPerformanceMonitor.html"
       },
       {
         "name": "GetQueryStatusWorkloadInsightsTopContributors",
@@ -474028,6 +475919,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_ListMonitors.html"
       },
       {
+        "name": "ListPerformanceMonitors",
+        "permissionOnly": false,
+        "description": "Grants permission to list the performance monitors in an account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_ListPerformanceMonitors.html"
+      },
+      {
         "name": "ListScopes",
         "permissionOnly": false,
         "description": "Grants permission to get all scopes for an account",
@@ -474050,6 +475956,14 @@
         "resourceTypes": [
           {
             "resourceType": "monitor",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "performancemonitor",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -474098,6 +476012,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_StartQueryMonitorTopContributors.html"
+      },
+      {
+        "name": "StartQueryPerformanceMonitor",
+        "permissionOnly": false,
+        "description": "Grants permission to start a query for a performance monitor",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "performancemonitor",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_StartQueryPerformanceMonitor.html"
       },
       {
         "name": "StartQueryWorkloadInsightsTopContributors",
@@ -474151,6 +476082,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_StopQueryMonitorTopContributors.html"
       },
       {
+        "name": "StopQueryPerformanceMonitor",
+        "permissionOnly": false,
+        "description": "Grants permission to stop a query for a performance monitor",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "performancemonitor",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_StopQueryPerformanceMonitor.html"
+      },
+      {
         "name": "StopQueryWorkloadInsightsTopContributors",
         "permissionOnly": false,
         "description": "Grants permission to stop a query for retrieving top contributors for workload insights",
@@ -474201,6 +476149,16 @@
             "dependentActions": []
           },
           {
+            "resourceType": "performancemonitor",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "scope",
             "required": false,
             "conditionKeys": [
@@ -474221,6 +476179,15 @@
         "resourceTypes": [
           {
             "resourceType": "monitor",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "performancemonitor",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -474258,6 +476225,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_UpdateMonitor.html"
       },
       {
+        "name": "UpdatePerformanceMonitor",
+        "permissionOnly": false,
+        "description": "Grants permission to update a performance monitor",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "performancemonitor",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkflowmonitor/2.0/APIReference/API_UpdatePerformanceMonitor.html"
+      },
+      {
         "name": "UpdateScope",
         "permissionOnly": false,
         "description": "Grants permission to update a scope",
@@ -474280,6 +476264,14 @@
         "name": "monitor",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:networkflowmonitor:${Region}:${Account}:monitor/${MonitorName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "performancemonitor",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:networkflowmonitor:${Region}:${Account}:performancemonitor/${MonitorName}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
