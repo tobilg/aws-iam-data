@@ -4948,6 +4948,1093 @@
     ]
   },
   {
+    "name": "AWS API Portal",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_apiportal.html",
+    "servicePrefix": "apiportal",
+    "actions": [
+      {
+        "name": "AssociateManagedApis",
+        "permissionOnly": false,
+        "description": "Grants permission to associate managed APIs with a product",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Product",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_AssociateManagedApis.html"
+      },
+      {
+        "name": "CreateManagedApi",
+        "permissionOnly": false,
+        "description": "Grants permission to create a managed API from a discovered API",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ManagedApi",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_CreateManagedApi.html"
+      },
+      {
+        "name": "CreatePortal",
+        "permissionOnly": false,
+        "description": "Grants permission to create a portal",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Portal",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_CreatePortal.html"
+      },
+      {
+        "name": "CreatePortalPreview",
+        "permissionOnly": false,
+        "description": "Grants permission to create a preview of a portal",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Portal",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_CreatePortalPreview.html"
+      },
+      {
+        "name": "CreateProduct",
+        "permissionOnly": false,
+        "description": "Grants permission to create a product",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Product",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_CreateProduct.html"
+      },
+      {
+        "name": "CreateProductApiPage",
+        "permissionOnly": false,
+        "description": "Grants permission to create an API reference page in a product",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ProductApiPage",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_CreateProductApiPage.html"
+      },
+      {
+        "name": "CreateProductPage",
+        "permissionOnly": false,
+        "description": "Grants permission to create a documentation page in a product",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ProductPage",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_CreateProductPage.html"
+      },
+      {
+        "name": "DeleteDiscoveryConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the API discovery configuration for an account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DiscoveryConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_DeleteDiscoveryConfiguration.html"
+      },
+      {
+        "name": "DeleteManagedApi",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a managed API",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ManagedApi",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_DeleteManagedApi.html"
+      },
+      {
+        "name": "DeleteOrganizationDiscoveryConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the API discovery configuration for an organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "OrganizationDiscoveryConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_DeleteOrganizationDiscoveryConfiguration.html"
+      },
+      {
+        "name": "DeletePortal",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a portal",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Portal",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_DeletePortal.html"
+      },
+      {
+        "name": "DeleteProduct",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a product",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Product",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_DeleteProduct.html"
+      },
+      {
+        "name": "DeleteProductApiPage",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an API reference page from a product",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ProductApiPage",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_DeleteProductApiPage.html"
+      },
+      {
+        "name": "DeleteProductPage",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a documentation page from a product",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ProductPage",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_DeleteProductPage.html"
+      },
+      {
+        "name": "DeleteProductSharingPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the sharing policy of a product",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ProductSharingPolicy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_DeleteProductSharingPolicy.html"
+      },
+      {
+        "name": "DisassociateManagedApis",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate managed APIs from a product",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Product",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_DisassociateManagedApis.html"
+      },
+      {
+        "name": "GetApiInventoryItem",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve details of a discovered API in the API inventory",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_GetApiInventoryItem.html"
+      },
+      {
+        "name": "GetDiscoveryConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the API discovery configuration for an account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "DiscoveryConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_GetDiscoveryConfiguration.html"
+      },
+      {
+        "name": "GetManagedApi",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a managed API",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ManagedApi",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_GetManagedApi.html"
+      },
+      {
+        "name": "GetOrganizationDiscoveryConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the API discovery configuration for an organization",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "OrganizationDiscoveryConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_GetOrganizationDiscoveryConfiguration.html"
+      },
+      {
+        "name": "GetPortal",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a portal",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Portal",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_GetPortal.html"
+      },
+      {
+        "name": "GetProduct",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a product",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Product",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_GetProduct.html"
+      },
+      {
+        "name": "GetProductApiPage",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an API reference page in a product",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ProductApiPage",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_GetProductApiPage.html"
+      },
+      {
+        "name": "GetProductPage",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a documentation page in a product",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ProductPage",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_GetProductPage.html"
+      },
+      {
+        "name": "GetProductSharingPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the sharing policy of a product",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "ProductSharingPolicy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_GetProductSharingPolicy.html"
+      },
+      {
+        "name": "ListApiInventoryItems",
+        "permissionOnly": false,
+        "description": "Grants permission to list discovered APIs in the API inventory",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_ListApiInventoryItems.html"
+      },
+      {
+        "name": "ListDiscoveryStatuses",
+        "permissionOnly": false,
+        "description": "Grants permission to list API discovery statuses",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_ListDiscoveryStatuses.html"
+      },
+      {
+        "name": "ListManagedApiEvents",
+        "permissionOnly": false,
+        "description": "Grants permission to list API security events for a managed API",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "ManagedApi",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_ListManagedApiEvents.html"
+      },
+      {
+        "name": "ListManagedApis",
+        "permissionOnly": false,
+        "description": "Grants permission to list managed APIs",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_ListManagedApis.html"
+      },
+      {
+        "name": "ListPortals",
+        "permissionOnly": false,
+        "description": "Grants permission to list portals",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_ListPortals.html"
+      },
+      {
+        "name": "ListProductApiPages",
+        "permissionOnly": false,
+        "description": "Grants permission to list the API reference pages in a product",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Product",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_ListProductApiPages.html"
+      },
+      {
+        "name": "ListProductPages",
+        "permissionOnly": false,
+        "description": "Grants permission to list the documentation pages in a product",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Product",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_ListProductPages.html"
+      },
+      {
+        "name": "ListProducts",
+        "permissionOnly": false,
+        "description": "Grants permission to list products",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_ListProducts.html"
+      },
+      {
+        "name": "ListTagsForResource",
+        "permissionOnly": false,
+        "description": "Grants permission to list the tags for an API Portal resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "DiscoveryConfiguration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ManagedApi",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "OrganizationDiscoveryConfiguration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Portal",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Product",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ProductApiPage",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ProductPage",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ProductSharingPolicy",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_ListTagsForResource.html"
+      },
+      {
+        "name": "PutDiscoveryConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to create or update the API discovery configuration for an account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DiscoveryConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_PutDiscoveryConfiguration.html"
+      },
+      {
+        "name": "PutOrganizationDiscoveryConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to create or update the API discovery configuration for an organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "OrganizationDiscoveryConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_PutOrganizationDiscoveryConfiguration.html"
+      },
+      {
+        "name": "PutProductSharingPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to create or update the sharing policy of a product",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ProductSharingPolicy",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_PutProductSharingPolicy.html"
+      },
+      {
+        "name": "StartDiscovery",
+        "permissionOnly": false,
+        "description": "Grants permission to start API discovery for a discovery configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DiscoveryConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "OrganizationDiscoveryConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_StartDiscovery.html"
+      },
+      {
+        "name": "StopDiscovery",
+        "permissionOnly": false,
+        "description": "Grants permission to stop API discovery for a discovery configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DiscoveryConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "OrganizationDiscoveryConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_StopDiscovery.html"
+      },
+      {
+        "name": "TagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to add tags to an API Portal resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DiscoveryConfiguration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ManagedApi",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "OrganizationDiscoveryConfiguration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Portal",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Product",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ProductApiPage",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ProductPage",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ProductSharingPolicy",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_TagResource.html"
+      },
+      {
+        "name": "UntagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to remove tags from an API Portal resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DiscoveryConfiguration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ManagedApi",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "OrganizationDiscoveryConfiguration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Portal",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Product",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ProductApiPage",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ProductPage",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "ProductSharingPolicy",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_UntagResource.html"
+      },
+      {
+        "name": "UpdatePortal",
+        "permissionOnly": false,
+        "description": "Grants permission to update a portal",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Portal",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_UpdatePortal.html"
+      },
+      {
+        "name": "UpdatePortalPublishStatus",
+        "permissionOnly": false,
+        "description": "Grants permission to publish or unpublish a portal",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Portal",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_UpdatePortalPublishStatus.html"
+      },
+      {
+        "name": "UpdateProduct",
+        "permissionOnly": false,
+        "description": "Grants permission to update a product",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Product",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_UpdateProduct.html"
+      },
+      {
+        "name": "UpdateProductApiPage",
+        "permissionOnly": false,
+        "description": "Grants permission to update an API reference page in a product",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ProductApiPage",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_UpdateProductApiPage.html"
+      },
+      {
+        "name": "UpdateProductPage",
+        "permissionOnly": false,
+        "description": "Grants permission to update a documentation page in a product",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "ProductPage",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_UpdateProductPage.html"
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "DiscoveryConfiguration",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:apiportal:${Region}:${Account}:discoveryconfiguration",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "ManagedApi",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:apiportal:${Region}:${Account}:managedapis/${ManagedApiId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "OrganizationDiscoveryConfiguration",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:apiportal:${Region}:${Account}:orgdiscoveryconfiguration",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "Portal",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:apiportal:${Region}:${Account}:portals/${PortalId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "Product",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:apiportal:${Region}:${Account}:products/${ProductId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "ProductApiPage",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:apiportal:${Region}:${Account}:products/${ProductId}/apipages/${ProductApiPageId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "ProductPage",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:apiportal:${Region}:${Account}:products/${ProductId}/productpages/${ProductPageId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "ProductSharingPolicy",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:apiportal:${Region}:${Account}:products/${ProductId}/sharingpolicy",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      }
+    ],
+    "conditionKeys": [
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by a tag's key and value in a request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters actions based on the presence of tag key-value pairs in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tag keys in a request",
+        "type": "ArrayOfString"
+      }
+    ]
+  },
+  {
     "name": "AWS App Mesh",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_appmesh.html",
     "servicePrefix": "appmesh",
@@ -11093,7 +12180,9 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "mgn:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_CreateRemoteSourceAction.html"
@@ -29875,6 +30964,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
               "cloudformation:ChangeSetName",
+              "cloudformation:DisableValidation",
               "cloudformation:ImportResourceTypes",
               "cloudformation:ResourceTypes",
               "cloudformation:RoleArn",
@@ -29918,6 +31008,7 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
+              "cloudformation:DisableValidation",
               "cloudformation:ResourceTypes",
               "cloudformation:RoleArn",
               "cloudformation:StackPolicyUrl",
@@ -31405,6 +32496,7 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys",
+              "cloudformation:DisableValidation",
               "cloudformation:ResourceTypes",
               "cloudformation:RoleArn",
               "cloudformation:StackPolicyUrl",
@@ -31633,6 +32725,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by the name of a resource-mutating API action. Use to control which APIs IAM users can use to add or remove tags on a stack or stack set",
         "type": "String"
+      },
+      {
+        "name": "cloudformation:DisableValidation",
+        "apiReferenceUrl": "",
+        "description": "Filters access by whether pre-deployment validation is disabled in the request. Use to control which IAM users can skip pre-deployment validation when they create or update stacks or create change sets",
+        "type": "Bool"
       },
       {
         "name": "cloudformation:ImportResourceTypes",
@@ -208528,6 +209626,38 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_GetDecryptedAPIKey.html"
       },
       {
+        "name": "GetEvent",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the full details of a single event detected for a WebACL, including its summary, event actors, tracking timeline",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "webacl",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_GetEvent.html"
+      },
+      {
+        "name": "GetEventActor",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the full details of a single event actor, including its latest observed attributes, associated events, and attribute history",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_GetEventActor.html"
+      },
+      {
         "name": "GetIPSet",
         "permissionOnly": false,
         "description": "Grants permission to retrieve details about an IPSet",
@@ -208892,6 +210022,53 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_ListAvailableManagedRuleGroups.html"
+      },
+      {
+        "name": "ListEventActors",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of event actor summaries for your account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_ListEventActors.html"
+      },
+      {
+        "name": "ListEvents",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of event summaries for the web ACLs in your account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_ListEvents.html"
+      },
+      {
+        "name": "ListEventsByWebACL",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a list of event summaries for a specific WebACL",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "webacl",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/waf/latest/APIReference/API_ListEventsByWebACL.html"
       },
       {
         "name": "ListIPSets",
@@ -209589,7 +210766,9 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "wellarchitected:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_CreateAgentBasicProfile.html"
@@ -215450,6 +216629,23 @@
     "servicePrefix": "aws-marketplace",
     "actions": [
       {
+        "name": "AcceptAgreementApproval",
+        "permissionOnly": false,
+        "description": "Grants permission to approve an agreement approval",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-marketplace:AgreementType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html"
+      },
+      {
         "name": "AcceptAgreementApprovalRequest",
         "permissionOnly": false,
         "description": "Grants permission to approve an incoming subscription request (for providers who provide products that require subscription verification)",
@@ -215606,7 +216802,9 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ],
@@ -215653,6 +216851,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html"
       },
       {
+        "name": "GetAgreementApproval",
+        "permissionOnly": false,
+        "description": "Grants permission to view the details of an agreement approval",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-marketplace:AgreementType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html"
+      },
+      {
         "name": "GetAgreementApprovalRequest",
         "permissionOnly": false,
         "description": "Grants permission to view the details of incoming subscription requests (for providers who provide products that require subscription verification)",
@@ -215679,6 +216894,23 @@
             "conditionKeys": [
               "aws-marketplace:AgreementType",
               "aws-marketplace:PartyType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html"
+      },
+      {
+        "name": "GetAgreementContacts",
+        "permissionOnly": false,
+        "description": "Grants permission to get the contacts associated with an agreement",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-marketplace:AgreementType"
             ],
             "dependentActions": []
           }
@@ -215731,7 +216963,43 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws-marketplace:AgreementType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html"
+      },
+      {
+        "name": "GetAgreementRequestApprovalPlans",
+        "permissionOnly": false,
+        "description": "Grants permission to view the approval plans for an agreement request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-marketplace:AgreementType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html"
+      },
+      {
+        "name": "GetAgreementRequestTerms",
+        "permissionOnly": false,
+        "description": "Grants permission to view the terms of an agreement request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-marketplace:AgreementType"
+            ],
             "dependentActions": []
           }
         ],
@@ -215779,6 +217047,21 @@
         "name": "ListAgreementApprovalRequests",
         "permissionOnly": false,
         "description": "Grants permission to list incoming subscription requests (for providers who provide products that require subscription verification)",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html"
+      },
+      {
+        "name": "ListAgreementApprovals",
+        "permissionOnly": false,
+        "description": "Grants permission to list agreement approvals",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -215910,6 +217193,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html"
       },
       {
+        "name": "RejectAgreementApproval",
+        "permissionOnly": false,
+        "description": "Grants permission to reject an agreement approval",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-marketplace:AgreementType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html"
+      },
+      {
         "name": "RejectAgreementApprovalRequest",
         "permissionOnly": false,
         "description": "Grants permission to decline an incoming subscription requests (for providers who provide products that require subscription verification)",
@@ -216010,6 +217310,23 @@
             "conditionKeys": [
               "aws-marketplace:AgreementType",
               "aws-marketplace:PartyType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/buyerguide/buyer-iam-users-groups-policies.html"
+      },
+      {
+        "name": "StartAgreementApprovals",
+        "permissionOnly": false,
+        "description": "Grants permission to initiate tasks that request approvals for an agreement. Callers must also have the aws-marketplace:AcceptAgreementRequest permission",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws-marketplace:AgreementType"
             ],
             "dependentActions": []
           }
@@ -227961,10 +229278,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "appstream:TagResource",
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "image",
@@ -227974,10 +229288,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "appstream:TagResource",
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateFleet.html"
@@ -227996,10 +229307,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "appstream:TagResource",
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "image-builder",
@@ -228009,10 +229317,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "appstream:TagResource",
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateImageBuilder.html"
@@ -228066,9 +229371,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "appstream:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateStack.html"
@@ -228129,9 +229432,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "appstream:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateUpdatedImage.html"
@@ -229316,9 +230617,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "image",
@@ -229326,9 +230625,7 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "iam:PassRole"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_UpdateFleet.html"
@@ -240043,6 +241340,36 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_GetAgentCard.html"
       },
       {
+        "name": "GetAgentInsight",
+        "permissionOnly": false,
+        "description": "Grants permission to get details of an agent insight",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_GetAgentInsight.html"
+      },
+      {
+        "name": "GetAgentInsightStore",
+        "permissionOnly": false,
+        "description": "Grants permission to get details of an agent insight store",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "agent-insight-store",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_GetAgentInsightStore.html"
+      },
+      {
         "name": "GetAgentRuntime",
         "permissionOnly": false,
         "description": "Grants permission to get details of an agent runtime",
@@ -241363,6 +242690,36 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_ListActors.html"
+      },
+      {
+        "name": "ListAgentInsightStores",
+        "permissionOnly": false,
+        "description": "Grants permission to list agent insight stores",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_ListAgentInsightStores.html"
+      },
+      {
+        "name": "ListAgentInsights",
+        "permissionOnly": false,
+        "description": "Grants permission to list agent insights",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_ListAgentInsights.html"
       },
       {
         "name": "ListAgentRuntimeEndpoints",
@@ -243127,6 +244484,36 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_UpdateABTest.html"
       },
       {
+        "name": "UpdateAgentInsight",
+        "permissionOnly": false,
+        "description": "Grants permission to update an agent insight",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore/latest/APIReference/API_UpdateAgentInsight.html"
+      },
+      {
+        "name": "UpdateAgentInsightStore",
+        "permissionOnly": false,
+        "description": "Grants permission to update an agent insight store",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "agent-insight-store",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock-agentcore-control/latest/APIReference/API_UpdateAgentInsightStore.html"
+      },
+      {
         "name": "UpdateAgentRuntime",
         "permissionOnly": false,
         "description": "Grants permission to update an agent runtime",
@@ -243669,6 +245056,12 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
+      },
+      {
+        "name": "agent-insight-store",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:bedrock-agentcore:${Region}:${Account}:agent-insight-store/${AgentInsightStoreId}",
+        "conditionKeys": []
       },
       {
         "name": "apikeycredentialprovider",
@@ -245062,7 +246455,7 @@
       {
         "name": "AssignPrincipal",
         "permissionOnly": false,
-        "description": "Grants permission to assign princiapl",
+        "description": "Grants permission to assign a principal to a Bio Discovery application",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -245072,12 +246465,12 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "xxx<link>.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/researchstudio/latest/APIReference/API_AssignPrincipal.html"
       },
       {
         "name": "CreateApplication",
         "permissionOnly": false,
-        "description": "Grants permission to create application",
+        "description": "Grants permission to create a Bio Discovery application",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -245087,12 +246480,12 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "xxx<link>.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/researchstudio/latest/APIReference/API_CreateApplication.html"
       },
       {
         "name": "DeleteApplication",
         "permissionOnly": false,
-        "description": "Grants permission to delete application",
+        "description": "Grants permission to delete a Bio Discovery application",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -245102,12 +246495,12 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "xxx<link>.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/researchstudio/latest/APIReference/API_DeleteApplication.html"
       },
       {
         "name": "DeletePrincipal",
         "permissionOnly": false,
-        "description": "Grants permission to delete principal",
+        "description": "Grants permission to remove a principal from a Bio Discovery application",
         "accessLevel": "Write",
         "resourceTypes": [
           {
@@ -245117,12 +246510,12 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "xxx<link>.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/researchstudio/latest/APIReference/API_DeletePrincipal.html"
       },
       {
         "name": "GetApplication",
         "permissionOnly": false,
-        "description": "Grants permission to get application",
+        "description": "Grants permission to retrieve the details of a Bio Discovery application",
         "accessLevel": "Read",
         "resourceTypes": [
           {
@@ -245132,12 +246525,12 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "xxx<link>.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/researchstudio/latest/APIReference/API_GetApplication.html"
       },
       {
         "name": "ListApplications",
         "permissionOnly": false,
-        "description": "Grants permission to list applications",
+        "description": "Grants permission to list the Bio Discovery applications in an account",
         "accessLevel": "List",
         "resourceTypes": [
           {
@@ -245147,7 +246540,22 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "xxx<link>.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/researchstudio/latest/APIReference/API_ListApplications.html"
+      },
+      {
+        "name": "UpdateApplication",
+        "permissionOnly": false,
+        "description": "Grants permission to update a Bio Discovery application",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/researchstudio/latest/APIReference/API_UpdateApplication.html"
       }
     ],
     "resourceTypes": [],
@@ -264200,6 +265608,7 @@
               "observabilityadmin:CentralizationDestinationRegion",
               "observabilityadmin:CentralizationRuleName",
               "observabilityadmin:CentralizationSourceId",
+              "observabilityadmin:CentralizationSourceOrganizationalUnitId",
               "observabilityadmin:CentralizationSourceRegions"
             ],
             "dependentActions": [
@@ -264208,6 +265617,28 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_CreateCentralizationRuleForOrganization.html"
+      },
+      {
+        "name": "CreateConnector",
+        "permissionOnly": false,
+        "description": "Grants permission to create a connector to a third-party cloud provider",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "connector",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "observabilityadmin:TagResource",
+              "iam:PassRole"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_CreateConnector.html"
       },
       {
         "name": "CreateDatasetIntegration",
@@ -264339,6 +265770,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_DeleteCentralizationRuleForOrganization.html"
       },
       {
+        "name": "DeleteConnector",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a connector and its telemetry manifest",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "connector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_DeleteConnector.html"
+      },
+      {
         "name": "DeleteDatasetIntegration",
         "permissionOnly": false,
         "description": "Grants permission to delete the specified dataset integration for the account",
@@ -264440,6 +265888,57 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_GetCentralizationRuleForOrganization.html"
+      },
+      {
+        "name": "GetConnector",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the details of a connector",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "connector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_GetConnector.html"
+      },
+      {
+        "name": "GetConnectorTelemetryManifest",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the telemetry manifest of a connector",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "connector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_GetConnectorTelemetryManifest.html"
+      },
+      {
+        "name": "GetConnectorTelemetrySetup",
+        "permissionOnly": false,
+        "description": "Grants permission to generate the setup artifacts for the telemetry manifest of a connector",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "connector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_GetConnectorTelemetrySetup.html"
       },
       {
         "name": "GetDatasetIntegration",
@@ -264572,6 +266071,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_GetTelemetryRuleForOrganization.html"
       },
       {
+        "name": "GetThirdPartyTelemetryEnrichment",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a third-party telemetry enrichment, including its status and source configuration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "telemetry-enrichment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_GetThirdPartyTelemetryEnrichment.html"
+      },
+      {
         "name": "ListCentralizationRulesForOrganization",
         "permissionOnly": false,
         "description": "Grants permission to list the centralization rules for the organization",
@@ -264585,6 +266101,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_ListCentralizationRulesForOrganization.html"
+      },
+      {
+        "name": "ListConnectors",
+        "permissionOnly": false,
+        "description": "Grants permission to list the connectors for the account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_ListConnectors.html"
       },
       {
         "name": "ListDatasetIntegrations",
@@ -264636,6 +266167,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_ListResourceTelemetryForOrganization.html"
       },
       {
+        "name": "ListResourcesByConnector",
+        "permissionOnly": false,
+        "description": "Grants permission to list the resources in a third-party cloud provider that a connector can access",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "connector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_ListResourcesByConnector.html"
+      },
+      {
         "name": "ListS3TableIntegrations",
         "permissionOnly": false,
         "description": "Grants permission to list s3 table integrations for the account",
@@ -264656,6 +266204,14 @@
         "description": "Grants permission to list the tags for the specified resource",
         "accessLevel": "List",
         "resourceTypes": [
+          {
+            "resourceType": "connector",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "dataset-integration",
             "required": false,
@@ -264682,6 +266238,14 @@
           },
           {
             "resourceType": "s3tableintegration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "telemetry-enrichment",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -264753,6 +266317,39 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_ListTelemetryRulesForOrganization.html"
       },
       {
+        "name": "ListThirdPartyTelemetryEnrichments",
+        "permissionOnly": false,
+        "description": "Grants permission to list the third-party telemetry enrichments for the account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_ListThirdPartyTelemetryEnrichments.html"
+      },
+      {
+        "name": "PutConnectorTelemetryManifest",
+        "permissionOnly": false,
+        "description": "Grants permission to create or replace the telemetry manifest of a connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "connector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "observabilityadmin:AzureTelemetryRegion"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_PutConnectorTelemetryManifest.html"
+      },
+      {
         "name": "StartTelemetryEnrichment",
         "permissionOnly": false,
         "description": "Grants permission to enable the Resource tags for telemetry feature for the account",
@@ -264802,6 +266399,42 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_StartTelemetryEvaluationForOrganization.html"
       },
       {
+        "name": "StartTelemetryPipelineRefresh",
+        "permissionOnly": false,
+        "description": "Grants permission to start a refresh of an external-cloud telemetry pipeline",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "telemetry-pipeline",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_StartTelemetryPipelineRefresh.html"
+      },
+      {
+        "name": "StartThirdPartyTelemetryEnrichment",
+        "permissionOnly": false,
+        "description": "Grants permission to start a third-party telemetry enrichment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "telemetry-enrichment",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_StartThirdPartyTelemetryEnrichment.html"
+      },
+      {
         "name": "StopTelemetryEnrichment",
         "permissionOnly": false,
         "description": "Grants permission to disable the Resource tags for telemetry feature for the account",
@@ -264847,11 +266480,38 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_StopTelemetryEvaluationForOrganization.html"
       },
       {
+        "name": "StopThirdPartyTelemetryEnrichment",
+        "permissionOnly": false,
+        "description": "Grants permission to stop a third-party telemetry enrichment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "telemetry-enrichment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch/latest/observabilityadmin/API_StopThirdPartyTelemetryEnrichment.html"
+      },
+      {
         "name": "TagResource",
         "permissionOnly": false,
         "description": "Grants permission to add or update the specified tags for the specified resource",
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
+          {
+            "resourceType": "connector",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "dataset-integration",
             "required": false,
@@ -264884,6 +266544,16 @@
           },
           {
             "resourceType": "s3tableintegration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "telemetry-enrichment",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -264937,6 +266607,15 @@
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
           {
+            "resourceType": "connector",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "dataset-integration",
             "required": false,
             "conditionKeys": [
@@ -264965,6 +266644,15 @@
           },
           {
             "resourceType": "s3tableintegration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "telemetry-enrichment",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -265009,6 +266697,7 @@
               "observabilityadmin:CentralizationDestinationRegion",
               "observabilityadmin:CentralizationRuleName",
               "observabilityadmin:CentralizationSourceId",
+              "observabilityadmin:CentralizationSourceOrganizationalUnitId",
               "observabilityadmin:CentralizationSourceRegions"
             ],
             "dependentActions": []
@@ -265108,6 +266797,14 @@
     ],
     "resourceTypes": [
       {
+        "name": "connector",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:observabilityadmin:${Region}:${Account}:connector/${ConnectorProvider}/${ConnectorId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "dataset-integration",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:observabilityadmin:${Region}:${Account}:dataset-integration/${DatasetIntegrationIdentifier}",
@@ -265135,6 +266832,14 @@
         "name": "s3tableintegration",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:observabilityadmin:${Region}:${Account}:s3tableintegration/${S3TableIntegrationIdentifier}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "telemetry-enrichment",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:observabilityadmin:${Region}:${Account}:telemetry-enrichments/${TelemetryEnrichmentId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -265176,6 +266881,12 @@
         "type": "ArrayOfString"
       },
       {
+        "name": "observabilityadmin:AzureTelemetryRegion",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the Azure regions that are declared in the telemetry manifest passed in the request",
+        "type": "ArrayOfString"
+      },
+      {
         "name": "observabilityadmin:CentralizationBackupRegion",
         "apiReferenceUrl": "",
         "description": "Filters access by the backup region that is passed in the request",
@@ -265203,6 +266914,12 @@
         "name": "observabilityadmin:CentralizationSourceId",
         "apiReferenceUrl": "",
         "description": "Filters access by the source account, organizational unit, or organization IDs that is passed in the request",
+        "type": "ArrayOfString"
+      },
+      {
+        "name": "observabilityadmin:CentralizationSourceOrganizationalUnitId",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the parent organizational units of the source accounts and organizational units that are passed in the request",
         "type": "ArrayOfString"
       },
       {
@@ -334626,6 +336343,7 @@
               "elasticache:DataStorageUnit",
               "elasticache:EngineType",
               "elasticache:EngineVersion",
+              "elasticache:IntegrationType",
               "elasticache:KmsKeyId",
               "elasticache:MaximumDataStorage",
               "elasticache:MaximumECPUPerSecond",
@@ -336975,6 +338693,12 @@
         "name": "elasticache:EngineVersion",
         "apiReferenceUrl": "",
         "description": "Filters access by the engineVersion parameter present in creation or cluster modification requests",
+        "type": "String"
+      },
+      {
+        "name": "elasticache:IntegrationType",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the Integrations.IntegrationType parameter in the CreateServerlessCache request",
         "type": "String"
       },
       {
@@ -361326,6 +363050,40 @@
     "servicePrefix": "kinesis",
     "actions": [
       {
+        "name": "AcknowledgeDeadLetterQueueRecords",
+        "permissionOnly": false,
+        "description": "Grants permission to acknowledge one or more dead-letter records received from the specified queue so the queue does not deliver them again",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "queue",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_AcknowledgeDeadLetterQueueRecords.html"
+      },
+      {
+        "name": "AcknowledgeQueueRecords",
+        "permissionOnly": false,
+        "description": "Grants permission to acknowledge one or more data records received from the specified queue so the queue does not deliver them again",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "queue",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_AcknowledgeQueueRecords.html"
+      },
+      {
         "name": "AddTagsToStream",
         "permissionOnly": false,
         "description": "Grants permission to add or update tags for the specified Amazon Kinesis stream. Each stream can have up to 50 tags",
@@ -361345,35 +363103,10 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_AddTagsToStream.html"
       },
       {
-        "name": "AssociateStreamsWithChannel",
-        "permissionOnly": false,
-        "description": "Grants permission to associate a stream with a channel",
-        "accessLevel": "Write",
-        "resourceTypes": [
-          {
-            "resourceType": "channel",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          },
-          {
-            "resourceType": "stream",
-            "required": true,
-            "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
-            ],
-            "dependentActions": []
-          }
-        ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_CreateChannel.html"
-      },
-      {
         "name": "CreateChannel",
         "permissionOnly": false,
         "description": "Grants permission to create a channel that delivers data from a selected single stream to a destination",
-        "accessLevel": "Tagging, Write",
+        "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "channel",
@@ -361391,6 +363124,28 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_CreateChannel.html"
+      },
+      {
+        "name": "CreateQueue",
+        "permissionOnly": false,
+        "description": "Grants permission to create a queue",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "queue",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "kinesis:AssociateStreamsWithQueue",
+              "kinesis:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_CreateQueue.html"
       },
       {
         "name": "CreateStream",
@@ -361448,13 +363203,38 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_DeleteChannel.html"
       },
       {
+        "name": "DeleteQueue",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the specified queue",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "queue",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_DeleteQueue.html"
+      },
+      {
         "name": "DeleteResourcePolicy",
         "permissionOnly": false,
-        "description": "Grants permission to delete a resource policy associated with a specified stream or consumer",
+        "description": "Grants permission to delete a resource policy associated with a specified stream, consumer, or queue",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "consumer",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "queue",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -361552,6 +363332,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_DescribeLimits.html"
+      },
+      {
+        "name": "DescribeQueue",
+        "permissionOnly": false,
+        "description": "Grants permission to describe the specified queue",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "queue",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_DescribeQueue.html"
       },
       {
         "name": "DescribeStream",
@@ -361654,11 +363451,19 @@
       {
         "name": "GetResourcePolicy",
         "permissionOnly": false,
-        "description": "Grants permission to get a resource policy associated with a specified stream or consumer",
+        "description": "Grants permission to get a resource policy associated with a specified stream, consumer, or queue",
         "accessLevel": "Read",
         "resourceTypes": [
           {
             "resourceType": "consumer",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "queue",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -361726,6 +363531,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_ListChannels.html"
       },
       {
+        "name": "ListQueues",
+        "permissionOnly": false,
+        "description": "Grants permission to list the queues in the account, optionally filtered by stream",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_ListQueues.html"
+      },
+      {
         "name": "ListShards",
         "permissionOnly": false,
         "description": "Grants permission to list the shards in a stream and provides information about each shard",
@@ -361790,6 +363610,14 @@
           },
           {
             "resourceType": "consumer",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "queue",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -361878,11 +363706,19 @@
       {
         "name": "PutResourcePolicy",
         "permissionOnly": false,
-        "description": "Grants permission to attach a resource policy to a specified stream or consumer",
+        "description": "Grants permission to attach a resource policy to a specified stream, consumer, or queue",
         "accessLevel": "Write",
         "resourceTypes": [
           {
             "resourceType": "consumer",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "queue",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
@@ -361899,6 +363735,40 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_PutResourcePolicy.html"
+      },
+      {
+        "name": "ReceiveDeadLetterQueueRecords",
+        "permissionOnly": false,
+        "description": "Grants permission to receive one or more dead-letter records from the specified queue",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "queue",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_ReceiveDeadLetterQueueRecords.html"
+      },
+      {
+        "name": "ReceiveQueueRecords",
+        "permissionOnly": false,
+        "description": "Grants permission to receive one or more data records from the specified queue",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "queue",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_ReceiveQueueRecords.html"
       },
       {
         "name": "RegisterStreamConsumer",
@@ -361938,6 +363808,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_RemoveTagsFromStream.html"
+      },
+      {
+        "name": "RestoreDeadLetterQueueRecords",
+        "permissionOnly": false,
+        "description": "Grants permission to restore one or more dead-letter records in the specified queue to the normal receive path",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "queue",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_RestoreDeadLetterQueueRecords.html"
       },
       {
         "name": "SplitShard",
@@ -362050,6 +363937,16 @@
             "dependentActions": []
           },
           {
+            "resourceType": "queue",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "stream",
             "required": true,
             "conditionKeys": [
@@ -362079,6 +363976,15 @@
           },
           {
             "resourceType": "consumer",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "queue",
             "required": true,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -362131,6 +364037,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_UpdateChannel.html"
       },
       {
+        "name": "UpdateDeadLetterQueueRecordsVisibility",
+        "permissionOnly": false,
+        "description": "Grants permission to change the visibility timeout of one or more dead-letter records received from the specified queue",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "queue",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_UpdateDeadLetterQueueRecordsVisibility.html"
+      },
+      {
         "name": "UpdateMaxRecordSize",
         "permissionOnly": false,
         "description": "Grants permission to update the maximum record size for a Kinesis data stream",
@@ -362146,6 +364069,40 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_UpdateMaxRecordSize.html"
+      },
+      {
+        "name": "UpdateQueue",
+        "permissionOnly": false,
+        "description": "Grants permission to update the attributes of the specified queue",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "queue",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_UpdateQueue.html"
+      },
+      {
+        "name": "UpdateQueueRecordsVisibility",
+        "permissionOnly": false,
+        "description": "Grants permission to change the visibility timeout of one or more data records received from the specified queue",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "queue",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/kinesis/latest/APIReference/API_UpdateQueueRecordsVisibility.html"
       },
       {
         "name": "UpdateShardCount",
@@ -362233,6 +364190,14 @@
         "name": "kmsKey",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:kms:${Region}:${Account}:key/${KeyId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "queue",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:kinesis:${Region}:${Account}:queue/${QueueId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -374053,7 +376018,7 @@
         "accessLevel": "Read",
         "resourceTypes": [
           {
-            "resourceType": "datasource",
+            "resourceType": "evaluation",
             "required": true,
             "conditionKeys": [],
             "dependentActions": []
@@ -396297,7 +398262,10 @@
               "ses:FromDisplayName",
               "ses:Recipients"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "ses:SendRawEmail",
+              "ses:SendTemplatedEmail"
+            ]
           },
           {
             "resourceType": "identity",
@@ -396310,7 +398278,10 @@
               "ses:FromDisplayName",
               "ses:Recipients"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "ses:SendRawEmail",
+              "ses:SendTemplatedEmail"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/pinpoint-email/latest/APIReference/API_SendEmail.html"
@@ -425742,6 +427713,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallDomains.html"
       },
       {
+        "name": "ListFirewallRuleDomains",
+        "permissionOnly": false,
+        "description": "Grants permission to list the domains of a specified Firewall rule in a Firewall rule group, including the domains suggested for an AutoAllowlist Firewall rule",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "firewall-rule-group",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53resolver_ListFirewallRuleDomains.html"
+      },
+      {
         "name": "ListFirewallRuleGroupAssociations",
         "permissionOnly": false,
         "description": "Grants permission to list information about associations between Amazon VPCs and Firewall rule group",
@@ -452839,7 +454827,10 @@
               "ses:FromDisplayName",
               "ses:Recipients"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "ses:SendRawEmail",
+              "ses:SendTemplatedEmail"
+            ]
           },
           {
             "resourceType": "identity",
@@ -452851,7 +454842,10 @@
               "ses:FromDisplayName",
               "ses:Recipients"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "ses:SendRawEmail",
+              "ses:SendTemplatedEmail"
+            ]
           },
           {
             "resourceType": "template",
@@ -452863,7 +454857,10 @@
               "ses:FromDisplayName",
               "ses:Recipients"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "ses:SendRawEmail",
+              "ses:SendTemplatedEmail"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference/API_SendEmail.html"
@@ -456779,7 +458776,9 @@
               "ses:MultiRegionEndpointId",
               "ses:TenantName"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "ses:SendBulkTemplatedEmail"
+            ]
           },
           {
             "resourceType": "identity",
@@ -456790,7 +458789,9 @@
               "ses:MultiRegionEndpointId",
               "ses:TenantName"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "ses:SendBulkTemplatedEmail"
+            ]
           },
           {
             "resourceType": "template",
@@ -456801,7 +458802,9 @@
               "ses:MultiRegionEndpointId",
               "ses:TenantName"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "ses:SendBulkTemplatedEmail"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_SendBulkEmail.html"
@@ -456860,7 +458863,10 @@
               "ses:Recipients",
               "ses:TenantName"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "ses:SendRawEmail",
+              "ses:SendTemplatedEmail"
+            ]
           },
           {
             "resourceType": "identity",
@@ -456875,7 +458881,10 @@
               "ses:Recipients",
               "ses:TenantName"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "ses:SendRawEmail",
+              "ses:SendTemplatedEmail"
+            ]
           },
           {
             "resourceType": "template",
@@ -456890,7 +458899,10 @@
               "ses:Recipients",
               "ses:TenantName"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "ses:SendRawEmail",
+              "ses:SendTemplatedEmail"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/ses/latest/APIReference-V2/API_SendEmail.html"

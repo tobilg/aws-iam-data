@@ -1,5 +1,127 @@
 [
   {
+    "dateOfChange": "2026-11-18",
+    "addedServices": [
+      "AWS API Portal"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS WAF V2": [
+        "wafv2:GetEvent",
+        "wafv2:GetEventActor",
+        "wafv2:ListEventActors",
+        "wafv2:ListEvents",
+        "wafv2:ListEventsByWebACL"
+      ],
+      "AWS Marketplace": [
+        "aws-marketplace:AcceptAgreementApproval",
+        "aws-marketplace:GetAgreementApproval",
+        "aws-marketplace:GetAgreementContacts",
+        "aws-marketplace:GetAgreementRequestApprovalPlans",
+        "aws-marketplace:GetAgreementRequestTerms",
+        "aws-marketplace:ListAgreementApprovals",
+        "aws-marketplace:RejectAgreementApproval",
+        "aws-marketplace:StartAgreementApprovals"
+      ],
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:GetAgentInsight",
+        "bedrock-agentcore:GetAgentInsightStore",
+        "bedrock-agentcore:ListAgentInsightStores",
+        "bedrock-agentcore:ListAgentInsights",
+        "bedrock-agentcore:UpdateAgentInsight",
+        "bedrock-agentcore:UpdateAgentInsightStore"
+      ],
+      "Amazon Bio Discovery": [
+        "researchstudio:UpdateApplication"
+      ],
+      "Amazon CloudWatch Observability Admin Service": [
+        "observabilityadmin:CreateConnector",
+        "observabilityadmin:DeleteConnector",
+        "observabilityadmin:GetConnector",
+        "observabilityadmin:GetConnectorTelemetryManifest",
+        "observabilityadmin:GetConnectorTelemetrySetup",
+        "observabilityadmin:GetThirdPartyTelemetryEnrichment",
+        "observabilityadmin:ListConnectors",
+        "observabilityadmin:ListResourcesByConnector",
+        "observabilityadmin:ListThirdPartyTelemetryEnrichments",
+        "observabilityadmin:PutConnectorTelemetryManifest",
+        "observabilityadmin:StartTelemetryPipelineRefresh",
+        "observabilityadmin:StartThirdPartyTelemetryEnrichment",
+        "observabilityadmin:StopThirdPartyTelemetryEnrichment"
+      ],
+      "Amazon Kinesis Data Streams": [
+        "kinesis:AcknowledgeDeadLetterQueueRecords",
+        "kinesis:AcknowledgeQueueRecords",
+        "kinesis:CreateQueue",
+        "kinesis:DeleteQueue",
+        "kinesis:DescribeQueue",
+        "kinesis:ListQueues",
+        "kinesis:ReceiveDeadLetterQueueRecords",
+        "kinesis:ReceiveQueueRecords",
+        "kinesis:RestoreDeadLetterQueueRecords",
+        "kinesis:UpdateDeadLetterQueueRecordsVisibility",
+        "kinesis:UpdateQueue",
+        "kinesis:UpdateQueueRecordsVisibility"
+      ],
+      "Amazon Route 53 Resolver": [
+        "route53resolver:ListFirewallRuleDomains"
+      ],
+      "AWS API Portal": [
+        "apiportal:AssociateManagedApis",
+        "apiportal:CreateManagedApi",
+        "apiportal:CreatePortal",
+        "apiportal:CreatePortalPreview",
+        "apiportal:CreateProduct",
+        "apiportal:CreateProductApiPage",
+        "apiportal:CreateProductPage",
+        "apiportal:DeleteDiscoveryConfiguration",
+        "apiportal:DeleteManagedApi",
+        "apiportal:DeleteOrganizationDiscoveryConfiguration",
+        "apiportal:DeletePortal",
+        "apiportal:DeleteProduct",
+        "apiportal:DeleteProductApiPage",
+        "apiportal:DeleteProductPage",
+        "apiportal:DeleteProductSharingPolicy",
+        "apiportal:DisassociateManagedApis",
+        "apiportal:GetApiInventoryItem",
+        "apiportal:GetDiscoveryConfiguration",
+        "apiportal:GetManagedApi",
+        "apiportal:GetOrganizationDiscoveryConfiguration",
+        "apiportal:GetPortal",
+        "apiportal:GetProduct",
+        "apiportal:GetProductApiPage",
+        "apiportal:GetProductPage",
+        "apiportal:GetProductSharingPolicy",
+        "apiportal:ListApiInventoryItems",
+        "apiportal:ListDiscoveryStatuses",
+        "apiportal:ListManagedApiEvents",
+        "apiportal:ListManagedApis",
+        "apiportal:ListPortals",
+        "apiportal:ListProductApiPages",
+        "apiportal:ListProductPages",
+        "apiportal:ListProducts",
+        "apiportal:ListTagsForResource",
+        "apiportal:PutDiscoveryConfiguration",
+        "apiportal:PutOrganizationDiscoveryConfiguration",
+        "apiportal:PutProductSharingPolicy",
+        "apiportal:StartDiscovery",
+        "apiportal:StopDiscovery",
+        "apiportal:TagResource",
+        "apiportal:UntagResource",
+        "apiportal:UpdatePortal",
+        "apiportal:UpdatePortalPublishStatus",
+        "apiportal:UpdateProduct",
+        "apiportal:UpdateProductApiPage",
+        "apiportal:UpdateProductPage"
+      ]
+    },
+    "removedActions": {
+      "Amazon Kinesis Data Streams": [
+        "kinesis:AssociateStreamsWithChannel"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2026-11-17",
     "addedServices": [
       "Amazon OpenSearch Memory"
