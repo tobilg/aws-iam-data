@@ -1545,6 +1545,60 @@
     ]
   },
   {
+    "name": "AWS Abuse Signal API",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_abuse-signal.html",
+    "servicePrefix": "abuse",
+    "actions": [
+      {
+        "name": "CreateAbuseReport",
+        "permissionOnly": false,
+        "description": "Grants permission to submit a new abuse report",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/abuse-signal/latest/APIReference/API_CreateAbuseReport.html"
+      },
+      {
+        "name": "GetAbuseReportStatus",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the status of an abuse report",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/abuse-signal/latest/APIReference/API_GetAbuseReportStatus.html"
+      },
+      {
+        "name": "ListAbuseReportStatuses",
+        "permissionOnly": false,
+        "description": "Grants permission to list abuse report statuses",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/abuse-signal/latest/APIReference/API_ListAbuseReportStatuses.html"
+      }
+    ],
+    "resourceTypes": [],
+    "conditionKeys": []
+  },
+  {
     "name": "AWS Account Management",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_account.html",
     "servicePrefix": "account",
@@ -69593,6 +69647,15 @@
               "aws:TagKeys"
             ],
             "dependentActions": []
+          },
+          {
+            "resourceType": "question-set",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/elemental-inference/latest/APIReference/API_TagResource.html"
@@ -69617,6 +69680,14 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "question-set",
+            "required": false,
+            "conditionKeys": [
               "aws:TagKeys"
             ],
             "dependentActions": []
@@ -96101,6 +96172,42 @@
     "servicePrefix": "health",
     "actions": [
       {
+        "name": "ConfigureTags",
+        "permissionOnly": false,
+        "description": "Grants permission to configure the resource tag keys propagated to AWS Health events for an account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "health:TagChannel",
+              "health:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_ConfigureTags.html"
+      },
+      {
+        "name": "ConfigureTagsForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to configure the resource tag keys propagated to AWS Health events for an organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "health:TagChannel",
+              "health:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_ConfigureTagsForOrganization.html"
+      },
+      {
         "name": "DescribeAffectedAccountsForOrganization",
         "permissionOnly": false,
         "description": "Grants permission to retrieve a list of accounts that have been affected by the specified events in organization",
@@ -96109,7 +96216,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": [
               "organizations:ListAccounts"
             ]
@@ -96127,6 +96237,8 @@
             "resourceType": "event",
             "required": true,
             "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
               "health:eventTypeCode",
               "health:service"
             ],
@@ -96144,7 +96256,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": [
               "organizations:ListAccounts"
             ]
@@ -96161,7 +96276,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ],
@@ -96176,7 +96294,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": [
               "organizations:ListAccounts"
             ]
@@ -96193,7 +96314,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ],
@@ -96258,7 +96382,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": []
           }
         ],
@@ -96273,7 +96400,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": [
               "organizations:ListAccounts"
             ]
@@ -96299,6 +96429,102 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeHealthServiceStatusForOrganization.html"
       },
       {
+        "name": "DescribeTagKeys",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the resource tag keys configured for an account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeTagKeys.html"
+      },
+      {
+        "name": "DescribeTagKeysForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the resource tag keys configured for an organization",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "organizations:ListAccounts"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeTagKeysForOrganization.html"
+      },
+      {
+        "name": "DescribeTags",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the resource tags configured for an account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeTags.html"
+      },
+      {
+        "name": "DescribeTagsForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the resource tags configured for an organization",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "organizations:ListAccounts"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeTagsForOrganization.html"
+      },
+      {
+        "name": "DescribeTagsOnboardingStatus",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the onboarding status of the resource tags feature for an account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeTagsOnboardingStatus.html"
+      },
+      {
+        "name": "DescribeTagsOnboardingStatusForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the onboarding status of the resource tags feature for an organization",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "organizations:ListAccounts"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_DescribeTagsOnboardingStatusForOrganization.html"
+      },
+      {
         "name": "DisableHealthServiceAccessForOrganization",
         "permissionOnly": false,
         "description": "Grants permission to disable the Organizational View feature",
@@ -96315,6 +96541,38 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_DisableHealthServiceAccessForOrganization.html"
+      },
+      {
+        "name": "DisableTags",
+        "permissionOnly": false,
+        "description": "Grants permission to disable the resource tags feature for an account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_DisableTags.html"
+      },
+      {
+        "name": "DisableTagsForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to disable the resource tags feature for an organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "organizations:ListAccounts"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_DisableTagsForOrganization.html"
       },
       {
         "name": "EnableHealthServiceAccessForOrganization",
@@ -96334,6 +96592,36 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_EnableHealthServiceAccessForOrganization.html"
+      },
+      {
+        "name": "EnableTags",
+        "permissionOnly": false,
+        "description": "Grants permission to enable the resource tags feature for an account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_EnableTags.html"
+      },
+      {
+        "name": "EnableTagsForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to enable the resource tags feature for an organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/health/latest/APIReference/API_EnableTagsForOrganization.html"
       }
     ],
     "resourceTypes": [
@@ -96345,6 +96633,30 @@
       }
     ],
     "conditionKeys": [
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tag key-value pairs in the request filter",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tag keys in the request filter",
+        "type": "ArrayOfString"
+      },
+      {
+        "name": "health:TagChannel",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the channel (API or EventBridge) for which tag keys are configured",
+        "type": "ArrayOfString"
+      },
+      {
+        "name": "health:TagKeys",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the resource tag keys being configured",
+        "type": "ArrayOfString"
+      },
       {
         "name": "health:eventTypeCode",
         "apiReferenceUrl": "",
@@ -106366,6 +106678,36 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/IAM/latest/APIReference/API_GetPolicyVersion.html"
+      },
+      {
+        "name": "GetRequestAuthorizationDetails",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve authorization details for a specific access denied request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/iam-toolbox/latest/APIReference/API_GetRequestAuthorizationDetails.html"
+      },
+      {
+        "name": "GetRequestAuthorizationPolicy",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a policy evaluated for a specific access denied request",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/iam-toolbox/latest/APIReference/API_GetRequestAuthorizationPolicy.html"
       },
       {
         "name": "GetRole",
@@ -136472,6 +136814,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_DeleteCodeSigningConfig.html"
       },
       {
+        "name": "DeleteDurableExecution",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an AWS Lambda durable execution",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "durable execution",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_DeleteDurableExecution.html"
+      },
+      {
         "name": "DeleteEventSourceMapping",
         "permissionOnly": false,
         "description": "Grants permission to delete an AWS Lambda event source mapping",
@@ -137967,6 +138326,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-web/API_ListWebFunctions.html"
       },
       {
+        "name": "PauseDurableExecution",
+        "permissionOnly": false,
+        "description": "Grants permission to pause an AWS Lambda durable execution",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "durable execution",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_PauseDurableExecution.html"
+      },
+      {
         "name": "PublishLayerVersion",
         "permissionOnly": false,
         "description": "Grants permission to create an AWS Lambda layer",
@@ -138221,6 +138597,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/lambda-core/API_RestoreRuntime.html"
+      },
+      {
+        "name": "ResumeDurableExecution",
+        "permissionOnly": false,
+        "description": "Grants permission to resume a paused AWS Lambda durable execution",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "durable execution",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/lambda/latest/dg/API_ResumeDurableExecution.html"
       },
       {
         "name": "ResumeMicrovm",
@@ -148112,6 +148505,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_AssociateConnectPeer.html"
       },
       {
+        "name": "AssociateContextStore",
+        "permissionOnly": false,
+        "description": "Grants permission to associate a transit gateway with a context store",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "context-store",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "networkmanager:tgwArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_AssociateContextStore.html"
+      },
+      {
         "name": "AssociateCustomerGateway",
         "permissionOnly": false,
         "description": "Grants permission to associate a customer gateway to a device",
@@ -148294,6 +148705,27 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_CreateConnection.html"
+      },
+      {
+        "name": "CreateContextStore",
+        "permissionOnly": false,
+        "description": "Grants permission to create a context store in a global network",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "global-network",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "networkmanager:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_CreateContextStore.html"
       },
       {
         "name": "CreateCoreNetwork",
@@ -148607,6 +149039,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_DeleteConnection.html"
       },
       {
+        "name": "DeleteContextStore",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a context store",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "context-store",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_DeleteContextStore.html"
+      },
+      {
         "name": "DeleteCoreNetwork",
         "permissionOnly": false,
         "description": "Grants permission to delete a core network",
@@ -148836,6 +149285,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_DisassociateConnectPeer.html"
       },
       {
+        "name": "DisassociateContextStore",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate a transit gateway from a context store",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "context-store",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "networkmanager:tgwArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_DisassociateContextStore.html"
+      },
+      {
         "name": "DisassociateCustomerGateway",
         "permissionOnly": false,
         "description": "Grants permission to disassociate a customer gateway from a device",
@@ -148996,6 +149463,58 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_GetConnections.html"
+      },
+      {
+        "name": "GetContextStore",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a context store",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "context-store",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_GetContextStore.html"
+      },
+      {
+        "name": "GetContextStoreAssociation",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the association between a context store and a transit gateway",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "context-store",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "networkmanager:tgwArn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_GetContextStoreAssociation.html"
+      },
+      {
+        "name": "GetContextVersion",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the current context version of a context store",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "context-store",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_GetContextVersion.html"
       },
       {
         "name": "GetCoreNetwork",
@@ -149497,6 +150016,74 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_ListConnectPeers.html"
       },
       {
+        "name": "ListContextChanges",
+        "permissionOnly": false,
+        "description": "Grants permission to list the resource context changes in a context store since a context version",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "context-store",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_ListContextChanges.html"
+      },
+      {
+        "name": "ListContextStoreAssociations",
+        "permissionOnly": false,
+        "description": "Grants permission to list the transit gateway associations of a context store",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "context-store",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_ListContextStoreAssociations.html"
+      },
+      {
+        "name": "ListContextStores",
+        "permissionOnly": false,
+        "description": "Grants permission to list context stores",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "context-store",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_ListContextStores.html"
+      },
+      {
+        "name": "ListContexts",
+        "permissionOnly": false,
+        "description": "Grants permission to list the resource contexts in a context store",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "context-store",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_ListContexts.html"
+      },
+      {
         "name": "ListCoreNetworkPolicyVersions",
         "permissionOnly": false,
         "description": "Grants permission to list core network policy versions",
@@ -149623,6 +150210,14 @@
             "dependentActions": []
           },
           {
+            "resourceType": "context-store",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "core-network",
             "required": false,
             "conditionKeys": [
@@ -149651,6 +150246,15 @@
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "network-scope",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "networkmanager:ManagedBy"
             ],
             "dependentActions": []
           },
@@ -149878,6 +150482,16 @@
             "dependentActions": []
           },
           {
+            "resourceType": "context-store",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "core-network",
             "required": false,
             "conditionKeys": [
@@ -149914,6 +150528,17 @@
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "network-scope",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "networkmanager:ManagedBy"
             ],
             "dependentActions": []
           },
@@ -149974,6 +150599,15 @@
             "dependentActions": []
           },
           {
+            "resourceType": "context-store",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "core-network",
             "required": false,
             "conditionKeys": [
@@ -150006,6 +150640,16 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "network-scope",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "networkmanager:ManagedBy"
             ],
             "dependentActions": []
           },
@@ -150071,6 +150715,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_UpdateConnection.html"
+      },
+      {
+        "name": "UpdateContextStore",
+        "permissionOnly": false,
+        "description": "Grants permission to update a context store",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "context-store",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/networkmanager/latest/APIReference/API_UpdateContextStore.html"
       },
       {
         "name": "UpdateCoreNetwork",
@@ -150265,6 +150926,14 @@
         ]
       },
       {
+        "name": "context-store",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:networkmanager::${Account}:context-store/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "core-network",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:networkmanager::${Account}:core-network/${ResourceId}",
@@ -150294,6 +150963,15 @@
         "arnPattern": "arn:${Partition}:networkmanager::${Account}:link/${GlobalNetworkId}/${ResourceId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "network-scope",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:networkmanager:${Region}:${Account}:network-scope/${ResourceId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}",
+          "networkmanager:ManagedBy"
         ]
       },
       {
@@ -150333,6 +151011,12 @@
         "type": "ArrayOfString"
       },
       {
+        "name": "networkmanager:ManagedBy",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the service that manages the network scope",
+        "type": "String"
+      },
+      {
         "name": "networkmanager:cgwArn",
         "apiReferenceUrl": "",
         "description": "Filters access by which customer gateways can be associated or disassociated",
@@ -150359,7 +151043,7 @@
       {
         "name": "networkmanager:tgwArn",
         "apiReferenceUrl": "",
-        "description": "Filters access by which transit gateways can be registered, deregistered, or peered",
+        "description": "Filters access by which transit gateways can be registered, deregistered, or peered, or associated with or disassociated from a context store",
         "type": "ARN"
       },
       {
@@ -172745,7 +173429,7 @@
     ]
   },
   {
-    "name": "AWS Route53 Global Resolver",
+    "name": "AWS Route 53 Global Resolver",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_route53globalresolver.html",
     "servicePrefix": "route53globalresolver",
     "actions": [
@@ -172762,7 +173446,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_AssociateHostedZone"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_AssociateHostedZone.html"
       },
       {
         "name": "BatchCreateFirewallRule",
@@ -172777,7 +173461,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_BatchCreateFirewallRule"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_BatchCreateFirewallRule.html"
       },
       {
         "name": "BatchDeleteFirewallRule",
@@ -172792,7 +173476,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_BatchDeleteFirewallRule"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_BatchDeleteFirewallRule.html"
       },
       {
         "name": "BatchUpdateFirewallRule",
@@ -172807,7 +173491,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_BatchUpdateFirewallRule"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_BatchUpdateFirewallRule.html"
       },
       {
         "name": "CreateAccessSource",
@@ -172828,7 +173512,7 @@
             ]
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_CreateAccessSource"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_CreateAccessSource.html"
       },
       {
         "name": "CreateAccessToken",
@@ -172849,7 +173533,28 @@
             ]
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_CreateAccessToken"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_CreateAccessToken.html"
+      },
+      {
+        "name": "CreateCoreNetworkEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to create a core network endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "core-network-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "route53globalresolver:TagResource"
+            ]
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_CreateCoreNetworkEndpoint.html"
       },
       {
         "name": "CreateDNSView",
@@ -172870,7 +173575,7 @@
             ]
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_CreateDNSView"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_CreateDNSView.html"
       },
       {
         "name": "CreateFirewallDomainList",
@@ -172891,7 +173596,7 @@
             ]
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_CreateFirewallDomainList"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_CreateFirewallDomainList.html"
       },
       {
         "name": "CreateFirewallRule",
@@ -172916,7 +173621,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_CreateFirewallRule"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_CreateFirewallRule.html"
       },
       {
         "name": "CreateGlobalResolver",
@@ -172937,7 +173642,7 @@
             ]
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_CreateGlobalResolver"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_CreateGlobalResolver.html"
       },
       {
         "name": "DeleteAccessSource",
@@ -172954,7 +173659,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DeleteAccessSource"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DeleteAccessSource.html"
       },
       {
         "name": "DeleteAccessToken",
@@ -172971,7 +173676,24 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DeleteAccessToken"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DeleteAccessToken.html"
+      },
+      {
+        "name": "DeleteCoreNetworkEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a core network endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "core-network-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DeleteCoreNetworkEndpoint.html"
       },
       {
         "name": "DeleteDNSView",
@@ -172988,7 +173710,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DeleteDNSView"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DeleteDNSView.html"
       },
       {
         "name": "DeleteFirewallDomainList",
@@ -173005,7 +173727,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DeleteFirewallDomainList"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DeleteFirewallDomainList.html"
       },
       {
         "name": "DeleteFirewallRule",
@@ -173020,7 +173742,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DeleteFirewallRule"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DeleteFirewallRule.html"
       },
       {
         "name": "DeleteGlobalResolver",
@@ -173037,7 +173759,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DeleteGlobalResolver"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DeleteGlobalResolver.html"
       },
       {
         "name": "DisableDNSView",
@@ -173054,7 +173776,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DisableDNSView"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DisableDNSView.html"
       },
       {
         "name": "DisassociateHostedZone",
@@ -173069,7 +173791,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DisassociateHostedZone"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_DisassociateHostedZone.html"
       },
       {
         "name": "EnableDNSView",
@@ -173086,7 +173808,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_EnableDNSView"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_EnableDNSView.html"
       },
       {
         "name": "GetAccessSource",
@@ -173103,7 +173825,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetAccessSource"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetAccessSource.html"
       },
       {
         "name": "GetAccessToken",
@@ -173120,7 +173842,24 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetAccessToken"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetAccessToken.html"
+      },
+      {
+        "name": "GetCoreNetworkEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to get a core network endpoint",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "core-network-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetCoreNetworkEndpoint.html"
       },
       {
         "name": "GetDNSView",
@@ -173137,7 +173876,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetDNSView"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetDNSView.html"
       },
       {
         "name": "GetFirewallDomainList",
@@ -173154,7 +173893,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetFirewallDomainList"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetFirewallDomainList.html"
       },
       {
         "name": "GetFirewallRule",
@@ -173169,7 +173908,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetFirewallRule"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetFirewallRule.html"
       },
       {
         "name": "GetGlobalResolver",
@@ -173186,7 +173925,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetGlobalResolver"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetGlobalResolver.html"
       },
       {
         "name": "GetHostedZoneAssociation",
@@ -173201,7 +173940,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetHostedZoneAssociation"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetHostedZoneAssociation.html"
       },
       {
         "name": "GetManagedFirewallDomainList",
@@ -173216,7 +173955,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetManagedFirewallDomainList"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_GetManagedFirewallDomainList.html"
       },
       {
         "name": "ImportFirewallDomains",
@@ -173233,7 +173972,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ImportFirewallDomains"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ImportFirewallDomains.html"
       },
       {
         "name": "ListAccessSources",
@@ -173248,7 +173987,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListAccessSources"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListAccessSources.html"
       },
       {
         "name": "ListAccessTokens",
@@ -173263,7 +174002,22 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListAccessTokens"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListAccessTokens.html"
+      },
+      {
+        "name": "ListCoreNetworkEndpoints",
+        "permissionOnly": false,
+        "description": "Grants permission to list core network endpoints",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListCoreNetworkEndpoints.html"
       },
       {
         "name": "ListDNSViews",
@@ -173278,7 +174032,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListDNSViews"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListDNSViews.html"
       },
       {
         "name": "ListFirewallDomainLists",
@@ -173293,7 +174047,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListFirewallDomainLists"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListFirewallDomainLists.html"
       },
       {
         "name": "ListFirewallDomains",
@@ -173310,7 +174064,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListFirewallDomains"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListFirewallDomains.html"
       },
       {
         "name": "ListFirewallRules",
@@ -173327,7 +174081,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListFirewallRules"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListFirewallRules.html"
       },
       {
         "name": "ListGlobalResolvers",
@@ -173342,7 +174096,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListGlobalResolvers"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListGlobalResolvers.html"
       },
       {
         "name": "ListHostedZoneAssociations",
@@ -173357,7 +174111,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListHostedZoneAssociations"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListHostedZoneAssociations.html"
       },
       {
         "name": "ListManagedFirewallDomainLists",
@@ -173372,7 +174126,22 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListManagedFirewallDomainLists"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListManagedFirewallDomainLists.html"
+      },
+      {
+        "name": "ListSharedDNSViews",
+        "permissionOnly": false,
+        "description": "Grants permission to list shared dns views",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListSharedDNSViews.html"
       },
       {
         "name": "ListTagsForResource",
@@ -173397,6 +174166,14 @@
             "dependentActions": []
           },
           {
+            "resourceType": "core-network-endpoint",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "dns-view",
             "required": false,
             "conditionKeys": [
@@ -173421,7 +174198,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListTagsForResource"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_ListTagsForResource.html"
       },
       {
         "name": "TagResource",
@@ -173450,6 +174227,16 @@
             "dependentActions": []
           },
           {
+            "resourceType": "core-network-endpoint",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "dns-view",
             "required": false,
             "conditionKeys": [
@@ -173480,7 +174267,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_TagResource"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_TagResource.html"
       },
       {
         "name": "UntagResource",
@@ -173507,6 +174294,15 @@
             "dependentActions": []
           },
           {
+            "resourceType": "core-network-endpoint",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "dns-view",
             "required": false,
             "conditionKeys": [
@@ -173534,7 +174330,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UntagResource"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UntagResource.html"
       },
       {
         "name": "UpdateAccessSource",
@@ -173551,7 +174347,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateAccessSource"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateAccessSource.html"
       },
       {
         "name": "UpdateAccessToken",
@@ -173568,7 +174364,24 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateAccessToken"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateAccessToken.html"
+      },
+      {
+        "name": "UpdateCoreNetworkEndpoint",
+        "permissionOnly": false,
+        "description": "Grants permission to update a core network endpoint",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "core-network-endpoint",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateCoreNetworkEndpoint.html"
       },
       {
         "name": "UpdateDNSView",
@@ -173585,7 +174398,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateDNSView"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateDNSView.html"
       },
       {
         "name": "UpdateFirewallDomains",
@@ -173602,7 +174415,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateFirewallDomains"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateFirewallDomains.html"
       },
       {
         "name": "UpdateFirewallRule",
@@ -173617,7 +174430,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateFirewallRule"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateFirewallRule.html"
       },
       {
         "name": "UpdateGlobalResolver",
@@ -173634,7 +174447,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateGlobalResolver"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateGlobalResolver.html"
       },
       {
         "name": "UpdateHostedZoneAssociation",
@@ -173649,7 +174462,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateHostedZoneAssociation"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/Route53/latest/APIReference/API_route53globalresolver_UpdateHostedZoneAssociation.html"
       }
     ],
     "resourceTypes": [
@@ -173665,6 +174478,14 @@
         "name": "access-token",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:route53globalresolver::${Account}:access-token/${Id}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "core-network-endpoint",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:route53globalresolver::${Account}:core-network-endpoint/${Id}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -215879,6 +216700,280 @@
     ]
   },
   {
+    "name": "AWS Billing and Cost Management Data Hub",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_bcm-data-hub.html",
+    "servicePrefix": "bcm-data-hub",
+    "actions": [
+      {
+        "name": "CancelQueryExecution",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel a query execution",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      },
+      {
+        "name": "CreateDataset",
+        "permissionOnly": false,
+        "description": "Grants permission to create a dataset",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      },
+      {
+        "name": "DeleteDataset",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a dataset",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      },
+      {
+        "name": "GetDataset",
+        "permissionOnly": false,
+        "description": "Grants permission to get a dataset",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      },
+      {
+        "name": "GetDatasetSchema",
+        "permissionOnly": false,
+        "description": "Grants permission to get a dataset schema",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      },
+      {
+        "name": "GetQueryExecution",
+        "permissionOnly": false,
+        "description": "Grants permission to get a query execution",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      },
+      {
+        "name": "GetQueryExecutionResults",
+        "permissionOnly": false,
+        "description": "Grants permission to get query execution results",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      },
+      {
+        "name": "ListDatasets",
+        "permissionOnly": false,
+        "description": "Grants permission to list datasets",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      },
+      {
+        "name": "ListQueryExecutions",
+        "permissionOnly": false,
+        "description": "Grants permission to list query executions",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      },
+      {
+        "name": "ListTagsForResource",
+        "permissionOnly": false,
+        "description": "Grants permission to list tags for a resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      },
+      {
+        "name": "StartQueryExecution",
+        "permissionOnly": false,
+        "description": "Grants permission to start a query execution",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      },
+      {
+        "name": "TagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to tag a resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      },
+      {
+        "name": "UntagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to untag a resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      },
+      {
+        "name": "UpdateDataset",
+        "permissionOnly": false,
+        "description": "Grants permission to update a dataset",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "dataset",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/awsaccountbilling/latest/aboutv2/security-iam.html#sec-policies"
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "dataset",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:bcm-data-hub:${Region}:${Account}:dataset/${Identifier}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      }
+    ],
+    "conditionKeys": [
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tags that are passed in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tags associated with the resource",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tag keys that are passed in the request",
+        "type": "ArrayOfString"
+      }
+    ]
+  },
+  {
     "name": "AWS Billing And Cost Management Pricing Calculator",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_bcm-pricing-calculator.html",
     "servicePrefix": "bcm-pricing-calculator",
@@ -217502,7 +218597,9 @@
           {
             "resourceType": "Assessment",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ],
@@ -217887,6 +218984,26 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_PutResourcePolicy.html"
       },
       {
+        "name": "StartAssessment",
+        "permissionOnly": false,
+        "description": "Grants permission to star a new assessment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Entity",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "catalog:ChangeType"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-catalog/latest/api-reference/API_StartAssessment.html"
+      },
+      {
         "name": "StartChangeSet",
         "permissionOnly": false,
         "description": "Grants permission to request a new change set (Note: resource-level permissions for this action and condition context keys for this action are only supported when used with Catalog API and are not supported when used with AWS Marketplace Management Portal)",
@@ -218149,7 +219266,9 @@
         "name": "Assessment",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:aws-marketplace:${Region}::${Catalog}/Assessment/${ResourceId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "ChangeSet",
@@ -218292,11 +219411,78 @@
     "servicePrefix": "aws-marketplace",
     "actions": [
       {
-        "name": "ListTagsForResource",
+        "name": "GetDeploymentConfiguration",
         "permissionOnly": false,
-        "description": "Grants permission to list tags for a deployment parameter resource",
+        "description": "Grants permission to get the active deployment configuration",
         "accessLevel": "Read",
         "resourceTypes": [
+          {
+            "resourceType": "DeploymentConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-deployment_GetDeploymentConfiguration.html"
+      },
+      {
+        "name": "GetDeploymentConfigurationJob",
+        "permissionOnly": false,
+        "description": "Grants permission to get a deployment configuration job",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "DeploymentConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-deployment_GetDeploymentConfigurationJob.html"
+      },
+      {
+        "name": "ListDeploymentConfigurationJobs",
+        "permissionOnly": false,
+        "description": "Grants permission to list deployment configuration jobs",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "DeploymentConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-deployment_ListDeploymentConfigurationJobs.html"
+      },
+      {
+        "name": "ListTagsForResource",
+        "permissionOnly": false,
+        "description": "Grants permission to list tags for a deployment parameter or deployment configuration resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "DeploymentConfiguration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "DeploymentParameter",
             "required": false,
@@ -218308,7 +219494,7 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-deployment/latest/api-reference/API_ListTagsForResource.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-deployment_ListTagsForResource.html"
       },
       {
         "name": "PutDeploymentParameter",
@@ -218329,14 +219515,43 @@
             ]
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-deployment/latest/api-reference/API_PutDeploymentParameter.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-deployment_PutDeploymentParameter.html"
+      },
+      {
+        "name": "StartDeploymentConfigurationJob",
+        "permissionOnly": false,
+        "description": "Grants permission to start a job that publishes a deployment configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DeploymentConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-deployment_StartDeploymentConfigurationJob.html"
       },
       {
         "name": "TagResource",
         "permissionOnly": false,
-        "description": "Grants permission to tag a deployment parameter resource",
+        "description": "Grants permission to tag a deployment parameter or deployment configuration resource",
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
+          {
+            "resourceType": "DeploymentConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "DeploymentParameter",
             "required": true,
@@ -218348,14 +219563,24 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-deployment/latest/api-reference/API_TagResource.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-deployment_TagResource.html"
       },
       {
         "name": "UntagResource",
         "permissionOnly": false,
-        "description": "Grants permission to untag a deployment parameter resource",
+        "description": "Grants permission to untag a deployment parameter or deployment configuration resource",
         "accessLevel": "Tagging, Write",
         "resourceTypes": [
+          {
+            "resourceType": "DeploymentConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
           {
             "resourceType": "DeploymentParameter",
             "required": true,
@@ -218367,10 +219592,20 @@
             "dependentActions": []
           }
         ],
-        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace-deployment/latest/api-reference/API_UntagResource.html"
+        "apiReferenceUrl": "https://docs.aws.amazon.com/marketplace/latest/APIReference/API_marketplace-deployment_UntagResource.html"
       }
     ],
     "resourceTypes": [
+      {
+        "name": "DeploymentConfiguration",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:aws-marketplace:${Region}:${Account}:DeploymentConfiguration:catalogs/${CatalogName}/products/${ProductId}/delivery-options/${DeliveryOptionType}",
+        "conditionKeys": [
+          "aws:RequestTag/${TagKey}",
+          "aws:ResourceTag/${TagKey}",
+          "aws:TagKeys"
+        ]
+      },
       {
         "name": "DeploymentParameter",
         "apiReferenceUrl": "",
@@ -274338,6 +275573,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_GetFederationToken.html"
       },
       {
+        "name": "ApproveTimeOff",
+        "permissionOnly": false,
+        "description": "Grants permission to approve a time off request for a user in an Amazon Connect instance",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "user",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-scheduling_ApproveTimeOff.html"
+      },
+      {
         "name": "AssociateAnalyticsDataSet",
         "permissionOnly": false,
         "description": "Grants permission to grant access and to associate a dataset with the specified AWS account",
@@ -274981,6 +276234,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_BatchUpdateDataTableValue.html"
+      },
+      {
+        "name": "CancelTimeOff",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel a time off request for a user in an Amazon Connect instance",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "user",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-scheduling_CancelTimeOff.html"
       },
       {
         "name": "ClaimPhoneNumber",
@@ -275823,6 +277094,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_CreateTaskTemplate.html"
+      },
+      {
+        "name": "CreateTimeOff",
+        "permissionOnly": false,
+        "description": "Grants permission to create a time off request for a user in an Amazon Connect instance",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "user",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-scheduling_CreateTimeOff.html"
       },
       {
         "name": "CreateTrafficDistributionGroup",
@@ -278214,6 +279503,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_GetTaskTemplate.html"
       },
       {
+        "name": "GetTimeOff",
+        "permissionOnly": false,
+        "description": "Grants permission to get a time off request for a user in an Amazon Connect instance",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "user",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-scheduling_GetTimeOff.html"
+      },
+      {
         "name": "GetTrafficDistribution",
         "permissionOnly": false,
         "description": "Grants permission to read traffic distribution for a traffic distribution group",
@@ -279802,6 +281109,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_PauseContact.html"
       },
       {
+        "name": "PutTimeOffBalance",
+        "permissionOnly": false,
+        "description": "Grants permission to set the time off balance of a user for a shift activity in an Amazon Connect instance",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "user",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-scheduling_PutTimeOffBalance.html"
+      },
+      {
         "name": "PutUserStatus",
         "permissionOnly": false,
         "description": "Grants permission to switch User Status in an Amazon Connect instance",
@@ -279836,6 +281161,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_PutUserStatus.html"
+      },
+      {
+        "name": "RejectTimeOff",
+        "permissionOnly": false,
+        "description": "Grants permission to reject a time off request for a user in an Amazon Connect instance",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "user",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "connect:InstanceId"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/connect/latest/APIReference/API_connect-scheduling_RejectTimeOff.html"
       },
       {
         "name": "ReleasePhoneNumber",
