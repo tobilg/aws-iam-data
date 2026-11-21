@@ -1,5 +1,304 @@
 [
   {
+    "dateOfChange": "2026-11-21",
+    "addedServices": [
+      "AWS Agent Registry Public Search and Discovery",
+      "AWS Edge Analytics Platform",
+      "AWS Workload Telemetry Service"
+    ],
+    "removedServices": [],
+    "addedActions": {
+      "AWS Agent Registry": [
+        "agent-registry:AssociatePublisher",
+        "agent-registry:CompleteRegistryRecordTokenAuth",
+        "agent-registry:CreatePublisher",
+        "agent-registry:DeletePublisher",
+        "agent-registry:DisassociatePublisher",
+        "agent-registry:GetPublisher",
+        "agent-registry:ListPublisherAssociations",
+        "agent-registry:ListPublishers",
+        "agent-registry:UpdatePublisherAssociationApprovalStatus",
+        "agent-registry:ValidatePublisher"
+      ],
+      "AWS CodeConnections": [
+        "codeconnections:GetResourcePolicy"
+      ],
+      "AWS Compute Optimizer Automation": [
+        "aco-automation:DeleteOrganizationEnrollmentConfiguration",
+        "aco-automation:ListOrganizationEnrollmentConfigurations",
+        "aco-automation:ListOrganizationalUnits",
+        "aco-automation:PutOrganizationEnrollmentConfiguration"
+      ],
+      "AWS DevOps Agent Service": [
+        "aidevops:BatchCreateAccessProfileAssignment",
+        "aidevops:BatchDeleteAccessProfileAssignment",
+        "aidevops:BatchDeleteAccessProfileEntitlement",
+        "aidevops:BatchPutAccessProfileEntitlement",
+        "aidevops:CreateAccessProfile",
+        "aidevops:DeleteAccessProfile",
+        "aidevops:GetAccessProfile",
+        "aidevops:ListAccessProfileAssignments",
+        "aidevops:ListAccessProfileEntitlements",
+        "aidevops:ListAccessProfiles",
+        "aidevops:UpdateAccessProfile",
+        "aidevops:UpdateAccessProfilesOrder"
+      ],
+      "AWS Identity and Access Management (IAM)": [
+        "iam:UpdateOpenIDConnectProvider"
+      ],
+      "AWS Network Security Manager": [
+        "network-security-manager:ListEntityCoverages",
+        "network-security-manager:ListProtectedResourceCoverages"
+      ],
+      "AWS Partner Central": [
+        "partnercentral:BatchCreateCampaignAsset",
+        "partnercentral:CancelChannelContract",
+        "partnercentral:CreateCampaign",
+        "partnercentral:CreateChannelContract",
+        "partnercentral:CreateCustomerAccount",
+        "partnercentral:CreateDataSubscription",
+        "partnercentral:CreateSocialConnectionAuthorizationUrl",
+        "partnercentral:DeactivateCampaignAsset",
+        "partnercentral:DeleteCampaign",
+        "partnercentral:DeleteCampaignAsset",
+        "partnercentral:DeleteCustomerAccount",
+        "partnercentral:DeleteDataSubscription",
+        "partnercentral:DeleteSocialConnection",
+        "partnercentral:GetCampaign",
+        "partnercentral:GetCampaignAsset",
+        "partnercentral:GetCampaignAssetActivationTask",
+        "partnercentral:GetCampaignAssetExportTask",
+        "partnercentral:GetCampaignTemplate",
+        "partnercentral:GetChannelContract",
+        "partnercentral:GetCustomerAccount",
+        "partnercentral:GetCustomerAccountBulkJob",
+        "partnercentral:GetCustomerAccountBulkJobReportUrl",
+        "partnercentral:GetCustomerAccountStatistics",
+        "partnercentral:GetDataSubscription",
+        "partnercentral:GetOpportunityBulkJobReportUrl",
+        "partnercentral:ListCampaignAssets",
+        "partnercentral:ListCampaigns",
+        "partnercentral:ListChannelContracts",
+        "partnercentral:ListCustomerAccountBulkJobResults",
+        "partnercentral:ListCustomerAccountBulkJobs",
+        "partnercentral:ListDataSubscriptions",
+        "partnercentral:ListEngagementGroups",
+        "partnercentral:ListOpportunityBulkJobResults",
+        "partnercentral:ListOpportunityBulkJobs",
+        "partnercentral:ListSocialConnections",
+        "partnercentral:SearchCampaignTemplates",
+        "partnercentral:SearchCustomerAccounts",
+        "partnercentral:SearchEngagements",
+        "partnercentral:StartCampaignAssetActivationTask",
+        "partnercentral:StartCampaignAssetExportTask",
+        "partnercentral:StartCustomerAccountBulkJob",
+        "partnercentral:StartOpportunityBulkJob",
+        "partnercentral:UpdateCampaign",
+        "partnercentral:UpdateCampaignAsset",
+        "partnercentral:UpdateCustomerAccount",
+        "partnercentral:UpdateMarketplaceRevenueShare"
+      ],
+      "AWS Payments": [
+        "payments:BatchGetFinancialRecord",
+        "payments:GetAccountBalance",
+        "payments:GetFinancialRecord",
+        "payments:ListFinancialRecords",
+        "payments:ListPaymentInstruments"
+      ],
+      "AWS RTB Fabric": [
+        "rtbfabric:GetAvailableModule",
+        "rtbfabric:GetAvailableModuleVersion",
+        "rtbfabric:GetUpdate",
+        "rtbfabric:ListAvailableModuleVersions",
+        "rtbfabric:ListAvailableModules",
+        "rtbfabric:ListUpdates",
+        "rtbfabric:PutLinkFlows"
+      ],
+      "AWS Security Agent": [
+        "securityagent:GetPentestEstimate",
+        "securityagent:StartPentestEstimationRun",
+        "securityagent:StopPentestEstimationRun"
+      ],
+      "AWS Security Token Service": [
+        "sts:GetScopedCredentials"
+      ],
+      "AWS Signin": [
+        "signin:BatchRevokeSessions",
+        "signin:GetSession",
+        "signin:ListSessions"
+      ],
+      "AWS Billing And Cost Management Pricing Calculator": [
+        "bcm-pricing-calculator:GetUsageLinesEstimatedCost"
+      ],
+      "AWS Marketplace Discovery": [
+        "aws-marketplace:ListListingAttributes"
+      ],
+      "AWS Marketplace Seller Reporting": [
+        "aws-marketplace:CreateDataSubscription",
+        "aws-marketplace:DeleteDataSubscription",
+        "aws-marketplace:GetDataSubscription",
+        "aws-marketplace:ListDataSubscriptions",
+        "aws-marketplace:ListTagsForResource",
+        "aws-marketplace:TagResource",
+        "aws-marketplace:UntagResource"
+      ],
+      "Amazon Bedrock Agentcore": [
+        "bedrock-agentcore:DeleteDatasetGeneration",
+        "bedrock-agentcore:GetDatasetGeneration",
+        "bedrock-agentcore:ListDatasetGenerations",
+        "bedrock-agentcore:StartDatasetGeneration"
+      ],
+      "Amazon CloudWatch": [
+        "cloudwatch:CreateOmniAgentAsset",
+        "cloudwatch:DeleteOmniAgentAsset",
+        "cloudwatch:GetMonitoringAssessment",
+        "cloudwatch:GetOmniAgentAsset",
+        "cloudwatch:ListMonitoringAssessmentResults",
+        "cloudwatch:ListMonitoringAssessments",
+        "cloudwatch:ListOmniAgentAssets",
+        "cloudwatch:StartMonitoringAssessment",
+        "cloudwatch:UpdateOmniAgentAsset"
+      ],
+      "Amazon Cognito User Pools": [
+        "cognito-idp:CancelPointInTimeRecovery",
+        "cognito-idp:CreateCIMDPolicy",
+        "cognito-idp:DeleteCIMDPolicy",
+        "cognito-idp:DescribeCIMDPolicy",
+        "cognito-idp:DescribePointInTimeRecovery",
+        "cognito-idp:GetDerivedToken",
+        "cognito-idp:InitiatePointInTimeRecovery",
+        "cognito-idp:ListCIMDPolicies",
+        "cognito-idp:ListClientMetadataURLs",
+        "cognito-idp:ListPointInTimeRecoveries",
+        "cognito-idp:StartPointInTimeRecovery",
+        "cognito-idp:UpdateCIMDPolicy",
+        "cognito-idp:UpdateClientMetadataURLState"
+      ],
+      "Amazon EventBridge": [
+        "events:RotateWebhookCredentials"
+      ],
+      "Amazon Kinesis Analytics V2": [
+        "kinesisanalytics:CreateSnapshot",
+        "kinesisanalytics:DeleteSnapshot",
+        "kinesisanalytics:DescribeSnapshot",
+        "kinesisanalytics:DescribeSnapshotOperation",
+        "kinesisanalytics:ExportSnapshot",
+        "kinesisanalytics:ImportSnapshot",
+        "kinesisanalytics:ListSnapshotOperations",
+        "kinesisanalytics:ListSnapshots"
+      ],
+      "Amazon Managed Streaming for Apache Kafka": [
+        "kafka:CreateAssessment",
+        "kafka:DeleteAssessment",
+        "kafka:DescribeAssessment",
+        "kafka:DescribeTopicReassignment",
+        "kafka:ListAssessmentFindings",
+        "kafka:ListAssessments",
+        "kafka:ListTopicReassignments",
+        "kafka:StartTopicReassignment",
+        "kafka:StopTopicReassignment"
+      ],
+      "Amazon Polly": [
+        "polly:CreateVoice",
+        "polly:DeleteVoice",
+        "polly:GetVoice"
+      ],
+      "Amazon QuickSight": [
+        "quicksight:BatchDeletePolicyAssignmentByPolicy",
+        "quicksight:BatchPutPolicyAssignmentByPolicy",
+        "quicksight:CreateKnowledgeBaseRefreshSchedule",
+        "quicksight:DeleteKnowledgeBaseRefreshSchedule",
+        "quicksight:DeletePolicyAssignment",
+        "quicksight:DescribeKnowledgeBaseRefreshSchedule",
+        "quicksight:GetPolicyAssignment",
+        "quicksight:ListKnowledgeBaseRefreshSchedules",
+        "quicksight:ListPrincipalsForPolicy",
+        "quicksight:PutPolicyAssignment",
+        "quicksight:UpdateKnowledgeBaseRefreshSchedule"
+      ],
+      "Amazon Route 53": [
+        "route53:CreateHealthCheckSource",
+        "route53:DeleteHealthCheckSource",
+        "route53:GetHealthCheckSource",
+        "route53:GetHostedZoneChangeBatch",
+        "route53:ListHealthCheckSources",
+        "route53:ListHealthChecksBySource",
+        "route53:ListHostedZoneChangeBatches",
+        "route53:UpdateHostedZoneTier"
+      ],
+      "Amazon S3 Tables": [
+        "s3tables:DisassociateTableReplication"
+      ],
+      "Amazon SageMaker": [
+        "sagemaker:AddInferenceGateway",
+        "sagemaker:CreateClusterExtension",
+        "sagemaker:CreateGlobalInferenceGateway",
+        "sagemaker:DeleteClusterExtension",
+        "sagemaker:DeleteGlobalInferenceGateway",
+        "sagemaker:DescribeCapacityReservation",
+        "sagemaker:DescribeClusterExtension",
+        "sagemaker:DescribeGlobalInferenceGateway",
+        "sagemaker:DescribeResourceAssociations",
+        "sagemaker:GetCapacityReservationUsage",
+        "sagemaker:InvokeGlobalInferenceGateway",
+        "sagemaker:InvokeGlobalInferenceGatewayWithResponseStream",
+        "sagemaker:ListCapacityReservations",
+        "sagemaker:ListClusterExtensionVersions",
+        "sagemaker:ListClusterExtensions",
+        "sagemaker:ListGlobalInferenceGateways",
+        "sagemaker:ListInferenceGateways",
+        "sagemaker:RemoveInferenceGateway",
+        "sagemaker:UpdateClusterExtension",
+        "sagemaker:UpdateGlobalInferenceGateway"
+      ],
+      "Amazon Textract": [
+        "textract:CreateBlueprint",
+        "textract:CreateBlueprintVersion",
+        "textract:CreateProject",
+        "textract:DeleteBlueprint",
+        "textract:DeleteProject",
+        "textract:GetBlueprint",
+        "textract:GetDocumentInsights",
+        "textract:GetProject",
+        "textract:ListBlueprints",
+        "textract:ListProjects",
+        "textract:StartDocumentInsights",
+        "textract:UpdateBlueprint",
+        "textract:UpdateProject"
+      ],
+      "Amazon Transcribe": [
+        "transcribe:TranscribeAudio"
+      ],
+      "AWS Agent Registry Public Search and Discovery": [
+        "agent-discovery:SearchPublicRecords"
+      ]
+    },
+    "removedActions": {
+      "AWS Payments": [
+        "payments:AcceptFinancingApplicationTerms",
+        "payments:CreateConnectedAccount",
+        "payments:CreateFinancingApplication",
+        "payments:CreatePaymentInstrument",
+        "payments:DeleteConnectedAccount",
+        "payments:GetConnectedAccount",
+        "payments:GetFinancingApplication",
+        "payments:GetFinancingLine",
+        "payments:GetFinancingLineWithdrawal",
+        "payments:GetFinancingOption",
+        "payments:ListConnectedAccounts",
+        "payments:ListFinancingApplications",
+        "payments:ListFinancingLineWithdrawals",
+        "payments:ListFinancingLines",
+        "payments:ListPaymentProgramOptions",
+        "payments:ListPaymentProgramStatus",
+        "payments:ListTagsForResource",
+        "payments:TagResource",
+        "payments:UntagResource",
+        "payments:UpdateFinancingApplication"
+      ]
+    }
+  },
+  {
     "dateOfChange": "2026-11-19",
     "addedServices": [
       "AWS Abuse Signal API",
