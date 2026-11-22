@@ -1,5 +1,35 @@
 [
   {
+    "dateOfChange": "2026-11-22",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon FSx": [
+        "fsx:CreateClusterPeer",
+        "fsx:CreateSnapmirrorPolicy",
+        "fsx:CreateSnapmirrorRelationship",
+        "fsx:CreateSnapshotPolicy",
+        "fsx:CreateStorageVirtualMachinePeer",
+        "fsx:DeleteClusterPeer",
+        "fsx:DeleteSnapmirrorPolicy",
+        "fsx:DeleteSnapmirrorRelationship",
+        "fsx:DeleteSnapshotPolicy",
+        "fsx:DeleteStorageVirtualMachinePeer",
+        "fsx:DescribeClusterPeers",
+        "fsx:DescribeSnapmirrorPolicies",
+        "fsx:DescribeSnapmirrorRelationships",
+        "fsx:DescribeSnapshotPolicies",
+        "fsx:DescribeStorageVirtualMachinePeers",
+        "fsx:UpdateClusterPeer",
+        "fsx:UpdateSnapmirrorPolicy",
+        "fsx:UpdateSnapmirrorRelationship",
+        "fsx:UpdateSnapshotPolicy",
+        "fsx:UpdateStorageVirtualMachinePeer"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-11-21",
     "addedServices": [
       "AWS Agent Registry Public Search and Discovery",
