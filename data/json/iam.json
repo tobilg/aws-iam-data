@@ -163777,7 +163777,10 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "payments:GetPaymentStatus",
+              "aws-portal:ViewBilling"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_payments_ListFinancialRecords.html"
@@ -232609,7 +232612,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "appstream:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateUpdatedImage.html"
