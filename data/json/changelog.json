@@ -1,5 +1,40 @@
 [
   {
+    "dateOfChange": "2026-11-24",
+    "addedServices": [],
+    "removedServices": [],
+    "addedActions": {
+      "Amazon Bedrock": [
+        "bedrock:ArchiveProject",
+        "bedrock:CreateProject",
+        "bedrock:DeleteAccountDataRetentionStorage",
+        "bedrock:DeleteOrganizationDataRetentionStorage",
+        "bedrock:DeleteProjectDataRetentionStorage",
+        "bedrock:GetAccountDataRetentionStorage",
+        "bedrock:GetOrganizationDataRetentionStorage",
+        "bedrock:GetProject",
+        "bedrock:GetProjectDataRetentionStorage",
+        "bedrock:GetTrustedAccessProgram",
+        "bedrock:GetTrustedAccessProgramAccountEnrollment",
+        "bedrock:GetTrustedAccessProgramOrganizationEnrollment",
+        "bedrock:GetTrustedAccessProgramProjectEnrollment",
+        "bedrock:ListProjects",
+        "bedrock:ListTrustedAccessPrograms",
+        "bedrock:PutAccountDataRetentionStorage",
+        "bedrock:PutOrganizationDataRetentionStorage",
+        "bedrock:PutProjectDataRetentionStorage",
+        "bedrock:PutTrustedAccessProgramAccountEnrollment",
+        "bedrock:PutTrustedAccessProgramOrganizationEnrollment",
+        "bedrock:PutTrustedAccessProgramProjectEnrollment",
+        "bedrock:StartTrustedAccessProgramAccountApplication",
+        "bedrock:StartTrustedAccessProgramOrganizationApplication",
+        "bedrock:StartTrustedAccessProgramProjectApplication",
+        "bedrock:UpdateProject"
+      ]
+    },
+    "removedActions": {}
+  },
+  {
     "dateOfChange": "2026-11-22",
     "addedServices": [],
     "removedServices": [],

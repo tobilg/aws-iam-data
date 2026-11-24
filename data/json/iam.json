@@ -84867,7 +84867,38 @@
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_finops-agent.html",
     "servicePrefix": "finops-agent",
     "actions": [],
-    "resourceTypes": [],
+    "resourceTypes": [
+      {
+        "name": "agentspace",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:finops-agent:${Region}:${Account}:agentspace/${AgentSpaceId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "automation",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:finops-agent:${Region}:${Account}:agentspace/${AgentSpaceId}/automation/${AutomationId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "connection",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:finops-agent:${Region}:${Account}:agentspace/${AgentSpaceId}/connection/${ConnectionId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "document",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:finops-agent:${Region}:${Account}:agentspace/${AgentSpaceId}/document/${DocumentId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "integration",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:finops-agent:${Region}:${Account}:integration/${IntegrationId}",
+        "conditionKeys": []
+      }
+    ],
     "conditionKeys": []
   },
   {
@@ -163713,7 +163744,10 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "payments:GetPaymentStatus",
+              "aws-portal:ViewBilling"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_payments_BatchGetFinancialRecord.html"
@@ -163795,7 +163829,9 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "aws-portal:ViewPaymentMethods"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_payments_ListPaymentInstruments.html"
@@ -236668,6 +236704,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/welcome.html"
       },
       {
+        "name": "ArchiveProject",
+        "permissionOnly": false,
+        "description": "Grants permission to archive a Bedrock project",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_ArchiveProject.html"
+      },
+      {
         "name": "AssociateAgentCollaborator",
         "permissionOnly": false,
         "description": "Grants permission to associate another existing agent as a collaborator to an existing agent",
@@ -237529,6 +237582,26 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_CreateModelInvocationJob.html"
       },
       {
+        "name": "CreateProject",
+        "permissionOnly": false,
+        "description": "Grants permission to create a Bedrock project",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "bedrock:DataRetentionMode"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_CreateProject.html"
+      },
+      {
         "name": "CreatePrompt",
         "permissionOnly": false,
         "description": "Grants permission to create a prompt",
@@ -237682,6 +237755,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_CreateSession.html"
+      },
+      {
+        "name": "DeleteAccountDataRetentionStorage",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the data retention storage configuration for an account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_DeleteAccountDataRetentionStorage.html"
       },
       {
         "name": "DeleteAgent",
@@ -238158,6 +238246,38 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_DeleteModelInvocationLoggingConfiguration.html"
       },
       {
+        "name": "DeleteOrganizationDataRetentionStorage",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the data retention storage configuration for an organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_DeleteOrganizationDataRetentionStorage.html"
+      },
+      {
+        "name": "DeleteProjectDataRetentionStorage",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the data retention storage configuration for a project",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_DeleteProjectDataRetentionStorage.html"
+      },
+      {
         "name": "DeletePrompt",
         "permissionOnly": false,
         "description": "Grants permission to delete a prompt or its version",
@@ -238393,6 +238513,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetAccountDataRetention.html"
+      },
+      {
+        "name": "GetAccountDataRetentionStorage",
+        "permissionOnly": false,
+        "description": "Grants permission to get the data retention storage configuration for an account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetAccountDataRetentionStorage.html"
       },
       {
         "name": "GetAdvancedPromptOptimizationJob",
@@ -239029,7 +239164,9 @@
           {
             "resourceType": "foundation-model",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "bedrock:ProjectArn"
+            ],
             "dependentActions": []
           }
         ],
@@ -239094,14 +239231,17 @@
             "resourceType": "application-inference-profile",
             "required": true,
             "conditionKeys": [
-              "aws:ResourceTag/${TagKey}"
+              "aws:ResourceTag/${TagKey}",
+              "bedrock:ProjectArn"
             ],
             "dependentActions": []
           },
           {
             "resourceType": "inference-profile",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "bedrock:ProjectArn"
+            ],
             "dependentActions": []
           }
         ],
@@ -239323,6 +239463,55 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetModelInvocationLoggingConfiguration.html"
       },
       {
+        "name": "GetOrganizationDataRetentionStorage",
+        "permissionOnly": false,
+        "description": "Grants permission to get the data retention storage configuration for an organization",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetOrganizationDataRetentionStorage.html"
+      },
+      {
+        "name": "GetProject",
+        "permissionOnly": false,
+        "description": "Grants permission to get a Bedrock project",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetProject.html"
+      },
+      {
+        "name": "GetProjectDataRetentionStorage",
+        "permissionOnly": false,
+        "description": "Grants permission to get the data retention storage configuration for a project",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetProjectDataRetentionStorage.html"
+      },
+      {
         "name": "GetPrompt",
         "permissionOnly": false,
         "description": "Grants permission to retrieve an existing prompt or its version",
@@ -239420,6 +239609,92 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent-runtime_GetSession.html"
+      },
+      {
+        "name": "GetTrustedAccessProgram",
+        "permissionOnly": false,
+        "description": "Grants permission to get a trusted access program",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "bedrock:Provider"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "trusted-access-program",
+            "required": true,
+            "conditionKeys": [
+              "bedrock:Provider"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetTrustedAccessProgram.html"
+      },
+      {
+        "name": "GetTrustedAccessProgramAccountEnrollment",
+        "permissionOnly": false,
+        "description": "Grants permission to get trusted access program enrollment for an account",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "trusted-access-program",
+            "required": true,
+            "conditionKeys": [
+              "bedrock:Provider"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetTrustedAccessProgramAccountEnrollment.html"
+      },
+      {
+        "name": "GetTrustedAccessProgramOrganizationEnrollment",
+        "permissionOnly": false,
+        "description": "Grants permission to get trusted access program enrollment for an organization",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "trusted-access-program",
+            "required": true,
+            "conditionKeys": [
+              "bedrock:Provider"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetTrustedAccessProgramOrganizationEnrollment.html"
+      },
+      {
+        "name": "GetTrustedAccessProgramProjectEnrollment",
+        "permissionOnly": false,
+        "description": "Grants permission to get trusted access program enrollment for a project",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "bedrock:Provider"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "trusted-access-program",
+            "required": true,
+            "conditionKeys": [
+              "bedrock:Provider"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_GetTrustedAccessProgramProjectEnrollment.html"
       },
       {
         "name": "GetUseCaseForModelAccess",
@@ -239767,7 +240042,7 @@
           },
           {
             "resourceType": "project",
-            "required": true,
+            "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
               "aws:ResourceTag/${TagKey}",
@@ -239844,6 +240119,8 @@
               "aws:ResourceTag/${TagKey}",
               "bedrock:GuardrailIdentifier",
               "bedrock:InferenceProfileArn",
+              "bedrock:ModelArn",
+              "bedrock:ProjectArn",
               "bedrock:PromptRouterArn",
               "bedrock:ServiceTier"
             ],
@@ -239855,6 +240132,8 @@
             "conditionKeys": [
               "bedrock:GuardrailIdentifier",
               "bedrock:InferenceProfileArn",
+              "bedrock:ModelArn",
+              "bedrock:ProjectArn",
               "bedrock:PromptRouterArn",
               "bedrock:ServiceTier"
             ],
@@ -239867,6 +240146,8 @@
               "aws:ResourceTag/${TagKey}",
               "bedrock:GuardrailIdentifier",
               "bedrock:InferenceProfileArn",
+              "bedrock:ModelArn",
+              "bedrock:ProjectArn",
               "bedrock:PromptRouterArn",
               "bedrock:ServiceTier"
             ],
@@ -239878,6 +240159,8 @@
             "conditionKeys": [
               "bedrock:GuardrailIdentifier",
               "bedrock:InferenceProfileArn",
+              "bedrock:ModelArn",
+              "bedrock:ProjectArn",
               "bedrock:PromptRouterArn",
               "bedrock:ServiceTier"
             ],
@@ -239889,6 +240172,8 @@
             "conditionKeys": [
               "bedrock:GuardrailIdentifier",
               "bedrock:InferenceProfileArn",
+              "bedrock:ModelArn",
+              "bedrock:ProjectArn",
               "bedrock:PromptRouterArn",
               "bedrock:ServiceTier"
             ],
@@ -239901,6 +240186,8 @@
               "aws:ResourceTag/${TagKey}",
               "bedrock:GuardrailIdentifier",
               "bedrock:InferenceProfileArn",
+              "bedrock:ModelArn",
+              "bedrock:ProjectArn",
               "bedrock:PromptRouterArn",
               "bedrock:ServiceTier"
             ],
@@ -239912,6 +240199,22 @@
             "conditionKeys": [
               "bedrock:GuardrailIdentifier",
               "bedrock:InferenceProfileArn",
+              "bedrock:ModelArn",
+              "bedrock:ProjectArn",
+              "bedrock:PromptRouterArn",
+              "bedrock:ServiceTier"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "project",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "bedrock:GuardrailIdentifier",
+              "bedrock:InferenceProfileArn",
+              "bedrock:ModelArn",
+              "bedrock:ProjectArn",
               "bedrock:PromptRouterArn",
               "bedrock:ServiceTier"
             ],
@@ -239924,6 +240227,8 @@
               "aws:ResourceTag/${TagKey}",
               "bedrock:GuardrailIdentifier",
               "bedrock:InferenceProfileArn",
+              "bedrock:ModelArn",
+              "bedrock:ProjectArn",
               "bedrock:PromptRouterArn",
               "bedrock:ServiceTier"
             ],
@@ -239936,6 +240241,8 @@
               "aws:ResourceTag/${TagKey}",
               "bedrock:GuardrailIdentifier",
               "bedrock:InferenceProfileArn",
+              "bedrock:ModelArn",
+              "bedrock:ProjectArn",
               "bedrock:PromptRouterArn",
               "bedrock:ServiceTier"
             ],
@@ -239947,6 +240254,8 @@
             "conditionKeys": [
               "bedrock:GuardrailIdentifier",
               "bedrock:InferenceProfileArn",
+              "bedrock:ModelArn",
+              "bedrock:ProjectArn",
               "bedrock:PromptRouterArn",
               "bedrock:ServiceTier"
             ],
@@ -240467,7 +240776,9 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "bedrock:ProjectArn"
+            ],
             "dependentActions": []
           }
         ],
@@ -240512,9 +240823,20 @@
         "accessLevel": "List",
         "resourceTypes": [
           {
-            "resourceType": "",
-            "required": false,
-            "conditionKeys": [],
+            "resourceType": "application-inference-profile",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "bedrock:ProjectArn"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "inference-profile",
+            "required": true,
+            "conditionKeys": [
+              "bedrock:ProjectArn"
+            ],
             "dependentActions": []
           }
         ],
@@ -240692,6 +241014,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_ListModelInvocationJobs.html"
+      },
+      {
+        "name": "ListProjects",
+        "permissionOnly": false,
+        "description": "Grants permission to list Bedrock projects",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_ListProjects.html"
       },
       {
         "name": "ListPromptRouters",
@@ -241002,6 +241341,14 @@
             "dependentActions": []
           },
           {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "prompt",
             "required": true,
             "conditionKeys": [
@@ -241051,6 +241398,29 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_ListTagsForResource.html"
+      },
+      {
+        "name": "ListTrustedAccessPrograms",
+        "permissionOnly": false,
+        "description": "Grants permission to list trusted access programs",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "trusted-access-program",
+            "required": true,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_ListTrustedAccessPrograms.html"
       },
       {
         "name": "OptimizePrompt",
@@ -241119,6 +241489,21 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_PutAccountDataRetention.html"
       },
       {
+        "name": "PutAccountDataRetentionStorage",
+        "permissionOnly": false,
+        "description": "Grants permission to set the data retention storage configuration for an account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_PutAccountDataRetentionStorage.html"
+      },
+      {
         "name": "PutEnforcedGuardrailConfiguration",
         "permissionOnly": false,
         "description": "Grants permission to set account-level enforced guardrail configuration",
@@ -241179,6 +241564,102 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_PutModelInvocationLoggingConfiguration.html"
+      },
+      {
+        "name": "PutOrganizationDataRetentionStorage",
+        "permissionOnly": false,
+        "description": "Grants permission to set the data retention storage configuration for an organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_PutOrganizationDataRetentionStorage.html"
+      },
+      {
+        "name": "PutProjectDataRetentionStorage",
+        "permissionOnly": false,
+        "description": "Grants permission to set the data retention storage configuration for a project",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_PutProjectDataRetentionStorage.html"
+      },
+      {
+        "name": "PutTrustedAccessProgramAccountEnrollment",
+        "permissionOnly": false,
+        "description": "Grants permission to set trusted access program enrollment preferences for an account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "trusted-access-program",
+            "required": true,
+            "conditionKeys": [
+              "bedrock:Provider",
+              "bedrock:TrustedAccessProgramOptIn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_PutTrustedAccessProgramAccountEnrollment.html"
+      },
+      {
+        "name": "PutTrustedAccessProgramOrganizationEnrollment",
+        "permissionOnly": false,
+        "description": "Grants permission to set trusted access program enrollment preferences for an organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "trusted-access-program",
+            "required": true,
+            "conditionKeys": [
+              "bedrock:Provider",
+              "bedrock:TrustedAccessProgramOptIn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_PutTrustedAccessProgramOrganizationEnrollment.html"
+      },
+      {
+        "name": "PutTrustedAccessProgramProjectEnrollment",
+        "permissionOnly": false,
+        "description": "Grants permission to set trusted access program enrollment preferences for a project",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "bedrock:Provider",
+              "bedrock:TrustedAccessProgramOptIn"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "trusted-access-program",
+            "required": true,
+            "conditionKeys": [
+              "bedrock:Provider",
+              "bedrock:TrustedAccessProgramOptIn"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_PutTrustedAccessProgramProjectEnrollment.html"
       },
       {
         "name": "PutUseCaseForModelAccess",
@@ -241332,6 +241813,66 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_agent_StartIngestionJob.html"
+      },
+      {
+        "name": "StartTrustedAccessProgramAccountApplication",
+        "permissionOnly": false,
+        "description": "Grants permission to start a trusted access program application for an account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "trusted-access-program",
+            "required": true,
+            "conditionKeys": [
+              "bedrock:Provider"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_StartTrustedAccessProgramAccountApplication.html"
+      },
+      {
+        "name": "StartTrustedAccessProgramOrganizationApplication",
+        "permissionOnly": false,
+        "description": "Grants permission to start a trusted access program application for an organization",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "trusted-access-program",
+            "required": true,
+            "conditionKeys": [
+              "bedrock:Provider"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_StartTrustedAccessProgramOrganizationApplication.html"
+      },
+      {
+        "name": "StartTrustedAccessProgramProjectApplication",
+        "permissionOnly": false,
+        "description": "Grants permission to start a trusted access program application for a project",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "bedrock:Provider"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "trusted-access-program",
+            "required": true,
+            "conditionKeys": [
+              "bedrock:Provider"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_StartTrustedAccessProgramProjectApplication.html"
       },
       {
         "name": "StopAdvancedPromptOptimizationJob",
@@ -241716,6 +242257,16 @@
             "dependentActions": []
           },
           {
+            "resourceType": "project",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "prompt",
             "required": false,
             "conditionKeys": [
@@ -242011,6 +242562,15 @@
           },
           {
             "resourceType": "model-invocation-job",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "project",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -242434,6 +242994,24 @@
         "apiReferenceUrl": "API_UpdateMarketplaceModelEndpoint"
       },
       {
+        "name": "UpdateProject",
+        "permissionOnly": false,
+        "description": "Grants permission to update a Bedrock project",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "project",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "bedrock:DataRetentionMode"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/bedrock/latest/APIReference/API_UpdateProject.html"
+      },
+      {
         "name": "UpdatePrompt",
         "permissionOnly": false,
         "description": "Grants permission to update a prompt",
@@ -242843,6 +243421,12 @@
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:bedrock::${Account}:system-tool/${ResourceId}",
         "conditionKeys": []
+      },
+      {
+        "name": "trusted-access-program",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:bedrock::aws:trusted-access-program/${ProgramId}",
+        "conditionKeys": []
       }
     ],
     "conditionKeys": [
@@ -242897,13 +243481,13 @@
       {
         "name": "bedrock:ModelArn",
         "apiReferenceUrl": "",
-        "description": "Filters access by the model that a stateful invocation runs, on the authorization whose resource is the project",
+        "description": "Filters access by the model associated with a request authorized against a project",
         "type": "ARN"
       },
       {
         "name": "bedrock:ProjectArn",
         "apiReferenceUrl": "",
-        "description": "Filters access by the project that a stateful invocation belongs to, on authorizations whose resource is the inference target it runs",
+        "description": "Filters access by the project associated with a request",
         "type": "ARN"
       },
       {
@@ -242911,6 +243495,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by the specified prompt router",
         "type": "ARN"
+      },
+      {
+        "name": "bedrock:Provider",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the provider of a trusted access program",
+        "type": "String"
       },
       {
         "name": "bedrock:ServiceTier",
@@ -242923,6 +243513,12 @@
         "apiReferenceUrl": "",
         "description": "Filters access by the secretArn containing the credentials of the third party platform",
         "type": "ARN"
+      },
+      {
+        "name": "bedrock:TrustedAccessProgramOptIn",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the requested trusted access program opt-in preference",
+        "type": "String"
       }
     ]
   },
@@ -352390,7 +352986,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "fsx:TagResource"
+            ]
           },
           {
             "resourceType": "file-system",
@@ -352400,7 +352998,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "fsx:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/fsx/latest/APIReference/API_CreateClusterPeer.html"
@@ -352578,7 +353178,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "fsx:TagResource"
+            ]
           },
           {
             "resourceType": "snapmirror-policy",
@@ -352588,7 +353190,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "fsx:TagResource"
+            ]
           },
           {
             "resourceType": "storage-virtual-machine",
@@ -352598,7 +353202,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "fsx:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/fsx/latest/APIReference/API_CreateSnapmirrorPolicy.html"
@@ -352617,7 +353223,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "fsx:TagResource"
+            ]
           },
           {
             "resourceType": "snapmirror-relationship",
@@ -352628,7 +353236,9 @@
               "aws:TagKeys",
               "fsx:SnapmirrorSourcePath"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "fsx:TagResource"
+            ]
           },
           {
             "resourceType": "volume",
@@ -352638,7 +353248,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "fsx:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/fsx/latest/APIReference/API_CreateSnapmirrorRelationship.html"
@@ -352690,7 +353302,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "fsx:TagResource"
+            ]
           },
           {
             "resourceType": "snapshot-policy",
@@ -352700,7 +353314,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "fsx:TagResource"
+            ]
           },
           {
             "resourceType": "storage-virtual-machine",
@@ -352710,7 +353326,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "fsx:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/fsx/latest/APIReference/API_CreateSnapshotPolicy.html"
@@ -352762,7 +353380,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "fsx:TagResource"
+            ]
           },
           {
             "resourceType": "svm-peer",
@@ -352772,7 +353392,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "fsx:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/fsx/latest/APIReference/API_CreateStorageVirtualMachinePeer.html"
