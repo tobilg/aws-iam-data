@@ -13836,7 +13836,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "mgn:TagResource"
+            ]
           },
           {
             "resourceType": "RemoteSourceActionResource",
@@ -13846,7 +13848,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "mgn:TagResource"
+            ]
           },
           {
             "resourceType": "SourceServerResource",
@@ -13856,7 +13860,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "mgn:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/mgn/latest/APIReference/API_StartRemoteSourceActionJob.html"
@@ -185515,7 +185521,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "odb:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/odb/latest/APIReference/API_CreateAutonomousDatabaseBackup.html"
@@ -232351,7 +232359,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "appstream:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateAppBlock.html"
@@ -423313,7 +423323,10 @@
           {
             "resourceType": "",
             "required": false,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys"
+            ],
             "dependentActions": [
               "redshift:CreateTags"
             ]
@@ -423451,6 +423464,30 @@
           },
           {
             "resourceType": "parametergroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "redshift:DeleteTags"
+            ]
+          },
+          {
+            "resourceType": "qev2idcapplication",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": [
+              "redshift:DeleteTags"
+            ]
+          },
+          {
+            "resourceType": "redshiftidcapplication",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -423847,7 +423884,9 @@
           {
             "resourceType": "redshiftidcapplication",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ],
@@ -423970,6 +424009,24 @@
           },
           {
             "resourceType": "parametergroup",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "qev2idcapplication",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "redshiftidcapplication",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -424758,6 +424815,22 @@
             "dependentActions": []
           },
           {
+            "resourceType": "qev2idcapplication",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "redshiftidcapplication",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "securitygroup",
             "required": false,
             "conditionKeys": [
@@ -425104,6 +425177,21 @@
         "apiReferenceUrl": "API_ListRecommendations.html"
       },
       {
+        "name": "ModifyAccountAttributes",
+        "permissionOnly": false,
+        "description": "Grants permission to modify the account-level settings for Amazon Redshift and Amazon Redshift Serverless in the current AWS Region",
+        "accessLevel": "Permissions management, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/redshift/latest/APIReference/API_ModifyAccountAttributes.html"
+      },
+      {
         "name": "ModifyAquaConfiguration",
         "permissionOnly": false,
         "description": "Grants permission to modify the AQUA configuration of a cluster",
@@ -425370,7 +425458,9 @@
           {
             "resourceType": "redshiftidcapplication",
             "required": true,
-            "conditionKeys": [],
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
             "dependentActions": []
           }
         ],
@@ -425841,13 +425931,17 @@
         "name": "qev2idcapplication",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:redshift:${Region}:${Account}:qev2idcapplication:${Qev2IdcApplicationId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "redshiftidcapplication",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:redshift:${Region}:${Account}:redshiftidcapplication:${RedshiftIdcApplicationId}",
-        "conditionKeys": []
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
       },
       {
         "name": "securitygroup",
