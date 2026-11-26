@@ -4468,6 +4468,1691 @@
     "conditionKeys": []
   },
   {
+    "name": "AWS Amplify Gen 3",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amplifygen3.html",
+    "servicePrefix": "amplifygen3",
+    "actions": [
+      {
+        "name": "AcceptForkPullRequestDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to accept a pull request deployment from a forked repository",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_AcceptForkPullRequestDeployment.html"
+      },
+      {
+        "name": "CancelGradualRollout",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel a gradual rollout for an alias of an environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Alias",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_CancelGradualRollout.html"
+      },
+      {
+        "name": "Connect",
+        "permissionOnly": false,
+        "description": "Grants permission to connect to an Amplify Gen 3 backend as a service identity, through the REST interface or Postgres relay",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Branch",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/userguide/welcome.html"
+      },
+      {
+        "name": "CreateApp",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateApp.html"
+      },
+      {
+        "name": "CreateDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to create a deployment for an environment of an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateDeployment.html"
+      },
+      {
+        "name": "CreateDomainAssociation",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new domain association for an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DomainAssociation",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateDomainAssociation.html"
+      },
+      {
+        "name": "CreateEnvironment",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new environment for an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateEnvironment.html"
+      },
+      {
+        "name": "CreateIntegrationConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new integration configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "IntegrationConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateIntegrationConfiguration.html"
+      },
+      {
+        "name": "CreateIntegrationConnection",
+        "permissionOnly": false,
+        "description": "Grants permission to create a connection between an integration configuration and an environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateIntegrationConnection.html"
+      },
+      {
+        "name": "CreateNetworkConnector",
+        "permissionOnly": false,
+        "description": "Grants permission to create a new network connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "NetworkConnector",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateNetworkConnector.html"
+      },
+      {
+        "name": "CreateSourceUpload",
+        "permissionOnly": false,
+        "description": "Grants permission to create a source upload and retrieve a pre-signed URL for uploading source artifacts",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_CreateSourceUpload.html"
+      },
+      {
+        "name": "DeleteAlias",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an alias for an environment of an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Alias",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteAlias.html"
+      },
+      {
+        "name": "DeleteApp",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteApp.html"
+      },
+      {
+        "name": "DeleteBackendFromApp",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the backend from an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteBackendFromApp.html"
+      },
+      {
+        "name": "DeleteBranch",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a branch for an environment of an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Branch",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteBranch.html"
+      },
+      {
+        "name": "DeleteDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a deployment for an environment of an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Deployment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteDeployment.html"
+      },
+      {
+        "name": "DeleteDomainAssociation",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a domain association for an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DomainAssociation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteDomainAssociation.html"
+      },
+      {
+        "name": "DeleteEnvironment",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an environment for an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteEnvironment.html"
+      },
+      {
+        "name": "DeleteEnvironmentVariables",
+        "permissionOnly": false,
+        "description": "Grants permission to delete environment variables for an environment of an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteEnvironmentVariables.html"
+      },
+      {
+        "name": "DeleteGitConnection",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a Git connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteGitConnection.html"
+      },
+      {
+        "name": "DeleteIdentityProviderConfig",
+        "permissionOnly": false,
+        "description": "Grants permission to delete the identity provider configuration for an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteIdentityProviderConfig.html"
+      },
+      {
+        "name": "DeleteIntegrationConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an integration configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "IntegrationConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteIntegrationConfiguration.html"
+      },
+      {
+        "name": "DeleteIntegrationConnection",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an integration connection",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteIntegrationConnection.html"
+      },
+      {
+        "name": "DeleteNetworkConnector",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a network connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "NetworkConnector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteNetworkConnector.html"
+      },
+      {
+        "name": "DeleteSourceUpload",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a source upload",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DeleteSourceUpload.html"
+      },
+      {
+        "name": "DisableAccessControl",
+        "permissionOnly": false,
+        "description": "Grants permission to disable access control for an environment of an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_DisableAccessControl.html"
+      },
+      {
+        "name": "EnableAccessControl",
+        "permissionOnly": false,
+        "description": "Grants permission to enable access control for an environment of an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_EnableAccessControl.html"
+      },
+      {
+        "name": "GetAccessControl",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the access control configuration for an environment of an App",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetAccessControl.html"
+      },
+      {
+        "name": "GetAlias",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an alias for an environment of an App",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Alias",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetAlias.html"
+      },
+      {
+        "name": "GetApiKey",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an API key of a branch",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Branch",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetApiKey.html"
+      },
+      {
+        "name": "GetApp",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an App",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetApp.html"
+      },
+      {
+        "name": "GetBranch",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a branch for an environment of an App",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Branch",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetBranch.html"
+      },
+      {
+        "name": "GetDeployment",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a deployment for an environment of an App",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Deployment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetDeployment.html"
+      },
+      {
+        "name": "GetDomainAssociation",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a domain association for an App",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "DomainAssociation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetDomainAssociation.html"
+      },
+      {
+        "name": "GetDomainConnectUrl",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a domain connect redirect URL for one-click DNS setup",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "DomainAssociation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetDomainConnectUrl.html"
+      },
+      {
+        "name": "GetEnvironment",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an environment for an App",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetEnvironment.html"
+      },
+      {
+        "name": "GetEnvironmentsForNetworkConnector",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the environments associated with a network connector",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "NetworkConnector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetEnvironmentsForNetworkConnector.html"
+      },
+      {
+        "name": "GetFile",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a file from a repository",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetFile.html"
+      },
+      {
+        "name": "GetFolder",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a folder from a repository",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetFolder.html"
+      },
+      {
+        "name": "GetIdentityProviderConfig",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the identity provider configuration for an App",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetIdentityProviderConfig.html"
+      },
+      {
+        "name": "GetIntegrationConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an integration configuration",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "IntegrationConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetIntegrationConfiguration.html"
+      },
+      {
+        "name": "GetIntegrationConnection",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve an integration connection",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetIntegrationConnection.html"
+      },
+      {
+        "name": "GetNetworkConnector",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a network connector",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "NetworkConnector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetNetworkConnector.html"
+      },
+      {
+        "name": "GetRestoreWindow",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve the point-in-time restore window of a branch",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Branch",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetRestoreWindow.html"
+      },
+      {
+        "name": "GetSourceUpload",
+        "permissionOnly": false,
+        "description": "Grants permission to retrieve a source upload",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_GetSourceUpload.html"
+      },
+      {
+        "name": "ListAccessControls",
+        "permissionOnly": false,
+        "description": "Grants permission to list access control configurations for an App",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListAccessControls.html"
+      },
+      {
+        "name": "ListAliases",
+        "permissionOnly": false,
+        "description": "Grants permission to list aliases for an environment of an App",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListAliases.html"
+      },
+      {
+        "name": "ListApiKeys",
+        "permissionOnly": false,
+        "description": "Grants permission to list the API keys of a branch",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Branch",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListApiKeys.html"
+      },
+      {
+        "name": "ListApps",
+        "permissionOnly": false,
+        "description": "Grants permission to list Apps",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListApps.html"
+      },
+      {
+        "name": "ListBranches",
+        "permissionOnly": false,
+        "description": "Grants permission to list branches for an environment of an App",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListBranches.html"
+      },
+      {
+        "name": "ListDeploymentsForApp",
+        "permissionOnly": false,
+        "description": "Grants permission to list deployments for an App",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListDeploymentsForApp.html"
+      },
+      {
+        "name": "ListDeploymentsForEnvironment",
+        "permissionOnly": false,
+        "description": "Grants permission to list deployments for an environment of an App",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListDeploymentsForEnvironment.html"
+      },
+      {
+        "name": "ListDomainAssociationsForAccount",
+        "permissionOnly": false,
+        "description": "Grants permission to list domain associations for an account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListDomainAssociationsForAccount.html"
+      },
+      {
+        "name": "ListDomainAssociationsForApp",
+        "permissionOnly": false,
+        "description": "Grants permission to list domain associations for an App",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListDomainAssociationsForApp.html"
+      },
+      {
+        "name": "ListEnvironmentVariables",
+        "permissionOnly": false,
+        "description": "Grants permission to list environment variables for an environment of an App",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListEnvironmentVariables.html"
+      },
+      {
+        "name": "ListEnvironments",
+        "permissionOnly": false,
+        "description": "Grants permission to list environments for an App",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListEnvironments.html"
+      },
+      {
+        "name": "ListGitBranches",
+        "permissionOnly": false,
+        "description": "Grants permission to list branches for a repository",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListGitBranches.html"
+      },
+      {
+        "name": "ListGitConnections",
+        "permissionOnly": false,
+        "description": "Grants permission to list Git connections",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListGitConnections.html"
+      },
+      {
+        "name": "ListIntegrationConfigurations",
+        "permissionOnly": false,
+        "description": "Grants permission to list integration configurations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListIntegrationConfigurations.html"
+      },
+      {
+        "name": "ListIntegrationConnections",
+        "permissionOnly": false,
+        "description": "Grants permission to list integration connections",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListIntegrationConnections.html"
+      },
+      {
+        "name": "ListIntegrationTypes",
+        "permissionOnly": false,
+        "description": "Grants permission to list the available integration types",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListIntegrationTypes.html"
+      },
+      {
+        "name": "ListNetworkConnectors",
+        "permissionOnly": false,
+        "description": "Grants permission to list network connectors",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListNetworkConnectors.html"
+      },
+      {
+        "name": "ListPlanViolations",
+        "permissionOnly": false,
+        "description": "Grants permission to list the resources in your account that a target plan tier does not support",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListPlanViolations.html"
+      },
+      {
+        "name": "ListRepositories",
+        "permissionOnly": false,
+        "description": "Grants permission to list repositories for a Git connection",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListRepositories.html"
+      },
+      {
+        "name": "ListSourceUploads",
+        "permissionOnly": false,
+        "description": "Grants permission to list source uploads",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListSourceUploads.html"
+      },
+      {
+        "name": "ListTagsForResource",
+        "permissionOnly": false,
+        "description": "Grants permission to list tags for a resource",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "Alias",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "App",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Branch",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Deployment",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "DomainAssociation",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Environment",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IntegrationConfiguration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "NetworkConnector",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ListTagsForResource.html"
+      },
+      {
+        "name": "PutEnvironmentVariables",
+        "permissionOnly": false,
+        "description": "Grants permission to set environment variables for an environment of an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_PutEnvironmentVariables.html"
+      },
+      {
+        "name": "PutIdentityProviderConfig",
+        "permissionOnly": false,
+        "description": "Grants permission to set the identity provider configuration for an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_PutIdentityProviderConfig.html"
+      },
+      {
+        "name": "ResetCache",
+        "permissionOnly": false,
+        "description": "Grants permission to purge cached content by cache tag for a deployment of an environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Deployment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ResetCache.html"
+      },
+      {
+        "name": "RestoreBranch",
+        "permissionOnly": false,
+        "description": "Grants permission to restore a branch to a point in time into a new branch",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Branch",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_RestoreBranch.html"
+      },
+      {
+        "name": "ResumeBackend",
+        "permissionOnly": false,
+        "description": "Grants permission to resume the paused backend of an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_ResumeBackend.html"
+      },
+      {
+        "name": "RevokeApiKey",
+        "permissionOnly": false,
+        "description": "Grants permission to revoke an API key of a branch",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Branch",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_RevokeApiKey.html"
+      },
+      {
+        "name": "RotateIdentityProviderSecret",
+        "permissionOnly": false,
+        "description": "Grants permission to rotate the client secret of the identity provider configuration for an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_RotateIdentityProviderSecret.html"
+      },
+      {
+        "name": "StartAuthorizationFlow",
+        "permissionOnly": false,
+        "description": "Grants permission to start an authorization flow for connecting a Git provider",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_StartAuthorizationFlow.html"
+      },
+      {
+        "name": "StartCacheRevalidation",
+        "permissionOnly": false,
+        "description": "Grants permission to revalidate cached content by cache tag for a deployment of an environment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Deployment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_StartCacheRevalidation.html"
+      },
+      {
+        "name": "TagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to tag a resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Alias",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "App",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Branch",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Deployment",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "DomainAssociation",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Environment",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IntegrationConfiguration",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "NetworkConnector",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_TagResource.html"
+      },
+      {
+        "name": "UntagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to remove tags from a resource",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Alias",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "App",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Branch",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Deployment",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "DomainAssociation",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "Environment",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "IntegrationConfiguration",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "NetworkConnector",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_UntagResource.html"
+      },
+      {
+        "name": "UpdateAccessControl",
+        "permissionOnly": false,
+        "description": "Grants permission to update the access control configuration for an environment of an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_UpdateAccessControl.html"
+      },
+      {
+        "name": "UpdateAliasRouting",
+        "permissionOnly": false,
+        "description": "Grants permission to update the routing configuration of an alias for an environment of an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Alias",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_UpdateAliasRouting.html"
+      },
+      {
+        "name": "UpdateApp",
+        "permissionOnly": false,
+        "description": "Grants permission to update an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "App",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_UpdateApp.html"
+      },
+      {
+        "name": "UpdateDomainAssociation",
+        "permissionOnly": false,
+        "description": "Grants permission to update a domain association for an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "DomainAssociation",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_UpdateDomainAssociation.html"
+      },
+      {
+        "name": "UpdateEnvironment",
+        "permissionOnly": false,
+        "description": "Grants permission to update an environment for an App",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "Environment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_UpdateEnvironment.html"
+      },
+      {
+        "name": "UpdateIntegrationConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to update an integration configuration",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "IntegrationConfiguration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_UpdateIntegrationConfiguration.html"
+      },
+      {
+        "name": "UpdateNetworkConnector",
+        "permissionOnly": false,
+        "description": "Grants permission to update a network connector",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "NetworkConnector",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/amplify/latest/APIReference/API_UpdateNetworkConnector.html"
+      }
+    ],
+    "resourceTypes": [
+      {
+        "name": "Alias",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}/environment/${EnvironmentName}/alias/${AliasName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "App",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "Branch",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}/environment/${EnvironmentName}/branch/${BranchName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "Deployment",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}/environment/${EnvironmentName}/deployment/${DeploymentId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "DomainAssociation",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}/domain/${DomainName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "Environment",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}/environment/${EnvironmentName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "IntegrationConfiguration",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:amplifygen3:${Region}:${Account}:integration-configuration/${IntegrationName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "NetworkConnector",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:amplifygen3:${Region}:${Account}:network-connector/${NetworkConnectorName}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      }
+    ],
+    "conditionKeys": [
+      {
+        "name": "aws:RequestTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters access by a tag's key and value in a request",
+        "type": "String"
+      },
+      {
+        "name": "aws:ResourceTag/${TagKey}",
+        "apiReferenceUrl": "",
+        "description": "Filters actions based on the presence of tag key-value pairs in the request",
+        "type": "String"
+      },
+      {
+        "name": "aws:TagKeys",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the tag keys in a request",
+        "type": "ArrayOfString"
+      }
+    ]
+  },
+  {
     "name": "AWS Amplify UI Builder",
     "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_amplifyuibuilder.html",
     "servicePrefix": "amplifyuibuilder",
@@ -5318,7 +7003,9 @@
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "apiportal:GetProduct"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/apiportal/latest/APIReference/API_CreatePortalPreview.html"
@@ -40576,9 +42263,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": [
-              "codedeploy:CreateCloudFormationDeployment"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_ContinueDeployment.html"
@@ -41129,9 +42814,7 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": [
-              "codedeploy:CreateCloudFormationDeployment"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/codedeploy/latest/APIReference/API_SkipWaitTimeForInstanceTermination.html"
@@ -46807,7 +48490,9 @@
             "conditionKeys": [
               "continuum:RepositoryName"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           },
           {
             "resourceType": "integrations",
@@ -46815,7 +48500,9 @@
             "conditionKeys": [
               "continuum:RepositoryName"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "iam:PassRole"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/continuum/latest/APIReference/API_UpdateEnvironment.html"
@@ -68519,6 +70206,40 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_AddTrustStoreRevocations.html"
       },
       {
+        "name": "AssociateCertificate",
+        "permissionOnly": false,
+        "description": "Grants permission to associate an ACM certificate with a proxy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_AssociateCertificate.html"
+      },
+      {
+        "name": "CancelProxyVersionUpdate",
+        "permissionOnly": false,
+        "description": "Grants permission to cancel an in-progress version update for a proxy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_CancelProxyVersionUpdate.html"
+      },
+      {
         "name": "CreateListener",
         "permissionOnly": false,
         "description": "Grants permission to create a listener for the specified Application Load Balancer",
@@ -68628,6 +70349,25 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html"
+      },
+      {
+        "name": "CreateProxy",
+        "permissionOnly": false,
+        "description": "Grants permission to create a proxy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_CreateProxy.html"
       },
       {
         "name": "CreateRule",
@@ -68779,6 +70519,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DeleteLoadBalancer.html"
+      },
+      {
+        "name": "DeleteProxy",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a proxy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_DeleteProxy.html"
       },
       {
         "name": "DeleteRule",
@@ -69120,6 +70877,91 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_DescribeTrustStores.html"
       },
       {
+        "name": "DisassociateCertificate",
+        "permissionOnly": false,
+        "description": "Grants permission to disassociate an ACM certificate from a proxy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_DisassociateCertificate.html"
+      },
+      {
+        "name": "GetProxy",
+        "permissionOnly": false,
+        "description": "Grants permission to get information about a proxy",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_GetProxy.html"
+      },
+      {
+        "name": "GetProxyAttributes",
+        "permissionOnly": false,
+        "description": "Grants permission to get the attributes of a proxy",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_GetProxyAttributes.html"
+      },
+      {
+        "name": "GetProxyConfigurationContents",
+        "permissionOnly": false,
+        "description": "Grants permission to get the configuration file and configuration archive contents of a proxy",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_GetProxyConfigurationContents.html"
+      },
+      {
+        "name": "GetProxyUpdate",
+        "permissionOnly": false,
+        "description": "Grants permission to get information about a proxy update",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_GetProxyUpdate.html"
+      },
+      {
         "name": "GetResourcePolicy",
         "permissionOnly": false,
         "description": "Grants permission to retrieve the resource policy associated with the resource",
@@ -69172,6 +71014,87 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_GetTrustStoreRevocationContent.html"
+      },
+      {
+        "name": "ListCertificateAssociations",
+        "permissionOnly": false,
+        "description": "Grants permission to list the ACM certificate associations for a proxy",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_ListCertificateAssociations.html"
+      },
+      {
+        "name": "ListProxies",
+        "permissionOnly": false,
+        "description": "Grants permission to list the proxies in your account",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_ListProxies.html"
+      },
+      {
+        "name": "ListProxyUpdates",
+        "permissionOnly": false,
+        "description": "Grants permission to list the updates for a proxy",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_ListProxyUpdates.html"
+      },
+      {
+        "name": "ListProxyVersions",
+        "permissionOnly": false,
+        "description": "Grants permission to list the available proxy versions",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_ListProxyVersions.html"
+      },
+      {
+        "name": "ListTagsForResource",
+        "permissionOnly": false,
+        "description": "Grants permission to list the tags for a proxy",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_ListTagsForResource.html"
       },
       {
         "name": "ModifyCapacityReservation",
@@ -69734,6 +71657,111 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_SetSubnets.html"
+      },
+      {
+        "name": "TagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to add tags to a proxy",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_TagResource.html"
+      },
+      {
+        "name": "UntagResource",
+        "permissionOnly": false,
+        "description": "Grants permission to remove tags from a proxy",
+        "accessLevel": "Tagging, Write",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_UntagResource.html"
+      },
+      {
+        "name": "UpdateProxyAttributes",
+        "permissionOnly": false,
+        "description": "Grants permission to update the attributes of a proxy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_UpdateProxyAttributes.html"
+      },
+      {
+        "name": "UpdateProxyConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to update the configuration of a proxy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_UpdateProxyConfiguration.html"
+      },
+      {
+        "name": "UpdateProxyNetworkConfiguration",
+        "permissionOnly": false,
+        "description": "Grants permission to update the network configuration of a proxy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_UpdateProxyNetworkConfiguration.html"
+      },
+      {
+        "name": "UpdateProxyVersion",
+        "permissionOnly": false,
+        "description": "Grants permission to update the version of a proxy",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "proxy",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/elb-proxy/latest/APIReference/API_UpdateProxyVersion.html"
       }
     ],
     "resourceTypes": [
@@ -69807,6 +71835,14 @@
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}",
           "elasticloadbalancing:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "proxy",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:proxy/${ProxyName}:${ProxyId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
         ]
       },
       {
@@ -163768,7 +165804,10 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "payments:GetPaymentStatus",
+              "aws-portal:ViewBilling"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_payments_GetAccountBalance.html"
@@ -163783,7 +165822,10 @@
             "resourceType": "",
             "required": false,
             "conditionKeys": [],
-            "dependentActions": []
+            "dependentActions": [
+              "payments:GetPaymentStatus",
+              "aws-portal:ViewBilling"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/aws-cost-management/latest/APIReference/API_payments_GetFinancialRecord.html"
@@ -211588,6 +213630,18 @@
             ]
           },
           {
+            "resourceType": "amplifygen3-app",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "apigateway:SetWebACL",
+              "appsync:AssociateWebACL",
+              "appsync:SetWebACL",
+              "elasticloadbalancing:CreateWebACLAssociation",
+              "elasticloadbalancing:SetWebAcl"
+            ]
+          },
+          {
             "resourceType": "apigateway",
             "required": false,
             "conditionKeys": [],
@@ -211613,6 +213667,18 @@
           },
           {
             "resourceType": "appsync",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "apigateway:SetWebACL",
+              "appsync:AssociateWebACL",
+              "appsync:SetWebACL",
+              "elasticloadbalancing:CreateWebACLAssociation",
+              "elasticloadbalancing:SetWebAcl"
+            ]
+          },
+          {
+            "resourceType": "elb-proxy",
             "required": false,
             "conditionKeys": [],
             "dependentActions": [
@@ -212077,6 +214143,18 @@
             ]
           },
           {
+            "resourceType": "amplifygen3-app",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "apigateway:SetWebACL",
+              "appsync:DisassociateWebACL",
+              "appsync:SetWebACL",
+              "elasticloadbalancing:DeleteWebACLAssociation",
+              "elasticloadbalancing:SetWebAcl"
+            ]
+          },
+          {
             "resourceType": "apigateway",
             "required": false,
             "conditionKeys": [],
@@ -212102,6 +214180,18 @@
           },
           {
             "resourceType": "appsync",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "apigateway:SetWebACL",
+              "appsync:DisassociateWebACL",
+              "appsync:SetWebACL",
+              "elasticloadbalancing:DeleteWebACLAssociation",
+              "elasticloadbalancing:SetWebAcl"
+            ]
+          },
+          {
+            "resourceType": "elb-proxy",
             "required": false,
             "conditionKeys": [],
             "dependentActions": [
@@ -212467,6 +214557,15 @@
             ]
           },
           {
+            "resourceType": "amplifygen3-app",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "appsync:GetWebACLForResource",
+              "elasticloadbalancing:GetLoadBalancerWebACL"
+            ]
+          },
+          {
             "resourceType": "apigateway",
             "required": false,
             "conditionKeys": [],
@@ -212486,6 +214585,15 @@
           },
           {
             "resourceType": "appsync",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "appsync:GetWebACLForResource",
+              "elasticloadbalancing:GetLoadBalancerWebACL"
+            ]
+          },
+          {
+            "resourceType": "elb-proxy",
             "required": false,
             "conditionKeys": [],
             "dependentActions": [
@@ -212728,7 +214836,25 @@
             ]
           },
           {
+            "resourceType": "amplifygen3-app",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "appsync:ListResourcesForWebACL",
+              "elasticloadbalancing:DescribeWebACLAssociation"
+            ]
+          },
+          {
             "resourceType": "apprunner",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": [
+              "appsync:ListResourcesForWebACL",
+              "elasticloadbalancing:DescribeWebACLAssociation"
+            ]
+          },
+          {
+            "resourceType": "elb-proxy",
             "required": false,
             "conditionKeys": [],
             "dependentActions": [
@@ -213163,6 +215289,12 @@
         "conditionKeys": []
       },
       {
+        "name": "amplifygen3-app",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:amplifygen3:${Region}:${Account}:app/${AppName}",
+        "conditionKeys": []
+      },
+      {
         "name": "apigateway",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:apigateway:${Region}::/restapis/${ApiId}/stages/${StageName}",
@@ -213178,6 +215310,12 @@
         "name": "appsync",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:appsync:${Region}:${Account}:apis/${GraphQLAPIId}",
+        "conditionKeys": []
+      },
+      {
+        "name": "elb-proxy",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:elasticloadbalancing:${Region}:${Account}:proxy/${ProxyName}:${ProxyId}",
         "conditionKeys": []
       },
       {
@@ -213376,7 +215514,9 @@
               "aws:RequestTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "wellarchitected:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/wellarchitected/latest/APIReference/API_CreateAgentOrganizationalProfile.html"
@@ -232418,7 +234558,9 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "appstream:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/appstream2/latest/APIReference/API_CreateApplication.html"
@@ -261903,6 +264045,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_AssumeAccessProfile.html"
       },
       {
+        "name": "BatchGetOmniSloReport",
+        "permissionOnly": false,
+        "description": "Grants permission to get current reports for Omni SLOs",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "omni-slo",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_BatchGetOmniSloReport.html"
+      },
+      {
         "name": "BatchGetServiceLevelIndicatorReport",
         "permissionOnly": false,
         "description": "Grants permission to batch get service level indicator report",
@@ -261933,6 +264093,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/CloudWatch-Application-Monitoring-Sections.html#ApplicationSignals-PreviewSDK"
+      },
+      {
+        "name": "CompleteExperimentRun",
+        "permissionOnly": false,
+        "description": "Grants permission to complete a run of an experiment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "experiment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CompleteExperimentRun.html"
       },
       {
         "name": "CreateAccessGrant",
@@ -262033,6 +264211,25 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateDomainForOrganization.html"
       },
       {
+        "name": "CreateExperiment",
+        "permissionOnly": false,
+        "description": "Grants permission to create an experiment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateExperiment.html"
+      },
+      {
         "name": "CreateIngestionEndpoint",
         "permissionOnly": false,
         "description": "Grants permission to create an ingestion endpoint",
@@ -262063,6 +264260,25 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateIntegration.html"
+      },
+      {
+        "name": "CreateLookup",
+        "permissionOnly": false,
+        "description": "Grants permission to create a lookup",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateLookup.html"
       },
       {
         "name": "CreateOmniAgentAsset",
@@ -262099,6 +264315,26 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateOmniDashboard.html"
       },
       {
+        "name": "CreateOmniSlo",
+        "permissionOnly": false,
+        "description": "Grants permission to create an Omni SLO",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "omni-slo",
+            "required": true,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateOmniSlo.html"
+      },
+      {
         "name": "CreateOmniThread",
         "permissionOnly": false,
         "description": "Grants permission to create an omni thread",
@@ -262129,6 +264365,21 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateOneTimeDeepLinkCode.html"
+      },
+      {
+        "name": "CreateProvisioningRolesForOrganization",
+        "permissionOnly": false,
+        "description": "Grants permission to create the provisioning roles for an organization member account",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_CreateProvisioningRolesForOrganization.html"
       },
       {
         "name": "CreateResourceMetricsConfiguration",
@@ -262370,6 +264621,42 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteDomainForOrganization.html"
       },
       {
+        "name": "DeleteExperiment",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an experiment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "experiment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteExperiment.html"
+      },
+      {
+        "name": "DeleteExperimentRun",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a run of an experiment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "experiment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteExperimentRun.html"
+      },
+      {
         "name": "DeleteIngestionEndpoint",
         "permissionOnly": false,
         "description": "Grants permission to delete an ingestion endpoint",
@@ -262420,6 +264707,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteIntegration.html"
+      },
+      {
+        "name": "DeleteLookup",
+        "permissionOnly": false,
+        "description": "Grants permission to delete a lookup",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "lookup",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteLookup.html"
       },
       {
         "name": "DeleteMetricDataQueryDefinition",
@@ -262490,6 +264795,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteOmniDashboard.html"
+      },
+      {
+        "name": "DeleteOmniSlo",
+        "permissionOnly": false,
+        "description": "Grants permission to delete an Omni SLO",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "omni-slo",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_DeleteOmniSlo.html"
       },
       {
         "name": "DeleteOmniThread",
@@ -262960,6 +265283,42 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetDomainForOrganization.html"
       },
       {
+        "name": "GetExperiment",
+        "permissionOnly": false,
+        "description": "Grants permission to get an experiment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "experiment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetExperiment.html"
+      },
+      {
+        "name": "GetExperimentRun",
+        "permissionOnly": false,
+        "description": "Grants permission to get a run of an experiment",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "experiment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetExperimentRun.html"
+      },
+      {
         "name": "GetIngestionEndpoint",
         "permissionOnly": false,
         "description": "Grants permission to get an ingestion endpoint",
@@ -263027,6 +265386,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetIntelligenceConfiguration.html"
+      },
+      {
+        "name": "GetLookup",
+        "permissionOnly": false,
+        "description": "Grants permission to get a lookup",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "lookup",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetLookup.html"
       },
       {
         "name": "GetMetricData",
@@ -263160,6 +265537,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetOmniDashboard.html"
+      },
+      {
+        "name": "GetOmniSlo",
+        "permissionOnly": false,
+        "description": "Grants permission to get an Omni SLO",
+        "accessLevel": "Read",
+        "resourceTypes": [
+          {
+            "resourceType": "omni-slo",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_GetOmniSlo.html"
       },
       {
         "name": "GetOmniThread",
@@ -263499,6 +265894,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListAlerts.html"
       },
       {
+        "name": "ListAnomalies",
+        "permissionOnly": false,
+        "description": "Grants permission to list anomalies",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListAnomalies.html"
+      },
+      {
         "name": "ListDashboards",
         "permissionOnly": false,
         "description": "Grants permission to return a list of all CloudWatch dashboards in your account",
@@ -263546,6 +265958,41 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListDomains.html"
       },
       {
+        "name": "ListExperimentRuns",
+        "permissionOnly": false,
+        "description": "Grants permission to list the runs of an experiment",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "experiment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListExperimentRuns.html"
+      },
+      {
+        "name": "ListExperiments",
+        "permissionOnly": false,
+        "description": "Grants permission to list experiments",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListExperiments.html"
+      },
+      {
         "name": "ListIngestionEndpoints",
         "permissionOnly": false,
         "description": "Grants permission to list ingestion endpoints",
@@ -263559,6 +266006,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListIngestionEndpoints.html"
+      },
+      {
+        "name": "ListIntegrationTargets",
+        "permissionOnly": false,
+        "description": "Grants permission to list the targets available on an integration",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "integration",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListIntegrationTargets.html"
       },
       {
         "name": "ListIntegrations",
@@ -263576,6 +266041,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListIntegrations.html"
+      },
+      {
+        "name": "ListLookups",
+        "permissionOnly": false,
+        "description": "Grants permission to list lookups",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListLookups.html"
       },
       {
         "name": "ListManagedInsightRules",
@@ -263675,6 +266157,23 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/permissions-reference-cw.html"
       },
       {
+        "name": "ListObservations",
+        "permissionOnly": false,
+        "description": "Grants permission to list observations",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListObservations.html"
+      },
+      {
         "name": "ListOmniAgentAssets",
         "permissionOnly": false,
         "description": "Grants permission to list agent assets",
@@ -263707,6 +266206,23 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListOmniDashboards.html"
+      },
+      {
+        "name": "ListOmniSlos",
+        "permissionOnly": false,
+        "description": "Grants permission to list Omni SLOs",
+        "accessLevel": "List",
+        "resourceTypes": [
+          {
+            "resourceType": "",
+            "required": false,
+            "conditionKeys": [
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_ListOmniSlos.html"
       },
       {
         "name": "ListOmniThreads",
@@ -263849,7 +266365,25 @@
             "dependentActions": []
           },
           {
+            "resourceType": "experiment",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "insight-rule",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "lookup",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -263868,6 +266402,15 @@
           },
           {
             "resourceType": "metric-stream",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "omni-slo",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -264030,6 +266573,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_PutDashboard.html"
+      },
+      {
+        "name": "PutExperimentRunResults",
+        "permissionOnly": false,
+        "description": "Grants permission to report results for a run of an experiment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "experiment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_PutExperimentRunResults.html"
       },
       {
         "name": "PutInsightRule",
@@ -264281,6 +266842,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/AmazonCloudWatch/latest/APIReference/API_SetAlarmState.html"
       },
       {
+        "name": "StartExperimentRun",
+        "permissionOnly": false,
+        "description": "Grants permission to start a run of an experiment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "experiment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_StartExperimentRun.html"
+      },
+      {
         "name": "StartMetricStreams",
         "permissionOnly": false,
         "description": "Grants permission to start all CloudWatch metric streams that you specify",
@@ -264362,6 +266941,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_StartTelemetryQuerySession.html"
+      },
+      {
+        "name": "StopExperimentRun",
+        "permissionOnly": false,
+        "description": "Grants permission to stop a run of an experiment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "experiment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_StopExperimentRun.html"
       },
       {
         "name": "StopMetricStreams",
@@ -264482,7 +267079,29 @@
             "dependentActions": []
           },
           {
+            "resourceType": "experiment",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "insight-rule",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "lookup",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -264505,6 +267124,17 @@
           },
           {
             "resourceType": "metric-stream",
+            "required": false,
+            "conditionKeys": [
+              "aws:RequestTag/${TagKey}",
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "omni-slo",
             "required": false,
             "conditionKeys": [
               "aws:RequestTag/${TagKey}",
@@ -264586,7 +267216,27 @@
             "dependentActions": []
           },
           {
+            "resourceType": "experiment",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          },
+          {
             "resourceType": "insight-rule",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "lookup",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -264607,6 +267257,16 @@
           },
           {
             "resourceType": "metric-stream",
+            "required": false,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "aws:TagKeys",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          },
+          {
+            "resourceType": "omni-slo",
             "required": false,
             "conditionKeys": [
               "aws:ResourceTag/${TagKey}",
@@ -264709,6 +267369,24 @@
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateDomainForOrganization.html"
       },
       {
+        "name": "UpdateExperiment",
+        "permissionOnly": false,
+        "description": "Grants permission to update an experiment",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "experiment",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateExperiment.html"
+      },
+      {
         "name": "UpdateIngestionEndpoint",
         "permissionOnly": false,
         "description": "Grants permission to update an ingestion endpoint",
@@ -264742,6 +267420,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateIntegration.html"
+      },
+      {
+        "name": "UpdateLookup",
+        "permissionOnly": false,
+        "description": "Grants permission to update a lookup",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "lookup",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateLookup.html"
       },
       {
         "name": "UpdateOmniAgentAsset",
@@ -264778,6 +267474,24 @@
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateOmniDashboard.html"
+      },
+      {
+        "name": "UpdateOmniSlo",
+        "permissionOnly": false,
+        "description": "Grants permission to update an Omni SLO",
+        "accessLevel": "Write",
+        "resourceTypes": [
+          {
+            "resourceType": "omni-slo",
+            "required": true,
+            "conditionKeys": [
+              "aws:ResourceTag/${TagKey}",
+              "cloudwatch:HasAccessGrant"
+            ],
+            "dependentActions": []
+          }
+        ],
+        "apiReferenceUrl": "https://docs.aws.amazon.com/cloudwatch-omni/latest/APIReference/API_UpdateOmniSlo.html"
       },
       {
         "name": "UpdateOmniThread",
@@ -264950,6 +267664,14 @@
         ]
       },
       {
+        "name": "experiment",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:experiment/${ExperimentId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
         "name": "ingestion-endpoint",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:ingestion-endpoint/${IngestionEndpointName}/${IngestionEndpointId}",
@@ -264969,6 +267691,14 @@
         "name": "integration",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:integration/${IntegrationId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "lookup",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:lookup/${LookupName}/${LookupId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -265001,6 +267731,14 @@
         "name": "omni-dashboard",
         "apiReferenceUrl": "",
         "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:omni-dashboard/${DashboardId}",
+        "conditionKeys": [
+          "aws:ResourceTag/${TagKey}"
+        ]
+      },
+      {
+        "name": "omni-slo",
+        "apiReferenceUrl": "",
+        "arnPattern": "arn:${Partition}:cloudwatch:${Region}:${Account}:omni-slo/${SloId}",
         "conditionKeys": [
           "aws:ResourceTag/${TagKey}"
         ]
@@ -367952,6 +370690,7 @@
               "aws:TagKeys"
             ],
             "dependentActions": [
+              "kinesisanalytics:TagResource",
               "iam:PassRole"
             ]
           }
