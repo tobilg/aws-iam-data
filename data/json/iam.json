@@ -28712,9 +28712,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "cleanrooms:TagResource"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "membership",
@@ -28724,9 +28722,7 @@
               "aws:ResourceTag/${TagKey}",
               "aws:TagKeys"
             ],
-            "dependentActions": [
-              "cleanrooms:TagResource"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/clean-rooms/latest/apireference/API_CreateConfiguredAudienceModelAssociation.html"
@@ -70028,7 +70024,7 @@
   },
   {
     "name": "AWS Elastic Load Balancing V2",
-    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_elbv2.html",
+    "authReferenceUrl": "https://docs.aws.amazon.com/service-authorization/latest/reference/list_elb-v2.html",
     "servicePrefix": "elasticloadbalancing",
     "actions": [
       {
@@ -70256,9 +70252,7 @@
               "elasticloadbalancing:ResourceTag/${TagKey}",
               "elasticloadbalancing:SecurityPolicy"
             ],
-            "dependentActions": [
-              "elasticloadbalancing:AddTags"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "loadbalancer/gwy/",
@@ -70271,9 +70265,7 @@
               "elasticloadbalancing:ResourceTag/${TagKey}",
               "elasticloadbalancing:SecurityPolicy"
             ],
-            "dependentActions": [
-              "elasticloadbalancing:AddTags"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "loadbalancer/net/",
@@ -70286,9 +70278,7 @@
               "elasticloadbalancing:ResourceTag/${TagKey}",
               "elasticloadbalancing:SecurityPolicy"
             ],
-            "dependentActions": [
-              "elasticloadbalancing:AddTags"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateListener.html"
@@ -70311,9 +70301,7 @@
               "elasticloadbalancing:SecurityGroup",
               "elasticloadbalancing:Subnet"
             ],
-            "dependentActions": [
-              "elasticloadbalancing:AddTags"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "loadbalancer/gwy/",
@@ -70327,9 +70315,7 @@
               "elasticloadbalancing:SecurityGroup",
               "elasticloadbalancing:Subnet"
             ],
-            "dependentActions": [
-              "elasticloadbalancing:AddTags"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "loadbalancer/net/",
@@ -70343,9 +70329,7 @@
               "elasticloadbalancing:SecurityGroup",
               "elasticloadbalancing:Subnet"
             ],
-            "dependentActions": [
-              "elasticloadbalancing:AddTags"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateLoadBalancer.html"
@@ -70384,9 +70368,7 @@
               "aws:TagKeys",
               "elasticloadbalancing:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "elasticloadbalancing:AddTags"
-            ]
+            "dependentActions": []
           },
           {
             "resourceType": "listener/net",
@@ -70397,9 +70379,7 @@
               "aws:TagKeys",
               "elasticloadbalancing:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "elasticloadbalancing:AddTags"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateRule.html"
@@ -70419,9 +70399,7 @@
               "aws:TagKeys",
               "elasticloadbalancing:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "elasticloadbalancing:AddTags"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTargetGroup.html"
@@ -70441,9 +70419,7 @@
               "aws:TagKeys",
               "elasticloadbalancing:ResourceTag/${TagKey}"
             ],
-            "dependentActions": [
-              "elasticloadbalancing:AddTags"
-            ]
+            "dependentActions": []
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/elasticloadbalancing/latest/APIReference/API_CreateTrustStore.html"
