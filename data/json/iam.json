@@ -68840,7 +68840,9 @@
               "aws:TagKeys",
               "drs:EC2InstanceARN"
             ],
-            "dependentActions": []
+            "dependentActions": [
+              "drs:TagResource"
+            ]
           }
         ],
         "apiReferenceUrl": "https://docs.aws.amazon.com/drs/latest/APIReference/API_StartFailbackLaunch.html"
@@ -193299,6 +193301,7 @@
             "resourceType": "console",
             "required": true,
             "conditionKeys": [
+              "signin:MaxSigninSessionDuration",
               "signin:PutSignInDurationBlock"
             ],
             "dependentActions": []
@@ -193307,6 +193310,7 @@
             "resourceType": "oauth2-public-client-localhost",
             "required": true,
             "conditionKeys": [
+              "signin:MaxSigninSessionDuration",
               "signin:OAuthClientAuthentication",
               "signin:OAuthClientId",
               "signin:OAuthGrantType",
@@ -193319,6 +193323,7 @@
             "resourceType": "oauth2-public-client-remote",
             "required": true,
             "conditionKeys": [
+              "signin:MaxSigninSessionDuration",
               "signin:OAuthClientAuthentication",
               "signin:OAuthClientId",
               "signin:OAuthGrantType",
@@ -193331,6 +193336,7 @@
             "resourceType": "oauth2-resource-service-principal",
             "required": true,
             "conditionKeys": [
+              "signin:MaxSigninSessionDuration",
               "signin:OAuthClientAuthentication",
               "signin:OAuthClientId",
               "signin:OAuthGrantType",
@@ -193610,6 +193616,12 @@
       }
     ],
     "conditionKeys": [
+      {
+        "name": "signin:MaxSigninSessionDuration",
+        "apiReferenceUrl": "",
+        "description": "Filters access by the maximum allowed sign-in session duration, in seconds, for OAuth-based authentication",
+        "type": "Numeric"
+      },
       {
         "name": "signin:OAuthClientAuthentication",
         "apiReferenceUrl": "",

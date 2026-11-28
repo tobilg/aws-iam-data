@@ -13739,8 +13739,9 @@
         "oauth2-public-client-remote",
         "oauth2-resource-service-principal"
       ],
-      "conditionKeysCount": 7,
+      "conditionKeysCount": 8,
       "conditionKeys": [
+        "signin:MaxSigninSessionDuration",
         "signin:OAuthClientAuthentication",
         "signin:OAuthClientId",
         "signin:OAuthGrantType",
